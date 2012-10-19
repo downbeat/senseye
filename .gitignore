@@ -1,0 +1,5 @@
+.playground
+.metadata
+*.sw[op]
+*.o
+
