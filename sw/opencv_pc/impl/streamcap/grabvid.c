@@ -63,11 +63,32 @@ int main(int argc, char** argv)
 
    clock_t clkvalprevious, clkval;
    double fpsinstant;
+   double fpsmin;
+   double fpsmax;
 
-   char vidoutname[50];
+   const char picoutdirectory[] = "./samples/";
+   char picoutprefix[50];
+   unsigned int picoutidx;
+   const char picoutsuffix[] = ".bmp";
+   char picoutfilename[255];
+   const char picoutattrssuffix[] = "_attrs.txt";
+   char picoutattrsfilename[255];
+
+   FILE* picoutattrsfile;
+
    CvVideoWriter *vidout;
 
-   snprintf(vidoutname,50,"%d.avi",(unsigned int)time(0));
+   snprintf(picoutprefix,50,"%d",(unsigned int)time(0));
+   picoutidx=0;
+
+   snprintf( picoutattrsfilename,255,"%s/%s%s",picoutdirectory,
+             picoutprefix,picoutattrssuffix );
+   picoutattrsfile = fopen(picoutattrsfilename,"w");
+   if(0 == picoutattrsfile)
+   {
+      fprintf(stderr, "Could not open %s for writing capture attrs\n",picoutattrsfilename);
+      return -1;
+   }
    //fprintf(stderr,"%s\n",vidoutname);
 
    // FIXME russ: can't get writing video to work yet!
@@ -83,6 +104,7 @@ int main(int argc, char** argv)
    if(0 == camin)
    {
       fprintf(stderr, "Could not open /dev/ttyACM0 for reading\n");
+      fclose(picoutattrsfile);
       return -1;
    }
    camout = fopen("/dev/ttyACM0","w");
@@ -90,6 +112,7 @@ int main(int argc, char** argv)
    {
       fprintf(stderr, "Could not open /dev/ttyACM0 for writing\n");
       fclose(camin);
+      fclose(picoutattrsfile);
       return -1;
    }
 
@@ -99,9 +122,8 @@ int main(int argc, char** argv)
    framenorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framescaledup = cvCreateImage(cvSize(FRAME_X_Y*8,FRAME_X_Y*8), IPL_DEPTH_8U, 1);
 
-   clkvalprevious = -1;
-   clkval = -1;
-   fpsinstant = -1;
+   clkvalprevious = clkval = -1;
+   fpsinstant = fpsmin = fpsmax = -1;
 
    fputc((char)OPCODE_START_CAPTURE,camout);
 //   fputc((char)'A',camout);
@@ -140,6 +162,14 @@ int main(int argc, char** argv)
       clkvalprevious = clkval;
       clkval = clock();
       fpsinstant = ((double)CLOCKS_PER_SEC)/(clkval-clkvalprevious);
+      if((0 < fpsmin) || (fpsinstant < fpsmin))
+      {
+         fpsmin = fpsinstant;
+      }
+      if((0 < fpsmax) || (fpsinstant > fpsmax))
+      {
+         fpsmax = fpsinstant;
+      }
 
       // FIXME russ asdfasdf
       //fprintf(stderr,"%d\n",(int)time(0));
@@ -163,7 +193,7 @@ int main(int argc, char** argv)
             {
                framevalmax = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
             }
-            frameloc[jj] = 255-(unsigned char)indat[(FRAME_X_Y*ii)+jj];
+            frameloc[jj] = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
             //printf("%02X ", (unsigned char)indat[(FRAME_X_Y*ii)+jj]);
 
             for(xx=0; xx<8; ++xx)
@@ -172,7 +202,7 @@ int main(int argc, char** argv)
                                             (((ii*8)+xx)*framescaledup->widthStep) );
                for(yy=0; yy<8; ++yy)
                {
-                  framescaleduploc[(jj*8)+yy] = 255-(unsigned char)indat[(FRAME_X_Y*ii)+jj];
+                  framescaleduploc[(jj*8)+yy] = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
                   //((uchar*)(framescaledup->imageData + (((ii*8)+xx)*frame->widthStep)))[(jj*8)+yy] = 
                   //   (unsigned char)indat[(FRAME_X_Y*ii)+jj];
                }
@@ -195,6 +225,13 @@ int main(int argc, char** argv)
       //cvShowImage("CamCap", framenorm);
       cvShowImage("CamCap", framescaledup);
 
+      snprintf( picoutfilename,255,"%s/%s_%06d%s",picoutdirectory,
+                picoutprefix,picoutidx,picoutsuffix );
+      fprintf(picoutattrsfile,"[%06d] fps := % 6.03f\n", picoutidx, fpsinstant);
+      ++picoutidx;
+
+      (void)cvSaveImage(picoutfilename,framenorm,0);
+
       cc = cvWaitKey(1);
       if(27 == cc)
       {
@@ -216,6 +253,7 @@ int main(int argc, char** argv)
    cvReleaseImage(&framenorm);
    cvDestroyWindow("EyeVid");
 
+   fclose(picoutattrsfile);
    fclose(camin);
    fclose(camout);
    return 0;
