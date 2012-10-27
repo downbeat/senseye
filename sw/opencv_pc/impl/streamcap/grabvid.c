@@ -81,6 +81,7 @@ int main(int argc, char** argv)
    snprintf(picoutprefix,50,"%d",(unsigned int)time(0));
    picoutidx=0;
 
+   fprintf(stderr,"video file: %s\n",picoutprefix);
    snprintf( picoutattrsfilename,255,"%s/%s%s",picoutdirectory,
              picoutprefix,picoutattrssuffix );
    picoutattrsfile = fopen(picoutattrsfilename,"w");
@@ -194,7 +195,6 @@ int main(int argc, char** argv)
                framevalmax = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
             }
             frameloc[jj] = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
-            //printf("%02X ", (unsigned char)indat[(FRAME_X_Y*ii)+jj]);
 
             for(xx=0; xx<8; ++xx)
             {
@@ -222,8 +222,8 @@ int main(int argc, char** argv)
          }
       }
 
-      //cvShowImage("CamCap", framenorm);
       cvShowImage("CamCap", framescaledup);
+      cvShowImage("CamCapSmall", framenorm);
 
       snprintf( picoutfilename,255,"%s/%s_%06d%s",picoutdirectory,
                 picoutprefix,picoutidx,picoutsuffix );
@@ -251,7 +251,9 @@ int main(int argc, char** argv)
 
    cvReleaseImage(&frame);
    cvReleaseImage(&framenorm);
+   cvReleaseImage(&framescaledup);
    cvDestroyWindow("EyeVid");
+   cvDestroyWindow("EyeVidSmall");
 
    fclose(picoutattrsfile);
    fclose(camin);
