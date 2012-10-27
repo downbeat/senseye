@@ -1,5 +1,5 @@
-project( grabvid )
+project( captureStream )
 find_package( OpenCV REQUIRED )
-add_executable( grabvid grabvid.c )
-target_link_libraries( grabvid ${OpenCV_LIBS} )
+add_executable( captureStream captureStream.c )
+target_link_libraries( captureStream ${OpenCV_LIBS} )
 
