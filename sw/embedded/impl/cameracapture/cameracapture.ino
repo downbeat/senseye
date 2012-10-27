@@ -1,5 +1,5 @@
 #include "stony.h"
-#include "stonymask_cam3.h"
+#include "stonymask_cam4.h"
 
 
 //**************************************************************************************************
@@ -41,7 +41,8 @@ void setup()
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
 
-  (void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG);//200,55,55,2,1);
+  (void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG); // raw: for 5v
+  //(void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,35,50,50,1,1); // amp: for 3v3
 }
 
 void loop()
@@ -110,8 +111,8 @@ void frameCaptureAndTx()
     // FIXME russ: not efficient
     for(jj = 0; jj < 112; ++jj)
     {
-      //imrowsc[jj]=255-imrow[jj]+stonymask[(112*ii)+jj];
-      imrowsc[jj]=imrow[jj]-stonymask[(112*ii)+jj];
+      imrowsc[jj]=255-imrow[jj]+stonymask[(112*ii)+jj];
+      //imrowsc[jj]=imrow[jj]-stonymask[(112*ii)+jj];
       // russ: try this if the masked version is not working
       //imrowsc[jj]=imrow[jj]-128;
       Serial.print((char)(imrowsc[jj]));
