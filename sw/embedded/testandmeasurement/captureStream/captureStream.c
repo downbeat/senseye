@@ -195,6 +195,7 @@ int main(int argc, char** argv)
                framevalmax = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
             }
             frameloc[jj] = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
+            //printf("%02X ", (unsigned char)indat[(FRAME_X_Y*ii)+jj]);
 
             for(xx=0; xx<8; ++xx)
             {
