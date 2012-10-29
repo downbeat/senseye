@@ -33,13 +33,13 @@ public class FrameBuffer {
 	/**
 	 * start of frame opcode
 	 */
-	private int mStartOfFrame;
+	private byte mStartOfFrame;
 	
 	/**
 	 * frame holds pixel data, and frameBuffer holds frame data
 	 */
-	private Vector<int[]> frameBuffer;
-	private int[]         frame;
+	private Vector<byte[]> frameBuffer;
+	private byte[]         frame;
 	
 	/**
 	 * FrameBuffer constructor, initializes size of frame
@@ -47,7 +47,7 @@ public class FrameBuffer {
 	 * @param numRows specifies number of pixels in row
 	 * @param numCols specifies number of pixels in col
 	 */
-	public FrameBuffer(int numRows, int numCols, int startOfFrame, FrameBufferEvent event) {
+	public FrameBuffer(int numRows, int numCols, byte startOfFrame, FrameBufferEvent event) {
 		mTotalRows    = numRows;
 		mTotalCols    = numCols;
 		mRow          = 0;
@@ -55,22 +55,22 @@ public class FrameBuffer {
 		mEvent        = event;
 		mStartOfFrame = startOfFrame;
 		
-		frame         = new int[numRows * numCols];
-		frameBuffer   = new Vector<int[]>();
+		frame         = new byte[numRows * numCols];
+		frameBuffer   = new Vector<byte[]>();
 	}
 	
 	public void addDataToFrameBuffer(byte[] data) {
-		int[] pixels = new int[data.length];
+		//byte[] pixels = new byte[data.length];
 		int i;
 		
-		pixels = byteArrayToIntArray(data);
+		//pixels = byteArrayToIntArray(data);
 		
-		for(i = 0; i < pixels.length; i++) {
-			addPixelToFrame(pixels[i]);
+		for(i = 0; i < data.length; i++) {
+			addPixelToFrame(data[i]);
 		}
 	}
 	
-	private void addPixelToFrame(int pixel) {
+	private void addPixelToFrame(byte pixel) {
 		if(pixel == mStartOfFrame) {
 			Log.d(TAG, "Starting Frame");
 			frameStarted = 1;
@@ -97,16 +97,5 @@ public class FrameBuffer {
 		}
 		frame[mRow*mTotalCols + mCol] = pixel;
 		mCol++;
-	}
-	
-	private static int[] byteArrayToIntArray(byte[] b) {
-		int[] data = new int[b.length];
-		int i;
-		
-		for(i = 0; i < b.length; i++) {
-			data[i] = b[i];
-		}
-		
-		return data;
 	}
 }

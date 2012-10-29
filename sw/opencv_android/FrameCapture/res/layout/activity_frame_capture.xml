@@ -13,17 +13,12 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/description_cam_button"
         android:src="@xml/button_selector" />
-
-    <ScrollView
+    
+    <view
+        android:id="@+id/frameview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp" >
-
-	    <TextView
-	        android:id="@+id/textViewFrameBuffer"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="" />
-	</ScrollView>
-
+        android:layout_above="@+id/buttonFrameCap"
+        class="glasses.ardueye.framecapture.FrameView" />
+    
 </RelativeLayout>

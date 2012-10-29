@@ -19,8 +19,8 @@ public final class R {
     }
     public static final class id {
         public static final int buttonFrameCap=0x7f080000;
+        public static final int frameview=0x7f080001;
         public static final int menu_settings=0x7f080002;
-        public static final int textViewFrameBuffer=0x7f080001;
     }
     public static final class layout {
         public static final int activity_frame_capture=0x7f030000;

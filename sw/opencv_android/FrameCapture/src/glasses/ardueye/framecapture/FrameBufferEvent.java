@@ -7,6 +7,6 @@ public interface FrameBufferEvent {
 	 * 
 	 * @param frame int array containing the frame
 	 */
-	public void onFrameComplete(int[] frame);
+	public void onFrameComplete(byte[] frame);
 	
 }
