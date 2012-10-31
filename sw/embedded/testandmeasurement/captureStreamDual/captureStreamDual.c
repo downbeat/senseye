@@ -61,6 +61,12 @@ int main(int argc, char** argv)
    IplImage *frame, *framenorm, *framescaledup;
    uchar *frameloc, *framenormloc, *framescaleduploc;
    uchar framevalmin, framevalmax;
+   IplImage *frame2, *frame2norm, *frame2scaledup;
+   uchar *frame2loc, *frame2normloc, *frame2scaleduploc;
+   uchar frame2valmin, frame2valmax;
+
+   // double wide!
+//IplImage *framedualnorm, *framedualscaledup;
 
    clock_t clkvalprevious, clkval;
    double fpsinstant;
@@ -122,7 +128,14 @@ int main(int argc, char** argv)
    // init our frame
    frame = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framenorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   framescaledup = cvCreateImage(cvSize(FRAME_X_Y*SCALINGVAL,FRAME_X_Y*SCALINGVAL),IPL_DEPTH_8U,1);
+   framescaledup = cvCreateImage( cvSize( FRAME_X_Y*SCALINGVAL,
+                                          FRAME_X_Y*SCALINGVAL ),
+                                  IPL_DEPTH_8U, 1 );
+   frame2 = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   frame2norm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   frame2scaledup = cvCreateImage( cvSize( FRAME_X_Y*SCALINGVAL,
+                                           FRAME_X_Y*SCALINGVAL ),
+                                   IPL_DEPTH_8U, 1 );
 
    clkvalprevious = clkval = -1;
    fpsinstant = fpsmin = fpsmax = -1;
@@ -151,16 +164,15 @@ int main(int argc, char** argv)
          readcnt = fread(indat,1,1,camin);
          //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
       } while(1 > readcnt);
-      assert(OPCODE_FRAME == (unsigned char)indat[0]);
+      //assert(OPCODE_FRAME == (unsigned char)indat[0]);
       totallen=0;
       indatloc=indat;
-      while(FRAME_LEN > totallen)
+      while(FRAME_LEN*2 > totallen)
       {
-         readcnt = fread(indatloc,1,(FRAME_LEN)-totallen,camin);
+         readcnt = fread(indatloc,1,(FRAME_LEN*2)-totallen,camin);
          totallen+=readcnt;
          indatloc+=readcnt;
       }
-      //printf("rx len: %d\n", totallen);
       *indatloc = '\0';
       clkvalprevious = clkval;
       clkval = clock();
@@ -186,40 +198,57 @@ int main(int argc, char** argv)
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
+         frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
-            if(framevalmin > (unsigned char)indat[(FRAME_X_Y*ii)+jj])
+            if(framevalmin > (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj])
             {
-               framevalmin = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
+               framevalmin = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
             }
-            if(framevalmax < (unsigned char)indat[(FRAME_X_Y*ii)+jj])
+            if(framevalmax < (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj])
             {
-               framevalmax = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
+               framevalmax = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
             }
-            frameloc[jj] = (unsigned char)indat[(FRAME_X_Y*ii)+jj];
+            if(frame2valmin > (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj])
+            {
+               frame2valmin = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
+            }
+            if(frame2valmax < (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj])
+            {
+               frame2valmax = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
+            }
+            frameloc[jj] = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
+            frame2loc[jj] = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
             //printf("%02X ", (unsigned char)indat[(FRAME_X_Y*ii)+jj]);
          }
       }
       //printf("\n");
+	  // russ: this is not doubled because a "frame" for fps calc is from both cameras
       fprintf(stderr,"[frame rx'd] fps := % 6.03f\n", fpsinstant);
 
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
          framenormloc = (uchar*)(framenorm->imageData + (ii*framenorm->widthStep));
+         frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
+         frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
             framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+            frame2normloc[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
 
             for(xx=0; xx<SCALINGVAL; ++xx)
             {
                framescaleduploc = (uchar*)( framescaledup->imageData +
                                             (((ii*SCALINGVAL)+xx)*framescaledup->widthStep) );
+               frame2scaleduploc = (uchar*)( frame2scaledup->imageData +
+                                             (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
                for(yy=0; yy<SCALINGVAL; ++yy)
                {
-                  framescaleduploc[(jj*SCALINGVAL)+yy] = (uchar)indat[(FRAME_X_Y*ii)+jj];
                   framescaleduploc[(jj*SCALINGVAL)+yy]
                      = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+                  frame2scaleduploc[(jj*SCALINGVAL)+yy]
+                     = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
                   //((uchar*)(framescaledup->imageData + (((ii*SCALINGVAL)+xx)*frame->widthStep)))[(jj*SCALINGVAL)+yy] = 
                   //   (unsigned char)indat[(FRAME_X_Y*ii)+jj];
                }
@@ -229,6 +258,8 @@ int main(int argc, char** argv)
 
       cvShowImage("CamCap", framescaledup);
       cvShowImage("CamCapSmall", framenorm);
+      cvShowImage("Cam2Cap", frame2scaledup);
+      cvShowImage("Cam2CapSmall", frame2norm);
 
       snprintf( picoutfilename,255,"%s/%s_%06d%s",picoutdirectory,
                 picoutprefix,picoutidx,picoutsuffix );
@@ -260,6 +291,11 @@ int main(int argc, char** argv)
    cvReleaseImage(&framescaledup);
    cvDestroyWindow("CamCap");
    cvDestroyWindow("CamCapSmall");
+   cvReleaseImage(&frame2);
+   cvReleaseImage(&frame2norm);
+   cvReleaseImage(&frame2scaledup);
+   cvDestroyWindow("Cam2Cap");
+   cvDestroyWindow("Cam2CapSmall");
 
    fclose(picoutattrsfile);
    fclose(camin);

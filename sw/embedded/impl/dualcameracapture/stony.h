@@ -109,9 +109,9 @@ class camera
 //*************************************************************************************************
 // Initialize the vision chip for image readout
     void init( char inPinRESP, char inPinINCP, char inPinRESV, char inPinINCV,
-               char inPinINPHI, char inPinANALOG, short vref=VAL_VREF_5V0,
-               short nbias=VAL_NBIAS_5V0, short aobias=VAL_AOBIAS_5V0, char gain=0,
-               char selamp=0 );
+               char inPinINPHI, char inPinANALOG1, char inPinANALOG2,
+               short vref=VAL_VREF_5V0, short nbias=VAL_NBIAS_5V0,
+               short aobias=VAL_AOBIAS_5V0, char gain=0, char selamp=0 );
 
 //*************************************************************************************************
 // Chip Register and Value Manipulation
@@ -152,6 +152,9 @@ class camera
     void getImage( short *img, unsigned char rowstart, unsigned char numrows,
                    unsigned char rowskip, unsigned char colstart, unsigned char numcols,
                    unsigned char colskip ); //, char ADCType, char anain );
+    void getDualImages( short *img1, short* img2, unsigned char rowstart, unsigned char numrows,
+                        unsigned char rowskip, unsigned char colstart, unsigned char numcols,
+                        unsigned char colskip );
 /*
     //gets a image from the vision chip, sums each row and returns one pixel for the row
     void getImageRowSum(short *img, unsigned char rowstart, unsigned char   numrows, unsigned char rowskip, unsigned char colstart, unsigned   char numcols, unsigned char colskip, char ADCType,char anain);
@@ -174,7 +177,8 @@ private:
   char pinINCV;
   char pinINPHI;
 
-  char pinANALOG;
+  char pinANALOG1;
+  char pinANALOG2;
 
   char flagUseAmplifier;
 };
