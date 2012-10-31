@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+    	android:id="@+id/buttonFrameCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/description_cam_button"
+        android:src="@xml/button_selector" />
+    
+    <view
+        android:id="@+id/frameview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonFrameCap"
+        class="glasses.ardueye.framecapture.FrameView" />
+    
+</RelativeLayout>
