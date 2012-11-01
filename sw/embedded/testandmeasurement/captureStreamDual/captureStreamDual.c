@@ -66,7 +66,8 @@ int main(int argc, char** argv)
    uchar frame2valmin, frame2valmax;
 
    // double wide!
-//IplImage *framedualnorm, *framedualscaledup;
+   IplImage *framedualnorm, *framedualscaledup;
+   uchar *framedualnormloc1, *framedualnormloc2, *framedualscaleduploc1, *framedualscaleduploc2;
 
    clock_t clkvalprevious, clkval;
    double fpsinstant;
@@ -128,14 +129,15 @@ int main(int argc, char** argv)
    // init our frame
    frame = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framenorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   framescaledup = cvCreateImage( cvSize( FRAME_X_Y*SCALINGVAL,
-                                          FRAME_X_Y*SCALINGVAL ),
-                                  IPL_DEPTH_8U, 1 );
+   framescaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
+                                          FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frame2 = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frame2norm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   frame2scaledup = cvCreateImage( cvSize( FRAME_X_Y*SCALINGVAL,
-                                           FRAME_X_Y*SCALINGVAL ),
-                                   IPL_DEPTH_8U, 1 );
+   frame2scaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
+                                           FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
+   framedualnorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   framedualscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
+                                             FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
 
    clkvalprevious = clkval = -1;
    fpsinstant = fpsmin = fpsmax = -1;
@@ -223,7 +225,7 @@ int main(int argc, char** argv)
          }
       }
       //printf("\n");
-	  // russ: this is not doubled because a "frame" for fps calc is from both cameras
+      // russ: this is not doubled because a "frame" for fps calc is from both cameras
       fprintf(stderr,"[frame rx'd] fps := % 6.03f\n", fpsinstant);
 
       for(ii = 0; ii < FRAME_X_Y; ++ii)
@@ -232,34 +234,56 @@ int main(int argc, char** argv)
          framenormloc = (uchar*)(framenorm->imageData + (ii*framenorm->widthStep));
          frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
          frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
+         framedualnormloc1 = (uchar*)(framedualnorm->imageData + (ii*framedualnorm->widthStep));
+         framedualnormloc2 = (uchar*)( framedualnorm->imageData
+                                       + (ii*framedualnorm->widthStep)
+                                       + (framedualnorm->widthStep/2) );
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
             framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
             frame2normloc[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+            framedualnormloc1[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+            framedualnormloc2[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
 
             for(xx=0; xx<SCALINGVAL; ++xx)
             {
-               framescaleduploc = (uchar*)( framescaledup->imageData +
-                                            (((ii*SCALINGVAL)+xx)*framescaledup->widthStep) );
-               frame2scaleduploc = (uchar*)( frame2scaledup->imageData +
-                                             (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
+               framescaleduploc
+                  = (uchar*)( framescaledup->imageData
+                              + (((ii*SCALINGVAL)+xx)*framescaledup->widthStep) );
+               frame2scaleduploc
+                  = (uchar*)( frame2scaledup->imageData
+                              + (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
+               framedualscaleduploc1
+                  = (uchar*)( framedualscaledup->imageData
+                              + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
+               framedualscaleduploc2 
+                  = (uchar*)( framedualscaledup->imageData
+                              + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
+                              + (framedualscaledup->widthStep/2) );
                for(yy=0; yy<SCALINGVAL; ++yy)
                {
                   framescaleduploc[(jj*SCALINGVAL)+yy]
                      = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
                   frame2scaleduploc[(jj*SCALINGVAL)+yy]
                      = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-                  //((uchar*)(framescaledup->imageData + (((ii*SCALINGVAL)+xx)*frame->widthStep)))[(jj*SCALINGVAL)+yy] = 
-                  //   (unsigned char)indat[(FRAME_X_Y*ii)+jj];
+                  // double wide
+                  // FIXME russ doesn't work!
+                  framedualscaleduploc1[(jj*SCALINGVAL)+yy]
+                     = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+                  framedualscaleduploc2[(jj*SCALINGVAL)+yy]
+                     = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
                }
             }
          }
       }
 
+      /* FIXME russ: only displaying double wides now
       cvShowImage("CamCap", framescaledup);
       cvShowImage("CamCapSmall", framenorm);
       cvShowImage("Cam2Cap", frame2scaledup);
-      cvShowImage("Cam2CapSmall", frame2norm);
+      cvShowImage("Cam2CapSmall", frame2norm);*/
+      cvShowImage("CamCapDoubleWide", framedualscaledup);
+      cvShowImage("CamCapDoubleWideSmall", framedualnorm);
 
       snprintf( picoutfilename,255,"%s/%s_%06d%s",picoutdirectory,
                 picoutprefix,picoutidx,picoutsuffix );
@@ -289,13 +313,18 @@ int main(int argc, char** argv)
    cvReleaseImage(&frame);
    cvReleaseImage(&framenorm);
    cvReleaseImage(&framescaledup);
-   cvDestroyWindow("CamCap");
-   cvDestroyWindow("CamCapSmall");
    cvReleaseImage(&frame2);
    cvReleaseImage(&frame2norm);
    cvReleaseImage(&frame2scaledup);
+   cvReleaseImage(&framedualnorm);
+   cvReleaseImage(&framedualscaledup);
+   /* FIXME russ: only displaying double wides now
+   cvDestroyWindow("CamCap");
+   cvDestroyWindow("CamCapSmall");
    cvDestroyWindow("Cam2Cap");
-   cvDestroyWindow("Cam2CapSmall");
+   cvDestroyWindow("Cam2CapSmall");*/
+   cvDestroyWindow("CamCapDoubleWide");
+   cvDestroyWindow("CamCapDoubleWideSmall");
 
    fclose(picoutattrsfile);
    fclose(camin);
