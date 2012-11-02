@@ -1,14 +1,28 @@
+//**************************************************************************************************
+// captureStreamDual.c
+//
 // Russ Bielawski
-// 2012-10-18
+// 2012-10-29
+//**************************************************************************************************
 
+
+//**************************************************************************************************
+// includes
+//
 #include <stdio.h>
 //#include <termios.h>
 #include <errno.h>
 #include <time.h>
+#include <signal.h>
+
 // opencv sources
 #include "cv.h"
 #include "highgui.h"
 
+
+//**************************************************************************************************
+// defines / constants
+//
 enum
 {
    OPCODE_START_CAPTURE = 0x01,
@@ -19,39 +33,32 @@ enum
    OPCODE_FRAME         = 0x84
 };
 
-
 #define MATGRAB_FILE  ("image.m")
 #define FRAME_X_Y     (112)
 #define FRAME_LEN     (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL    (4)
+#define ESC_KEY       (27)
 
 
-// russ: taken from http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
-// ! LINUX ONLY (sorry, lazy)
-/*char getch() {
-   char buf = 0;
-   struct termios old = {0};
-   if (tcgetattr(0, &old) < 0)
-      perror("tcsetattr()");
-   old.c_lflag &= ~ICANON;
-   old.c_lflag &= ~ECHO;
-   old.c_cc[VMIN] = 1;
-   old.c_cc[VTIME] = 0;
-   if (tcsetattr(0, TCSANOW, &old) < 0)
-      perror("tcsetattr ICANON");
-   if (read(0, &buf, 1) < 0)
-      perror ("read()");
-   old.c_lflag |= ICANON;
-   old.c_lflag |= ECHO;
-   if (tcsetattr(0, TCSADRAIN, &old) < 0)
-      perror ("tcsetattr ~ICANON");
-   return (buf);
-}*/
+//**************************************************************************************************
+// globals
+//
+FILE *gCamin,*gCamout;
 
+
+//**************************************************************************************************
+// local function prototypes
+//
+static void cleanupCamConn(/*dummy for catching signals*/int x);
+//static char getch();
+
+
+//**************************************************************************************************
+// main
+//
 int main(int argc, char** argv)
 {
    int ii,jj,xx,yy;
-   FILE *camin, *camout;
    char cc;
    char indat[256*1024];    // huge because I am a lazy man
    char *indatloc;
@@ -92,38 +99,54 @@ int main(int argc, char** argv)
    fprintf(stderr,"video file: %s\n",picoutprefix);
    snprintf( picoutattrsfilename,255,"%s/%s%s",picoutdirectory,
              picoutprefix,picoutattrssuffix );
+
+   // russ: this is a little inelegant
+   gCamin = fopen("/dev/ttyACM0","r");
+   if(0 == gCamin)
+   {
+      fprintf(stderr, "Could not open /dev/ttyACM0 for reading; trying /dev/ttyACM1\n");
+      gCamin = fopen("/dev/ttyACM1", "r");
+      if(0 == gCamin)
+      {
+         fprintf(stderr, "Could not open /dev/ttyACM1 for reading\n");
+         return -1;
+      }
+      gCamout = fopen("/dev/ttyACM1","w");
+      if(0 == gCamout)
+      {
+         fprintf(stderr, "Could not open /dev/ttyACM1 for writing\n");
+         fclose(gCamin);
+         return -1;
+      }
+   }
+   else
+   {
+      gCamout = fopen("/dev/ttyACM0","w");
+      if(0 == gCamout)
+      {
+         fprintf(stderr, "Could not open /dev/ttyACM0 for writing\n");
+         fclose(gCamin);
+         return -1;
+      }
+   }
+
    picoutattrsfile = fopen(picoutattrsfilename,"w");
    if(0 == picoutattrsfile)
    {
       fprintf(stderr, "Could not open %s for writing capture attrs\n",picoutattrsfilename);
+      fclose(picoutattrsfile);
+      fclose(gCamin);
+      fclose(gCamout);
       return -1;
    }
-   //fprintf(stderr,"%s\n",vidoutname);
-
-   // TODO russ: can't get writing video to work yet!
-/*   vidout = cvCreateVideoWriter( vidoutname,
+   /* TODO russ: can't get writing video to work yet!
+   fprintf(stderr,"%s\n",vidoutname);
+   vidout = cvCreateVideoWriter( vidoutname,
                                  CV_FOURCC('F','M','P','4'),
                                  10, // placehold FPS
                                  cvSize(FRAME_X_Y,FRAME_X_Y),
                                  0 );
-   assert(vidout);
-*/
-
-   camin = fopen("/dev/ttyACM0","r");
-   if(0 == camin)
-   {
-      fprintf(stderr, "Could not open /dev/ttyACM0 for reading\n");
-      fclose(picoutattrsfile);
-      return -1;
-   }
-   camout = fopen("/dev/ttyACM0","w");
-   if(0 == camout)
-   {
-      fprintf(stderr, "Could not open /dev/ttyACM0 for writing\n");
-      fclose(camin);
-      fclose(picoutattrsfile);
-      return -1;
-   }
+   assert(vidout);*/
 
 
    // init our frame
@@ -142,20 +165,32 @@ int main(int argc, char** argv)
    clkvalprevious = clkval = -1;
    fpsinstant = fpsmin = fpsmax = -1;
 
-   fputc((char)OPCODE_START_CAPTURE,camout);
-//   fputc((char)'A',camout);
-   fflush(camout);
+   fputc((char)OPCODE_START_CAPTURE,gCamout);
+//   fputc((char)'A',gCamout);
+   fflush(gCamout);
 
-//   cc = (char)fgetc(camin);
-//   (void)fgets(indat,3,camin);
+//   cc = (char)fgetc(gCamin);
+//   (void)fgets(indat,3,gCamin);
 
    //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
    do
    {
-      readcnt = fread(indat,1,1,camin);
+      readcnt = fread(indat,1,1,gCamin);
       //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
    } while(OPCODE_START_ACK != (unsigned char)indat[0]);
-   assert(OPCODE_START_ACK == (unsigned char)indat[0]);
+   if(OPCODE_START_ACK != (unsigned char)indat[0])
+   {
+      cleanupCamConn(/*dummy*/xx);
+      assert(OPCODE_START_ACK == (unsigned char)indat[0]);
+   }
+
+   // we want to gracefully close the remove device connection
+   signal(SIGHUP, cleanupCamConn);
+   signal(SIGINT, cleanupCamConn);
+   signal(SIGABRT, cleanupCamConn);
+   signal(SIGQUIT, cleanupCamConn);
+   signal(SIGTERM, cleanupCamConn);
+   signal(SIGSEGV, cleanupCamConn);
 
    // what is this!?
    //cvShowImage("CamCap", framenorm);
@@ -163,15 +198,20 @@ int main(int argc, char** argv)
    while(1)
    {
       do {
-         readcnt = fread(indat,1,1,camin);
+         readcnt = fread(indat,1,1,gCamin);
          //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
       } while(1 > readcnt);
-      //assert(OPCODE_FRAME == (unsigned char)indat[0]);
+      if(OPCODE_FRAME != (unsigned char)indat[0])
+      {
+         cleanupCamConn(/*dummy*/xx);
+         assert(OPCODE_FRAME == (unsigned char)indat[0]);
+      }
+
       totallen=0;
       indatloc=indat;
       while(FRAME_LEN*2 > totallen)
       {
-         readcnt = fread(indatloc,1,(FRAME_LEN*2)-totallen,camin);
+         readcnt = fread(indatloc,1,(FRAME_LEN*2)-totallen,gCamin);
          totallen+=readcnt;
          indatloc+=readcnt;
       }
@@ -253,6 +293,7 @@ int main(int argc, char** argv)
                frame2scaleduploc
                   = (uchar*)( frame2scaledup->imageData
                               + (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
+               // double wide
                framedualscaleduploc1
                   = (uchar*)( framedualscaledup->imageData
                               + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
@@ -267,7 +308,6 @@ int main(int argc, char** argv)
                   frame2scaleduploc[(jj*SCALINGVAL)+yy]
                      = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
                   // double wide
-                  // FIXME russ doesn't work!
                   framedualscaleduploc1[(jj*SCALINGVAL)+yy]
                      = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
                   framedualscaleduploc2[(jj*SCALINGVAL)+yy]
@@ -294,21 +334,21 @@ int main(int argc, char** argv)
 
       // look for ESC key
       cc = cvWaitKey(1);
-      if(27 == cc)
+      if(ESC_KEY == cc)
       {
          break;
       }
    }
 
-   fputc((char)OPCODE_STOP_CAPTURE,camout);
-   fflush(camout);
+   fputc((char)OPCODE_STOP_CAPTURE,gCamout);
+   fflush(gCamout);
    do
    {
-      readcnt = fread(indat,1,1,camin);
+      readcnt = fread(indat,1,1,gCamin);
    } while(OPCODE_STOP_ACK != (unsigned char)indat[0]);
 
    // do I need this?
-   fflush(camin);
+   fflush(gCamin);
 
    cvReleaseImage(&frame);
    cvReleaseImage(&framenorm);
@@ -327,8 +367,47 @@ int main(int argc, char** argv)
    cvDestroyWindow("CamCapDoubleWideSmall");
 
    fclose(picoutattrsfile);
-   fclose(camin);
-   fclose(camout);
+   fclose(gCamin);
+   fclose(gCamout);
    return 0;
 }
+
+
+//**************************************************************************************************
+// local function definitions
+//
+
+//
+// cleanupCamConn
+//
+static void cleanupCamConn(/*dummy for catching signals*/int x)
+{
+   fputc((char)OPCODE_STOP_CAPTURE,gCamout);
+   fflush(gCamout);
+}
+
+//
+// getch
+//
+// russ: taken from http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
+// ! LINUX ONLY (sorry, lazy)
+/*static char getch() {
+   char buf = 0;
+   struct termios old = {0};
+   if (tcgetattr(0, &old) < 0)
+      perror("tcsetattr()");
+   old.c_lflag &= ~ICANON;
+   old.c_lflag &= ~ECHO;
+   old.c_cc[VMIN] = 1;
+   old.c_cc[VTIME] = 0;
+   if (tcsetattr(0, TCSANOW, &old) < 0)
+      perror("tcsetattr ICANON");
+   if (read(0, &buf, 1) < 0)
+      perror ("read()");
+   old.c_lflag |= ICANON;
+   old.c_lflag |= ECHO;
+   if (tcsetattr(0, TCSADRAIN, &old) < 0)
+      perror ("tcsetattr ~ICANON");
+   return (buf);
+}*/
 
