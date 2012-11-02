@@ -330,7 +330,7 @@ int main(int argc, char** argv)
       fprintf(picoutattrsfile,"[%06d] fps := % 6.03f\n", picoutidx, fpsinstant);
       ++picoutidx;
 
-      (void)cvSaveImage(picoutfilename,framenorm,0);
+      (void)cvSaveImage(picoutfilename,framedualnorm,0);
 
       // look for ESC key
       cc = cvWaitKey(1);
