@@ -14,6 +14,9 @@
 #include <errno.h>
 #include <time.h>
 #include <signal.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 // opencv sources
 #include "cv.h"
@@ -33,22 +36,30 @@ enum
    OPCODE_FRAME         = 0x84
 };
 
-#define MATGRAB_FILE  ("image.m")
-#define FRAME_X_Y     (112)
-#define FRAME_LEN     (FRAME_X_Y*FRAME_X_Y)
-#define SCALINGVAL    (4)
-#define ESC_KEY       (27)
+#define MATGRAB_FILE     ("image.m")
+#define FRAME_X_Y        (112)
+#define FRAME_LEN        (FRAME_X_Y*FRAME_X_Y)
+#define SCALINGVAL       (4)
+#define ESC_KEY          (27)
+#define OUTPATH_MAX_LEN  (256)
 
 
 //**************************************************************************************************
 // globals
 //
 FILE *gCamin,*gCamout;
+char gOutpath[OUTPATH_MAX_LEN];
+unsigned int gFlagUserCliValid;
+unsigned int gFlagNoWriteVideo;
 
 
 //**************************************************************************************************
 // local function prototypes
 //
+static void mkdir_p(const char *path);
+static void getdeepestdirname(const char *path, char *deepestdirname);
+static void printusage(char *progname);
+static int  parseargs(int argc, char **argv);
 static void cleanupCamConn(/*dummy for catching signals*/int x);
 //static char getch();
 
@@ -81,24 +92,37 @@ int main(int argc, char** argv)
    double fpsmin;
    double fpsmax;
 
-   const char picoutdirectory[] = "./samples/";
-   char picoutprefix[50];
-   unsigned int picoutidx;
-   const char picoutsuffix[] = ".bmp";
-   char picoutfilename[255];
-   const char picoutattrssuffix[] = "_attrs.txt";
-   char picoutattrsfilename[255];
+   struct stat outpathst = {0};
+   char outfilenameprefix[2*OUTPATH_MAX_LEN];
+   char outfilenamefps[2*OUTPATH_MAX_LEN];
+   char outfilenameframe[2*OUTPATH_MAX_LEN];
+   FILE *outfilefps;
+   unsigned int frameidx;
 
-   FILE* picoutattrsfile;
+   /* TODO russ: can't get writing video to work yet!
+   CvVideoWriter *vidout;*/
 
-   CvVideoWriter *vidout;
 
-   snprintf(picoutprefix,50,"%d",(unsigned int)time(0));
-   picoutidx=0;
+   // process user cli
+   gFlagUserCliValid=0;
+   gFlagNoWriteVideo=0;
+   if(0 != parseargs(argc,argv))
+   {
+      printusage(argv[0]);
+      exit(1);
+   }
+   if(0 == gFlagUserCliValid)
+   {
+      printusage(argv[0]);
+      exit(1);
+   }
+   if(0 == stat(gOutpath,&outpathst))
+   {
+      fprintf(stderr,"ERROR: path %s already exists!\n",gOutpath);
+      printusage(argv[0]);
+      exit(1);
+   }
 
-   fprintf(stderr,"video file: %s\n",picoutprefix);
-   snprintf( picoutattrsfilename,255,"%s/%s%s",picoutdirectory,
-             picoutprefix,picoutattrssuffix );
 
    // russ: this is a little inelegant
    gCamin = fopen("/dev/ttyACM0","r");
@@ -130,23 +154,37 @@ int main(int argc, char** argv)
       }
    }
 
-   picoutattrsfile = fopen(picoutattrsfilename,"w");
-   if(0 == picoutattrsfile)
+   if(0 != gFlagNoWriteVideo)
    {
-      fprintf(stderr, "Could not open %s for writing capture attrs\n",picoutattrsfilename);
-      fclose(picoutattrsfile);
-      fclose(gCamin);
-      fclose(gCamout);
-      return -1;
+      printf("quiet mode: video will not be saved\n");
    }
-   /* TODO russ: can't get writing video to work yet!
-   fprintf(stderr,"%s\n",vidoutname);
-   vidout = cvCreateVideoWriter( vidoutname,
-                                 CV_FOURCC('F','M','P','4'),
-                                 10, // placehold FPS
-                                 cvSize(FRAME_X_Y,FRAME_X_Y),
-                                 0 );
-   assert(vidout);*/
+   else
+   {
+      getdeepestdirname(gOutpath,outfilenameprefix);
+      mkdir_p(gOutpath);
+
+      snprintf(outfilenamefps,2*OUTPATH_MAX_LEN,"%s/%s_fps.txt",gOutpath,outfilenameprefix);
+      printf("video path: %s\n",gOutpath);
+
+      outfilefps = fopen(outfilenamefps,"w");
+      if(0 == outfilefps)
+      {
+         fprintf(stderr, "Could not open %s for writing capture FPS values\n",outfilenamefps);
+         fclose(gCamin);
+         fclose(gCamout);
+         exit(1);
+      }
+      /* TODO russ: can't get writing video to work yet!
+      fprintf(stderr,"%s\n",vidoutname);
+      vidout = cvCreateVideoWriter( vidoutname,
+                                    CV_FOURCC('F','M','P','4'),
+                                    10, // placehold FPS
+                                    cvSize(FRAME_X_Y,FRAME_X_Y),
+                                    0 );
+      assert(vidout);*/
+   }
+
+   frameidx=0;
 
 
    // init our frame
@@ -184,7 +222,7 @@ int main(int argc, char** argv)
       assert(OPCODE_START_ACK == (unsigned char)indat[0]);
    }
 
-   // we want to gracefully close the remove device connection
+   // we want to gracefully close the remove device connection now that we've started it
    signal(SIGHUP, cleanupCamConn);
    signal(SIGINT, cleanupCamConn);
    signal(SIGABRT, cleanupCamConn);
@@ -325,12 +363,18 @@ int main(int argc, char** argv)
       cvShowImage("CamCapDoubleWide", framedualscaledup);
       cvShowImage("CamCapDoubleWideSmall", framedualnorm);
 
-      snprintf( picoutfilename,255,"%s/%s_%06d%s",picoutdirectory,
-                picoutprefix,picoutidx,picoutsuffix );
-      fprintf(picoutattrsfile,"[%06d] fps := % 6.03f\n", picoutidx, fpsinstant);
-      ++picoutidx;
 
-      (void)cvSaveImage(picoutfilename,framedualnorm,0);
+      if(0 == gFlagNoWriteVideo)
+      {
+         snprintf( outfilenameframe,2*OUTPATH_MAX_LEN,"%s/%s_%06d.bmp",gOutpath,
+                   outfilenameprefix,frameidx );
+         fprintf(outfilefps,"[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
+
+         (void)cvSaveImage(outfilenameframe,framedualnorm,0);
+      }
+
+      ++frameidx;
+
 
       // look for ESC key
       cc = cvWaitKey(1);
@@ -366,7 +410,10 @@ int main(int argc, char** argv)
    cvDestroyWindow("CamCapDoubleWide");
    cvDestroyWindow("CamCapDoubleWideSmall");
 
-   fclose(picoutattrsfile);
+   if(0 == gFlagNoWriteVideo)
+   {
+      fclose(outfilefps);
+   }
    fclose(gCamin);
    fclose(gCamout);
    return 0;
@@ -378,7 +425,118 @@ int main(int argc, char** argv)
 //
 
 //
-// cleanupCamConn
+// mkdir_p: like mkdir -p
+//
+static void mkdir_p(const char *path)
+{
+   int ii;
+   char tmppath[OUTPATH_MAX_LEN];
+
+   for(ii=0; ii<=strlen(path); ++ii)
+   {
+      if (path[ii] == '/' || path[ii] == '\0') {
+         strncpy(tmppath, path, ii);
+         tmppath[ii] = '\0';
+         mkdir(tmppath, 0755);
+      }
+   }
+}
+
+//
+// getdeepestdirname: get the deepest directory name in the specified path
+//
+static void getdeepestdirname(const char *path, char *deepestdirname)
+{
+   int ii;
+   unsigned int suffixlen, prefixlen;
+   unsigned int flagComputeSuffixlenDone, flagComputePrefixlenDone;
+
+   // dear God please forgive me for this travesty
+
+
+   suffixlen=0;
+   prefixlen=strlen(path);
+   flagComputeSuffixlenDone=flagComputePrefixlenDone=0;
+   for(ii=strlen(path)-1; 0<=ii; --ii)
+   {
+      if(0==flagComputeSuffixlenDone)
+      {
+         if(('/' != path[ii]) && ('\0' != path[ii]))
+         {
+            flagComputeSuffixlenDone = 1;
+         }
+         else
+         {
+            ++suffixlen;
+         }
+      }
+      if(0==flagComputePrefixlenDone)
+      {
+         --prefixlen;
+         if((0 != flagComputeSuffixlenDone) && (('/' == path[ii]) || ('\0' == path[ii])))
+         {
+            flagComputePrefixlenDone = 1;
+            break;
+         }
+      }
+   }
+   if((0 <= ii) || ('/' == path[0]))
+   {
+      ++prefixlen;
+   }
+
+   strncpy(deepestdirname,(char*)(path+prefixlen),strlen(path)-prefixlen-suffixlen);
+   deepestdirname[strlen(path)-prefixlen-suffixlen] = '\0';
+}
+
+//
+// printusage: prints a usage string for the program
+//
+static void printusage(char *progname)
+{
+   fprintf(stderr, "Usage: %s [-i PATH|-q]\n", progname);
+}
+
+//
+// parseargs: parse cli
+//
+static int parseargs(int argc, char **argv)
+{
+   char cc;
+   extern char *optarg;
+
+   errno=0;
+
+   while ((cc = getopt(argc, argv, "o:q")) != EOF)
+   {
+      switch (cc) {
+         case 'o':
+            if(OUTPATH_MAX_LEN < strlen(optarg))
+            {
+               fprintf(stderr,"ERROR: path too long!\n");
+               errno=ENAMETOOLONG;
+               break;
+            }
+            gFlagUserCliValid = 1;
+            gFlagNoWriteVideo = 0;
+            strncpy(gOutpath, optarg, OUTPATH_MAX_LEN);
+            gOutpath[strlen(optarg)] = '\0';
+            break;
+         case 'q':
+            gFlagUserCliValid = 1;
+            gFlagNoWriteVideo = 1;
+            break;
+         default:
+            errno=EINVAL;
+            break;
+      }
+   }
+
+   return(errno);
+}
+
+//
+// cleanupCamConn: just cleanup the camera's connection
 //
 static void cleanupCamConn(/*dummy for catching signals*/int x)
 {
@@ -387,7 +545,7 @@ static void cleanupCamConn(/*dummy for catching signals*/int x)
 }
 
 //
-// getch
+// getch: grab a single char without waiting for the user to press ENTER
 //
 // russ: taken from http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
 // ! LINUX ONLY (sorry, lazy)
