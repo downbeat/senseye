@@ -1,5 +1,6 @@
 #include "stony.h"
 
+
 const char PIN_LED = 13;
 
 const char PIN_RESP = 8;
@@ -9,7 +10,11 @@ const char PIN_INCV = 5;
 const char PIN_INPHI = 4;
 const char PIN_ANALOG = A0;
 
+const unsigned long BAUDRATE = 115200;
+
+
 camera stonycam;
+
 
 void getCmd(char*);
 
@@ -19,7 +24,10 @@ void setup()
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
 
-  (void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG);
+  Serial.begin(BAUDRATE);
+
+  (void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG); // raw: for 5v
+  //(void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,35,50,50,1,1); // amp: for 3v3
 }
 
 void loop()
