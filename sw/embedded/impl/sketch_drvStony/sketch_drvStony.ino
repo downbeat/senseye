@@ -14,6 +14,8 @@ const unsigned long BAUDRATE = 115200;
 
 
 camera stonycam;
+// for bluetooth over UART
+//HardwareSerial Uart = HardwareSerial();
 
 
 void getCmd(char*);
