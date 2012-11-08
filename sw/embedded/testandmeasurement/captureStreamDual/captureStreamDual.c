@@ -36,7 +36,7 @@ enum
    OPCODE_FRAME         = 0x84
 };
 
-#define MATGRAB_FILE     ("image.m")
+//#define MATGRAB_FILE     ("image.m")
 #define FRAME_X_Y        (112)
 #define FRAME_LEN        (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL       (4)
@@ -50,7 +50,10 @@ enum
 FILE *gCamin,*gCamout;
 char gOutpath[OUTPATH_MAX_LEN];
 unsigned int gFlagUserCliValid;
+unsigned int gFlagUserCliHelp;
+unsigned int gFlagUserCliModeSelected;
 unsigned int gFlagNoWriteVideo;
+unsigned int gFlagStepMode;
 
 
 //**************************************************************************************************
@@ -59,6 +62,7 @@ unsigned int gFlagNoWriteVideo;
 static void mkdir_p(const char *path);
 static void getdeepestdirname(const char *path, char *deepestdirname);
 static void printusage(char *progname);
+static void printhelp(char *progname);
 static int  parseargs(int argc, char **argv);
 static void cleanupCamConn(/*dummy for catching signals*/int x);
 //static char getch();
@@ -105,7 +109,10 @@ int main(int argc, char** argv)
 
    // process user cli
    gFlagUserCliValid=0;
+   gFlagUserCliHelp=0;
+   gFlagUserCliModeSelected=0;
    gFlagNoWriteVideo=0;
+   gFlagStepMode=0;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -115,6 +122,11 @@ int main(int argc, char** argv)
    {
       printusage(argv[0]);
       exit(1);
+   }
+   if(0 != gFlagUserCliHelp)
+   {
+      printhelp(argv[0]);
+      exit(0);
    }
    if(0 == stat(gOutpath,&outpathst))
    {
@@ -191,11 +203,11 @@ int main(int argc, char** argv)
    frame = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framenorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framescaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
-                                          FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
+                                         FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frame2 = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frame2norm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frame2scaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
-                                           FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
+                                          FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    framedualnorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framedualscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
@@ -203,46 +215,69 @@ int main(int argc, char** argv)
    clkvalprevious = clkval = -1;
    fpsinstant = fpsmin = fpsmax = -1;
 
-   fputc((char)OPCODE_START_CAPTURE,gCamout);
-//   fputc((char)'A',gCamout);
-   fflush(gCamout);
 
-//   cc = (char)fgetc(gCamin);
-//   (void)fgets(indat,3,gCamin);
+   if(0 == gFlagStepMode)
+   {
+      // TODO: should be a function
+      fputc((char)OPCODE_START_CAPTURE,gCamout);
+      fflush(gCamout);
 
-   //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
-   do
+      //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
+      do
+      {
+         readcnt = fread(indat,1,1,gCamin);
+         //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
+      } while(OPCODE_START_ACK != (unsigned char)indat[0]);
+      if(OPCODE_START_ACK != (unsigned char)indat[0])
+      {
+         cleanupCamConn(/*dummy*/xx);
+         assert(OPCODE_START_ACK == (unsigned char)indat[0]);
+      }
+
+      // we want to gracefully close the remove device connection now that we've started it
+      signal(SIGHUP, cleanupCamConn);
+      signal(SIGINT, cleanupCamConn);
+      signal(SIGABRT, cleanupCamConn);
+      signal(SIGQUIT, cleanupCamConn);
+      signal(SIGTERM, cleanupCamConn);
+      signal(SIGSEGV, cleanupCamConn);
+   }
+   else
    {
-      readcnt = fread(indat,1,1,gCamin);
-      //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
-   } while(OPCODE_START_ACK != (unsigned char)indat[0]);
-   if(OPCODE_START_ACK != (unsigned char)indat[0])
-   {
-      cleanupCamConn(/*dummy*/xx);
-      assert(OPCODE_START_ACK == (unsigned char)indat[0]);
+      // do nothing: step mode will use the SINGLE_FRAME operation
    }
 
-   // we want to gracefully close the remove device connection now that we've started it
-   signal(SIGHUP, cleanupCamConn);
-   signal(SIGINT, cleanupCamConn);
-   signal(SIGABRT, cleanupCamConn);
-   signal(SIGQUIT, cleanupCamConn);
-   signal(SIGTERM, cleanupCamConn);
-   signal(SIGSEGV, cleanupCamConn);
-
-   // what is this!?
-   //cvShowImage("CamCap", framenorm);
 
    while(1)
    {
-      do {
-         readcnt = fread(indat,1,1,gCamin);
-         //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
-      } while(1 > readcnt);
-      if(OPCODE_FRAME != (unsigned char)indat[0])
+      if(0 == gFlagStepMode)
       {
-         cleanupCamConn(/*dummy*/xx);
-         assert(OPCODE_FRAME == (unsigned char)indat[0]);
+         // TODO: should be a function
+         do {
+            readcnt = fread(indat,1,1,gCamin);
+            //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
+         } while(1 > readcnt);
+         if(OPCODE_FRAME != (unsigned char)indat[0])
+         {
+            cleanupCamConn(/*dummy*/xx);
+            assert(OPCODE_FRAME == (unsigned char)indat[0]);
+         }
+      }
+      else
+      {
+         // TODO: should be a function
+         fputc((char)OPCODE_SINGLE_FRAME,gCamout);
+         fflush(gCamout);
+
+         //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
+         do {
+            readcnt = fread(indat,1,1,gCamin);
+            //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
+         } while(1 > readcnt);
+         if(OPCODE_FRAME != (unsigned char)indat[0])
+         {
+            assert(OPCODE_FRAME == (unsigned char)indat[0]);
+         }
       }
 
       totallen=0;
@@ -254,6 +289,16 @@ int main(int argc, char** argv)
          indatloc+=readcnt;
       }
       *indatloc = '\0';
+      /* FIXME: russ: this is way wrong (it's old code, skeletons in my closet if you will
+      //printf("tx: 0x%02X\n", OPCODE_SINGLE_FRAME);
+      //printf("rx len: %d\n", totallen);
+      //printf("rx 0x%02X ",(unsigned char)indat[0]);*/
+
+
+      // calculate FPS
+      // TODO: should be a function?
+      // FIXME: FPS calculation doesn't always work!
+      //        seems to only work when the CPU is at max frequency
       clkvalprevious = clkval;
       clkval = clock();
       fpsinstant = ((double)CLOCKS_PER_SEC)/(clkval-clkvalprevious);
@@ -266,15 +311,11 @@ int main(int argc, char** argv)
          fpsmax = fpsinstant;
       }
 
-      // FIXME russ asdfasdf
-      //fprintf(stderr,"%d\n",(int)time(0));
 
+      // find max and min pixel values for normalization
+      // TODO: should be a function?
       framevalmin = 255;
       framevalmax = 0;
-
-      //printf("tx: 0x%02X\n", OPCODE_SINGLE_FRAME);
-      //printf("rx len: %d\n", totallen);
-      //printf("rx 0x%02X ",(unsigned char)indat[0]);
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
@@ -306,6 +347,9 @@ int main(int argc, char** argv)
       // russ: this is not doubled because a "frame" for fps calc is from both cameras
       fprintf(stderr,"[frame rx'd] fps := % 6.03f\n", fpsinstant);
 
+
+      // normalize and scale-up for display on screen
+      // TODO: should be function(s)?
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
@@ -355,7 +399,9 @@ int main(int argc, char** argv)
          }
       }
 
-      /* FIXME russ: only displaying double wides now
+
+      // display picture on screen
+      /* russ: only displaying double wides now (TODO: add single picture functionality back in)
       cvShowImage("CamCap", framescaledup);
       cvShowImage("CamCapSmall", framenorm);
       cvShowImage("Cam2Cap", frame2scaledup);
@@ -364,6 +410,9 @@ int main(int argc, char** argv)
       cvShowImage("CamCapDoubleWideSmall", framedualnorm);
 
 
+      // save the frame as a BMP file
+      // TODO: should be a function?
+      // TODO: save as video instead
       if(0 == gFlagNoWriteVideo)
       {
          snprintf( outfilenameframe,2*OUTPATH_MAX_LEN,"%s/%s_%06d.bmp",gOutpath,
@@ -376,24 +425,45 @@ int main(int argc, char** argv)
       ++frameidx;
 
 
+      if(0 == gFlagStepMode)
+      {
+         // let the user kill the program with ESC
+         cc = cvWaitKey(1);
+      }
+      else
+      {
+         // don't capture another frame until user presses something
+         cc = cvWaitKey(0);
+      }
       // look for ESC key
-      cc = cvWaitKey(1);
       if(ESC_KEY == cc)
       {
          break;
       }
    }
 
-   fputc((char)OPCODE_STOP_CAPTURE,gCamout);
-   fflush(gCamout);
-   do
+
+   // finish connection if stream mode (default)
+   if(0 == gFlagStepMode)
    {
-      readcnt = fread(indat,1,1,gCamin);
-   } while(OPCODE_STOP_ACK != (unsigned char)indat[0]);
+      // TODO: should be a function
+      fputc((char)OPCODE_STOP_CAPTURE,gCamout);
+      fflush(gCamout);
+      do
+      {
+         readcnt = fread(indat,1,1,gCamin);
+      } while(OPCODE_STOP_ACK != (unsigned char)indat[0]);
 
-   // do I need this?
-   fflush(gCamin);
+      // russ: do I need this?
+      fflush(gCamin);
+   }
+   else
+   {
+      // do nothing: step mode uses the SINGLE_FRAME operation
+   }
 
+
+   // release/destroy OpenCV objects
    cvReleaseImage(&frame);
    cvReleaseImage(&framenorm);
    cvReleaseImage(&framescaledup);
@@ -402,7 +472,7 @@ int main(int argc, char** argv)
    cvReleaseImage(&frame2scaledup);
    cvReleaseImage(&framedualnorm);
    cvReleaseImage(&framedualscaledup);
-   /* FIXME russ: only displaying double wides now
+   /* russ: only displaying double wides now
    cvDestroyWindow("CamCap");
    cvDestroyWindow("CamCapSmall");
    cvDestroyWindow("Cam2Cap");
@@ -410,6 +480,8 @@ int main(int argc, char** argv)
    cvDestroyWindow("CamCapDoubleWide");
    cvDestroyWindow("CamCapDoubleWideSmall");
 
+
+   // close files
    if(0 == gFlagNoWriteVideo)
    {
       fclose(outfilefps);
@@ -494,7 +566,17 @@ static void getdeepestdirname(const char *path, char *deepestdirname)
 //
 static void printusage(char *progname)
 {
-   fprintf(stderr, "Usage: %s [-i PATH|-q]\n", progname);
+
+   fprintf(stderr, "Usage: %s [-s] [-o PATH|-q]\n", progname);
+}
+
+//
+// printhelp: prints the help for the program
+//
+static void printhelp(char *progname)
+{
+   printusage(progname);
+   fprintf(stderr,"TODO: help not written (sorry!)\n");
 }
 
 //
@@ -507,10 +589,26 @@ static int parseargs(int argc, char **argv)
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "o:q")) != EOF)
+   while ((cc = getopt(argc, argv, "ho:qs")) != EOF)
    {
       switch (cc) {
+         case 'h':
+            gFlagUserCliValid = 1;
+            gFlagUserCliHelp = 1;
+            break;
+         case 's':
+            gFlagUserCliValid = 1;
+            gFlagStepMode = 1;
+            break;
          case 'o':
+            if(1 == gFlagUserCliModeSelected)
+            {
+               fprintf(stderr,"ERROR: can't specify quiet mode and an output path!\n");
+               gFlagUserCliValid=0;
+               // FIXME: is this the right errno?
+               errno=E2BIG;
+               break;
+            }
             if(OUTPATH_MAX_LEN < strlen(optarg))
             {
                fprintf(stderr,"ERROR: path too long!\n");
@@ -519,12 +617,22 @@ static int parseargs(int argc, char **argv)
             }
             gFlagUserCliValid = 1;
             gFlagNoWriteVideo = 0;
+            gFlagUserCliModeSelected = 1;
             strncpy(gOutpath, optarg, OUTPATH_MAX_LEN);
             gOutpath[strlen(optarg)] = '\0';
             break;
          case 'q':
+            if(1 == gFlagUserCliModeSelected)
+            {
+               fprintf(stderr,"ERROR: can't specify quiet mode and an output path!\n");
+               gFlagUserCliValid=0;
+               // FIXME: is this the right errno?
+               errno=E2BIG;
+               break;
+            }
             gFlagUserCliValid = 1;
             gFlagNoWriteVideo = 1;
+            gFlagUserCliModeSelected = 1;
             break;
          default:
             errno=EINVAL;
