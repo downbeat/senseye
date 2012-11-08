@@ -576,7 +576,13 @@ static void printusage(char *progname)
 static void printhelp(char *progname)
 {
    printusage(progname);
-   fprintf(stderr,"TODO: help not written (sorry!)\n");
+   fprintf(stderr,"TODO: help not well written\n");
+   fprintf(stderr,"press ESC to end then program (user must have context of the video window!).\n");
+   fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -h         show help and exit\n");
+   fprintf(stderr,"  -o PATH    save video to PATH.  PATH cannot already exist.  incompatible with -q\n");
+   fprintf(stderr,"  -q         quiet mode.  won't write out any video.  incompatible with -o\n");
+   fprintf(stderr,"  -s         step mode.  grab one picture each time the user presses a key\n");
 }
 
 //
