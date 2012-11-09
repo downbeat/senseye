@@ -37,6 +37,7 @@ enum
 };
 
 //#define MATGRAB_FILE     ("image.m")
+#define NS_PER_SEC       (1000*1000*1000)
 #define FRAME_X_Y        (112)
 #define FRAME_LEN        (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL       (4)
@@ -84,7 +85,7 @@ int main(int argc, char** argv)
    uchar *frameloc, *framenormloc, *framescaleduploc;
    uchar framevalmin, framevalmax;
 
-   clock_t clkvalprevious, clkval;
+   struct timespec time, timeprevious;
    double fpsinstant;
    double fpsmin;
    double fpsmax;
@@ -198,7 +199,8 @@ int main(int argc, char** argv)
    framescaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
                                          FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
 
-   clkvalprevious = clkval = -1;
+
+   time.tv_sec = time.tv_nsec = timeprevious.tv_sec = timeprevious.tv_nsec = 0;
    fpsinstant = fpsmin = fpsmax = -1;
 
 
@@ -283,11 +285,10 @@ int main(int argc, char** argv)
 
       // calculate FPS
       // TODO: should be a function?
-      // FIXME: FPS calculation doesn't always work!
-      //        seems to only work when the CPU is at max frequency
-      clkvalprevious = clkval;
-      clkval = clock();
-      fpsinstant = ((double)CLOCKS_PER_SEC)/(clkval-clkvalprevious);
+      timeprevious = time;
+      (void)clock_gettime(CLOCK_MONOTONIC,&time);
+      fpsinstant = (NS_PER_SEC) / (double)( (NS_PER_SEC)*(time.tv_sec - timeprevious.tv_sec)
+                                            + time.tv_nsec - timeprevious.tv_nsec );
       if((0 < fpsmin) || (fpsinstant < fpsmin))
       {
          fpsmin = fpsinstant;
