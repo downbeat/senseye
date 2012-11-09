@@ -202,7 +202,6 @@ int main(int argc, char** argv)
    fpsinstant = fpsmin = fpsmax = -1;
 
 
-   fprintf(stderr,"before starting connection\n");
    if(0 == gFlagStepMode)
    {
       // TODO: should be a function
@@ -234,7 +233,6 @@ int main(int argc, char** argv)
       // do nothing: step mode will use the SINGLE_FRAME operation
    }
 
-   fprintf(stderr,"before while(1)\n");
 
    while(1)
    {
