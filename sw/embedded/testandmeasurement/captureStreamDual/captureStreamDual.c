@@ -55,6 +55,7 @@ unsigned int gFlagUserCliHelp;
 unsigned int gFlagUserCliModeSelected;
 unsigned int gFlagNoWriteVideo;
 unsigned int gFlagStepMode;
+unsigned int gFlagUseBluetooth;
 
 
 //**************************************************************************************************
@@ -114,6 +115,7 @@ int main(int argc, char** argv)
    gFlagUserCliModeSelected=0;
    gFlagNoWriteVideo=0;
    gFlagStepMode=0;
+   gFlagUseBluetooth=0;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -137,31 +139,51 @@ int main(int argc, char** argv)
    }
 
 
-   // russ: this is a little inelegant
-   gCamin = fopen("/dev/ttyACM0","r");
-   if(0 == gCamin)
+   if(0 == gFlagUseBluetooth)
    {
-      fprintf(stderr, "Could not open /dev/ttyACM0 for reading; trying /dev/ttyACM1\n");
-      gCamin = fopen("/dev/ttyACM1", "r");
+      // russ: this is a little inelegant
+      gCamin = fopen("/dev/ttyACM0","r");
       if(0 == gCamin)
       {
-         fprintf(stderr, "Could not open /dev/ttyACM1 for reading\n");
-         return -1;
+         fprintf(stderr, "Could not open /dev/ttyACM0 for reading; trying /dev/ttyACM1\n");
+         gCamin = fopen("/dev/ttyACM1", "r");
+         if(0 == gCamin)
+         {
+            fprintf(stderr, "Could not open /dev/ttyACM1 for reading\n");
+            return -1;
+         }
+         gCamout = fopen("/dev/ttyACM1","w");
+         if(0 == gCamout)
+         {
+            fprintf(stderr, "Could not open /dev/ttyACM1 for writing\n");
+            fclose(gCamin);
+            return -1;
+         }
       }
-      gCamout = fopen("/dev/ttyACM1","w");
-      if(0 == gCamout)
+      else
       {
-         fprintf(stderr, "Could not open /dev/ttyACM1 for writing\n");
-         fclose(gCamin);
-         return -1;
+         gCamout = fopen("/dev/ttyACM0","w");
+         if(0 == gCamout)
+         {
+            fprintf(stderr, "Could not open /dev/ttyACM0 for writing\n");
+            fclose(gCamin);
+            return -1;
+         }
       }
    }
    else
    {
-      gCamout = fopen("/dev/ttyACM0","w");
+      // use bluetooth
+      gCamin = fopen("/dev/rfcomm0", "r");
+      if(0 == gCamin)
+      {
+         fprintf(stderr, "Could not open /dev/rfcomm0 for reading\n");
+         return -1;
+      }
+      gCamout = fopen("/dev/rfcomm0","w");
       if(0 == gCamout)
       {
-         fprintf(stderr, "Could not open /dev/ttyACM0 for writing\n");
+         fprintf(stderr, "Could not open /dev/rfcomm0 for writing\n");
          fclose(gCamin);
          return -1;
       }
@@ -345,7 +367,7 @@ int main(int argc, char** argv)
       }
       //printf("\n");
       // russ: this is not doubled because a "frame" for fps calc is from both cameras
-      fprintf(stderr,"[frame rx'd] fps := % 6.03f\n", fpsinstant);
+      printf("[frame rx'd] fps := % 6.03f\n", fpsinstant);
 
 
       // normalize and scale-up for display on screen
@@ -567,7 +589,7 @@ static void getdeepestdirname(const char *path, char *deepestdirname)
 static void printusage(char *progname)
 {
 
-   fprintf(stderr, "Usage: %s [-s] [-o PATH|-q]\n", progname);
+   fprintf(stderr, "Usage: %s [-b] [-s] [-o PATH|-q]\n", progname);
 }
 
 //
@@ -580,6 +602,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -b         attempt to connect to a bluetooth module already bonded on /dev/rfcomm0\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -o PATH    save video to PATH.  PATH cannot already exist.  incompatible with -q\n");
    fprintf(stderr,"  -q         quiet mode.  won't write out any video.  incompatible with -o\n");
@@ -596,15 +619,17 @@ static int parseargs(int argc, char **argv)
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "ho:qs")) != EOF)
+   while ((cc = getopt(argc, argv, "bho:qs")) != EOF)
    {
       switch (cc) {
+         case 'b':
+            gFlagUseBluetooth = 1;
+            break;
          case 'h':
             gFlagUserCliValid = 1;
             gFlagUserCliHelp = 1;
             break;
          case 's':
-            gFlagUserCliValid = 1;
             gFlagStepMode = 1;
             break;
          case 'o':
