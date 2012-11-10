@@ -5,6 +5,8 @@
 
 //**************************************************************************************************
 // global constants
+#define    NUMCAMS  (2)
+
 const char SYMBOL_SOF           = (char)0xFF;
 
 const char OPCODE_START         = (char)0x01;
@@ -13,6 +15,9 @@ const char OPCODE_SINGLE_FRAME  = (char)0x04;
 const char OPCODE_START_ACK     = (char)0x81;
 const char OPCODE_STOP_ACK      = (char)0x82;
 const char OPCODE_FRAME         = (char)0x84;
+
+const char OPCODE_REQ_NUM_CAMS  = (char)0x21;
+const char OPCODE_RESP_NUM_CAMS = (char)0xA1;
 
 const char PIN_LED = 13;
 
@@ -82,6 +87,12 @@ void loop()
       digitalWrite(PIN_LED,0);
       frameCaptureAndTx();
       digitalWrite(PIN_LED,1);
+    }
+    else if(OPCODE_REQ_NUM_CAMS)
+    {
+      Serial.write(SYMBOL_SOF);
+      Serial.write(OPCODE_RESP_NUM_CAMS);
+      Serial.write((char)NUMCAMS);
     }
     // otherwise, ignore
   }

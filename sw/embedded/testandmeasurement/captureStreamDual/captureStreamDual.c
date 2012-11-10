@@ -28,17 +28,19 @@
 //
 enum
 {
+   SYMBOL_SOF           = 0xFF,
    OPCODE_START_CAPTURE = 0x01,
    OPCODE_STOP_CAPTURE  = 0x02,
    OPCODE_SINGLE_FRAME  = 0x04,
    OPCODE_START_ACK     = 0x81,
    OPCODE_STOP_ACK      = 0x82,
    OPCODE_FRAME         = 0x84,
-   SYMBOL_SOF           = 0xFF
+   OPCODE_REQ_NUM_CAMS  = 0x21,
+   OPCODE_RESP_NUM_CAMS = 0xA1
 };
 
-//#define MATGRAB_FILE     ("image.m")
 #define NS_PER_SEC       (1000*1000*1000)
+#define MAX_CAMS         (2)
 #define FRAME_X_Y        (112)
 #define FRAME_LEN        (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL       (4)
@@ -84,6 +86,8 @@ int main(int argc, char** argv)
    char *indatloc;
    int readcnt;
    int totallen;
+
+   unsigned int numcams;
 
    IplImage *frame, *framenorm, *framescaledup;
    uchar *frameloc, *framenormloc, *framescaleduploc;
@@ -242,6 +246,35 @@ int main(int argc, char** argv)
    time.tv_sec = time.tv_nsec = timeprevious.tv_sec = timeprevious.tv_nsec = 0;
    fpsinstant = fpsmin = fpsmax = -1;
 
+
+   // find out if the device has 1 or 2 cameras
+   fputc((char)SYMBOL_SOF,gCamout);
+   fputc((char)OPCODE_REQ_NUM_CAMS,gCamout);
+   fflush(gCamout);
+   //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
+   //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_REQ_NUM_CAMS);
+
+   readuntilchar(gCamin,SYMBOL_SOF);
+   indat[0] = readchar(gCamin);
+   if(OPCODE_RESP_NUM_CAMS != (unsigned char)indat[0])
+   {
+      cleanupCamConn(/*dummy*/xx);
+      assert(OPCODE_RESP_NUM_CAMS == (unsigned char)indat[0]);
+   }
+   numcams = readchar(gCamin);
+   //fprintf(stderr,"numcams: %d\n",numcams);
+   assert((0 < numcams) && (MAX_CAMS >= numcams));
+   if(1 == numcams)
+   {
+      fprintf(stderr,"ERROR: too few cams!\n");
+      if(0 == gFlagNoWriteVideo)
+      {
+         fclose(outfilefps);
+      }
+      fclose(gCamin);
+      fclose(gCamout);
+      exit(1);
+   }
 
    if(0 == gFlagStepMode)
    {
@@ -539,10 +572,10 @@ static void readuntilchar(FILE* infile, char desiredch)
    do
    {
       readcnt = fread(cc,1,1,infile);
-      //if(0 < readcnt)
-      //{
-      //   fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
-      //}
+      if(0 < readcnt)
+      {
+         //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
+      }
    } while(desiredch != cc[0]);
    if(desiredch != cc[0])
    {
