@@ -647,8 +647,8 @@ static int parseargs(int argc, char **argv)
 //
 static void cleanupCamConn(/*dummy for catching signals*/int x)
 {
-   //fputc((char)OPCODE_STOP_CAPTURE,gCamout);
-   //fflush(gCamout);
+   fputc((char)OPCODE_STOP_CAPTURE,gCamout);
+   fflush(gCamout);
 }
 
 //
