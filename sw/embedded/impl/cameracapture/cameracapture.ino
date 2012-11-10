@@ -1,9 +1,11 @@
 #include "stony.h"
-#include "stonymask_cam4.h"
+#include "stonymask_cam7.h"
 
 
 //**************************************************************************************************
 // global constants
+const char SYMBOL_SOF           = (char)0xFF;
+
 const char OPCODE_START         = (char)0x01;
 const char OPCODE_STOP          = (char)0x02;
 const char OPCODE_SINGLE_FRAME  = (char)0x04;
@@ -27,6 +29,8 @@ int gFlagCaptureRunning;
 
 camera stonycam;
 
+//HardwareSerial Uart = HardwareSerial();
+
 
 //**************************************************************************************************
 // function prototypes
@@ -37,6 +41,7 @@ void frameCaptureAndTx();
 // function definitions
 void setup()
 {
+  Serial.begin(115200);
   gFlagCaptureRunning = 0;
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
@@ -48,20 +53,26 @@ void setup()
 void loop()
 {
   char cmd;
-  char opcode;
+  char opcode,cc;
 
   // TODO: for now, the code has no requests for tuning parameters
 
   if(0 == gFlagCaptureRunning)
   {
-    while(!Serial.available());
+    do
+    {
+      while(!Serial.available());
+      cc = Serial.read();
+    } while(SYMBOL_SOF != cc);
 
     // grab data
+    while(!Serial.available());
     opcode = Serial.read();
 
     if(OPCODE_START == opcode)
     {
       gFlagCaptureRunning = 1;
+      Serial.print(SYMBOL_SOF);
       Serial.print(OPCODE_START_ACK);
     }
     else if(OPCODE_SINGLE_FRAME == opcode)
@@ -77,6 +88,18 @@ void loop()
     // check for stop command
     while(Serial.available())
     {
+      do
+      {
+         cc=Serial.read();
+      } while((Serial.available()) && (SYMBOL_SOF != cc));
+
+      if(SYMBOL_SOF != cc)
+      {
+        break;
+      }
+
+      // FIXME: if we ONLY get an SOF, we're stuck here!
+      while(!Serial.available());
       opcode = Serial.read();
 
       if(OPCODE_STOP == opcode)
@@ -103,6 +126,7 @@ void frameCaptureAndTx()
   short imrow[112];
   char  imrowsc[112];
 
+  Serial.print(SYMBOL_SOF);
   Serial.print(OPCODE_FRAME);
 
   for(ii = 0; ii < 112; ++ii)

@@ -33,7 +33,8 @@ enum
    OPCODE_SINGLE_FRAME  = 0x04,
    OPCODE_START_ACK     = 0x81,
    OPCODE_STOP_ACK      = 0x82,
-   OPCODE_FRAME         = 0x84
+   OPCODE_FRAME         = 0x84,
+   SYMBOL_SOF           = 0xFF
 };
 
 //#define MATGRAB_FILE     ("image.m")
@@ -61,6 +62,8 @@ unsigned int gFlagUseBluetooth;
 //**************************************************************************************************
 // local function prototypes
 //
+static char readchar(FILE* inpath);
+static void readuntilchar(FILE* infile, char desiredch);
 static void mkdir_p(const char *path);
 static void getdeepestdirname(const char *path, char *deepestdirname);
 static void printusage(char *progname);
@@ -229,15 +232,14 @@ int main(int argc, char** argv)
    if(0 == gFlagStepMode)
    {
       // TODO: should be a function
+      fputc((char)SYMBOL_SOF,gCamout);
       fputc((char)OPCODE_START_CAPTURE,gCamout);
       fflush(gCamout);
-
+      //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
       //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
-      do
-      {
-         readcnt = fread(indat,1,1,gCamin);
-         //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
-      } while(OPCODE_START_ACK != (unsigned char)indat[0]);
+
+      readuntilchar(gCamin,SYMBOL_SOF);
+      indat[0] = readchar(gCamin);
       if(OPCODE_START_ACK != (unsigned char)indat[0])
       {
          cleanupCamConn(/*dummy*/xx);
@@ -260,35 +262,25 @@ int main(int argc, char** argv)
 
    while(1)
    {
-      if(0 == gFlagStepMode)
+      if(0 != gFlagStepMode)
       {
          // TODO: should be a function
-         do {
-            readcnt = fread(indat,1,1,gCamin);
-            //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
-         } while(1 > readcnt);
-         if(OPCODE_FRAME != (unsigned char)indat[0])
-         {
-            cleanupCamConn(/*dummy*/xx);
-            assert(OPCODE_FRAME == (unsigned char)indat[0]);
-         }
-      }
-      else
-      {
-         // TODO: should be a function
+         fputc((char)SYMBOL_SOF,gCamout);
          fputc((char)OPCODE_SINGLE_FRAME,gCamout);
          fflush(gCamout);
-
-         //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
-         do {
-            readcnt = fread(indat,1,1,gCamin);
-            //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)indat[0]);
-         } while(1 > readcnt);
-         if(OPCODE_FRAME != (unsigned char)indat[0])
-         {
-            assert(OPCODE_FRAME == (unsigned char)indat[0]);
-         }
       }
+
+      readuntilchar(gCamin,SYMBOL_SOF);
+      indat[0] = readchar(gCamin);
+      if(OPCODE_FRAME != (unsigned char)indat[0])
+      {
+         if(0 == gFlagStepMode)
+         {
+            cleanupCamConn(/*dummy*/xx);
+         }
+         assert(OPCODE_FRAME == (unsigned char)indat[0]);
+      }
+
 
       totallen=0;
       indatloc=indat;
@@ -373,6 +365,7 @@ int main(int argc, char** argv)
 
       // display picture on screen
       cvShowImage("CamCap", framescaledup);
+      cvShowImage("CamCapSmall", frame);
       cvShowImage("CamCapSmall", framenorm);
 
 
@@ -413,12 +406,12 @@ int main(int argc, char** argv)
    if(0 == gFlagStepMode)
    {
       // TODO: should be a function
+      fputc((char)SYMBOL_SOF,gCamout);
       fputc((char)OPCODE_STOP_CAPTURE,gCamout);
       fflush(gCamout);
-      do
-      {
-         readcnt = fread(indat,1,1,gCamin);
-      } while(OPCODE_STOP_ACK != (unsigned char)indat[0]);
+
+      readuntilchar(gCamin,SYMBOL_SOF);
+      indat[0] = readchar(gCamin);
 
       // russ: do I need this?
       fflush(gCamin);
@@ -451,6 +444,46 @@ int main(int argc, char** argv)
 //**************************************************************************************************
 // local function definitions
 //
+
+//
+// readchar: read one char from the (device) file
+//
+static char readchar(FILE* infile)
+{
+   unsigned readcnt;
+   char cc[1];
+
+   do
+   {
+      readcnt = fread(cc,1,1,infile);
+   } while(1>readcnt);
+   //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
+   return cc[0];
+}
+
+//
+// readuntilchar: keep reading until the desired char is read from the (device) file
+//
+static void readuntilchar(FILE* infile, char desiredch)
+{
+   unsigned readcnt;
+   char cc[1];
+   cc[0] = '\0';
+
+   do
+   {
+      readcnt = fread(cc,1,1,infile);
+      //if(0 < readcnt)
+      //{
+      //   fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
+      //}
+   } while(desiredch != cc[0]);
+   if(desiredch != cc[0])
+   {
+      cleanupCamConn(/*dummy*/readcnt);
+      assert(desiredch == cc[0]);
+   }
+}
 
 //
 // mkdir_p: like mkdir -p
@@ -614,8 +647,8 @@ static int parseargs(int argc, char **argv)
 //
 static void cleanupCamConn(/*dummy for catching signals*/int x)
 {
-   fputc((char)OPCODE_STOP_CAPTURE,gCamout);
-   fflush(gCamout);
+   //fputc((char)OPCODE_STOP_CAPTURE,gCamout);
+   //fflush(gCamout);
 }
 
 //
