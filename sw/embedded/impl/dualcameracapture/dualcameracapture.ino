@@ -5,8 +5,7 @@
 
 //**************************************************************************************************
 // global constants
-const char SYMBOL_SOF           = (char)0xDD;
-const char SYMBOL_ESCAPE        = (char)0xFF;
+const char SYMBOL_SOF           = (char)0xFF;
 
 const char OPCODE_START         = (char)0x01;
 const char OPCODE_STOP          = (char)0x02;
@@ -32,6 +31,8 @@ int gFlagCaptureRunning;
 
 camera stonycam;
 
+//HardwareSerial Uart = HardwareSerial();
+
 
 //**************************************************************************************************
 // function prototypes
@@ -42,12 +43,13 @@ void frameCaptureAndTx();
 // function definitions
 void setup()
 {
+  Serial.begin(115200);
   gFlagCaptureRunning = 0;
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
 
   (void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG1, PIN_ANALOG2); // raw: for 5v
-  //(void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,35,50,50,1,1); // amp: for 3v3
+  //(void)stonycam.init(PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG1, PIN_ANALOG2,35,50,50,1,1); // amp: for 3v3
 }
 
 void loop()
@@ -59,19 +61,20 @@ void loop()
 
   if(0 == gFlagCaptureRunning)
   {
-    while(!Serial.available());
-    /* FIXME russ add in escape sequences
     do
     {
+      while(!Serial.available());
       cc = Serial.read();
-    } while(Serial.available() && (SYMBOL_SOF != cc));*/
+    } while(SYMBOL_SOF != cc);
 
     // grab data
+    while(!Serial.available());
     opcode = Serial.read();
 
     if(OPCODE_START == opcode)
     {
       gFlagCaptureRunning = 1;
+      Serial.print(SYMBOL_SOF);
       Serial.print(OPCODE_START_ACK);
     }
     else if(OPCODE_SINGLE_FRAME == opcode)
@@ -87,11 +90,18 @@ void loop()
     // check for stop command
     while(Serial.available())
     {
-      /* FIXME russ add in escape sequences
       do
       {
          cc=Serial.read();
-      } while((!Serial.available()) && (SYMBOL_SOF != cc));*/
+      } while((Serial.available()) && (SYMBOL_SOF != cc));
+
+      if(SYMBOL_SOF != cc)
+      {
+        break;
+      }
+
+      // FIXME: if we ONLY get an SOF, we're stuck here!
+      while(!Serial.available());
       opcode = Serial.read();
 
       if(OPCODE_STOP == opcode)
@@ -120,6 +130,7 @@ void frameCaptureAndTx()
   short imrow2[112];
   char  imrowsc2[112];
 
+  Serial.print(SYMBOL_SOF);
   Serial.print(OPCODE_FRAME);
 
   for(ii = 0; ii < 112; ++ii)
