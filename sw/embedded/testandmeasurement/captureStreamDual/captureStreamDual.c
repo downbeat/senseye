@@ -264,17 +264,6 @@ int main(int argc, char** argv)
    numcams = readchar(gCamin);
    //fprintf(stderr,"numcams: %d\n",numcams);
    assert((0 < numcams) && (MAX_CAMS >= numcams));
-   if(1 == numcams)
-   {
-      fprintf(stderr,"ERROR: too few cams!\n");
-      if(0 == gFlagNoWriteVideo)
-      {
-         fclose(outfilefps);
-      }
-      fclose(gCamin);
-      fclose(gCamout);
-      exit(1);
-   }
 
    if(0 == gFlagStepMode)
    {
@@ -331,9 +320,9 @@ int main(int argc, char** argv)
 
       totallen=0;
       indatloc=indat;
-      while(FRAME_LEN*2 > totallen)
+      while(FRAME_LEN*numcams > totallen)
       {
-         readcnt = fread(indatloc,1,(FRAME_LEN*2)-totallen,gCamin);
+         readcnt = fread(indatloc,1,(FRAME_LEN*numcams)-totallen,gCamin);
          totallen+=readcnt;
          indatloc+=readcnt;
       }
@@ -367,32 +356,37 @@ int main(int argc, char** argv)
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
-         frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
+         if(2 == numcams)
+         {
+            frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
+         }
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
-            if(framevalmin > (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj])
+            if(framevalmin > (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj])
             {
-               framevalmin = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
+               framevalmin = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
             }
-            if(framevalmax < (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj])
+            if(framevalmax < (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj])
             {
-               framevalmax = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
+               framevalmax = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
             }
-            if(frame2valmin > (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj])
+            frameloc[jj] = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
+            if(2 == numcams)
             {
-               frame2valmin = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
+               if(frame2valmin > (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj])
+               {
+                  frame2valmin = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
+               }
+               if(frame2valmax < (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj])
+               {
+                  frame2valmax = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
+               }
+               frame2loc[jj] = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
             }
-            if(frame2valmax < (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj])
-            {
-               frame2valmax = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
-            }
-            frameloc[jj] = (unsigned char)indat[((2*ii)*FRAME_X_Y)+jj];
-            frame2loc[jj] = (unsigned char)indat[((2*ii+1)*FRAME_X_Y)+jj];
-            //printf("%02X ", (unsigned char)indat[(FRAME_X_Y*ii)+jj]);
          }
       }
       //printf("\n");
-      // russ: this is not doubled because a "frame" for fps calc is from both cameras
+      // russ: a "frame" for fps calc is from both cameras
       printf("[frame rx'd] fps := % 6.03f\n", fpsinstant);
 
 
@@ -402,46 +396,58 @@ int main(int argc, char** argv)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
          framenormloc = (uchar*)(framenorm->imageData + (ii*framenorm->widthStep));
-         frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
-         frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
-         framedualnormloc1 = (uchar*)(framedualnorm->imageData + (ii*framedualnorm->widthStep));
-         framedualnormloc2 = (uchar*)( framedualnorm->imageData
-                                       + (ii*framedualnorm->widthStep)
-                                       + (framedualnorm->widthStep/2) );
+         if(2 == numcams)
+         {
+            frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
+            frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
+            framedualnormloc1 = (uchar*)(framedualnorm->imageData + (ii*framedualnorm->widthStep));
+            framedualnormloc2 = (uchar*)( framedualnorm->imageData
+                                          + (ii*framedualnorm->widthStep)
+                                          + (framedualnorm->widthStep/2) );
+         }
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
             framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-            frame2normloc[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
-            framedualnormloc1[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-            framedualnormloc2[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+            if(2 == numcams)
+            {
+               frame2normloc[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+               framedualnormloc1[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+               framedualnormloc2[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+            }
 
             for(xx=0; xx<SCALINGVAL; ++xx)
             {
                framescaleduploc
                   = (uchar*)( framescaledup->imageData
                               + (((ii*SCALINGVAL)+xx)*framescaledup->widthStep) );
-               frame2scaleduploc
-                  = (uchar*)( frame2scaledup->imageData
-                              + (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
-               // double wide
-               framedualscaleduploc1
-                  = (uchar*)( framedualscaledup->imageData
-                              + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
-               framedualscaleduploc2 
-                  = (uchar*)( framedualscaledup->imageData
-                              + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
-                              + (framedualscaledup->widthStep/2) );
+               if(2 == numcams)
+               {
+                  frame2scaleduploc
+                     = (uchar*)( frame2scaledup->imageData
+                                 + (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
+                  // double wide
+                  framedualscaleduploc1
+                     = (uchar*)( framedualscaledup->imageData
+                                 + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
+                  framedualscaleduploc2 
+                     = (uchar*)( framedualscaledup->imageData
+                                 + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
+                                 + (framedualscaledup->widthStep/2) );
+               }
                for(yy=0; yy<SCALINGVAL; ++yy)
                {
                   framescaleduploc[(jj*SCALINGVAL)+yy]
                      = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-                  frame2scaleduploc[(jj*SCALINGVAL)+yy]
-                     = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-                  // double wide
-                  framedualscaleduploc1[(jj*SCALINGVAL)+yy]
-                     = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-                  framedualscaleduploc2[(jj*SCALINGVAL)+yy]
-                     = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
+                  if(2 == numcams)
+                  {
+                     frame2scaleduploc[(jj*SCALINGVAL)+yy]
+                        = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
+                     // double wide
+                     framedualscaleduploc1[(jj*SCALINGVAL)+yy]
+                        = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
+                     framedualscaleduploc2[(jj*SCALINGVAL)+yy]
+                        = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
+                  }
                }
             }
          }
@@ -449,13 +455,16 @@ int main(int argc, char** argv)
 
 
       // display picture on screen
-      /* russ: only displaying double wides now (TODO: add single picture functionality back in)
-      cvShowImage("CamCap", framescaledup);
-      cvShowImage("CamCapSmall", framenorm);
-      cvShowImage("Cam2Cap", frame2scaledup);
-      cvShowImage("Cam2CapSmall", frame2norm);*/
-      cvShowImage("CamCapDoubleWide", framedualscaledup);
-      cvShowImage("CamCapDoubleWideSmall", framedualnorm);
+      if(2 == numcams)
+      {
+         cvShowImage("CamCapDoubleWide", framedualscaledup);
+         cvShowImage("CamCapDoubleWideSmall", framedualnorm);
+      }
+      else
+      {
+         cvShowImage("CamCap", framescaledup);
+         cvShowImage("CamCapSmall", framenorm);
+      }
 
 
       // save the frame as a BMP file
@@ -467,7 +476,14 @@ int main(int argc, char** argv)
                    outfilenameprefix,frameidx );
          fprintf(outfilefps,"[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
 
-         (void)cvSaveImage(outfilenameframe,framedualnorm,0);
+         if(2 == numcams)
+         {
+            (void)cvSaveImage(outfilenameframe,framedualnorm,0);
+         }
+         else
+         {
+            (void)cvSaveImage(outfilenameframe,framenorm,0);
+         }
       }
 
       ++frameidx;
@@ -520,13 +536,17 @@ int main(int argc, char** argv)
    cvReleaseImage(&frame2scaledup);
    cvReleaseImage(&framedualnorm);
    cvReleaseImage(&framedualscaledup);
-   /* russ: only displaying double wides now
-   cvDestroyWindow("CamCap");
-   cvDestroyWindow("CamCapSmall");
-   cvDestroyWindow("Cam2Cap");
-   cvDestroyWindow("Cam2CapSmall");*/
-   cvDestroyWindow("CamCapDoubleWide");
-   cvDestroyWindow("CamCapDoubleWideSmall");
+   if(2 == numcams)
+   {
+      cvDestroyWindow("CamCapDoubleWide");
+      cvDestroyWindow("CamCapDoubleWideSmall");
+   }
+   else
+   {
+      cvDestroyWindow("CamCap");
+      cvDestroyWindow("CamCapSmall");
+   }
+	  
 
 
    // close files
