@@ -39,14 +39,21 @@ enum
    OPCODE_RESP_NUM_CAMS = 0xA1
 };
 
-#define NS_PER_SEC       (1000*1000*1000)
-#define MAX_CAMS         (2)
-#define FRAME_X_Y        (112)
-#define FRAME_LEN        (FRAME_X_Y*FRAME_X_Y)
-#define SCALINGVAL       (4)
-#define ESC_KEY          (27)
-#define OUTPATH_MAX_LEN  (256)
+#define DBG_PRINT_TXRX_OPS    (0)
+#define NS_PER_SEC            (1000*1000*1000)
+#define MAX_CAMS              (2)
+#define FRAME_X_Y             (112)
+#define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
+#define SCALINGVAL            (4)
+#define ESC_KEY               (27)
+#define OUTPATH_MAX_LEN       (256)
 
+#define dbgPrintOp(msg,opcode) do { \
+                                  if(0!=DBG_PRINT_TXRX_OPS) \
+                                  { \
+                                     fprintf(stderr,msg,opcode); \
+                                  } \
+                               } while(0)
 
 //**************************************************************************************************
 // globals
@@ -249,10 +256,10 @@ int main(int argc, char** argv)
 
    // find out if the device has 1 or 2 cameras
    fputc((char)SYMBOL_SOF,gCamout);
+   dbgPrintOp("tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
    fputc((char)OPCODE_REQ_NUM_CAMS,gCamout);
    fflush(gCamout);
-   //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
-   //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_REQ_NUM_CAMS);
+   dbgPrintOp("tx: 0x%02X\n", (unsigned char)OPCODE_REQ_NUM_CAMS);
 
    readuntilchar(gCamin,SYMBOL_SOF);
    indat[0] = readchar(gCamin);
@@ -262,7 +269,6 @@ int main(int argc, char** argv)
       assert(OPCODE_RESP_NUM_CAMS == (unsigned char)indat[0]);
    }
    numcams = readchar(gCamin);
-   //fprintf(stderr,"numcams: %d\n",numcams);
    assert((0 < numcams) && (MAX_CAMS >= numcams));
 
    if(0 == gFlagStepMode)
@@ -271,8 +277,8 @@ int main(int argc, char** argv)
       fputc((char)SYMBOL_SOF,gCamout);
       fputc((char)OPCODE_START_CAPTURE,gCamout);
       fflush(gCamout);
-      //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
-      //fprintf(stderr,"tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
+      dbgPrintOp("tx: 0x%02X\n", (unsigned char)SYMBOL_SOF);
+      dbgPrintOp("tx: 0x%02X\n", (unsigned char)OPCODE_START_CAPTURE);
 
       readuntilchar(gCamin,SYMBOL_SOF);
       indat[0] = readchar(gCamin);
@@ -546,7 +552,6 @@ int main(int argc, char** argv)
       cvDestroyWindow("CamCap");
       cvDestroyWindow("CamCapSmall");
    }
-	  
 
 
    // close files
@@ -576,7 +581,7 @@ static char readchar(FILE* infile)
    {
       readcnt = fread(cc,1,1,infile);
    } while(1>readcnt);
-   //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)cc[0]);
    return cc[0];
 }
 
@@ -594,7 +599,7 @@ static void readuntilchar(FILE* infile, char desiredch)
       readcnt = fread(cc,1,1,infile);
       if(0 < readcnt)
       {
-         //fprintf(stderr,"rx: 0x%02X\n", (unsigned char)cc[0]);
+         dbgPrintOp("rx: 0x%02X\n", (unsigned char)cc[0]);
       }
    } while(desiredch != cc[0]);
    if(desiredch != cc[0])
