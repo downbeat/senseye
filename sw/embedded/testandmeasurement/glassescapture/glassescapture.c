@@ -416,9 +416,9 @@ int main(int argc, char** argv)
             framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
             if(2 == numcams)
             {
-               frame2normloc[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+               frame2normloc[jj] = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
                framedualnormloc1[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-               framedualnormloc2[jj] = (uchar)((frame2loc[jj]-framevalmin)*(255.0/frame2valmax));
+               framedualnormloc2[jj] = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
             }
 
             for(xx=0; xx<SCALINGVAL; ++xx)
