@@ -289,6 +289,7 @@ int main(int argc, char** argv)
       }
 
       // we want to gracefully close the remove device connection now that we've started it
+      // FIXME russ: this never really worked right and now all it does is ignore Ctrl-C!
       signal(SIGHUP, cleanupCamConn);
       signal(SIGINT, cleanupCamConn);
       signal(SIGABRT, cleanupCamConn);
