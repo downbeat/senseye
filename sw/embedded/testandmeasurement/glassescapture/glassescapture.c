@@ -148,11 +148,14 @@ int main(int argc, char** argv)
       printhelp(argv[0]);
       exit(0);
    }
-   if(0 == stat(gOutpath,&outpathst))
+   if(0 == gFlagNoWriteVideo)
    {
-      fprintf(stderr,"ERROR: path %s already exists!\n",gOutpath);
-      printusage(argv[0]);
-      exit(1);
+      if(0 == stat(gOutpath,&outpathst))
+      {
+         fprintf(stderr,"ERROR: path %s already exists!\n",gOutpath);
+         printusage(argv[0]);
+         exit(1);
+      }
    }
 
 
