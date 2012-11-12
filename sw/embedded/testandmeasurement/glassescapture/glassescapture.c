@@ -340,10 +340,6 @@ int main(int argc, char** argv)
          indatloc+=readcnt;
       }
       *indatloc = '\0';
-      /* FIXME: russ: this is way wrong (it's old code, skeletons in my closet if you will
-      //printf("tx: 0x%02X\n", OPCODE_SINGLE_FRAME);
-      //printf("rx len: %d\n", totallen);
-      //printf("rx 0x%02X ",(unsigned char)indat[0]);*/
 
 
       // calculate FPS
