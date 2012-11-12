@@ -301,7 +301,6 @@ int main(int argc, char** argv)
       signal(SIGABRT, cleanupCamConn);
       signal(SIGQUIT, cleanupCamConn);
       signal(SIGTERM, cleanupCamConn);
-      signal(SIGSEGV, cleanupCamConn);
    }
    else
    {
