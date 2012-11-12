@@ -9,10 +9,13 @@
 //**************************************************************************************************
 // includes
 //
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 //#include <termios.h>
 #include <errno.h>
-#include <time.h>
+//#include <time.h>
+#include <assert.h>
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -39,21 +42,21 @@ enum
    OPCODE_RESP_NUM_CAMS = 0xA1
 };
 
-#define DBG_PRINT_TXRX_OPS    (0)
-#define NS_PER_SEC            (1000*1000*1000)
-#define MAX_CAMS              (2)
-#define FRAME_X_Y             (112)
-#define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
-#define SCALINGVAL            (4)
-#define ESC_KEY               (27)
-#define OUTPATH_MAX_LEN       (256)
+#define DBG_PRINT_TXRX_OPS      (0)
+#define NS_PER_SEC              (1000*1000*1000)
+#define MAX_CAMS                (2)
+#define FRAME_X_Y               (112)
+#define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
+#define SCALINGVAL              (4)
+#define ESC_KEY                 (27)
+#define OUTPATH_MAX_LEN         (256)
 
-#define dbgPrintOp(msg,opcode) do { \
-                                  if(0!=DBG_PRINT_TXRX_OPS) \
-                                  { \
-                                     fprintf(stderr,msg,opcode); \
-                                  } \
-                               } while(0)
+#define dbgPrintOp(msg,opcode)  do { \
+                                   if(0!=DBG_PRINT_TXRX_OPS) \
+                                   { \
+                                      fprintf(stderr,msg,opcode); \
+                                   } \
+                                } while(0)
 
 //**************************************************************************************************
 // globals
