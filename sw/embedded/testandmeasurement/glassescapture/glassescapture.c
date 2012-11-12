@@ -14,7 +14,7 @@
 #include <string.h>
 //#include <termios.h>
 #include <errno.h>
-//#include <time.h>
+#include <time.h>
 #include <assert.h>
 #include <signal.h>
 #include <sys/types.h>
