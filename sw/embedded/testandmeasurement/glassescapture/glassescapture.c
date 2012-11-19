@@ -271,7 +271,7 @@ int main(int argc, char** argv)
    indat[0] = readchar(gCamin);
    if(OPCODE_RESP_NUM_CAMS != (unsigned char)indat[0])
    {
-      cleanupCamConn(/*dummy*/xx);
+      cleanupCamConn(/*dummy*/0);
       assert(OPCODE_RESP_NUM_CAMS == (unsigned char)indat[0]);
    }
    numcams = readchar(gCamin);
@@ -290,7 +290,7 @@ int main(int argc, char** argv)
       indat[0] = readchar(gCamin);
       if(OPCODE_START_ACK != (unsigned char)indat[0])
       {
-         cleanupCamConn(/*dummy*/xx);
+         cleanupCamConn(/*dummy*/0);
          assert(OPCODE_START_ACK == (unsigned char)indat[0]);
       }
 
@@ -324,7 +324,7 @@ int main(int argc, char** argv)
       {
          if(0 == gFlagStepMode)
          {
-            cleanupCamConn(/*dummy*/xx);
+            cleanupCamConn(/*dummy*/0);
          }
          assert(OPCODE_FRAME == (unsigned char)indat[0]);
       }
@@ -523,6 +523,7 @@ int main(int argc, char** argv)
       fputc((char)OPCODE_STOP_CAPTURE,gCamout);
       fflush(gCamout);
 
+      // TODO: russ: this really should have a timeout
       readuntilchar(gCamin,SYMBOL_SOF);
       indat[0] = readchar(gCamin);
 
@@ -606,7 +607,7 @@ static void readuntilchar(FILE* infile, char desiredch)
    } while(desiredch != cc[0]);
    if(desiredch != cc[0])
    {
-      cleanupCamConn(/*dummy*/readcnt);
+      cleanupCamConn(/*dummy*/0);
       assert(desiredch == cc[0]);
    }
 }
@@ -776,7 +777,10 @@ static void cleanupCamConn(/*dummy for catching signals*/int x)
    fputc((char)SYMBOL_SOF,gCamout);
    fputc((char)OPCODE_STOP_CAPTURE,gCamout);
    fflush(gCamout);
-   exit(0);
+   if(0 != x)
+   {
+      exit(0);
+   }
 }
 
 //
