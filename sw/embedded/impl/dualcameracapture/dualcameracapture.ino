@@ -108,7 +108,7 @@ void loop()
 
       if(SYMBOL_SOF != cc)
       {
-        break;
+        continue;
       }
 
       // FIXME: if we ONLY get an SOF, we're stuck here!
@@ -159,9 +159,7 @@ void frameCaptureAndTx()
     }
     for(jj = 0; jj < 112; ++jj)
     {
-      // russ: the +20 is because the mask isn't actually quite correct
-      // (sometimes black wraps over into white)
-      imrowsc2[jj]=255-imrow2[jj]+stonymask2[(112*ii)+jj]+20;
+      imrowsc2[jj]=255-imrow2[jj]+stonymask2[(112*ii)+jj];
       //imrowsc2[jj]=imrow2[jj]-stonymask2[(112*ii)+jj];
       // russ: try this if the masked version is not working
       //imrowsc2[jj]=imrow2[jj]-128;
