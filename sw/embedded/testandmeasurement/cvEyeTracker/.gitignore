@@ -1,0 +1,3 @@
+*.o
+logfile.txt
+gmon.out

@@ -1,11 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 # Russ Bielawski
 # 2012-11-15
 
 # pretty quick and dirty
 
-prognames=( 'frontdisplayandsave'
+prognames=( 'cvEyeTracker'
+            'frontdisplayandsave'
             'fronteyedetect'
             'glassescapsnapshots'
             'glassescapstream'
