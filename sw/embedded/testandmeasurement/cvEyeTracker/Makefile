@@ -4,7 +4,7 @@ LIBDIRS=-L/usr/local/lib -L/usr/X11R6/lib
 
 LIBS=-lm -lopencv_core -lopencv_highgui -lopencv_imgproc #-lcvaux 
 
-LIBGLASSES_DIR=../../libglasses
+LIBGLASSES_DIR=../libglasses
 INCLUDES=-I/usr/local/include/opencv -I$(LIBGLASSES_DIR)
 
 DEFINES= -O2
