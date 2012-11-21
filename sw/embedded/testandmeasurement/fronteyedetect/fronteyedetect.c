@@ -87,7 +87,7 @@ int main(int argc, char** argv)
    uchar *framedualnormloc1, *framedualnormloc2, *framedualscaleduploc1, *framedualscaleduploc2;
 
    // eye detect!
-   IplImage *inverted, *threshed, *circles;
+   IplImage *inverted, *threshed, *circles, *disco;
    CvMemStorage* houghstorage;
    CvSeq *houghres;
    float *cir;
@@ -190,6 +190,7 @@ int main(int argc, char** argv)
    inverted = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    threshed = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    circles = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 3);
+   disco = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 3);
    // russ: unsure what this is even used for!
    houghstorage = cvCreateMemStorage(0);
 
@@ -366,6 +367,37 @@ int main(int argc, char** argv)
 
       // eye detection
       cvSmooth(framenorm, framenorm, CV_GAUSSIAN, 5, 5, 0, 0);
+      cvNot(framenorm, inverted);
+      for(ii=100; ii<250; ii+=4)
+      {
+         cvEqualizeHist(inverted, inverted);
+         cvThreshold(inverted, threshed, ii, 255, CV_THRESH_BINARY_INV);
+         houghres = cvHoughCircles( threshed, houghstorage, CV_HOUGH_GRADIENT,
+                                    4, 1, 160, 80, threshed->width/8, threshed->width/3);
+         cvCvtColor(threshed, circles, CV_GRAY2RGB);
+         cvCvtColor(framenorm, disco, CV_GRAY2RGB);
+         for(jj=0; jj<houghres->total; ++jj)
+         {
+            cir = (float*)cvGetSeqElem(houghres,jj);
+            cvCircle( circles,
+                      cvPoint(cvRound(cir[0]),cvRound(cir[1])),
+                      cvRound(cir[2]), CV_RGB(255,0,0), 2, 8, 0);
+            cvCircle( disco,
+                      cvPoint(cvRound(cir[0]),cvRound(cir[1])),
+                      1, CV_RGB(0,255,0), 4, 8, 0);
+         }
+         //(void)cvWaitKey(0);
+         cvShowImage("EyeDetectCandidate", circles);
+         if(1 == houghres->total)
+         {
+            break;
+         }
+      }
+      cvShowImage("EyeDetect", disco);
+      //(void)cvWaitKey(0);
+#if 0
+      // eye detection
+      cvSmooth(framenorm, framenorm, CV_GAUSSIAN, 5, 5, 0, 0);
       // hijacking the framenorm variable
       /*cvNot(framenorm, inverted);
       cvEqualizeHist(inverted, inverted);
@@ -412,6 +444,7 @@ int main(int argc, char** argv)
       }*/
       //cvShowImage("EyeDetect", threshed);
       cvShowImage("EyeDetect", circles);
+#endif /* 0 */
 
 
       // save the frame as a BMP file
@@ -423,14 +456,15 @@ int main(int argc, char** argv)
                    outfilenameprefix,frameidx );
          fprintf(gOutfilefps,"[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
 
-         if(2 == numcams)
+         (void)cvSaveImage(outfilenameframe,disco,0);
+         /*if(2 == numcams)
          {
             (void)cvSaveImage(outfilenameframe,framedualnorm,0);
          }
          else
          {
             (void)cvSaveImage(outfilenameframe,framenorm,0);
-         }
+         }*/
       }
 
       ++frameidx;
