@@ -4,7 +4,8 @@
 
 //**************************************************************************************************
 // global constants
-#define    NUMCAMS  (1)
+#define    NUMCAMS   (1)
+#define    BAUDRATE  (115200)
 
 const char SYMBOL_SOF           = (char)0xFF;
 
@@ -46,7 +47,7 @@ void frameCaptureAndTx();
 // function definitions
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(BAUDRATE);
   gFlagCaptureRunning = 0;
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
@@ -106,7 +107,7 @@ void loop()
 
       if(SYMBOL_SOF != cc)
       {
-        break;
+        continue;
       }
 
       // FIXME: if we ONLY get an SOF, we're stuck here!
@@ -140,6 +141,7 @@ void frameCaptureAndTx()
   Serial.print(SYMBOL_SOF);
   Serial.print(OPCODE_FRAME);
 
+  //for(ii=0; ii<112*112; ++ii) Serial.print(0);
   for(ii = 0; ii < 112; ++ii)
   {
     stonycam.getImage(imrow,ii,1,1,0,112,1);
