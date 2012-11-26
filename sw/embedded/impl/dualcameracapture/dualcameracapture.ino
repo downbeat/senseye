@@ -5,7 +5,8 @@
 
 //**************************************************************************************************
 // global constants
-#define    NUMCAMS  (2)
+#define    NUMCAMS   (2)
+#define    BAUDRATE  (115200)
 
 const char SYMBOL_SOF           = (char)0xFF;
 
@@ -48,7 +49,7 @@ void frameCaptureAndTx();
 // function definitions
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(BAUDRATE);
   gFlagCaptureRunning = 0;
   pinMode(13,OUTPUT);
   digitalWrite(PIN_LED,1);
