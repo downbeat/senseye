@@ -6,8 +6,7 @@
 // stony
 // This is a camera driver for the CentEye Stonyman vision chip.
 // WARNINGS:
-//  - unfortunately (for now), the driver is coupled with an ADC driver for the freescale
-//    kinetis.  FIXME russ: is this true?
+//  - driver uses "arduino" calls to write digital and read analog.
 //  - driver is not reentrant (in fact, everything is written to block).
 //  - 3V3 operation not implemented.
 //  - driver is not optimized for low memory consumption (neither ROM nor RAM)
