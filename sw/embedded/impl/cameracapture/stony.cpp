@@ -480,7 +480,7 @@ void camera::getImage( short *img, unsigned char rowstart, unsigned char numrows
       // pulse amplifier if needed
       if (flagUseAmplifier)
       {
-        pulseInphi(2);
+        pulseInphi(1);
       }
 
       // get data value
