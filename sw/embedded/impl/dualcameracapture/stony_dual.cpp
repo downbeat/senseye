@@ -7,15 +7,15 @@
 /*
 // FIXME russ: for now, I have added microsecond delays, but they might be too long or possibly
 //             completely unnecessary and therefore wasteful.
-#define pulseRESP()  do { digitalWrite(pinRESP,1); delayMicroseconds(1); digitalWrite(pinRESP,0); } while(0)
-#define pulseINCP()  do { digitalWrite(pinINCP,1); delayMicroseconds(1); digitalWrite(pinINCP,0); } while(0)
-#define pulseRESV()  do { digitalWrite(pinRESV,1); delayMicroseconds(1); digitalWrite(pinRESV,0); } while(0)
-#define pulseINCV()  do { digitalWrite(pinINCV,1); delayMicroseconds(1); digitalWrite(pinINCV,0); } while(0)
+#define pulseRESP()  do { digitalWriteFast(pinRESP,1); delayMicroseconds(1); digitalWriteFast(pinRESP,0); } while(0)
+#define pulseINCP()  do { digitalWriteFast(pinINCP,1); delayMicroseconds(1); digitalWriteFast(pinINCP,0); } while(0)
+#define pulseRESV()  do { digitalWriteFast(pinRESV,1); delayMicroseconds(1); digitalWriteFast(pinRESV,0); } while(0)
+#define pulseINCV()  do { digitalWriteFast(pinINCV,1); delayMicroseconds(1); digitalWriteFast(pinINCV,0); } while(0)
 */
-#define pulseRESP()  do { digitalWrite(pinRESP,1); digitalWrite(pinRESP,0); } while(0)
-#define pulseINCP()  do { digitalWrite(pinINCP,1); digitalWrite(pinINCP,0); } while(0)
-#define pulseRESV()  do { digitalWrite(pinRESV,1); digitalWrite(pinRESV,0); } while(0)
-#define pulseINCV()  do { digitalWrite(pinINCV,1); digitalWrite(pinINCV,0); } while(0)
+#define pulseRESP()  do { digitalWriteFast(pinRESP,1); digitalWriteFast(pinRESP,0); } while(0)
+#define pulseINCP()  do { digitalWriteFast(pinINCP,1); digitalWriteFast(pinINCP,0); } while(0)
+#define pulseRESV()  do { digitalWriteFast(pinRESV,1); digitalWriteFast(pinRESV,0); } while(0)
+#define pulseINCV()  do { digitalWriteFast(pinINCV,1); digitalWriteFast(pinINCV,0); } while(0)
 
 
 //*************************************************************************************************
@@ -57,11 +57,11 @@ void Stonyman::init( char inPinRESP, char inPinINCP, char inPinRESV, char inPinI
   pinMode(pinANALOG2, INPUT);
 
   // set all pins low
-  digitalWrite(pinRESP, 0);
-  digitalWrite(pinINCP, 0);
-  digitalWrite(pinRESV, 0);
-  digitalWrite(pinINCV, 0);
-  digitalWrite(pinINPHI, 0);
+  digitalWriteFast(pinRESP, 0);
+  digitalWriteFast(pinINCP, 0);
+  digitalWriteFast(pinRESV, 0);
+  digitalWriteFast(pinINCV, 0);
+  digitalWriteFast(pinINPHI, 0);
 
   //clear all chip register values
   clearValues();
@@ -136,9 +136,9 @@ void Stonyman::incValue(short val)
 // brings it low.
 void Stonyman::pulseInphi(char delay)
 {
-  digitalWrite(pinINPHI,1);
+  digitalWriteFast(pinINPHI,1);
   delayMicroseconds(delay);
-  digitalWrite(pinINPHI,0);
+  digitalWriteFast(pinINPHI,0);
 }
 
 // setPointerValue

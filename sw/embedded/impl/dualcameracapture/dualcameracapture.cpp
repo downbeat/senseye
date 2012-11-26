@@ -72,7 +72,7 @@ void setup()
    Serial.begin(BAUDRATE);
    gFlagCaptureRunning = 0;
    pinMode(13,OUTPUT);
-   digitalWrite(PIN_LED,1);
+   digitalWriteFast(PIN_LED,1);
 
    (void)stonycam.init( PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG1, PIN_ANALOG2,
                         Stonyman::DEFAULT_VREF_5V0, Stonyman::DEFAULT_NBIAS_5V0,
@@ -108,9 +108,9 @@ void loop()
       }
       else if(OPCODE_SINGLE_FRAME == opcode)
       {
-         digitalWrite(PIN_LED,0);
+         digitalWriteFast(PIN_LED,0);
          frameCaptureAndTx();
-         digitalWrite(PIN_LED,1);
+         digitalWriteFast(PIN_LED,1);
       }
       else if(OPCODE_REQ_NUM_CAMS)
       {
@@ -151,9 +151,9 @@ void loop()
          // or the framerate) these will only be accepted when a capture is not running
       }
 
-      digitalWrite(PIN_LED,0);
+      digitalWriteFast(PIN_LED,0);
       frameCaptureAndTx();
-      digitalWrite(PIN_LED,1);
+      digitalWriteFast(PIN_LED,1);
    }
 }
 
