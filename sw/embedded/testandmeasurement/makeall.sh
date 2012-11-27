@@ -7,7 +7,9 @@
 
 prognames=( 'cvEyeTracker'
             'frontdisplayandsave'
+            'frontgazecoordsoverlay'
             'fronteyedetect'
+            'gazesetgroundtruth'
             'glassescapsnapshots'
             'glassescapstream'
             'glassesreplaystream' )
