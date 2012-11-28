@@ -43,20 +43,12 @@
 //**************************************************************************************************
 // globals
 //
-// FIXME russ remove
-#if 0
-static FILE     *gOutfilefps;
-#endif // 0
 static char     gOutpath[OUTPATH_MAX_LEN];
 static unsigned gFlagUserCliValid;
 static unsigned gFlagUserCliHelp;
-// FIXME russ remove
-#if 0
-static unsigned gFlagNoWriteVideo;
-#endif // 0
 static unsigned gFlagRawMode;
-static int gLastGazeX;
-static int gLastGazeY;
+static int      gLastGazeX;
+static int      gLastGazeY;
 
 
 //**************************************************************************************************
@@ -66,10 +58,6 @@ static void cbkcvmouseevent(int event, int xx, int yy, int flags, void *params);
 static void printusage(char *progname);
 static void printhelp(char *progname);
 static int  parseargs(int argc, char **argv);
-// FIXME russ remove
-#if 0
-static void terminate(int xx);
-#endif // 0
 
 
 //**************************************************************************************************
@@ -101,49 +89,20 @@ int main(int argc, char** argv)
    IplImage *prevgazeselection;
 
    struct timespec time, timeprevious;
-// FIXME russ remove
-#if 0
-   double fpsinstant;
-   double fpsmin;
-   double fpsmax;
-#endif // 0
 
-// FIXME russ remove
-#if 0
-   struct stat outpathst = {0};
-#endif // 0
    char outfilenameprefix[2*OUTPATH_MAX_LEN];
    char outfilenamegazecoords[2*OUTPATH_MAX_LEN];
    char outfilenamebadframes[2*OUTPATH_MAX_LEN];
    FILE *outfilegazecoords;
    FILE *outfilebadframes;
-// FIXME russ remove
-#if 0
-   char outfilenamefps[2*OUTPATH_MAX_LEN];
-   char outfilenameframe[2*OUTPATH_MAX_LEN];
-#endif // 0
    unsigned frameidx;
    unsigned flagbadframe;
    unsigned flagexitrequested;
-
-   /* TODO russ: can't get writing video to work yet!
-   CvVideoWriter *vidout;*/
-// FIXME russ remove
-#if 0
-
-
-   // appease the compiler
-   gOutfilefps = 0;
-#endif // 0
 
 
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
-// FIXME russ remove
-#if 0
-   gFlagNoWriteVideo=1;
-#endif // 0
    gFlagRawMode=1;
    if(0 != parseargs(argc,argv))
    {
@@ -160,25 +119,13 @@ int main(int argc, char** argv)
       printhelp(argv[0]);
       exit(0);
    }
-// FIXME russ remove
-#if 0
-   if(0 == gFlagNoWriteVideo)
-   {
-      if(0 == stat(gOutpath,&outpathst))
-      {
-         fprintf(stderr,"ERROR: path %s already exists!\n",gOutpath);
-         printusage(argv[0]);
-         exit(1);
-      }
-   }
-#endif // 0
 
-   // FIXME russ asdfasdf
    // FIXME russ: find a way to get the correct path name!
    getdeepestdirname(gOutpath,outfilenameprefix);
    mkdir_p(gOutpath);
    snprintf(outfilenamegazecoords,2*OUTPATH_MAX_LEN,"%s/%s_gazecoords.txt",gOutpath,outfilenameprefix);
    snprintf(outfilenamebadframes,2*OUTPATH_MAX_LEN,"%s/%s_badframes.txt",gOutpath,outfilenameprefix);
+
    outfilegazecoords = fopen(outfilenamegazecoords,"w");
    if(0 == outfilegazecoords)
    {
@@ -192,41 +139,7 @@ int main(int argc, char** argv)
       fprintf(stderr, "Could not open %s for writing bad frame flags\n",outfilenamebadframes);
       exit(1);
    }
-   /* FIXME russ: do I need these to close my output files?  I fflush them when I write them
-   // close our open file in case of some terminating signal
-   signal(SIGHUP, terminate);
-   signal(SIGINT, terminate);
-   signal(SIGABRT, terminate);
-   signal(SIGQUIT, terminate);
-   signal(SIGTERM, terminate);
-   signal(SIGPIPE, terminate);*/
 
-// FIXME russ remove
-#if 0
-   if(0 == gFlagNoWriteVideo)
-   {
-      getdeepestdirname(gOutpath,outfilenameprefix);
-      mkdir_p(gOutpath);
-
-      snprintf(outfilenamefps,2*OUTPATH_MAX_LEN,"%s/%s_fps.txt",gOutpath,outfilenameprefix);
-      printf("video path: %s\n",gOutpath);
-
-      gOutfilefps = fopen(outfilenamefps,"w");
-      if(0 == gOutfilefps)
-      {
-         fprintf(stderr, "Could not open %s for writing capture FPS values\n",outfilenamefps);
-         exit(1);
-      }
-
-      // close our open file in case of some terminating signal
-      signal(SIGHUP, terminate);
-      signal(SIGINT, terminate);
-      signal(SIGABRT, terminate);
-      signal(SIGQUIT, terminate);
-      signal(SIGTERM, terminate);
-      signal(SIGPIPE, terminate);
-   }
-#endif // 0
    frameidx=0;
 
 
@@ -260,10 +173,6 @@ int main(int argc, char** argv)
    cvSetMouseCallback("Gaze Prompt", cbkcvmouseevent, NULL);        
 
    time.tv_sec = time.tv_nsec = timeprevious.tv_sec = timeprevious.tv_nsec = 0;
-// FIXME russ remove
-#if 0
-   fpsinstant = fpsmin = fpsmax = -1;
-#endif // 0
 
 
    readuntilchar(stdin,SYMBOL_SOF);
@@ -300,23 +209,6 @@ int main(int argc, char** argv)
       *indatloc = '\0';
 
 
-// FIXME russ remove
-#if 0
-      // calculate FPS
-      // TODO: should be a function?
-      timeprevious = time;
-      (void)clock_gettime(CLOCK_MONOTONIC,&time);
-      fpsinstant = (NS_PER_SEC) / (double)( (NS_PER_SEC)*(time.tv_sec - timeprevious.tv_sec)
-                                            + time.tv_nsec - timeprevious.tv_nsec );
-      if((0 < fpsmin) || (fpsinstant < fpsmin))
-      {
-         fpsmin = fpsinstant;
-      }
-      if((0 < fpsmax) || (fpsinstant > fpsmax))
-      {
-         fpsmax = fpsinstant;
-      }
-#endif // 0
 
 
       // find max and min pixel values for normalization
@@ -474,129 +366,7 @@ int main(int argc, char** argv)
       fflush(outfilebadframes);
 
       ++frameidx;
-// FIXME russ remove
-#if 0
-      // eye detection
-      cvSmooth(framenorm, framenorm, CV_GAUSSIAN, 5, 5, 0, 0);
-      cvNot(framenorm, inverted);
-      for(ii=100; ii<250; ii+=4)
-      {
-         cvEqualizeHist(inverted, inverted);
-         cvThreshold(inverted, threshed, ii, 255, CV_THRESH_BINARY_INV);
-         houghres = cvHoughCircles( threshed, houghstorage, CV_HOUGH_GRADIENT,
-                                    4, 1, 160, 80, threshed->width/8, threshed->width/3);
-         cvCvtColor(threshed, circles, CV_GRAY2RGB);
-         cvCvtColor(framenorm, disco, CV_GRAY2RGB);
-         for(jj=0; jj<houghres->total; ++jj)
-         {
-            cir = (float*)cvGetSeqElem(houghres,jj);
-            cvCircle( circles,
-                      cvPoint(cvRound(cir[0]),cvRound(cir[1])),
-                      cvRound(cir[2]), CV_RGB(255,0,0), 2, 8, 0);
-            cvCircle( disco,
-                      cvPoint(cvRound(cir[0]),cvRound(cir[1])),
-                      1, CV_RGB(0,255,0), 4, 8, 0);
-         }
-         //(void)cvWaitKey(0);
-         cvShowImage("EyeDetectCandidate", circles);
-         if(1 == houghres->total)
-         {
-            break;
-         }
-      }
-      cvShowImage("EyeDetect", disco);
-      //(void)cvWaitKey(0);
-#endif // 0
-// FIXME russ remove
-#if 0
-      // eye detection
-      cvSmooth(framenorm, framenorm, CV_GAUSSIAN, 5, 5, 0, 0);
-      // hijacking the framenorm variable
-      /*cvNot(framenorm, inverted);
-      cvEqualizeHist(inverted, inverted);
-      cvThreshold(inverted, threshed, 155, 255, CV_THRESH_BINARY_INV);*/
-      cvThreshold(framenorm, threshed, 0, 255, CV_THRESH_OTSU);
-      //cvThreshold(framenorm, threshed, 0, 255, CV_THRESH_OTSU);
-      //cvThreshold(inverted, threshed, (unsigned)(ED_THRESH_REL*edframevalmax), 255, CV_THRESH_BINARY_INV);
-      //cvThreshold(inverted, threshed, (unsigned)(ED_THRESH_REL*edframevalmin), 255, CV_THRESH_BINARY_INV);
-      //cvThreshold(inverted, threshed, (unsigned)(0.9*edframevalmin), 255, CV_THRESH_BINARY_INV);
 
-      // hough circle detection
-      houghres = cvHoughCircles( threshed, houghstorage, CV_HOUGH_GRADIENT,
-                                 0.5, 1, 160, 80, threshed->width/10, threshed->width/2);
-      //houghres = cvHoughCircles( threshed, houghstorage, CV_HOUGH_GRADIENT,
-      //                           1, 1, 200, 100, threshed->width/10, threshed->width/2);
-      cvCvtColor(threshed, circles, CV_GRAY2RGB);
-      for(ii=0; ii<houghres->total; ++ii)
-      {
-         cir = (float*)cvGetSeqElem(houghres,ii);
-         cvCircle( circles,
-                   cvPoint(cvRound(cir[0]),cvRound(cir[1])),
-                   cvRound(cir[2]), CV_RGB(255,0,0), 2, 8, 0);
-      }
-
-      /* FIXME russ: asdfasdf
-      // just hijack theise variables for my needs
-      for(ii = 0; ii < FRAME_X_Y; ++ii)
-      {
-         frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
-         framenormloc = (uchar*)(framenorm->imageData + (ii*framenorm->widthStep));
-         if(2 == numcams)
-         {
-            frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
-            frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
-            framedualnormloc1 = (uchar*)(framedualnorm->imageData + (ii*framedualnorm->widthStep));
-            framedualnormloc2 = (uchar*)( framedualnorm->imageData
-                                          + (ii*framedualnorm->widthStep)
-                                          + (framedualnorm->widthStep/2) );
-         }
-         for(jj = 0; jj < FRAME_X_Y; ++jj)
-         {
-            framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-         }
-      }*/
-      //cvShowImage("EyeDetect", threshed);
-      cvShowImage("EyeDetect", circles);
-#endif // 0
-// FIXME russ remove
-#if 0
-
-
-      // save the frame as a BMP file
-      // TODO: should be a function?
-      // TODO: save as video instead
-      if(0 == gFlagNoWriteVideo)
-      {
-         snprintf( outfilenameframe,2*OUTPATH_MAX_LEN,"%s/%s_%06d.bmp",gOutpath,
-                   outfilenameprefix,frameidx );
-         fprintf(gOutfilefps,"[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
-
-         (void)cvSaveImage(outfilenameframe,prevgazeselection,0);
-         /*if(2 == numcams)
-         {
-            (void)cvSaveImage(outfilenameframe,framedualnorm,0);
-         }
-         else
-         {
-            (void)cvSaveImage(outfilenameframe,framenorm,0);
-         }*/
-      }
-#endif // 0
-
-
-
-// FIXME russ remove
-#if 0
-      // let the user kill the program with ESC
-      // there is a tradeoff here: longer is better for step mode, shorter better for stream mode.
-      // the choice of 9 ms delay means this program can't do much faster than ~110 fps
-      cc = cvWaitKey(9);
-      // look for ESC key
-      if(ESC_KEY == cc)
-      {
-         break;
-      }
-#endif // 0
    }
 
 
@@ -617,13 +387,6 @@ int main(int argc, char** argv)
    // close files
    fclose(outfilegazecoords);
    fclose(outfilebadframes);
-// FIXME russ remove
-#if 0
-   if(0 == gFlagNoWriteVideo)
-   {
-      fclose(gOutfilefps);
-   }
-#endif // 0
    return 0;
 }
 
@@ -703,15 +466,3 @@ static int parseargs(int argc, char **argv) {
    return(errno);
 }
 
-// FIXME russ remove
-#if 0
-//
-// terminate: signal handler to cleanup the camera connection and exit
-//
-static void terminate(int xx)
-{
-   fclose(gOutfilefps);
-   // TODO: perhaps we shouldn't ALWAYS exit with 0
-   exit(0);
-}
-#endif // 0
