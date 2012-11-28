@@ -12,7 +12,8 @@ prognames=( 'cvEyeTracker'
             'gazesetgroundtruth'
             'glassescapsnapshots'
             'glassescapstream'
-            'glassesreplaystream' )
+            'glassesreplaystream' 
+            'ml_rawfeatures_knearest' )
 
 
 if [ ! -d "./bin" ]; then
