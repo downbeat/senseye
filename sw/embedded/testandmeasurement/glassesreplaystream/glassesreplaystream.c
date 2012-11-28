@@ -186,7 +186,7 @@ int main(int argc, char** argv)
          sleeptime.tv_sec  = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) / NS_PER_SEC;
          sleeptime.tv_nsec = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) % NS_PER_SEC;
 
-         if(0 != gFlagAsapMode)
+         if(0 == gFlagAsapMode)
          {
             // TODO: good practice to check return value
             (void)nanosleep(&sleeptime, NULL);
