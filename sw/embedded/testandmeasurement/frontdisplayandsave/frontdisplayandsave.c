@@ -283,7 +283,7 @@ int main(int argc, char** argv)
       }
       //printf("\n");
       // russ: a "frame" for fps calc is from both cameras
-      printf("[frame rx'd] fps := % 6.03f\n", fpsinstant);
+      printf("[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
 
 
       // normalize and scale-up for display on screen
