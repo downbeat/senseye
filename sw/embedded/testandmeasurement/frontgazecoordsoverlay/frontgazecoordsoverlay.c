@@ -1,5 +1,5 @@
 //**************************************************************************************************
-// gazesetgroundtruth.c
+// ml_rawfeatures_knearest.c
 //
 // Russ Bielawski
 // 2012-11-18: created
@@ -46,9 +46,8 @@
 static char     gInpath[INPATH_MAX_LEN];
 static unsigned gFlagUserCliValid;
 static unsigned gFlagUserCliHelp;
-static unsigned gFlagRawMode;
-static int gLastGazeX;
-static int gLastGazeY;
+static int      gLastGazeX;
+static int      gLastGazeY;
 
 
 //**************************************************************************************************
@@ -64,7 +63,7 @@ static int  parseargs(int argc, char **argv);
 //
 int main(int argc, char** argv)
 {
-   int ii,jj,xx,yy;
+   int ii,jj;
    char cc;
    char indat[256*1024];    // huge because I am a lazy man
    char *indatloc;
@@ -73,16 +72,13 @@ int main(int argc, char** argv)
 
    unsigned numcams;
 
-   IplImage *frame, *framenorm, *framescaledup;
-   uchar *frameloc, *framenormloc, *framescaleduploc;
-   uchar framevalmin, framevalmax;
-   IplImage *frame2, *frame2norm, *frame2scaledup;
-   uchar *frame2loc, *frame2normloc, *frame2scaleduploc;
-   uchar frame2valmin, frame2valmax;
-
+   IplImage *frame, *framescaledup;
+   uchar *frameloc, *framescaleduploc;
+   IplImage *frame2, *frame2scaledup;
+   uchar *frame2loc, *frame2scaleduploc;
    // double wide!
-   IplImage *framedualnorm, *framedualscaledup;
-   uchar *framedualnormloc1, *framedualnormloc2, *framedualscaleduploc1, *framedualscaleduploc2;
+   IplImage *framedual, *framedualscaledup;
+   uchar *framedualloc1, *framedualloc2, *framedualscaleduploc1, *framedualscaleduploc2;
 
    // gaze pictures
    IplImage *gazeoverlay;
@@ -100,7 +96,6 @@ int main(int argc, char** argv)
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
-   gFlagRawMode=1;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -136,22 +131,21 @@ int main(int argc, char** argv)
 
    // init our frame
    frame = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   framenorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framescaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
                                          FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frame2 = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   frame2norm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frame2scaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
                                           FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
-   framedualnorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   framedual = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framedualscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    gazeoverlay = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                        FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 3);
 
    // appease the compiler
-   frame2loc = frame2normloc = frame2scaleduploc = 0;
-   framedualnormloc1 = framedualnormloc2 = framedualscaleduploc1 = framedualscaleduploc2 = 0;
+   frameloc = framescaleduploc = 0;
+   frame2loc = frame2scaleduploc = 0;
+   framedualloc1 = framedualloc2 = framedualscaleduploc1 = framedualscaleduploc2 = 0;
 
 
    // appease the compiler
@@ -193,120 +187,27 @@ int main(int argc, char** argv)
 
 
       // find max and min pixel values for normalization
-      // TODO: should be a function?
-      framevalmin = 255;
-      framevalmax = 0;
-      frame2valmin = 255;
-      frame2valmax = 0;
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
-         if(2 == numcams)
-         {
-            frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
-         }
+         frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
+         framedualloc1 = (uchar*)(framedual->imageData + (ii*framedual->widthStep));
+         framedualloc2 = (uchar*)( framedual->imageData
+                                   + (ii*framedual->widthStep)
+                                   + (framedual->widthStep/2) );
          for(jj = 0; jj < FRAME_X_Y; ++jj)
          {
-            if(framevalmin > (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj])
-            {
-               framevalmin = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
-            }
-            if(framevalmax < (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj])
-            {
-               framevalmax = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
-            }
-            frameloc[jj] = (unsigned char)indat[((numcams*ii)*FRAME_X_Y)+jj];
-            if(2 == numcams)
-            {
-               if(frame2valmin > (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj])
-               {
-                  frame2valmin = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
-               }
-               if(frame2valmax < (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj])
-               {
-                  frame2valmax = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
-               }
-               frame2loc[jj] = (unsigned char)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
-            }
+            frameloc[jj]  = framedualloc1[jj] = (uchar)indat[((numcams*ii)*FRAME_X_Y)+jj];
+            frame2loc[jj] = framedualloc2[jj] = (uchar)indat[((numcams*ii+1)*FRAME_X_Y)+jj];
          }
       }
 
+      // scale up the frames
+      cvResize(frame,framescaledup,CV_INTER_LINEAR);
+      cvResize(frame2,frame2scaledup,CV_INTER_LINEAR);
+      cvResize(framedual,framedualscaledup,CV_INTER_LINEAR);
 
-      // normalize and scale-up for display on screen
-      // russ: this is pretty much a total hack!
-      if(0 != gFlagRawMode)
-      {
-         framevalmin = 0;
-         framevalmax = 255;
-         if(2 == numcams)
-         {
-            frame2valmin = 0;
-            frame2valmax = 255;
-         }
-      }
-      // TODO: should be function(s)?
-      for(ii = 0; ii < FRAME_X_Y; ++ii)
-      {
-         frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
-         framenormloc = (uchar*)(framenorm->imageData + (ii*framenorm->widthStep));
-         if(2 == numcams)
-         {
-            frame2loc = (uchar*)(frame2->imageData + (ii*frame2->widthStep));
-            frame2normloc = (uchar*)(frame2norm->imageData + (ii*frame2norm->widthStep));
-            framedualnormloc1 = (uchar*)(framedualnorm->imageData + (ii*framedualnorm->widthStep));
-            framedualnormloc2 = (uchar*)( framedualnorm->imageData
-                                          + (ii*framedualnorm->widthStep)
-                                          + (framedualnorm->widthStep/2) );
-         }
-         for(jj = 0; jj < FRAME_X_Y; ++jj)
-         {
-            framenormloc[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-            if(2 == numcams)
-            {
-               frame2normloc[jj] = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-               framedualnormloc1[jj] = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-               framedualnormloc2[jj] = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-            }
 
-            for(xx=0; xx<SCALINGVAL; ++xx)
-            {
-               framescaleduploc
-                  = (uchar*)( framescaledup->imageData
-                              + (((ii*SCALINGVAL)+xx)*framescaledup->widthStep) );
-               if(2 == numcams)
-               {
-                  frame2scaleduploc
-                     = (uchar*)( frame2scaledup->imageData
-                                 + (((ii*SCALINGVAL)+xx)*frame2scaledup->widthStep) );
-                  // double wide
-                  framedualscaleduploc1
-                     = (uchar*)( framedualscaledup->imageData
-                                 + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
-                  framedualscaleduploc2 
-                     = (uchar*)( framedualscaledup->imageData
-                                 + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
-                                 + (framedualscaledup->widthStep/2) );
-               }
-               for(yy=0; yy<SCALINGVAL; ++yy)
-               {
-                  framescaleduploc[(jj*SCALINGVAL)+yy]
-                     = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-                  if(2 == numcams)
-                  {
-                     frame2scaleduploc[(jj*SCALINGVAL)+yy]
-                        = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-                     // double wide
-                     framedualscaleduploc1[(jj*SCALINGVAL)+yy]
-                        = (uchar)((frameloc[jj]-framevalmin)*(255.0/framevalmax));
-                     framedualscaleduploc2[(jj*SCALINGVAL)+yy]
-                        = (uchar)((frame2loc[jj]-frame2valmin)*(255.0/frame2valmax));
-                  }
-               }
-            }
-         }
-      }
-
-      // TODO read in gaze coords
       if(EOF == fscanf( infilegazecoords, "[%d] (x,y) := (%d,%d)\n",
                         &frameidx_read,&gLastGazeX,&gLastGazeY ))
       {
@@ -338,12 +239,10 @@ int main(int argc, char** argv)
 
    // release/destroy OpenCV objects
    cvReleaseImage(&frame);
-   cvReleaseImage(&framenorm);
    cvReleaseImage(&framescaledup);
    cvReleaseImage(&frame2);
-   cvReleaseImage(&frame2norm);
    cvReleaseImage(&frame2scaledup);
-   cvReleaseImage(&framedualnorm);
+   cvReleaseImage(&framedual);
    cvReleaseImage(&framedualscaledup);
    cvReleaseImage(&gazeoverlay);
    cvDestroyWindow("Gaze Overlay");
@@ -364,7 +263,7 @@ int main(int argc, char** argv)
 //
 static void printusage(char *progname)
 {
-   fprintf(stderr, "Usage: %s [-n] -i PATH\n", progname);
+   fprintf(stderr, "Usage: %s -i PATH\n", progname);
 }
 
 //
@@ -379,7 +278,6 @@ static void printhelp(char *progname)
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -i PATH    load attributes files from PATH (should be a directory)\n");
-   fprintf(stderr,"  -n         normalize incoming pictures\n");
 }
 
 //
@@ -407,9 +305,6 @@ static int parseargs(int argc, char **argv) {
             gFlagUserCliValid = 1;
             strncpy(gInpath, optarg, INPATH_MAX_LEN);
             gInpath[strlen(optarg)] = '\0';
-            break;
-         case 'n':
-            gFlagRawMode = 0;
             break;
          default:
             errno=EINVAL;
