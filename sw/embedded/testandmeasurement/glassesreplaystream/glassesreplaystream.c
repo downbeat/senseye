@@ -40,9 +40,10 @@
 //**************************************************************************************************
 // globals
 //
-char         gInpath[INPATH_MAX_LEN];
-unsigned int gFlagUserCliValid;
-unsigned int gFlagUserCliHelp;
+char     gInpath[INPATH_MAX_LEN];
+unsigned gFlagUserCliValid;
+unsigned gFlagAsapMode;
+unsigned gFlagUserCliHelp;
 
 
 //**************************************************************************************************
@@ -85,6 +86,7 @@ int main(int argc, char** argv)
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
+   gFlagAsapMode=0;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -184,8 +186,11 @@ int main(int argc, char** argv)
          sleeptime.tv_sec  = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) / NS_PER_SEC;
          sleeptime.tv_nsec = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) % NS_PER_SEC;
 
-         // TODO: good practice to check return value
-         (void)nanosleep(&sleeptime, NULL);
+         if(0 != gFlagAsapMode)
+         {
+            // TODO: good practice to check return value
+            (void)nanosleep(&sleeptime, NULL);
+         }
       }
 
 
@@ -229,6 +234,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -a         ASAP mode.  just pump out frames as quickly as possible\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -i PATH    replay video located at PATH\n");
 }
@@ -243,9 +249,12 @@ static int parseargs(int argc, char **argv)
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "hi:")) != EOF)
+   while ((cc = getopt(argc, argv, "ahi:")) != EOF)
    {
       switch (cc) {
+         case 'a':
+            gFlagAsapMode = 1;
+            break;
          case 'h':
             gFlagUserCliValid = 1;
             gFlagUserCliHelp = 1;
