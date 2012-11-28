@@ -45,6 +45,7 @@
 //
 static char     gInpath[INPATH_MAX_LEN];
 static unsigned gFlagUserCliValid;
+static unsigned gFlagDrawGrid;
 static unsigned gFlagUserCliHelp;
 static int      gLastGazeX;
 static int      gLastGazeY;
@@ -95,6 +96,7 @@ int main(int argc, char** argv)
 
    // process user cli
    gFlagUserCliValid=0;
+   gFlagDrawGrid=0;
    gFlagUserCliHelp=0;
    if(0 != parseargs(argc,argv))
    {
@@ -218,6 +220,26 @@ int main(int argc, char** argv)
       cvCircle( gazeoverlay,
                 cvPoint(cvRound((gLastGazeX+FRAME_X_Y)*SCALINGVAL),cvRound(gLastGazeY*SCALINGVAL)),
                 1, CV_RGB(0,255,0), 4, 8, 0);
+      //FIXME
+      if(0 != gFlagDrawGrid)
+      {
+         cvLine( gazeoverlay,
+                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gazeoverlay,
+                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gazeoverlay,
+                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gazeoverlay,
+                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+      }
       cvShowImage("Gaze Overlay", gazeoverlay);
       printf("[%06d] gaze (x,y) := (%3d,%3d)\n",frameidx_calc,gLastGazeX,gLastGazeY);
       fflush(stdout);
@@ -276,6 +298,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -g         draw 3x3 grid lines\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -i PATH    load attributes files from PATH (should be a directory)\n");
 }
@@ -289,9 +312,12 @@ static int parseargs(int argc, char **argv) {
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "hni:")) != EOF)
+   while ((cc = getopt(argc, argv, "ghni:")) != EOF)
    {
       switch (cc) {
+         case 'g':
+            gFlagDrawGrid = 1;
+            break;
          case 'h':
             gFlagUserCliHelp = 1;
             break;

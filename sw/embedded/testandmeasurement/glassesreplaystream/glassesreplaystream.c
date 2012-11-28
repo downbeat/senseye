@@ -132,7 +132,6 @@ int main(int argc, char** argv)
    flagnumcamscalculated = 0;
 
 
-   fprintf(stderr,"%s\n",infilenamefps);
    // read fps for first frame: if nothing to read, just bail
    if(EOF != fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant))
    {

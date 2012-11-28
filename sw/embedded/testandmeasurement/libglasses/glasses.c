@@ -60,7 +60,7 @@ void readuntilchar(FILE *infile, char desiredch)
 //
 void mkdir_p(const char *path)
 {
-   int ii;
+   unsigned ii;
    char tmppath[PATH_MAX_LEN];
 
    for(ii=0; ii<=strlen(path); ++ii)
