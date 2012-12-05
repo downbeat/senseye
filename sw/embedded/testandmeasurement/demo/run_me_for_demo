@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ ! -f ./glassescapstream ]; then
+   if [ ! -f ../glassescapstream/glassescapstream ]; then
+      echo "cannot find glassescapstream in . or ../glassescapstream/"
+      exit 1
+   fi
+   cp ../glassescapstream/glassescapstream .
+fi
+./glassescapstream | ./demo
+

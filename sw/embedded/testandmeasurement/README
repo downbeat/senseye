@@ -1,4 +1,10 @@
 ===============================================================================
+design expo demo
+===============================================================================
+just go into the 'demo' directory
+
+
+===============================================================================
 do this  (you need opencv, or just disregard the slew of errors in the
          utilities that need it)
 ===============================================================================
@@ -34,8 +40,8 @@ glassesreplaystream - replay a folder full of pictures and an FPS metadata file
 
 
 ===============================================================================
-replay utilities (these all read data from stdin without knowing if its live
-                  or replay)
+(re)play utilities (these all read data from stdin without knowing if its live
+                    or replay)
 ===============================================================================
 frontdisplayandsave    - display to the screen and, optionally, save it (as
                          BMPs and an FPS metadata file)
