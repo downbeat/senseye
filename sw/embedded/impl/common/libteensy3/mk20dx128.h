@@ -1087,6 +1087,10 @@ extern "C" {
 #define UART0_C5                *(volatile uint8_t  *)0x4006A00B // UART Control Register 5
 #define UART0_ED                *(volatile uint8_t  *)0x4006A00C // UART Extended Data Register
 #define UART0_MODEM             *(volatile uint8_t  *)0x4006A00D // UART Modem Register
+#define UART_MODEM_RXRTSE		(uint8_t)0x08
+#define UART_MODEM_TXRTSPOL		(uint8_t)0x04
+#define UART_MODEM_TXRTSE		(uint8_t)0x02
+#define UART_MODEM_TXCTSE		(uint8_t)0x01
 #define UART0_IR                *(volatile uint8_t  *)0x4006A00E // UART Infrared Register
 #define UART0_PFIFO             *(volatile uint8_t  *)0x4006A010 // UART FIFO Parameters
 #define UART_PFIFO_TXFE			(uint8_t)0x80
