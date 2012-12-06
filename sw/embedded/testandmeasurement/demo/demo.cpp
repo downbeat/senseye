@@ -39,6 +39,8 @@
 #define KEY_SECRETKILL          ('+')
 #define KEY_USERSTART           ('s')
 #define KEY_USERQUIT            ('q')
+#define KEY_USERSAVE            ('>')
+#define KEY_USERLOAD            ('<')
 #define FIRSTTESTFRAME          (611)
 #define BOXES_CNT               (9)
 #define TRAINING_FRAMES_REQD    (60)
@@ -46,15 +48,14 @@
 #define CANNY_THRESH_LOW        (70)
 #define CANNY_THRESH_RATIO      (2)
 #define TRAINING_WINDOW         ("Training Window")
-
+#define TRAINING_SETS_DIR       ("trainingdata")
 // FIXME make multiuser
-#define USERNAME                "nobody"
+#define USERNAME_PREFIX         ("nobody")
 
 
 //**************************************************************************************************
 // globals
 //
-static char     gPath[PATH_MAX_LEN];
 static unsigned gFlagUserCliValid;
 static unsigned gFlagUserCliHelp;
 static int      gLastClickX;
@@ -81,7 +82,7 @@ static void      getCentralCoords(unsigned label, unsigned &xx, unsigned &yy);
 int main(int argc, char** argv)
 {
    unsigned ii,jj;
-   unsigned idxBox,idxMode;
+   unsigned idxClass,idxMode;
    char cc;
    char opcode;
    char indat[256*1024];    // huge because I am a lazy man
@@ -93,6 +94,8 @@ int main(int argc, char** argv)
    unsigned flagSessionActive;
    unsigned flagUserReady;
    unsigned flagSecretKill;
+   unsigned flagLoadUser;
+   unsigned flagSaveUser;
 
    unsigned markX, markY;
    CvScalar markColor;
@@ -111,18 +114,20 @@ int main(int argc, char** argv)
    unsigned numframes_train;
    unsigned numframesbad_train;
 
-   unsigned cntcorrect, cntincorrect;
-   float correctnessratio;
+   CvFont font;
+   IplImage *textPromptLoad;
+   IplImage *textPromptSave;
 
-   IplImage *frameEye, *frameEyeNorm, *frameEyeScaledup;
-   IplImage *frameEyeMarked;
-   uchar *frameEyeLoc, *frameEyeScaledupLoc;
-   IplImage *frameScene, *frameSceneNorm, *frameSceneScaledup;
-   IplImage *frameSceneMarked;
-   uchar *frameSceneLoc, *frameSceneScaledupLoc;
-   // double wide!
+   IplImage *frameEye, *frameEyeNorm, *frameEyeMarked;
+   IplImage *frameScene, *frameSceneNorm, *frameSceneMarked;
+   IplImage *frameDualNorm, *frameDualMarked;
+   uchar *frameEyeLoc;
+
+   // FIXME russ: remove this crap
+   IplImage *frameEyeScaledup;
+   IplImage *frameSceneScaledup;
    IplImage *frameDual, *frameDualScaledup;
-   IplImage *frameDualMarked;
+   uchar *frameSceneLoc;
    uchar *frameDualLoc1, *frameDualLoc2, *frameDualScaledupLoc1, *frameDualScaledupLoc2;
 
    IplImage *detected_edges;
@@ -131,6 +136,17 @@ int main(int argc, char** argv)
    CvMat *testVector;
    float testClass;
 
+   // FIXME russ asdfasdf
+   struct stat outpathst = {0};
+   char username[PATH_MAX_LEN];
+   char outpath[PATH_MAX_LEN];
+   char filenameLabels[2*PATH_MAX_LEN];
+   char filenameFrame[2*PATH_MAX_LEN];
+   FILE *fileOutLabels;
+
+
+   unsigned cntcorrect, cntincorrect;
+   float correctnessratio;
    // gaze pictures
    IplImage *gazeoverlay;
 
@@ -253,25 +269,33 @@ int main(int argc, char** argv)
 
 
    // init our frame
+   textPromptLoad = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   textPromptSave = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frameEye = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frameEyeNorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frameEyeMarked = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 3);
-   frameEyeScaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
-                                         FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frameScene = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frameSceneNorm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frameSceneMarked = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 3);
+   frameDualNorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   frameDualMarked = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 3);
+
+
+   // appease the compiler
+   frameEyeLoc = 0;
+
+
+   // FIXME remove me!
+   frameEyeScaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
+                                         FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frameSceneScaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
                                           FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frameDual = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
-   frameDualMarked = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 3);
    frameDualScaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    detected_edges = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
-
-   // appease the compiler
-   frameEyeLoc = frameEyeScaledupLoc = 0;
-   frameSceneLoc = frameSceneScaledupLoc = 0;
+   // FIXME remove me
+   frameSceneLoc = 0;
    frameDualLoc1 = frameDualLoc2 = frameDualScaledupLoc1 = frameDualScaledupLoc2 = 0;
 
 
@@ -298,6 +322,10 @@ int main(int argc, char** argv)
    cvSetMouseCallback(TRAINING_WINDOW,cbkCvMouseEvent,NULL);        
 
 
+   cvInitFont(&font,CV_FONT_HERSHEY_SIMPLEX,0.5,0.5,0,1);
+   cvPutText(textPromptLoad,"LOAD",cvPoint(20,20),&font,CV_RGB(255,255,255));
+   cvPutText(textPromptSave,"SAVE",cvPoint(20,20),&font,CV_RGB(255,255,255));
+
    flagSecretKill=0;
    while(0 == flagSecretKill)
    {
@@ -305,8 +333,10 @@ int main(int argc, char** argv)
       flagSessionActive=0;
       flagUserReady=0;
       flagQuitRequested=0;
+      flagLoadUser=0;
       while(    (0 == flagSecretKill)
-             && (0 == flagSessionActive) )
+             && (0 == flagUserReady)
+             && (0 == flagLoadUser) )
       {
          // read a frame
          opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
@@ -345,19 +375,23 @@ int main(int argc, char** argv)
          cc = cvWaitKey(9);
          switch(cc)
          {
+            case KEY_SECRETKILL:
+               flagSecretKill=1;
+               break;
             case KEY_NEXT:
                if(0 != flagSessionActive)
                {
                   flagUserReady=1;
                }
                break;
-            case KEY_SECRETKILL:
-               flagSecretKill=1;
-               break;
             case KEY_USERSTART:
                flagSessionActive=1;
                break;
+            case KEY_USERLOAD:
+               flagLoadUser=1;
+               break;
             case KEY_USERQUIT:
+            case KEY_USERSAVE:
             default:
                // do nothing
                break;
@@ -369,10 +403,45 @@ int main(int argc, char** argv)
       }
 
 
-      // TRAINING PHASE
-      for(idxBox=0; (0==flagSecretKill) && (0==flagQuitRequested) && (BOXES_CNT>idxBox) ; ++idxBox)
+      // CREATE ANON USER
+      if(0==flagLoadUser)
       {
-         trainingFramesCnt[idxBox]=0;
+         do
+         {
+            snprintf(username,PATH_MAX_LEN,"%s%d",USERNAME_PREFIX,(unsigned)time(0));
+            snprintf(outpath,PATH_MAX_LEN,"%s/%s",TRAINING_SETS_DIR,username);
+         } while(0 == stat(outpath,&outpathst));
+         mkdir_p(outpath);
+         snprintf(filenameLabels,2*PATH_MAX_LEN,"%s/%s_labelshuman.txt",outpath,username);
+         // open output files
+         fileOutLabels = fopen(filenameLabels,"w");
+         if(0 == filenameLabels)
+         {
+            // what should be done!?
+            fprintf(stderr,"ERROR: couldn't open file %s for writing label values!\n",filenameLabels);
+            fflush(stderr);
+            continue;
+         }
+      }
+      else
+      {
+         // FIXME russ asdfasdf
+         // TODO: LOAD USER
+         //demoGetUsername(&username);
+         while(KEY_USERQUIT != cc)
+         {
+            cvPutText(textPromptLoad,"UNIMPLEMENTED!",cvPoint(20,80),&font,CV_RGB(255,255,255));
+            cvShowImage(TRAINING_WINDOW, textPromptLoad);
+            cc = cvWaitKey(9);
+         }
+         continue;
+      }
+
+
+      // TRAINING PHASE
+      for(idxClass=0; (0==flagSecretKill) && (0==flagQuitRequested) && (BOXES_CNT>idxClass) ; ++idxClass)
+      {
+         trainingFramesCnt[idxClass]=0;
          for(idxMode=0; (0==flagSecretKill) && (0==flagQuitRequested) && (2>idxMode); ++idxMode)
          {
             // idxMode=0 => RED DOT
@@ -391,8 +460,10 @@ int main(int argc, char** argv)
             while( (0==flagSecretKill)
                    && (0==flagQuitRequested)
                    && ( ((0 == idxMode) && (0 == flagUserReady)) ||
-                        ((1 == idxMode) && (TRAINING_FRAMES_REQD > trainingFramesCnt[idxBox])) ) )
+                        ((1 == idxMode) && (TRAINING_FRAMES_REQD > trainingFramesCnt[idxClass])) ) )
             {
+               // FIXME russ asdfasdf
+               // TODO: LOAD USER
                // read a frame
                opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
                // demo is expected to run with glasses attached, not replay data, so we shouldn't see the SYMBOL_EXIT opcode
@@ -422,7 +493,7 @@ int main(int argc, char** argv)
                        cvPoint( 2*FRAME_X_Y/3, 0 ),
                        cvPoint( 2*FRAME_X_Y/3, FRAME_X_Y ),
                        CV_RGB(255,255,255),1,8,0 );
-               getCentralCoords(idxBox+1,markX,markY);
+               getCentralCoords(idxClass+1,markX,markY);
                cvCircle(frameSceneMarked,cvPoint(cvRound(markX),cvRound(markY)),1,markColor,2,8,0);
                glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
                cvShowImage(TRAINING_WINDOW, frameDualMarked);
@@ -441,9 +512,20 @@ int main(int argc, char** argv)
                      }
                   }
                   // load the classes values
-                  trainingClasses->data.fl[frameidx] = (float)(idxBox+1);
-                  ++trainingFramesCnt[idxBox];
+                  trainingClasses->data.fl[frameidx] = (float)(idxClass+1);
+                  ++trainingFramesCnt[idxClass];
                   ++frameidx;
+
+                  // save data
+                  // FIXME russ asdfasdf
+                  glassesConcatenateImages(frameEyeNorm,frameSceneNorm,frameDualNorm,1);
+                  snprintf( filenameFrame,2*PATH_MAX_LEN,"%s/%s_%06d.bmp",outpath,
+                            username,frameidx );
+                  cvSaveImage(filenameFrame,frameDualNorm);
+
+                  // TODO: should really save FPS as well
+                  fprintf(fileOutLabels,"[%06d] label_human := %d\n",frameidx,idxClass+1);
+                  fflush(fileOutLabels);
                }
 
                cc = cvWaitKey(9);
@@ -480,7 +562,7 @@ int main(int argc, char** argv)
 
 
       // training data's loaded dude
-      // USE THE CLASSIFIER PHASE
+      // TRACKING PHASE
       while((0==flagSecretKill) && (0==flagQuitRequested))
       {
          // read a frame
