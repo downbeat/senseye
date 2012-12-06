@@ -35,11 +35,10 @@
 #define FRAME_X_Y               (112)
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
-#define KEY_ESC                 (27)
-#define KEY_SPACEBAR            (' ')
-#define KEY_QUIT                ('q')
-#define KEY_STARTUSER           (' ')
-#define KEY_ENDUSER             ('z')
+#define KEY_NEXT                (' ')
+#define KEY_SECRETKILL          ('+')
+#define KEY_USERSTART           ('s')
+#define KEY_USERQUIT            ('q')
 #define FIRSTTESTFRAME          (611)
 #define BOXES_CNT               (9)
 #define TRAINING_FRAMES_REQD    (60)
@@ -48,6 +47,8 @@
 #define CANNY_THRESH_RATIO      (2)
 #define TRAINING_WINDOW         ("Training Window")
 
+// FIXME make multiuser
+#define USERNAME                "nobody"
 
 
 //**************************************************************************************************
@@ -88,7 +89,10 @@ int main(int argc, char** argv)
    unsigned readcnt;
    unsigned totallen;
 
-   unsigned flagquitrequested, flagstartrequested, flagendrequested, flaguserready;
+   unsigned flagQuitRequested;
+   unsigned flagSessionActive;
+   unsigned flagUserReady;
+   unsigned flagSecretKill;
 
    unsigned markX, markY;
    CvScalar markColor;
@@ -294,12 +298,15 @@ int main(int argc, char** argv)
    cvSetMouseCallback(TRAINING_WINDOW,cbkCvMouseEvent,NULL);        
 
 
-   flagquitrequested=0;
-   while(0 == flagquitrequested)
+   flagSecretKill=0;
+   while(0 == flagSecretKill)
    {
       // SETUP PHASE
-      flagstartrequested=0;
-      while((0 == flagquitrequested) && (0 == flagstartrequested))
+      flagSessionActive=0;
+      flagUserReady=0;
+      flagQuitRequested=0;
+      while(    (0 == flagSecretKill)
+             && (0 == flagSessionActive) )
       {
          // read a frame
          opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
@@ -314,49 +321,59 @@ int main(int argc, char** argv)
          cvNormalize(frameScene,frameSceneNorm,0,255,cv::NORM_MINMAX,CV_8UC1);
          cvCvtColor(frameSceneNorm,frameSceneMarked,CV_GRAY2RGB);
          cvFlip(frameSceneMarked,frameSceneMarked,1);
-         cvLine( frameSceneMarked,
-                 cvPoint( 0,         FRAME_X_Y/3 ),
-                 cvPoint( FRAME_X_Y, FRAME_X_Y/3 ),
-                 CV_RGB(255,255,255),1,8,0 );
-         cvLine( frameSceneMarked,
-                 cvPoint( 0,         2*FRAME_X_Y/3 ),
-                 cvPoint( FRAME_X_Y, 2*FRAME_X_Y/3 ),
-                 CV_RGB(255,255,255),1,8,0 );
-         cvLine( frameSceneMarked,
-                 cvPoint( FRAME_X_Y/3, 0 ),
-                 cvPoint( FRAME_X_Y/3, FRAME_X_Y),
-                 CV_RGB(255,255,255),1,8,0 );
-         cvLine( frameSceneMarked,
-                 cvPoint( 2*FRAME_X_Y/3, 0 ),
-                 cvPoint( 2*FRAME_X_Y/3, FRAME_X_Y ),
-                 CV_RGB(255,255,255),1,8,0 );
+         if(0!=flagSessionActive)
+         {
+            cvLine( frameSceneMarked,
+                    cvPoint( 0,         FRAME_X_Y/3 ),
+                    cvPoint( FRAME_X_Y, FRAME_X_Y/3 ),
+                    CV_RGB(255,255,255),1,8,0 );
+            cvLine( frameSceneMarked,
+                    cvPoint( 0,         2*FRAME_X_Y/3 ),
+                    cvPoint( FRAME_X_Y, 2*FRAME_X_Y/3 ),
+                    CV_RGB(255,255,255),1,8,0 );
+            cvLine( frameSceneMarked,
+                    cvPoint( FRAME_X_Y/3, 0 ),
+                    cvPoint( FRAME_X_Y/3, FRAME_X_Y),
+                    CV_RGB(255,255,255),1,8,0 );
+            cvLine( frameSceneMarked,
+                    cvPoint( 2*FRAME_X_Y/3, 0 ),
+                    cvPoint( 2*FRAME_X_Y/3, FRAME_X_Y ),
+                    CV_RGB(255,255,255),1,8,0 );
+         }
          glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
          cvShowImage(TRAINING_WINDOW, frameDualMarked);
          cc = cvWaitKey(9);
          switch(cc)
          {
-            case KEY_QUIT:
-               flagquitrequested=1;
+            case KEY_NEXT:
+               if(0 != flagSessionActive)
+               {
+                  flagUserReady=1;
+               }
                break;
-            case KEY_STARTUSER:
-               flagstartrequested=1;
+            case KEY_SECRETKILL:
+               flagSecretKill=1;
                break;
+            case KEY_USERSTART:
+               flagSessionActive=1;
+               break;
+            case KEY_USERQUIT:
             default:
                // do nothing
                break;
          }
       }
-      if(0 != flagquitrequested)
+      if(0 != flagSecretKill)
       {
          break;
       }
 
 
       // TRAINING PHASE
-      for(idxBox=0; (0==flagquitrequested) && (BOXES_CNT>idxBox) ; ++idxBox)
+      for(idxBox=0; (0==flagSecretKill) && (0==flagQuitRequested) && (BOXES_CNT>idxBox) ; ++idxBox)
       {
          trainingFramesCnt[idxBox]=0;
-         for(idxMode=0; (0==flagquitrequested) && (2>idxMode); ++idxMode)
+         for(idxMode=0; (0==flagSecretKill) && (0==flagQuitRequested) && (2>idxMode); ++idxMode)
          {
             // idxMode=0 => RED DOT
             // idxMode=1 => GREEN DOT
@@ -370,10 +387,11 @@ int main(int argc, char** argv)
                   markColor = CV_RGB(255,0,0);
                   break;
             }
-            flaguserready=0;
-            while( (0==flagquitrequested) &&
-                   ( ((0 == idxMode) && (0 == flaguserready)) ||
-                     ((1 == idxMode) && (TRAINING_FRAMES_REQD > trainingFramesCnt[idxBox])) ) )
+            flagUserReady=0;
+            while( (0==flagSecretKill)
+                   && (0==flagQuitRequested)
+                   && ( ((0 == idxMode) && (0 == flagUserReady)) ||
+                        ((1 == idxMode) && (TRAINING_FRAMES_REQD > trainingFramesCnt[idxBox])) ) )
             {
                // read a frame
                opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
@@ -431,11 +449,14 @@ int main(int argc, char** argv)
                cc = cvWaitKey(9);
                switch(cc)
                {
-                  case KEY_QUIT:
-                     flagquitrequested=1;
+                  case KEY_SECRETKILL:
+                     flagSecretKill=1;
                      break;
-                  case KEY_SPACEBAR:
-                     flaguserready=1;
+                  case KEY_USERQUIT:
+                     flagQuitRequested=1;
+                     break;
+                  case KEY_NEXT:
+                     flagUserReady=1;
                      break;
                   default:
                      // do nothing
@@ -444,9 +465,13 @@ int main(int argc, char** argv)
             }
          }
       }
-      if(0 != flagquitrequested)
+      if(0 != flagSecretKill)
       {
          break;
+      }
+      if(0 != flagQuitRequested)
+      {
+         continue;
       }
 
 
@@ -456,8 +481,7 @@ int main(int argc, char** argv)
 
       // training data's loaded dude
       // USE THE CLASSIFIER PHASE
-      flagendrequested=0;
-      while((0==flagquitrequested) && (0==flagendrequested))
+      while((0==flagSecretKill) && (0==flagQuitRequested))
       {
          // read a frame
          opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
@@ -494,11 +518,11 @@ int main(int argc, char** argv)
          cc = cvWaitKey(9);
          switch(cc)
          {
-            case KEY_QUIT:
-               flagquitrequested=1;
+            case KEY_SECRETKILL:
+               flagSecretKill=1;
                break;
-            case KEY_ENDUSER:
-               flagendrequested=1;
+            case KEY_USERQUIT:
+               flagQuitRequested=1;
                break;
             default:
                // do nothing
