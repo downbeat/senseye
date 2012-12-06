@@ -12,7 +12,8 @@ prognames=( 'cvEyeTracker'
             'gazesetgroundtruth'
             'glassescapsnapshots'
             'glassescapstream'
-            'glassesreplaystream' 
+            'glassesreplaystream'
+            'glassesreplaystream_color_hack'
             'ml_rawfeatures_knearest' )
 
 
