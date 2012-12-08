@@ -168,3 +168,33 @@ void cleanupcamconn(FILE *outfile)
    fflush(outfile);
 }
 
+//
+// glassesReadFrame: read a FRAME frame of length len into buf
+//
+char glassesReadFrame(FILE *infile, char buf[], unsigned len)
+{
+   char opcode;
+   char *bufloc;
+   unsigned readlen;
+   unsigned readlenTotal;
+
+
+   readuntilchar(infile,SYMBOL_SOF);
+   opcode = readchar(infile);
+   if(OPCODE_FRAME == (unsigned char)opcode)
+   {
+      readlenTotal=0;
+      bufloc=buf;
+      while(len > readlenTotal)
+      {
+         readlen = fread(bufloc,1,len-readlenTotal,infile);
+         readlenTotal+=readlen;
+         bufloc+=readlen;
+      }
+      *bufloc = '\0';
+   }
+
+
+   return opcode;
+}
+

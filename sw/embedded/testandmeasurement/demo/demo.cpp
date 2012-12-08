@@ -2,7 +2,7 @@
 // demo.cpp
 //
 // Russ Bielawski
-// 2012-11-18: created
+// 2012-12-05: created
 //**************************************************************************************************
 
 
@@ -25,6 +25,8 @@
 #include "ml.h"
 
 #include "glasses.h"
+#include "glasses_cv.h"
+#include "glasses_ml.h"
 
 
 //**************************************************************************************************
@@ -41,7 +43,6 @@
 #define KEY_USERQUIT            ('q')
 #define KEY_USERSAVE            ('>')
 #define KEY_USERLOAD            ('<')
-// FIXME russ: is this true?
 #define KEY_ENTER               (10)
 #define KEY_SPACEBAR            (32)
 #define FIRSTTESTFRAME          (611)
@@ -68,14 +69,9 @@ static int      gLastClickY;
 // local function prototypes
 //
 static void      cbkCvMouseEvent(int event, int xx, int yy, int flags, void *params);
-static char      glassesReadFrame(char buf[], unsigned len);
-static void      glassesPopulateImages(unsigned numcams, char buf[], IplImage *frameEye, IplImage *frameScene);
-static void      glassesConcatenateImages(IplImage *frameLeft, IplImage *frameRight, IplImage *frameDual, int numchannels);
 static void      printusage(char *progname);
 static void      printhelp(char *progname);
 static int       parseargs(int argc, char **argv);
-static unsigned  calculateLabel(unsigned xx, unsigned yy);
-static void      getCentralCoords(unsigned label, unsigned &xx, unsigned &yy);
 
 
 //**************************************************************************************************
@@ -342,7 +338,7 @@ int main(int argc, char** argv)
              && (0 == flagLoadUser) )
       {
          // read a frame
-         opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
+         opcode = glassesReadFrame(stdin,indat,FRAME_LEN*numcams);
          // demo is expected to run with glasses attached, not replay data, so we shouldn't see the SYMBOL_EXIT opcode
          assert(OPCODE_FRAME == (unsigned char)opcode);
          // write data into frame structures
@@ -494,7 +490,7 @@ int main(int argc, char** argv)
                            ((1 == idxMode) && (TRAINING_FRAMES_REQD > trainingFramesCnt[idxClass])) ) )
                {
                   // read a frame
-                  opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
+                  opcode = glassesReadFrame(stdin,indat,FRAME_LEN*numcams);
                   // demo is expected to run with glasses attached, not replay data, so we shouldn't see the SYMBOL_EXIT opcode
                   assert(OPCODE_FRAME == (unsigned char)opcode);
                   // write data into frame structures
@@ -522,7 +518,7 @@ int main(int argc, char** argv)
                           cvPoint( 2*FRAME_X_Y/3, 0 ),
                           cvPoint( 2*FRAME_X_Y/3, FRAME_X_Y ),
                           CV_RGB(255,255,255),1,8,0 );
-                  getCentralCoords(idxClass+1,markX,markY);
+                  getCentralCoords(idxClass+1,FRAME_X_Y,FRAME_X_Y,markX,markY);
                   cvCircle(frameSceneMarked,cvPoint(cvRound(markX),cvRound(markY)),1,markColor,2,8,0);
                   glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
                   cvShowImage(TRAINING_WINDOW, frameDualMarked);
@@ -625,7 +621,7 @@ int main(int argc, char** argv)
       while((0==flagSecretKill) && (0==flagQuitRequested))
       {
          // read a frame
-         opcode = glassesReadFrame(indat,FRAME_LEN*numcams);
+         opcode = glassesReadFrame(stdin,indat,FRAME_LEN*numcams);
          // demo is expected to run with glasses attached, not replay data, so we shouldn't see the SYMBOL_EXIT opcode
          assert(OPCODE_FRAME == (unsigned char)opcode);
          // write data into frame structures
@@ -651,7 +647,7 @@ int main(int argc, char** argv)
          testClass = knn.find_nearest(testVector,3,0,0,0,0);
 
          // mark gaze prediction
-         getCentralCoords((unsigned)testClass,gazeXml,gazeYml);
+         getCentralCoords((unsigned)testClass,FRAME_X_Y,FRAME_X_Y,gazeXml,gazeYml);
          cvCircle(frameSceneMarked,cvPoint(cvRound(gazeXml),cvRound(gazeYml)),1,CV_RGB(0,0,255),2,8,0);
 
          glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
@@ -759,7 +755,7 @@ int main(int argc, char** argv)
          continue;
       }
 
-      gazelabel = calculateLabel(gazeX,gazeY);
+      gazelabel = calculateLabel(FRAME_X_Y,FRAME_X_Y,gazeX,gazeY);
       fprintf(outfilelabelshuman,"[%06d] label_human := %d\n",frameidx,gazelabel);
       fflush(outfilelabelshuman);
       printf("[%06d] label_human := %d\n",frameidx,gazelabel);
@@ -859,7 +855,7 @@ int main(int argc, char** argv)
          continue;
       }
 
-      gazelabel = calculateLabel(gazeX,gazeY);
+      gazelabel = calculateLabel(FRAME_X_Y,FRAME_X_Y,gazeX,gazeY);
       fprintf(outfilelabelshuman,"[%06d] label_human := %d\n",frameidx,gazelabel);
       fflush(outfilelabelshuman);
       printf("[%06d] label_human := %d\n",frameidx,gazelabel);
@@ -890,7 +886,7 @@ int main(int argc, char** argv)
       cvCircle( gazeoverlay,
                 cvPoint(cvRound((gazeX+FRAME_X_Y)*SCALINGVAL),cvRound(gazeY*SCALINGVAL)),
                 1, CV_RGB(0,255,0), 4, 8, 0);
-      getCentralCoords((unsigned)testClass,gazeXml,gazeYml);
+      getCentralCoords((unsigned)testClass,FRAME_X_Y,FRAME_X_Y,gazeXml,gazeYml);
       cvCircle( gazeoverlay,
                 cvPoint(cvRound((gazeXml+FRAME_X_Y)*SCALINGVAL),cvRound(gazeYml*SCALINGVAL)),
                 1, CV_RGB(255,0,0), 4, 8, 0);
@@ -957,99 +953,6 @@ static void cbkCvMouseEvent(int event, int xx, int yy, int flags, void *params)
 }
 
 //
-// glassesReadFrame: read a FRAME frame of length len into buf
-//
-static char glassesReadFrame(char buf[], unsigned len)
-{
-   char opcode;
-   char *bufloc;
-   unsigned readlen;
-   unsigned readlenTotal;
-
-
-   readuntilchar(stdin,SYMBOL_SOF);
-   opcode = readchar(stdin);
-   if(OPCODE_FRAME == (unsigned char)opcode)
-   {
-      readlenTotal=0;
-      bufloc=buf;
-      while(len > readlenTotal)
-      {
-         readlen = fread(bufloc,1,len-readlenTotal,stdin);
-         readlenTotal+=readlen;
-         bufloc+=readlen;
-      }
-      *bufloc = '\0';
-   }
-
-
-   return opcode;
-}
-
-//
-// glassesPopulateImages: unpack the buffer into the frame structures
-//
-static void glassesPopulateImages(unsigned numcams, char buf[], IplImage *frameEye, IplImage *frameScene)
-{
-   // TODO: frame resolutions are hard coded (and this function expects buffer to have enough data)
-   unsigned ii,jj;
-   uchar *frameEyeLoc;
-   uchar *frameSceneLoc;
-
-   // right now this function can only handle two cameras
-   assert(2 <= numcams);
-
-   for(ii=0; ii<FRAME_X_Y; ++ii)
-   {
-      frameEyeLoc = (uchar*)(frameEye->imageData + (ii*frameEye->widthStep));
-      if(2 == numcams)
-      {
-         frameSceneLoc = (uchar*)(frameScene->imageData + (ii*frameScene->widthStep));
-      }
-
-      for(jj=0; jj<FRAME_X_Y; ++jj)
-      {
-         frameEyeLoc[jj]  = (uchar)buf[((numcams*ii)*FRAME_X_Y)+jj];
-         if(2 == numcams)
-         {
-            frameSceneLoc[jj] = (uchar)buf[((numcams*ii+1)*FRAME_X_Y)+jj];
-         }
-      }
-   }
-}
-
-//
-// glassesConcatenateImages: combine two images into a double wide image
-//
-static void glassesConcatenateImages(IplImage *frameLeft, IplImage *frameRight, IplImage *frameDual, int numchannels)
-{
-   // TODO: frame resolutions are hard coded
-   unsigned ii,jj,kk;
-   uchar *frameLeftLoc;
-   uchar *frameRightLoc;
-   uchar *frameDualLoc1;
-   uchar *frameDualLoc2;
-
-   for(ii=0; ii<FRAME_X_Y; ++ii)
-   {
-      frameLeftLoc = (uchar*)(frameLeft->imageData + (ii*frameLeft->widthStep));
-      frameRightLoc = (uchar*)(frameRight->imageData + (ii*frameRight->widthStep));
-      frameDualLoc1 = (uchar*)(frameDual->imageData + (ii*frameDual->widthStep));
-      frameDualLoc2 = (uchar*)( frameDual->imageData
-                                + (ii*frameDual->widthStep)
-                                + (frameDual->widthStep/2) );
-      for(jj=0; jj<FRAME_X_Y; ++jj)
-      {
-         for(kk=0; kk<numchannels; ++kk)
-         {
-            frameDualLoc1[numchannels*jj+kk] = (uchar)(frameLeftLoc[numchannels*jj+kk]);
-            frameDualLoc2[numchannels*jj+kk] = (uchar)(frameRightLoc[numchannels*jj+kk]);
-         }
-      }
-   }
-}
-
-//
 // printusage: prints a usage string for the program
 //
 static void printusage(char *progname)
@@ -1075,7 +978,10 @@ static void printhelp(char *progname)
 //
 static int parseargs(int argc, char **argv) {
    char cc;
+// FIXME russ remove me!
+#if 0
    extern char *optarg;
+#endif // 0
 
    errno=0;
 
@@ -1107,86 +1013,5 @@ static int parseargs(int argc, char **argv) {
    }
 
    return(errno);
-}
-
-static unsigned  calculateLabel(unsigned xx, unsigned yy)
-{
-   unsigned binX,binY;
-
-   binX=0;
-   binY=0;
-   // calculate binX
-   if(xx > 2*FRAME_X_Y/3)
-   {
-      binX=2;
-   }
-   else if(xx > FRAME_X_Y/3)
-   {
-      binX=1;
-   }
-   else
-   {
-      // binX=0;
-   }
-   // calculate binY
-   if(yy > 2*FRAME_X_Y/3)
-   {
-      binY=2;
-   }
-   else if(yy > FRAME_X_Y/3)
-   {
-      binY=1;
-   }
-   else
-   {
-      // binX=0;
-   }
-
-   return binY*3 + binX + 1;
-}
-
-static void getCentralCoords(unsigned label, unsigned &xx, unsigned &yy)
-{
-   // lazy
-   switch(label)
-   {
-      case 1:
-         xx = FRAME_X_Y/6;
-         yy = FRAME_X_Y/6;
-         break;
-      case 2:
-         xx = 3*FRAME_X_Y/6;
-         yy = FRAME_X_Y/6;
-         break;
-      case 3:
-         xx = 5*FRAME_X_Y/6;
-         yy = FRAME_X_Y/6;
-         break;
-      case 4:
-         xx = FRAME_X_Y/6;
-         yy = 3*FRAME_X_Y/6;
-         break;
-      case 6:
-         xx = 5*FRAME_X_Y/6;
-         yy = 3*FRAME_X_Y/6;
-         break;
-      case 7:
-         xx = FRAME_X_Y/6;
-         yy = 5*FRAME_X_Y/6;
-         break;
-      case 8:
-         xx = 3*FRAME_X_Y/6;
-         yy = 5*FRAME_X_Y/6;
-         break;
-      case 9:
-         xx = 5*FRAME_X_Y/6;
-         yy = 5*FRAME_X_Y/6;
-         break;
-      case 5:
-      default:
-         xx = 3*FRAME_X_Y/6;
-         yy = 3*FRAME_X_Y/6;
-         break;
-   }
 }
 

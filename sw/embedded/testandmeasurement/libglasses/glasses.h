@@ -44,6 +44,7 @@ void getdeepestdirname(const char *path, char *deepestdirname);
 int  peek();
 char getch();
 void cleanupcamconn(FILE *outfile);
+char glassesReadFrame(FILE *infile, char buf[], unsigned len);
 
 
 #endif // GLASSES_H
