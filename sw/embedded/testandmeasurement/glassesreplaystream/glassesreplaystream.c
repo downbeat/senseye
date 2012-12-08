@@ -62,13 +62,14 @@ int main(int argc, char** argv)
    int ii,jj;
 
    unsigned numcams;
-   unsigned flagnumcamscalculated;
+   unsigned flagUseFpsFile;
+   unsigned flagNumCamsCalculated;
 
    IplImage *frame;
    uchar *frameloc;
 
    struct timespec sleeptime;
-   float fpsinstant;
+   float fpsinstant, fpsinstantPrevious;
 
    struct stat inpathst = {0};
    char infilenameprefix[2*INPATH_MAX_LEN];
@@ -77,10 +78,6 @@ int main(int argc, char** argv)
    FILE *infilefps;
    unsigned frameidx_read;
    unsigned frameidx_calc;
-
-
-   // appease the compiler
-   //fpsinstant = 0;
 
 
    // process user cli
@@ -110,95 +107,110 @@ int main(int argc, char** argv)
    }
 
    getdeepestdirname(gInpath,infilenameprefix);
+
+   // check if we're using an FPS file or not
    snprintf(infilenamefps,2*INPATH_MAX_LEN,"%s/%s_fps.txt",gInpath,infilenameprefix);
-   if(0 != stat(infilenamefps,&inpathst))
+   infilefps = 0;
+   flagUseFpsFile=0;
+   if(0 == stat(infilenamefps,&inpathst))
    {
-      fprintf(stderr,"ERROR: path %s does not exist!\n",infilenamefps);
-      printusage(argv[0]);
-      exit(1);
-   }
-   infilefps = fopen(infilenamefps,"r");
-   if(0 == infilefps)
-   {
-      fprintf(stderr, "Could not open %s for reading capture FPS values\n",infilenamefps);
-      exit(1);
+      flagUseFpsFile=1;
+      infilefps = fopen(infilenamefps,"r");
+      if(0 == infilefps)
+      {
+         fprintf(stderr, "Could not open %s for reading capture FPS values\n",infilenamefps);
+         exit(1);
+      }
    }
 
 
+   fpsinstant = fpsinstantPrevious = 0;
    frameidx_calc=0;
 
    sleeptime.tv_sec = sleeptime.tv_nsec = 0;
 
-   flagnumcamscalculated = 0;
-
-
-   // read fps for first frame: if nothing to read, just bail
-   if(EOF != fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant))
+   // appease the compiler
+   numcams = 0;
+   flagNumCamsCalculated = 0;
+   snprintf( infilenameframe,2*INPATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
+             infilenameprefix,frameidx_calc );
+   // the first FPS value is meaningless
+   if((0 == flagUseFpsFile) || (EOF == fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant)))
    {
-      while(1)
+      frameidx_read = 0;
+      fpsinstant = 0;
+   }
+   while(0 == stat(infilenameframe,&inpathst))
+   {
+      // load image
+      frame = cvLoadImage(infilenameframe,CV_LOAD_IMAGE_UNCHANGED);
+
+      if(0 == flagNumCamsCalculated)
       {
-         // load image
-         snprintf( infilenameframe,2*INPATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
-                   infilenameprefix,frameidx_calc );
-         frame = cvLoadImage(infilenameframe,CV_LOAD_IMAGE_UNCHANGED);
-
-
-         if(0 == flagnumcamscalculated)
-         {
-            numcams = frame->widthStep / FRAME_X_Y;
-            assert((0 < numcams) && (MAX_CAMS >= numcams));
-            // write # of cameras
-            printf("%c",SYMBOL_SOF);
-            printf("%c",OPCODE_RESP_NUM_CAMS);
-            printf("%c",(unsigned char)numcams);
-            fflush(stdout);
-            flagnumcamscalculated = 1;
-         }
-
-
-         // write image on stdout
+         numcams = frame->widthStep / FRAME_X_Y;
+         assert((0 < numcams) && (MAX_CAMS >= numcams));
+         // write # of cameras
          printf("%c",SYMBOL_SOF);
-         printf("%c",OPCODE_FRAME);
-         for(ii = 0; ii < FRAME_X_Y; ++ii)
-         {
-            frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
-            for(jj = 0; jj < FRAME_X_Y*numcams; ++jj)
-            {
-               printf("%c",(uchar)frameloc[jj]);
-            }
-         }
+         printf("%c",OPCODE_RESP_NUM_CAMS);
+         printf("%c",(unsigned char)numcams);
          fflush(stdout);
-
-
-         ++frameidx_calc;
-         // read fps
-         if(EOF == fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant))
-         {
-            break;
-         }
-
-         assert(frameidx_calc == frameidx_read);
-
-         // FIXME russ: this doesn't compensate for the time spent running code, so FPS will
-         // be lower than it should be
-         // sleep to output frames at desired fps
-         sleeptime.tv_sec  = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) / NS_PER_SEC;
-         sleeptime.tv_nsec = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) % NS_PER_SEC;
-
-         if(0 == gFlagAsapMode)
-         {
-            // TODO: good practice to check return value
-            (void)nanosleep(&sleeptime, NULL);
-         }
+         flagNumCamsCalculated = 1;
       }
 
 
+      // write image on stdout
+      printf("%c",SYMBOL_SOF);
+      printf("%c",OPCODE_FRAME);
+      for(ii = 0; ii < FRAME_X_Y; ++ii)
+      {
+         frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
+         for(jj = 0; jj < FRAME_X_Y*numcams; ++jj)
+         {
+            printf("%c",(uchar)frameloc[jj]);
+         }
+      }
+      fflush(stdout);
+
+
+      ++frameidx_calc;
+      // read fps
+      fpsinstantPrevious = fpsinstant;
+      // this code will run even if the FPS file doesn't have as many entries as there are frames
+      if((0 == flagUseFpsFile) || (EOF == fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant)))
+      {
+         // russ: unsure if fscanf will change fpsinstant, but this may not be necessary
+         fpsinstant = fpsinstantPrevious;
+      }
+      else
+      {
+         assert(frameidx_calc == frameidx_read);
+      }
+
+      // FIXME russ: this doesn't compensate for the time spent running code, so FPS will
+      // be lower than it should be
+      // sleep to output frames at desired fps
+      sleeptime.tv_sec  = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) / NS_PER_SEC;
+      sleeptime.tv_nsec = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) % NS_PER_SEC;
+
+      if(0 == gFlagAsapMode)
+      {
+         // TODO: good practice to check return value
+         (void)nanosleep(&sleeptime, NULL);
+      }
+
       // release/destroy OpenCV objects
       cvReleaseImage(&frame);
+
+      snprintf( infilenameframe,2*INPATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
+                infilenameprefix,frameidx_calc );
    }
 
+
    // close files
-   fclose(infilefps);
+   if(0 != flagUseFpsFile)
+   {
+      fclose(infilefps);
+   }
 
 
    // tell listening program that we're done here

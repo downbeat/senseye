@@ -51,7 +51,7 @@
 // russ: unsure which is best to use (or what values)
 #define CANNY_THRESH_LOW        (70)
 #define CANNY_THRESH_RATIO      (2)
-#define TRAINING_WINDOW         ("Training Window")
+#define DEMO_WINDOW             ("Design Expo Demo")
 #define TRAINING_SETS_DIR       ("trainingdata")
 #define USERNAME_PREFIX         ("nobody")
 
@@ -316,9 +316,9 @@ int main(int argc, char** argv)
    }
 
 
-   cvNamedWindow(TRAINING_WINDOW,CV_WINDOW_NORMAL);
-   cvSetWindowProperty(TRAINING_WINDOW,CV_WND_PROP_FULLSCREEN,CV_WINDOW_FULLSCREEN);
-   cvSetMouseCallback(TRAINING_WINDOW,cbkCvMouseEvent,NULL);        
+   cvNamedWindow(DEMO_WINDOW,CV_WINDOW_NORMAL);
+   cvSetWindowProperty(DEMO_WINDOW,CV_WND_PROP_FULLSCREEN,CV_WINDOW_FULLSCREEN);
+   cvSetMouseCallback(DEMO_WINDOW,cbkCvMouseEvent,NULL);        
 
 
    cvInitFont(&font,CV_FONT_HERSHEY_SIMPLEX,0.5,0.5,0,1);
@@ -370,7 +370,7 @@ int main(int argc, char** argv)
                     CV_RGB(255,255,255),1,8,0 );
          }
          glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
-         cvShowImage(TRAINING_WINDOW, frameDualMarked);
+         cvShowImage(DEMO_WINDOW, frameDualMarked);
          cc = cvWaitKey(9);
          switch(cc)
          {
@@ -426,7 +426,7 @@ int main(int argc, char** argv)
       else
       {
          // LOAD USER
-         cvShowImage(TRAINING_WINDOW, textPromptLoad);
+         cvShowImage(DEMO_WINDOW, textPromptLoad);
          usernameLen=0;
          while(KEY_ENTER != cc)
          {
@@ -521,7 +521,7 @@ int main(int argc, char** argv)
                   getCentralCoords(idxClass+1,FRAME_X_Y,FRAME_X_Y,markX,markY);
                   cvCircle(frameSceneMarked,cvPoint(cvRound(markX),cvRound(markY)),1,markColor,2,8,0);
                   glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
-                  cvShowImage(TRAINING_WINDOW, frameDualMarked);
+                  cvShowImage(DEMO_WINDOW, frameDualMarked);
 
                   // we're gathering training data (dot is green)
                   if(1 == idxMode)
@@ -626,7 +626,6 @@ int main(int argc, char** argv)
          assert(OPCODE_FRAME == (unsigned char)opcode);
          // write data into frame structures
          glassesPopulateImages(numcams,indat,frameEye,frameScene);
-         // wait for mouse click
 
          cvNormalize(frameEye,frameEyeNorm,0,255,cv::NORM_MINMAX,CV_8UC1);
          cvCvtColor(frameEyeNorm,frameEyeMarked,CV_GRAY2RGB);
@@ -651,7 +650,7 @@ int main(int argc, char** argv)
          cvCircle(frameSceneMarked,cvPoint(cvRound(gazeXml),cvRound(gazeYml)),1,CV_RGB(0,0,255),2,8,0);
 
          glassesConcatenateImages(frameSceneMarked,frameEyeMarked,frameDualMarked,3);
-         cvShowImage(TRAINING_WINDOW, frameDualMarked);
+         cvShowImage(DEMO_WINDOW, frameDualMarked);
          cc = cvWaitKey(9);
          switch(cc)
          {
