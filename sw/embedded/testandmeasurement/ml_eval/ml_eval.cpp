@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <dirent.h>
 
 // opencv sources
 #include "cv.h"
@@ -42,7 +43,7 @@
 // huge because I am a lazy man
 #define MAX_FRAMES              (256*1024)
 #define INCOMING_WINDOW         ("Raw Video")
-#define TEST_SET_RATIO          (0.5)
+#define TEST_SET_RATIO          (0.2)
 // russ: unsure which is best to use (or what values)
 #define CANNY_THRESH_LOW        (70)
 #define CANNY_THRESH_RATIO      (2)
@@ -57,6 +58,7 @@ static char     gOutpath[PATH_MAX_LEN];
 static unsigned gFlagUserCliValid;
 static unsigned gFlagUserCliHelp;
 static unsigned gFlagNormalizeIncomingFrames;
+static unsigned gFlagCompositeDirectory;
 
 
 //**************************************************************************************************
@@ -117,11 +119,14 @@ int main(int argc, char** argv)
    char outfilenamelabelsml[2*PATH_MAX_LEN];
    FILE *outfilelabelsml;
 
+   struct dirent *dp;
+   DIR *dirp;
 
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
    gFlagNormalizeIncomingFrames = 0;
+   gFlagCompositeDirectory = 0;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -148,37 +153,92 @@ int main(int argc, char** argv)
    // FIXME russ: find a way to get the correct path name!
    getdeepestdirname(gInpath,filenameprefix);
    mkdir_p(gOutpath);
-   snprintf(infilenamelabelshuman,2*PATH_MAX_LEN,"%s/%s_labelshuman.txt",gInpath,filenameprefix);
    snprintf(outfilenamelabelsml,2*PATH_MAX_LEN,"%s/%s_labelsml.txt",gOutpath,filenameprefix);
 
 
    // read human labels
-   // we'll set data for all of the frames we will use.  a frame will only be used if both
-   // a) a picture file exists and
-   // b) a ground truth label is found in the *labelshuman file
-   infilelabelshuman = fopen(infilenamelabelshuman,"r");
-   if(0 == infilelabelshuman)
+   // we'll set data for all of the frames we will use.  a frame will only be used if a ground
+   // truth label is found in the *labelshuman file
+   if(0 != gFlagCompositeDirectory)
    {
-      fprintf(stderr, "Could not open %s for reading human labels\n",infilenamelabelshuman);
-      exit(1);
-   }
-
-   numframes = frameidx = frameidx_read = 0;
-   while(EOF != fscanf(infilelabelshuman,"[%d] label_human := %d\n",&frameidx_read,&gazeLabel_read))
-   {
-      frameFileIdx[frameidx] = frameidx_read;
-      frameFlagTraining[frameidx] = 0;
-      gazeLabel[frameidx] = gazeLabel_read;
-      // save the image filename for later
-      snprintf( (char*)(frameFilename[frameidx]),2*PATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
-                filenameprefix,frameFileIdx[frameidx] );
-      ++frameidx;
-      if(MAX_FRAMES <= frameidx)
+      numframes = frameidx = frameidx_read = 0;
+      dirp = opendir(gInpath);
+      if(0 == dirp)
       {
-         break;
+         fprintf(stderr, "Could not open directory %s\n", gInpath);
+         exit(1);
       }
+      dp = readdir(dirp);
+      // FIXME russ asdfasdf
+      fprintf(stderr,"opened dir %s\n",dp->d_name);
+      while(0 != dp)
+      {
+         snprintf( infilenamelabelshuman,2*PATH_MAX_LEN,"%s/%s/%s_labelshuman.txt",
+                   gInpath,dp->d_name,dp->d_name );
+         infilelabelshuman = fopen(infilenamelabelshuman,"r");
+         if(0 == infilelabelshuman)
+         {
+            fprintf(stderr, "Could not open %s for reading human labels\n",infilenamelabelshuman);
+            exit(1);
+         }
+         while(EOF != fscanf(infilelabelshuman,"[%d] label_human := %d\n",&frameidx_read,&gazeLabel_read))
+         {
+            frameFileIdx[frameidx] = frameidx_read;
+            frameFlagTraining[frameidx] = 0;
+            gazeLabel[frameidx] = gazeLabel_read;
+            // save the image filename for later
+            snprintf( (char*)(frameFilename[frameidx]),2*PATH_MAX_LEN,"%s/%s/%s_%06d.bmp",gInpath,
+                      dp->d_name,dp->d_name,frameFileIdx[frameidx] );
+            ++frameidx;
+            if(MAX_FRAMES <= frameidx)
+            {
+               break;
+            }
+         }
+         fclose(infilelabelshuman);
+         if(MAX_FRAMES <= frameidx)
+         {
+            break;
+         }
+         do
+         {
+            dp = readdir(dirp);
+            if(0 == dp)
+            {
+               break;
+            }
+         } while(0 == strncmp(dp->d_name,".",1));
+      }
+      numframes=frameidx;
    }
-   numframes=frameidx;
+   else
+   {
+      snprintf( infilenamelabelshuman,2*PATH_MAX_LEN,"%s/%s_labelshuman.txt",
+                gInpath,filenameprefix );
+      infilelabelshuman = fopen(infilenamelabelshuman,"r");
+      if(0 == infilelabelshuman)
+      {
+         fprintf(stderr, "Could not open %s for reading human labels\n",infilenamelabelshuman);
+         exit(1);
+      }
+      numframes = frameidx = frameidx_read = 0;
+      while(EOF != fscanf(infilelabelshuman,"[%d] label_human := %d\n",&frameidx_read,&gazeLabel_read))
+      {
+         frameFileIdx[frameidx] = frameidx_read;
+         frameFlagTraining[frameidx] = 0;
+         gazeLabel[frameidx] = gazeLabel_read;
+         // save the image filename for later
+         snprintf( (char*)(frameFilename[frameidx]),2*PATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
+                   filenameprefix,frameFileIdx[frameidx] );
+         ++frameidx;
+         if(MAX_FRAMES <= frameidx)
+         {
+            break;
+         }
+      }
+      numframes=frameidx;
+      fclose(infilelabelshuman);
+   }
 
    // open output file
    outfilelabelsml = fopen(outfilenamelabelsml,"w");
@@ -442,6 +502,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"press 'q' to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -c         composite directory supplied as input.  this is a directory of directories of data\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -i PATH    load attributes files from/to PATH (should be a directory)\n");
    fprintf(stderr,"  -n         normalize incoming data\n");
@@ -461,9 +522,12 @@ static int parseargs(int argc, char **argv) {
    flagInpathSupplied = flagOutpathSupplied = 0;
    errno=0;
 
-   while ((cc = getopt(argc, argv, "hi:no:")) != EOF)
+   while ((cc = getopt(argc, argv, "chi:no:")) != EOF)
    {
       switch (cc) {
+         case 'c':
+            gFlagCompositeDirectory = 1;
+            break;
          case 'h':
             gFlagUserCliHelp = 1;
             break;
