@@ -35,7 +35,8 @@
 #define FRAME_X_Y               (112)
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
-#define ESC_KEY                 (27)
+#define KEY_ESC                 (27)
+#define KEY_QUIT                ('q')
 #define OUTPATH_MAX_LEN         (PATH_MAX_LEN)
 
 
@@ -49,6 +50,7 @@ static unsigned gFlagUserCliHelp;
 static unsigned gFlagUserCliModeSelected;
 static unsigned gFlagNoWriteVideo;
 static unsigned gFlagRawMode;
+static unsigned gFlagDrawGrid;
 
 
 //**************************************************************************************************
@@ -85,6 +87,8 @@ int main(int argc, char** argv)
    IplImage *framedualnorm, *framedualscaledup;
    uchar *framedualnormloc1, *framedualnormloc2, *framedualscaleduploc1, *framedualscaleduploc2;
 
+   IplImage *gridoverlay;
+
    struct timespec time, timeprevious;
    double fpsinstant;
    double fpsmin;
@@ -110,6 +114,7 @@ int main(int argc, char** argv)
    gFlagUserCliModeSelected=0;
    gFlagNoWriteVideo=0;
    gFlagRawMode=0;
+   gFlagDrawGrid=0;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -189,6 +194,8 @@ int main(int argc, char** argv)
    framedualnorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
    framedualscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
+   gridoverlay = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
+                                       FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 3);
    // appease the compiler
    frame2loc = frame2normloc = frame2scaleduploc = 0;
    framedualnormloc1 = framedualnormloc2 = framedualscaleduploc1 = framedualscaleduploc2 = 0;
@@ -361,16 +368,43 @@ int main(int argc, char** argv)
       }
 
 
-      // display picture on screen
-      if(2 == numcams)
+
+      if(0 != gFlagDrawGrid)
       {
-         cvShowImage("CamCapDoubleWide", framedualscaledup);
-         cvShowImage("CamCapDoubleWideSmall", framedualnorm);
+         // FIXME only works with 2 cameras!
+         assert(2 == numcams);
+         cvCvtColor(framedualscaledup, gridoverlay, CV_GRAY2RGB);
+         cvLine( gridoverlay,
+                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gridoverlay,
+                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gridoverlay,
+                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvLine( gridoverlay,
+                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+                 CV_RGB(255,0,0),1,8,0 );
+         cvShowImage("CamCapDoubleWide", gridoverlay);
       }
       else
       {
-         cvShowImage("CamCap", framescaledup);
-         cvShowImage("CamCapSmall", framenorm);
+         // display picture on screen
+         if(2 == numcams)
+         {
+            cvShowImage("CamCapDoubleWide", framedualscaledup);
+            cvShowImage("CamCapDoubleWideSmall", framedualnorm);
+         }
+         else
+         {
+            cvShowImage("CamCap", framescaledup);
+            cvShowImage("CamCapSmall", framenorm);
+         }
       }
 
 
@@ -401,7 +435,7 @@ int main(int argc, char** argv)
       // the choice of 9 ms delay means this program can't do much faster than ~110 fps
       cc = cvWaitKey(9);
       // look for ESC key
-      if(ESC_KEY == cc)
+      if(KEY_QUIT == cc)
       {
          break;
       }
@@ -461,6 +495,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
+   fprintf(stderr,"  -g         draw 3x3 grid lines\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -o PATH    save video to PATH.  PATH cannot already exist.  incompatible with -q\n");
    fprintf(stderr,"  -q         quiet mode.  won't write out any video.  incompatible with -o\n");
@@ -477,9 +512,12 @@ static int parseargs(int argc, char **argv)
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "ho:qr")) != EOF)
+   while ((cc = getopt(argc, argv, "gho:qr")) != EOF)
    {
       switch (cc) {
+         case 'g':
+            gFlagDrawGrid = 1;
+            break;
          case 'h':
             gFlagUserCliValid = 1;
             gFlagUserCliHelp = 1;
