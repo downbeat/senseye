@@ -14,7 +14,8 @@ prognames=( 'cvEyeTracker'
             'glassescapstream'
             'glassesreplaystream'
             'glassesreplaystream_color_hack'
-            'ml_rawfeatures_knearest' )
+            'ml_rawfeatures_knearest' 
+            'randomizeondisk' )
 
 
 if [ ! -d "./bin" ]; then
