@@ -32,13 +32,17 @@ void serial_begin(uint32_t divisor)
 	transmitting = 0;
 	CORE_PIN0_CONFIG = PORT_PCR_PE | PORT_PCR_PS | PORT_PCR_PFE | PORT_PCR_MUX(3);
 	CORE_PIN1_CONFIG = PORT_PCR_DSE | PORT_PCR_SRE | PORT_PCR_MUX(3);
+	// Enable RTS/CTS
+	CORE_PIN18_CONFIG = PORT_PCR_PE | PORT_PCR_PS | PORT_PCR_MUX(3);
+	CORE_PIN19_CONFIG = PORT_PCR_DSE | PORT_PCR_SRE | PORT_PCR_MUX(3);
+	UART0_MODEM = UART_MODEM_RXRTSE | UART_MODEM_TXCTSE;
 	UART0_BDH = (divisor >> 13) & 0x1F;
 	UART0_BDL = (divisor >> 5) & 0xFF;
 	UART0_C4 = divisor & 0x1F;
 	//UART0_C1 = 0;
 	UART0_C1 = UART_C1_ILT;
-	UART0_TWFIFO = 4; // tx watermark, causes S1_TDRE to set
-	UART0_RWFIFO = 4; // rx watermark, causes S1_RDRF to set
+	UART0_TWFIFO = 2; // tx watermark, causes S1_TDRE to set
+	UART0_RWFIFO = 6; // rx watermark, causes S1_RDRF to set
 	UART0_PFIFO = UART_PFIFO_TXFE | UART_PFIFO_RXFE;
 	UART0_C2 = C2_TX_INACTIVE;
 	NVIC_ENABLE_IRQ(IRQ_UART0_STATUS);
