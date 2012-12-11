@@ -1,0 +1,3 @@
+Host bitbucket
+   Hostname bitbucket.org
+   IdentityFile id_rsa__glasses
