@@ -1,11 +1,11 @@
 #include "stony.h"
-#include "stonymask_cam3_3v3.h"
+#include "stonymask_cam7.h"
 
 // teensy and arduino stuff
 #include "pins_arduino.h"
 #include "core_pins.h"
 #include "usb_serial.h"
-#include "HardwareSerial.h"
+//#include "HardwareSerial.h"
 
 
 //**************************************************************************************************
@@ -27,12 +27,12 @@ const char OPCODE_RESP_NUM_CAMS = (char)0xA1;
 
 const char PIN_LED = 13;
 
-const char PIN_RESP   = 2;
-const char PIN_INCP   = 3;
-const char PIN_RESV   = 4;
-const char PIN_INCV   = 5;
-const char PIN_INPHI  = 6;
-const char PIN_ANALOG = A8;
+const char PIN_RESP = 8;
+const char PIN_INCP = 7;
+const char PIN_RESV = 6;
+const char PIN_INCV = 5;
+const char PIN_INPHI = 4;
+const char PIN_ANALOG = A0;
 
 
 //**************************************************************************************************
@@ -42,7 +42,7 @@ int gFlagCaptureRunning;
 Stonyman stonycam;
 
 // for bluetooth over UART
-HardwareSerial Uart = HardwareSerial();
+//HardwareSerial Uart = HardwareSerial();
 
 
 //**************************************************************************************************
@@ -67,18 +67,18 @@ extern "C" int main(void)
 
 void setup()
 {
-   Uart.begin(BAUDRATE);
+   Serial.begin(BAUDRATE);
    gFlagCaptureRunning = 0;
    pinMode(13,OUTPUT);
    digitalWriteFast(PIN_LED,1);
 
-   // raw: for 5v
-   //(void)stonycam.init( PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,
-   //                     Stonyman::DEFAULT_VREF_5V0, Stonyman::DEFAULT_NBIAS_5V0,
-   //                     Stonyman::DEFAULT_AOBIAS_5V0, Stonyman::DEFAULT_GAIN_5V0,
-   //                     Stonyman::DEFAULT_SELAMP_5V0 ); // basic 5v0 operation
+  // raw: for 5v
    (void)stonycam.init( PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,
-                        37,48,48,1,1); // amp: for 3v3
+                        Stonyman::DEFAULT_VREF_5V0, Stonyman::DEFAULT_NBIAS_5V0,
+                        Stonyman::DEFAULT_AOBIAS_5V0, Stonyman::DEFAULT_GAIN_5V0,
+                        Stonyman::DEFAULT_SELAMP_5V0 ); // basic 5v0 operation
+   //(void)stonycam.init( PIN_RESP, PIN_INCP, PIN_RESV, PIN_INCV, PIN_INPHI, PIN_ANALOG,
+   //                     35,50,50,1,1); // amp: for 3v3
 }
 
 void loop()
@@ -91,19 +91,19 @@ void loop()
    {
       do
       {
-         while(!Uart.available());
-         cc = Uart.read();
+         while(!Serial.available());
+         cc = Serial.read();
       } while(SYMBOL_SOF != cc);
 
       // grab data
-      while(!Uart.available());
-      opcode = Uart.read();
+      while(!Serial.available());
+      opcode = Serial.read();
 
       if(OPCODE_START == opcode)
       {
          gFlagCaptureRunning = 1;
-         Uart.print(SYMBOL_SOF);
-         Uart.print(OPCODE_START_ACK);
+         Serial.print(SYMBOL_SOF);
+         Serial.print(OPCODE_START_ACK);
       }
       else if(OPCODE_SINGLE_FRAME == opcode)
       {
@@ -113,21 +113,21 @@ void loop()
       }
       else if(OPCODE_REQ_NUM_CAMS)
       {
-         Uart.write(SYMBOL_SOF);
-         Uart.write(OPCODE_RESP_NUM_CAMS);
-         Uart.write((char)NUMCAMS);
+         Serial.write(SYMBOL_SOF);
+         Serial.write(OPCODE_RESP_NUM_CAMS);
+         Serial.write((char)NUMCAMS);
       }
       // otherwise, ignore
    }
    else
    {
       // check for stop command
-      while(Uart.available())
+      while(Serial.available())
       {
          do
          {
-             cc=Uart.read();
-         } while((Uart.available()) && (SYMBOL_SOF != cc));
+             cc=Serial.read();
+         } while((Serial.available()) && (SYMBOL_SOF != cc));
 
          if(SYMBOL_SOF != cc)
          {
@@ -135,13 +135,13 @@ void loop()
          }
 
          // FIXME: if we ONLY get an SOF, we're stuck here!
-         while(!Uart.available());
-         opcode = Uart.read();
+         while(!Serial.available());
+         opcode = Serial.read();
 
          if(OPCODE_STOP == opcode)
          {
             gFlagCaptureRunning = 0;
-            Uart.print(OPCODE_STOP_ACK);
+            Serial.print(OPCODE_STOP_ACK);
             return;
          }
          // otherwise ignore
@@ -162,22 +162,22 @@ void frameCaptureAndTx()
    short imrow[112];
    char  imrowsc[112];
 
-   Uart.print(SYMBOL_SOF);
-   Uart.print(OPCODE_FRAME);
+   Serial.print(SYMBOL_SOF);
+   Serial.print(OPCODE_FRAME);
 
    // russ: for debugging
-   //for(ii=0; ii<112*112; ++ii) Uart.print(0);
+   //for(ii=0; ii<112*112; ++ii) Serial.print(0);
    for(ii = 0; ii < 112; ++ii)
    {
       stonycam.getImage(imrow,ii,1,1,0,112,1);
       // FIXME russ: not efficient
       for(jj = 0; jj < 112; ++jj)
       {
-         //imrowsc[jj]=255-imrow[jj]+stonymask[(112*ii)+jj];
-         imrowsc[jj]=imrow[jj]-stonymask[(112*ii)+jj];
+         imrowsc[jj]=255-imrow[jj]+stonymask[(112*ii)+jj];
+         //imrowsc[jj]=imrow[jj]-stonymask[(112*ii)+jj];
          // russ: try this if the masked version is not working
-         //imrowsc[jj]=128-imrow[jj];
-         Uart.print((char)(imrowsc[jj]));
+         //imrowsc[jj]=imrow[jj]-128;
+         Serial.print((char)(imrowsc[jj]));
       }
    }
 }

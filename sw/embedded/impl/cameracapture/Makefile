@@ -7,7 +7,8 @@ TARGET = cameracapture
 # configurable options
 OPTIONS = -DF_CPU=48000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH
 
-INC=-I../common/libteensy3 -I../common/libstony -I../common/masks
+GLASSES_SHARED=../common
+INC=-I$(GLASSES_SHARED)/libteensy3 -I$(GLASSES_SHARED)/libstony -I$(GLASSES_SHARED)/masks
 
 
 #************************************************************************
@@ -58,9 +59,9 @@ SIZE = $(abspath $(COMPILERPATH))/arm-none-eabi-size
 # TODO: this does not handle Arduino libraries yet...
 C_FILES := $(wildcard *.c)
 CPP_FILES := $(wildcard *.cpp)
-TEENSY_C_FILES := $(wildcard ../common/libteensy3/*.c)
-TEENSY_CPP_FILES := $(wildcard ../common/libteensy3/*.cpp)
-LIBSTONY_CPP_FILES := $(wildcard ../common/libstony/*.cpp)
+TEENSY_C_FILES := $(wildcard $(GLASSES_SHARED)/libteensy3/*.c)
+TEENSY_CPP_FILES := $(wildcard $(GLASSES_SHARED)/libteensy3/*.cpp)
+LIBSTONY_CPP_FILES := $(wildcard $(GLASSES_SHARED)/libstony/*.cpp)
 OBJS := $(C_FILES:.c=.o) $(CPP_FILES:.cpp=.o) $(TEENSY_C_FILES:.c=.o) $(TEENSY_CPP_FILES:.cpp=.o) $(LIBSTONY_CPP_FILES:.cpp=.o)
 
 
