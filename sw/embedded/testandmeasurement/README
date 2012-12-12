@@ -5,8 +5,10 @@ just go into the 'demo' directory
 
 
 ===============================================================================
-do this  (you need opencv, or just disregard the slew of errors in the
-         utilities that need it)
+do this to build everything
+(you need opencv for everything to build happily, or you can disregard the slew
+of errors and it should still build the utilities that read data from the
+glasses).
 ===============================================================================
  - run makeall.sh (unfortunately, for many utils you need OpenCV libs)
  - utilities are put in ./bin
@@ -22,7 +24,7 @@ Want to capture from some glasses and save the data?
 $ glassescapstream | frontdisplayandsave -o <outputpath>
 
 Want to replay some captured data?
-$ glassesreplaystream | frontdisplayandsave [-q|-o ...]
+$ glassesreplaystream -i <inputpath(directory)> | frontdisplayandsave [-q|-o ...]
 
 
 You get the point.  Most utils are front ends and should be attached to a
