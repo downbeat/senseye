@@ -15,7 +15,7 @@
 //**************************************************************************************************
 // global constants
 #define    NUMCAMS   (2)
-#define    BAUDRATE  (115200)
+#define    BAUDRATE  (921600)
 
 const char SYMBOL_SOF           = (char)0xFF;
 
@@ -72,7 +72,7 @@ extern "C" int main(void)
 
 void setup()
 {
-   Serial.begin(BAUDRATE);
+   Uart.begin(BAUDRATE);
    gFlagCaptureRunning = 0;
    pinMode(13,OUTPUT);
    digitalWriteFast(PIN_LED,1);
@@ -173,10 +173,10 @@ void frameCaptureAndTx()
    Uart.print(OPCODE_FRAME);
 
    // russ: for debugging
-   //for(ii=0; ii<112*112*2; ++ii) Serial.print(0);
+   //for(ii=0; ii<112*112*2; ++ii) Uart.print(0);
    for(ii = 0; ii < 112; ++ii)
    {
-      //if(ii == (112/2-1)) Serial.print(OPCODE_FRAME);
+      //if(ii == (112/2-1)) Uart.print(OPCODE_FRAME);
       stonycam.getDualImages(imrow1,imrow2,ii,1,1,0,112,1);
       // FIXME russ: not efficient
       for(jj = 0; jj < 112; ++jj)

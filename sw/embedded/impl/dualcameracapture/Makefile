@@ -7,7 +7,7 @@ TARGET = bluetooth_pcbboard_dualcameracapture
 # configurable options
 OPTIONS = -DF_CPU=48000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH
 
-GLASSES_SHARED=../../common
+GLASSES_SHARED=../common
 INC=-I$(GLASSES_SHARED)/libteensy3 -I$(GLASSES_SHARED)/masks
 
 
