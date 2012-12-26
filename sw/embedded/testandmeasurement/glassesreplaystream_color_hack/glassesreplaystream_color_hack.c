@@ -33,7 +33,8 @@
 #define FRAME_X_Y               (112)
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
-#define ESC_KEY                 (27)
+#define KEY_ESC                 (27)
+#define KEY_QUIT                ('q')
 #define INPATH_MAX_LEN          (PATH_MAX_LEN)
 
 
@@ -59,6 +60,7 @@ static int  parseargs(int argc, char **argv);
 int main(int argc, char** argv)
 {
    int ii,jj;
+   char cc;
 
    unsigned numcams;
    unsigned flagnumcamscalculated;
@@ -134,7 +136,9 @@ int main(int argc, char** argv)
    // read fps for first frame: if nothing to read, just bail
    if(EOF != fscanf(infilefps,"[%d] fps := %f\n", &frameidx_read, &fpsinstant))
    {
-      while(1)
+      // initialize cc to something that's not 'q'
+      cc=cvWaitKey(1);
+      while(KEY_QUIT != cc)
       {
          // load image
          snprintf( infilenameframe,2*INPATH_MAX_LEN,"%s/%s_%06d.bmp",gInpath,
@@ -190,7 +194,7 @@ int main(int argc, char** argv)
 
          // TODO: good practice to check return value
          //(void)nanosleep(&sleeptime, NULL);
-         (void)cvWaitKey(sleeptime.tv_nsec/1000);
+         cc = cvWaitKey(sleeptime.tv_nsec/1000);
       }
 
 
@@ -231,7 +235,7 @@ static void printhelp(char *progname)
 {
    printusage(progname);
    fprintf(stderr,"TODO: help not well written\n");
-   fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
+   fprintf(stderr,"press 'q' to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -h         show help and exit\n");
