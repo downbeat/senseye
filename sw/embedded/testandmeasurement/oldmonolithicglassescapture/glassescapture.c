@@ -3,6 +3,7 @@
 //
 // Russ Bielawski
 // 2012-10-29
+// 2012-12-26: quit with 'q' instead of ESC
 //**************************************************************************************************
 
 
@@ -48,7 +49,8 @@ enum
 #define FRAME_X_Y               (112)
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
-#define ESC_KEY                 (27)
+#define KEY_ESC                 (27)
+#define KEY_QUIT                ('q')
 #define OUTPATH_MAX_LEN         (256)
 
 #define dbgPrintOp(msg,opcode)  do { \
@@ -513,8 +515,8 @@ int main(int argc, char** argv)
          // don't capture another frame until user presses something
          cc = cvWaitKey(0);
       }
-      // look for ESC key
-      if(ESC_KEY == cc)
+      // look for 'q' key
+      if(KEY_QUIT == cc)
       {
          break;
       }
@@ -699,7 +701,7 @@ static void printhelp(char *progname)
 {
    printusage(progname);
    fprintf(stderr,"TODO: help not well written\n");
-   fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
+   fprintf(stderr,"press 'q' to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -b         attempt to connect to a bluetooth module already bonded on /dev/rfcomm0\n");
