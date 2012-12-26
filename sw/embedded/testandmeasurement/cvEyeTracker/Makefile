@@ -1,3 +1,6 @@
+# russ: if you're missing a file "linux/videodev.h", the workaround in linux is to symlink
+#       /usr/include/linux/videodev.h -> /usr/include/linux/videodev2.h
+
 COMPILER=g++
 
 LIBDIRS=-L/usr/local/lib #-L/usr/X11R6/lib
