@@ -1,6 +1,6 @@
 COMPILER=g++
 
-LIBDIRS=-L/usr/local/lib -L/usr/X11R6/lib
+LIBDIRS=-L/usr/local/lib #-L/usr/X11R6/lib
 
 LIBS=-lm -lopencv_core -lopencv_highgui -lopencv_imgproc #-lcvaux 
 
