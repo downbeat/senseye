@@ -1,5 +1,5 @@
 #include "stony.h"
-#include "stonymask_cam3_3v3.h"
+#include "stonymask_nomask.h"
 
 // teensy and arduino stuff
 #include "pins_arduino.h"
