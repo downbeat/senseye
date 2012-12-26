@@ -1,5 +1,5 @@
 //**************************************************************************************************
-// captureStreamDual.c
+// glassescapture.c
 //
 // Russ Bielawski
 // 2012-10-29
@@ -209,6 +209,7 @@ int main(int argc, char** argv)
       }
    }
 
+   outfilefps=0;
    if(0 != gFlagNoWriteVideo)
    {
       printf("quiet mode: video will not be saved\n");
@@ -361,6 +362,11 @@ int main(int argc, char** argv)
       // TODO: should be a function?
       framevalmin = 255;
       framevalmax = 0;
+      if(2 == numcams)
+      {
+         frame2valmin = 255;
+         frame2valmax = 0;
+      }
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
