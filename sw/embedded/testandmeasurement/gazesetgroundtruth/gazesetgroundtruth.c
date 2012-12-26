@@ -357,6 +357,8 @@ int main(int argc, char** argv)
          if(KEY_JUNKFRAME==cc)
          {
             flagjunkframe=1;
+            // we'll mark junk frames as bad frames too
+            flagbadframe=1;
          }
          if(KEY_QUIT==cc)
          {
