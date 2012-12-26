@@ -95,3 +95,43 @@ void glassesConcatenateImages(IplImage *frameLeft, IplImage *frameRight, IplImag
    }
 }
 
+//
+// glassesSplitImages: split double wide image into two images
+//
+void glassesSplitImages(IplImage *frameDual, IplImage *frameLeft, IplImage *frameRight, unsigned numchannels)
+{
+   // FIXME: frame resolutions are hard coded
+   unsigned ii,jj,kk;
+   unsigned width,height;
+   uchar *frameLeftLoc;
+   uchar *frameRightLoc;
+   uchar *frameDualLoc1;
+   uchar *frameDualLoc2;
+
+   // right now images must be same size
+   assert(frameLeft->width == frameRight->width);
+   assert(frameLeft->height == frameRight->height);
+   width = frameLeft->width;
+   height = frameLeft->height;
+   assert((unsigned)frameDual->width == 2*width);
+   assert((unsigned)frameDual->height == height);
+
+   for(ii=0; ii<width; ++ii)
+   {
+      frameLeftLoc = (uchar*)(frameLeft->imageData + (ii*frameLeft->widthStep));
+      frameRightLoc = (uchar*)(frameRight->imageData + (ii*frameRight->widthStep));
+      frameDualLoc1 = (uchar*)(frameDual->imageData + (ii*frameDual->widthStep));
+      frameDualLoc2 = (uchar*)( frameDual->imageData
+                                + (ii*frameDual->widthStep)
+                                + (frameDual->widthStep/2) );
+      for(jj=0; jj<height; ++jj)
+      {
+         for(kk=0; kk<numchannels; ++kk)
+         {
+            frameLeftLoc[numchannels*jj+kk] = (uchar)frameDualLoc1[numchannels*jj+kk];
+            frameRightLoc[numchannels*jj+kk] = (uchar)frameDualLoc2[numchannels*jj+kk];
+         }
+      }
+   }
+}
+

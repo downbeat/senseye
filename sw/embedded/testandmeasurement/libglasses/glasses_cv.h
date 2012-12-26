@@ -24,6 +24,7 @@
 //
 void glassesPopulateImages(unsigned numcams, char buf[], IplImage *frameEye, IplImage *frameScene);
 void glassesConcatenateImages(IplImage *frameLeft, IplImage *frameRight, IplImage *frameDual, unsigned numchannels);
+void glassesSplitImages(IplImage *frameDual, IplImage *frameLeft, IplImage *frameRight, unsigned numchannels);
 
 
 #endif // GLASSES_CV_H
