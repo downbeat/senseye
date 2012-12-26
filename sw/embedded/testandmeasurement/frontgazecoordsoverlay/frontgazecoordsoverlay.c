@@ -34,7 +34,8 @@
 #define FRAME_X_Y               (112)
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
-#define ESC_KEY                 (27)
+#define KEY_ESC                 (27)
+#define KEY_QUIT                ('q')
 #define INPATH_MAX_LEN          (PATH_MAX_LEN)
 // russ: unsure which is best to use (or what values)
 #define ED_THRESH_ABS           (165)
@@ -247,11 +248,11 @@ int main(int argc, char** argv)
       ++frameidx_calc;
 
 
-      // let the user kill the program with ESC
+      // let the user kill the program with 'q'
       // there is a tradeoff here: longer is better for step mode, shorter better for stream mode.
       // the choice of 9 ms delay means this program can't do much faster than ~110 fps
       cc = cvWaitKey(9);
-      if('q' == cc)
+      if(KEY_QUIT == cc)
       {
          break;
       }
@@ -295,7 +296,7 @@ static void printhelp(char *progname)
 {
    printusage(progname);
    fprintf(stderr,"TODO: help not well written\n");
-   fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
+   fprintf(stderr,"press 'q' to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -g         draw 3x3 grid lines\n");
