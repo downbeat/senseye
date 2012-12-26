@@ -2,7 +2,7 @@
 # 2012-11-19: adapted from Paul's makefile
 
 # The name of your project (used to name the compiled .hex file)
-TARGET = bluetooth_pcbboard_dualcameracapture
+TARGET = dualcameracapture
 
 # configurable options
 OPTIONS = -DF_CPU=48000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH
