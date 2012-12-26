@@ -93,10 +93,13 @@ int main(int argc, char** argv)
    char outfilenameprefix[2*OUTPATH_MAX_LEN];
    char outfilenamegazecoords[2*OUTPATH_MAX_LEN];
    char outfilenamebadframes[2*OUTPATH_MAX_LEN];
+   char outfilenamejunkframes[2*OUTPATH_MAX_LEN];
    FILE *outfilegazecoords;
    FILE *outfilebadframes;
+   FILE *outfilejunkframes;
    unsigned frameidx;
    unsigned flagbadframe;
+   unsigned flagjunkframe;
    unsigned flagexitrequested;
 
 
@@ -125,6 +128,7 @@ int main(int argc, char** argv)
    mkdir_p(gOutpath);
    snprintf(outfilenamegazecoords,2*OUTPATH_MAX_LEN,"%s/%s_gazecoords.txt",gOutpath,outfilenameprefix);
    snprintf(outfilenamebadframes,2*OUTPATH_MAX_LEN,"%s/%s_badframes.txt",gOutpath,outfilenameprefix);
+   snprintf(outfilenamejunkframes,2*OUTPATH_MAX_LEN,"%s/%s_junkframes.txt",gOutpath,outfilenameprefix);
 
    outfilegazecoords = fopen(outfilenamegazecoords,"w");
    if(0 == outfilegazecoords)
@@ -137,6 +141,14 @@ int main(int argc, char** argv)
    {
       fclose(outfilegazecoords);
       fprintf(stderr, "Could not open %s for writing bad frame flags\n",outfilenamebadframes);
+      exit(1);
+   }
+   outfilejunkframes = fopen(outfilenamejunkframes,"w");
+   if(0 == outfilejunkframes)
+   {
+      fclose(outfilegazecoords);
+      fclose(outfilebadframes);
+      fprintf(stderr, "Could not open %s for writing bad frame flags\n",outfilenamejunkframes);
       exit(1);
    }
 
@@ -327,6 +339,7 @@ int main(int argc, char** argv)
 
       // show image and wait for mouse
       flagbadframe=0;
+      flagjunkframe=0;
       flagexitrequested=0;
       cvShowImage("Gaze Prompt", framedualscaledup);
       gLastGazeX = gLastGazeY = -1;
@@ -336,6 +349,10 @@ int main(int argc, char** argv)
          if(('x'==cc) || ('b'==cc))
          {
             flagbadframe=1;
+         }
+         if('j'==cc)
+         {
+            flagjunkframe=1;
          }
          if('q'==cc)
          {
@@ -357,13 +374,19 @@ int main(int argc, char** argv)
       {
          printf("[%06d] BAD FRAME!\n",frameidx);
       }
+      if(0 != flagjunkframe)
+      {
+         printf("[%06d] JUNK FRAME!\n",frameidx);
+      }
       fflush(stdout);
 
       // write data out
       fprintf(outfilegazecoords,"[%06d] (x,y) := (%3d,%3d)\n",frameidx,gLastGazeX,gLastGazeY);
       fprintf(outfilebadframes, "[%06d] bad? := %d\n",frameidx,(flagbadframe ? 1:0));
+      fprintf(outfilejunkframes, "[%06d] junk? := %d\n",frameidx,(flagjunkframe ? 1:0));
       fflush(outfilegazecoords);
       fflush(outfilebadframes);
+      fflush(outfilejunkframes);
 
       ++frameidx;
 
@@ -387,6 +410,7 @@ int main(int argc, char** argv)
    // close files
    fclose(outfilegazecoords);
    fclose(outfilebadframes);
+   fclose(outfilejunkframes);
    return 0;
 }
 
