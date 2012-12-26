@@ -26,7 +26,6 @@
 //**************************************************************************************************
 // defines / constants
 //
-#define DBG_PRINT_TXRX_OPS    (0)
 #define NS_PER_SEC            (1000*1000*1000)
 #define MAX_CAMS              (2)
 #define FRAME_X_Y             (112)
@@ -36,7 +35,7 @@
 #define OUTPATH_MAX_LEN       (256)
 
 #define dbgPrintOp(msg,opcode) do { \
-                                  if(0!=DBG_PRINT_TXRX_OPS) \
+                                  if(0!=gFlagDbgOutputOn) \
                                   { \
                                      fprintf(stderr,msg,opcode); \
                                   } \
@@ -48,6 +47,7 @@
 FILE *gCamin,*gCamout;
 unsigned gFlagUserCliValid;
 unsigned gFlagUserCliHelp;
+unsigned gFlagDbgOutputOn;
 unsigned gFlagNoWriteVideo;
 unsigned gFlagUseBluetooth;
 
@@ -77,6 +77,7 @@ int main(int argc, char** argv)
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
+   gFlagDbgOutputOn=0;
    gFlagNoWriteVideo=0;
    gFlagUseBluetooth=0;
    if(0 != parseargs(argc,argv))
@@ -271,6 +272,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -b         attempt to connect to a bluetooth module already bonded on /dev/rfcomm0\n");
+   fprintf(stderr,"  -d         enable debug output (shows communication between glasses and this program\n");
    fprintf(stderr,"  -h         show help and exit\n");
 }
 
@@ -285,11 +287,14 @@ static int parseargs(int argc, char **argv)
    errno=0;
 
    gFlagUserCliValid = 1;
-   while ((cc = getopt(argc, argv, "bh")) != EOF)
+   while ((cc = getopt(argc, argv, "bdh")) != EOF)
    {
       switch (cc) {
          case 'b':
             gFlagUseBluetooth = 1;
+            break;
+         case 'd':
+            gFlagDbgOutputOn = 1;
             break;
          case 'h':
             gFlagUserCliHelp = 1;
