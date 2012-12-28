@@ -268,7 +268,6 @@ static void printhelp(char *progname)
 {
    printusage(progname);
    fprintf(stderr,"TODO: help not well written\n");
-   fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -b         attempt to connect to a bluetooth module already bonded on /dev/rfcomm0\n");
