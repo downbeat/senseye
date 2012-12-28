@@ -23,7 +23,6 @@
 #endif
 
 // thanks to Boyan
-// TODO: unused as of right now!
 #define SMH_VREF_3V3    41     //vref for 3.3 volt
 #define SMH_NBIAS_3V3   50     //nbias for 3.3 volts
 #define SMH_AOBIAS_3V3  37     //aobias for 3.3 volts
