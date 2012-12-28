@@ -2,8 +2,9 @@
 // glassescapture.c
 //
 // Russ Bielawski
-// 2012-10-29
+// 2012-10-29: created
 // 2012-12-26: quit with 'q' instead of ESC
+// 2012-12-28: debug is now a command line option
 //**************************************************************************************************
 
 
@@ -43,7 +44,6 @@ enum
    OPCODE_RESP_NUM_CAMS = 0xA1
 };
 
-#define DBG_PRINT_TXRX_OPS      (0)
 #define NS_PER_SEC              (1000*1000*1000)
 #define MAX_CAMS                (2)
 #define FRAME_X_Y               (112)
@@ -54,7 +54,7 @@ enum
 #define OUTPATH_MAX_LEN         (256)
 
 #define dbgPrintOp(msg,opcode)  do { \
-                                   if(0!=DBG_PRINT_TXRX_OPS) \
+                                   if(0!=gFlagDbgOutputOn) \
                                    { \
                                       fprintf(stderr,msg,opcode); \
                                    } \
@@ -67,6 +67,7 @@ FILE *gCamin,*gCamout;
 char gOutpath[OUTPATH_MAX_LEN];
 unsigned int gFlagUserCliValid;
 unsigned int gFlagUserCliHelp;
+unsigned int gFlagDbgOutputOn;
 unsigned int gFlagUserCliModeSelected;
 unsigned int gFlagNoWriteVideo;
 unsigned int gFlagStepMode;
@@ -131,6 +132,7 @@ int main(int argc, char** argv)
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
+   gFlagDbgOutputOn=0;
    gFlagUserCliModeSelected=0;
    gFlagNoWriteVideo=0;
    gFlagStepMode=0;
@@ -705,6 +707,7 @@ static void printhelp(char *progname)
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
    fprintf(stderr,"  -b         attempt to connect to a bluetooth module already bonded on /dev/rfcomm0\n");
+   fprintf(stderr,"  -d         enable debug output (shows communication between glasses and this program\n");
    fprintf(stderr,"  -h         show help and exit\n");
    fprintf(stderr,"  -o PATH    save video to PATH.  PATH cannot already exist.  incompatible with -q\n");
    fprintf(stderr,"  -q         quiet mode.  won't write out any video.  incompatible with -o\n");
@@ -721,11 +724,14 @@ static int parseargs(int argc, char **argv)
 
    errno=0;
 
-   while ((cc = getopt(argc, argv, "bho:qs")) != EOF)
+   while ((cc = getopt(argc, argv, "bdho:qs")) != EOF)
    {
       switch (cc) {
          case 'b':
             gFlagUseBluetooth = 1;
+            break;
+         case 'd':
+            gFlagDbgOutputOn = 1;
             break;
          case 'h':
             gFlagUserCliValid = 1;
