@@ -2,6 +2,7 @@
 .metadata
 *.sw[op]
 *.o
+*.d
 CMakeCache.txt
 CMakeFiles
 cmake_install.cmake
