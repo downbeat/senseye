@@ -1,3 +1,3 @@
-Host bitbucket
+Host insightrepo
    Hostname bitbucket.org
-   IdentityFile id_rsa__glasses
+   IdentityFile id_rsa__insightrepo
