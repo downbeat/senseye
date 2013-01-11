@@ -3,6 +3,8 @@
 *.sw[op]
 *.o
 *.d
+*.hex
+*.elf
 CMakeCache.txt
 CMakeFiles
 cmake_install.cmake
