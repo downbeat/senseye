@@ -1,0 +1,3 @@
+@E: CS109 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":25:6:25:6|Expecting module level statement
+@E: CS187 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":37:0:37:8|Expecting endmodule
+

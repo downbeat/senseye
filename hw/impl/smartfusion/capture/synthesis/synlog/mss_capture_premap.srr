@@ -1,0 +1,43 @@
+Synopsys Actel Technology Pre-mapping, Version mapact, Build 729R, Built Jun 20 2012 09:47:40
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03M-SP1 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+Reading constraint file: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc
+@L: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@N: MF547 |Generated clock conversion disabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+
+
+Clock Summary
+**************
+
+Start       Requested     Requested     Clock        Clock          
+Clock       Frequency     Period        Type         Group          
+--------------------------------------------------------------------
+System      1.0 MHz       1000.000      system       system_clkgroup
+FAB_CLK     25.0 MHz      40.000        declared     clk_group_0    
+FCLK        25.0 MHz      40.000        declared     clk_group_0    
+====================================================================
+
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 05 22:29:53 2013
+
+###########################################################]

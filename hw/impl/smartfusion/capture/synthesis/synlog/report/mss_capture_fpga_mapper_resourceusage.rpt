@@ -1,0 +1,54 @@
+Target Part: A2F500M3G_FBGA484_-1
+Report for cell mss_capture.verilog
+  Core Cell usage:
+              cell count     area count*area
+               AX1     3      1.0        3.0
+              AX1A     1      1.0        1.0
+              AX1C     1      1.0        1.0
+              AX1E     1      1.0        1.0
+               GND     4      0.0        0.0
+           MSS_APB     1      0.0        0.0
+           MSS_CCC     1      0.0        0.0
+              NOR2     6      1.0        6.0
+             NOR2A     7      1.0        7.0
+             NOR2B    19      1.0       19.0
+              NOR3     1      1.0        1.0
+             NOR3A     2      1.0        2.0
+             NOR3B     1      1.0        1.0
+             NOR3C     7      1.0        7.0
+              OR2A     9      1.0        9.0
+              OR2B     1      1.0        1.0
+              OR3B     3      1.0        3.0
+              OR3C     1      1.0        1.0
+             RCOSC     1      0.0        0.0
+               VCC     4      0.0        0.0
+               XA1    11      1.0       11.0
+              XA1A    11      1.0       11.0
+             XNOR2     2      1.0        2.0
+              XOR2     2      1.0        2.0
+
+
+              DFN1    33      1.0       33.0
+                   -----          ----------
+             TOTAL   133               122.0
+
+
+  IO Cell usage:
+              cell count
+         BIBUF_MSS    21
+   BIBUF_OPEND_MSS     4
+             INBUF     1
+         INBUF_MSS     9
+            OUTBUF     1
+        OUTBUF_MSS    40
+       TRIBUFF_MSS     2
+                   -----
+             TOTAL    78
+
+
+Core Cells         : 122 of 11520 (1%)
+IO Cells           : 78
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 24 (0%)
+
