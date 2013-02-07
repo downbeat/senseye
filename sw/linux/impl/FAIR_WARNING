@@ -1,0 +1,49 @@
+===============================================================================
+FAIR WARNING
+===============================================================================
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!  The naming conventions (and in many cases, the functionality) of these     !
+!  utilities is in need of serious cleanup.  The names of the utilities are   !
+!  subject to all change one day at the same time.  You have been warned.     !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+===============================================================================
+PROPOSED CHANGES TO NAMING
+===============================================================================
+glassescapstream        => glassescapture 
+glassescapsnapshots     => glassescapture (merge functionality into)
+frontdisplayandsave     => displayandsave
+glassesreplaystream     => replaycapture
+frontgazecoordsoverlay  => replaycapture (merge functionality into)
+fronteyedetect          => algo_eyedetect
+ml_rawfeatures_knearest => ml_eval (merge functionality into)
+
+
+===============================================================================
+MAJOR FUNCTIONALITY CHANGES
+===============================================================================
+Utilities like algo_eyedetect should utilize the pipe idiom like this:
+
+ $ replaycapture -i <path> | algo_eyedetect | displayandsave
+
+rather than duplicating the display and save functionality in every utility.
+A more flexible / richer protocol for the communcation between these utilities
+and/or the glasses is needed.  There are several proposed changes
+
+
+===============================================================================
+PROPOSED CHANGES TO GLASSES PROTOCOL
+===============================================================================
+NEEDS
+ - Way to specify
+   - timestamp
+   - resolution
+   - # of cameras for connect?
+   - camera index?
+ - Flag to specify if were scanning a "superimage" (an image which is actually
+   captured from two cameras with the images placed side by side).  This
+   feature is how the insight glasses transmit data to the computer.  It
+   assumes identical resolution, which can of course be used to split the
+   images.
+ - TODO: add more
