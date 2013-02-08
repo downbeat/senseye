@@ -14,7 +14,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLKFREQ     (25000000)       // hardcoded to 25MHz
+`define CLKFREQ     (40000000)       // TODO (shouldn't be) hardcoded to 40MHz
 `define TOGGLEVAL   (`CLKFREQ >> 1)  // toggle every 0.5s (period is 1s, freq is 1Hz)
 
 

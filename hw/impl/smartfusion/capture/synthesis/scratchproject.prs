@@ -3,6 +3,9 @@
 #--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\scratchproject.prs
 
 #project files
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCap.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCapStub.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcDisplayStub.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/blinker.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"

@@ -1,10 +1,13 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
 #--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\run_options.txt
-#--  Written on Tue Feb 05 22:29:51 2013
+#--  Written on Thu Feb 07 19:35:44 2013
 
 
 #project files
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCap.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCapStub.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcDisplayStub.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/blinker.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"

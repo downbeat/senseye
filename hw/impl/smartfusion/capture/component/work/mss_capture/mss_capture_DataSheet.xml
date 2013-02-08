@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture</location>
-    <state>GENERATED ( Tue Feb 05 22:27:45 2013 )</state>
+    <state>GENERATED ( Thu Feb 07 19:35:32 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -25,6 +25,10 @@
     <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
     <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v</file>
     <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub - Copy.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcDisplayStub - Copy.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcDisplayStub.v</file>
     <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v</file>
   </fileset>
   <fileset>
@@ -32,57 +36,9 @@
     <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
-    <port-name>EMC_AB[20]</port-name>
-    <direction>OUT</direction>
-    <pin-number>F13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[8]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[4]</port-name>
-    <direction>OUT</direction>
-    <pin-number>E11</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[5]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>J2</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[10]</port-name>
-    <direction>OUT</direction>
-    <pin-number>D11</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXD[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>AA5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_0_DO</port-name>
-    <direction>OUT</direction>
-    <pin-number>U17</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_RW_N</port-name>
-    <direction>OUT</direction>
-    <pin-number>B6</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[12]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>D2</pin-number>
+    <port-name>MSS_RESET_N</port-name>
+    <direction>IN</direction>
+    <pin-number>R1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -92,357 +48,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[23]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C18</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[6]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_1_CLK</port-name>
-    <direction>INOUT</direction>
-    <pin-number>AA22</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[13]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A15</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[21]</port-name>
-    <direction>OUT</direction>
-    <pin-number>F14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXD[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>W5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[15]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>B1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>I2C_0_SDA</port-name>
-    <direction>INOUT</direction>
-    <pin-number>V21</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>UART_0_TXD</port-name>
-    <direction>OUT</direction>
-    <pin-number>Y22</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>RESET</port-name>
-    <direction>IN</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>LED</port-name>
+    <port-name>cs</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[10]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>F4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[11]</port-name>
-    <direction>OUT</direction>
-    <pin-number>D12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[2]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>K5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[24]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C16</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_RXD[1]</port-name>
-    <direction>IN</direction>
-    <pin-number>U5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[7]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_OEN0_N</port-name>
-    <direction>OUT</direction>
-    <pin-number>D10</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[18]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B16</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[14]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>I2C_1_SCL</port-name>
-    <direction>INOUT</direction>
-    <pin-number>U20</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_0_SS</port-name>
-    <direction>INOUT</direction>
-    <pin-number>Y20</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[0]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>K2</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[11]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>G5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_CLK</port-name>
-    <direction>OUT</direction>
-    <pin-number>C6</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[16]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MSS_RESET_N</port-name>
-    <direction>IN</direction>
-    <pin-number>R1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_CRSDV</port-name>
-    <direction>IN</direction>
-    <pin-number>W4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_1_SS</port-name>
-    <direction>INOUT</direction>
-    <pin-number>W21</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_BYTEN[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C9</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[13]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>D3</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[1]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>K3</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_CS0_N</port-name>
-    <direction>OUT</direction>
-    <pin-number>A5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[2]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B10</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[5]</port-name>
-    <direction>OUT</direction>
-    <pin-number>E12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[3]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>J4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[17]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C15</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_CS1_N</port-name>
-    <direction>OUT</direction>
-    <pin-number>A6</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[14]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>C1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_MDC</port-name>
-    <direction>OUT</direction>
-    <pin-number>AA3</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>I2C_0_SCL</port-name>
-    <direction>INOUT</direction>
-    <pin-number>U21</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[6]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>J1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[9]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>G3</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_1_DO</port-name>
-    <direction>OUT</direction>
-    <pin-number>T17</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_BYTEN[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B9</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[19]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B17</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>I2C_1_SDA</port-name>
-    <direction>INOUT</direction>
-    <pin-number>V22</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>UART_0_RXD</port-name>
-    <direction>IN</direction>
-    <pin-number>U18</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[9]</port-name>
-    <direction>OUT</direction>
-    <pin-number>D13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[22]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C17</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[25]</port-name>
-    <direction>OUT</direction>
-    <pin-number>D16</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_MDIO</port-name>
-    <direction>INOUT</direction>
-    <pin-number>V4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A8</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[12]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[15]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_1_DI</port-name>
-    <direction>IN</direction>
-    <pin-number>V19</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXEN</port-name>
-    <direction>OUT</direction>
-    <pin-number>Y4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>UART_1_RXD</port-name>
-    <direction>IN</direction>
-    <pin-number>W22</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_0_DI</port-name>
-    <direction>IN</direction>
-    <pin-number>V18</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -452,33 +60,105 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>SPI_0_DO</port-name>
+    <direction>OUT</direction>
+    <pin-number>U17</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[10]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>F4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[2]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[2]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B10</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[13]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A15</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_RW_N</port-name>
+    <direction>OUT</direction>
+    <pin-number>B6</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>UART_0_RXD</port-name>
+    <direction>IN</direction>
+    <pin-number>U18</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_1_SS</port-name>
+    <direction>INOUT</direction>
+    <pin-number>W21</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_CRSDV</port-name>
+    <direction>IN</direction>
+    <pin-number>W4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[6]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>J1</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[3]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[15]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>RESET</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[13]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>D3</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_TXEN</port-name>
+    <direction>OUT</direction>
+    <pin-number>Y4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[7]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>EMC_AB[3]</port-name>
     <direction>OUT</direction>
     <pin-number>B11</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_RXD[0]</port-name>
-    <direction>IN</direction>
-    <pin-number>V5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_0_CLK</port-name>
-    <direction>INOUT</direction>
-    <pin-number>W19</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_RXER</port-name>
-    <direction>IN</direction>
-    <pin-number>AA4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A9</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -488,9 +168,45 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_OEN1_N</port-name>
+    <port-name>EMC_AB[18]</port-name>
     <direction>OUT</direction>
-    <pin-number>C10</pin-number>
+    <pin-number>B16</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[21]</port-name>
+    <direction>OUT</direction>
+    <pin-number>F14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_0_SDA</port-name>
+    <direction>INOUT</direction>
+    <pin-number>V21</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[11]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>G5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_0_DI</port-name>
+    <direction>IN</direction>
+    <pin-number>V18</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_MDC</port-name>
+    <direction>OUT</direction>
+    <pin-number>AA3</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[5]</port-name>
+    <direction>OUT</direction>
+    <pin-number>E12</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -499,6 +215,372 @@
     <pin-number>H1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
+  <io>
+    <port-name>EMC_OEN0_N</port-name>
+    <direction>OUT</direction>
+    <pin-number>D10</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_TXD[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>AA5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[14]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>C1</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[8]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C13</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[11]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D12</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_1_SCL</port-name>
+    <direction>INOUT</direction>
+    <pin-number>U20</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_0_SCL</port-name>
+    <direction>INOUT</direction>
+    <pin-number>U21</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_CLK</port-name>
+    <direction>OUT</direction>
+    <pin-number>C6</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_TXD[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>W5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_BYTEN[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B9</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A9</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[16]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[25]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D16</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[6]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>clkSpi</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>UART_0_TXD</port-name>
+    <direction>OUT</direction>
+    <pin-number>Y22</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>I2C_1_SDA</port-name>
+    <direction>INOUT</direction>
+    <pin-number>V22</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_CS0_N</port-name>
+    <direction>OUT</direction>
+    <pin-number>A5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[2]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>K5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[5]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>J2</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_0_SS</port-name>
+    <direction>INOUT</direction>
+    <pin-number>Y20</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[5]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_CS1_N</port-name>
+    <direction>OUT</direction>
+    <pin-number>A6</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>UART_1_RXD</port-name>
+    <direction>IN</direction>
+    <pin-number>W22</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[6]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B12</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[19]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B17</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_1_DI</port-name>
+    <direction>IN</direction>
+    <pin-number>V19</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_1_DO</port-name>
+    <direction>OUT</direction>
+    <pin-number>T17</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[17]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C15</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_RXD[0]</port-name>
+    <direction>IN</direction>
+    <pin-number>V5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[24]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C16</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[9]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D13</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[20]</port-name>
+    <direction>OUT</direction>
+    <pin-number>F13</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[9]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>G3</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_RXER</port-name>
+    <direction>IN</direction>
+    <pin-number>AA4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_MDIO</port-name>
+    <direction>INOUT</direction>
+    <pin-number>V4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[7]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A12</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[0]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>K2</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>miso</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[12]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>D2</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[15]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>B1</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[14]</port-name>
+    <direction>OUT</direction>
+    <pin-number>B13</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_BYTEN[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C9</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[22]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C17</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[10]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D11</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_0_CLK</port-name>
+    <direction>INOUT</direction>
+    <pin-number>W19</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_RXD[1]</port-name>
+    <direction>IN</direction>
+    <pin-number>U5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[3]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>J4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[4]</port-name>
+    <direction>OUT</direction>
+    <pin-number>E11</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[12]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A8</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[1]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>K3</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[23]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C18</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_OEN1_N</port-name>
+    <direction>OUT</direction>
+    <pin-number>C10</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[4]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_1_CLK</port-name>
+    <direction>INOUT</direction>
+    <pin-number>AA22</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>AdcCap</core-exttype>
+    <core-location>hdl\AdcCap.v</core-location>
+    <core-name>AdcCap_0</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>AdcCapStub</core-exttype>
+    <core-location>hdl\AdcCapStub.v</core-location>
+    <core-name>AdcCapStub_0</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>AdcDisplayStub</core-exttype>
+    <core-location>hdl\AdcDisplayStub.v</core-location>
+    <core-name>AdcDisplayStub_0</core-name>
+  </core>
   <core type="HdlModule">
     <core-type>HdlModule</core-type>
     <core-exttype>blinker</core-exttype>
@@ -511,274 +593,6 @@
     <core-location>Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS</core-location>
     <core-name>mss_capture_MSS_0</core-name>
   </core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>HAL</core-intname>
-    <core-ver>2.2.102</core-ver>
-    <core-desc>The Hardware Abstraction Layer is used by drivers to access the hardware. It also allows the control of interrupts. The HAL is normally required when using bare metal drivers as part of your application.</core-desc>
-    <core-param>
-      <param-name>Memory Model:</param-name>
-      <param-value>Small</param-value>
-      <param-hdlname>MemoryModel</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Processor:</param-name>
-      <param-value>Cortex-M3</param-value>
-      <param-hdlname>Processor</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Software Tool Chain:</param-name>
-      <param-value>SoftConsole</param-value>
-      <param-hdlname>ToolChain</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-name>HAL_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_ACE_Driver</core-intname>
-    <core-ver>2.3.105</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) analog compute engine (
-ACE)  bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_ACE_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_Ethernet_MAC_Driver</core-intname>
-    <core-ver>2.0.103</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) Ethernet  MAC bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.
-</core-desc>
-    <core-param>
-      <param-name>Bus arbitration scheme:</param-name>
-      <param-value>Receive has priority</param-value>
-      <param-hdlname>BUS_ARBITRATION_SCHEME</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Maximum DMA burst length:</param-name>
-      <param-value>Unlimited</param-value>
-      <param-hdlname>PROGRAMMABLE_BURST_LENGTH</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Receive ring size:</param-name>
-      <param-value>4</param-value>
-      <param-hdlname>RX_RING_SIZE</param-hdlname>
-      <param-hdlvalue>4</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Setup frame timeout (ms):</param-name>
-      <param-value>10000</param-value>
-      <param-hdlname>SETUP_FRAME_TIME_OUT</param-hdlname>
-      <param-hdlvalue>10000</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>State change timeout (ms):</param-name>
-      <param-value>10000</param-value>
-      <param-hdlname>STATE_CHANGE_TIME_OUT</param-hdlname>
-      <param-hdlvalue>10000</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-param>
-      <param-name>Transmit buffer ring size:</param-name>
-      <param-value>2</param-value>
-      <param-hdlname>TX_RING_SIZE</param-hdlname>
-      <param-hdlvalue>2</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-name>MSS_Ethernet_MAC_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_GPIO_Driver</core-intname>
-    <core-ver>2.0.105</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) GPIO bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_GPIO_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_I2C_Driver</core-intname>
-    <core-ver>2.0.101</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) I2C bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_I2C_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_I2C_Driver</core-intname>
-    <core-ver>2.0.101</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) I2C bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_I2C_Driver_1</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_NVM_Driver</core-intname>
-    <core-ver>2.2.102</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) eNVM bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_NVM_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_PDMA_Driver</core-intname>
-    <core-ver>2.0.102</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS)  Peripheral DMA bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_PDMA_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_RTC_Driver</core-intname>
-    <core-ver>2.0.100</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) RTC bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_RTC_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_SPI_Driver</core-intname>
-    <core-ver>2.1.100</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) SPI bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_SPI_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_SPI_Driver</core-intname>
-    <core-ver>2.1.100</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) SPI bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_SPI_Driver_1</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_Timer_Driver</core-intname>
-    <core-ver>2.1.101</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) Timer bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_Timer_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_UART_Driver</core-intname>
-    <core-ver>2.3.101</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) UART bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_UART_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_UART_Driver</core-intname>
-    <core-ver>2.3.101</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) UART bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_UART_Driver_1</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>MSS_Watchdog_Driver</core-intname>
-    <core-ver>2.0.107</core-ver>
-    <core-desc>SmartFusion microcontroller subsystem (MSS) Watchdog bare metal software driver.
-
-This driver requires the SmartFusion CMSIS-PAL to build correctly.</core-desc>
-    <core-name>MSS_Watchdog_Driver_0</core-name>
-  </firmware_core>
-  <firmware_core type="FirmWareModule">
-    <core-exttype>IP</core-exttype>
-    <core-type>FirmWareModule</core-type>
-    <core-vendor>Actel</core-vendor>
-    <core-lib>Firmware</core-lib>
-    <core-intname>SmartFusion_CMSIS_PAL</core-intname>
-    <core-ver>2.3.103</core-ver>
-    <core-desc>SmartFusion Cortex Microcontroller Software Interface Standard - Peripheral Access Layer (CMSIS-PAL).
-
-The CMSIS provides:
-- startup code.
-- standard naming for exception and interrupt handlers.
-- standard functions for controlling the Cortex-M3 Nested Vectored Interrupt Controller (NVIC).
-- peripherals registers description.
-
-These files are required by the SmartFusion bare metal peripheral drivers to build correctly.</core-desc>
-    <core-param>
-      <param-name>Software Tool Chain</param-name>
-      <param-value>SoftConsole</param-value>
-      <param-hdlname>ToolChain</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
-      <param-tag>actel-cc:variantParameter</param-tag>
-    </core-param>
-    <core-name>SmartFusion_CMSIS_PAL_0</core-name>
-  </firmware_core>
   <memorysystem>
     <title>Memory Map for mss_capture</title>
     <description>The project contains the following subsystems:</description>

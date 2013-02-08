@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 05 17:30:40 2013
-// Version: 10.1 SP1 10.1.2.1
+// Created by SmartDesign Thu Feb 07 15:58:13 2013
+// Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
 `timescale 1 ns/100 ps
@@ -26,6 +26,7 @@ module mss_capture_MSS(
     EMC_OEN1_N,
     EMC_RW_N,
     FAB_CLK,
+    M2F_RESET_N,
     MAC_MDC,
     MAC_TXD,
     MAC_TXEN,
@@ -69,6 +70,7 @@ output        EMC_OEN0_N;
 output        EMC_OEN1_N;
 output        EMC_RW_N;
 output        FAB_CLK;
+output        M2F_RESET_N;
 output        MAC_MDC;
 output [1:0]  MAC_TXD;
 output        MAC_TXEN;
@@ -249,6 +251,7 @@ wire           MSS_UART_0_RXD_Y;
 wire           MSS_UART_0_TXD_D;
 wire           MSS_UART_1_RXD_Y;
 wire           MSS_UART_1_TXD_D;
+wire           net_71;
 wire           MAC_MDIO;
 wire           PAD_0;
 wire           PAD_1;
@@ -265,6 +268,7 @@ wire           UART_0_TXD_net_0;
 wire           UART_1_RXD;
 wire           UART_1_TXD_net_0;
 wire           MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
+wire           net_71_net_0;
 wire           UART_0_TXD_net_1;
 wire           UART_1_TXD_net_1;
 wire           SPI_0_DO_net_1;
@@ -343,6 +347,8 @@ assign FABPWDATA_const_net_0 = 32'h00000000;
 //--------------------------------------------------------------------
 assign MSS_ADLIB_INST_SYNCCLKFDBK_net_0 = MSS_ADLIB_INST_SYNCCLKFDBK;
 assign FAB_CLK                          = MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
+assign net_71_net_0                     = net_71;
+assign M2F_RESET_N                      = net_71_net_0;
 assign UART_0_TXD_net_1                 = UART_0_TXD_net_0;
 assign UART_0_TXD                       = UART_0_TXD_net_1;
 assign UART_1_TXD_net_1                 = UART_1_TXD_net_0;
@@ -490,9 +496,9 @@ assign EMCRDB_net_0 = { MSS_EMI_0_DB_15_Y , MSS_EMI_0_DB_14_Y , MSS_EMI_0_DB_13_
 //--------------------------------------------------------------------
 //--------MSS_APB
 MSS_APB #( 
-        .ACT_CONFIG ( 256 ),
+        .ACT_CONFIG ( 0 ),
         .ACT_DIE    ( "IP6X5M2" ),
-        .ACT_FCLK   ( 100000000 ),
+        .ACT_FCLK   ( 40000000 ),
         .ACT_PKG    ( "fg484" ) )
 MSS_ADLIB_INST(
         // Inputs
@@ -629,7 +635,7 @@ MSS_ADLIB_INST(
         .CALIBOUT       (  ),
         .MSSINT         (  ),
         .WDINT          (  ),
-        .M2FRESETn      (  ),
+        .M2FRESETn      ( net_71 ),
         .DEEPSLEEP      (  ),
         .SLEEP          (  ),
         .TXEV           (  ),

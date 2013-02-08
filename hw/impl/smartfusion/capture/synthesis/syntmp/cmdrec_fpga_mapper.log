@@ -1,16 +1,16 @@
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis  -part A2F500M3G  -package FBGA484  -grade -1   -globalthreshold 50 -maxfan 24 -opcond COMWC     -report_path 0       -summaryfile Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synlog\report\mss_capture_fpga_mapper.xml -top_level_module  mss_capture  -flow mapping  -mp 1 -prjfile  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\scratchproject.prs  -implementation synthesis -licensetype  synplifypro_actel  -oedif  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn  -freq 100.000  -tcl  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synwork\mss_capture_premap.srd  -sap  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap  -otap  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.tap  -omap  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.map  -devicelib  C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v  -sap  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap  -ologparam  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\syntmp\mss_capture.plg  -osyn  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm  -prjdir  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\  -prjname  mss_capture_syn  -log  Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synlog\mss_capture_fpga_mapper.srr 
 rc:1 success:1
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\scratchproject.prs|o|1360105973|2503
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn|o|1360121394|208473
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc|i|1360103427|200
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synwork\mss_capture_premap.srd|i|1360121393|21576
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap|o|1360121393|1313
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\scratchproject.prs|o|1360279278|2812
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn|o|1360283749|294811
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc|i|1360270677|200
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synwork\mss_capture_premap.srd|i|1360283747|28833
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap|o|1360283747|2855
 Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.tap|o|0|0
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.map|o|1360121395|28
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.map|o|1360283749|28
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v|i|1340030416|72817
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap|o|1360121393|1313
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\syntmp\mss_capture.plg|o|1360121395|1611
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm|o|1360121394|319991
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synlog\mss_capture_fpga_mapper.srr|o|1360121395|26450
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap|o|1360283747|2855
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\syntmp\mss_capture.plg|o|1360283749|2357
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm|o|1360283749|405172
+Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synlog\mss_capture_fpga_mapper.srr|o|1360283749|31506
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe|i|1340201262|15745024
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\m_proasic.exe|i|1340201248|13099520

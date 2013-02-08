@@ -1,5 +1,5 @@
 `timescale 1 ns/100 ps
-// Version: 10.1 SP1 10.1.2.1
+// Version: 10.1 SP3 10.1.3.1
 
 
 module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC(
@@ -76,23 +76,23 @@ output LPXIN_CLKOUT;
     assign N_VCC = VCC_power_net1;
     
     MSS_CCC #( .VCOFREQUENCY(100.000) )  I_MSSCCC (.CLKA(N_CLKA_RCOSC), 
-        .EXTFB(N_GND), .GLA(), .GLAMSS(GLA0), .LOCK(FAB_LOCK), 
-        .LOCKMSS(MSS_LOCK), .CLKB(N_GND), .GLB(FAB_CLK), .YB(), .CLKC(
-        N_GND), .GLC(), .YC(), .MACCLK(MAC_CLK_CCC), .OADIV({N_GND, 
-        N_GND, N_GND, N_GND, N_GND}), .OADIVHALF(N_GND), .OAMUX({N_GND, 
-        N_GND, N_GND}), .BYPASSA(N_VCC), .DLYGLA({N_GND, N_GND, N_GND, 
-        N_GND, N_GND}), .DLYGLAMSS({N_GND, N_GND, N_GND, N_GND, N_GND})
-        , .DLYGLAFAB({N_GND, N_GND, N_GND, N_GND, N_GND}), .OBDIV({
-        N_GND, N_GND, N_GND, N_VCC, N_VCC}), .OBDIVHALF(N_GND), .OBMUX({
-        N_GND, N_VCC, N_VCC}), .BYPASSB(N_GND), .DLYGLB({N_GND, N_GND, 
-        N_GND, N_GND, N_GND}), .OCDIV({N_GND, N_GND, N_GND, N_GND, 
-        N_VCC}), .OCDIVHALF(N_GND), .OCMUX({N_VCC, N_GND, N_GND}), 
-        .BYPASSC(N_GND), .DLYGLC({N_GND, N_GND, N_GND, N_GND, N_GND}), 
-        .FINDIV({N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), 
-        .FBDIV({N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), 
-        .FBDLY({N_GND, N_GND, N_GND, N_GND, N_VCC}), .FBSEL({N_GND, 
-        N_VCC}), .XDLYSEL(N_GND), .GLMUXSEL({N_GND, N_GND}), .GLMUXCFG({
-        N_GND, N_GND}));
+        .EXTFB(N_GND), .GLA(FAB_CLK), .GLAMSS(GLA0), .LOCK(FAB_LOCK), 
+        .LOCKMSS(MSS_LOCK), .CLKB(N_GND), .GLB(), .YB(), .CLKC(N_GND), 
+        .GLC(), .YC(), .MACCLK(MAC_CLK_CCC), .OADIV({N_GND, N_GND, 
+        N_VCC, N_GND, N_GND}), .OADIVHALF(N_VCC), .OAMUX({N_GND, N_GND, 
+        N_VCC}), .BYPASSA(N_GND), .DLYGLA({N_GND, N_GND, N_GND, N_GND, 
+        N_GND}), .DLYGLAMSS({N_GND, N_GND, N_GND, N_GND, N_GND}), 
+        .DLYGLAFAB({N_GND, N_GND, N_GND, N_GND, N_GND}), .OBDIV({N_GND, 
+        N_GND, N_GND, N_GND, N_GND}), .OBDIVHALF(N_GND), .OBMUX({N_GND, 
+        N_GND, N_GND}), .BYPASSB(N_VCC), .DLYGLB({N_GND, N_GND, N_GND, 
+        N_GND, N_GND}), .OCDIV({N_GND, N_GND, N_GND, N_GND, N_VCC}), 
+        .OCDIVHALF(N_GND), .OCMUX({N_VCC, N_GND, N_GND}), .BYPASSC(
+        N_GND), .DLYGLC({N_GND, N_GND, N_GND, N_GND, N_GND}), .FINDIV({
+        N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), .FBDIV({
+        N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), .FBDLY({
+        N_GND, N_GND, N_GND, N_GND, N_VCC}), .FBSEL({N_GND, N_VCC}), 
+        .XDLYSEL(N_GND), .GLMUXSEL({N_GND, N_GND}), .GLMUXCFG({N_GND, 
+        N_GND}));
     RCOSC I_RCOSC (.CLKOUT(N_CLKA_RCOSC));
     GND GND_power_inst1 (.Y(GND_power_net1));
     VCC VCC_power_inst1 (.Y(VCC_power_net1));

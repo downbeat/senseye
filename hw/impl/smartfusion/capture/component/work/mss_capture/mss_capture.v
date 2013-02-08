@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 05 22:26:47 2013
-// Version: 10.1 SP1 10.1.2.1
+// Created by SmartDesign Thu Feb 07 19:35:29 2013
+// Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
 `timescale 1 ns/100 ps
@@ -17,6 +17,7 @@ module mss_capture(
     SPI_1_DI,
     UART_0_RXD,
     UART_1_RXD,
+    miso,
     // Outputs
     EMC_AB,
     EMC_BYTEN,
@@ -26,7 +27,6 @@ module mss_capture(
     EMC_OEN0_N,
     EMC_OEN1_N,
     EMC_RW_N,
-    LED,
     MAC_MDC,
     MAC_TXD,
     MAC_TXEN,
@@ -34,6 +34,9 @@ module mss_capture(
     SPI_1_DO,
     UART_0_TXD,
     UART_1_TXD,
+    clkSpi,
+    cs,
+    ledsout,
     // Inouts
     EMC_DB,
     I2C_0_SCL,
@@ -59,6 +62,7 @@ input         SPI_0_DI;
 input         SPI_1_DI;
 input         UART_0_RXD;
 input         UART_1_RXD;
+input         miso;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -70,7 +74,6 @@ output        EMC_CS1_N;
 output        EMC_OEN0_N;
 output        EMC_OEN1_N;
 output        EMC_RW_N;
-output        LED;
 output        MAC_MDC;
 output [1:0]  MAC_TXD;
 output        MAC_TXEN;
@@ -78,6 +81,9 @@ output        SPI_0_DO;
 output        SPI_1_DO;
 output        UART_0_TXD;
 output        UART_1_TXD;
+output        clkSpi;
+output        cs;
+output [7:0]  ledsout;
 //--------------------------------------------------------------------
 // Inout
 //--------------------------------------------------------------------
@@ -94,6 +100,10 @@ inout         SPI_1_SS;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire   [11:0] AdcCap_0_dataout;
+wire          AdcCapStub_0_startCapture;
+wire          clkSpi_net_0;
+wire          cs_net_0;
 wire   [25:0] EMC_AB_net_0;
 wire   [1:0]  EMC_BYTEN_net_0;
 wire          EMC_CLK_net_0;
@@ -107,7 +117,7 @@ wire          I2C_0_SCL;
 wire          I2C_0_SDA;
 wire          I2C_1_SCL;
 wire          I2C_1_SDA;
-wire          LED_net_0;
+wire   [7:0]  ledsout_net_0;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -115,7 +125,9 @@ wire   [1:0]  MAC_RXD;
 wire          MAC_RXER;
 wire   [1:0]  MAC_TXD_net_0;
 wire          MAC_TXEN_net_0;
+wire          miso;
 wire          mss_capture_MSS_0_FAB_CLK;
+wire          mss_capture_MSS_0_M2F_RESET_N;
 wire          MSS_RESET_N;
 wire          RESET;
 wire          SPI_0_CLK;
@@ -136,16 +148,18 @@ wire          EMC_CS1_N_net_1;
 wire          EMC_OEN0_N_net_1;
 wire          EMC_OEN1_N_net_1;
 wire          EMC_RW_N_net_1;
-wire   [25:0] EMC_AB_net_1;
-wire   [1:0]  EMC_BYTEN_net_1;
 wire          UART_1_TXD_net_1;
 wire          UART_0_TXD_net_1;
 wire          SPI_1_DO_net_1;
 wire          SPI_0_DO_net_1;
 wire          MAC_MDC_net_1;
-wire   [1:0]  MAC_TXD_net_1;
 wire          MAC_TXEN_net_1;
-wire          LED_net_1;
+wire          cs_net_1;
+wire          clkSpi_net_1;
+wire   [25:0] EMC_AB_net_1;
+wire   [1:0]  EMC_BYTEN_net_1;
+wire   [1:0]  MAC_TXD_net_1;
+wire   [7:0]  ledsout_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -161,10 +175,6 @@ assign EMC_OEN1_N_net_1 = EMC_OEN1_N_net_0;
 assign EMC_OEN1_N       = EMC_OEN1_N_net_1;
 assign EMC_RW_N_net_1   = EMC_RW_N_net_0;
 assign EMC_RW_N         = EMC_RW_N_net_1;
-assign EMC_AB_net_1     = EMC_AB_net_0;
-assign EMC_AB[25:0]     = EMC_AB_net_1;
-assign EMC_BYTEN_net_1  = EMC_BYTEN_net_0;
-assign EMC_BYTEN[1:0]   = EMC_BYTEN_net_1;
 assign UART_1_TXD_net_1 = UART_1_TXD_net_0;
 assign UART_1_TXD       = UART_1_TXD_net_1;
 assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
@@ -175,22 +185,60 @@ assign SPI_0_DO_net_1   = SPI_0_DO_net_0;
 assign SPI_0_DO         = SPI_0_DO_net_1;
 assign MAC_MDC_net_1    = MAC_MDC_net_0;
 assign MAC_MDC          = MAC_MDC_net_1;
-assign MAC_TXD_net_1    = MAC_TXD_net_0;
-assign MAC_TXD[1:0]     = MAC_TXD_net_1;
 assign MAC_TXEN_net_1   = MAC_TXEN_net_0;
 assign MAC_TXEN         = MAC_TXEN_net_1;
-assign LED_net_1        = LED_net_0;
-assign LED              = LED_net_1;
+assign cs_net_1         = cs_net_0;
+assign cs               = cs_net_1;
+assign clkSpi_net_1     = clkSpi_net_0;
+assign clkSpi           = clkSpi_net_1;
+assign EMC_AB_net_1     = EMC_AB_net_0;
+assign EMC_AB[25:0]     = EMC_AB_net_1;
+assign EMC_BYTEN_net_1  = EMC_BYTEN_net_0;
+assign EMC_BYTEN[1:0]   = EMC_BYTEN_net_1;
+assign MAC_TXD_net_1    = MAC_TXD_net_0;
+assign MAC_TXD[1:0]     = MAC_TXD_net_1;
+assign ledsout_net_1    = ledsout_net_0;
+assign ledsout[7:0]     = ledsout_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------AdcCap
+AdcCap AdcCap_0(
+        // Inputs
+        .clk          ( mss_capture_MSS_0_FAB_CLK ),
+        .reset        ( mss_capture_MSS_0_M2F_RESET_N ),
+        .startCapture ( AdcCapStub_0_startCapture ),
+        .miso         ( miso ),
+        // Outputs
+        .clkSpi       ( clkSpi_net_0 ),
+        .cs           ( cs_net_0 ),
+        .dataout      ( AdcCap_0_dataout ) 
+        );
+
+//--------AdcCapStub
+AdcCapStub AdcCapStub_0(
+        // Inputs
+        .clk          ( mss_capture_MSS_0_FAB_CLK ),
+        .reset        ( mss_capture_MSS_0_M2F_RESET_N ),
+        // Outputs
+        .startCapture ( AdcCapStub_0_startCapture ) 
+        );
+
+//--------AdcDisplayStub
+AdcDisplayStub AdcDisplayStub_0(
+        // Inputs
+        .datain  ( AdcCap_0_dataout ),
+        // Outputs
+        .ledsout ( ledsout_net_0 ) 
+        );
+
 //--------blinker
 blinker blinker_0(
         // Inputs
         .CLK   ( mss_capture_MSS_0_FAB_CLK ),
         .RESET ( RESET ),
         // Outputs
-        .LED   ( LED_net_0 ) 
+        .LED   (  ) 
         );
 
 //--------mss_capture_MSS
@@ -217,10 +265,11 @@ mss_capture_MSS mss_capture_MSS_0(
         .SPI_0_DO    ( SPI_0_DO_net_0 ),
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),
+        .FAB_CLK     ( mss_capture_MSS_0_FAB_CLK ),
+        .M2F_RESET_N ( mss_capture_MSS_0_M2F_RESET_N ),
         .EMC_AB      ( EMC_AB_net_0 ),
         .EMC_BYTEN   ( EMC_BYTEN_net_0 ),
         .MAC_TXD     ( MAC_TXD_net_0 ),
-        .FAB_CLK     ( mss_capture_MSS_0_FAB_CLK ),
         // Inouts
         .I2C_1_SDA   ( I2C_1_SDA ),
         .I2C_1_SCL   ( I2C_1_SCL ),

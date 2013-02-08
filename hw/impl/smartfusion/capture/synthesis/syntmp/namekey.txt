@@ -78,7 +78,9 @@ MSS_UART_0_RXD
 MSS_UART_0_TXD
 MSS_UART_1_RXD
 MSS_UART_1_TXD
-blinker_0
+AdcCap_0
+AdcCapStub_0
+AdcDisplayStub_0
 mss_capture_MSS_0
 sign
 zero
@@ -249,5 +251,3 @@ TR
 OS
 LO
 LI
-DR
-RE

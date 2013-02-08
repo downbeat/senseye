@@ -2,14 +2,16 @@
 Report for cell mss_capture.verilog
                                           Cell usage:
                                cell       count     area    count*area
+                             AdcCap         1      76.0       76.0
+                         AdcCapStub         1     187.0      187.0
+                     AdcDisplayStub         1      15.0       15.0
                                 GND         1       0.0        0.0
                               INBUF         1       0.0        0.0
-                             OUTBUF         1       0.0        0.0
+                             OUTBUF        10       0.0        0.0
                                 VCC         1       0.0        0.0
-                            blinker         1     122.0      122.0
                     mss_capture_MSS         1       0.0        0.0
                             
-                         TOTAL              6                122.0
+                         TOTAL             17                278.0
 ----------------------------------------------------------------------
 Report for cell mss_capture_MSS.netlist
      Instance path:  mss_capture_MSS_0
@@ -38,31 +40,83 @@ Report for cell mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.netlist
                             
                          TOTAL              4                  0.0
 ----------------------------------------------------------------------
-Report for cell blinker.netlist
-     Instance path:  blinker_0
+Report for cell AdcDisplayStub.netlist
+     Instance path:  AdcDisplayStub_0
                                           Cell usage:
                                cell       count     area    count*area
-                                AX1         3       1.0        3.0
-                               AX1A         1       1.0        1.0
-                               AX1C         1       1.0        1.0
-                               AX1E         1       1.0        1.0
-                               DFN1        33       1.0       33.0
+                                AO1         1       1.0        1.0
+                               AO1A         1       1.0        1.0
                                 GND         1       0.0        0.0
-                               NOR2         6       1.0        6.0
-                              NOR2A         7       1.0        7.0
-                              NOR2B        19       1.0       19.0
+                               NOR2         1       1.0        1.0
                                NOR3         1       1.0        1.0
-                              NOR3A         2       1.0        2.0
+                              NOR3A         1       1.0        1.0
                               NOR3B         1       1.0        1.0
-                              NOR3C         7       1.0        7.0
-                               OR2A         9       1.0        9.0
-                               OR2B         1       1.0        1.0
-                               OR3B         3       1.0        3.0
-                               OR3C         1       1.0        1.0
+                              NOR3C         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OAI1         1       1.0        1.0
+                                OR2         1       1.0        1.0
+                                OR3         4       1.0        4.0
+                               OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                                XA1        11       1.0       11.0
-                               XA1A        11       1.0       11.0
-                              XNOR2         2       1.0        2.0
-                               XOR2         2       1.0        2.0
                             
-                         TOTAL            124                122.0
+                         TOTAL             17                 15.0
+----------------------------------------------------------------------
+Report for cell AdcCapStub.netlist
+     Instance path:  AdcCapStub_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AO1A         1       1.0        1.0
+                               AX1D         3       1.0        3.0
+                               DFN1        32       1.0       32.0
+                             DFN1E0         7       1.0        7.0
+                                GND         1       0.0        0.0
+                               NOR2        11       1.0       11.0
+                              NOR2A        17       1.0       17.0
+                               NOR3         5       1.0        5.0
+                              NOR3A         4       1.0        4.0
+                              NOR3C         5       1.0        5.0
+                               OA1B         1       1.0        1.0
+                                OR2        15       1.0       15.0
+                               OR2A         1       1.0        1.0
+                                OR3        50       1.0       50.0
+                               OR3A         2       1.0        2.0
+                                VCC         1       0.0        0.0
+                              XNOR2        32       1.0       32.0
+                               XOR2         1       1.0        1.0
+                            
+                         TOTAL            189                187.0
+----------------------------------------------------------------------
+Report for cell AdcCap.netlist
+     Instance path:  AdcCap_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         2       1.0        2.0
+                               AND3         6       1.0        6.0
+                               AO1B         1       1.0        1.0
+                               AO1D         1       1.0        1.0
+                              AOI1B         4       1.0        4.0
+                               AX1C         1       1.0        1.0
+                             CLKINT         1       0.0        0.0
+                               DFN1        13       1.0       13.0
+                             DFN1E0         4       1.0        4.0
+                             DFN1E1        12       1.0       12.0
+                                GND         1       0.0        0.0
+                                INV         2       1.0        2.0
+                                MX2         1       1.0        1.0
+                               MX2A         1       1.0        1.0
+                               NOR2         2       1.0        2.0
+                              NOR2A         2       1.0        2.0
+                              NOR2B         3       1.0        3.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         2       1.0        2.0
+                              NOR3C         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OA1C         1       1.0        1.0
+                                OR2         1       1.0        1.0
+                               OR2A         1       1.0        1.0
+                               OR2B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1A         2       1.0        2.0
+                               XOR2        10       1.0       10.0
+                            
+                         TOTAL             79                 76.0

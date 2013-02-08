@@ -11,10 +11,10 @@ Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
 
-Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 94MB)
 
 
-Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
 
 
 
@@ -25,9 +25,11 @@ Start       Requested     Requested     Clock        Clock
 Clock       Frequency     Period        Type         Group          
 --------------------------------------------------------------------
 System      1.0 MHz       1000.000      system       system_clkgroup
-FAB_CLK     25.0 MHz      40.000        declared     clk_group_0    
-FCLK        25.0 MHz      40.000        declared     clk_group_0    
+FAB_CLK     40.0 MHz      25.000        declared     clk_group_0    
+FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
+
+@W: MT532 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":58:0:58:5|Found signal identified as System clock which controls 20 sequential elements including AdcCap_0/bitsRead[3:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
@@ -38,6 +40,6 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 05 22:29:53 2013
+# Thu Feb 07 19:35:47 2013
 
 ###########################################################]

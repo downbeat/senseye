@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Tue Feb 05 22:26:47 2013
+// Created by Actel SmartDesign Thu Feb 07 19:35:29 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -48,11 +48,12 @@ mss_capture mss_capture_0 (
     .UART_0_RXD({1{1'b0}}),
     .SPI_1_DI({1{1'b0}}),
     .SPI_0_DI({1{1'b0}}),
-    .MAC_RXD({2{1'b0}}),
     .MAC_CRSDV({1{1'b0}}),
     .MAC_RXER({1{1'b0}}),
     .MSS_RESET_N(NSYSRESET),
     .RESET(NSYSRESET),
+    .miso({1{1'b0}}),
+    .MAC_RXD({2{1'b0}}),
 
     // Outputs
     .EMC_CLK( ),
@@ -61,19 +62,20 @@ mss_capture mss_capture_0 (
     .EMC_OEN0_N( ),
     .EMC_OEN1_N( ),
     .EMC_RW_N( ),
-    .EMC_AB( ),
-    .EMC_BYTEN( ),
     .UART_1_TXD( ),
     .UART_0_TXD( ),
     .SPI_1_DO( ),
     .SPI_0_DO( ),
     .MAC_MDC( ),
-    .MAC_TXD( ),
     .MAC_TXEN( ),
-    .LED( ),
+    .cs( ),
+    .clkSpi( ),
+    .EMC_AB( ),
+    .EMC_BYTEN( ),
+    .MAC_TXD( ),
+    .ledsout( ),
 
     // Inouts
-    .EMC_DB( ),
     .I2C_0_SCL( ),
     .I2C_0_SDA( ),
     .SPI_1_SS( ),
@@ -82,7 +84,8 @@ mss_capture mss_capture_0 (
     .SPI_0_SS( ),
     .I2C_1_SDA( ),
     .I2C_1_SCL( ),
-    .MAC_MDIO( )
+    .MAC_MDIO( ),
+    .EMC_DB( )
 
 );
 

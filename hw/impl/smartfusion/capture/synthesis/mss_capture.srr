@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Tue Feb 05 22:29:51 2013
+#Thu Feb 07 19:35:44 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -17,6 +17,9 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_objects.v"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_pipes.svh"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcDisplayStub.v"
 @I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v"
 @I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v"
 @I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
@@ -25,6 +28,12 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v"
 Verilog syntax check successful!
 Selecting top level module mss_capture
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":26:7:26:12|Synthesizing module AdcCap
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":22:7:22:16|Synthesizing module AdcCapStub
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcDisplayStub.v":22:7:22:20|Synthesizing module AdcDisplayStub
+
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 
 @W: CG532 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":27:0:27:6|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
@@ -54,6 +63,9 @@ Selecting top level module mss_capture
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":9:7:9:17|Synthesizing module mss_capture
 
+@W: CL168 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":236:8:236:16|Pruning instance blinker_0 -- not in use ...
+
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":60:14:60:18|Input RESET is unused
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
@@ -72,9 +84,24 @@ Selecting top level module mss_capture
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrHold[7] is always 0, optimizing ...
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrConv[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 31 of cntrConv[31:0] 
+
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 7 of cntrHold[7:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Register bit cntrConvWait[4] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Pruning register bit 4 of cntrConvWait[4:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Register bit cntrConvWait[3] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Pruning register bit 3 of cntrConvWait[3:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Register bit cntrConvWait[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":58:0:58:5|Pruning register bit 2 of cntrConvWait[2:0] 
+
 @END
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 05 22:29:51 2013
+# Thu Feb 07 19:35:45 2013
 
 ###########################################################]
 Premap Report
@@ -92,10 +119,10 @@ Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
 
-Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 94MB)
 
 
-Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
 
 
 
@@ -106,9 +133,11 @@ Start       Requested     Requested     Clock        Clock
 Clock       Frequency     Period        Type         Group          
 --------------------------------------------------------------------
 System      1.0 MHz       1000.000      system       system_clkgroup
-FAB_CLK     25.0 MHz      40.000        declared     clk_group_0    
-FCLK        25.0 MHz      40.000        declared     clk_group_0    
+FAB_CLK     40.0 MHz      25.000        declared     clk_group_0    
+FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
+
+@W: MT532 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":58:0:58:5|Found signal identified as System clock which controls 20 sequential elements including AdcCap_0/bitsRead[3:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
@@ -119,7 +148,7 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 05 22:29:53 2013
+# Thu Feb 07 19:35:47 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -153,75 +182,71 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
-@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":32:0:32:5|Found counter in view:work.blinker(verilog) inst COUNT[31:0]
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":58:0:58:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
+@N: MF238 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":49:17:49:29|Found 8-bit incrementor, 'un7_cntrClkSpi[7:0]'
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccapstub.v":32:0:32:5|Found counter in view:work.AdcCapStub(verilog) inst cntrHold[6:0]
+@N: MF239 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccapstub.v":40:15:40:25|Found 31-bit decrementor, 'un5_cntrConv_1[30:0]'
 
-Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 105MB)
-
-
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
-
-
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 103MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 103MB)
 
 
-High Fanout Net Report
-**********************
-
-Driver Instance / Pin Name       Fanout, notes
-----------------------------------------------
-blinker_0.COUNT_1_sqmuxa / Y     33           
-==============================================
-
-Replicating Combinational Instance blinker_0.COUNT_1_sqmuxa, fanout 33 segments 2
-
-Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 103MB)
+
+@N: FP130 |Promoting Net clkSpi_c on CLKINT  AdcCap_0.clkSpi_inferred_clock 
+
+Finished technology mapping (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
 
 
 Added 0 Buffers
-Added 1 Cells via replication
+Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
-	Added 1 Combinational Cells via replication
+	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 103MB)
 
 Writing Analyst data base Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 104MB)
 
-@W: MT246 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_mss\mss_capture_mss.v":1594:0:1594:11|Blackbox TRIBUFF_MSS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
-Found clock FAB_CLK with period 40.00ns 
-Found clock FCLK with period 40.00ns 
+@W: MT246 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_mss\mss_capture_mss.v":1600:0:1600:11|Blackbox TRIBUFF_MSS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+Found clock FAB_CLK with period 25.00ns 
+Found clock FCLK with period 25.00ns 
+@W: MT420 |Found inferred clock AdcCap|clkSpi_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:AdcCap_0.clkSpi"
+
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 05 22:29:54 2013
+# Timing Report written on Thu Feb 07 19:35:49 2013
 #
 
 
 Top view:               mss_capture
 Library name:           smartfusion
 Operating conditions:   COMWC-1 ( T = 70.0, V = 1.42, P = 1.48, tree_type = balanced_tree )
-Requested Frequency:    25.0 MHz
+Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
@@ -237,15 +262,16 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 5.038
+Worst slack in design: 1.203
 
-                   Requested     Estimated     Requested     Estimated                Clock        Clock          
-Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group          
-------------------------------------------------------------------------------------------------------------------
-FAB_CLK            25.0 MHz      41.1 MHz      40.000        24.313        15.687     declared     clk_group_0    
-FCLK               25.0 MHz      NA            40.000        NA            NA         declared     clk_group_0    
-System             100.0 MHz     201.5 MHz     10.000        4.962         5.038      system       system_clkgroup
-==================================================================================================================
+                                 Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                   Frequency     Frequency     Period        Period        Slack      Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------
+AdcCap|clkSpi_inferred_clock     100.0 MHz     113.7 MHz     10.000        8.797         1.203      inferred     Inferred_clkgroup_0
+FAB_CLK                          40.0 MHz      107.8 MHz     25.000        9.279         15.721     declared     clk_group_0        
+FCLK                             40.0 MHz      NA            25.000        NA            NA         declared     clk_group_0        
+System                           100.0 MHz     201.5 MHz     10.000        4.962         5.038      system       system_clkgroup    
+====================================================================================================================================
 
 
 
@@ -254,13 +280,17 @@ System             100.0 MHz     201.5 MHz     10.000        4.962         5.038
 Clock Relationships
 *******************
 
-Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-----------------------------------------------------------------------------------------------------------
-Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
-----------------------------------------------------------------------------------------------------------
-System    System   |  10.000      5.038   |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK   FAB_CLK  |  40.000      15.687  |  No paths    -      |  No paths    -      |  No paths    -    
-==========================================================================================================
+Clocks                                                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                      Ending                        |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------
+System                        System                        |  10.000      5.038   |  No paths    -      |  No paths    -      |  No paths    -    
+System                        FAB_CLK                       |  25.000      22.671  |  No paths    -      |  No paths    -      |  No paths    -    
+System                        AdcCap|clkSpi_inferred_clock  |  10.000      7.554   |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                       FAB_CLK                       |  25.000      15.721  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                       AdcCap|clkSpi_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+AdcCap|clkSpi_inferred_clock  AdcCap|clkSpi_inferred_clock  |  10.000      1.203   |  No paths    -      |  No paths    -      |  No paths    -    
+===================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -274,7 +304,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: FAB_CLK
+Detailed Report for Clock: AdcCap|clkSpi_inferred_clock
 ====================================
 
 
@@ -282,41 +312,41 @@ Detailed Report for Clock: FAB_CLK
 Starting Points with Worst Slack
 ********************************
 
-                       Starting                                    Arrival           
-Instance               Reference     Type     Pin     Net          Time        Slack 
-                       Clock                                                         
--------------------------------------------------------------------------------------
-blinker_0.COUNT[0]     FAB_CLK       DFN1     Q       COUNT[0]     0.494       15.687
-blinker_0.COUNT[1]     FAB_CLK       DFN1     Q       COUNT[1]     0.494       15.771
-blinker_0.COUNT[2]     FAB_CLK       DFN1     Q       COUNT[2]     0.494       15.972
-blinker_0.COUNT[3]     FAB_CLK       DFN1     Q       COUNT[3]     0.494       17.096
-blinker_0.COUNT[4]     FAB_CLK       DFN1     Q       COUNT[4]     0.494       17.333
-blinker_0.COUNT[5]     FAB_CLK       DFN1     Q       COUNT[5]     0.494       18.421
-blinker_0.COUNT[6]     FAB_CLK       DFN1     Q       COUNT[6]     0.494       18.658
-blinker_0.COUNT[7]     FAB_CLK       DFN1     Q       COUNT[7]     0.494       19.747
-blinker_0.COUNT[8]     FAB_CLK       DFN1     Q       COUNT[8]     0.494       19.983
-blinker_0.COUNT[9]     FAB_CLK       DFN1     Q       COUNT[9]     0.494       20.935
-=====================================================================================
+                             Starting                                                                     Arrival          
+Instance                     Reference                        Type       Pin     Net                      Time        Slack
+                             Clock                                                                                         
+---------------------------------------------------------------------------------------------------------------------------
+AdcCap_0.captureRunning      AdcCap|clkSpi_inferred_clock     DFN1       Q       captureRunning           0.627       1.203
+AdcCap_0.cntrConvWait[0]     AdcCap|clkSpi_inferred_clock     DFN1       Q       cntrConvWait[0]          0.627       1.461
+AdcCap_0.cntrConvWait[1]     AdcCap|clkSpi_inferred_clock     DFN1       Q       cntrConvWait[1]          0.627       1.937
+AdcCap_0.bitsRead[0]         AdcCap|clkSpi_inferred_clock     DFN1E0     Q       bitsRead[0]              0.627       5.223
+AdcCap_0.bitsRead[1]         AdcCap|clkSpi_inferred_clock     DFN1E0     Q       bitsRead[1]              0.627       5.677
+AdcCap_0.bitsRead[2]         AdcCap|clkSpi_inferred_clock     DFN1E0     Q       bitsRead[2]              0.627       6.485
+AdcCap_0.bitsRead[3]         AdcCap|clkSpi_inferred_clock     DFN1E0     Q       bitsRead[3]              0.627       6.729
+AdcCap_0.dataout[10]         AdcCap|clkSpi_inferred_clock     DFN1E1     Q       AdcCap_0_dataout[10]     0.627       7.465
+AdcCap_0.cs                  AdcCap|clkSpi_inferred_clock     DFN1       Q       cs_c                     0.627       7.856
+AdcCap_0.dataout[9]          AdcCap|clkSpi_inferred_clock     DFN1E1     Q       AdcCap_0_dataout[9]      0.627       7.878
+===========================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                        Starting                                     Required           
-Instance                Reference     Type     Pin     Net           Time         Slack 
-                        Clock                                                           
-----------------------------------------------------------------------------------------
-blinker_0.COUNT[30]     FAB_CLK       DFN1     D       COUNT_n30     39.512       15.687
-blinker_0.COUNT[31]     FAB_CLK       DFN1     D       COUNT_n31     39.542       15.753
-blinker_0.COUNT[29]     FAB_CLK       DFN1     D       COUNT_n29     39.512       16.430
-blinker_0.COUNT[28]     FAB_CLK       DFN1     D       COUNT_n28     39.512       17.174
-blinker_0.COUNT[27]     FAB_CLK       DFN1     D       COUNT_n27     39.512       17.918
-blinker_0.COUNT[26]     FAB_CLK       DFN1     D       N_11          39.542       18.067
-blinker_0.COUNT[25]     FAB_CLK       DFN1     D       N_9           39.542       18.731
-blinker_0.COUNT[24]     FAB_CLK       DFN1     D       N_7           39.542       19.968
-blinker_0.COUNT[23]     FAB_CLK       DFN1     D       COUNT_n23     39.542       20.846
-blinker_0.COUNT[22]     FAB_CLK       DFN1     D       N_5           39.512       21.520
-========================================================================================
+                             Starting                                                                  Required          
+Instance                     Reference                        Type       Pin     Net                   Time         Slack
+                             Clock                                                                                       
+-------------------------------------------------------------------------------------------------------------------------
+AdcCap_0.cntrConvWait[1]     AdcCap|clkSpi_inferred_clock     DFN1       D       cntrConvWait_5[1]     9.542        1.203
+AdcCap_0.cntrConvWait[0]     AdcCap|clkSpi_inferred_clock     DFN1       D       N_7_0                 9.542        1.907
+AdcCap_0.dataout[0]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[1]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[2]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[3]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[4]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[5]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[6]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+AdcCap_0.dataout[7]          AdcCap|clkSpi_inferred_clock     DFN1E1     E       dataout_1_sqmuxa      9.482        4.892
+=========================================================================================================================
 
 
 
@@ -325,104 +355,139 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      40.000
-    - Setup time:                            0.488
+      Requested Period:                      10.000
+    - Setup time:                            0.458
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         39.512
+    = Required time:                         9.542
 
-    - Propagation time:                      23.825
+    - Propagation time:                      8.338
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 15.687
+    = Slack (critical) :                     1.203
 
-    Number of logic level(s):                25
-    Starting point:                          blinker_0.COUNT[0] / Q
-    Ending point:                            blinker_0.COUNT[30] / D
+    Number of logic level(s):                5
+    Starting point:                          AdcCap_0.captureRunning / Q
+    Ending point:                            AdcCap_0.cntrConvWait[1] / D
+    The start point is clocked by            AdcCap|clkSpi_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            AdcCap|clkSpi_inferred_clock [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                 Type      Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+AdcCap_0.captureRunning              DFN1      Q        Out     0.627     0.627       -         
+captureRunning                       Net       -        -       1.696     -           12        
+AdcCap_0.captureRunning_RNIBMCO      NOR2A     A        In      -         2.323       -         
+AdcCap_0.captureRunning_RNIBMCO      NOR2A     Y        Out     0.534     2.857       -         
+dataout_1_sqmuxa                     Net       -        -       1.733     -           13        
+AdcCap_0.captureRunning_RNIQ0M81     OA1C      C        In      -         4.591       -         
+AdcCap_0.captureRunning_RNIQ0M81     OA1C      Y        Out     0.447     5.037       -         
+captureRunning_RNIQ0M81              Net       -        -       0.686     -           3         
+AdcCap_0.un1_cntrConvWait.I_1        AND2      B        In      -         5.724       -         
+AdcCap_0.un1_cntrConvWait.I_1        AND2      Y        Out     0.439     6.163       -         
+DWACT_ADD_CI_0_TMP[0]                Net       -        -       0.274     -           1         
+AdcCap_0.un1_cntrConvWait.I_10       XOR2      B        In      -         6.436       -         
+AdcCap_0.un1_cntrConvWait.I_10       XOR2      Y        Out     0.797     7.234       -         
+I_10                                 Net       -        -       0.274     -           1         
+AdcCap_0.cntrConvWait_RNO[1]         AO1D      C        In      -         7.507       -         
+AdcCap_0.cntrConvWait_RNO[1]         AO1D      Y        Out     0.558     8.065       -         
+cntrConvWait_5[1]                    Net       -        -       0.274     -           1         
+AdcCap_0.cntrConvWait[1]             DFN1      D        In      -         8.338       -         
+================================================================================================
+Total path delay (propagation time + setup) of 8.797 is 3.860(43.9%) logic and 4.937(56.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: FAB_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                              Starting                                        Arrival           
+Instance                      Reference     Type     Pin     Net              Time        Slack 
+                              Clock                                                             
+------------------------------------------------------------------------------------------------
+AdcCapStub_0.cntrConv[0]      FAB_CLK       DFN1     Q       cntrConv[0]      0.627       15.721
+AdcCapStub_0.cntrConv[4]      FAB_CLK       DFN1     Q       cntrConv[4]      0.627       15.922
+AdcCapStub_0.cntrConv[5]      FAB_CLK       DFN1     Q       cntrConv[5]      0.627       15.973
+AdcCapStub_0.cntrConv[3]      FAB_CLK       DFN1     Q       cntrConv[3]      0.627       15.992
+AdcCapStub_0.cntrConv[1]      FAB_CLK       DFN1     Q       cntrConv[1]      0.627       16.019
+AdcCapStub_0.cntrConv[19]     FAB_CLK       DFN1     Q       cntrConv[19]     0.627       16.044
+AdcCapStub_0.cntrConv[15]     FAB_CLK       DFN1     Q       cntrConv[15]     0.627       16.057
+AdcCapStub_0.cntrConv[10]     FAB_CLK       DFN1     Q       cntrConv[10]     0.627       16.137
+AdcCapStub_0.cntrConv[18]     FAB_CLK       DFN1     Q       cntrConv[18]     0.627       16.175
+AdcCapStub_0.cntrConv[16]     FAB_CLK       DFN1     Q       cntrConv[16]     0.627       16.236
+================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                              Starting                                            Required           
+Instance                      Reference     Type       Pin     Net                Time         Slack 
+                              Clock                                                                  
+-----------------------------------------------------------------------------------------------------
+AdcCapStub_0.cntrHold[0]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[1]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[2]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[3]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[4]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[5]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrHold[6]      FAB_CLK       DFN1E0     E       N_30_0             24.482       15.721
+AdcCapStub_0.cntrConv[28]     FAB_CLK       DFN1       D       cntrConv_4[28]     24.512       15.922
+AdcCapStub_0.cntrConv[29]     FAB_CLK       DFN1       D       cntrConv_4[29]     24.512       15.922
+AdcCapStub_0.cntrConv[30]     FAB_CLK       DFN1       D       cntrConv_4[30]     24.512       15.922
+=====================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      25.000
+    - Setup time:                            0.518
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         24.482
+
+    - Propagation time:                      8.761
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 15.721
+
+    Number of logic level(s):                5
+    Starting point:                          AdcCapStub_0.cntrConv[0] / Q
+    Ending point:                            AdcCapStub_0.cntrHold[0] / E
     The start point is clocked by            FAB_CLK [rising] on pin CLK
     The end   point is clocked by            FAB_CLK [rising] on pin CLK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                             Type      Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-blinker_0.COUNT[0]               DFN1      Q        Out     0.494     0.494       -         
-COUNT[0]                         Net       -        -       1.007     -           4         
-blinker_0.COUNT_RNIEEMP[2]       OR3C      B        In      -         1.501       -         
-blinker_0.COUNT_RNIEEMP[2]       OR3C      Y        Out     0.531     2.032       -         
-N_21                             Net       -        -       0.686     -           3         
-blinker_0.COUNT_RNI7CRA1[4]      OR3B      C        In      -         2.718       -         
-blinker_0.COUNT_RNI7CRA1[4]      OR3B      Y        Out     0.639     3.357       -         
-N_23                             Net       -        -       0.686     -           3         
-blinker_0.COUNT_RNI4Q0S1[6]      OR3B      C        In      -         4.043       -         
-blinker_0.COUNT_RNI4Q0S1[6]      OR3B      Y        Out     0.639     4.682       -         
-N_25                             Net       -        -       0.686     -           3         
-blinker_0.COUNT_RNI5O6D2[8]      OR3B      C        In      -         5.369       -         
-blinker_0.COUNT_RNI5O6D2[8]      OR3B      Y        Out     0.639     6.008       -         
-N_27                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI7TPL2[9]      OR2A      B        In      -         6.336       -         
-blinker_0.COUNT_RNI7TPL2[9]      OR2A      Y        Out     0.550     6.886       -         
-N_28                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI33GQ2[10]     OR2A      B        In      -         7.214       -         
-blinker_0.COUNT_RNI33GQ2[10]     OR2A      Y        Out     0.550     7.764       -         
-N_29                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI096V2[11]     OR2A      B        In      -         8.093       -         
-blinker_0.COUNT_RNI096V2[11]     OR2A      Y        Out     0.550     8.643       -         
-N_30                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIUES33[12]     OR2A      B        In      -         8.971       -         
-blinker_0.COUNT_RNIUES33[12]     OR2A      Y        Out     0.550     9.521       -         
-N_31                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNITKI83[13]     OR2A      B        In      -         9.850       -         
-blinker_0.COUNT_RNITKI83[13]     OR2A      Y        Out     0.550     10.400      -         
-N_32                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNITQ8D3[14]     OR2A      B        In      -         10.728      -         
-blinker_0.COUNT_RNITQ8D3[14]     OR2A      Y        Out     0.550     11.278      -         
-N_33                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIU0VH3[15]     OR2A      B        In      -         11.606      -         
-blinker_0.COUNT_RNIU0VH3[15]     OR2A      Y        Out     0.550     12.156      -         
-N_34                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI07LM3[16]     NOR2A     B        In      -         12.485      -         
-blinker_0.COUNT_RNI07LM3[16]     NOR2A     Y        Out     0.346     12.831      -         
-COUNT_c16                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI3DBR3[17]     NOR2B     A        In      -         13.159      -         
-blinker_0.COUNT_RNI3DBR3[17]     NOR2B     Y        Out     0.415     13.575      -         
-COUNT_c17                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI7J104[18]     NOR2B     A        In      -         13.903      -         
-blinker_0.COUNT_RNI7J104[18]     NOR2B     Y        Out     0.415     14.318      -         
-COUNT_c18                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNICPN44[19]     NOR2B     A        In      -         14.647      -         
-blinker_0.COUNT_RNICPN44[19]     NOR2B     Y        Out     0.415     15.062      -         
-COUNT_c19                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIB3E94[20]     NOR2B     A        In      -         15.390      -         
-blinker_0.COUNT_RNIB3E94[20]     NOR2B     Y        Out     0.415     15.806      -         
-COUNT_c20                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIBD4E4[21]     NOR2B     A        In      -         16.134      -         
-blinker_0.COUNT_RNIBD4E4[21]     NOR2B     Y        Out     0.415     16.550      -         
-COUNT_c21                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNICNQI4[22]     OR2B      A        In      -         16.878      -         
-blinker_0.COUNT_RNICNQI4[22]     OR2B      Y        Out     0.415     17.294      -         
-N_13                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIE1HN4[23]     OR2A      B        In      -         17.622      -         
-blinker_0.COUNT_RNIE1HN4[23]     OR2A      Y        Out     0.550     18.172      -         
-N_14                             Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIHB7S4[24]     OR2A      B        In      -         18.500      -         
-blinker_0.COUNT_RNIHB7S4[24]     OR2A      Y        Out     0.550     19.050      -         
-N_15                             Net       -        -       0.686     -           3         
-blinker_0.COUNT_RNIQVJ55[26]     NOR3B     C        In      -         19.737      -         
-blinker_0.COUNT_RNIQVJ55[26]     NOR3B     Y        Out     0.415     20.152      -         
-COUNT_c26                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI0AAA5[27]     NOR2B     A        In      -         20.480      -         
-blinker_0.COUNT_RNI0AAA5[27]     NOR2B     Y        Out     0.415     20.896      -         
-COUNT_c27                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNI7K0F5[28]     NOR2B     A        In      -         21.224      -         
-blinker_0.COUNT_RNI7K0F5[28]     NOR2B     Y        Out     0.415     21.640      -         
-COUNT_c28                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNIFUMJ5[29]     NOR2B     A        In      -         21.968      -         
-blinker_0.COUNT_RNIFUMJ5[29]     NOR2B     Y        Out     0.415     22.384      -         
-COUNT_c29                        Net       -        -       0.328     -           2         
-blinker_0.COUNT_RNO[30]          XA1       B        In      -         22.712      -         
-blinker_0.COUNT_RNO[30]          XA1       Y        Out     0.840     23.552      -         
-COUNT_n30                        Net       -        -       0.274     -           1         
-blinker_0.COUNT[30]              DFN1      D        In      -         23.825      -         
-============================================================================================
-Total path delay (propagation time + setup) of 24.313 is 13.721(56.4%) logic and 10.592(43.6%) route.
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                   Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+AdcCapStub_0.cntrConv[0]               DFN1       Q        Out     0.627     0.627       -         
+cntrConv[0]                            Net        -        -       1.299     -           7         
+AdcCapStub_0.cntrConv_RNI3M1P[16]      NOR3       C        In      -         1.926       -         
+AdcCapStub_0.cntrConv_RNI3M1P[16]      NOR3       Y        Out     0.639     2.564       -         
+cntrConv13_17                          Net        -        -       0.274     -           1         
+AdcCapStub_0.cntrConv_RNIKHBR1[10]     NOR3C      C        In      -         2.838       -         
+AdcCapStub_0.cntrConv_RNIKHBR1[10]     NOR3C      Y        Out     0.566     3.405       -         
+cntrConv13_24                          Net        -        -       0.274     -           1         
+AdcCapStub_0.cntrConv_RNISBOQ3[17]     NOR3C      C        In      -         3.678       -         
+AdcCapStub_0.cntrConv_RNISBOQ3[17]     NOR3C      Y        Out     0.566     4.245       -         
+cntrConv13_27                          Net        -        -       0.274     -           1         
+AdcCapStub_0.cntrConv_RNIMHL28[12]     NOR3C      C        In      -         4.518       -         
+AdcCapStub_0.cntrConv_RNIMHL28[12]     NOR3C      Y        Out     0.566     5.085       -         
+cntrConv13                             Net        -        -       1.964     -           19        
+AdcCapStub_0.startCapture_RNIJAU9A     OA1B       C        In      -         7.049       -         
+AdcCapStub_0.startCapture_RNIJAU9A     OA1B       Y        Out     0.414     7.463       -         
+N_30_0                                 Net        -        -       1.299     -           7         
+AdcCapStub_0.cntrHold[0]               DFN1E0     E        In      -         8.761       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 9.279 is 3.897(42.0%) logic and 5.382(58.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -437,34 +502,38 @@ Detailed Report for Clock: System
 Starting Points with Worst Slack
 ********************************
 
-                                        Starting                                                  Arrival          
-Instance                                Reference     Type        Pin         Net                 Time        Slack
-                                        Clock                                                                      
--------------------------------------------------------------------------------------------------------------------
-mss_capture_MSS_0.MSS_CCC_0.I_RCOSC     System        RCOSC       CLKOUT      N_CLKA_RCOSC        0.000       5.038
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     EMCCLK      MSS_EMI_0_CLK_D     0.000       9.672
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DO      MSS_SPI_0_DO_D      0.000       9.726
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DOE     MSS_SPI_0_DO_E      0.000       9.726
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DO      MSS_SPI_1_DO_D      0.000       9.726
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DOE     MSS_SPI_1_DO_E      0.000       9.726
-===================================================================================================================
+                                        Starting                                                                  Arrival          
+Instance                                Reference     Type        Pin           Net                               Time        Slack
+                                        Clock                                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------
+mss_capture_MSS_0.MSS_CCC_0.I_RCOSC     System        RCOSC       CLKOUT        N_CLKA_RCOSC                      0.000       5.038
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     M2FRESETn     mss_capture_MSS_0_M2F_RESET_N     0.000       7.554
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     EMCCLK        MSS_EMI_0_CLK_D                   0.000       9.672
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DO        MSS_SPI_0_DO_D                    0.000       9.726
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DOE       MSS_SPI_0_DO_E                    0.000       9.726
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DO        MSS_SPI_1_DO_D                    0.000       9.726
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DOE       MSS_SPI_1_DO_E                    0.000       9.726
+===================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                     Starting                                                                 Required          
-Instance                             Reference     Type            Pin           Net                          Time         Slack
-                                     Clock                                                                                      
---------------------------------------------------------------------------------------------------------------------------------
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         PLLLOCK       MSS_ADLIB_INST_PLLLOCK       10.000       5.038
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         MACCLKCCC     MSS_ADLIB_INST_MACCLKCCC     10.000       5.312
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         EMCCLKRTN     MSS_EMI_0_CLK_D              10.000       9.672
-mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     D             MSS_SPI_0_DO_D               10.000       9.726
-mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     E             MSS_SPI_0_DO_E               10.000       9.726
-mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     D             MSS_SPI_1_DO_D               10.000       9.726
-mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     E             MSS_SPI_1_DO_E               10.000       9.726
-================================================================================================================================
+                                     Starting                                                                 Required           
+Instance                             Reference     Type            Pin           Net                          Time         Slack 
+                                     Clock                                                                                       
+---------------------------------------------------------------------------------------------------------------------------------
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         PLLLOCK       MSS_ADLIB_INST_PLLLOCK       10.000       5.038 
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         MACCLKCCC     MSS_ADLIB_INST_MACCLKCCC     10.000       5.312 
+AdcCap_0.cs                          System        DFN1            D             cs_RNO                       9.542        7.554 
+AdcCap_0.captureRunning              System        DFN1            D             N_13                         9.512        7.718 
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         EMCCLKRTN     MSS_EMI_0_CLK_D              10.000       9.672 
+mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     D             MSS_SPI_0_DO_D               10.000       9.726 
+mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     E             MSS_SPI_0_DO_E               10.000       9.726 
+mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     D             MSS_SPI_1_DO_D               10.000       9.726 
+mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     E             MSS_SPI_1_DO_E               10.000       9.726 
+AdcCapStub_0.startCapture            System        DFN1            D             startCapture_RNO             24.512       22.671
+=================================================================================================================================
 
 
 
@@ -482,7 +551,7 @@ Path information for path number 1:
     - Propagation time:                      4.962
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (critical) :                     5.038
+    = Slack (non-critical) :                 5.038
 
     Number of logic level(s):                1
     Starting point:                          mss_capture_MSS_0.MSS_CCC_0.I_RCOSC / CLKOUT
@@ -512,35 +581,50 @@ Target Part: A2F500M3G_FBGA484_-1
 Report for cell mss_capture.verilog
   Core Cell usage:
               cell count     area count*area
-               AX1     3      1.0        3.0
-              AX1A     1      1.0        1.0
+              AND2     2      1.0        2.0
+              AND3     6      1.0        6.0
+               AO1     1      1.0        1.0
+              AO1A     2      1.0        2.0
+              AO1B     1      1.0        1.0
+              AO1D     1      1.0        1.0
+             AOI1B     4      1.0        4.0
               AX1C     1      1.0        1.0
-              AX1E     1      1.0        1.0
-               GND     4      0.0        0.0
+              AX1D     3      1.0        3.0
+            CLKINT     1      0.0        0.0
+               GND     6      0.0        0.0
+               INV     2      1.0        2.0
            MSS_APB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-              NOR2     6      1.0        6.0
-             NOR2A     7      1.0        7.0
-             NOR2B    19      1.0       19.0
-              NOR3     1      1.0        1.0
-             NOR3A     2      1.0        2.0
-             NOR3B     1      1.0        1.0
+               MX2     1      1.0        1.0
+              MX2A     1      1.0        1.0
+              NOR2    14      1.0       14.0
+             NOR2A    19      1.0       19.0
+             NOR2B     3      1.0        3.0
+              NOR3     6      1.0        6.0
+             NOR3A     6      1.0        6.0
+             NOR3B     3      1.0        3.0
              NOR3C     7      1.0        7.0
-              OR2A     9      1.0        9.0
+               OA1     2      1.0        2.0
+              OA1B     1      1.0        1.0
+              OA1C     1      1.0        1.0
+              OAI1     1      1.0        1.0
+               OR2    17      1.0       17.0
+              OR2A     2      1.0        2.0
               OR2B     1      1.0        1.0
-              OR3B     3      1.0        3.0
-              OR3C     1      1.0        1.0
+               OR3    54      1.0       54.0
+              OR3A     3      1.0        3.0
              RCOSC     1      0.0        0.0
-               VCC     4      0.0        0.0
-               XA1    11      1.0       11.0
-              XA1A    11      1.0       11.0
-             XNOR2     2      1.0        2.0
-              XOR2     2      1.0        2.0
+               VCC     6      0.0        0.0
+              XA1A     2      1.0        2.0
+             XNOR2    32      1.0       32.0
+              XOR2    11      1.0       11.0
 
 
-              DFN1    33      1.0       33.0
+              DFN1    45      1.0       45.0
+            DFN1E0    11      1.0       11.0
+            DFN1E1    12      1.0       12.0
                    -----          ----------
-             TOTAL   133               122.0
+             TOTAL   294               278.0
 
 
   IO Cell usage:
@@ -549,24 +633,24 @@ Report for cell mss_capture.verilog
    BIBUF_OPEND_MSS     4
              INBUF     1
          INBUF_MSS     9
-            OUTBUF     1
+            OUTBUF    10
         OUTBUF_MSS    40
        TRIBUFF_MSS     2
                    -----
-             TOTAL    78
+             TOTAL    87
 
 
-Core Cells         : 122 of 11520 (1%)
-IO Cells           : 78
+Core Cells         : 278 of 11520 (2%)
+IO Cells           : 87
 
   RAM/ROM Usage Summary
 Block Rams : 0 of 24 (0%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 40MB peak: 105MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 40MB peak: 104MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 05 22:29:55 2013
+# Thu Feb 07 19:35:49 2013
 
 ###########################################################]

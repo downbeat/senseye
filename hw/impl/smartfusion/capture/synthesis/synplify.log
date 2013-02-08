@@ -1,7 +1,7 @@
 
 Starting:    C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\win64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
-Date:        Tue Feb 05 22:29:51 2013
+Date:        Thu Feb 07 19:35:44 2013
 Version:     F-2012.03M-SP1 
 
 Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log mss_capture_syn.tcl
@@ -38,8 +38,8 @@ Job Compile Process completed on mss_capture_syn|synthesis
 
 Running Premap on mss_capture_syn|synthesis
 
-premap Completed
-Return Code: 0
+premap Completed with warnings
+Return Code: 1
 Run Time:0h:00m:01s
 
 
@@ -51,7 +51,7 @@ Running Map & Optimize on mss_capture_syn|synthesis
 
 fpga_mapper Completed with warnings
 Return Code: 1
-Run Time:0h:00m:01s
+Run Time:0h:00m:02s
 
 
 Job Map completed on mss_capture_syn|synthesis

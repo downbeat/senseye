@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Tue Feb 05 17:30:40 2013
+// Created by Actel SmartDesign Thu Feb 07 15:58:13 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -55,6 +55,7 @@ mss_capture_MSS mss_capture_MSS_0 (
 
     // Outputs
     .FAB_CLK( ),
+    .M2F_RESET_N( ),
     .UART_0_TXD( ),
     .UART_1_TXD( ),
     .SPI_0_DO( ),

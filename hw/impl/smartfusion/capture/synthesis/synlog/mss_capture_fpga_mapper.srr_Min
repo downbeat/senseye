@@ -1,13 +1,13 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 05 22:29:54 2013
+# Timing Report written on Thu Feb 07 19:35:49 2013
 #
 
 
 Top view:               mss_capture
 Operating conditions:   smartfusion.COMWC-2
-Requested Frequency:    25.0 MHz
+Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
@@ -25,26 +25,31 @@ Performance Summary
 
 Worst slack in design: 0.192
 
-                   Requested     Estimated     Requested     Estimated                Clock        Clock          
-Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group          
-------------------------------------------------------------------------------------------------------------------
-FAB_CLK            25.0 MHz      41.1 MHz      40.000        24.313        15.687     declared     clk_group_0    
-FCLK               25.0 MHz      NA            40.000        NA            NA         declared     clk_group_0    
-System             100.0 MHz     201.5 MHz     10.000        4.962         5.038      system       system_clkgroup
-==================================================================================================================
+                                 Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                   Frequency     Frequency     Period        Period        Slack      Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------
+AdcCap|clkSpi_inferred_clock     100.0 MHz     113.7 MHz     10.000        8.797         1.203      inferred     Inferred_clkgroup_0
+FAB_CLK                          40.0 MHz      107.8 MHz     25.000        9.279         15.721     declared     clk_group_0        
+FCLK                             40.0 MHz      NA            25.000        NA            NA         declared     clk_group_0        
+System                           100.0 MHz     201.5 MHz     10.000        4.962         5.038      system       system_clkgroup    
+====================================================================================================================================
 
 
 
 Clock Relationships
 *******************
 
-Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
----------------------------------------------------------------------------------------------------------
-Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
----------------------------------------------------------------------------------------------------------
-System    System   |  0.000       0.192  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK   FAB_CLK  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-=========================================================================================================
+Clocks                                                      |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                      Ending                        |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------
+System                        System                        |  0.000       0.192  |  No paths    -      |  No paths    -      |  No paths    -    
+System                        FAB_CLK                       |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                        AdcCap|clkSpi_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                       FAB_CLK                       |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                       AdcCap|clkSpi_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+AdcCap|clkSpi_inferred_clock  AdcCap|clkSpi_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+==================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 

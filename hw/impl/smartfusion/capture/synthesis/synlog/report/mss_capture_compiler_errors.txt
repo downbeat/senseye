@@ -1,3 +1,2 @@
-@E: CS109 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":25:6:25:6|Expecting module level statement
-@E: CS187 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":37:0:37:8|Expecting endmodule
+@E: CL172 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":32:11:32:12|Only one always block can assign a given variable cs
 
