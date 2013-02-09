@@ -16,26 +16,26 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ            (40000000)      // TODO (shouldn't be) hardcoded to 40MHz
-`define CLK_FREQ_SPI        (800000)        // 800kHz clocks the Adc @ 50ksps
-`define SPI_CLK_TOGGLE_VAL  ((`CLK_FREQ / `CLK_FREQ_SPI)>>1)
-`define ADC_RES             (12)            // bits
-`define NULL_BITS           (3)             // bits
+`define CLK_FREQ             (20000000)  // TODO (shouldn't be) hardcoded to 20MHz
+`define ADC_RES              (8)         // bits
+`define TICKS_WAIT_LEADING   (3)         // bits / clock ticks
+`define TICKS_WAIT_TRAILING  (4)         // bits / clock ticks
+`define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
 
 
-module AdcCap( clk, reset, startCapture, miso, clkSpi, cs, dataout );
+module AdcCap( clk, reset, startCapture, miso, cs, dataout );
 
 input clk;
 input reset;
 input startCapture;
 input miso;
-output reg clkSpi;
 output reg cs;
 output reg [(`ADC_RES-1):0] dataout;
 
 reg [7:0] cntrClkSpi;
-reg [4:0] cntrConvWait;
-reg captureRunning;
+reg [2:0] cntrWaitLeading;
+reg [2:0] cntrWaitTrailing;
+reg [2:0] cntrWaitQuiet;
 reg [3:0] bitsRead;
 
 
@@ -43,63 +43,56 @@ always@ (posedge clk)
 begin
    if(0 == reset)
    begin
-      cntrClkSpi <= 0;
+      cs <= 1;
+      cntrWaitQuiet <= 16; // just a guess
    end
 
-   cntrClkSpi <= cntrClkSpi+1;
-   if(`SPI_CLK_TOGGLE_VAL == cntrClkSpi)
+   // state: idle
+   if((1 == cs) && (0 == cntrWaitQuiet))
    begin
-      // generate slow clock for SPI
-      cntrClkSpi <= 0;
-      clkSpi <= clkSpi ^ 1;
+      // start conversion
+      if(0 == startCapture)
+      begin
+         // TODO
+         cs <= 0;
+         cntrWaitLeading <= `TICKS_WAIT_LEADING - 1;
+         cntrWaitTrailing <= `TICKS_WAIT_TRAILING - 1;
+         cntrWaitQuiet <= `TICKS_WAIT_QUIET - 1;
+         bitsRead <= 0;
+      end
    end
-end
 
-always@ (posedge clkSpi)
-begin
-   if(0 == reset)
+   // state: waiting (leading)
+   if((0 == cs) && (0 < cntrWaitLeading))
    begin
-      // TODO: captureRunning is actually redundant with cs
-      captureRunning <= 0;
+      cntrWaitLeading <= cntrWaitLeading - 1;
+   end
+
+   // state: reading data
+   if((0 == cs) && (0 == cntrWaitLeading) && (`ADC_RES > bitsRead))
+   begin
+      // shift in data
+      dataout <= {dataout[(`ADC_RES-1):0],~miso};
+      bitsRead <= bitsRead + 1;
+   end
+
+   // state: waiting (trailing)
+   if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
+   begin
+      // TODO
+      cntrWaitTrailing <= cntrWaitTrailing - 1;
+   end
+
+   // state: trailing wait finished
+   if((0 == cs) && (`ADC_RES == bitsRead) && (0 == cntrWaitTrailing))
+   begin
       cs <= 1;
    end
 
-   // capture logic
-   if(0 == captureRunning)
+   // state: quiet time
+   if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet))
    begin
-      // startCapture will be active low just like cs
-      if(0 == startCapture)
-      begin
-         // begin capture
-         cs <= 0;
-         captureRunning <= 1;
-         cntrConvWait <= `NULL_BITS-1;
-         bitsRead <= 0;
-      end
-      else
-      begin
-         // TODO: unsure if this is OK to set now, but we'll see
-         cs <= 1;
-      end
-   end
-   else // 1 == captureRunning
-   begin
-      if(0 < cntrConvWait)
-      begin
-         cntrConvWait <= cntrConvWait-1;
-      end
-      else // 0 == cntrConvWait
-      begin
-         // shift in data
-         //dataout <= dataout << 1;
-         //dataout[0] <= miso;
-         dataout <= {dataout[10:0],~miso};
-         bitsRead <= bitsRead + 1;
-      end
-      if(`ADC_RES == bitsRead)
-      begin
-         captureRunning <= 0;
-      end
+      cntrWaitQuiet <= cntrWaitQuiet - 1;
    end
 end
 

@@ -2,7 +2,7 @@
 #define mss_capture_HW_PLATFORM_H_
 /*****************************************************************************
 *
-*Created by Actel SmartDesign  Thu Feb 07 19:35:30 2013
+*Created by Actel SmartDesign  Fri Feb 08 19:18:48 2013
 *
 *Memory map specification for peripherals in mss_capture
 */

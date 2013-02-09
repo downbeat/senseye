@@ -1,7 +1,8 @@
 // FIXME russ: this is a terrible software hack way to get 2 cameras working!
 #include "stony_dual.h"
-#include "stonymask_cam7_3v3_1.h"
-#include "stonymask_cam6_3v3_2.h"
+#include "stonymask_nomask.h"
+#define stonymask2 stonymask
+#include "stonymask_cam3_3v3_1.h"
 
 // teensy and arduino stuff
 #include "pins_arduino.h"
@@ -14,8 +15,8 @@
 #define    NUMCAMS   (2)
 #define    BAUDRATE  (921600)
 
-//#define DATACONN_USB
-#define DATACONN_BLUETOOTH
+#define DATACONN_USB
+//#define DATACONN_BLUETOOTH
 #if (defined(DATACONN_USB) && defined(DATACONN_BLUETOOTH))
 # error "Both DATACONN_USB and DATACONN_BLUETOOTH defined!"
 #endif

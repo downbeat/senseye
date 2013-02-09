@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Feb 07 15:58:13 2013
+// Created by SmartDesign Fri Feb 08 18:46:15 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -498,7 +498,7 @@ assign EMCRDB_net_0 = { MSS_EMI_0_DB_15_Y , MSS_EMI_0_DB_14_Y , MSS_EMI_0_DB_13_
 MSS_APB #( 
         .ACT_CONFIG ( 0 ),
         .ACT_DIE    ( "IP6X5M2" ),
-        .ACT_FCLK   ( 40000000 ),
+        .ACT_FCLK   ( 20000000 ),
         .ACT_PKG    ( "fg484" ) )
 MSS_ADLIB_INST(
         // Inputs

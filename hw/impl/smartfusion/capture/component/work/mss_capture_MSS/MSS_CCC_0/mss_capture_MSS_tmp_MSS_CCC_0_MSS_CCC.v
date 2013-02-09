@@ -79,7 +79,7 @@ output LPXIN_CLKOUT;
         .EXTFB(N_GND), .GLA(FAB_CLK), .GLAMSS(GLA0), .LOCK(FAB_LOCK), 
         .LOCKMSS(MSS_LOCK), .CLKB(N_GND), .GLB(), .YB(), .CLKC(N_GND), 
         .GLC(), .YC(), .MACCLK(MAC_CLK_CCC), .OADIV({N_GND, N_GND, 
-        N_VCC, N_GND, N_GND}), .OADIVHALF(N_VCC), .OAMUX({N_GND, N_GND, 
+        N_VCC, N_GND, N_GND}), .OADIVHALF(N_GND), .OAMUX({N_GND, N_GND, 
         N_VCC}), .BYPASSA(N_GND), .DLYGLA({N_GND, N_GND, N_GND, N_GND, 
         N_GND}), .DLYGLAMSS({N_GND, N_GND, N_GND, N_GND, N_GND}), 
         .DLYGLAFAB({N_GND, N_GND, N_GND, N_GND, N_GND}), .OBDIV({N_GND, 

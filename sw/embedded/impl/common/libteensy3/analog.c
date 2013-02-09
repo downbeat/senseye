@@ -119,12 +119,13 @@ int analogRead(uint8_t pin)
 
 	ADC0_SC1A = channel2sc1a[pin];
 	// russ: gpio toggle for timing the conversion
-	//GPIOD_PCOR = 0x00000001ul;
+        // pin 14 GPIOD1
+	//GPIOD_PCOR = 0x00000010ul;
 	while ((ADC0_SC1A & ADC_SC1_COCO) == 0) {
 		// wait
 		//serial_print(".");
 	}
-	//GPIOD_PSOR = 0x00000001ul;
+	//GPIOD_PSOR = 0x00000010ul;
 	//serial_print("\n");
 	result = ADC0_RA >> analog_right_shift;
 	//serial_phex16(result >> 3);

@@ -15,20 +15,14 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data>Slack</data>
 </row>
 <row>
-<data>AdcCap|clkSpi_inferred_clock</data>
-<data>100.0 MHz</data>
-<data>113.7 MHz</data>
-<data>1.203</data>
-</row>
-<row>
 <data>FAB_CLK</data>
-<data>40.0 MHz</data>
-<data>107.8 MHz</data>
-<data>15.721</data>
+<data>20.0 MHz</data>
+<data>110.2 MHz</data>
+<data>40.922</data>
 </row>
 <row>
 <data>FCLK</data>
-<data>40.0 MHz</data>
+<data>20.0 MHz</data>
 <data>NA</data>
 <data>NA</data>
 </row>

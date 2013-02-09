@@ -1,2 +1,2 @@
-@E: CL172 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":32:11:32:12|Only one always block can assign a given variable cs
+@E: CS101 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":74:18:74:24|Index 10 is out of range for variable dataout
 

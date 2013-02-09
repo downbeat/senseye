@@ -1,5 +1,6 @@
 #include "stony.h"
-#include "stonymask_nomask.h"
+#include "stonymask_cam3_3v3.h"
+//#include "stonymask_nomask.h"
 
 // teensy and arduino stuff
 #include "pins_arduino.h"
@@ -10,6 +11,9 @@
 //**************************************************************************************************
 // global constants
 #define    NUMCAMS   (1)
+//#define    BAUDRATE  (115200)
+//#define    BAUDRATE  (230400)
+//#define    BAUDRATE  (460800)
 #define    BAUDRATE  (921600)
 
 //#define DATACONN_USB

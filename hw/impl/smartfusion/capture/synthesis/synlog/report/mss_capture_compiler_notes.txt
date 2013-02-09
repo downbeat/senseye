@@ -1,7 +1,6 @@
 @N|Running in 64-bit mode
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":26:7:26:12|Synthesizing module AdcCap
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":22:7:22:16|Synthesizing module AdcCapStub
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcDisplayStub.v":22:7:22:20|Synthesizing module AdcDisplayStub
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC

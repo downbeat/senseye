@@ -14,9 +14,9 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ         (40000000)
+`define CLK_FREQ         (20000000)
 `define CONV_RATE_TICKS  ((`CLK_FREQ >> 1) - 1)
-`define HOLD_TIME_TICKS  (100)
+`define HOLD_TIME_TICKS  (3)
 
 
 module AdcCapStub( clk, reset, startCapture );

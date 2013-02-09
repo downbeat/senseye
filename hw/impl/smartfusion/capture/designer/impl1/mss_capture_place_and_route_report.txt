@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Thu Feb 07 19:36:18 2013 ***************************************************************************
+                          Fri Feb 08 19:19:53 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
 File Name: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb
 Design Name: mss_capture  Design State: layout
-Last Saved: Thu Feb 07 19:35:58 2013
+Last Saved: Fri Feb 08 19:19:34 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Thu Feb 07 19:35:53 2013:
+Source File(s) Imported on Fri Feb 08 19:19:31 2013:
         Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn
         Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.pdc
 
@@ -353,9 +353,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        21
+  - Logic combining:        28
 
-    Total macros optimized  21
+    Total macros optimized  28
 
 There were 0 error(s) and 263 warning(s) in this design.
 =====================================================================
@@ -377,12 +377,12 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:    257  Total:  11520   (2.23%)
-    Fabric IO (W/ clocks)      Used:     61  Total:    128   (47.66%)
+    Fabric                     Used:    209  Total:  11520   (1.81%)
+    Fabric IO (W/ clocks)      Used:     62  Total:    128   (48.44%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:     26  Total:     43   (60.47%)
-    GLOBAL (Chip+Quadrant)     Used:      1  Total:     15   (6.67%)
+    GLOBAL (Chip+Quadrant)     Used:      0  Total:     15   (0.00%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
@@ -396,7 +396,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 1      | 3  (33.33%)*
+    Chip global     | 0      | 3  (0.00%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -408,15 +408,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 189          | 189
-    SEQ     | 68           | 68
+    COMB    | 154          | 154
+    SEQ     | 55           | 55
 
 I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
     Input I/O                     | 1             | 0            | 0
-    Output I/O                    | 10            | 0            | 0
+    Output I/O                    | 11            | 0            | 0
     Bidirectional I/O             | 0             | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -427,11 +427,11 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 1     | 10     | 0
+    LVTTL                           | 3.30v | N/A   | 1     | 11     | 0
 
 I/O Placement:
 
-    Locked  :  11 ( 100.00% )
+    Locked  :  12 ( 100.00% )
     Placed  :   0
     UnPlaced:   0
 
@@ -441,60 +441,57 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    49      CLK_NET       Net   : FAB_CLK
+    57      CLK_NET       Net   : FAB_CLK
                           Driver: mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    21      CLK_NET       Net   : clkSpi_c
-                          Driver: AdcCap_0/clkSpi_RNI5BTA/U_CLKSRC
-                          Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    19      INT_NET       Net   : AdcCapStub_0/cntrConv13
+    20      INT_NET       Net   : AdcCapStub_0/cntrConv13
                           Driver: AdcCapStub_0/cntrConv_RNIMHL28[12]
-    15      INT_NET       Net   : AdcCapStub_0_startCapture
-                          Driver: AdcCapStub_0/startCapture
-    13      INT_NET       Net   : AdcCap_0/dataout_1_sqmuxa
-                          Driver: AdcCap_0/captureRunning_RNIBMCO
-    12      INT_NET       Net   : AdcCap_0/captureRunning
-                          Driver: AdcCap_0/captureRunning
-    9       INT_NET       Net   : AdcCap_0_dataout[10]
-                          Driver: AdcCap_0/dataout[10]
-    9       INT_NET       Net   : AdcCapStub_0/N_44
-                          Driver: AdcCapStub_0/cntrHold_RNIIVHU1[6]
+    9       INT_NET       Net   : AdcCap_0/dataout7
+                          Driver: AdcCap_0/bitsRead_RNIMCF51[3]
+    8       INT_NET       Net   : cs_c
+                          Driver: AdcCap_0/cs
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
-    7       INT_NET       Net   : AdcCap_0_dataout[11]
-                          Driver: AdcCap_0/dataout[11]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_33
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[6]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_30
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_60
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    19      INT_NET       Net   : AdcCapStub_0/cntrConv13
+    20      INT_NET       Net   : AdcCapStub_0/cntrConv13
                           Driver: AdcCapStub_0/cntrConv_RNIMHL28[12]
-    15      INT_NET       Net   : AdcCapStub_0_startCapture
-                          Driver: AdcCapStub_0/startCapture
-    13      INT_NET       Net   : AdcCap_0/dataout_1_sqmuxa
-                          Driver: AdcCap_0/captureRunning_RNIBMCO
-    12      INT_NET       Net   : AdcCap_0/captureRunning
-                          Driver: AdcCap_0/captureRunning
-    9       INT_NET       Net   : AdcCap_0_dataout[10]
-                          Driver: AdcCap_0/dataout[10]
-    9       INT_NET       Net   : AdcCapStub_0/N_44
-                          Driver: AdcCapStub_0/cntrHold_RNIIVHU1[6]
+    9       INT_NET       Net   : AdcCap_0/dataout7
+                          Driver: AdcCap_0/bitsRead_RNIMCF51[3]
+    8       INT_NET       Net   : cs_c
+                          Driver: AdcCap_0/cs
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
-    7       INT_NET       Net   : AdcCap_0_dataout[11]
-                          Driver: AdcCap_0/dataout[11]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_33
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[6]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_30
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_60
+    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
+                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 
 Layout Output:
@@ -520,16 +517,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Thu Feb 07 19:36:02 2013
+Timing-driven Placer Started: Fri Feb 08 19:19:38 2013
 
-Placer Finished: Thu Feb 07 19:36:05 2013
+Placer Finished: Fri Feb 08 19:19:41 2013
 Total Placer CPU Time:     00:00:03
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: mss_capture                     Started: Thu Feb 07 19:36:07 2013
+Design: mss_capture                     Started: Fri Feb 08 19:19:43 2013
 
  
 Iterative improvement...
@@ -537,8 +534,8 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: mss_capture                     
-Finished: Thu Feb 07 19:36:15 2013
-Total CPU Time:     00:00:08            Total Elapsed Time: 00:00:08
+Finished: Fri Feb 08 19:19:50 2013
+Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:07
                         o - o - o - o - o - o
 
 
