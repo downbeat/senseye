@@ -305,32 +305,32 @@ SIZE="222"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.adb,adb"
 STATE="utd"
-TIME="1360369212"
+TIME="1360547122"
 SIZE="558080"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.fdb,fdb"
 STATE="utd"
-TIME="1360369212"
-SIZE="85146"
+TIME="1360547122"
+SIZE="85149"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.ide_des,ide_des"
 STATE="utd"
-TIME="1360369212"
+TIME="1360547123"
 SIZE="1151"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_compile_log.rpt,log"
 STATE="utd"
-TIME="1360369174"
-SIZE="30346"
+TIME="1360547085"
+SIZE="30318"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pdb,pdb"
 STATE="utd"
-TIME="1360369234"
+TIME="1360547139"
 SIZE="94720"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pro,pro"
 STATE="utd"
-TIME="1360369290"
+TIME="1360547195"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\projectData\mss_capture.pdb,pdb"
@@ -345,17 +345,17 @@ SIZE="360"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1360369194"
+TIME="1360547104"
 SIZE="2476"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1360369213"
+TIME="1360547123"
 SIZE="954"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1360369198"
+TIME="1360547108"
 SIZE="1230"
 ENDFILE
 VALUE "<project>\hdl\AdcCap.v,hdl"
@@ -368,15 +368,15 @@ STATE="utd"
 TIME="1360369118"
 SIZE="1306"
 ENDFILE
-VALUE "<project>\hdl\AdcDisplayStub.v,hdl"
-STATE="utd"
-TIME="1360281018"
-SIZE="1253"
-ENDFILE
 VALUE "<project>\hdl\blinker.v,hdl"
 STATE="utd"
 TIME="1360137686"
 SIZE="1017"
+ENDFILE
+VALUE "<project>\hdl\Stonyman.v,hdl"
+STATE="utd"
+TIME="1360552297"
+SIZE="741"
 ENDFILE
 VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 STATE="utd"
@@ -404,22 +404,22 @@ PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.edn,syn_edn"
 STATE="utd"
-TIME="1360369166"
-SIZE="268800"
+TIME="1360547078"
+SIZE="268182"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.so,so"
 STATE="utd"
-TIME="1360369166"
+TIME="1360547078"
 SIZE="256"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_sdc.sdc,sdc"
 STATE="utd"
-TIME="1360369166"
+TIME="1360547078"
 SIZE="550"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_syn.prj,prj"
 STATE="utd"
-TIME="1360369168"
+TIME="1360547079"
 SIZE="2568"
 ENDFILE
 VALUE "<project>\synthesis\synwork\mss_capture_compiler.so,so"
@@ -561,8 +561,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -626,15 +626,12 @@ ENDLIST
 LIST OpenedFileList
 SmartDesign;mss_capture
 SmartDesign;mss_capture_MSS
-Reports;Reports
-ACTIVEVIEW;Reports
+ACTIVEVIEW;mss_capture
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
 ENDLIST
 LIST "AdcCapStub::work","hdl\AdcCapStub.v","FALSE","FALSE"
-ENDLIST
-LIST "AdcDisplayStub::work","hdl\AdcDisplayStub.v","FALSE","FALSE"
 ENDLIST
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
@@ -727,6 +724,8 @@ ENDLIST
 LIST "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "Stonyman::work","hdl\Stonyman.v","FALSE","FALSE"
 ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
