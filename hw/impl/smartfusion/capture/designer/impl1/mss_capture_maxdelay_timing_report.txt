@@ -3,7 +3,7 @@ Timing Report Max Delay Analysis
 SmartTime Version v10.1 SP3
 Actel Corporation - Actel Designer Software Release v10.1 SP3 (Version 10.1.3.1)
 Copyright (c) 1989-2013
-Date: Fri Feb 08 19:19:57 2013
+Date: Sun Feb 10 20:45:07 2013
 
 
 Design: mss_capture
@@ -55,14 +55,14 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               mss_ccc_gla1
-Period (ns):                7.114
-Frequency (MHz):            140.568
+Period (ns):                7.310
+Frequency (MHz):            136.799
 Required Period (ns):       50.000
 Required Frequency (MHz):   20.000
-External Setup (ns):        -3.874
-External Hold (ns):         3.813
-Min Clock-To-Out (ns):      6.713
-Max Clock-To-Out (ns):      13.893
+External Setup (ns):        -3.401
+External Hold (ns):         3.539
+Min Clock-To-Out (ns):      7.043
+Max Clock-To-Out (ns):      13.469
 
 Clock Domain:               mss_ccc_gla0
 Period (ns):                10.000
@@ -256,62 +256,62 @@ Clock Domain mss_ccc_gla1
 SET Register to Register
 
 Path 1
-  From:                        AdcCapStub_0/cntrConv[18]:CLK
-  To:                          AdcCapStub_0/cntrConv[0]:D
-  Delay (ns):                  6.685
-  Slack (ns):                  42.886
-  Arrival (ns):                13.291
-  Required (ns):               56.177
+  From:                        AdcCapStub_0/cntrConv[23]:CLK
+  To:                          AdcCapStub_0/cntrConv[26]:D
+  Delay (ns):                  6.875
+  Slack (ns):                  42.690
+  Arrival (ns):                13.507
+  Required (ns):               56.197
   Setup (ns):                  0.435
-  Minimum Period (ns):         7.114
+  Minimum Period (ns):         7.310
 
 Path 2
-  From:                        AdcCapStub_0/cntrConv[15]:CLK
-  To:                          AdcCapStub_0/cntrConv[0]:D
-  Delay (ns):                  6.675
-  Slack (ns):                  42.896
-  Arrival (ns):                13.281
-  Required (ns):               56.177
+  From:                        AdcCapStub_0/cntrConv[23]:CLK
+  To:                          AdcCapStub_0/cntrConv[24]:D
+  Delay (ns):                  6.728
+  Slack (ns):                  42.837
+  Arrival (ns):                13.360
+  Required (ns):               56.197
   Setup (ns):                  0.435
-  Minimum Period (ns):         7.104
+  Minimum Period (ns):         7.163
 
 Path 3
-  From:                        AdcCapStub_0/cntrConv[18]:CLK
-  To:                          AdcCapStub_0/cntrConv[14]:D
-  Delay (ns):                  6.572
-  Slack (ns):                  42.988
-  Arrival (ns):                13.178
-  Required (ns):               56.166
+  From:                        AdcCapStub_0/cntrConv[23]:CLK
+  To:                          AdcCapStub_0/cntrConv[7]:D
+  Delay (ns):                  6.702
+  Slack (ns):                  42.851
+  Arrival (ns):                13.334
+  Required (ns):               56.185
   Setup (ns):                  0.435
-  Minimum Period (ns):         7.012
+  Minimum Period (ns):         7.149
 
 Path 4
-  From:                        AdcCapStub_0/cntrConv[15]:CLK
-  To:                          AdcCapStub_0/cntrConv[14]:D
-  Delay (ns):                  6.562
-  Slack (ns):                  42.998
-  Arrival (ns):                13.168
-  Required (ns):               56.166
+  From:                        AdcCapStub_0/cntrConv[23]:CLK
+  To:                          AdcCapStub_0/cntrConv[21]:D
+  Delay (ns):                  6.658
+  Slack (ns):                  42.885
+  Arrival (ns):                13.290
+  Required (ns):               56.175
   Setup (ns):                  0.435
-  Minimum Period (ns):         7.002
+  Minimum Period (ns):         7.115
 
 Path 5
-  From:                        AdcCapStub_0/cntrConv[3]:CLK
-  To:                          AdcCapStub_0/cntrConv[24]:D
-  Delay (ns):                  6.513
-  Slack (ns):                  43.037
-  Arrival (ns):                13.133
-  Required (ns):               56.170
+  From:                        AdcCapStub_0/cntrConv[19]:CLK
+  To:                          AdcCapStub_0/cntrConv[26]:D
+  Delay (ns):                  6.699
+  Slack (ns):                  42.888
+  Arrival (ns):                13.309
+  Required (ns):               56.197
   Setup (ns):                  0.435
-  Minimum Period (ns):         6.963
+  Minimum Period (ns):         7.112
 
 
 Expanded Path 1
-  From: AdcCapStub_0/cntrConv[18]:CLK
-  To: AdcCapStub_0/cntrConv[0]:D
-  data required time                             56.177
-  data arrival time                          -   13.291
-  slack                                          42.886
+  From: AdcCapStub_0/cntrConv[23]:CLK
+  To: AdcCapStub_0/cntrConv[26]:D
+  data required time                             56.197
+  data arrival time                          -   13.507
+  slack                                          42.690
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla1
@@ -323,34 +323,34 @@ Expanded Path 1
   6.045                        mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   6.045                        mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.561          net: FAB_CLK
-  6.606                        AdcCapStub_0/cntrConv[18]:CLK (r)
+               +     0.587          net: FAB_CLK
+  6.632                        AdcCapStub_0/cntrConv[23]:CLK (r)
                +     0.559          cell: ADLIB:DFN1
-  7.165                        AdcCapStub_0/cntrConv[18]:Q (f)
-               +     0.456          net: AdcCapStub_0/cntrConv[18]
-  7.621                        AdcCapStub_0/cntrConv_RNIJ0RF[15]:A (f)
-               +     0.407          cell: ADLIB:NOR2
-  8.028                        AdcCapStub_0/cntrConv_RNIJ0RF[15]:Y (r)
-               +     0.732          net: AdcCapStub_0/cntrConv13_10
-  8.760                        AdcCapStub_0/cntrConv_RNI49MV[21]:A (r)
+  7.191                        AdcCapStub_0/cntrConv[23]:Q (f)
+               +     1.218          net: AdcCapStub_0/cntrConv[23]
+  8.409                        AdcCapStub_0/cntrConv_RNIL8RF[23]:B (f)
+               +     0.493          cell: ADLIB:NOR2
+  8.902                        AdcCapStub_0/cntrConv_RNIL8RF[23]:Y (r)
+               +     0.262          net: AdcCapStub_0/cntrConv13_1
+  9.164                        AdcCapStub_0/cntrConv_RNIDLMV[30]:A (r)
                +     0.504          cell: ADLIB:NOR3A
-  9.264                        AdcCapStub_0/cntrConv_RNI49MV[21]:Y (r)
-               +     0.255          net: AdcCapStub_0/cntrConv13_20
-  9.519                        AdcCapStub_0/cntrConv_RNIIQCV1[21]:C (r)
-               +     0.505          cell: ADLIB:NOR3C
-  10.024                       AdcCapStub_0/cntrConv_RNIIQCV1[21]:Y (r)
-               +     0.823          net: AdcCapStub_0/cntrConv13_25
-  10.847                       AdcCapStub_0/cntrConv_RNIMHL28[12]:B (r)
+  9.668                        AdcCapStub_0/cntrConv_RNIDLMV[30]:Y (r)
+               +     0.519          net: AdcCapStub_0/cntrConv13_15
+  10.187                       AdcCapStub_0/cntrConv_RNISBOQ3[17]:B (r)
                +     0.473          cell: ADLIB:NOR3C
-  11.320                       AdcCapStub_0/cntrConv_RNIMHL28[12]:Y (r)
-               +     1.329          net: AdcCapStub_0/cntrConv13
-  12.649                       AdcCapStub_0/cntrConv_RNO[0]:B (r)
-               +     0.390          cell: ADLIB:NOR2
-  13.039                       AdcCapStub_0/cntrConv_RNO[0]:Y (f)
-               +     0.252          net: AdcCapStub_0/cntrConv_4[0]
-  13.291                       AdcCapStub_0/cntrConv[0]:D (f)
+  10.660                       AdcCapStub_0/cntrConv_RNISBOQ3[17]:Y (r)
+               +     0.255          net: AdcCapStub_0/cntrConv13_27
+  10.915                       AdcCapStub_0/cntrConv_RNIMHL28[12]:C (r)
+               +     0.505          cell: ADLIB:NOR3C
+  11.420                       AdcCapStub_0/cntrConv_RNIMHL28[12]:Y (r)
+               +     1.574          net: AdcCapStub_0/cntrConv13
+  12.994                       AdcCapStub_0/cntrConv_RNO[26]:C (r)
+               +     0.261          cell: ADLIB:XA1C
+  13.255                       AdcCapStub_0/cntrConv_RNO[26]:Y (f)
+               +     0.252          net: AdcCapStub_0/cntrConv_4[26]
+  13.507                       AdcCapStub_0/cntrConv[26]:D (f)
                                     
-  13.291                       data arrival time
+  13.507                       data arrival time
   ________________________________________________________
   Data required time calculation
   50.000                       mss_ccc_gla1
@@ -362,12 +362,12 @@ Expanded Path 1
   56.045                       mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   56.045                       mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.567          net: FAB_CLK
-  56.612                       AdcCapStub_0/cntrConv[0]:CLK (r)
+               +     0.587          net: FAB_CLK
+  56.632                       AdcCapStub_0/cntrConv[26]:CLK (r)
                -     0.435          Library setup time: ADLIB:DFN1
-  56.177                       AdcCapStub_0/cntrConv[0]:D
+  56.197                       AdcCapStub_0/cntrConv[26]:D
                                     
-  56.177                       data required time
+  56.197                       data required time
 
 
 END SET Register to Register
@@ -379,19 +379,19 @@ SET External Setup
 Path 1
   From:                        miso
   To:                          AdcCap_0/dataout[0]:D
-  Delay (ns):                  2.288
+  Delay (ns):                  2.784
   Slack (ns):
-  Arrival (ns):                2.288
+  Arrival (ns):                2.784
   Required (ns):
   Setup (ns):                  0.435
-  External Setup (ns):         -3.874
+  External Setup (ns):         -3.401
 
 
 Expanded Path 1
   From: miso
   To: AdcCap_0/dataout[0]:D
   data required time                             N/C
-  data arrival time                          -   2.288
+  data arrival time                          -   2.784
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -404,14 +404,14 @@ Expanded Path 1
   0.779                        miso_pad/U0/U1:YIN (r)
                +     0.033          cell: ADLIB:IOIN_IB
   0.812                        miso_pad/U0/U1:Y (r)
-               +     0.878          net: miso_c
-  1.690                        AdcCap_0/dataout_RNO[0]:A (r)
+               +     0.237          net: miso_c
+  1.049                        AdcCap_0/dataout_RNO[0]:A (r)
                +     0.353          cell: ADLIB:INV
-  2.043                        AdcCap_0/dataout_RNO[0]:Y (f)
-               +     0.245          net: AdcCap_0/miso_c_i
-  2.288                        AdcCap_0/dataout[0]:D (f)
+  1.402                        AdcCap_0/dataout_RNO[0]:Y (f)
+               +     1.382          net: AdcCap_0/miso_c_i
+  2.784                        AdcCap_0/dataout[0]:D (f)
                                     
-  2.288                        data arrival time
+  2.784                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          mss_ccc_gla1
@@ -423,7 +423,7 @@ Expanded Path 1
   N/C                          mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   N/C                          mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.552          net: FAB_CLK
+               +     0.575          net: FAB_CLK
   N/C                          AdcCap_0/dataout[0]:CLK (r)
                -     0.435          Library setup time: ADLIB:DFN1E1
   N/C                          AdcCap_0/dataout[0]:D
@@ -438,54 +438,54 @@ SET Clock to Output
 Path 1
   From:                        AdcCapStub_0/startCapture:CLK
   To:                          startCaptureTP
-  Delay (ns):                  7.285
+  Delay (ns):                  6.863
   Slack (ns):
-  Arrival (ns):                13.893
+  Arrival (ns):                13.469
   Required (ns):
-  Clock to Out (ns):           13.893
+  Clock to Out (ns):           13.469
 
 Path 2
   From:                        AdcCap_0/cs:CLK
   To:                          cs
-  Delay (ns):                  5.463
+  Delay (ns):                  5.879
   Slack (ns):
-  Arrival (ns):                12.060
+  Arrival (ns):                12.493
   Required (ns):
-  Clock to Out (ns):           12.060
+  Clock to Out (ns):           12.493
 
 Path 3
-  From:                        AdcCap_0/dataout[1]:CLK
-  To:                          ledsout[1]
-  Delay (ns):                  4.711
-  Slack (ns):
-  Arrival (ns):                11.321
-  Required (ns):
-  Clock to Out (ns):           11.321
-
-Path 4
   From:                        AdcCap_0/dataout[0]:CLK
   To:                          ledsout[0]
-  Delay (ns):                  4.679
+  Delay (ns):                  4.842
   Slack (ns):
-  Arrival (ns):                11.276
+  Arrival (ns):                11.462
   Required (ns):
-  Clock to Out (ns):           11.276
+  Clock to Out (ns):           11.462
+
+Path 4
+  From:                        AdcCap_0/dataout[4]:CLK
+  To:                          ledsout[4]
+  Delay (ns):                  4.715
+  Slack (ns):
+  Arrival (ns):                11.329
+  Required (ns):
+  Clock to Out (ns):           11.329
 
 Path 5
-  From:                        AdcCap_0/dataout[6]:CLK
-  To:                          ledsout[6]
-  Delay (ns):                  4.020
+  From:                        AdcCap_0/dataout[3]:CLK
+  To:                          ledsout[3]
+  Delay (ns):                  4.681
   Slack (ns):
-  Arrival (ns):                10.640
+  Arrival (ns):                11.287
   Required (ns):
-  Clock to Out (ns):           10.640
+  Clock to Out (ns):           11.287
 
 
 Expanded Path 1
   From: AdcCapStub_0/startCapture:CLK
   To: startCaptureTP
   data required time                             N/C
-  data arrival time                          -   13.893
+  data arrival time                          -   13.469
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -498,22 +498,22 @@ Expanded Path 1
   6.045                        mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   6.045                        mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.563          net: FAB_CLK
-  6.608                        AdcCapStub_0/startCapture:CLK (r)
+               +     0.561          net: FAB_CLK
+  6.606                        AdcCapStub_0/startCapture:CLK (r)
                +     0.559          cell: ADLIB:DFN1
-  7.167                        AdcCapStub_0/startCapture:Q (f)
-               +     3.476          net: startCaptureTP_c
-  10.643                       startCaptureTP_pad/U0/U1:D (f)
+  7.165                        AdcCapStub_0/startCapture:Q (f)
+               +     3.054          net: startCaptureTP_c
+  10.219                       startCaptureTP_pad/U0/U1:D (f)
                +     0.442          cell: ADLIB:IOTRI_OB_EB
-  11.085                       startCaptureTP_pad/U0/U1:DOUT (f)
+  10.661                       startCaptureTP_pad/U0/U1:DOUT (f)
                +     0.000          net: startCaptureTP_pad/U0/NET1
-  11.085                       startCaptureTP_pad/U0/U0:D (f)
+  10.661                       startCaptureTP_pad/U0/U0:D (f)
                +     2.808          cell: ADLIB:IOPAD_TRI
-  13.893                       startCaptureTP_pad/U0/U0:PAD (f)
+  13.469                       startCaptureTP_pad/U0/U0:PAD (f)
                +     0.000          net: startCaptureTP
-  13.893                       startCaptureTP (f)
+  13.469                       startCaptureTP (f)
                                     
-  13.893                       data arrival time
+  13.469                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          mss_ccc_gla1
@@ -557,47 +557,56 @@ SET mss_ccc_gla0 to mss_ccc_gla1
 
 Path 1
   From:                        mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          AdcCap_0/cntrWaitQuiet[0]:D
-  Delay (ns):                  7.579
-  Slack (ns):                  43.882
-  Arrival (ns):                12.301
-  Required (ns):               56.183
-  Setup (ns):                  0.409
+  To:                          AdcCap_0/cntrWaitQuiet[1]:E
+  Delay (ns):                  7.707
+  Slack (ns):                  43.720
+  Arrival (ns):                12.429
+  Required (ns):               56.149
+  Setup (ns):                  0.461
 
 Path 2
   From:                        mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          AdcCap_0/cntrWaitQuiet[1]:D
-  Delay (ns):                  7.579
-  Slack (ns):                  43.887
-  Arrival (ns):                12.301
-  Required (ns):               56.188
-  Setup (ns):                  0.409
+  To:                          AdcCap_0/cntrWaitQuiet[0]:E
+  Delay (ns):                  7.705
+  Slack (ns):                  43.722
+  Arrival (ns):                12.427
+  Required (ns):               56.149
+  Setup (ns):                  0.461
 
 Path 3
   From:                        mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          AdcCapStub_0/startCapture:D
-  Delay (ns):                  7.457
-  Slack (ns):                  43.994
-  Arrival (ns):                12.179
-  Required (ns):               56.173
-  Setup (ns):                  0.435
+  To:                          AdcCap_0/cntrWaitQuiet[2]:E
+  Delay (ns):                  7.705
+  Slack (ns):                  43.722
+  Arrival (ns):                12.427
+  Required (ns):               56.149
+  Setup (ns):                  0.461
 
 Path 4
   From:                        mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          AdcCapStub_0/startCapture:D
+  Delay (ns):                  7.496
+  Slack (ns):                  43.953
+  Arrival (ns):                12.218
+  Required (ns):               56.171
+  Setup (ns):                  0.435
+
+Path 5
+  From:                        mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
   To:                          AdcCap_0/cs:D
-  Delay (ns):                  7.334
-  Slack (ns):                  44.132
-  Arrival (ns):                12.056
-  Required (ns):               56.188
+  Delay (ns):                  7.362
+  Slack (ns):                  44.121
+  Arrival (ns):                12.084
+  Required (ns):               56.205
   Setup (ns):                  0.409
 
 
 Expanded Path 1
   From: mss_capture_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To: AdcCap_0/cntrWaitQuiet[0]:D
-  data required time                             56.183
-  data arrival time                          -   12.301
-  slack                                          43.882
+  To: AdcCap_0/cntrWaitQuiet[1]:E
+  data required time                             56.149
+  data arrival time                          -   12.429
+  slack                                          43.720
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla0
@@ -613,18 +622,18 @@ Expanded Path 1
   7.599                        mss_capture_MSS_0/MSS_ADLIB_INST/U_46:PIN2INT (r)
                +     0.079          cell: ADLIB:MSS_IF
   7.678                        mss_capture_MSS_0/MSS_ADLIB_INST/U_46:PIN2 (r)
-               +     3.181          net: mss_capture_MSS_0_M2F_RESET_N
-  10.859                       AdcCap_0/cs_RNI4RJ72:B (r)
-               +     0.390          cell: ADLIB:OR2
-  11.249                       AdcCap_0/cs_RNI4RJ72:Y (r)
-               +     0.292          net: AdcCap_0/N_30
-  11.541                       AdcCap_0/cntrWaitQuiet_RNO[0]:B (r)
-               +     0.505          cell: ADLIB:AO1
-  12.046                       AdcCap_0/cntrWaitQuiet_RNO[0]:Y (r)
-               +     0.255          net: AdcCap_0/cntrWaitQuiet_6[0]
-  12.301                       AdcCap_0/cntrWaitQuiet[0]:D (r)
+               +     3.232          net: mss_capture_MSS_0_M2F_RESET_N
+  10.910                       AdcCap_0/cntrWaitQuiet_RNIUV542[2]:A (r)
+               +     0.407          cell: ADLIB:OR2A
+  11.317                       AdcCap_0/cntrWaitQuiet_RNIUV542[2]:Y (f)
+               +     0.255          net: AdcCap_0/N_43
+  11.572                       AdcCap_0/cs_RNIFJ5E4:C (f)
+               +     0.535          cell: ADLIB:AO1A
+  12.107                       AdcCap_0/cs_RNIFJ5E4:Y (f)
+               +     0.322          net: AdcCap_0/cntrWaitQuiete
+  12.429                       AdcCap_0/cntrWaitQuiet[1]:E (f)
                                     
-  12.301                       data arrival time
+  12.429                       data arrival time
   ________________________________________________________
   Data required time calculation
   50.000                       mss_ccc_gla1
@@ -636,12 +645,12 @@ Expanded Path 1
   56.045                       mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   56.045                       mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.547          net: FAB_CLK
-  56.592                       AdcCap_0/cntrWaitQuiet[0]:CLK (r)
-               -     0.409          Library setup time: ADLIB:DFN1
-  56.183                       AdcCap_0/cntrWaitQuiet[0]:D
+               +     0.565          net: FAB_CLK
+  56.610                       AdcCap_0/cntrWaitQuiet[1]:CLK (r)
+               -     0.461          Library setup time: ADLIB:DFN1E1
+  56.149                       AdcCap_0/cntrWaitQuiet[1]:E
                                     
-  56.183                       data required time
+  56.149                       data required time
 
 
 END SET mss_ccc_gla0 to mss_ccc_gla1

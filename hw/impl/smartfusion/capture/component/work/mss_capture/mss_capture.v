@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb 08 19:18:46 2013
+// Created by SmartDesign Sun Feb 10 20:44:07 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -155,12 +155,12 @@ wire          SPI_0_DO_net_1;
 wire          MAC_MDC_net_1;
 wire          MAC_TXEN_net_1;
 wire          cs_net_1;
+wire          SPI_CLK_net_1;
+wire          startCaptureTP_net_1;
 wire   [25:0] EMC_AB_net_1;
 wire   [1:0]  EMC_BYTEN_net_1;
 wire   [1:0]  MAC_TXD_net_1;
 wire   [7:0]  ledsout_net_1;
-wire          SPI_CLK_net_1;
-wire          startCaptureTP_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -190,6 +190,10 @@ assign MAC_TXEN_net_1       = MAC_TXEN_net_0;
 assign MAC_TXEN             = MAC_TXEN_net_1;
 assign cs_net_1             = cs_net_0;
 assign cs                   = cs_net_1;
+assign SPI_CLK_net_1        = SPI_CLK_net_0;
+assign SPI_CLK              = SPI_CLK_net_1;
+assign startCaptureTP_net_1 = startCaptureTP_net_0;
+assign startCaptureTP       = startCaptureTP_net_1;
 assign EMC_AB_net_1         = EMC_AB_net_0;
 assign EMC_AB[25:0]         = EMC_AB_net_1;
 assign EMC_BYTEN_net_1      = EMC_BYTEN_net_0;
@@ -198,10 +202,6 @@ assign MAC_TXD_net_1        = MAC_TXD_net_0;
 assign MAC_TXD[1:0]         = MAC_TXD_net_1;
 assign ledsout_net_1        = ledsout_net_0;
 assign ledsout[7:0]         = ledsout_net_1;
-assign SPI_CLK_net_1        = SPI_CLK_net_0;
-assign SPI_CLK              = SPI_CLK_net_1;
-assign startCaptureTP_net_1 = startCaptureTP_net_0;
-assign startCaptureTP       = startCaptureTP_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------

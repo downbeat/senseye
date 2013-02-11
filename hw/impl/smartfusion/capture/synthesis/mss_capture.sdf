@@ -61,6 +61,10 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[9\]/CLK  AdcCapStub_0/cntrConv\[9\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/A  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_80/A  AdcCapStub_0/un5_cntrConv_1_I_80/Y  AdcCapStub_0/un5_cntrConv_1_I_87/B  AdcCapStub_0/un5_cntrConv_1_I_87/Y  AdcCapStub_0/un5_cntrConv_1_I_88/A  AdcCapStub_0/un5_cntrConv_1_I_88/Y  AdcCapStub_0/un5_cntrConv_1_I_89/A  AdcCapStub_0/un5_cntrConv_1_I_89/Y  AdcCapStub_0/cntrConv_RNO\[28\]/A  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[0\]/E  	(49.6:49.6:49.6) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[7\]/CLK  AdcCapStub_0/cntrConv\[7\]/Q  AdcCapStub_0/cntrConv_RNI8REI\[5\]/A  AdcCapStub_0/cntrConv_RNI8REI\[5\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/A  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[0\]/B  AdcCapStub_0/cntrConv_RNO\[0\]/Y  AdcCapStub_0/cntrConv\[0\]/D  	(49.5:49.5:49.5) )
@@ -71,39 +75,39 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[11\]/CLK  AdcCapStub_0/cntrConv\[11\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/C  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_80/A  AdcCapStub_0/un5_cntrConv_1_I_80/Y  AdcCapStub_0/un5_cntrConv_1_I_87/B  AdcCapStub_0/un5_cntrConv_1_I_87/Y  AdcCapStub_0/un5_cntrConv_1_I_88/A  AdcCapStub_0/un5_cntrConv_1_I_88/Y  AdcCapStub_0/un5_cntrConv_1_I_89/A  AdcCapStub_0/un5_cntrConv_1_I_89/Y  AdcCapStub_0/cntrConv_RNO\[28\]/A  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[30\]/B  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[29\]/B  AdcCapStub_0/cntrConv_RNO\[29\]/Y  AdcCapStub_0/cntrConv\[29\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[28\]/B  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[27\]/B  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[26\]/B  AdcCapStub_0/cntrConv_RNO\[26\]/Y  AdcCapStub_0/cntrConv\[26\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[25\]/B  AdcCapStub_0/cntrConv_RNO\[25\]/Y  AdcCapStub_0/cntrConv\[25\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[24\]/B  AdcCapStub_0/cntrConv_RNO\[24\]/Y  AdcCapStub_0/cntrConv\[24\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[22\]/B  AdcCapStub_0/cntrConv_RNO\[22\]/Y  AdcCapStub_0/cntrConv\[22\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[21\]/B  AdcCapStub_0/cntrConv_RNO\[21\]/Y  AdcCapStub_0/cntrConv\[21\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[18\]/B  AdcCapStub_0/cntrConv_RNO\[18\]/Y  AdcCapStub_0/cntrConv\[18\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[17\]/B  AdcCapStub_0/cntrConv_RNO\[17\]/Y  AdcCapStub_0/cntrConv\[17\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[16\]/B  AdcCapStub_0/cntrConv_RNO\[16\]/Y  AdcCapStub_0/cntrConv\[16\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[14\]/B  AdcCapStub_0/cntrConv_RNO\[14\]/Y  AdcCapStub_0/cntrConv\[14\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[13\]/B  AdcCapStub_0/cntrConv_RNO\[13\]/Y  AdcCapStub_0/cntrConv\[13\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[8\]/B  AdcCapStub_0/cntrConv_RNO\[8\]/Y  AdcCapStub_0/cntrConv\[8\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[11\]/B  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[7\]/B  AdcCapStub_0/cntrConv_RNO\[7\]/Y  AdcCapStub_0/cntrConv\[7\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[11\]/B  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[8\]/B  AdcCapStub_0/cntrConv_RNO\[8\]/Y  AdcCapStub_0/cntrConv\[8\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[13\]/B  AdcCapStub_0/cntrConv_RNO\[13\]/Y  AdcCapStub_0/cntrConv\[13\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[14\]/B  AdcCapStub_0/cntrConv_RNO\[14\]/Y  AdcCapStub_0/cntrConv\[14\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[16\]/B  AdcCapStub_0/cntrConv_RNO\[16\]/Y  AdcCapStub_0/cntrConv\[16\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[17\]/B  AdcCapStub_0/cntrConv_RNO\[17\]/Y  AdcCapStub_0/cntrConv\[17\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[18\]/B  AdcCapStub_0/cntrConv_RNO\[18\]/Y  AdcCapStub_0/cntrConv\[18\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[21\]/B  AdcCapStub_0/cntrConv_RNO\[21\]/Y  AdcCapStub_0/cntrConv\[21\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[22\]/B  AdcCapStub_0/cntrConv_RNO\[22\]/Y  AdcCapStub_0/cntrConv\[22\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[24\]/B  AdcCapStub_0/cntrConv_RNO\[24\]/Y  AdcCapStub_0/cntrConv\[24\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[25\]/B  AdcCapStub_0/cntrConv_RNO\[25\]/Y  AdcCapStub_0/cntrConv\[25\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[26\]/B  AdcCapStub_0/cntrConv_RNO\[26\]/Y  AdcCapStub_0/cntrConv\[26\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[27\]/B  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[28\]/B  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[29\]/B  AdcCapStub_0/cntrConv_RNO\[29\]/Y  AdcCapStub_0/cntrConv\[29\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/C  AdcCapStub_0/cntrConv_RNI3M1P\[16\]/Y  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/C  AdcCapStub_0/cntrConv_RNIKHBR1\[10\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/C  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrConv_RNO\[30\]/B  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_30/A  AdcCapStub_0/un5_cntrConv_1_I_30/Y  AdcCapStub_0/un5_cntrConv_1_I_31/A  AdcCapStub_0/un5_cntrConv_1_I_31/Y  AdcCapStub_0/un5_cntrConv_1_I_32/A  AdcCapStub_0/un5_cntrConv_1_I_32/Y  AdcCapStub_0/cntrConv_RNO\[11\]/A  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
@@ -141,10 +145,6 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/un5_cntrConv_1_I_18/B  AdcCapStub_0/un5_cntrConv_1_I_18/Y  AdcCapStub_0/un5_cntrConv_1_I_30/B  AdcCapStub_0/un5_cntrConv_1_I_30/Y  AdcCapStub_0/un5_cntrConv_1_I_31/A  AdcCapStub_0/un5_cntrConv_1_I_31/Y  AdcCapStub_0/un5_cntrConv_1_I_32/A  AdcCapStub_0/un5_cntrConv_1_I_32/Y  AdcCapStub_0/cntrConv_RNO\[11\]/A  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_7/B  AdcCap_0/un1_cntrWaitQuiet_I_7/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/A  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[14\]/CLK  AdcCapStub_0/cntrConv\[14\]/Q  AdcCapStub_0/cntrConv_RNIB0RF\[11\]/A  AdcCapStub_0/cntrConv_RNIB0RF\[11\]/Y  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/A  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/A  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[15\]/CLK  AdcCapStub_0/cntrConv\[15\]/Q  AdcCapStub_0/un5_cntrConv_1_I_50/A  AdcCapStub_0/un5_cntrConv_1_I_50/Y  AdcCapStub_0/un5_cntrConv_1_I_80/C  AdcCapStub_0/un5_cntrConv_1_I_80/Y  AdcCapStub_0/un5_cntrConv_1_I_87/B  AdcCapStub_0/un5_cntrConv_1_I_87/Y  AdcCapStub_0/un5_cntrConv_1_I_88/A  AdcCapStub_0/un5_cntrConv_1_I_88/Y  AdcCapStub_0/un5_cntrConv_1_I_89/A  AdcCapStub_0/un5_cntrConv_1_I_89/Y  AdcCapStub_0/cntrConv_RNO\[28\]/A  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
@@ -169,11 +169,21 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_51/A  AdcCapStub_0/un5_cntrConv_1_I_51/Y  AdcCapStub_0/un5_cntrConv_1_I_64/A  AdcCapStub_0/un5_cntrConv_1_I_64/Y  AdcCapStub_0/un5_cntrConv_1_I_65/A  AdcCapStub_0/un5_cntrConv_1_I_65/Y  AdcCapStub_0/cntrConv_RNO\[22\]/A  AdcCapStub_0/cntrConv_RNO\[22\]/Y  AdcCapStub_0/cntrConv\[22\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/B  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/B  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/B  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[1\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/B  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[0\]/E  	(49.6:49.6:49.6) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/un5_cntrConv_1_I_18/B  AdcCapStub_0/un5_cntrConv_1_I_18/Y  AdcCapStub_0/un5_cntrConv_1_I_51/B  AdcCapStub_0/un5_cntrConv_1_I_51/Y  AdcCapStub_0/un5_cntrConv_1_I_52/A  AdcCapStub_0/un5_cntrConv_1_I_52/Y  AdcCapStub_0/un5_cntrConv_1_I_53/A  AdcCapStub_0/un5_cntrConv_1_I_53/Y  AdcCapStub_0/cntrConv_RNO\[18\]/A  AdcCapStub_0/cntrConv_RNO\[18\]/Y  AdcCapStub_0/cntrConv\[18\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[24\]/CLK  AdcCapStub_0/cntrConv\[24\]/Q  AdcCapStub_0/cntrConv_RNI49MV\[21\]/C  AdcCapStub_0/cntrConv_RNI49MV\[21\]/Y  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/C  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/B  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[17\]/CLK  AdcCapStub_0/cntrConv\[17\]/Q  AdcCapStub_0/un5_cntrConv_1_I_50/C  AdcCapStub_0/un5_cntrConv_1_I_50/Y  AdcCapStub_0/un5_cntrConv_1_I_80/C  AdcCapStub_0/un5_cntrConv_1_I_80/Y  AdcCapStub_0/un5_cntrConv_1_I_87/B  AdcCapStub_0/un5_cntrConv_1_I_87/Y  AdcCapStub_0/un5_cntrConv_1_I_88/A  AdcCapStub_0/un5_cntrConv_1_I_88/Y  AdcCapStub_0/un5_cntrConv_1_I_89/A  AdcCapStub_0/un5_cntrConv_1_I_89/Y  AdcCapStub_0/cntrConv_RNO\[28\]/A  AdcCapStub_0/cntrConv_RNO\[28\]/Y  AdcCapStub_0/cntrConv\[28\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cs_RNO_1/C  AdcCap_0/cs_RNO_1/Y  AdcCap_0/cs_RNO/C  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[19\]/CLK  AdcCapStub_0/cntrConv\[19\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/B  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_84/A  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
@@ -185,6 +195,8 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/cntrConv_RNI2UR41\[2\]/C  AdcCapStub_0/cntrConv_RNI2UR41\[2\]/Y  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/C  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/A  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
+    (PATHCONSTRAINT AdcCapStub_0/startCapture/CLK  AdcCapStub_0/startCapture/Q  AdcCap_0/cs_RNIA3BE/B  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[22\]/CLK  AdcCapStub_0/cntrConv\[22\]/Q  AdcCapStub_0/un5_cntrConv_1_I_71/B  AdcCapStub_0/un5_cntrConv_1_I_71/Y  AdcCapStub_0/un5_cntrConv_1_I_84/B  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[18\]/CLK  AdcCapStub_0/cntrConv\[18\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/A  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_84/A  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
@@ -192,14 +204,6 @@
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[16\]/CLK  AdcCapStub_0/cntrConv\[16\]/Q  AdcCapStub_0/un5_cntrConv_1_I_50/B  AdcCapStub_0/un5_cntrConv_1_I_50/Y  AdcCapStub_0/un5_cntrConv_1_I_54/C  AdcCapStub_0/un5_cntrConv_1_I_54/Y  AdcCapStub_0/un5_cntrConv_1_I_61/B  AdcCapStub_0/un5_cntrConv_1_I_61/Y  AdcCapStub_0/un5_cntrConv_1_I_62/A  AdcCapStub_0/un5_cntrConv_1_I_62/Y  AdcCapStub_0/cntrConv_RNO\[21\]/A  AdcCapStub_0/cntrConv_RNO\[21\]/Y  AdcCapStub_0/cntrConv\[21\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[25\]/CLK  AdcCapStub_0/cntrConv\[25\]/Q  AdcCapStub_0/cntrConv_RNIP8RF\[25\]/B  AdcCapStub_0/cntrConv_RNIP8RF\[25\]/Y  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/B  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/B  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[2\]/E  	(49.6:49.6:49.6) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[1\]/E  	(49.6:49.6:49.6) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[0\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[27\]/CLK  AdcCapStub_0/cntrConv\[27\]/Q  AdcCapStub_0/cntrConv_RNIL8RF\[22\]/B  AdcCapStub_0/cntrConv_RNIL8RF\[22\]/Y  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/A  AdcCapStub_0/cntrConv_RNIIQCV1\[21\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/B  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
@@ -209,15 +213,9 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[8\]/CLK  AdcCapStub_0/cntrConv\[8\]/Q  AdcCapStub_0/un5_cntrConv_1_I_29/C  AdcCapStub_0/un5_cntrConv_1_I_29/Y  AdcCapStub_0/un5_cntrConv_1_I_30/C  AdcCapStub_0/un5_cntrConv_1_I_30/Y  AdcCapStub_0/un5_cntrConv_1_I_31/A  AdcCapStub_0/un5_cntrConv_1_I_31/Y  AdcCapStub_0/un5_cntrConv_1_I_32/A  AdcCapStub_0/un5_cntrConv_1_I_32/Y  AdcCapStub_0/cntrConv_RNO\[11\]/A  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cs_RNO_1/C  AdcCap_0/cs_RNO_1/Y  AdcCap_0/cs_RNO/C  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[21\]/CLK  AdcCapStub_0/cntrConv\[21\]/Q  AdcCapStub_0/un5_cntrConv_1_I_71/A  AdcCapStub_0/un5_cntrConv_1_I_71/Y  AdcCapStub_0/un5_cntrConv_1_I_84/B  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[1\]/CLK  AdcCap_0/bitsRead\[1\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/A  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[6\]/CLK  AdcCapStub_0/cntrConv\[6\]/Q  AdcCapStub_0/cntrConv_RNIA3FI\[6\]/B  AdcCapStub_0/cntrConv_RNIA3FI\[6\]/Y  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/A  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/A  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
-
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/B  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/Y  AdcCap_0/un1_cntrWaitTrailing_I_1/B  AdcCap_0/un1_cntrWaitTrailing_I_1/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/B  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[2\]/CLK  AdcCapStub_0/cntrConv\[2\]/Q  AdcCapStub_0/cntrConv_RNI2UR41\[2\]/B  AdcCapStub_0/cntrConv_RNI2UR41\[2\]/Y  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/C  AdcCapStub_0/cntrConv_RNI8BG82\[12\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/A  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
@@ -227,13 +225,9 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_30/A  AdcCapStub_0/un5_cntrConv_1_I_30/Y  AdcCapStub_0/un5_cntrConv_1_I_34/B  AdcCapStub_0/un5_cntrConv_1_I_34/Y  AdcCapStub_0/un5_cntrConv_1_I_35/A  AdcCapStub_0/un5_cntrConv_1_I_35/Y  AdcCapStub_0/cntrConv\[12\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/C  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[20\]/CLK  AdcCapStub_0/cntrConv\[20\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/C  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_84/A  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[2\]/CLK  AdcCap_0/bitsRead\[2\]/Q  AdcCap_0/bitsRead_RNIVC3D\[3\]/B  AdcCap_0/bitsRead_RNIVC3D\[3\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/A  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/B  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/Y  AdcCap_0/cs_RNIEKN11/B  AdcCap_0/cs_RNIEKN11/Y  AdcCap_0/cs_RNI8UTR1/A  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[3\]/CLK  AdcCap_0/bitsRead\[3\]/Q  AdcCap_0/bitsRead_RNIVC3D\[3\]/A  AdcCap_0/bitsRead_RNIVC3D\[3\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/A  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_44/A  AdcCapStub_0/un5_cntrConv_1_I_44/Y  AdcCapStub_0/un5_cntrConv_1_I_45/B  AdcCapStub_0/un5_cntrConv_1_I_45/Y  AdcCapStub_0/un5_cntrConv_1_I_46/A  AdcCapStub_0/un5_cntrConv_1_I_46/Y  AdcCapStub_0/cntrConv_RNO\[16\]/A  AdcCapStub_0/cntrConv_RNO\[16\]/Y  AdcCapStub_0/cntrConv\[16\]/D  	(49.5:49.5:49.5) )
 
@@ -257,8 +251,6 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[20\]/CLK  AdcCapStub_0/cntrConv\[20\]/Q  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/C  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/A  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_8/B  AdcCap_0/un1_cntrWaitQuiet_I_8/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/A  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[13\]/CLK  AdcCapStub_0/cntrConv\[13\]/Q  AdcCapStub_0/un5_cntrConv_1_I_41/B  AdcCapStub_0/un5_cntrConv_1_I_41/Y  AdcCapStub_0/un5_cntrConv_1_I_44/B  AdcCapStub_0/un5_cntrConv_1_I_44/Y  AdcCapStub_0/un5_cntrConv_1_I_45/B  AdcCapStub_0/un5_cntrConv_1_I_45/Y  AdcCapStub_0/un5_cntrConv_1_I_46/A  AdcCapStub_0/un5_cntrConv_1_I_46/Y  AdcCapStub_0/cntrConv_RNO\[16\]/A  AdcCapStub_0/cntrConv_RNO\[16\]/Y  AdcCapStub_0/cntrConv\[16\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_54/A  AdcCapStub_0/un5_cntrConv_1_I_54/Y  AdcCapStub_0/un5_cntrConv_1_I_58/B  AdcCapStub_0/un5_cntrConv_1_I_58/Y  AdcCapStub_0/un5_cntrConv_1_I_59/A  AdcCapStub_0/un5_cntrConv_1_I_59/Y  AdcCapStub_0/cntrConv\[20\]/D  	(49.5:49.5:49.5) )
@@ -266,8 +258,6 @@
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_54/A  AdcCapStub_0/un5_cntrConv_1_I_54/Y  AdcCapStub_0/un5_cntrConv_1_I_55/B  AdcCapStub_0/un5_cntrConv_1_I_55/Y  AdcCapStub_0/un5_cntrConv_1_I_56/A  AdcCapStub_0/un5_cntrConv_1_I_56/Y  AdcCapStub_0/cntrConv\[19\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_54/A  AdcCapStub_0/un5_cntrConv_1_I_54/Y  AdcCapStub_0/un5_cntrConv_1_I_69/B  AdcCapStub_0/un5_cntrConv_1_I_69/Y  AdcCapStub_0/un5_cntrConv_1_I_70/A  AdcCapStub_0/un5_cntrConv_1_I_70/Y  AdcCapStub_0/cntrConv\[23\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIEKN11/A  AdcCap_0/cs_RNIEKN11/Y  AdcCap_0/cs_RNI8UTR1/A  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[29\]/CLK  AdcCapStub_0/cntrConv\[29\]/Q  AdcCapStub_0/cntrConv_RNIDLMV\[30\]/B  AdcCapStub_0/cntrConv_RNIDLMV\[30\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/B  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
@@ -279,9 +269,11 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[17\]/CLK  AdcCapStub_0/cntrConv\[17\]/Q  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/B  AdcCapStub_0/cntrConv_RNIR4MV\[17\]/Y  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/A  AdcCapStub_0/cntrConv_RNISBOQ3\[17\]/Y  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/C  AdcCapStub_0/cntrConv_RNIMHL28\[12\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/B  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/cs_RNI4RJ72/A  AdcCap_0/cs_RNI4RJ72/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/B  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitLeading_RNO\[0\]/B  AdcCap_0/cntrWaitLeading_RNO\[0\]/Y  AdcCap_0/cntrWaitLeading\[0\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNI8UTR1/B  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/cs_RNI4RJ72/A  AdcCap_0/cs_RNI4RJ72/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/B  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/B  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[2\]/C  AdcCap_0/cntrWaitQuiet_RNO\[2\]/Y  AdcCap_0/cntrWaitQuiet\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[19\]/CLK  AdcCapStub_0/cntrConv\[19\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/B  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_72/A  AdcCapStub_0/un5_cntrConv_1_I_72/Y  AdcCapStub_0/un5_cntrConv_1_I_73/C  AdcCapStub_0/un5_cntrConv_1_I_73/Y  AdcCapStub_0/un5_cntrConv_1_I_74/A  AdcCapStub_0/un5_cntrConv_1_I_74/Y  AdcCapStub_0/cntrConv_RNO\[24\]/A  AdcCapStub_0/cntrConv_RNO\[24\]/Y  AdcCapStub_0/cntrConv\[24\]/D  	(49.5:49.5:49.5) )
 
@@ -293,9 +285,7 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[19\]/CLK  AdcCapStub_0/cntrConv\[19\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/B  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_79/A  AdcCapStub_0/un5_cntrConv_1_I_79/Y  AdcCapStub_0/un5_cntrConv_1_I_81/C  AdcCapStub_0/un5_cntrConv_1_I_81/Y  AdcCapStub_0/un5_cntrConv_1_I_82/A  AdcCapStub_0/un5_cntrConv_1_I_82/Y  AdcCapStub_0/cntrConv_RNO\[26\]/A  AdcCapStub_0/cntrConv_RNO\[26\]/Y  AdcCapStub_0/cntrConv\[26\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[1\]/CLK  AdcCap_0/cntrWaitQuiet\[1\]/Q  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/Y  AdcCap_0/cs_RNIEKN11/B  AdcCap_0/cs_RNIEKN11/Y  AdcCap_0/cs_RNI8UTR1/A  AdcCap_0/cs_RNI8UTR1/Y  AdcCap_0/un1_cntrWaitQuiet_I_1/B  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/startCapture/CLK  AdcCapStub_0/startCapture/Q  AdcCap_0/cs_RNIA3BE/B  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/B  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[25\]/CLK  AdcCapStub_0/cntrConv\[25\]/Q  AdcCapStub_0/un5_cntrConv_1_I_83/B  AdcCapStub_0/un5_cntrConv_1_I_83/Y  AdcCapStub_0/un5_cntrConv_1_I_84/C  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
@@ -303,31 +293,21 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[22\]/CLK  AdcCapStub_0/cntrConv\[22\]/Q  AdcCapStub_0/un5_cntrConv_1_I_71/B  AdcCapStub_0/un5_cntrConv_1_I_71/Y  AdcCapStub_0/un5_cntrConv_1_I_75/B  AdcCapStub_0/un5_cntrConv_1_I_75/Y  AdcCapStub_0/un5_cntrConv_1_I_76/C  AdcCapStub_0/un5_cntrConv_1_I_76/Y  AdcCapStub_0/un5_cntrConv_1_I_77/A  AdcCapStub_0/un5_cntrConv_1_I_77/Y  AdcCapStub_0/cntrConv_RNO\[25\]/A  AdcCapStub_0/cntrConv_RNO\[25\]/Y  AdcCapStub_0/cntrConv\[25\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[1\]/CLK  AdcCap_0/cntrWaitQuiet\[1\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/B  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[22\]/CLK  AdcCapStub_0/cntrConv\[22\]/Q  AdcCapStub_0/un5_cntrConv_1_I_71/B  AdcCapStub_0/un5_cntrConv_1_I_71/Y  AdcCapStub_0/un5_cntrConv_1_I_72/B  AdcCapStub_0/un5_cntrConv_1_I_72/Y  AdcCapStub_0/un5_cntrConv_1_I_73/C  AdcCapStub_0/un5_cntrConv_1_I_73/Y  AdcCapStub_0/un5_cntrConv_1_I_74/A  AdcCapStub_0/un5_cntrConv_1_I_74/Y  AdcCapStub_0/cntrConv_RNO\[24\]/A  AdcCapStub_0/cntrConv_RNO\[24\]/Y  AdcCapStub_0/cntrConv\[24\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/B  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNO\[0\]/B  AdcCap_0/cntrWaitTrailing_RNO\[0\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/B  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[24\]/CLK  AdcCapStub_0/cntrConv\[24\]/Q  AdcCapStub_0/un5_cntrConv_1_I_83/A  AdcCapStub_0/un5_cntrConv_1_I_83/Y  AdcCapStub_0/un5_cntrConv_1_I_84/C  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/B  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/Y  AdcCap_0/un1_cntrWaitTrailing_I_8/B  AdcCap_0/un1_cntrWaitTrailing_I_8/Y  AdcCap_0/cntrWaitTrailing_RNO\[0\]/A  AdcCap_0/cntrWaitTrailing_RNO\[0\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/C  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/C  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/C  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/A  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/Y  AdcCap_0/un1_cntrWaitTrailing_I_1/B  AdcCap_0/un1_cntrWaitTrailing_I_1/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/B  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cs_RNIFJ5E4/A  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[26\]/CLK  AdcCapStub_0/cntrConv\[26\]/Q  AdcCapStub_0/un5_cntrConv_1_I_83/C  AdcCapStub_0/un5_cntrConv_1_I_83/Y  AdcCapStub_0/un5_cntrConv_1_I_84/C  AdcCapStub_0/un5_cntrConv_1_I_84/Y  AdcCapStub_0/un5_cntrConv_1_I_85/C  AdcCapStub_0/un5_cntrConv_1_I_85/Y  AdcCapStub_0/un5_cntrConv_1_I_86/A  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/A  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/cntrWaitLeading_RNO\[0\]/B  AdcCap_0/cntrWaitLeading_RNO\[0\]/Y  AdcCap_0/cntrWaitLeading\[0\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[2\]/CLK  AdcCap_0/cntrWaitQuiet\[2\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/C  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/B  AdcCap_0/cntrWaitQuiet_RNI23GO1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/B  AdcCap_0/cntrWaitQuiet_RNIUV542\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/C  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_24/A  AdcCapStub_0/un5_cntrConv_1_I_24/Y  AdcCapStub_0/un5_cntrConv_1_I_25/B  AdcCapStub_0/un5_cntrConv_1_I_25/Y  AdcCapStub_0/un5_cntrConv_1_I_26/A  AdcCapStub_0/un5_cntrConv_1_I_26/Y  AdcCapStub_0/cntrConv\[9\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/A  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/A  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/Y  AdcCap_0/un1_cntrWaitTrailing_I_1/B  AdcCap_0/un1_cntrWaitTrailing_I_1/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/B  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_22/A  AdcCapStub_0/un5_cntrConv_1_I_22/Y  AdcCapStub_0/un5_cntrConv_1_I_23/A  AdcCapStub_0/un5_cntrConv_1_I_23/Y  AdcCapStub_0/cntrConv_RNO\[8\]/A  AdcCapStub_0/cntrConv_RNO\[8\]/Y  AdcCapStub_0/cntrConv\[8\]/D  	(49.5:49.5:49.5) )
 
@@ -336,6 +316,12 @@
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/un5_cntrConv_1_I_18/B  AdcCapStub_0/un5_cntrConv_1_I_18/Y  AdcCapStub_0/un5_cntrConv_1_I_24/B  AdcCapStub_0/un5_cntrConv_1_I_24/Y  AdcCapStub_0/un5_cntrConv_1_I_25/B  AdcCapStub_0/un5_cntrConv_1_I_25/Y  AdcCapStub_0/un5_cntrConv_1_I_26/A  AdcCapStub_0/un5_cntrConv_1_I_26/Y  AdcCapStub_0/cntrConv\[9\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_24/A  AdcCapStub_0/un5_cntrConv_1_I_24/Y  AdcCapStub_0/un5_cntrConv_1_I_27/A  AdcCapStub_0/un5_cntrConv_1_I_27/Y  AdcCapStub_0/un5_cntrConv_1_I_28/A  AdcCapStub_0/un5_cntrConv_1_I_28/Y  AdcCapStub_0/cntrConv\[10\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/B  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/B  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cntrWaitQuiet_RNO\[2\]/A  AdcCap_0/cntrWaitQuiet_RNO\[2\]/Y  AdcCap_0/cntrWaitQuiet\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[19\]/CLK  AdcCapStub_0/cntrConv\[19\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/B  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_61/C  AdcCapStub_0/un5_cntrConv_1_I_61/Y  AdcCapStub_0/un5_cntrConv_1_I_62/A  AdcCapStub_0/un5_cntrConv_1_I_62/Y  AdcCapStub_0/cntrConv_RNO\[21\]/A  AdcCapStub_0/cntrConv_RNO\[21\]/Y  AdcCapStub_0/cntrConv\[21\]/D  	(49.5:49.5:49.5) )
 
@@ -353,47 +339,53 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[19\]/CLK  AdcCapStub_0/cntrConv\[19\]/Q  AdcCapStub_0/un5_cntrConv_1_I_60/B  AdcCapStub_0/un5_cntrConv_1_I_60/Y  AdcCapStub_0/un5_cntrConv_1_I_66/A  AdcCapStub_0/un5_cntrConv_1_I_66/Y  AdcCapStub_0/un5_cntrConv_1_I_69/C  AdcCapStub_0/un5_cntrConv_1_I_69/Y  AdcCapStub_0/un5_cntrConv_1_I_70/A  AdcCapStub_0/un5_cntrConv_1_I_70/Y  AdcCapStub_0/cntrConv\[23\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[1\]/CLK  AdcCap_0/cntrWaitTrailing\[1\]/Q  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/B  AdcCap_0/cntrWaitTrailing_RNIM0IN\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/A  AdcCap_0/cntrWaitTrailing_RNIGAOH1\[1\]/Y  AdcCap_0/un1_cntrWaitTrailing_I_1/B  AdcCap_0/un1_cntrWaitTrailing_I_1/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/B  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[1\]/CLK  AdcCap_0/bitsRead\[1\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/A  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cs_RNIFJ5E4/A  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[2\]/CLK  AdcCap_0/bitsRead\[2\]/Q  AdcCap_0/bitsRead_RNIVC3D\[3\]/B  AdcCap_0/bitsRead_RNIVC3D\[3\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/A  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cs_RNIFJ5E4/A  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[25\]/CLK  AdcCapStub_0/cntrConv\[25\]/Q  AdcCapStub_0/un5_cntrConv_1_I_78/B  AdcCapStub_0/un5_cntrConv_1_I_78/Y  AdcCapStub_0/un5_cntrConv_1_I_79/C  AdcCapStub_0/un5_cntrConv_1_I_79/Y  AdcCapStub_0/un5_cntrConv_1_I_81/C  AdcCapStub_0/un5_cntrConv_1_I_81/Y  AdcCapStub_0/un5_cntrConv_1_I_82/A  AdcCapStub_0/un5_cntrConv_1_I_82/Y  AdcCapStub_0/cntrConv_RNO\[26\]/A  AdcCapStub_0/cntrConv_RNO\[26\]/Y  AdcCapStub_0/cntrConv\[26\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[24\]/CLK  AdcCapStub_0/cntrConv\[24\]/Q  AdcCapStub_0/un5_cntrConv_1_I_78/A  AdcCapStub_0/un5_cntrConv_1_I_78/Y  AdcCapStub_0/un5_cntrConv_1_I_79/C  AdcCapStub_0/un5_cntrConv_1_I_79/Y  AdcCapStub_0/un5_cntrConv_1_I_81/C  AdcCapStub_0/un5_cntrConv_1_I_81/Y  AdcCapStub_0/un5_cntrConv_1_I_82/A  AdcCapStub_0/un5_cntrConv_1_I_82/Y  AdcCapStub_0/cntrConv_RNO\[26\]/A  AdcCapStub_0/cntrConv_RNO\[26\]/Y  AdcCapStub_0/cntrConv\[26\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[1\]/CLK  AdcCapStub_0/cntrHold\[1\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/A  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNI6KTU/B  AdcCap_0/cs_RNI6KTU/Y  AdcCap_0/un1_cntrWaitLeading_I_1/B  AdcCap_0/un1_cntrWaitLeading_I_1/Y  AdcCap_0/un1_cntrWaitLeading_I_10/B  AdcCap_0/un1_cntrWaitLeading_I_10/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/A  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/B  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/bitsRead_RNIMCF51\[3\]/C  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/A  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/B  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/bitsRead_RNIMCF51\[3\]/C  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/A  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[1\]/CLK  AdcCapStub_0/cntrHold\[1\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/B  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[0\]/A  AdcCapStub_0/cntrHold_RNO\[0\]/Y  AdcCapStub_0/cntrHold\[0\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/B  AdcCap_0/cntrWaitQuiet_RNIFA3S\[1\]/Y  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/B  AdcCap_0/cntrWaitQuiet_RNIPDEA1\[1\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/B  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/C  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[3\]/C  AdcCapStub_0/cntrHold_RNO\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[1\]/CLK  AdcCap_0/cntrWaitLeading\[1\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/A  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/cs_RNI6KTU/A  AdcCap_0/cs_RNI6KTU/Y  AdcCap_0/un1_cntrWaitLeading_I_1/B  AdcCap_0/un1_cntrWaitLeading_I_1/Y  AdcCap_0/un1_cntrWaitLeading_I_10/B  AdcCap_0/un1_cntrWaitLeading_I_10/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/A  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[1\]/C  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_11/B  AdcCapStub_0/un5_cntrConv_1_I_11/Y  AdcCapStub_0/un5_cntrConv_1_I_12/A  AdcCapStub_0/un5_cntrConv_1_I_12/Y  AdcCapStub_0/cntrConv\[4\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[16\]/CLK  AdcCapStub_0/cntrConv\[16\]/Q  AdcCapStub_0/un5_cntrConv_1_I_50/B  AdcCapStub_0/un5_cntrConv_1_I_50/Y  AdcCapStub_0/un5_cntrConv_1_I_52/C  AdcCapStub_0/un5_cntrConv_1_I_52/Y  AdcCapStub_0/un5_cntrConv_1_I_53/A  AdcCapStub_0/un5_cntrConv_1_I_53/Y  AdcCapStub_0/cntrConv_RNO\[18\]/A  AdcCapStub_0/cntrConv_RNO\[18\]/Y  AdcCapStub_0/cntrConv\[18\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/bitsRead_RNIMCF51\[3\]/A  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/A  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/bitsRead_RNIMCF51\[3\]/A  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/A  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[3\]/CLK  AdcCap_0/bitsRead\[3\]/Q  AdcCap_0/bitsRead_RNIVC3D\[3\]/A  AdcCap_0/bitsRead_RNIVC3D\[3\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/A  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNIPJQV/B  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cs_RNIFJ5E4/A  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_16/A  AdcCapStub_0/un5_cntrConv_1_I_16/Y  AdcCapStub_0/un5_cntrConv_1_I_17/A  AdcCapStub_0/un5_cntrConv_1_I_17/Y  AdcCapStub_0/cntrConv\[6\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_10/B  AdcCapStub_0/un5_cntrConv_1_I_10/Y  AdcCapStub_0/un5_cntrConv_1_I_13/A  AdcCapStub_0/un5_cntrConv_1_I_13/Y  AdcCapStub_0/un5_cntrConv_1_I_14/A  AdcCapStub_0/un5_cntrConv_1_I_14/Y  AdcCapStub_0/cntrConv\[5\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_42/B  AdcCapStub_0/un5_cntrConv_1_I_42/Y  AdcCapStub_0/un5_cntrConv_1_I_43/A  AdcCapStub_0/un5_cntrConv_1_I_43/Y  AdcCapStub_0/cntrConv\[15\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/B  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/cs_RNI6KTU/A  AdcCap_0/cs_RNI6KTU/Y  AdcCap_0/un1_cntrWaitLeading_I_8/B  AdcCap_0/un1_cntrWaitLeading_I_8/Y  AdcCap_0/cntrWaitLeading_RNO\[0\]/A  AdcCap_0/cntrWaitLeading_RNO\[0\]/Y  AdcCap_0/cntrWaitLeading\[0\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[2\]/CLK  AdcCapStub_0/cntrHold\[2\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/C  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[2\]/CLK  AdcCapStub_0/cntrHold\[2\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/B  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_33/B  AdcCapStub_0/un5_cntrConv_1_I_33/Y  AdcCapStub_0/un5_cntrConv_1_I_42/B  AdcCapStub_0/un5_cntrConv_1_I_42/Y  AdcCapStub_0/un5_cntrConv_1_I_43/A  AdcCapStub_0/un5_cntrConv_1_I_43/Y  AdcCapStub_0/cntrConv\[15\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/startCapture_RNO_1/B  AdcCapStub_0/startCapture_RNO_1/Y  AdcCapStub_0/startCapture_RNO/C  AdcCapStub_0/startCapture_RNO/Y  AdcCapStub_0/startCapture/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[24\]/CLK  AdcCapStub_0/cntrConv\[24\]/Q  AdcCapStub_0/un5_cntrConv_1_I_75/C  AdcCapStub_0/un5_cntrConv_1_I_75/Y  AdcCapStub_0/un5_cntrConv_1_I_76/C  AdcCapStub_0/un5_cntrConv_1_I_76/Y  AdcCapStub_0/un5_cntrConv_1_I_77/A  AdcCapStub_0/un5_cntrConv_1_I_77/Y  AdcCapStub_0/cntrConv_RNO\[25\]/A  AdcCapStub_0/cntrConv_RNO\[25\]/Y  AdcCapStub_0/cntrConv\[25\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[7\]/CLK  AdcCapStub_0/cntrConv\[7\]/Q  AdcCapStub_0/un5_cntrConv_1_I_21/B  AdcCapStub_0/un5_cntrConv_1_I_21/Y  AdcCapStub_0/un5_cntrConv_1_I_24/C  AdcCapStub_0/un5_cntrConv_1_I_24/Y  AdcCapStub_0/un5_cntrConv_1_I_25/B  AdcCapStub_0/un5_cntrConv_1_I_25/Y  AdcCapStub_0/un5_cntrConv_1_I_26/A  AdcCapStub_0/un5_cntrConv_1_I_26/Y  AdcCapStub_0/cntrConv\[9\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[0\]/B  AdcCapStub_0/cntrHold_RNO\[0\]/Y  AdcCapStub_0/cntrHold\[0\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/B  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[6\]/CLK  AdcCapStub_0/cntrConv\[6\]/Q  AdcCapStub_0/un5_cntrConv_1_I_21/A  AdcCapStub_0/un5_cntrConv_1_I_21/Y  AdcCapStub_0/un5_cntrConv_1_I_24/C  AdcCapStub_0/un5_cntrConv_1_I_24/Y  AdcCapStub_0/un5_cntrConv_1_I_25/B  AdcCapStub_0/un5_cntrConv_1_I_25/Y  AdcCapStub_0/un5_cntrConv_1_I_26/A  AdcCapStub_0/un5_cntrConv_1_I_26/Y  AdcCapStub_0/cntrConv\[9\]/D  	(49.5:49.5:49.5) )
 
@@ -407,7 +399,7 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[13\]/CLK  AdcCapStub_0/cntrConv\[13\]/Q  AdcCapStub_0/un5_cntrConv_1_I_41/B  AdcCapStub_0/un5_cntrConv_1_I_41/Y  AdcCapStub_0/un5_cntrConv_1_I_42/C  AdcCapStub_0/un5_cntrConv_1_I_42/Y  AdcCapStub_0/un5_cntrConv_1_I_43/A  AdcCapStub_0/un5_cntrConv_1_I_43/Y  AdcCapStub_0/cntrConv\[15\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[3\]/C  AdcCapStub_0/cntrHold_RNO\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/bitsRead_RNO\[3\]/C  AdcCap_0/bitsRead_RNO\[3\]/Y  AdcCap_0/bitsRead\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[16\]/CLK  AdcCapStub_0/cntrConv\[16\]/Q  AdcCapStub_0/un5_cntrConv_1_I_47/B  AdcCapStub_0/un5_cntrConv_1_I_47/Y  AdcCapStub_0/un5_cntrConv_1_I_48/C  AdcCapStub_0/un5_cntrConv_1_I_48/Y  AdcCapStub_0/un5_cntrConv_1_I_49/A  AdcCapStub_0/un5_cntrConv_1_I_49/Y  AdcCapStub_0/cntrConv_RNO\[17\]/A  AdcCapStub_0/cntrConv_RNO\[17\]/Y  AdcCapStub_0/cntrConv\[17\]/D  	(49.5:49.5:49.5) )
 
@@ -417,7 +409,9 @@
 
     (PATHCONSTRAINT AdcCapStub_0/startCapture/CLK  AdcCapStub_0/startCapture/Q  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/C  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/A  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNO\[1\]/C  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitTrailing_RNO\[0\]/B  AdcCap_0/cntrWaitTrailing_RNO\[0\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitTrailing_RNO\[2\]/C  AdcCap_0/cntrWaitTrailing_RNO\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[15\]/CLK  AdcCapStub_0/cntrConv\[15\]/Q  AdcCapStub_0/un5_cntrConv_1_I_47/A  AdcCapStub_0/un5_cntrConv_1_I_47/Y  AdcCapStub_0/un5_cntrConv_1_I_48/C  AdcCapStub_0/un5_cntrConv_1_I_48/Y  AdcCapStub_0/un5_cntrConv_1_I_49/A  AdcCapStub_0/un5_cntrConv_1_I_49/Y  AdcCapStub_0/cntrConv_RNO\[17\]/A  AdcCapStub_0/cntrConv_RNO\[17\]/Y  AdcCapStub_0/cntrConv\[17\]/D  	(49.5:49.5:49.5) )
 
@@ -427,25 +421,37 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[27\]/CLK  AdcCapStub_0/cntrConv\[27\]/Q  AdcCapStub_0/un5_cntrConv_1_I_93/A  AdcCapStub_0/un5_cntrConv_1_I_93/Y  AdcCapStub_0/un5_cntrConv_1_I_94/C  AdcCapStub_0/un5_cntrConv_1_I_94/Y  AdcCapStub_0/un5_cntrConv_1_I_95/A  AdcCapStub_0/un5_cntrConv_1_I_95/Y  AdcCapStub_0/cntrConv_RNO\[30\]/A  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[29\]/CLK  AdcCapStub_0/cntrConv\[29\]/Q  AdcCapStub_0/un5_cntrConv_1_I_93/C  AdcCapStub_0/un5_cntrConv_1_I_93/Y  AdcCapStub_0/un5_cntrConv_1_I_94/C  AdcCapStub_0/un5_cntrConv_1_I_94/Y  AdcCapStub_0/un5_cntrConv_1_I_95/A  AdcCapStub_0/un5_cntrConv_1_I_95/Y  AdcCapStub_0/cntrConv_RNO\[30\]/A  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/bitsRead_RNO\[3\]/C  AdcCap_0/bitsRead_RNO\[3\]/Y  AdcCap_0/bitsRead\[3\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/bitsRead_RNO\[0\]/B  AdcCap_0/bitsRead_RNO\[0\]/Y  AdcCap_0/bitsRead\[0\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/startCapture_RNO_1/B  AdcCapStub_0/startCapture_RNO_1/Y  AdcCapStub_0/startCapture_RNO/C  AdcCapStub_0/startCapture_RNO/Y  AdcCapStub_0/startCapture/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/B  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/B  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/B  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[3\]/CLK  AdcCap_0/bitsRead\[3\]/Q  AdcCap_0/bitsRead_RNIMCF51\[3\]/B  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIFQTF2\[3\]/A  AdcCap_0/bitsRead_RNIFQTF2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/A  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[3\]/CLK  AdcCapStub_0/cntrHold\[3\]/Q  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/B  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/C  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/bitsRead_RNO\[1\]/C  AdcCap_0/bitsRead_RNO\[1\]/Y  AdcCap_0/bitsRead\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIA3BE/A  AdcCap_0/cs_RNIA3BE/Y  AdcCap_0/bitsRead_RNO\[2\]/C  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNO/B  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrConv\[29\]/CLK  AdcCapStub_0/cntrConv\[29\]/Q  AdcCapStub_0/un5_cntrConv_1_I_93/C  AdcCapStub_0/un5_cntrConv_1_I_93/Y  AdcCapStub_0/un5_cntrConv_1_I_94/C  AdcCapStub_0/un5_cntrConv_1_I_94/Y  AdcCapStub_0/un5_cntrConv_1_I_95/A  AdcCapStub_0/un5_cntrConv_1_I_95/Y  AdcCapStub_0/cntrConv_RNO\[30\]/A  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNIPJQV/A  AdcCap_0/cs_RNIPJQV/Y  AdcCap_0/cs_RNIFJ5E4/A  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[3\]/CLK  AdcCapStub_0/cntrHold\[3\]/Q  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/B  AdcCapStub_0/cntrHold_RNIT0EC1\[3\]/Y  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/A  AdcCapStub_0/cntrHold_RNIJI3F9\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/B  AdcCap_0/bitsRead_RNIRS2D_0\[1\]/Y  AdcCap_0/bitsRead_RNIQ96Q\[1\]/B  AdcCap_0/bitsRead_RNIQ96Q\[1\]/Y  AdcCap_0/cs_RNO/A  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/B  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cs_RNIFJ5E4/B  AdcCap_0/cs_RNIFJ5E4/Y  AdcCap_0/cntrWaitQuiet\[1\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[3\]/CLK  AdcCap_0/bitsRead\[3\]/Q  AdcCap_0/bitsRead_RNIMCF51\[3\]/B  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/bitsRead_RNIOFVT2\[3\]/A  AdcCap_0/bitsRead_RNIOFVT2\[3\]/Y  AdcCap_0/bitsRead\[3\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[1\]/CLK  AdcCap_0/cntrWaitTrailing\[1\]/Q  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/A  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/B  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/B  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[21\]/CLK  AdcCapStub_0/cntrConv\[21\]/Q  AdcCapStub_0/un5_cntrConv_1_I_66/B  AdcCapStub_0/un5_cntrConv_1_I_66/Y  AdcCapStub_0/un5_cntrConv_1_I_69/C  AdcCapStub_0/un5_cntrConv_1_I_69/Y  AdcCapStub_0/un5_cntrConv_1_I_70/A  AdcCapStub_0/un5_cntrConv_1_I_70/Y  AdcCapStub_0/cntrConv\[23\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/B  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/Y  AdcCap_0/cs_RNO_0/B  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/B  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/B  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/bitsRead_RNIMCF51\[3\]/C  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/dataout\[6\]/E  	(49.6:49.6:49.6) )
 
@@ -464,6 +470,8 @@
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/B  AdcCap_0/cntrWaitLeading_RNI7A9P\[1\]/Y  AdcCap_0/bitsRead_RNIMCF51\[3\]/C  AdcCap_0/bitsRead_RNIMCF51\[3\]/Y  AdcCap_0/dataout\[7\]/E  	(49.6:49.6:49.6) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[22\]/CLK  AdcCapStub_0/cntrConv\[22\]/Q  AdcCapStub_0/un5_cntrConv_1_I_66/C  AdcCapStub_0/un5_cntrConv_1_I_66/Y  AdcCapStub_0/un5_cntrConv_1_I_69/C  AdcCapStub_0/un5_cntrConv_1_I_69/Y  AdcCapStub_0/un5_cntrConv_1_I_70/A  AdcCapStub_0/un5_cntrConv_1_I_70/Y  AdcCapStub_0/cntrConv\[23\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNO\[3\]/B  AdcCapStub_0/cntrHold_RNO\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[3\]/CLK  AdcCapStub_0/cntrConv\[3\]/Q  AdcCapStub_0/un5_cntrConv_1_I_15/A  AdcCapStub_0/un5_cntrConv_1_I_15/Y  AdcCapStub_0/un5_cntrConv_1_I_16/B  AdcCapStub_0/un5_cntrConv_1_I_16/Y  AdcCapStub_0/un5_cntrConv_1_I_17/A  AdcCapStub_0/un5_cntrConv_1_I_17/Y  AdcCapStub_0/cntrConv\[6\]/D  	(49.5:49.5:49.5) )
 
@@ -485,17 +493,23 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[10\]/CLK  AdcCapStub_0/cntrConv\[10\]/Q  AdcCapStub_0/un5_cntrConv_1_I_31/C  AdcCapStub_0/un5_cntrConv_1_I_31/Y  AdcCapStub_0/un5_cntrConv_1_I_32/A  AdcCapStub_0/un5_cntrConv_1_I_32/Y  AdcCapStub_0/cntrConv_RNO\[11\]/A  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/C  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/B  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/C  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/B  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/A  AdcCap_0/cntrWaitQuiet_RNIOV4A1\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/A  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNO_1/B  AdcCap_0/cs_RNO_1/Y  AdcCap_0/cs_RNO/C  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/un1_cntrWaitTrailing_I_1/A  AdcCap_0/un1_cntrWaitTrailing_I_1/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/B  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/un1_cntrWaitQuiet_I_1/A  AdcCap_0/un1_cntrWaitQuiet_I_1/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/B  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNO_0/C  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/B  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/un1_cntrWaitLeading_I_1/A  AdcCap_0/un1_cntrWaitLeading_I_1/Y  AdcCap_0/un1_cntrWaitLeading_I_10/B  AdcCap_0/un1_cntrWaitLeading_I_10/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/A  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cs/CLK  AdcCap_0/cs/Q  AdcCap_0/cs_RNO_0/C  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/A  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNO_0\[1\]/B  AdcCap_0/cntrWaitQuiet_RNO_0\[1\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/C  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/A  AdcCapStub_0/cntrHold_RNIK7PQ\[2\]/Y  AdcCapStub_0/cntrHold_RNO\[3\]/B  AdcCapStub_0/cntrHold_RNO\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/A  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[2\]/B  AdcCap_0/cntrWaitQuiet_RNO\[2\]/Y  AdcCap_0/cntrWaitQuiet\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[8\]/CLK  AdcCapStub_0/cntrConv\[8\]/Q  AdcCapStub_0/un5_cntrConv_1_I_23/B  AdcCapStub_0/un5_cntrConv_1_I_23/Y  AdcCapStub_0/cntrConv_RNO\[8\]/A  AdcCapStub_0/cntrConv_RNO\[8\]/Y  AdcCapStub_0/cntrConv\[8\]/D  	(49.5:49.5:49.5) )
 
@@ -506,8 +520,6 @@
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[27\]/CLK  AdcCapStub_0/cntrConv\[27\]/Q  AdcCapStub_0/un5_cntrConv_1_I_86/B  AdcCapStub_0/un5_cntrConv_1_I_86/Y  AdcCapStub_0/cntrConv_RNO\[27\]/A  AdcCapStub_0/cntrConv_RNO\[27\]/Y  AdcCapStub_0/cntrConv\[27\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[21\]/CLK  AdcCapStub_0/cntrConv\[21\]/Q  AdcCapStub_0/un5_cntrConv_1_I_62/B  AdcCapStub_0/un5_cntrConv_1_I_62/Y  AdcCapStub_0/cntrConv_RNO\[21\]/A  AdcCapStub_0/cntrConv_RNO\[21\]/Y  AdcCapStub_0/cntrConv\[21\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNO_0\[2\]/A  AdcCapStub_0/cntrHold_RNO_0\[2\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/A  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/un5_cntrConv_1_I_6/B  AdcCapStub_0/un5_cntrConv_1_I_6/Y  AdcCapStub_0/un5_cntrConv_1_I_7/A  AdcCapStub_0/un5_cntrConv_1_I_7/Y  AdcCapStub_0/cntrConv\[2\]/D  	(49.5:49.5:49.5) )
 
@@ -527,6 +539,10 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_8/B  AdcCapStub_0/un5_cntrConv_1_I_8/Y  AdcCapStub_0/un5_cntrConv_1_I_9/A  AdcCapStub_0/un5_cntrConv_1_I_9/Y  AdcCapStub_0/cntrConv\[3\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[2\]/CLK  AdcCap_0/cntrWaitTrailing\[2\]/Q  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/A  AdcCap_0/cntrWaitTrailing_RNI32H01\[2\]/Y  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/B  AdcCap_0/cntrWaitTrailing_RNIVE7J3\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/E  	(49.6:49.6:49.6) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/B  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[2\]/B  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCapStub_0/startCapture/CLK  AdcCapStub_0/startCapture/Q  AdcCapStub_0/startCapture_RNO_1/C  AdcCapStub_0/startCapture_RNO_1/Y  AdcCapStub_0/startCapture_RNO/C  AdcCapStub_0/startCapture_RNO/Y  AdcCapStub_0/startCapture/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/un5_cntrConv_1_I_13/C  AdcCapStub_0/un5_cntrConv_1_I_13/Y  AdcCapStub_0/un5_cntrConv_1_I_14/A  AdcCapStub_0/un5_cntrConv_1_I_14/Y  AdcCapStub_0/cntrConv\[5\]/D  	(49.5:49.5:49.5) )
@@ -541,21 +557,19 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[8\]/CLK  AdcCapStub_0/cntrConv\[8\]/Q  AdcCapStub_0/un5_cntrConv_1_I_27/B  AdcCapStub_0/un5_cntrConv_1_I_27/Y  AdcCapStub_0/un5_cntrConv_1_I_28/A  AdcCapStub_0/un5_cntrConv_1_I_28/Y  AdcCapStub_0/cntrConv\[10\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/B  AdcCap_0/cntrWaitTrailing_RNINMTH\[1\]/Y  AdcCap_0/cntrWaitTrailing_RNO\[2\]/A  AdcCap_0/cntrWaitTrailing_RNO\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[5\]/CLK  AdcCapStub_0/cntrConv\[5\]/Q  AdcCapStub_0/un5_cntrConv_1_I_16/C  AdcCapStub_0/un5_cntrConv_1_I_16/Y  AdcCapStub_0/un5_cntrConv_1_I_17/A  AdcCapStub_0/un5_cntrConv_1_I_17/Y  AdcCapStub_0/cntrConv\[6\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[3\]/CLK  AdcCapStub_0/cntrConv\[3\]/Q  AdcCapStub_0/un5_cntrConv_1_I_11/A  AdcCapStub_0/un5_cntrConv_1_I_11/Y  AdcCapStub_0/un5_cntrConv_1_I_12/A  AdcCapStub_0/un5_cntrConv_1_I_12/Y  AdcCapStub_0/cntrConv\[4\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_6/A  AdcCapStub_0/un5_cntrConv_1_I_6/Y  AdcCapStub_0/un5_cntrConv_1_I_7/A  AdcCapStub_0/un5_cntrConv_1_I_7/Y  AdcCapStub_0/cntrConv\[2\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[1\]/CLK  AdcCap_0/cntrWaitTrailing\[1\]/Q  AdcCap_0/un1_cntrWaitTrailing_I_7/A  AdcCap_0/un1_cntrWaitTrailing_I_7/Y  AdcCap_0/un1_cntrWaitTrailing_I_10/A  AdcCap_0/un1_cntrWaitTrailing_I_10/Y  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/startCapture/CLK  AdcCapStub_0/startCapture/Q  AdcCapStub_0/startCapture_RNO_0/B  AdcCapStub_0/startCapture_RNO_0/Y  AdcCapStub_0/startCapture_RNO/B  AdcCapStub_0/startCapture_RNO/Y  AdcCapStub_0/startCapture/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/B  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[2\]/B  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[1\]/CLK  AdcCapStub_0/cntrHold\[1\]/Q  AdcCapStub_0/cntrHold_RNO_0\[2\]/B  AdcCapStub_0/cntrHold_RNO_0\[2\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/A  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[8\]/CLK  AdcCapStub_0/cntrConv\[8\]/Q  AdcCapStub_0/un5_cntrConv_1_I_25/A  AdcCapStub_0/un5_cntrConv_1_I_25/Y  AdcCapStub_0/un5_cntrConv_1_I_26/A  AdcCapStub_0/un5_cntrConv_1_I_26/Y  AdcCapStub_0/cntrConv\[9\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/B  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[3\]/B  AdcCap_0/bitsRead_RNO\[3\]/Y  AdcCap_0/bitsRead\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[11\]/CLK  AdcCapStub_0/cntrConv\[11\]/Q  AdcCapStub_0/un5_cntrConv_1_I_32/B  AdcCapStub_0/un5_cntrConv_1_I_32/Y  AdcCapStub_0/cntrConv_RNO\[11\]/A  AdcCapStub_0/cntrConv_RNO\[11\]/Y  AdcCapStub_0/cntrConv\[11\]/D  	(49.5:49.5:49.5) )
 
@@ -567,19 +581,17 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[29\]/CLK  AdcCapStub_0/cntrConv\[29\]/Q  AdcCapStub_0/un5_cntrConv_1_I_92/B  AdcCapStub_0/un5_cntrConv_1_I_92/Y  AdcCapStub_0/cntrConv_RNO\[29\]/A  AdcCapStub_0/cntrConv_RNO\[29\]/Y  AdcCapStub_0/cntrConv\[29\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[1\]/CLK  AdcCap_0/cntrWaitQuiet\[1\]/Q  AdcCap_0/un1_cntrWaitQuiet_I_7/A  AdcCap_0/un1_cntrWaitQuiet_I_7/Y  AdcCap_0/un1_cntrWaitQuiet_I_10/A  AdcCap_0/un1_cntrWaitQuiet_I_10/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNINBRH\[1\]/B  AdcCapStub_0/cntrHold_RNINBRH\[1\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/B  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[1\]/CLK  AdcCap_0/cntrWaitLeading\[1\]/Q  AdcCap_0/un1_cntrWaitLeading_I_7/A  AdcCap_0/un1_cntrWaitLeading_I_7/Y  AdcCap_0/un1_cntrWaitLeading_I_10/A  AdcCap_0/un1_cntrWaitLeading_I_10/Y  AdcCap_0/cntrWaitLeading_RNO\[1\]/A  AdcCap_0/cntrWaitLeading_RNO\[1\]/Y  AdcCap_0/cntrWaitLeading\[1\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/B  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[3\]/B  AdcCap_0/bitsRead_RNO\[3\]/Y  AdcCap_0/bitsRead\[3\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[1\]/CLK  AdcCap_0/cntrWaitQuiet\[1\]/Q  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/B  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[2\]/B  AdcCap_0/cntrWaitQuiet_RNO\[2\]/Y  AdcCap_0/cntrWaitQuiet\[2\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/bitsRead\[1\]/CLK  AdcCap_0/bitsRead\[1\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/A  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[2\]/B  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[3\]/CLK  AdcCapStub_0/cntrConv\[3\]/Q  AdcCapStub_0/un5_cntrConv_1_I_9/B  AdcCapStub_0/un5_cntrConv_1_I_9/Y  AdcCapStub_0/cntrConv\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[1\]/CLK  AdcCapStub_0/cntrConv\[1\]/Q  AdcCapStub_0/un5_cntrConv_1_I_5/B  AdcCapStub_0/un5_cntrConv_1_I_5/Y  AdcCapStub_0/cntrConv\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cs_RNO_0/A  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/A  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/un1_cntrWaitTrailing_I_8/A  AdcCap_0/un1_cntrWaitTrailing_I_8/Y  AdcCap_0/cntrWaitTrailing_RNO\[0\]/A  AdcCap_0/cntrWaitTrailing_RNO\[0\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[4\]/CLK  AdcCapStub_0/cntrConv\[4\]/Q  AdcCapStub_0/un5_cntrConv_1_I_12/B  AdcCapStub_0/un5_cntrConv_1_I_12/Y  AdcCapStub_0/cntrConv\[4\]/D  	(49.5:49.5:49.5) )
 
@@ -593,15 +605,11 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[2\]/CLK  AdcCapStub_0/cntrConv\[2\]/Q  AdcCapStub_0/un5_cntrConv_1_I_7/B  AdcCapStub_0/un5_cntrConv_1_I_7/Y  AdcCapStub_0/cntrConv\[2\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/bitsRead\[1\]/CLK  AdcCap_0/bitsRead\[1\]/Q  AdcCap_0/bitsRead_RNIRS2D\[1\]/A  AdcCap_0/bitsRead_RNIRS2D\[1\]/Y  AdcCap_0/bitsRead_RNO\[2\]/B  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[1\]/CLK  AdcCap_0/cntrWaitTrailing\[1\]/Q  AdcCap_0/cs_RNO_0/B  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/A  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/un1_cntrWaitLeading_I_8/A  AdcCap_0/un1_cntrWaitLeading_I_8/Y  AdcCap_0/cntrWaitLeading_RNO\[0\]/A  AdcCap_0/cntrWaitLeading_RNO\[0\]/Y  AdcCap_0/cntrWaitLeading\[0\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[2\]/CLK  AdcCap_0/cntrWaitTrailing\[2\]/Q  AdcCap_0/cs_RNO_0/A  AdcCap_0/cs_RNO_0/Y  AdcCap_0/cs_RNO/B  AdcCap_0/cs_RNO/Y  AdcCap_0/cs/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[30\]/CLK  AdcCapStub_0/cntrConv\[30\]/Q  AdcCapStub_0/un5_cntrConv_1_I_95/B  AdcCapStub_0/un5_cntrConv_1_I_95/Y  AdcCapStub_0/cntrConv_RNO\[30\]/A  AdcCapStub_0/cntrConv_RNO\[30\]/Y  AdcCapStub_0/cntrConv\[30\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/un1_cntrWaitQuiet_I_8/A  AdcCap_0/un1_cntrWaitQuiet_I_8/Y  AdcCap_0/cntrWaitQuiet_RNO\[0\]/A  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[1\]/CLK  AdcCap_0/cntrWaitQuiet\[1\]/Q  AdcCap_0/cntrWaitQuiet_RNO_0\[1\]/A  AdcCap_0/cntrWaitQuiet_RNO_0\[1\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[1\]/C  AdcCap_0/cntrWaitQuiet_RNO\[1\]/Y  AdcCap_0/cntrWaitQuiet\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[5\]/CLK  AdcCapStub_0/cntrConv\[5\]/Q  AdcCapStub_0/un5_cntrConv_1_I_14/B  AdcCapStub_0/un5_cntrConv_1_I_14/Y  AdcCapStub_0/cntrConv\[5\]/D  	(49.5:49.5:49.5) )
 
@@ -611,33 +619,47 @@
 
     (PATHCONSTRAINT AdcCapStub_0/cntrHold\[3\]/CLK  AdcCapStub_0/cntrHold\[3\]/Q  AdcCapStub_0/startCapture_RNO_1/A  AdcCapStub_0/startCapture_RNO_1/Y  AdcCapStub_0/startCapture_RNO/C  AdcCapStub_0/startCapture_RNO/Y  AdcCapStub_0/startCapture/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCap_0/cntrWaitLeading\[0\]/CLK  AdcCap_0/cntrWaitLeading\[0\]/Q  AdcCap_0/un1_cntrWaitLeading_I_8/A  AdcCap_0/un1_cntrWaitLeading_I_8/Y  AdcCap_0/cntrWaitLeading_RNO\[0\]/A  AdcCap_0/cntrWaitLeading_RNO\[0\]/Y  AdcCap_0/cntrWaitLeading\[0\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/cntrConv_RNO\[0\]/A  AdcCapStub_0/cntrConv_RNO\[0\]/Y  AdcCapStub_0/cntrConv\[0\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[0\]/CLK  AdcCapStub_0/cntrConv\[0\]/Q  AdcCapStub_0/un5_cntrConv_1_I_5/A  AdcCapStub_0/un5_cntrConv_1_I_5/Y  AdcCapStub_0/cntrConv\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNO\[1\]/A  AdcCap_0/bitsRead_RNO\[1\]/Y  AdcCap_0/bitsRead\[1\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNO\[1\]/A  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[0\]/CLK  AdcCap_0/cntrWaitQuiet\[0\]/Q  AdcCap_0/cntrWaitQuiet_RNO\[0\]/C  AdcCap_0/cntrWaitQuiet_RNO\[0\]/Y  AdcCap_0/cntrWaitQuiet\[0\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitQuiet\[2\]/CLK  AdcCap_0/cntrWaitQuiet\[2\]/Q  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/C  AdcCap_0/cntrWaitQuiet_RNO_0\[2\]/Y  AdcCap_0/cntrWaitQuiet_RNO\[2\]/B  AdcCap_0/cntrWaitQuiet_RNO\[2\]/Y  AdcCap_0/cntrWaitQuiet\[2\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[23\]/CLK  AdcCapStub_0/cntrConv\[23\]/Q  AdcCapStub_0/un5_cntrConv_1_I_70/B  AdcCapStub_0/un5_cntrConv_1_I_70/Y  AdcCapStub_0/cntrConv\[23\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrConv\[20\]/CLK  AdcCapStub_0/cntrConv\[20\]/Q  AdcCapStub_0/un5_cntrConv_1_I_59/B  AdcCapStub_0/un5_cntrConv_1_I_59/Y  AdcCapStub_0/cntrConv\[20\]/D  	(49.5:49.5:49.5) )
 
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNO\[0\]/A  AdcCapStub_0/cntrHold_RNO\[0\]/Y  AdcCapStub_0/cntrHold\[0\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[1\]/CLK  AdcCapStub_0/cntrHold\[1\]/Q  AdcCapStub_0/cntrHold_RNO\[1\]/B  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
-
-    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[2\]/CLK  AdcCapStub_0/cntrHold\[2\]/Q  AdcCapStub_0/cntrHold_RNO_0\[2\]/C  AdcCapStub_0/cntrHold_RNO_0\[2\]/Y  AdcCapStub_0/cntrHold_RNO\[2\]/A  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
-
     (PATHCONSTRAINT AdcCap_0/bitsRead\[0\]/CLK  AdcCap_0/bitsRead\[0\]/Q  AdcCap_0/bitsRead_RNO\[0\]/A  AdcCap_0/bitsRead_RNO\[0\]/Y  AdcCap_0/bitsRead\[0\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/bitsRead\[2\]/CLK  AdcCap_0/bitsRead\[2\]/Q  AdcCap_0/bitsRead_RNO\[2\]/A  AdcCap_0/bitsRead_RNO\[2\]/Y  AdcCap_0/bitsRead\[2\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNO\[1\]/A  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCapStub_0/cntrHold\[3\]/CLK  AdcCapStub_0/cntrHold\[3\]/Q  AdcCapStub_0/cntrHold_RNO\[3\]/A  AdcCapStub_0/cntrHold_RNO\[3\]/Y  AdcCapStub_0/cntrHold\[3\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/bitsRead\[2\]/CLK  AdcCap_0/bitsRead\[2\]/Q  AdcCap_0/bitsRead_RNO\[3\]/A  AdcCap_0/bitsRead_RNO\[3\]/Y  AdcCap_0/bitsRead\[3\]/D  	(49.5:49.5:49.5) )
 
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNO\[1\]/A  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
+
     (PATHCONSTRAINT AdcCap_0/bitsRead\[1\]/CLK  AdcCap_0/bitsRead\[1\]/Q  AdcCap_0/bitsRead_RNO\[1\]/B  AdcCap_0/bitsRead_RNO\[1\]/Y  AdcCap_0/bitsRead\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[0\]/CLK  AdcCapStub_0/cntrHold\[0\]/Q  AdcCapStub_0/cntrHold_RNO\[0\]/B  AdcCapStub_0/cntrHold_RNO\[0\]/Y  AdcCapStub_0/cntrHold\[0\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[2\]/CLK  AdcCap_0/cntrWaitTrailing\[2\]/Q  AdcCap_0/cntrWaitTrailing_RNO\[2\]/B  AdcCap_0/cntrWaitTrailing_RNO\[2\]/Y  AdcCap_0/cntrWaitTrailing\[2\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[0\]/CLK  AdcCap_0/cntrWaitTrailing\[0\]/Q  AdcCap_0/cntrWaitTrailing_RNO\[0\]/A  AdcCap_0/cntrWaitTrailing_RNO\[0\]/Y  AdcCap_0/cntrWaitTrailing\[0\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[2\]/CLK  AdcCapStub_0/cntrHold\[2\]/Q  AdcCapStub_0/cntrHold_RNO\[2\]/A  AdcCapStub_0/cntrHold_RNO\[2\]/Y  AdcCapStub_0/cntrHold\[2\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCapStub_0/cntrHold\[1\]/CLK  AdcCapStub_0/cntrHold\[1\]/Q  AdcCapStub_0/cntrHold_RNO\[1\]/B  AdcCapStub_0/cntrHold_RNO\[1\]/Y  AdcCapStub_0/cntrHold\[1\]/D  	(49.5:49.5:49.5) )
+
+    (PATHCONSTRAINT AdcCap_0/cntrWaitTrailing\[1\]/CLK  AdcCap_0/cntrWaitTrailing\[1\]/Q  AdcCap_0/cntrWaitTrailing_RNO\[1\]/B  AdcCap_0/cntrWaitTrailing_RNO\[1\]/Y  AdcCap_0/cntrWaitTrailing\[1\]/D  	(49.5:49.5:49.5) )
 
     (PATHCONSTRAINT AdcCap_0/dataout\[0\]/CLK  AdcCap_0/dataout\[0\]/Q  AdcCap_0/dataout\[1\]/D  	(49.5:49.5:49.5) )
 

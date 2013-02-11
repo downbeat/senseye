@@ -2,41 +2,40 @@ Target Part: A2F500M3G_FBGA484_-1
 Report for cell mss_capture.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     3      1.0        3.0
-               AO1     3      1.0        3.0
-              AO1A     1      1.0        1.0
+              AND2     1      1.0        1.0
+               AO1     1      1.0        1.0
+              AO1A     5      1.0        5.0
               AO1D     1      1.0        1.0
-              AX1D     1      1.0        1.0
                GND     5      0.0        0.0
                INV     1      1.0        1.0
            MSS_APB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-              NOR2    15      1.0       15.0
-             NOR2A    23      1.0       23.0
-             NOR2B     4      1.0        4.0
+              NOR2    13      1.0       13.0
+             NOR2A    21      1.0       21.0
               NOR3     4      1.0        4.0
-             NOR3A     5      1.0        5.0
+             NOR3A     7      1.0        7.0
              NOR3C     5      1.0        5.0
+               OA1     1      1.0        1.0
               OA1B     1      1.0        1.0
               OA1C     1      1.0        1.0
-               OR2    22      1.0       22.0
-              OR2A     1      1.0        1.0
+               OR2    24      1.0       24.0
+              OR2A     5      1.0        5.0
               OR2B     1      1.0        1.0
                OR3    47      1.0       47.0
              RCOSC     1      0.0        0.0
                VCC     5      0.0        0.0
               XA1B     1      1.0        1.0
-              XA1C     2      1.0        2.0
+              XA1C     4      1.0        4.0
              XNOR2    30      1.0       30.0
               XO1A     1      1.0        1.0
-              XOR2     9      1.0        9.0
+              XOR2     4      1.0        4.0
 
 
-              DFN1    39      1.0       39.0
+              DFN1    35      1.0       35.0
             DFN1E0     4      1.0        4.0
-            DFN1E1    12      1.0       12.0
+            DFN1E1    18      1.0       18.0
                    -----          ----------
-             TOTAL   250               237.0
+             TOTAL   249               236.0
 
 
   IO Cell usage:
@@ -52,7 +51,7 @@ Report for cell mss_capture.verilog
              TOTAL    88
 
 
-Core Cells         : 237 of 11520 (2%)
+Core Cells         : 236 of 11520 (2%)
 IO Cells           : 88
 
   RAM/ROM Usage Summary

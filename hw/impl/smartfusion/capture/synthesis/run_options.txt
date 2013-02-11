@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
 #--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\run_options.txt
-#--  Written on Fri Feb 08 19:19:22 2013
+#--  Written on Sun Feb 10 20:44:34 2013
 
 
 #project files

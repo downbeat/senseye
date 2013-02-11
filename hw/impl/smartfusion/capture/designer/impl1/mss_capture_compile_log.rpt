@@ -331,9 +331,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        28
+  - Logic combining:        24
 
-    Total macros optimized  28
+    Total macros optimized  24
 
 There were 0 error(s) and 263 warning(s) in this design.
 =====================================================================
@@ -355,7 +355,7 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:    209  Total:  11520   (1.81%)
+    Fabric                     Used:    212  Total:  11520   (1.84%)
     Fabric IO (W/ clocks)      Used:     62  Total:    128   (48.44%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -386,8 +386,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 154          | 154
-    SEQ     | 55           | 55
+    COMB    | 155          | 155
+    SEQ     | 57           | 57
 
 I/O Function:
 
@@ -419,7 +419,7 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    57      CLK_NET       Net   : FAB_CLK
+    59      CLK_NET       Net   : FAB_CLK
                           Driver: mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
 
@@ -432,10 +432,12 @@ High fanout nets in the post compile netlist:
                           Driver: AdcCap_0/bitsRead_RNIMCF51[3]
     8       INT_NET       Net   : cs_c
                           Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
+                          Driver: AdcCap_0/cs_RNIA3BE
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
+    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
@@ -444,8 +446,6 @@ High fanout nets in the post compile netlist:
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_30
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_60
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
@@ -456,10 +456,12 @@ Nets that are candidates for clock assignment and the resulting fanout:
                           Driver: AdcCap_0/bitsRead_RNIMCF51[3]
     8       INT_NET       Net   : cs_c
                           Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
+                          Driver: AdcCap_0/cs_RNIA3BE
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
+    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
@@ -468,8 +470,6 @@ Nets that are candidates for clock assignment and the resulting fanout:
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_30
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_60
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 The Compile command succeeded ( 00:00:01 )
 Wrote status report to file: mss_capture_compile_report.txt

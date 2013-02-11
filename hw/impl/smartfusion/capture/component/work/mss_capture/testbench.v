@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Fri Feb 08 19:18:46 2013
+// Created by Actel SmartDesign Sun Feb 10 20:44:07 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -52,8 +52,8 @@ mss_capture mss_capture_0 (
     .MAC_RXER({1{1'b0}}),
     .MSS_RESET_N(NSYSRESET),
     .RESET(NSYSRESET),
-    .MAC_RXD({2{1'b0}}),
     .miso({1{1'b0}}),
+    .MAC_RXD({2{1'b0}}),
 
     // Outputs
     .EMC_CLK( ),
@@ -69,12 +69,12 @@ mss_capture mss_capture_0 (
     .MAC_MDC( ),
     .MAC_TXEN( ),
     .cs( ),
+    .SPI_CLK( ),
+    .startCaptureTP( ),
     .EMC_AB( ),
     .EMC_BYTEN( ),
     .MAC_TXD( ),
     .ledsout( ),
-    .SPI_CLK( ),
-    .startCaptureTP( ),
 
     // Inouts
     .I2C_0_SCL( ),

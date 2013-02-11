@@ -12,7 +12,7 @@ Warning: Overwriting the existing file:
          pture.fdb.
 
 The Export-map command succeeded ( 00:00:12 )
-CHECKSUM: D4FD
+CHECKSUM: 71E8
 Wrote to the file:
 Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.fdb
 
@@ -20,6 +20,6 @@ The Export command succeeded ( 00:00:13 )
 Design saved to file
 Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/designer/impl1/mss_capture.adb.
 
-The Execute Script command succeeded ( 00:00:14 )
+The Execute Script command succeeded ( 00:00:15 )
 Design closed.
 

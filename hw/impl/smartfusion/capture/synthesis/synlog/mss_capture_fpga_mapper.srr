@@ -27,35 +27,37 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":42:0:42:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitQuiet[2:0]
 @N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":42:0:42:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":42:0:42:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitTrailing[2:0]
 @N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccapstub.v":32:0:32:5|Found counter in view:work.AdcCapStub(verilog) inst cntrHold[3:0]
 @N: MF239 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccapstub.v":40:15:40:25|Found 31-bit decrementor, 'un5_cntrConv_1[30:0]'
 
-Finished factoring (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 102MB)
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 102MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished technology mapping (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 
 Added 0 Buffers
@@ -63,11 +65,11 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 Writing Analyst data base Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 102MB peak: 103MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
@@ -80,7 +82,7 @@ Found clock FCLK with period 50.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Feb 08 19:19:26 2013
+# Timing Report written on Sun Feb 10 20:44:38 2013
 #
 
 
@@ -125,7 +127,7 @@ Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  f
 Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ----------------------------------------------------------------------------------------------------------
 System    System   |  10.000      5.038   |  No paths    -      |  No paths    -      |  No paths    -    
-System    FAB_CLK  |  50.000      46.958  |  No paths    -      |  No paths    -      |  No paths    -    
+System    FAB_CLK  |  50.000      46.841  |  No paths    -      |  No paths    -      |  No paths    -    
 FAB_CLK   FAB_CLK  |  50.000      40.922  |  No paths    -      |  No paths    -      |  No paths    -    
 ==========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
@@ -180,9 +182,9 @@ AdcCapStub_0.cntrHold[0]      FAB_CLK       DFN1E0     E       N_21             
 AdcCapStub_0.cntrHold[1]      FAB_CLK       DFN1E0     E       N_21               49.482       41.060
 AdcCapStub_0.cntrHold[2]      FAB_CLK       DFN1E0     E       N_21               49.482       41.060
 AdcCapStub_0.cntrHold[3]      FAB_CLK       DFN1E0     E       N_21               49.482       41.060
-AdcCapStub_0.cntrConv[0]      FAB_CLK       DFN1       D       cntrConv_4[0]      49.512       41.714
-AdcCapStub_0.cntrConv[7]      FAB_CLK       DFN1       D       cntrConv_4[7]      49.512       41.823
-AdcCapStub_0.cntrConv[8]      FAB_CLK       DFN1       D       cntrConv_4[8]      49.512       41.823
+AdcCap_0.cntrWaitQuiet[0]     FAB_CLK       DFN1E1     E       cntrWaitQuiete     49.482       41.651
+AdcCap_0.cntrWaitQuiet[1]     FAB_CLK       DFN1E1     E       cntrWaitQuiete     49.482       41.651
+AdcCap_0.cntrWaitQuiet[2]     FAB_CLK       DFN1E1     E       cntrWaitQuiete     49.482       41.651
 =====================================================================================================
 
 
@@ -257,7 +259,7 @@ mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DO        
 mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DOE       MSS_SPI_0_DO_E                    0.000       9.726 
 mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DO        MSS_SPI_1_DO_D                    0.000       9.726 
 mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DOE       MSS_SPI_1_DO_E                    0.000       9.726 
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     M2FRESETn     mss_capture_MSS_0_M2F_RESET_N     0.000       46.958
+mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     M2FRESETn     mss_capture_MSS_0_M2F_RESET_N     0.000       46.841
 ====================================================================================================================================
 
 
@@ -275,9 +277,9 @@ mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     D            
 mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     E             MSS_SPI_0_DO_E               10.000       9.726 
 mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     D             MSS_SPI_1_DO_D               10.000       9.726 
 mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     E             MSS_SPI_1_DO_E               10.000       9.726 
-AdcCap_0.cs                          System        DFN1            D             cs_RNO                       49.542       46.958
-AdcCap_0.cntrWaitQuiet[0]            System        DFN1            D             cntrWaitQuiet_6[0]           49.512       47.165
-AdcCap_0.cntrWaitQuiet[1]            System        DFN1            D             cntrWaitQuiet_6[1]           49.512       47.165
+AdcCap_0.cntrWaitQuiet[0]            System        DFN1E1          E             cntrWaitQuiete               49.482       46.841
+AdcCap_0.cntrWaitQuiet[1]            System        DFN1E1          E             cntrWaitQuiete               49.482       46.841
+AdcCap_0.cntrWaitQuiet[2]            System        DFN1E1          E             cntrWaitQuiete               49.482       46.841
 =================================================================================================================================
 
 
@@ -326,41 +328,40 @@ Target Part: A2F500M3G_FBGA484_-1
 Report for cell mss_capture.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     3      1.0        3.0
-               AO1     3      1.0        3.0
-              AO1A     1      1.0        1.0
+              AND2     1      1.0        1.0
+               AO1     1      1.0        1.0
+              AO1A     5      1.0        5.0
               AO1D     1      1.0        1.0
-              AX1D     1      1.0        1.0
                GND     5      0.0        0.0
                INV     1      1.0        1.0
            MSS_APB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-              NOR2    15      1.0       15.0
-             NOR2A    23      1.0       23.0
-             NOR2B     4      1.0        4.0
+              NOR2    13      1.0       13.0
+             NOR2A    21      1.0       21.0
               NOR3     4      1.0        4.0
-             NOR3A     5      1.0        5.0
+             NOR3A     7      1.0        7.0
              NOR3C     5      1.0        5.0
+               OA1     1      1.0        1.0
               OA1B     1      1.0        1.0
               OA1C     1      1.0        1.0
-               OR2    22      1.0       22.0
-              OR2A     1      1.0        1.0
+               OR2    24      1.0       24.0
+              OR2A     5      1.0        5.0
               OR2B     1      1.0        1.0
                OR3    47      1.0       47.0
              RCOSC     1      0.0        0.0
                VCC     5      0.0        0.0
               XA1B     1      1.0        1.0
-              XA1C     2      1.0        2.0
+              XA1C     4      1.0        4.0
              XNOR2    30      1.0       30.0
               XO1A     1      1.0        1.0
-              XOR2     9      1.0        9.0
+              XOR2     4      1.0        4.0
 
 
-              DFN1    39      1.0       39.0
+              DFN1    35      1.0       35.0
             DFN1E0     4      1.0        4.0
-            DFN1E1    12      1.0       12.0
+            DFN1E1    18      1.0       18.0
                    -----          ----------
-             TOTAL   250               237.0
+             TOTAL   249               236.0
 
 
   IO Cell usage:
@@ -376,7 +377,7 @@ Report for cell mss_capture.verilog
              TOTAL    88
 
 
-Core Cells         : 237 of 11520 (2%)
+Core Cells         : 236 of 11520 (2%)
 IO Cells           : 88
 
   RAM/ROM Usage Summary
@@ -387,6 +388,6 @@ Mapper successful!
 At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 40MB peak: 104MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Feb 08 19:19:26 2013
+# Sun Feb 10 20:44:38 2013
 
 ###########################################################]

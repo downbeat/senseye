@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Fri Feb 08 19:19:53 2013 ***************************************************************************
+                          Sun Feb 10 20:45:03 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
 File Name: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb
 Design Name: mss_capture  Design State: layout
-Last Saved: Fri Feb 08 19:19:34 2013
+Last Saved: Sun Feb 10 20:44:45 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Fri Feb 08 19:19:31 2013:
+Source File(s) Imported on Sun Feb 10 20:44:42 2013:
         Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn
         Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.pdc
 
@@ -353,9 +353,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        28
+  - Logic combining:        24
 
-    Total macros optimized  28
+    Total macros optimized  24
 
 There were 0 error(s) and 263 warning(s) in this design.
 =====================================================================
@@ -377,7 +377,7 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:    209  Total:  11520   (1.81%)
+    Fabric                     Used:    212  Total:  11520   (1.84%)
     Fabric IO (W/ clocks)      Used:     62  Total:    128   (48.44%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -408,8 +408,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 154          | 154
-    SEQ     | 55           | 55
+    COMB    | 155          | 155
+    SEQ     | 57           | 57
 
 I/O Function:
 
@@ -441,7 +441,7 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    57      CLK_NET       Net   : FAB_CLK
+    59      CLK_NET       Net   : FAB_CLK
                           Driver: mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
 
@@ -454,10 +454,12 @@ High fanout nets in the post compile netlist:
                           Driver: AdcCap_0/bitsRead_RNIMCF51[3]
     8       INT_NET       Net   : cs_c
                           Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
+                          Driver: AdcCap_0/cs_RNIA3BE
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
+    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
@@ -466,8 +468,6 @@ High fanout nets in the post compile netlist:
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_30
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_60
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
@@ -478,10 +478,12 @@ Nets that are candidates for clock assignment and the resulting fanout:
                           Driver: AdcCap_0/bitsRead_RNIMCF51[3]
     8       INT_NET       Net   : cs_c
                           Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNIPDEA1[1]
+    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
+                          Driver: AdcCap_0/cs_RNIA3BE
     8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_10
+    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
+                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
     7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
                           Driver: AdcCapStub_0/cntrConv[0]
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
@@ -490,8 +492,6 @@ Nets that are candidates for clock assignment and the resulting fanout:
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_30
     7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
                           Driver: AdcCapStub_0/un5_cntrConv_1_I_60
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[13]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_54
 
 
 Layout Output:
@@ -517,16 +517,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Fri Feb 08 19:19:38 2013
+Timing-driven Placer Started: Sun Feb 10 20:44:49 2013
 
-Placer Finished: Fri Feb 08 19:19:41 2013
-Total Placer CPU Time:     00:00:03
+Placer Finished: Sun Feb 10 20:44:51 2013
+Total Placer CPU Time:     00:00:02
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: mss_capture                     Started: Fri Feb 08 19:19:43 2013
+Design: mss_capture                     Started: Sun Feb 10 20:44:53 2013
 
  
 Iterative improvement...
@@ -534,8 +534,8 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: mss_capture                     
-Finished: Fri Feb 08 19:19:50 2013
-Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:07
+Finished: Sun Feb 10 20:45:01 2013
+Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:08
                         o - o - o - o - o - o
 
 

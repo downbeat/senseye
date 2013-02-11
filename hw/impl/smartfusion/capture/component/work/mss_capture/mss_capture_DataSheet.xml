@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture</location>
-    <state>GENERATED ( Fri Feb 08 19:18:50 2013 )</state>
+    <state>GENERATED ( Sun Feb 10 20:44:10 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -31,7 +31,7 @@
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>MSS_RESET_N</port-name>
@@ -40,9 +40,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[6]</port-name>
+    <port-name>EMC_DB[9]</port-name>
     <direction>INOUT</direction>
-    <pin-number>J1</pin-number>
+    <pin-number>G3</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -52,9 +52,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[2]</port-name>
+    <port-name>EMC_DB[5]</port-name>
     <direction>INOUT</direction>
-    <pin-number>K5</pin-number>
+    <pin-number>J2</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -64,27 +64,27 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[8]</port-name>
+    <port-name>EMC_DB[11]</port-name>
     <direction>INOUT</direction>
-    <pin-number>H3</pin-number>
+    <pin-number>G5</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[0]</port-name>
+    <port-name>ledsout[3]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[0]</port-name>
+    <port-name>EMC_AB[3]</port-name>
     <direction>OUT</direction>
-    <pin-number>A8</pin-number>
+    <pin-number>B11</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[11]</port-name>
+    <port-name>EMC_AB[14]</port-name>
     <direction>OUT</direction>
-    <pin-number>D12</pin-number>
+    <pin-number>B13</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -112,57 +112,15 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[4]</port-name>
+    <port-name>EMC_DB[7]</port-name>
     <direction>INOUT</direction>
-    <pin-number>J3</pin-number>
+    <pin-number>H1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[1]</port-name>
+    <port-name>ledsout[4]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[13]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A15</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>RESET</port-name>
-    <direction>IN</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[11]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>G5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXEN</port-name>
-    <direction>OUT</direction>
-    <pin-number>Y4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[5]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A9</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>UART_1_TXD</port-name>
-    <direction>OUT</direction>
-    <pin-number>V20</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -172,9 +130,45 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>RESET</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[14]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>C1</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_TXEN</port-name>
+    <direction>OUT</direction>
+    <pin-number>Y4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[4]</port-name>
+    <direction>OUT</direction>
+    <pin-number>E11</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>UART_1_TXD</port-name>
+    <direction>OUT</direction>
+    <pin-number>V20</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>EMC_AB[19]</port-name>
     <direction>OUT</direction>
     <pin-number>B17</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[22]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C17</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -184,9 +178,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[9]</port-name>
+    <port-name>EMC_DB[12]</port-name>
     <direction>INOUT</direction>
-    <pin-number>G3</pin-number>
+    <pin-number>D2</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -202,15 +196,15 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[3]</port-name>
+    <port-name>EMC_AB[6]</port-name>
     <direction>OUT</direction>
-    <pin-number>B11</pin-number>
+    <pin-number>B12</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[5]</port-name>
+    <port-name>EMC_DB[8]</port-name>
     <direction>INOUT</direction>
-    <pin-number>J2</pin-number>
+    <pin-number>H3</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -220,27 +214,33 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[12]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>D2</pin-number>
+    <port-name>MAC_TXD[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>W5</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>startCaptureTP</port-name>
+    <port-name>EMC_DB[15]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>B1</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[0]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[6]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B12</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
     <port-name>EMC_AB[9]</port-name>
     <direction>OUT</direction>
     <pin-number>D13</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[12]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A14</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -262,12 +262,6 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[14]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>C1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>MAC_RXD[0]</port-name>
     <direction>IN</direction>
     <pin-number>V5</pin-number>
@@ -280,19 +274,31 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[14]</port-name>
+    <port-name>EMC_AB[2]</port-name>
     <direction>OUT</direction>
-    <pin-number>B13</pin-number>
+    <pin-number>B10</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[23]</port-name>
+    <port-name>EMC_AB[17]</port-name>
     <direction>OUT</direction>
-    <pin-number>C18</pin-number>
+    <pin-number>C15</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[4]</port-name>
+    <port-name>EMC_DB[0]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>K2</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[7]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_CLK</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -316,15 +322,15 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[0]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>K2</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>EMC_DB[3]</port-name>
     <direction>INOUT</direction>
     <pin-number>J4</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[6]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>J1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -334,15 +340,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[3]</port-name>
+    <port-name>ledsout[6]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[15]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>B1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -352,21 +352,27 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>MAC_TXD[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>AA5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>UART_1_RXD</port-name>
     <direction>IN</direction>
     <pin-number>W22</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[4]</port-name>
+    <port-name>EMC_AB[7]</port-name>
     <direction>OUT</direction>
-    <pin-number>E11</pin-number>
+    <pin-number>A12</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[17]</port-name>
+    <port-name>EMC_AB[20]</port-name>
     <direction>OUT</direction>
-    <pin-number>C15</pin-number>
+    <pin-number>F13</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -382,57 +388,51 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[15]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>miso</port-name>
-    <direction>IN</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_CLK</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXD[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>AA5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[22]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C17</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[7]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>EMC_AB[18]</port-name>
     <direction>OUT</direction>
     <pin-number>B16</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[6]</port-name>
+    <port-name>ledsout[1]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_DB[7]</port-name>
+    <port-name>ledsout[2]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_RXD[1]</port-name>
+    <direction>IN</direction>
+    <pin-number>U5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[25]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D16</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[10]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D11</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[21]</port-name>
+    <direction>OUT</direction>
+    <pin-number>F14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[10]</port-name>
     <direction>INOUT</direction>
-    <pin-number>H1</pin-number>
+    <pin-number>F4</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -448,69 +448,9 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[5]</port-name>
-    <direction>OUT</direction>
-    <pin-number>E12</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[24]</port-name>
-    <direction>OUT</direction>
-    <pin-number>C16</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[10]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>F4</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_DB[13]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>D3</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[12]</port-name>
-    <direction>OUT</direction>
-    <pin-number>A14</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_RXD[1]</port-name>
-    <direction>IN</direction>
-    <pin-number>U5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>EMC_AB[20]</port-name>
-    <direction>OUT</direction>
-    <pin-number>F13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>EMC_AB[8]</port-name>
     <direction>OUT</direction>
     <pin-number>C13</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>SPI_0_CLK</port-name>
-    <direction>INOUT</direction>
-    <pin-number>W19</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_TXD[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>W5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[7]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -520,15 +460,51 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[2]</port-name>
-    <direction>OUT</direction>
-    <pin-number>B10</pin-number>
+    <port-name>miso</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[10]</port-name>
+    <port-name>EMC_DB[13]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>D3</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[15]</port-name>
     <direction>OUT</direction>
-    <pin-number>D11</pin-number>
+    <pin-number>B14</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A8</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[23]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C18</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[11]</port-name>
+    <direction>OUT</direction>
+    <pin-number>D12</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>startCaptureTP</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>SPI_0_CLK</port-name>
+    <direction>INOUT</direction>
+    <pin-number>W19</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -538,15 +514,39 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[25]</port-name>
-    <direction>OUT</direction>
-    <pin-number>D16</pin-number>
+    <port-name>EMC_DB[4]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>J3</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>EMC_AB[21]</port-name>
+    <port-name>EMC_AB[5]</port-name>
     <direction>OUT</direction>
-    <pin-number>F14</pin-number>
+    <pin-number>E12</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[13]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A15</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>A9</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_DB[2]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>K5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>EMC_AB[24]</port-name>
+    <direction>OUT</direction>
+    <pin-number>C16</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -556,7 +556,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[2]</port-name>
+    <port-name>ledsout[5]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>

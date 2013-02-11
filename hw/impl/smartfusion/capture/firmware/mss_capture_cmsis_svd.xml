@@ -2,7 +2,7 @@
 <device>
   <name>mss_capture</name>
   <version>1.0</version>
-  <description>CMSIS description for mss_capture.  Created by Actel SmartDesign on Fri Feb 08 19:18:48 2013</description>
+  <description>CMSIS description for mss_capture.  Created by Actel SmartDesign on Sun Feb 10 20:44:09 2013</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

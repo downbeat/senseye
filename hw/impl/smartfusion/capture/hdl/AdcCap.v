@@ -16,10 +16,10 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ             (20000000)  // TODO (shouldn't be) hardcoded to 20MHz
+`define CLK_FREQ             (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define ADC_RES              (8)         // bits
 `define TICKS_WAIT_LEADING   (3)         // bits / clock ticks
-`define TICKS_WAIT_TRAILING  (4)         // bits / clock ticks
+`define TICKS_WAIT_TRAILING  (5)         // bits / clock ticks
 `define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
 
 
@@ -53,11 +53,10 @@ begin
       // start conversion
       if(0 == startCapture)
       begin
-         // TODO
          cs <= 0;
-         cntrWaitLeading <= `TICKS_WAIT_LEADING - 1;
-         cntrWaitTrailing <= `TICKS_WAIT_TRAILING - 1;
-         cntrWaitQuiet <= `TICKS_WAIT_QUIET - 1;
+         cntrWaitLeading <= `TICKS_WAIT_LEADING;
+         cntrWaitTrailing <= `TICKS_WAIT_TRAILING;
+         cntrWaitQuiet <= `TICKS_WAIT_QUIET;
          bitsRead <= 0;
       end
    end
@@ -79,7 +78,6 @@ begin
    // state: waiting (trailing)
    if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
    begin
-      // TODO
       cntrWaitTrailing <= cntrWaitTrailing - 1;
    end
 

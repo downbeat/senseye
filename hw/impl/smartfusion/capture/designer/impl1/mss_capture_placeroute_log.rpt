@@ -34,16 +34,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Fri Feb 08 19:19:38 2013
+Timing-driven Placer Started: Sun Feb 10 20:44:49 2013
 
-Placer Finished: Fri Feb 08 19:19:41 2013
-Total Placer CPU Time:     00:00:03
+Placer Finished: Sun Feb 10 20:44:51 2013
+Total Placer CPU Time:     00:00:02
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: mss_capture                     Started: Fri Feb 08 19:19:43 2013
+Design: mss_capture                     Started: Sun Feb 10 20:44:53 2013
 
  
 Iterative improvement...
@@ -51,8 +51,8 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: mss_capture                     
-Finished: Fri Feb 08 19:19:50 2013
-Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:07
+Finished: Sun Feb 10 20:45:01 2013
+Total CPU Time:     00:00:07            Total Elapsed Time: 00:00:08
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -60,7 +60,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:16 )
+The Layout command succeeded ( 00:00:15 )
 Wrote status report to file: mss_capture_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -76,6 +76,6 @@ The Report command succeeded ( 00:00:00 )
 Design saved to file
 Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb.
 
-The Execute Script command succeeded ( 00:00:18 )
+The Execute Script command succeeded ( 00:00:17 )
 Design closed.
 
