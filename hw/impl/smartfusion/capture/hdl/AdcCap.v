@@ -8,9 +8,7 @@
 //
 // Description: 
 //
-// Capture data from the MCP3201 analog-to-digital converter over SPI
-// - generates slow clock for the ADC
-// - 
+// Driver for the TI ADC081S101, low-power 1Msps 8-bit ADC
 //
 // Targeted device: <Family::SmartFusion> <Die::A2F500M3G> <Package::484 FBGA>
 // Author: Russ Bielawski
