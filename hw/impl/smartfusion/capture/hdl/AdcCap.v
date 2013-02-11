@@ -3,7 +3,8 @@
 //
 // File: AdcCap.v
 // File history:
-//      0: 2013-02-05: created
+//      0.01: 2013-02-05: created
+//      1.00: 2013-02-10: driver for TI ADC081S101 complete and working
 //
 // Description: 
 //
