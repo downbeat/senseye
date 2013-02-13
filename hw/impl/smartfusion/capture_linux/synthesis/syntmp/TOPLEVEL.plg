@@ -1,0 +1,37 @@
+@P:  Worst Slack : 3.834
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency : 47.2 MHz
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Frequency : 40.0 MHz
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period : 21.166
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Period : 25.000
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack : 3.834
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Estimated Frequency : NA
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Requested Frequency : 80.0 MHz
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Estimated Period : NA
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Requested Period : 12.500
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Slack : NA
+@P:  Worst Slack(min analysis) : NA
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency(min analysis) : 47.2 MHz
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Frequency(min analysis) : 40.0 MHz
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period(min analysis) : 21.166
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Period(min analysis) : 25.000
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack(min analysis) : 3.834
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Estimated Frequency(min analysis) : NA
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Requested Frequency(min analysis) : 80.0 MHz
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Estimated Period(min analysis) : NA
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Requested Period(min analysis) : 12.500
+@P:  MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock - Slack(min analysis) : NA
+@P:  Total Area : 1103.0
+@P:  Total Area : 823.0
+@P:  Total Area : 298.0
+@P:  Total Area : 525.0
+@P:  Total Area : 280.0
+@P:  Total Area : 280.0
+@P:  Total Area : 81.0
+@P:  Total Area : 44.0
+@P:  Total Area : 199.0
+@P:  Total Area : 16.0
+@P:  Total Area : 6.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 1103.0
+@P:  CPU Time : 0h:00m:02s

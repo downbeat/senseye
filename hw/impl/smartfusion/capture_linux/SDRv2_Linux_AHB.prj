@@ -1,0 +1,724 @@
+KEY LIBERO "9.1"
+KEY CAPTURE "9.1.5.1"
+KEY DEFAULT_IMPORT_LOC "C:\Actelprj\SDR_IAP_LED\hdl"
+KEY DEFAULT_OPEN_LOC "D:\PAVLENKO\WORK_2011\RT_70340_PSRAM_Page_Mode\a2f-lnx-brd-fpga-1_0_0\constraint"
+KEY ProjectID "2961e29f-fb30-4a6a-935e-c1d663d3cbf2"
+KEY HDLTechnology "VERILOG"
+KEY VendorTechnology_Family "SmartFusion"
+KEY VendorTechnology_Die "IP6X5M2"
+KEY VendorTechnology_Package "fg484"
+KEY ProjectLocation "C:\Actelprj\SDRv2_Linux_AHB"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "TOPLEVEL::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST LIBRARIES
+MSS_BFM_LIB
+COREAPB3_LIB
+COREAHBLITE_LIB
+ENDLIST
+LIST LIBRARY_MSS_BFM_LIB
+ALIAS=..\component\Actel\SmartFusionMSS\MSS\2.5.106\mti\user_verilog\MSS_BFM_LIB
+COMPILE_OPTION=REFRESH_AND_COMPILE
+ENDLIST
+LIST LIBRARY_COREAPB3_LIB
+ALIAS=..\component\Actel\DirectCore\CoreAPB3\3.0.103\mti\user_vlog\COREAPB3_LIB
+COMPILE_OPTION=REFRESH_AND_COMPILE
+ENDLIST
+LIST LIBRARY_COREAHBLITE_LIB
+ALIAS=..\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\user_vlog\COREAHBLITE_LIB
+COMPILE_OPTION=REFRESH_AND_COMPILE
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635267"
+SIZE="3714"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="2645"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\scripts\wave_user.do,do"
+STATE="utd"
+TIME="1347635266"
+SIZE="912"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="28650"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="7717"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="1299"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="6699"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="4604"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="25186"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="116411"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="3648"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="4540"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1347635266"
+SIZE="41996"
+LIBRARY="COREAHBLITE_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635252"
+SIZE="945"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v,hdl"
+STATE="utd"
+TIME="1347635252"
+SIZE="11243"
+PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CCC\2.0.106\MSS_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635246"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635246"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_COM\1.0.200\MSS_COM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635246"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_DMA\1.0.101\MSS_DMA.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635246"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ENVM\2.3.102\MSS_ENVM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="253"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIC\1.0.101\MSS_FIC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIO\1.0.203\MSS_FIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_GPIO\1.0.101\MSS_GPIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="253"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_INTR\1.0.101\MSS_INTR.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="253"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_MAC\2.1.101\MSS_MAC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RESET\1.0.101\MSS_RESET.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="254"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RTC\1.0.100\MSS_RTC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="252"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_TIMER\1.0.100\MSS_TIMER.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="254"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UART\1.0.101\MSS_UART.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="253"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UFROM\1.0.100\MSS_UFROM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="254"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusionMSS\MSS_WATCHDOG\1.0.101\MSS_WATCHDOG.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635249"
+SIZE="257"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635246"
+SIZE="485"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v,hdl"
+STATE="utd"
+TIME="1347635246"
+SIZE="2905"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635252"
+SIZE="15844"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
+STATE="utd"
+TIME="1347635244"
+SIZE="3379"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.v,hdl"
+STATE="utd"
+TIME="1347635252"
+SIZE="12518"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+STATE="utd"
+TIME="1347635249"
+SIZE="248573"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\mss_tshell.v,hdl"
+STATE="utd"
+TIME="1347635249"
+SIZE="12560"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1347635252"
+SIZE="1969"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1347635269"
+SIZE="1937"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
+STATE="utd"
+TIME="1347635268"
+SIZE="8617"
+ENDFILE
+VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
+STATE="utd"
+TIME="1347635265"
+SIZE="4837"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
+STATE="utd"
+TIME="1347635267"
+SIZE="68354"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\synthesis.sdc,sdc"
+STATE="utd"
+TIME="1347561123"
+SIZE="8624"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
+STATE="utd"
+TIME="1347635459"
+SIZE="1433088"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
+STATE="utd"
+TIME="1347635453"
+SIZE="123965"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
+STATE="utd"
+TIME="1347492600"
+SIZE="1954"
+ENDFILE
+VALUE "<project>\hdl\ahb.v,hdl"
+STATE="utd"
+TIME="1347567423"
+SIZE="5676"
+ENDFILE
+VALUE "<project>\hdl\apb.v,hdl"
+STATE="utd"
+TIME="1312649700"
+SIZE="6659"
+ENDFILE
+VALUE "<project>\hdl\cr_int.v,hdl"
+STATE="utd"
+TIME="1347564608"
+SIZE="4483"
+ENDFILE
+VALUE "<project>\hdl\led.v,hdl"
+STATE="utd"
+TIME="1341586910"
+SIZE="386"
+ENDFILE
+VALUE "<project>\hdl\psram_cr.v,hdl"
+STATE="utd"
+TIME="1347564047"
+SIZE="2343"
+ENDFILE
+VALUE "<project>\hdl\VersionROM.v,hdl"
+STATE="utd"
+TIME="1312493642"
+SIZE="1231"
+ENDFILE
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+STATE="utd"
+TIME="1347635268"
+SIZE="1462"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+ENDFILE
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+STATE="utd"
+TIME="1347635254"
+SIZE="41"
+PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
+ENDFILE
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master0.bfm,sim"
+STATE="utd"
+TIME="1347635269"
+SIZE="10597"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+ENDFILE
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master1.bfm,sim"
+STATE="utd"
+TIME="1347635269"
+SIZE="10540"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+ENDFILE
+VALUE "<project>\simulation\coreahblite_usertb_include.bfm,sim"
+STATE="utd"
+TIME="1347635269"
+SIZE="10049"
+PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+ENDFILE
+VALUE "<project>\simulation\subsystem.bfm,sim"
+STATE="utd"
+TIME="1347635268"
+SIZE="629"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+ENDFILE
+VALUE "<project>\simulation\test.bfm,sim"
+STATE="utd"
+TIME="1347635254"
+SIZE="5461"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\simulation\user.bfm,sim"
+STATE="utd"
+TIME="1304024988"
+SIZE="670"
+PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
+STATE="utd"
+TIME="1347635279"
+SIZE="875985"
+ENDFILE
+VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
+STATE="utd"
+TIME="1347635305"
+SIZE="25309"
+ENDFILE
+VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1347635279"
+SIZE="408"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "MSS_CORE2::work"
+FILE "<project>\component\work\MSS_CORE2\MSS_CORE2.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
+VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
+VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "TOPLEVEL::work"
+FILE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
+VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
+ENDLIST
+LIST SynthesisConstraints
+VALUE "<project>\constraint\synthesis.sdc,sdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\TOPLEVEL.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\TOPLEVEL.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
+VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\TOPLEVEL.v,syn_hdl"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.v,palace_hdl"
+VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
+VALUE "<project>\designer\impl1\TOPLEVEL.prb,prb"
+VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
+VALUE "<project>\designer\impl1\TOPLEVEL.pdb,pdb"
+VALUE "<project>\designer\impl1\TOPLEVEL.stp,stp"
+VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "CoreAHBLite::COREAHBLITE_LIB"
+FILE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreahblite_usertb_include.bfm,sim"
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master0.bfm,sim"
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master1.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\scripts\wave_user.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST TOPLEVEL
+VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
+ENDLIST
+LIST MSS_CORE2
+VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
+ENDLIST
+LIST CoreAHBLite
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+LIST TOPLEVEL
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
+VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
+ENDLIST
+LIST MSS_CORE2
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
+VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
+VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
+VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
+ENDLIST
+LIST CoreAHBLite
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreahblite_usertb_include.bfm,sim"
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master0.bfm,sim"
+VALUE "<project>\simulation\coreahblite_usertb_ahb_master1.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\scripts\wave_user.do,do"
+ENDLIST
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DumpVCD=false
+VCDFileName=power.vcd
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=C:/Actel/Libero_v9.0/Designer/lib/modelsim/precompiled/vlog/smartfusion
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=TRUE
+AutoCheckConstraints=TRUE
+UpdateViewDrawIni=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+GenerateHDLFromSchematic=TRUE
+FlashProInputFile=fdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="Synplify AE"
+FUNCTION="Synthesis"
+TOOL="Synplify"
+LOCATION="C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="ModelSim AE"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Actel\Libero_v9.1\Model\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+EndProfile
+NAME="WFL"
+FUNCTION="Stimulus"
+TOOL="WFL"
+LOCATION="syncad.exe"
+PARAM="-pwflite"
+BATCH=0
+EndProfile
+NAME="FlashPro"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="C:\Actel\Libero_v9.1\Designer\bin\FlashPro.exe"
+PARAM=""
+BATCH=0
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "MSS_CORE2::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "TOPLEVEL::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\TOPLEVEL.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\TOPLEVEL.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
+VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
+VALUE "<project>\synthesis\TOPLEVEL.v,syn_hdl"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.edn,palace_edn"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.gcf,palace_gcf"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.pdc,palace_pdc"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.sdc,palace_sdc"
+VALUE "<project>\phy_synthesis\TOPLEVEL_palace.v,palace_hdl"
+VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
+VALUE "<project>\designer\impl1\TOPLEVEL.prb,prb"
+VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
+VALUE "<project>\designer\impl1\TOPLEVEL.pdb,pdb"
+VALUE "<project>\designer\impl1\TOPLEVEL.stp,stp"
+VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "CoreAHBLite::COREAHBLITE_LIB"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+DESIGNFLOW:
+SD:TOPLEVEL::work
+ACTIVE_VIEW:0
+ENDLIST

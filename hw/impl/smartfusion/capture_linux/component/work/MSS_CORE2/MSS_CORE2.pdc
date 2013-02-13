@@ -1,0 +1,134 @@
+# Actel Physical design constraints file
+# Generated file
+
+# Version: 9.1 SP5 9.1.5.1
+# Family: SmartFusion , Die: A2F500M3G , Package: 484 FBGA
+# Date generated: Fri Sep 14 11:07:24 2012 
+
+
+# 
+# IO banks setting
+# 
+
+
+# 
+# User Groups
+# 
+
+define_group -name UART_0_PADs
+
+
+# 
+# I/O constraints
+# 
+
+set_io MAC_CRSDV      \
+    -pinname W4       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io MAC_MDC         \
+    -pinname AA3       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io MAC_MDIO       \
+    -pinname V4       \
+    -fixed yes        \
+    -DIRECTION Inout
+
+
+set_io {MAC_RXD[0]}   \
+    -pinname V5       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {MAC_RXD[1]}   \
+    -pinname U5       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io MAC_RXER       \
+    -pinname AA4      \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+set_io {MAC_TXD[0]}    \
+    -pinname AA5       \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io {MAC_TXD[1]}    \
+    -pinname W5        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io MAC_TXEN        \
+    -pinname Y4        \
+    -fixed yes         \
+    -DIRECTION Output
+
+
+set_io MSS_RESET_N    \
+    -pinname R1       \
+    -fixed yes        \
+    -DIRECTION Input
+
+
+# User Group UART_0_PADs
+
+set_io UART_0_RXD            \
+    -pinname U18             \
+    -fixed yes               \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION Input
+
+
+set_io UART_0_TXD            \
+    -pinname Y22             \
+    -fixed yes               \
+    -GROUP_NAME UART_0_PADs  \
+    -DIRECTION Output
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io MAC_CRSDV -pinname W4 -fixed yes -DIRECTION Input 
+# set_io MAC_MDC -pinname AA3 -fixed yes -DIRECTION Output 
+# set_io MAC_MDIO -pinname V4 -fixed yes -DIRECTION Inout 
+# set_io {MAC_RXD[0]} -pinname V5 -fixed yes -DIRECTION Input 
+# set_io {MAC_RXD[1]} -pinname U5 -fixed yes -DIRECTION Input 
+# set_io MAC_RXER -pinname AA4 -fixed yes -DIRECTION Input 
+# set_io {MAC_TXD[0]} -pinname AA5 -fixed yes -DIRECTION Output 
+# set_io {MAC_TXD[1]} -pinname W5 -fixed yes -DIRECTION Output 
+# set_io MAC_TXEN -pinname Y4 -fixed yes -DIRECTION Output 
+# set_io MSS_RESET_N -pinname R1 -fixed yes -DIRECTION Input 
+# set_io UART_0_RXD -pinname U18 -fixed yes -GROUP_NAME UART_0_PADs -DIRECTION Input 
+# set_io UART_0_TXD -pinname Y22 -fixed yes -GROUP_NAME UART_0_PADs -DIRECTION Output 
+# set_io MAC_CRSDV -pinname W4 -fixed yes -DIRECTION Input 
+# set_io MAC_MDC -pinname AA3 -fixed yes -DIRECTION Output 
+# set_io MAC_MDIO -pinname V4 -fixed yes -DIRECTION Inout 
+# set_io {MAC_RXD[0]} -pinname V5 -fixed yes -DIRECTION Input 
+# set_io {MAC_RXD[1]} -pinname U5 -fixed yes -DIRECTION Input 
+# set_io MAC_RXER -pinname AA4 -fixed yes -DIRECTION Input 
+# set_io {MAC_TXD[0]} -pinname AA5 -fixed yes -DIRECTION Output 
+# set_io {MAC_TXD[1]} -pinname W5 -fixed yes -DIRECTION Output 
+# set_io MAC_TXEN -pinname Y4 -fixed yes -DIRECTION Output 
+# set_io MSS_RESET_N -pinname R1 -fixed yes -DIRECTION Input 
+# set_io UART_0_RXD -pinname U18 -fixed yes -GROUP_NAME UART_0_PADs -DIRECTION Input 
+# set_io UART_0_TXD -pinname Y22 -fixed yes -GROUP_NAME UART_0_PADs -DIRECTION Output 

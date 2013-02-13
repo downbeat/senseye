@@ -1,0 +1,75 @@
+#add_file options
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/mss_tshell.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/MSS_CORE2.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/ahb.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/cr_int.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/psram_cr.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
+add_file -lib COREAHBLITE_LIB -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
+add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/TOPLEVEL/TOPLEVEL.v"
+add_file -constraint "C:/Actelprj/SDRv2_Linux_AHB/constraint/synthesis.sdc"
+set_option -top_module TOPLEVEL
+
+#device options
+set_option -technology SmartFusion
+set_option -part A2F500M3G
+set_option -vlog_std v2001
+
+
+
+#project files
+
+#implementation: "synthesis"
+impl -add synthesis -type fpga
+
+#
+#implementation attributes
+
+set_option -package FBGA484
+set_option -speed_grade Std
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+# mapper_options
+set_option -frequency 80
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# Actel 500K
+set_option -run_prop_extract 1
+set_option -maxfan 3000
+set_option -maxfan_hard3 0
+set_option -retiming 0
+set_option -report_path 0
+set_option -opcond COMWC
+set_option -update_models_cp 0
+set_option -preserve_registers 0
+# Actel 500K
+set_option -globalthreshold 50
+
+# NFilter
+set_option -popfeed 0
+set_option -constprop 0
+set_option -createhierarchy 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+impl -active "synthesis"
+project -result_file "C:/Actelprj/SDRv2_Linux_AHB/synthesis/TOPLEVEL.edn"

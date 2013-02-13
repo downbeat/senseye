@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>TOPLEVEL</design>
+	<target_edif>C:\Actelprj\SDRv2_Linux_AHB\synthesis\TOPLEVEL.edn</target_edif>
+</SynplifyOutput>

@@ -1,0 +1,20 @@
+KEY IDE_DES_TOOL "Ide"
+KEY IDE_DES_FAMILY "SmartFusion"
+KEY IDE_DES_DIE "IP4X3M1"
+KEY IDE_DES_PACKAGE "fg484"
+KEY IDE_DES_TOP_CELL_NAME "TOP"
+KEY IDE_DES_KEEP_PHY_CONSTR "FALSE"
+KEY IDE_DES_KEEP_TIME_CONSTR "TRUE"
+KEY IDE_DES_LAYOUT_DONE "FALSE"
+KEY IDE_DES_BA_EXPORTED "FALSE"
+KEY IDE_DES_ERROR_FOUND "FALSE"
+KEY IDE_DES_ADB_PATH "C:\Work\!Projects\67511_Actels_kit\a2f200-db-fpga\a2f200-db-fpga\designer\impl1\TOP.adb"
+LIST SOURCE_FILES
+VALUE "C:\Work\!Projects\67511_Actels_kit\a2f200-db-fpga\a2f200-db-fpga\synthesis\TOP.edn;edn"
+ENDLIST
+LIST OPTIONAL_FILES
+VALUE "C:\Work\!Projects\67511_Actels_kit\a2f200-db-fpga\a2f200-db-fpga\synthesis\TOP_sdc.sdc;Skipped"
+VALUE "C:\Work\!Projects\67511_Actels_kit\a2f200-db-fpga\a2f200-db-fpga\component\work\TOP\TOP.pdc;Used"
+ENDLIST
+LIST VCD_FILES
+ENDLIST

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<device>
+  <name>TOPLEVEL</name>
+  <version>1.0</version>
+  <description>CMSIS description for TOPLEVEL.  Created by Actel SmartDesign on Fri Sep 14 11:07:48 2012</description>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <peripherals>
+    <peripheral>
+      <name>psram_cr_0</name>
+      <baseAddress>0x40050000</baseAddress>
+    </peripheral>
+  </peripherals>
+</device>
