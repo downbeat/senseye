@@ -1,12 +1,12 @@
 <project name="TOPLEVEL" version="1.1">
     <ProjectDirectory>
-        C:\Actelprj\SDRv2_Linux_AHB\designer\impl1\TOPLEVEL_fp
+        Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL_fp
     </ProjectDirectory>
     <View>
         SingleSTAPLView
     </View>
     <LogFile>
-        C:\Actelprj\SDRv2_Linux_AHB\designer\impl1\TOPLEVEL_fp\TOPLEVEL.log
+        Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL_fp\TOPLEVEL.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -59,7 +59,7 @@
         </Hardware>
         <Algo type="PDB">
             <filename>
-                C:\Actelprj\SDRv2_Linux_AHB\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb
+                Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb
             </filename>
             <local>
                 projectData\TOPLEVEL.pdb

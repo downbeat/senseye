@@ -1,6 +1,6 @@
 KEY LIBERO "10.1"
 KEY CAPTURE "10.1.3.1"
-KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_IMPORT_LOC "D:\Q4_09_project\SmartFusion\Custom_APB\Design\apb_slave_fabric_nw\hdl"
 KEY DEFAULT_OPEN_LOC ""
 KEY ProjectID "0"
 KEY HDLTechnology "VERILOG"
@@ -304,12 +304,12 @@ TIME="1360105802"
 SIZE="222"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.adb,adb"
-STATE="utd"
+STATE="ood"
 TIME="1360547122"
 SIZE="558080"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.fdb,fdb"
-STATE="utd"
+STATE="ood"
 TIME="1360547122"
 SIZE="85149"
 ENDFILE
@@ -324,7 +324,7 @@ TIME="1360547085"
 SIZE="30318"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pdb,pdb"
-STATE="utd"
+STATE="ood"
 TIME="1360547139"
 SIZE="94720"
 ENDFILE
@@ -360,8 +360,8 @@ SIZE="1230"
 ENDFILE
 VALUE "<project>\hdl\AdcCap.v,hdl"
 STATE="utd"
-TIME="1360546882"
-SIZE="2544"
+TIME="1360552786"
+SIZE="2563"
 ENDFILE
 VALUE "<project>\hdl\AdcCapStub.v,hdl"
 STATE="utd"
@@ -375,8 +375,8 @@ SIZE="1017"
 ENDFILE
 VALUE "<project>\hdl\Stonyman.v,hdl"
 STATE="utd"
-TIME="1360552297"
-SIZE="741"
+TIME="1360552935"
+SIZE="671"
 ENDFILE
 VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 STATE="utd"
@@ -403,7 +403,7 @@ SIZE="670"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.edn,syn_edn"
-STATE="utd"
+STATE="ood"
 TIME="1360547078"
 SIZE="268182"
 ENDFILE
@@ -446,10 +446,7 @@ VALUE "<project>\component\work\mss_capture_MSS\mss_tshell_syn.sdc,sdc"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
-LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>\synthesis\mss_capture.edn,syn_edn)=StateSuccess
-ideDESIGNER(<project>\designer\impl1\mss_capture.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -589,10 +586,7 @@ ENDLIST
 LIST ProjectState5.1
 LIST "mss_capture::work"
 LIST Impl1
-LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
-ideSYNTHESIS(<project>\synthesis\mss_capture.edn,syn_edn)=StateSuccess
-ideDESIGNER(<project>\designer\impl1\mss_capture.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -626,7 +620,7 @@ ENDLIST
 LIST OpenedFileList
 SmartDesign;mss_capture
 SmartDesign;mss_capture_MSS
-ACTIVEVIEW;mss_capture
+ACTIVEVIEW;mss_capture_MSS
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
