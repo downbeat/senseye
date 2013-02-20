@@ -1,9 +1,7 @@
 Selecting top level module mss_capture
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":26:7:26:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":35:10:35:19|No assignment to cntrClkSpi
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":22:7:22:16|Synthesizing module AdcCapStub
-
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":34:10:34:19|No assignment to cntrClkSpi
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 
 @W: CG532 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":27:0:27:6|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
@@ -19,23 +17,65 @@ Selecting top level module mss_capture
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:43|Synthesizing module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
-
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
-
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":85:7:85:21|Synthesizing module BIBUF_OPEND_MSS
-
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
-
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":51:7:51:17|Synthesizing module TRIBUFF_MSS
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_capture_MSS.v":9:7:9:21|Synthesizing module mss_capture_MSS
 
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":80:7:80:14|Synthesizing module stonyman
+
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":91:17:91:24|No assignment to pixelout
+@W: CL169 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register flagCapturing 
+
+@W: CL132 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":368:48:368:74|Read Address width 3 does not cover RAM depth
+
+@A: CL133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":368:48:368:74|Write Address width 3 does not cover RAM depth
+
+@N: CL134 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":9:7:9:17|Synthesizing module mss_capture
 
-@W: CL168 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":230:8:230:16|Pruning instance blinker_0 -- not in use ...
+@W: CL168 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":117:8:117:16|Pruning instance blinker_0 -- not in use ...
 
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":61:14:61:18|Input RESET is unused
+@W: CL138 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Removing register 'inphi' because it is only assigned 0 or its original value.
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 31 of counterWait[31:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 30 of counterWait[30:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[29] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 29 of counterWait[29:0] 
+
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Trying to extract state machine for register substate
+Extracted state machine for register substate
+State machine has 12 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[28] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 28 of counterWait[28:0] 
+
+@A: CL153 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":91:17:91:24|*Unassigned bits of pixelout[7:0] are referenced and tied to 0 -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":84:6:84:17|Input startCapture is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":85:12:85:18|Input pixelin is unused
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
 @W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
@@ -54,21 +94,6 @@ Selecting top level module mss_capture
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrHold[7] is always 0, optimizing ...
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrConv[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 31 of cntrConv[31:0] 
-
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 7 of cntrHold[7:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrHold[6] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 6 of cntrHold[6:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrHold[5] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 5 of cntrHold[5:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Register bit cntrHold[4] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v":32:0:32:5|Pruning register bit 4 of cntrHold[4:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":42:0:42:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":42:0:42:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 

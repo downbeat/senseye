@@ -5,8 +5,8 @@
   <drc>
     <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
     <StatusMessage>Error</StatusMessage>
-    <message>Out-of-date Instance</message>
-    <detail>Component definition is not consistent for instance AdcDisplayStub_0</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/mss_capture/instances/AdcDisplayStub_0</crossprobe>
+    <message>Undriven Pin</message>
+    <detail>Unconnected top level output port mss_capture:ledsout[7:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/mss_capture/pins/mss_capture:ledsout</crossprobe>
   </drc>
 </drcreport>

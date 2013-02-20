@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Sun Feb 10 20:44:38 2013
+# Timing Report written on Wed Feb 20 02:33:42 2013
 #
 
 
@@ -25,13 +25,13 @@ Performance Summary
 
 Worst slack in design: 0.192
 
-                   Requested     Estimated     Requested     Estimated                Clock        Clock          
-Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group          
-------------------------------------------------------------------------------------------------------------------
-FAB_CLK            20.0 MHz      110.2 MHz     50.000        9.078         40.922     declared     clk_group_0    
-FCLK               20.0 MHz      NA            50.000        NA            NA         declared     clk_group_0    
-System             100.0 MHz     201.5 MHz     10.000        4.962         5.038      system       system_clkgroup
-==================================================================================================================
+                   Requested     Estimated      Requested     Estimated                Clock        Clock          
+Starting Clock     Frequency     Frequency      Period        Period        Slack      Type         Group          
+-------------------------------------------------------------------------------------------------------------------
+FAB_CLK            20.0 MHz      55.7 MHz       50.000        17.959        32.041     declared     clk_group_0    
+FCLK               20.0 MHz      NA             50.000        NA            NA         declared     clk_group_0    
+System             100.0 MHz     3655.0 MHz     10.000        0.274         9.726      system       system_clkgroup
+===================================================================================================================
 
 
 
@@ -67,34 +67,23 @@ Detailed Report for Clock: System
 Starting Points with Worst Slack
 ********************************
 
-                                        Starting                                                  Arrival          
-Instance                                Reference     Type        Pin         Net                 Time        Slack
-                                        Clock                                                                      
--------------------------------------------------------------------------------------------------------------------
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DO      MSS_SPI_0_DO_D      0.000       0.274
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI0DOE     MSS_SPI_0_DO_E      0.000       0.274
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DO      MSS_SPI_1_DO_D      0.000       0.274
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     SPI1DOE     MSS_SPI_1_DO_E      0.000       0.274
-mss_capture_MSS_0.MSS_ADLIB_INST        System        MSS_APB     EMCCLK      MSS_EMI_0_CLK_D     0.000       0.328
-mss_capture_MSS_0.MSS_CCC_0.I_RCOSC     System        RCOSC       CLKOUT      N_CLKA_RCOSC        0.000       4.688
-===================================================================================================================
+                                     Starting                                                       Arrival          
+Instance                             Reference     Type        Pin        Net                       Time        Slack
+                                     Clock                                                                           
+---------------------------------------------------------------------------------------------------------------------
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB     EMCCLK     MSS_ADLIB_INST_EMCCLK     0.000       0.274
+=====================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                     Starting                                                                 Required          
-Instance                             Reference     Type            Pin           Net                          Time         Slack
-                                     Clock                                                                                      
---------------------------------------------------------------------------------------------------------------------------------
-mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     D             MSS_SPI_0_DO_D               0.000        0.192
-mss_capture_MSS_0.MSS_SPI_0_DO       System        TRIBUFF_MSS     E             MSS_SPI_0_DO_E               0.000        0.192
-mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     D             MSS_SPI_1_DO_D               0.000        0.192
-mss_capture_MSS_0.MSS_SPI_1_DO       System        TRIBUFF_MSS     E             MSS_SPI_1_DO_E               0.000        0.192
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         EMCCLKRTN     MSS_EMI_0_CLK_D              0.000        0.230
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         MACCLKCCC     MSS_ADLIB_INST_MACCLKCCC     0.000        4.524
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB         PLLLOCK       MSS_ADLIB_INST_PLLLOCK       0.000        4.798
-================================================================================================================================
+                                     Starting                                                          Required          
+Instance                             Reference     Type        Pin           Net                       Time         Slack
+                                     Clock                                                                               
+-------------------------------------------------------------------------------------------------------------------------
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB     EMCCLKRTN     MSS_ADLIB_INST_EMCCLK     0.000        0.192
+=========================================================================================================================
 
 
 
@@ -113,18 +102,18 @@ Path information for path number 1:
     = Slack (critical) :                     0.192
 
     Number of logic level(s):                0
-    Starting point:                          mss_capture_MSS_0.MSS_ADLIB_INST / SPI0DO
-    Ending point:                            mss_capture_MSS_0.MSS_SPI_0_DO / D
+    Starting point:                          mss_capture_MSS_0.MSS_ADLIB_INST / EMCCLK
+    Ending point:                            mss_capture_MSS_0.MSS_ADLIB_INST / EMCCLKRTN
     The start point is clocked by            System [rising]
     The end   point is clocked by            System [rising]
 
-Instance / Net                                       Pin        Pin               Arrival     No. of    
-Name                                 Type            Name       Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------------
-mss_capture_MSS_0.MSS_ADLIB_INST     MSS_APB         SPI0DO     Out     0.000     0.000       -         
-MSS_SPI_0_DO_D                       Net             -          -       0.192     -           1         
-mss_capture_MSS_0.MSS_SPI_0_DO       TRIBUFF_MSS     D          In      -         0.192       -         
-========================================================================================================
+Instance / Net                                   Pin           Pin               Arrival     No. of    
+Name                                 Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+mss_capture_MSS_0.MSS_ADLIB_INST     MSS_APB     EMCCLK        Out     0.000     0.000       -         
+MSS_ADLIB_INST_EMCCLK                Net         -             -       0.192     -           1         
+mss_capture_MSS_0.MSS_ADLIB_INST     MSS_APB     EMCCLKRTN     In      -         0.192       -         
+=======================================================================================================
 
 
 

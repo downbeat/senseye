@@ -4,12 +4,12 @@
 
 #project files
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCap.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/AdcCapStub.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/blinker.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/MSS_CCC_0/mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/mss_capture_MSS.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture/mss_capture.v"
 add_file -constraint "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/mss_tshell_syn.sdc"
 

@@ -67,29 +67,32 @@ output LPXIN_CLKOUT;
     wire GND_power_net1;
     wire VCC_power_net1;
     assign GLA = N_GND;
+    assign FAB_LOCK = N_GND;
+    assign MSS_LOCK = N_GND;
     assign GLB = N_GND;
     assign YB = N_GND;
     assign GLC = N_GND;
     assign YC = N_GND;
+    assign MAC_CLK_CCC = N_GND;
     assign MAC_CLK_IO = N_GND;
     assign N_GND = GND_power_net1;
     assign N_VCC = VCC_power_net1;
     
-    MSS_CCC #( .VCOFREQUENCY(100.000) )  I_MSSCCC (.CLKA(N_CLKA_RCOSC), 
-        .EXTFB(N_GND), .GLA(FAB_CLK), .GLAMSS(GLA0), .LOCK(FAB_LOCK), 
-        .LOCKMSS(MSS_LOCK), .CLKB(N_GND), .GLB(), .YB(), .CLKC(N_GND), 
-        .GLC(), .YC(), .MACCLK(MAC_CLK_CCC), .OADIV({N_GND, N_GND, 
-        N_VCC, N_GND, N_GND}), .OADIVHALF(N_GND), .OAMUX({N_GND, N_GND, 
-        N_VCC}), .BYPASSA(N_GND), .DLYGLA({N_GND, N_GND, N_GND, N_GND, 
-        N_GND}), .DLYGLAMSS({N_GND, N_GND, N_GND, N_GND, N_GND}), 
-        .DLYGLAFAB({N_GND, N_GND, N_GND, N_GND, N_GND}), .OBDIV({N_GND, 
-        N_GND, N_GND, N_GND, N_GND}), .OBDIVHALF(N_GND), .OBMUX({N_GND, 
-        N_GND, N_GND}), .BYPASSB(N_VCC), .DLYGLB({N_GND, N_GND, N_GND, 
-        N_GND, N_GND}), .OCDIV({N_GND, N_GND, N_GND, N_GND, N_VCC}), 
-        .OCDIVHALF(N_GND), .OCMUX({N_VCC, N_GND, N_GND}), .BYPASSC(
-        N_GND), .DLYGLC({N_GND, N_GND, N_GND, N_GND, N_GND}), .FINDIV({
-        N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), .FBDIV({
-        N_GND, N_GND, N_VCC, N_GND, N_GND, N_VCC, N_GND}), .FBDLY({
+    MSS_CCC #( .VCOFREQUENCY(-1.000) )  I_MSSCCC (.CLKA(N_CLKA_RCOSC), 
+        .EXTFB(N_GND), .GLA(FAB_CLK), .GLAMSS(GLA0), .LOCK(), .LOCKMSS(
+        ), .CLKB(N_GND), .GLB(), .YB(), .CLKC(N_GND), .GLC(), .YC(), 
+        .MACCLK(), .OADIV({N_GND, N_GND, N_VCC, N_GND, N_GND}), 
+        .OADIVHALF(N_GND), .OAMUX({N_GND, N_GND, N_VCC}), .BYPASSA(
+        N_GND), .DLYGLA({N_GND, N_GND, N_GND, N_GND, N_GND}), 
+        .DLYGLAMSS({N_GND, N_GND, N_GND, N_GND, N_GND}), .DLYGLAFAB({
+        N_GND, N_GND, N_GND, N_GND, N_GND}), .OBDIV({N_GND, N_GND, 
+        N_GND, N_VCC, N_VCC}), .OBDIVHALF(N_GND), .OBMUX({N_GND, N_GND, 
+        N_GND}), .BYPASSB(N_VCC), .DLYGLB({N_GND, N_GND, N_GND, N_GND, 
+        N_GND}), .OCDIV({N_GND, N_GND, N_GND, N_VCC, N_VCC}), 
+        .OCDIVHALF(N_GND), .OCMUX({N_GND, N_GND, N_GND}), .BYPASSC(
+        N_VCC), .DLYGLC({N_GND, N_GND, N_GND, N_GND, N_GND}), .FINDIV({
+        N_GND, N_GND, N_GND, N_GND, N_VCC, N_VCC, N_GND}), .FBDIV({
+        N_GND, N_GND, N_GND, N_GND, N_VCC, N_VCC, N_GND}), .FBDLY({
         N_GND, N_GND, N_GND, N_GND, N_VCC}), .FBSEL({N_GND, N_VCC}), 
         .XDLYSEL(N_GND), .GLMUXSEL({N_GND, N_GND}), .GLMUXCFG({N_GND, 
         N_GND}));

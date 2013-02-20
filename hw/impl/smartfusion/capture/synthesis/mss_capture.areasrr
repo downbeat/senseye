@@ -2,31 +2,71 @@
 Report for cell mss_capture.verilog
                                           Cell usage:
                                cell       count     area    count*area
-                             AdcCap         1      60.0       60.0
-                         AdcCapStub         1     176.0      176.0
+                             AdcCap         1      54.0       54.0
                                 GND         1       0.0        0.0
-                              INBUF         1       0.0        0.0
-                             OUTBUF        11       0.0        0.0
+                             OUTBUF        16       0.0        0.0
                                 VCC         1       0.0        0.0
                     mss_capture_MSS         1       0.0        0.0
+                           stonyman         1     675.0      675.0
                             
-                         TOTAL             17                236.0
+                         TOTAL             21                729.0
+----------------------------------------------------------------------
+Report for cell stonyman.netlist
+     Instance path:  stonyman_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         2       1.0        2.0
+                               AND3         6       1.0        6.0
+                                AO1        27       1.0       27.0
+                               AO1A        17       1.0       17.0
+                               AO1B         1       1.0        1.0
+                               AO1C         2       1.0        2.0
+                               AO1D         1       1.0        1.0
+                               AOI1         5       1.0        5.0
+                              AOI1B         7       1.0        7.0
+                               DFN1        67       1.0       67.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                MX2        16       1.0       16.0
+                               MX2B         4       1.0        4.0
+                               MX2C         1       1.0        1.0
+                               NOR2        44       1.0       44.0
+                              NOR2A        62       1.0       62.0
+                              NOR2B        62       1.0       62.0
+                               NOR3        17       1.0       17.0
+                              NOR3A        29       1.0       29.0
+                              NOR3B        34       1.0       34.0
+                              NOR3C        24       1.0       24.0
+                                OA1        13       1.0       13.0
+                               OA1A        12       1.0       12.0
+                               OA1B         2       1.0        2.0
+                               OA1C        14       1.0       14.0
+                                OR2        50       1.0       50.0
+                               OR2A        21       1.0       21.0
+                               OR2B        13       1.0       13.0
+                                OR3        74       1.0       74.0
+                               OR3A         6       1.0        6.0
+                               OR3B         1       1.0        1.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                               XA1A         1       1.0        1.0
+                              XNOR2        27       1.0       27.0
+                               XOR2        12       1.0       12.0
+                            
+                         TOTAL            678                675.0
 ----------------------------------------------------------------------
 Report for cell mss_capture_MSS.netlist
      Instance path:  mss_capture_MSS_0
                                           Cell usage:
                                cell       count     area    count*area
-                          BIBUF_MSS        21       0.0        0.0
-                    BIBUF_OPEND_MSS         4       0.0        0.0
+                             CLKINT         1       0.0        0.0
                                 GND         1       0.0        0.0
-                          INBUF_MSS         9       0.0        0.0
+                          INBUF_MSS         1       0.0        0.0
                             MSS_APB         1       0.0        0.0
-                         OUTBUF_MSS        40       0.0        0.0
-                        TRIBUFF_MSS         2       0.0        0.0
                                 VCC         1       0.0        0.0
           mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC         1       0.0        0.0
                             
-                         TOTAL             80                  0.0
+                         TOTAL              6                  0.0
 ----------------------------------------------------------------------
 Report for cell mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.netlist
      Instance path:  mss_capture_MSS_0.MSS_CCC_0
@@ -39,55 +79,30 @@ Report for cell mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.netlist
                             
                          TOTAL              4                  0.0
 ----------------------------------------------------------------------
-Report for cell AdcCapStub.netlist
-     Instance path:  AdcCapStub_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AO1A         1       1.0        1.0
-                               AO1D         1       1.0        1.0
-                               DFN1        32       1.0       32.0
-                             DFN1E0         4       1.0        4.0
-                                GND         1       0.0        0.0
-                               NOR2        12       1.0       12.0
-                              NOR2A        18       1.0       18.0
-                               NOR3         2       1.0        2.0
-                              NOR3A         4       1.0        4.0
-                              NOR3C         5       1.0        5.0
-                                OR2        17       1.0       17.0
-                               OR2A         1       1.0        1.0
-                                OR3        46       1.0       46.0
-                                VCC         1       0.0        0.0
-                               XA1C         2       1.0        2.0
-                              XNOR2        30       1.0       30.0
-                               XO1A         1       1.0        1.0
-                            
-                         TOTAL            178                176.0
-----------------------------------------------------------------------
 Report for cell AdcCap.netlist
      Instance path:  AdcCap_0
                                           Cell usage:
                                cell       count     area    count*area
                                AND2         1       1.0        1.0
-                                AO1         1       1.0        1.0
-                               AO1A         4       1.0        4.0
+                               AO1A         3       1.0        3.0
+                               AO1B         1       1.0        1.0
+                               AX1E         1       1.0        1.0
                                DFN1         3       1.0        3.0
-                             DFN1E1        18       1.0       18.0
+                             DFN1E1        10       1.0       10.0
                                 GND         1       0.0        0.0
-                                INV         1       1.0        1.0
-                               NOR2         1       1.0        1.0
+                               NOR2         7       1.0        7.0
                               NOR2A         3       1.0        3.0
+                              NOR2B         1       1.0        1.0
                                NOR3         2       1.0        2.0
-                              NOR3A         3       1.0        3.0
-                                OA1         1       1.0        1.0
-                               OA1B         1       1.0        1.0
                                OA1C         1       1.0        1.0
-                                OR2         7       1.0        7.0
-                               OR2A         4       1.0        4.0
+                                OR2         8       1.0        8.0
+                               OR2A         3       1.0        3.0
                                OR2B         1       1.0        1.0
-                                OR3         1       1.0        1.0
+                               OR3B         1       1.0        1.0
+                               OR3C         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1B         1       1.0        1.0
-                               XA1C         2       1.0        2.0
-                               XOR2         4       1.0        4.0
+                               XA1C         1       1.0        1.0
+                              XNOR2         1       1.0        1.0
+                               XOR2         5       1.0        5.0
                             
-                         TOTAL             62                 60.0
+                         TOTAL             56                 54.0

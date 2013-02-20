@@ -13,14 +13,14 @@ Opened an existing Libero design mss_capture.adb.
 'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 
- Netlist Reading Time = 1.0 seconds
+ Netlist Reading Time = 0.0 seconds
 Imported the files:
    Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn
 
 Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss\
 _capture.pdc
 
-The Import command succeeded ( 00:00:01 )
+The Import command succeeded ( 00:00:02 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -59,6 +59,8 @@ report_high_fanout_nets_limit      : 10
 =====================================================================
 Compile starts ...
 
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCRWn drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCDBOE drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_CALIBOUT drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_WDINT drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_DEEPSLEEP drives no load.
@@ -72,6 +74,24 @@ Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C0SMBUSNO drives no load
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C1SMBUSNO drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C0SMBALERTNO drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C1SMBALERTNO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0DO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0DOE drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0CLKO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0MODE drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_UART0TXD drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C0SDAO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C0SCLO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1DO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1DOE drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1CLKO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1MODE drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_UART1TXD drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C1SDAO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_I2C1SCLO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACTXEN drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACMDO drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACMDEN drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACMDC drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACM2FTXD[0] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACM2FTXD[1] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACM2FTXEN drives no load.
@@ -114,6 +134,54 @@ Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSPENABLE drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSPWRITE drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_VCC15GOOD drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_VCC33GOOD drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCBYTEN[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCBYTEN[1] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[1] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[2] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[3] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[4] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[5] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[6] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[7] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[8] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[9] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[10] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[11] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[12] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[13] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[14] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[15] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[16] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[17] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[18] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[19] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[20] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[21] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[22] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[23] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[24] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCAB[25] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCOEN0n drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCOEN1n drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[1] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[2] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[3] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[4] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[5] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[6] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[7] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[8] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[9] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[10] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[11] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[12] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[13] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[14] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCWDB[15] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCCS0n drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_EMCCS1n drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_GPOE[0] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_GPOE[1] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_GPOE[2] drives no load.
@@ -186,20 +254,24 @@ Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSINT[4] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSINT[5] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSINT[6] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MSSINT[7] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[1] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[2] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[3] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[4] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[5] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[6] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI0SSO_net_0[7] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[1] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[2] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[3] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[4] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[5] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[6] drives no load.
-Warning: CMP201: Net mss_capture_MSS_0/SPI1SSO_net_0[7] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[1] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[2] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[3] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[4] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[5] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[6] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI0SSO[7] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[1] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[2] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[3] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[4] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[5] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[6] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_SPI1SSO[7] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACTXD[0] drives no load.
+Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_MACTXD[1] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_ACEFLAGS[0] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_ACEFLAGS[1] drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_ADLIB_INST_ACEFLAGS[2] drives no load.
@@ -321,7 +393,17 @@ Warning: CMP201: Net mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC_GLC drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC_LOCK drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC_YB drives no load.
 Warning: CMP201: Net mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC_YC drives no load.
-Warning: Top level port RESET is not connected to any IO pad
+Warning: CMP201: Net stonyman_0/DOUT_TMP[8] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[9] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[10] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[11] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[12] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[13] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[14] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[15] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[17] drives no load.
+Warning: Top level port miso is not connected to any IO pad
 
 Netlist Optimization Report
 ===========================
@@ -331,11 +413,11 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        24
+  - Logic combining:        39
 
-    Total macros optimized  24
+    Total macros optimized  39
 
-There were 0 error(s) and 263 warning(s) in this design.
+There were 0 error(s) and 345 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
@@ -355,26 +437,26 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:    212  Total:  11520   (1.84%)
-    Fabric IO (W/ clocks)      Used:     62  Total:    128   (48.44%)
+    Fabric                     Used:    690  Total:  11520   (5.99%)
+    Fabric IO (W/ clocks)      Used:     16  Total:    128   (12.50%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
-    Dedicated MSS IO           Used:     26  Total:     43   (60.47%)
-    GLOBAL (Chip+Quadrant)     Used:      0  Total:     15   (0.00%)
+    Dedicated MSS IO           Used:      1  Total:     43   (2.33%)
+    GLOBAL (Chip+Quadrant)     Used:      1  Total:     15   (6.67%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
     On-chip RC oscillator      Used:      1  Total:      1   (100.00%)
     Main Crystal oscillator    Used:      0  Total:      1   (0.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      0  Total:     24   (0.00%)
+    RAM/FIFO                   Used:      1  Total:     24   (4.17%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 0      | 3  (0.00%)*
+    Chip global     | 1      | 3  (33.33%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -386,15 +468,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 155          | 155
-    SEQ     | 57           | 57
+    COMB    | 610          | 610
+    SEQ     | 80           | 80
 
 I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
-    Input I/O                     | 1             | 0            | 0
-    Output I/O                    | 11            | 0            | 0
+    Input I/O                     | 0             | 0            | 0
+    Output I/O                    | 16            | 0            | 0
     Bidirectional I/O             | 0             | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -405,11 +487,11 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 1     | 11     | 0
+    LVTTL                           | 3.30v | N/A   | 0     | 16     | 0
 
 I/O Placement:
 
-    Locked  :  12 ( 100.00% )
+    Locked  :  16 ( 100.00% )
     Placed  :   0
     UnPlaced:   0
 
@@ -419,65 +501,68 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    59      CLK_NET       Net   : FAB_CLK
+    84      CLK_NET       Net   : FAB_CLK
                           Driver: mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
+    51      INT_NET       Net   : mss_capture_MSS_0_M2F_RESET_N
+                          Driver: mss_capture_MSS_0/MSS_ADLIB_INST_RNISSLB/U_CLKSRC
+                          Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    20      INT_NET       Net   : AdcCapStub_0/cntrConv13
-                          Driver: AdcCapStub_0/cntrConv_RNIMHL28[12]
-    9       INT_NET       Net   : AdcCap_0/dataout7
-                          Driver: AdcCap_0/bitsRead_RNIMCF51[3]
-    8       INT_NET       Net   : cs_c
-                          Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
-                          Driver: AdcCap_0/cs_RNIA3BE
-    8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_10
-    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
-    7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
-                          Driver: AdcCapStub_0/cntrConv[0]
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_33
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[6]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_30
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_60
+    24      INT_NET       Net   : stonyman_0/state_i[0]
+                          Driver: stonyman_0/state_i[0]
+    23      INT_NET       Net   : stonyman_0/N_295_0
+                          Driver: stonyman_0/counterWait_RNIKLAH8[11]
+    22      INT_NET       Net   : stonyman_0/N_295
+                          Driver: stonyman_0/counterWait_RNIKLAH8_0[11]
+    20      INT_NET       Net   : stonyman_0/N_59
+                          Driver: stonyman_0/state_i_RNIALT621[0]
+    17      INT_NET       Net   : stonyman_0/state_0[1]
+                          Driver: stonyman_0/state_0[1]
+    17      INT_NET       Net   : stonyman_0/substate[9]
+                          Driver: stonyman_0/substate[9]
+    17      INT_NET       Net   : stonyman_0/state[1]
+                          Driver: stonyman_0/state[1]
+    15      INT_NET       Net   : stonyman_0/cachedValue[3]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIV0EA2[3]
+    15      INT_NET       Net   : stonyman_0/N_32
+                          Driver: stonyman_0/state_i_RNI03DVA1[0]
+    14      INT_NET       Net   : stonyman_0/substate[3]
+                          Driver: stonyman_0/substate[3]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    20      INT_NET       Net   : AdcCapStub_0/cntrConv13
-                          Driver: AdcCapStub_0/cntrConv_RNIMHL28[12]
-    9       INT_NET       Net   : AdcCap_0/dataout7
-                          Driver: AdcCap_0/bitsRead_RNIMCF51[3]
-    8       INT_NET       Net   : cs_c
-                          Driver: AdcCap_0/cs
-    8       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa_1
-                          Driver: AdcCap_0/cs_RNIA3BE
-    8       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[0]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_10
-    7       INT_NET       Net   : AdcCap_0/bitsRead_0_sqmuxa
-                          Driver: AdcCap_0/cntrWaitQuiet_RNI23GO1[2]
-    7       INT_NET       Net   : AdcCapStub_0/cntrConv[0]
-                          Driver: AdcCapStub_0/cntrConv[0]
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[7]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_33
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[6]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_30
-    7       INT_NET       Net   : AdcCapStub_0/DWACT_FDEC_E[15]
-                          Driver: AdcCapStub_0/un5_cntrConv_1_I_60
+    24      INT_NET       Net   : stonyman_0/state_i[0]
+                          Driver: stonyman_0/state_i[0]
+    23      INT_NET       Net   : stonyman_0/N_295_0
+                          Driver: stonyman_0/counterWait_RNIKLAH8[11]
+    22      INT_NET       Net   : stonyman_0/N_295
+                          Driver: stonyman_0/counterWait_RNIKLAH8_0[11]
+    20      INT_NET       Net   : stonyman_0/N_59
+                          Driver: stonyman_0/state_i_RNIALT621[0]
+    17      INT_NET       Net   : stonyman_0/state_0[1]
+                          Driver: stonyman_0/state_0[1]
+    17      INT_NET       Net   : stonyman_0/substate[9]
+                          Driver: stonyman_0/substate[9]
+    17      INT_NET       Net   : stonyman_0/state[1]
+                          Driver: stonyman_0/state[1]
+    15      INT_NET       Net   : stonyman_0/cachedValue[3]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIV0EA2[3]
+    15      INT_NET       Net   : stonyman_0/N_32
+                          Driver: stonyman_0/state_i_RNI03DVA1[0]
+    14      INT_NET       Net   : stonyman_0/substate[3]
+                          Driver: stonyman_0/substate[3]
 
-The Compile command succeeded ( 00:00:01 )
+The Compile command succeeded ( 00:00:02 )
 Wrote status report to file: mss_capture_compile_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Design saved to file
 Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb.
 
-The Execute Script command succeeded ( 00:00:04 )
+The Execute Script command succeeded ( 00:00:06 )
 Design closed.
 

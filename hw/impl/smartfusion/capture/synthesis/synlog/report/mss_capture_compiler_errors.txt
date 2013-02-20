@@ -1,2 +1,2 @@
-@E: CS101 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":74:18:74:24|Index 10 is out of range for variable dataout
+@E: CS153 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":669:27:669:27|Can't mix blocking and non-blocking assignments to a variable
 
