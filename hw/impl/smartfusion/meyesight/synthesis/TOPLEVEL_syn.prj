@@ -1,26 +1,26 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
-#--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_syn.prj
+#--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\meyesight\synthesis\TOPLEVEL_syn.prj
 
 #project files
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/mss_tshell.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/MSS_CORE2.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/ahb.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/cr_int.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/psram_cr.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/TOPLEVEL/TOPLEVEL.v"
-add_file -constraint "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/constraint/synthesis.sdc"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/work/MSS_CORE2/mss_tshell.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/work/MSS_CORE2/MSS_CORE2.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/hdl/ahb.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/hdl/cr_int.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/hdl/psram_cr.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/component/work/TOPLEVEL/TOPLEVEL.v"
+add_file -constraint "Z:/russ/private/research/insight/git/hw/impl/smartfusion/meyesight/constraint/synthesis.sdc"
 
 
 #implementation: "synthesis"

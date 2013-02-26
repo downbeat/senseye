@@ -13,7 +13,7 @@ KEY VendorTechnology_IO_DEFT_STD ""
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_TEMPR ""
 KEY VendorTechnology_VOLTR ""
-KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux"
+KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\impl\smartfusion\meyesight"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -396,8 +396,8 @@ SIZE="208896"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1361856120"
-SIZE="2083"
+TIME="1361856725"
+SIZE="2071"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
@@ -519,8 +519,8 @@ SIZE="446"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1360719685"
-SIZE="4433"
+TIME="1361856725"
+SIZE="4357"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -799,7 +799,7 @@ LIST OpenedFileList
 SmartDesign;TOPLEVEL
 SmartDesign;MSS_CORE2
 Reports;Reports
-ACTIVEVIEW;Reports
+ACTIVEVIEW;TOPLEVEL
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AHB::work","hdl\ahb.v","FALSE","FALSE"
