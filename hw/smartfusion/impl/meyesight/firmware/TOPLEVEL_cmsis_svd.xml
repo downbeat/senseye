@@ -2,7 +2,7 @@
 <device>
   <name>TOPLEVEL</name>
   <version>1.0</version>
-  <description>CMSIS description for TOPLEVEL.  Created by Actel SmartDesign on Tue Feb 26 02:48:24 2013</description>
+  <description>CMSIS description for TOPLEVEL.  Created by Actel SmartDesign on Tue Feb 26 03:26:29 2013</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

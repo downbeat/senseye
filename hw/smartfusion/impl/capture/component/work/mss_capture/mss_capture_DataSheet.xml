@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/capture/component/work/mss_capture</location>
-    <state>GENERATED ( Tue Feb 26 02:04:43 2013 )</state>
+    <state>GENERATED ( Tue Feb 26 03:32:47 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -24,8 +24,9 @@
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_capture_MSS.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\inputConditioner.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v</file>
   </fileset>
   <fileset>
@@ -143,8 +144,8 @@
   <core type="HdlModule">
     <core-type>HdlModule</core-type>
     <core-exttype>AdcCap</core-exttype>
-    <core-location>hdl\AdcCap.v</core-location>
-    <core-name>AdcCap_0</core-name>
+    <core-location>hdl\adc081s101.v</core-location>
+    <core-name>adc081s101_0</core-name>
   </core>
   <core type="HdlModule">
     <core-type>HdlModule</core-type>

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 26 02:04:40 2013
+// Created by SmartDesign Tue Feb 26 03:32:44 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -103,7 +103,7 @@ assign ledsout[7:4]    = ledsout_net_1;
 // Component instances
 //--------------------------------------------------------------------
 //--------AdcCap
-AdcCap AdcCap_0(
+AdcCap adc081s101_0(
         // Inputs
         .clk                ( SPI_CLK_net_0 ),
         .reset              ( mss_capture_MSS_0_M2F_RESET_N ),
@@ -111,8 +111,8 @@ AdcCap AdcCap_0(
         .miso               ( miso ),
         // Outputs
         .cs                 ( cs_net_0 ),
-        .conversionComplete ( AdcCap_0_conversionComplete ),
-        .dataout            ( AdcCap_0_dataout_0 ) 
+        .dataout            ( AdcCap_0_dataout_0 ),
+        .conversionComplete ( AdcCap_0_conversionComplete ) 
         );
 
 //--------blinker
