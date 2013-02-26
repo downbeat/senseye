@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Tue Feb 26 02:52:43 2013
+#Tue Feb 26 03:56:09 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -17,7 +17,8 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_objects.v"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_pipes.svh"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
-@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
@@ -35,11 +36,10 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v"
-@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\TOPLEVEL\TOPLEVEL.v"
 Verilog syntax check successful!
 Selecting top level module TOPLEVEL
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v":23:7:23:18|Synthesizing module clkgenerator
 
@@ -563,12 +563,12 @@ State machine has 8 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v":26:6:26:8|Input rst is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 
 @END
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Tue Feb 26 02:52:46 2013
+# Tue Feb 26 03:56:11 2013
 
 ###########################################################]
 Premap Report
@@ -604,7 +604,7 @@ System                            1.0 MHz       1000.000      system       syste
 MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      25.000        declared     default_clkgroup_0
 =============================================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including AdcCap_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including adc081s101_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
@@ -615,7 +615,7 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 110MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 26 02:52:49 2013
+# Tue Feb 26 03:56:13 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -669,9 +669,9 @@ Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 105MB 
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[22] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[21] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[20] is always 0, optimizing ...
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitQuiet[2:0]
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitTrailing[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitQuiet[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitTrailing[2:0]
 Encoding state machine CAHBLTllOI[7:0] (netlist:statemachine)
 original code -> new code
    000 -> 00000001
@@ -721,11 +721,11 @@ original code -> new code
 @N: MF239 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":141:27:141:40|Found 32-bit decrementor, 'un5_counterWait_1[31:0]'
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[16] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1610:0:1610:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIlIl is always 0, optimizing ...
-@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
 
 Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 116MB peak: 116MB)
 
-@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Register bit AdcCap_0.cs is always 1, optimizing ...
+@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit adc081s101_0.cs is always 1, optimizing ...
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[11] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[10] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -736,26 +736,26 @@ Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 116MB peak: 11
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
 Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:02s; Memory used current: 113MB peak: 117MB)
 
@@ -766,19 +766,19 @@ Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:02s; Memory 
 Starting Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 118MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:08s; Memory used current: 121MB peak: 122MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:07s; Memory used current: 121MB peak: 122MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:08s; Memory used current: 121MB peak: 122MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:07s; Memory used current: 121MB peak: 122MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:08s; Memory used current: 121MB peak: 122MB)
+Finished preparing to map (Time elapsed 0h:00m:07s; Memory used current: 121MB peak: 122MB)
 
 @N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_800 
 @N: FP130 |Promoting Net SCLK_c on CLKINT  clkgenerator_0.SCLK_inferred_clock 
 @N: FP130 |Promoting Net stonyman_0.N_2345 on CLKINT  I_801 
 
-Finished technology mapping (Time elapsed 0h:00m:08s; Memory used current: 140MB peak: 142MB)
+Finished technology mapping (Time elapsed 0h:00m:07s; Memory used current: 140MB peak: 142MB)
 
 
 Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:08s; Memory used current: 140MB peak: 142MB)
@@ -798,7 +798,7 @@ Finished Writing Netlist Databases (Time elapsed 0h:00m:08s; Memory used current
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:09s; Memory used current: 139MB peak: 142MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:08s; Memory used current: 139MB peak: 142MB)
 
 @W: MT246 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 Found clock MSS_CORE2_0.MSS_CCC_0.FAB_CLK with period 25.00ns 
@@ -807,7 +807,7 @@ Found clock MSS_CORE2_0.MSS_CCC_0.FAB_CLK with period 25.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 26 02:52:58 2013
+# Timing Report written on Tue Feb 26 03:56:22 2013
 #
 
 
@@ -1797,9 +1797,9 @@ Block Rams : 1 of 24 (4%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:09s; Memory used current: 45MB peak: 142MB)
+At Mapper Exit (Time elapsed 0h:00m:08s; Memory used current: 45MB peak: 142MB)
 
-Process took 0h:00m:09s realtime, 0h:00m:09s cputime
-# Tue Feb 26 02:52:58 2013
+Process took 0h:00m:08s realtime, 0h:00m:08s cputime
+# Tue Feb 26 03:56:22 2013
 
 ###########################################################]

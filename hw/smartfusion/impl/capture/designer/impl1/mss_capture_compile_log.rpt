@@ -20,7 +20,7 @@ Imported the files:
 Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss\
 _capture.pdc
 
-The Import command succeeded ( 00:00:02 )
+The Import command succeeded ( 00:00:03 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -559,13 +559,13 @@ Nets that are candidates for clock assignment and the resulting fanout:
     15      INT_NET       Net   : stonyman_0/N_141_1
                           Driver: stonyman_0/state_RNIDO98[5]
 
-The Compile command succeeded ( 00:00:02 )
+The Compile command succeeded ( 00:00:01 )
 Wrote status report to file: mss_capture_compile_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Design saved to file
 Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture.adb.
 
-The Execute Script command succeeded ( 00:00:06 )
+The Execute Script command succeeded ( 00:00:07 )
 Design closed.
 

@@ -1,5 +1,5 @@
 @N|Running in 64-bit mode
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC

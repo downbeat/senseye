@@ -45,7 +45,7 @@ MSS_CCC_0
 MSS_RESET_0_MSS_RESET_N
 ahb0
 cr_int_i0
-AdcCap_0
+adc081s101_0
 clkgenerator_0
 CoreAHBLite_0
 MSS_CORE2_0

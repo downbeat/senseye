@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Company: Russ Bielawski
 //
-// File: AdcCap.v
+// File: adc081s101.v
 // File history:
 //      0.01: 2013-02-05: created
 //      1.00: 2013-02-10: driver for TI ADC081S101 complete and working
@@ -22,7 +22,7 @@
 `define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
 
 
-module AdcCap( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
+module adc081s101( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
 
 input clk;
 input reset;

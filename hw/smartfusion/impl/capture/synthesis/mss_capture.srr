@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Tue Feb 26 02:05:37 2013
+#Tue Feb 26 03:50:15 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -17,7 +17,7 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_objects.v"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_pipes.svh"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
-@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
@@ -27,7 +27,7 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.v"
 Verilog syntax check successful!
 Selecting top level module mss_capture
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 
@@ -110,12 +110,12 @@ State machine has 7 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 
 @END
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 26 02:05:39 2013
+# Tue Feb 26 03:50:17 2013
 
 ###########################################################]
 Premap Report
@@ -160,7 +160,7 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 26 02:05:41 2013
+# Tue Feb 26 03:50:19 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -194,9 +194,9 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitQuiet[2:0]
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitTrailing[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitQuiet[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitTrailing[2:0]
 @W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Register bit startAdcCapture is always 1, optimizing ...
 
  Ram Decomposition Statistics for cachedValue[7:0]
@@ -231,11 +231,11 @@ original code -> new code
    1110 -> 100000000000001
 @N: MF238 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":374:48:374:76|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
 @N: MF239 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":141:27:141:40|Found 32-bit decrementor, 'un5_counterWait_1[31:0]'
-@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
 
 Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 114MB)
 
-@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Register bit AdcCap_0.cs is always 1, optimizing ...
+@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Register bit adc081s101_0.cs is always 1, optimizing ...
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
@@ -244,26 +244,26 @@ Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 11
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 
 Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:02s; Memory used current: 109MB peak: 114MB)
 
@@ -324,7 +324,7 @@ Found clock FCLK with period 50.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 26 02:05:44 2013
+# Timing Report written on Tue Feb 26 03:50:22 2013
 #
 
 
@@ -648,6 +648,6 @@ Mapper successful!
 At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 41MB peak: 119MB)
 
 Process took 0h:00m:03s realtime, 0h:00m:02s cputime
-# Tue Feb 26 02:05:44 2013
+# Tue Feb 26 03:50:22 2013
 
 ###########################################################]

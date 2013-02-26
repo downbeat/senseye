@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Tue Feb 26 02:05:54 2013 ***************************************************************************
+                          Tue Feb 26 03:50:32 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
 File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture.adb
 Design Name: mss_capture  Design State: compile
-Last Saved: Tue Feb 26 02:02:22 2013
+Last Saved: Tue Feb 26 03:37:30 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Tue Feb 26 02:05:49 2013:
+Source File(s) Imported on Tue Feb 26 03:50:27 2013:
         Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.edn
         Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.pdc
 

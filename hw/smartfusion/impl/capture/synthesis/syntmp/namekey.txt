@@ -3,7 +3,7 @@ I_RCOSC
 MSS_ADLIB_INST
 MSS_CCC_0
 MSS_RESET_0_MSS_RESET_N
-AdcCap_0
+adc081s101_0
 mss_capture_MSS_0
 stonyman_0
 sign

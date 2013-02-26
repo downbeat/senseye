@@ -1,5 +1,5 @@
 Selecting top level module mss_capture
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 
@@ -82,6 +82,6 @@ State machine has 7 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 

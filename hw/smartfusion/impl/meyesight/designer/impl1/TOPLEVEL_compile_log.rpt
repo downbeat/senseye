@@ -17,7 +17,7 @@ Opened an existing Libero design TOPLEVEL.adb.
 Imported the file:
    Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
 
-The Import command succeeded ( 00:00:02 )
+The Import command succeeded ( 00:00:01 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -356,88 +356,8 @@ There were 0 error(s) and 285 warning(s) in this design.
 
 Reading previous post-compile physical placement constraints.
 
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNINTNH3[16] -fixed no 36 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[5] -fixed no 27 32
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIF0GE[9] -fixed no 29 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52[18] -fixed no 25 14
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hwrite_reg_RNI4TVH -fixed no 33 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNI79GT2[4] -fixed no 28 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNI3SHM[2] -fixed no 31 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[13] -fixed no 33 35
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/un1_CAHBLTI1OI -fixed no 34 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[2] -fixed no 51 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIQBUP[6] -fixed no 22 14
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI10I_RNI2P0Q4 -fixed no 36 6
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/ac_counter_RNI1L5I2[0] -fixed no 35 46
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNI6QN17[2] -fixed no 30 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNI01AQ2[4] -fixed no 29 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTII1_RNIJE4GB -fixed no 36 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIS5013[4] -fixed no 32 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIA52K3_1[2] -fixed no 27 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIJ5VC[2] -fixed no 25 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hready_reg_RNI814J1 -fixed no 51 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNI74PR6[4] -fixed no 33 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI76CAC[5] -fixed no 53 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52_1[18] -fixed no 24 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[9] -fixed no 41 40
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/ac_counter_RNILLIU[1] -fixed no 40 56
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIAAR52_0[16] -fixed no 36 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIA52K3_2[2] -fixed no 28 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[4] -fixed no 30 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTOI1_m_i_a2 -fixed no 37 8
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNO_0[6] -fixed no 23 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2] -fixed no 28 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNIS870A[6] -fixed no 29 18
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52_0[18] -fixed no 24 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l_RNIDF1N[1] -fixed no 38 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/ac_counter_RNO_0[1] -fixed no 42 56
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTOI0I_RNI1K7SP -fixed no 52 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_4[6] -fixed no 48 40
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/haddr_reg_RNIA52K3_3[2] -fixed no 30 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI0U57C[5] -fixed no 37 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIV5BQ1[10] -fixed no 24 15
 
-There were 0 error(s) and 40 warning(s).
+There were 0 error(s) and 0 warning(s).
 
 =====================================================================
 Compile report:
@@ -498,11 +418,9 @@ I/O Technology:
 
 I/O Placement:
 
-    Locked  :  60 ( 89.55% )
+    Locked  :  67 ( 100.00% )
     Placed  :   0
-    UnPlaced:   7 ( 10.45% )
-
-Warning: Only some I/Os are locked
+    UnPlaced:   0
 
 Net information report:
 =======================
@@ -581,6 +499,6 @@ The Report command succeeded ( 00:00:00 )
 Design saved to file
 Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:06 )
+The Execute Script command succeeded ( 00:00:05 )
 Design closed.
 

@@ -189,6 +189,6 @@
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v":26:6:26:8|Input rst is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 

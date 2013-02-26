@@ -41,7 +41,7 @@ programmer '51638' : Verifying FPGA Array
 programmer '51638' :         Verifying FPGA Array -- pass
 programmer '51638' : Program System Init and Boot Clients...
 programmer '51638' : Verify System Init and Boot Clients...
-programmer '51638' : Finished: Tue Feb 26 02:16:25 2013 (Elapsed time 00:00:53)
+programmer '51638' : Finished: Tue Feb 26 03:54:08 2013 (Elapsed time 00:00:49)
 programmer '51638' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

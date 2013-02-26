@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 26 03:26:25 2013
+// Created by SmartDesign Tue Feb 26 03:55:46 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -307,24 +307,24 @@ assign led[7:4]            = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
-wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
 
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
 
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
 wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
 wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };
@@ -332,8 +332,8 @@ assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LI
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------AdcCap
-AdcCap adc081s101_0(
+//--------adc081s101
+adc081s101 adc081s101_0(
         // Inputs
         .clk                ( SCLK_net_0 ),
         .reset              ( MSS_CORE2_0_M2F_RESET_N ),
@@ -341,8 +341,8 @@ AdcCap adc081s101_0(
         .miso               ( MISO ),
         // Outputs
         .cs                 ( CS_net_0 ),
-        .conversionComplete ( adc081s101_0_conversionComplete ),
-        .dataout            ( adc081s101_0_dataout ) 
+        .dataout            ( adc081s101_0_dataout ),
+        .conversionComplete ( adc081s101_0_conversionComplete ) 
         );
 
 //--------clkgenerator

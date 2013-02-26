@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Tue Feb 26 02:12:51 2013 ***************************************************************************
+                          Tue Feb 26 03:51:06 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
 File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture.adb
 Design Name: mss_capture  Design State: layout
-Last Saved: Tue Feb 26 02:12:06 2013
+Last Saved: Tue Feb 26 03:50:33 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Tue Feb 26 02:05:49 2013:
+Source File(s) Imported on Tue Feb 26 03:50:27 2013:
         Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.edn
         Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.pdc
 
@@ -605,16 +605,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Feb 26 02:12:23 2013
+Timing-driven Placer Started: Tue Feb 26 03:50:37 2013
 
-Placer Finished: Tue Feb 26 02:12:31 2013
-Total Placer CPU Time:     00:00:08
+Placer Finished: Tue Feb 26 03:50:46 2013
+Total Placer CPU Time:     00:00:09
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: mss_capture                     Started: Tue Feb 26 02:12:34 2013
+Design: mss_capture                     Started: Tue Feb 26 03:50:48 2013
 
  
 Iterative improvement...
@@ -622,8 +622,8 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: mss_capture                     
-Finished: Tue Feb 26 02:12:48 2013
-Total CPU Time:     00:00:14            Total Elapsed Time: 00:00:14
+Finished: Tue Feb 26 03:51:03 2013
+Total CPU Time:     00:00:14            Total Elapsed Time: 00:00:15
                         o - o - o - o - o - o
 
 

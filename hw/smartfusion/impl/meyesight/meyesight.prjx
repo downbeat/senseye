@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361867184"
+TIME="1361868946"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1361867184"
+TIME="1361868946"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -331,19 +331,19 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1361867185"
+TIME="1361868947"
 SIZE="2064"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361867193"
-SIZE="10214"
+TIME="1361868954"
+SIZE="10218"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1361867183"
+TIME="1361868944"
 SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
@@ -354,8 +354,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1361867185"
-SIZE="32523"
+TIME="1361868947"
+SIZE="32531"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -365,12 +365,12 @@ TIME="1360612688"
 SIZE="8624"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
-STATE="ood"
+STATE="utd"
 TIME="1361865609"
 SIZE="1904640"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
-STATE="ood"
+STATE="utd"
 TIME="1361865609"
 SIZE="149103"
 ENDFILE
@@ -386,11 +386,11 @@ SIZE="36819"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361865824"
+TIME="1361869768"
 SIZE="235520"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
-STATE="ood"
+STATE="utd"
 TIME="1361865757"
 SIZE="235520"
 ENDFILE
@@ -421,8 +421,8 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adc081s101.v,hdl"
 STATE="utd"
-TIME="1361863242"
-SIZE="2712"
+TIME="1361867674"
+SIZE="2720"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -496,7 +496,7 @@ PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1361867185"
+TIME="1361868947"
 SIZE="629"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -518,7 +518,7 @@ TIME="1361865127"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
-STATE="ood"
+STATE="utd"
 TIME="1361865178"
 SIZE="1336207"
 ENDFILE
@@ -533,7 +533,7 @@ TIME="1360612688"
 SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
-STATE="ood"
+STATE="utd"
 TIME="1361865178"
 SIZE="446"
 ENDFILE
@@ -586,7 +586,10 @@ VALUE "<project>\constraint\synthesis.sdc,sdc"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
+LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\TOPLEVEL.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\TOPLEVEL.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -624,17 +627,6 @@ ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -725,8 +717,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -764,7 +756,10 @@ ENDLIST
 ENDLIST
 LIST "TOPLEVEL::work"
 LIST Impl1
+LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\TOPLEVEL.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\TOPLEVEL.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -787,17 +782,6 @@ VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST "CoreAHBLite::COREAHBLITE_LIB"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -812,12 +796,10 @@ ENDLIST
 LIST OpenedFileList
 SmartDesign;TOPLEVEL
 SmartDesign;MSS_CORE2
-HDL;hdl\clkgenerator.v
-Reports;Reports
 ACTIVEVIEW;TOPLEVEL
 ENDLIST
 LIST ModuleSubBlockList
-LIST "AdcCap::work","hdl\adc081s101.v","FALSE","FALSE"
+LIST "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
 ENDLIST
 LIST "AHB::work","hdl\ahb.v","FALSE","FALSE"
 ENDLIST
@@ -910,7 +892,7 @@ ENDLIST
 LIST "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
-SUBBLOCK "AdcCap::work","hdl\adc081s101.v","FALSE","FALSE"
+SUBBLOCK "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
 SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
