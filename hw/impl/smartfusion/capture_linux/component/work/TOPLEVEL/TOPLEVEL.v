@@ -1,1176 +1,731 @@
+//////////////////////////////////////////////////////////////////////
+// Created by SmartDesign Tue Feb 12 20:40:37 2013
+// Version: 10.1 SP3 10.1.3.1
+//////////////////////////////////////////////////////////////////////
+
 `timescale 1 ns/100 ps
-// Version: 9.1 SP5 9.1.5.1
 
-
+// TOPLEVEL
 module TOPLEVEL(
-       CLK50,
-       Phy_RMII_CLK,
-       psram_ncs0,
-       psram_nwe,
-       psram_ncs1,
-       psram_noe1,
-       psram_noe0,
-       rs485_nre,
-       rs485_de,
-       UART_0_TXD,
-       UART_0_RXD,
-       MAC_MDIO,
-       MAC_MDC,
-       MAC_CRSDV,
-       MAC_RXER,
-       MAC_TXEN,
-       MSS_RESET_N,
-       MAINXIN,
-       psram_data,
-       psram_nbyte_en,
-       psram_address,
-       MAC_RXD,
-       MAC_TXD,
-       led
-    );
-input  CLK50;
-output Phy_RMII_CLK;
-output psram_ncs0;
-output psram_nwe;
-output psram_ncs1;
-output psram_noe1;
-output psram_noe0;
-output rs485_nre;
-output rs485_de;
-output UART_0_TXD;
-input  UART_0_RXD;
-inout  MAC_MDIO;
-output MAC_MDC;
-input  MAC_CRSDV;
-input  MAC_RXER;
-output MAC_TXEN;
-input  MSS_RESET_N;
-input  MAINXIN;
-inout  [15:0] psram_data;
-output [1:0] psram_nbyte_en;
-output [24:0] psram_address;
-input  [1:0] MAC_RXD;
-output [1:0] MAC_TXD;
-output [7:0] led;
+    // Inputs
+    CLK50,
+    MAC_CRSDV,
+    MAC_RXD,
+    MAC_RXER,
+    MAINXIN,
+    MSS_RESET_N,
+    UART_0_RXD,
+    // Outputs
+    MAC_MDC,
+    MAC_TXD,
+    MAC_TXEN,
+    Phy_RMII_CLK,
+    UART_0_TXD,
+    led,
+    psram_address,
+    psram_nbyte_en,
+    psram_ncs0,
+    psram_ncs1,
+    psram_noe0,
+    psram_noe1,
+    psram_nwe,
+    rs485_de,
+    rs485_nre,
+    // Inouts
+    MAC_MDIO,
+    psram_data
+);
 
-    wire \CoreAHBLite_0_AHBmslave5_HADDR_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[2] , 
-        CoreAHBLite_0_AHBmslave5_HMASTLOCK, 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[31] , 
-        CoreAHBLite_0_AHBmslave5_HREADY, 
-        CoreAHBLite_0_AHBmslave5_HREADYOUT, 
-        \CoreAHBLite_0_AHBmslave5_HRESP_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HRESP_[1] , 
-        CoreAHBLite_0_AHBmslave5_HSELx, 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[0] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[31] , 
-        CoreAHBLite_0_AHBmslave5_HWRITE, MSS_CORE2_0_FAB_CLK, 
-        MSS_CORE2_0_M2F_RESET_N, 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[19] , 
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK, 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[31] , 
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY, 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[0] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[31] , 
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE, VCC_net;
-    assign rs485_de = VCC_net;
-    assign led[7] = VCC_net;
-    assign led[6] = VCC_net;
-    assign led[5] = VCC_net;
-    assign led[4] = VCC_net;
-    assign led[3] = VCC_net;
-    assign led[2] = VCC_net;
-    assign led[1] = VCC_net;
-    assign led[0] = VCC_net;
-    
-    MSS_CORE2 MSS_CORE2_0 (.MSS_RESET_N(MSS_RESET_N), .MAC_MDIO(
-        MAC_MDIO), .MAC_CRSDV(MAC_CRSDV), .MAC_RXER(MAC_RXER), 
-        .MAC_TXEN(MAC_TXEN), .MAC_MDC(MAC_MDC), .CLKC(CLK50), .GLC(
-        Phy_RMII_CLK), .FAB_CLK(MSS_CORE2_0_FAB_CLK), .MAINXIN(MAINXIN)
-        , .M2F_RESET_N(MSS_CORE2_0_M2F_RESET_N), .FABINT(rs485_nre), 
-        .UART_0_TXD(UART_0_TXD), .UART_0_RXD(UART_0_RXD), .MSSHWRITE(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE), .MSSHLOCK(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK), .MSSHREADY(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY), .MSSHRESP(
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_[0] ), .MAC_RXD({
-        MAC_RXD[1], MAC_RXD[0]}), .MAC_TXD({MAC_TXD[1], MAC_TXD[0]}), 
-        .MSSHADDR({\MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[0] }), .MSSHTRANS({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[0] }), .MSSHSIZE({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[0] }), .MSSHWDATA({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[31] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[0] }), .MSSHRDATA({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[31] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[0] }));
-    CoreAHBLite #( .FAMILY(15), .HADDR_SHG_CFG(1), .M0_AHBSLOT0ENABLE(0)
-        , .M0_AHBSLOT10ENABLE(0), .M0_AHBSLOT11ENABLE(0), .M0_AHBSLOT12ENABLE(0)
-        , .M0_AHBSLOT13ENABLE(0), .M0_AHBSLOT14ENABLE(0), .M0_AHBSLOT15ENABLE(0)
-        , .M0_AHBSLOT1ENABLE(0), .M0_AHBSLOT2ENABLE(0), .M0_AHBSLOT3ENABLE(0)
-        , .M0_AHBSLOT4ENABLE(0), .M0_AHBSLOT5ENABLE(0), .M0_AHBSLOT6ENABLE(0)
-        , .M0_AHBSLOT7ENABLE(0), .M0_AHBSLOT8ENABLE(0), .M0_AHBSLOT9ENABLE(0)
-        , .M0_HUGESLOTENABLE(0), .M0_INITCFG0ENABLE(0), .M0_INITCFG10ENABLE(0)
-        , .M0_INITCFG11ENABLE(0), .M0_INITCFG12ENABLE(0), .M0_INITCFG13ENABLE(0)
-        , .M0_INITCFG14ENABLE(0), .M0_INITCFG15ENABLE(0), .M0_INITCFG1ENABLE(0)
-        , .M0_INITCFG2ENABLE(0), .M0_INITCFG3ENABLE(0), .M0_INITCFG4ENABLE(0)
-        , .M0_INITCFG5ENABLE(0), .M0_INITCFG6ENABLE(0), .M0_INITCFG7ENABLE(0)
-        , .M0_INITCFG8ENABLE(0), .M0_INITCFG9ENABLE(0), .M1_AHBSLOT0ENABLE(0)
-        , .M1_AHBSLOT10ENABLE(0), .M1_AHBSLOT11ENABLE(0), .M1_AHBSLOT12ENABLE(0)
-        , .M1_AHBSLOT13ENABLE(0), .M1_AHBSLOT14ENABLE(0), .M1_AHBSLOT15ENABLE(0)
-        , .M1_AHBSLOT1ENABLE(0), .M1_AHBSLOT2ENABLE(0), .M1_AHBSLOT3ENABLE(0)
-        , .M1_AHBSLOT4ENABLE(0), .M1_AHBSLOT5ENABLE(1), .M1_AHBSLOT6ENABLE(0)
-        , .M1_AHBSLOT7ENABLE(0), .M1_AHBSLOT8ENABLE(0), .M1_AHBSLOT9ENABLE(0)
-        , .M1_HUGESLOTENABLE(0), .M1_INITCFG0ENABLE(0), .M1_INITCFG10ENABLE(0)
-        , .M1_INITCFG11ENABLE(0), .M1_INITCFG12ENABLE(0), .M1_INITCFG13ENABLE(0)
-        , .M1_INITCFG14ENABLE(0), .M1_INITCFG15ENABLE(0), .M1_INITCFG1ENABLE(0)
-        , .M1_INITCFG2ENABLE(0), .M1_INITCFG3ENABLE(0), .M1_INITCFG4ENABLE(0)
-        , .M1_INITCFG5ENABLE(0), .M1_INITCFG6ENABLE(0), .M1_INITCFG7ENABLE(0)
-        , .M1_INITCFG8ENABLE(0), .M1_INITCFG9ENABLE(0), .MODE_CFG(1)
-         )  CoreAHBLite_0 (.HCLK(MSS_CORE2_0_FAB_CLK), .HRESETN(
-        MSS_CORE2_0_M2F_RESET_N), .REMAP_M0(rs485_nre), .HMASTLOCK_M0(
-        rs485_nre), .HWRITE_M0(rs485_nre), .HREADY_M0(), .HMASTLOCK_M1(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK), .HWRITE_M1(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE), .HREADY_M1(
-        MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY), .HREADYOUT_S0(VCC_net)
-        , .HSEL_S0(), .HWRITE_S0(), .HREADY_S0(), .HMASTLOCK_S0(), 
-        .HREADYOUT_S1(VCC_net), .HSEL_S1(), .HWRITE_S1(), .HREADY_S1(), 
-        .HMASTLOCK_S1(), .HREADYOUT_S2(VCC_net), .HSEL_S2(), 
-        .HWRITE_S2(), .HREADY_S2(), .HMASTLOCK_S2(), .HREADYOUT_S3(
-        VCC_net), .HSEL_S3(), .HWRITE_S3(), .HREADY_S3(), 
-        .HMASTLOCK_S3(), .HREADYOUT_S4(VCC_net), .HSEL_S4(), 
-        .HWRITE_S4(), .HREADY_S4(), .HMASTLOCK_S4(), .HREADYOUT_S5(
-        CoreAHBLite_0_AHBmslave5_HREADYOUT), .HSEL_S5(
-        CoreAHBLite_0_AHBmslave5_HSELx), .HWRITE_S5(
-        CoreAHBLite_0_AHBmslave5_HWRITE), .HREADY_S5(
-        CoreAHBLite_0_AHBmslave5_HREADY), .HMASTLOCK_S5(
-        CoreAHBLite_0_AHBmslave5_HMASTLOCK), .HREADYOUT_S6(VCC_net), 
-        .HSEL_S6(), .HWRITE_S6(), .HREADY_S6(), .HMASTLOCK_S6(), 
-        .HREADYOUT_S7(VCC_net), .HSEL_S7(), .HWRITE_S7(), .HREADY_S7(), 
-        .HMASTLOCK_S7(), .HREADYOUT_S8(VCC_net), .HSEL_S8(), 
-        .HWRITE_S8(), .HREADY_S8(), .HMASTLOCK_S8(), .HREADYOUT_S9(
-        VCC_net), .HSEL_S9(), .HWRITE_S9(), .HREADY_S9(), 
-        .HMASTLOCK_S9(), .HREADYOUT_S10(VCC_net), .HSEL_S10(), 
-        .HWRITE_S10(), .HREADY_S10(), .HMASTLOCK_S10(), .HREADYOUT_S11(
-        VCC_net), .HSEL_S11(), .HWRITE_S11(), .HREADY_S11(), 
-        .HMASTLOCK_S11(), .HREADYOUT_S12(VCC_net), .HSEL_S12(), 
-        .HWRITE_S12(), .HREADY_S12(), .HMASTLOCK_S12(), .HREADYOUT_S13(
-        VCC_net), .HSEL_S13(), .HWRITE_S13(), .HREADY_S13(), 
-        .HMASTLOCK_S13(), .HREADYOUT_S14(VCC_net), .HSEL_S14(), 
-        .HWRITE_S14(), .HREADY_S14(), .HMASTLOCK_S14(), .HREADYOUT_S15(
-        VCC_net), .HSEL_S15(), .HWRITE_S15(), .HREADY_S15(), 
-        .HMASTLOCK_S15(), .HREADYOUT_SHG(VCC_net), .HSEL_SHG(), 
-        .HWRITE_SHG(), .HREADY_SHG(), .HMASTLOCK_SHG(), .INITDATVAL_C0(
-        ), .INITDONE_C0(), .INITDATVAL_C1(), .INITDONE_C1(), 
-        .INITDATVAL_C2(), .INITDONE_C2(), .INITDATVAL_C3(), 
-        .INITDONE_C3(), .INITDATVAL_C4(), .INITDONE_C4(), 
-        .INITDATVAL_C5(), .INITDONE_C5(), .INITDATVAL_C6(), 
-        .INITDONE_C6(), .INITDATVAL_C7(), .INITDONE_C7(), 
-        .INITDATVAL_C8(), .INITDONE_C8(), .INITDATVAL_C9(), 
-        .INITDONE_C9(), .INITDATVAL_C10(), .INITDONE_C10(), 
-        .INITDATVAL_C11(), .INITDONE_C11(), .INITDATVAL_C12(), 
-        .INITDONE_C12(), .INITDATVAL_C13(), .INITDONE_C13(), 
-        .INITDATVAL_C14(), .INITDONE_C14(), .INITDATVAL_C15(), 
-        .INITDONE_C15(), .HADDR_M0({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HSIZE_M0({
-        rs485_nre, rs485_nre, rs485_nre}), .HTRANS_M0({rs485_nre, 
-        rs485_nre}), .HWDATA_M0({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HBURST_M0({
-        rs485_nre, rs485_nre, rs485_nre}), .HPROT_M0({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre}), .HRESP_M0({nc0, nc1}), 
-        .HRDATA_M0({nc2, nc3, nc4, nc5, nc6, nc7, nc8, nc9, nc10, nc11, 
-        nc12, nc13, nc14, nc15, nc16, nc17, nc18, nc19, nc20, nc21, 
-        nc22, nc23, nc24, nc25, nc26, nc27, nc28, nc29, nc30, nc31, 
-        nc32, nc33}), .HADDR_M1({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_[0] }), .HSIZE_M1({
-        rs485_nre, \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_[0] }), .HTRANS_M1({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS_[0] }), .HWDATA_M1({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[31] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA_[0] }), .HBURST_M1({
-        rs485_nre, rs485_nre, rs485_nre}), .HPROT_M1({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre}), .HRESP_M1({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_[0] }), .HRDATA_M1({
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[31] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[30] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[29] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[28] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[27] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[26] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[25] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[24] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[23] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[22] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[21] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[20] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[19] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[18] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[17] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[16] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[15] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[14] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[13] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[12] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[11] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[10] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[9] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[8] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[7] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[6] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[5] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[4] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[3] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[2] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[1] , 
-        \MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA_[0] }), .HRDATA_S0({
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre}), .HRESP_S0({rs485_nre, rs485_nre}), 
-        .HADDR_S0({nc34, nc35, nc36, nc37, nc38, nc39, nc40, nc41, 
-        nc42, nc43, nc44, nc45, nc46, nc47, nc48, nc49, nc50, nc51, 
-        nc52, nc53, nc54, nc55, nc56, nc57, nc58, nc59, nc60, nc61, 
-        nc62, nc63, nc64, nc65}), .HSIZE_S0({nc66, nc67, nc68}), 
-        .HTRANS_S0({nc69, nc70}), .HWDATA_S0({nc71, nc72, nc73, nc74, 
-        nc75, nc76, nc77, nc78, nc79, nc80, nc81, nc82, nc83, nc84, 
-        nc85, nc86, nc87, nc88, nc89, nc90, nc91, nc92, nc93, nc94, 
-        nc95, nc96, nc97, nc98, nc99, nc100, nc101, nc102}), 
-        .HBURST_S0({nc103, nc104, nc105}), .HPROT_S0({nc106, nc107, 
-        nc108, nc109}), .HRDATA_S1({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HRESP_S1({
-        rs485_nre, rs485_nre}), .HADDR_S1({nc110, nc111, nc112, nc113, 
-        nc114, nc115, nc116, nc117, nc118, nc119, nc120, nc121, nc122, 
-        nc123, nc124, nc125, nc126, nc127, nc128, nc129, nc130, nc131, 
-        nc132, nc133, nc134, nc135, nc136, nc137, nc138, nc139, nc140, 
-        nc141}), .HSIZE_S1({nc142, nc143, nc144}), .HTRANS_S1({nc145, 
-        nc146}), .HWDATA_S1({nc147, nc148, nc149, nc150, nc151, nc152, 
-        nc153, nc154, nc155, nc156, nc157, nc158, nc159, nc160, nc161, 
-        nc162, nc163, nc164, nc165, nc166, nc167, nc168, nc169, nc170, 
-        nc171, nc172, nc173, nc174, nc175, nc176, nc177, nc178}), 
-        .HBURST_S1({nc179, nc180, nc181}), .HPROT_S1({nc182, nc183, 
-        nc184, nc185}), .HRDATA_S2({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HRESP_S2({
-        rs485_nre, rs485_nre}), .HADDR_S2({nc186, nc187, nc188, nc189, 
-        nc190, nc191, nc192, nc193, nc194, nc195, nc196, nc197, nc198, 
-        nc199, nc200, nc201, nc202, nc203, nc204, nc205, nc206, nc207, 
-        nc208, nc209, nc210, nc211, nc212, nc213, nc214, nc215, nc216, 
-        nc217}), .HSIZE_S2({nc218, nc219, nc220}), .HTRANS_S2({nc221, 
-        nc222}), .HWDATA_S2({nc223, nc224, nc225, nc226, nc227, nc228, 
-        nc229, nc230, nc231, nc232, nc233, nc234, nc235, nc236, nc237, 
-        nc238, nc239, nc240, nc241, nc242, nc243, nc244, nc245, nc246, 
-        nc247, nc248, nc249, nc250, nc251, nc252, nc253, nc254}), 
-        .HBURST_S2({nc255, nc256, nc257}), .HPROT_S2({nc258, nc259, 
-        nc260, nc261}), .HRDATA_S3({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HRESP_S3({
-        rs485_nre, rs485_nre}), .HADDR_S3({nc262, nc263, nc264, nc265, 
-        nc266, nc267, nc268, nc269, nc270, nc271, nc272, nc273, nc274, 
-        nc275, nc276, nc277, nc278, nc279, nc280, nc281, nc282, nc283, 
-        nc284, nc285, nc286, nc287, nc288, nc289, nc290, nc291, nc292, 
-        nc293}), .HSIZE_S3({nc294, nc295, nc296}), .HTRANS_S3({nc297, 
-        nc298}), .HWDATA_S3({nc299, nc300, nc301, nc302, nc303, nc304, 
-        nc305, nc306, nc307, nc308, nc309, nc310, nc311, nc312, nc313, 
-        nc314, nc315, nc316, nc317, nc318, nc319, nc320, nc321, nc322, 
-        nc323, nc324, nc325, nc326, nc327, nc328, nc329, nc330}), 
-        .HBURST_S3({nc331, nc332, nc333}), .HPROT_S3({nc334, nc335, 
-        nc336, nc337}), .HRDATA_S4({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HRESP_S4({
-        rs485_nre, rs485_nre}), .HADDR_S4({nc338, nc339, nc340, nc341, 
-        nc342, nc343, nc344, nc345, nc346, nc347, nc348, nc349, nc350, 
-        nc351, nc352, nc353, nc354, nc355, nc356, nc357, nc358, nc359, 
-        nc360, nc361, nc362, nc363, nc364, nc365, nc366, nc367, nc368, 
-        nc369}), .HSIZE_S4({nc370, nc371, nc372}), .HTRANS_S4({nc373, 
-        nc374}), .HWDATA_S4({nc375, nc376, nc377, nc378, nc379, nc380, 
-        nc381, nc382, nc383, nc384, nc385, nc386, nc387, nc388, nc389, 
-        nc390, nc391, nc392, nc393, nc394, nc395, nc396, nc397, nc398, 
-        nc399, nc400, nc401, nc402, nc403, nc404, nc405, nc406}), 
-        .HBURST_S4({nc407, nc408, nc409}), .HPROT_S4({nc410, nc411, 
-        nc412, nc413}), .HRDATA_S5({
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[0] }), .HRESP_S5({
-        \CoreAHBLite_0_AHBmslave5_HRESP_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HRESP_[0] }), .HADDR_S5({
-        \CoreAHBLite_0_AHBmslave5_HADDR_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[0] }), .HSIZE_S5({
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[0] }), .HTRANS_S5({
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[0] }), .HWDATA_S5({
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[0] }), .HBURST_S5({
-        \CoreAHBLite_0_AHBmslave5_HBURST_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[0] }), .HPROT_S5({
-        \CoreAHBLite_0_AHBmslave5_HPROT_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[0] }), .HRDATA_S6({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre}), .HRESP_S6({rs485_nre, rs485_nre}), .HADDR_S6({
-        nc414, nc415, nc416, nc417, nc418, nc419, nc420, nc421, nc422, 
-        nc423, nc424, nc425, nc426, nc427, nc428, nc429, nc430, nc431, 
-        nc432, nc433, nc434, nc435, nc436, nc437, nc438, nc439, nc440, 
-        nc441, nc442, nc443, nc444, nc445}), .HSIZE_S6({nc446, nc447, 
-        nc448}), .HTRANS_S6({nc449, nc450}), .HWDATA_S6({nc451, nc452, 
-        nc453, nc454, nc455, nc456, nc457, nc458, nc459, nc460, nc461, 
-        nc462, nc463, nc464, nc465, nc466, nc467, nc468, nc469, nc470, 
-        nc471, nc472, nc473, nc474, nc475, nc476, nc477, nc478, nc479, 
-        nc480, nc481, nc482}), .HBURST_S6({nc483, nc484, nc485}), 
-        .HPROT_S6({nc486, nc487, nc488, nc489}), .HRDATA_S7({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre}), .HRESP_S7({rs485_nre, rs485_nre}), .HADDR_S7({
-        nc490, nc491, nc492, nc493, nc494, nc495, nc496, nc497, nc498, 
-        nc499, nc500, nc501, nc502, nc503, nc504, nc505, nc506, nc507, 
-        nc508, nc509, nc510, nc511, nc512, nc513, nc514, nc515, nc516, 
-        nc517, nc518, nc519, nc520, nc521}), .HSIZE_S7({nc522, nc523, 
-        nc524}), .HTRANS_S7({nc525, nc526}), .HWDATA_S7({nc527, nc528, 
-        nc529, nc530, nc531, nc532, nc533, nc534, nc535, nc536, nc537, 
-        nc538, nc539, nc540, nc541, nc542, nc543, nc544, nc545, nc546, 
-        nc547, nc548, nc549, nc550, nc551, nc552, nc553, nc554, nc555, 
-        nc556, nc557, nc558}), .HBURST_S7({nc559, nc560, nc561}), 
-        .HPROT_S7({nc562, nc563, nc564, nc565}), .HRDATA_S8({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre}), .HRESP_S8({rs485_nre, rs485_nre}), .HADDR_S8({
-        nc566, nc567, nc568, nc569, nc570, nc571, nc572, nc573, nc574, 
-        nc575, nc576, nc577, nc578, nc579, nc580, nc581, nc582, nc583, 
-        nc584, nc585, nc586, nc587, nc588, nc589, nc590, nc591, nc592, 
-        nc593, nc594, nc595, nc596, nc597}), .HSIZE_S8({nc598, nc599, 
-        nc600}), .HTRANS_S8({nc601, nc602}), .HWDATA_S8({nc603, nc604, 
-        nc605, nc606, nc607, nc608, nc609, nc610, nc611, nc612, nc613, 
-        nc614, nc615, nc616, nc617, nc618, nc619, nc620, nc621, nc622, 
-        nc623, nc624, nc625, nc626, nc627, nc628, nc629, nc630, nc631, 
-        nc632, nc633, nc634}), .HBURST_S8({nc635, nc636, nc637}), 
-        .HPROT_S8({nc638, nc639, nc640, nc641}), .HRDATA_S9({rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre}), .HRESP_S9({rs485_nre, rs485_nre}), .HADDR_S9({
-        nc642, nc643, nc644, nc645, nc646, nc647, nc648, nc649, nc650, 
-        nc651, nc652, nc653, nc654, nc655, nc656, nc657, nc658, nc659, 
-        nc660, nc661, nc662, nc663, nc664, nc665, nc666, nc667, nc668, 
-        nc669, nc670, nc671, nc672, nc673}), .HSIZE_S9({nc674, nc675, 
-        nc676}), .HTRANS_S9({nc677, nc678}), .HWDATA_S9({nc679, nc680, 
-        nc681, nc682, nc683, nc684, nc685, nc686, nc687, nc688, nc689, 
-        nc690, nc691, nc692, nc693, nc694, nc695, nc696, nc697, nc698, 
-        nc699, nc700, nc701, nc702, nc703, nc704, nc705, nc706, nc707, 
-        nc708, nc709, nc710}), .HBURST_S9({nc711, nc712, nc713}), 
-        .HPROT_S9({nc714, nc715, nc716, nc717}), .HRDATA_S10({
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre}), .HRESP_S10({rs485_nre, rs485_nre}), 
-        .HADDR_S10({nc718, nc719, nc720, nc721, nc722, nc723, nc724, 
-        nc725, nc726, nc727, nc728, nc729, nc730, nc731, nc732, nc733, 
-        nc734, nc735, nc736, nc737, nc738, nc739, nc740, nc741, nc742, 
-        nc743, nc744, nc745, nc746, nc747, nc748, nc749}), .HSIZE_S10({
-        nc750, nc751, nc752}), .HTRANS_S10({nc753, nc754}), 
-        .HWDATA_S10({nc755, nc756, nc757, nc758, nc759, nc760, nc761, 
-        nc762, nc763, nc764, nc765, nc766, nc767, nc768, nc769, nc770, 
-        nc771, nc772, nc773, nc774, nc775, nc776, nc777, nc778, nc779, 
-        nc780, nc781, nc782, nc783, nc784, nc785, nc786}), .HBURST_S10({
-        nc787, nc788, nc789}), .HPROT_S10({nc790, nc791, nc792, nc793})
-        , .HRDATA_S11({rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre}), .HRESP_S11({rs485_nre, 
-        rs485_nre}), .HADDR_S11({nc794, nc795, nc796, nc797, nc798, 
-        nc799, nc800, nc801, nc802, nc803, nc804, nc805, nc806, nc807, 
-        nc808, nc809, nc810, nc811, nc812, nc813, nc814, nc815, nc816, 
-        nc817, nc818, nc819, nc820, nc821, nc822, nc823, nc824, nc825})
-        , .HSIZE_S11({nc826, nc827, nc828}), .HTRANS_S11({nc829, nc830})
-        , .HWDATA_S11({nc831, nc832, nc833, nc834, nc835, nc836, nc837, 
-        nc838, nc839, nc840, nc841, nc842, nc843, nc844, nc845, nc846, 
-        nc847, nc848, nc849, nc850, nc851, nc852, nc853, nc854, nc855, 
-        nc856, nc857, nc858, nc859, nc860, nc861, nc862}), .HBURST_S11({
-        nc863, nc864, nc865}), .HPROT_S11({nc866, nc867, nc868, nc869})
-        , .HRDATA_S12({rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre}), .HRESP_S12({rs485_nre, 
-        rs485_nre}), .HADDR_S12({nc870, nc871, nc872, nc873, nc874, 
-        nc875, nc876, nc877, nc878, nc879, nc880, nc881, nc882, nc883, 
-        nc884, nc885, nc886, nc887, nc888, nc889, nc890, nc891, nc892, 
-        nc893, nc894, nc895, nc896, nc897, nc898, nc899, nc900, nc901})
-        , .HSIZE_S12({nc902, nc903, nc904}), .HTRANS_S12({nc905, nc906})
-        , .HWDATA_S12({nc907, nc908, nc909, nc910, nc911, nc912, nc913, 
-        nc914, nc915, nc916, nc917, nc918, nc919, nc920, nc921, nc922, 
-        nc923, nc924, nc925, nc926, nc927, nc928, nc929, nc930, nc931, 
-        nc932, nc933, nc934, nc935, nc936, nc937, nc938}), .HBURST_S12({
-        nc939, nc940, nc941}), .HPROT_S12({nc942, nc943, nc944, nc945})
-        , .HRDATA_S13({rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre}), .HRESP_S13({rs485_nre, 
-        rs485_nre}), .HADDR_S13({nc946, nc947, nc948, nc949, nc950, 
-        nc951, nc952, nc953, nc954, nc955, nc956, nc957, nc958, nc959, 
-        nc960, nc961, nc962, nc963, nc964, nc965, nc966, nc967, nc968, 
-        nc969, nc970, nc971, nc972, nc973, nc974, nc975, nc976, nc977})
-        , .HSIZE_S13({nc978, nc979, nc980}), .HTRANS_S13({nc981, nc982})
-        , .HWDATA_S13({nc983, nc984, nc985, nc986, nc987, nc988, nc989, 
-        nc990, nc991, nc992, nc993, nc994, nc995, nc996, nc997, nc998, 
-        nc999, nc1000, nc1001, nc1002, nc1003, nc1004, nc1005, nc1006, 
-        nc1007, nc1008, nc1009, nc1010, nc1011, nc1012, nc1013, nc1014})
-        , .HBURST_S13({nc1015, nc1016, nc1017}), .HPROT_S13({nc1018, 
-        nc1019, nc1020, nc1021}), .HRDATA_S14({rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre}), 
-        .HRESP_S14({rs485_nre, rs485_nre}), .HADDR_S14({nc1022, nc1023, 
-        nc1024, nc1025, nc1026, nc1027, nc1028, nc1029, nc1030, nc1031, 
-        nc1032, nc1033, nc1034, nc1035, nc1036, nc1037, nc1038, nc1039, 
-        nc1040, nc1041, nc1042, nc1043, nc1044, nc1045, nc1046, nc1047, 
-        nc1048, nc1049, nc1050, nc1051, nc1052, nc1053}), .HSIZE_S14({
-        nc1054, nc1055, nc1056}), .HTRANS_S14({nc1057, nc1058}), 
-        .HWDATA_S14({nc1059, nc1060, nc1061, nc1062, nc1063, nc1064, 
-        nc1065, nc1066, nc1067, nc1068, nc1069, nc1070, nc1071, nc1072, 
-        nc1073, nc1074, nc1075, nc1076, nc1077, nc1078, nc1079, nc1080, 
-        nc1081, nc1082, nc1083, nc1084, nc1085, nc1086, nc1087, nc1088, 
-        nc1089, nc1090}), .HBURST_S14({nc1091, nc1092, nc1093}), 
-        .HPROT_S14({nc1094, nc1095, nc1096, nc1097}), .HRDATA_S15({
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre}), .HRESP_S15({rs485_nre, rs485_nre}), 
-        .HADDR_S15({nc1098, nc1099, nc1100, nc1101, nc1102, nc1103, 
-        nc1104, nc1105, nc1106, nc1107, nc1108, nc1109, nc1110, nc1111, 
-        nc1112, nc1113, nc1114, nc1115, nc1116, nc1117, nc1118, nc1119, 
-        nc1120, nc1121, nc1122, nc1123, nc1124, nc1125, nc1126, nc1127, 
-        nc1128, nc1129}), .HSIZE_S15({nc1130, nc1131, nc1132}), 
-        .HTRANS_S15({nc1133, nc1134}), .HWDATA_S15({nc1135, nc1136, 
-        nc1137, nc1138, nc1139, nc1140, nc1141, nc1142, nc1143, nc1144, 
-        nc1145, nc1146, nc1147, nc1148, nc1149, nc1150, nc1151, nc1152, 
-        nc1153, nc1154, nc1155, nc1156, nc1157, nc1158, nc1159, nc1160, 
-        nc1161, nc1162, nc1163, nc1164, nc1165, nc1166}), .HBURST_S15({
-        nc1167, nc1168, nc1169}), .HPROT_S15({nc1170, nc1171, nc1172, 
-        nc1173}), .HRDATA_SHG({rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre, rs485_nre, 
-        rs485_nre, rs485_nre, rs485_nre, rs485_nre}), .HRESP_SHG({
-        rs485_nre, rs485_nre}), .HADDR_SHG({nc1174, nc1175, nc1176, 
-        nc1177, nc1178, nc1179, nc1180, nc1181, nc1182, nc1183, nc1184, 
-        nc1185, nc1186, nc1187, nc1188, nc1189, nc1190, nc1191, nc1192, 
-        nc1193, nc1194, nc1195, nc1196, nc1197, nc1198, nc1199, nc1200, 
-        nc1201, nc1202, nc1203, nc1204, nc1205}), .HSIZE_SHG({nc1206, 
-        nc1207, nc1208}), .HTRANS_SHG({nc1209, nc1210}), .HWDATA_SHG({
-        nc1211, nc1212, nc1213, nc1214, nc1215, nc1216, nc1217, nc1218, 
-        nc1219, nc1220, nc1221, nc1222, nc1223, nc1224, nc1225, nc1226, 
-        nc1227, nc1228, nc1229, nc1230, nc1231, nc1232, nc1233, nc1234, 
-        nc1235, nc1236, nc1237, nc1238, nc1239, nc1240, nc1241, nc1242})
-        , .HBURST_SHG({nc1243, nc1244, nc1245}), .HPROT_SHG({nc1246, 
-        nc1247, nc1248, nc1249}), .INITADDR_C0({nc1250, nc1251, nc1252, 
-        nc1253, nc1254, nc1255, nc1256, nc1257, nc1258, nc1259, nc1260, 
-        nc1261}), .INITDATA_C0({nc1262, nc1263, nc1264, nc1265, nc1266, 
-        nc1267, nc1268, nc1269, nc1270, nc1271, nc1272, nc1273, nc1274, 
-        nc1275, nc1276, nc1277, nc1278, nc1279, nc1280, nc1281, nc1282, 
-        nc1283, nc1284, nc1285, nc1286, nc1287, nc1288, nc1289, nc1290, 
-        nc1291, nc1292, nc1293}), .INITADDR_C1({nc1294, nc1295, nc1296, 
-        nc1297, nc1298, nc1299, nc1300, nc1301, nc1302, nc1303, nc1304, 
-        nc1305}), .INITDATA_C1({nc1306, nc1307, nc1308, nc1309, nc1310, 
-        nc1311, nc1312, nc1313, nc1314, nc1315, nc1316, nc1317, nc1318, 
-        nc1319, nc1320, nc1321, nc1322, nc1323, nc1324, nc1325, nc1326, 
-        nc1327, nc1328, nc1329, nc1330, nc1331, nc1332, nc1333, nc1334, 
-        nc1335, nc1336, nc1337}), .INITADDR_C2({nc1338, nc1339, nc1340, 
-        nc1341, nc1342, nc1343, nc1344, nc1345, nc1346, nc1347, nc1348, 
-        nc1349}), .INITDATA_C2({nc1350, nc1351, nc1352, nc1353, nc1354, 
-        nc1355, nc1356, nc1357, nc1358, nc1359, nc1360, nc1361, nc1362, 
-        nc1363, nc1364, nc1365, nc1366, nc1367, nc1368, nc1369, nc1370, 
-        nc1371, nc1372, nc1373, nc1374, nc1375, nc1376, nc1377, nc1378, 
-        nc1379, nc1380, nc1381}), .INITADDR_C3({nc1382, nc1383, nc1384, 
-        nc1385, nc1386, nc1387, nc1388, nc1389, nc1390, nc1391, nc1392, 
-        nc1393}), .INITDATA_C3({nc1394, nc1395, nc1396, nc1397, nc1398, 
-        nc1399, nc1400, nc1401, nc1402, nc1403, nc1404, nc1405, nc1406, 
-        nc1407, nc1408, nc1409, nc1410, nc1411, nc1412, nc1413, nc1414, 
-        nc1415, nc1416, nc1417, nc1418, nc1419, nc1420, nc1421, nc1422, 
-        nc1423, nc1424, nc1425}), .INITADDR_C4({nc1426, nc1427, nc1428, 
-        nc1429, nc1430, nc1431, nc1432, nc1433, nc1434, nc1435, nc1436, 
-        nc1437}), .INITDATA_C4({nc1438, nc1439, nc1440, nc1441, nc1442, 
-        nc1443, nc1444, nc1445, nc1446, nc1447, nc1448, nc1449, nc1450, 
-        nc1451, nc1452, nc1453, nc1454, nc1455, nc1456, nc1457, nc1458, 
-        nc1459, nc1460, nc1461, nc1462, nc1463, nc1464, nc1465, nc1466, 
-        nc1467, nc1468, nc1469}), .INITADDR_C5({nc1470, nc1471, nc1472, 
-        nc1473, nc1474, nc1475, nc1476, nc1477, nc1478, nc1479, nc1480, 
-        nc1481}), .INITDATA_C5({nc1482, nc1483, nc1484, nc1485, nc1486, 
-        nc1487, nc1488, nc1489, nc1490, nc1491, nc1492, nc1493, nc1494, 
-        nc1495, nc1496, nc1497, nc1498, nc1499, nc1500, nc1501, nc1502, 
-        nc1503, nc1504, nc1505, nc1506, nc1507, nc1508, nc1509, nc1510, 
-        nc1511, nc1512, nc1513}), .INITADDR_C6({nc1514, nc1515, nc1516, 
-        nc1517, nc1518, nc1519, nc1520, nc1521, nc1522, nc1523, nc1524, 
-        nc1525}), .INITDATA_C6({nc1526, nc1527, nc1528, nc1529, nc1530, 
-        nc1531, nc1532, nc1533, nc1534, nc1535, nc1536, nc1537, nc1538, 
-        nc1539, nc1540, nc1541, nc1542, nc1543, nc1544, nc1545, nc1546, 
-        nc1547, nc1548, nc1549, nc1550, nc1551, nc1552, nc1553, nc1554, 
-        nc1555, nc1556, nc1557}), .INITADDR_C7({nc1558, nc1559, nc1560, 
-        nc1561, nc1562, nc1563, nc1564, nc1565, nc1566, nc1567, nc1568, 
-        nc1569}), .INITDATA_C7({nc1570, nc1571, nc1572, nc1573, nc1574, 
-        nc1575, nc1576, nc1577, nc1578, nc1579, nc1580, nc1581, nc1582, 
-        nc1583, nc1584, nc1585, nc1586, nc1587, nc1588, nc1589, nc1590, 
-        nc1591, nc1592, nc1593, nc1594, nc1595, nc1596, nc1597, nc1598, 
-        nc1599, nc1600, nc1601}), .INITADDR_C8({nc1602, nc1603, nc1604, 
-        nc1605, nc1606, nc1607, nc1608, nc1609, nc1610, nc1611, nc1612, 
-        nc1613}), .INITDATA_C8({nc1614, nc1615, nc1616, nc1617, nc1618, 
-        nc1619, nc1620, nc1621, nc1622, nc1623, nc1624, nc1625, nc1626, 
-        nc1627, nc1628, nc1629, nc1630, nc1631, nc1632, nc1633, nc1634, 
-        nc1635, nc1636, nc1637, nc1638, nc1639, nc1640, nc1641, nc1642, 
-        nc1643, nc1644, nc1645}), .INITADDR_C9({nc1646, nc1647, nc1648, 
-        nc1649, nc1650, nc1651, nc1652, nc1653, nc1654, nc1655, nc1656, 
-        nc1657}), .INITDATA_C9({nc1658, nc1659, nc1660, nc1661, nc1662, 
-        nc1663, nc1664, nc1665, nc1666, nc1667, nc1668, nc1669, nc1670, 
-        nc1671, nc1672, nc1673, nc1674, nc1675, nc1676, nc1677, nc1678, 
-        nc1679, nc1680, nc1681, nc1682, nc1683, nc1684, nc1685, nc1686, 
-        nc1687, nc1688, nc1689}), .INITADDR_C10({nc1690, nc1691, 
-        nc1692, nc1693, nc1694, nc1695, nc1696, nc1697, nc1698, nc1699, 
-        nc1700, nc1701}), .INITDATA_C10({nc1702, nc1703, nc1704, 
-        nc1705, nc1706, nc1707, nc1708, nc1709, nc1710, nc1711, nc1712, 
-        nc1713, nc1714, nc1715, nc1716, nc1717, nc1718, nc1719, nc1720, 
-        nc1721, nc1722, nc1723, nc1724, nc1725, nc1726, nc1727, nc1728, 
-        nc1729, nc1730, nc1731, nc1732, nc1733}), .INITADDR_C11({
-        nc1734, nc1735, nc1736, nc1737, nc1738, nc1739, nc1740, nc1741, 
-        nc1742, nc1743, nc1744, nc1745}), .INITDATA_C11({nc1746, 
-        nc1747, nc1748, nc1749, nc1750, nc1751, nc1752, nc1753, nc1754, 
-        nc1755, nc1756, nc1757, nc1758, nc1759, nc1760, nc1761, nc1762, 
-        nc1763, nc1764, nc1765, nc1766, nc1767, nc1768, nc1769, nc1770, 
-        nc1771, nc1772, nc1773, nc1774, nc1775, nc1776, nc1777}), 
-        .INITADDR_C12({nc1778, nc1779, nc1780, nc1781, nc1782, nc1783, 
-        nc1784, nc1785, nc1786, nc1787, nc1788, nc1789}), 
-        .INITDATA_C12({nc1790, nc1791, nc1792, nc1793, nc1794, nc1795, 
-        nc1796, nc1797, nc1798, nc1799, nc1800, nc1801, nc1802, nc1803, 
-        nc1804, nc1805, nc1806, nc1807, nc1808, nc1809, nc1810, nc1811, 
-        nc1812, nc1813, nc1814, nc1815, nc1816, nc1817, nc1818, nc1819, 
-        nc1820, nc1821}), .INITADDR_C13({nc1822, nc1823, nc1824, 
-        nc1825, nc1826, nc1827, nc1828, nc1829, nc1830, nc1831, nc1832, 
-        nc1833}), .INITDATA_C13({nc1834, nc1835, nc1836, nc1837, 
-        nc1838, nc1839, nc1840, nc1841, nc1842, nc1843, nc1844, nc1845, 
-        nc1846, nc1847, nc1848, nc1849, nc1850, nc1851, nc1852, nc1853, 
-        nc1854, nc1855, nc1856, nc1857, nc1858, nc1859, nc1860, nc1861, 
-        nc1862, nc1863, nc1864, nc1865}), .INITADDR_C14({nc1866, 
-        nc1867, nc1868, nc1869, nc1870, nc1871, nc1872, nc1873, nc1874, 
-        nc1875, nc1876, nc1877}), .INITDATA_C14({nc1878, nc1879, 
-        nc1880, nc1881, nc1882, nc1883, nc1884, nc1885, nc1886, nc1887, 
-        nc1888, nc1889, nc1890, nc1891, nc1892, nc1893, nc1894, nc1895, 
-        nc1896, nc1897, nc1898, nc1899, nc1900, nc1901, nc1902, nc1903, 
-        nc1904, nc1905, nc1906, nc1907, nc1908, nc1909}), 
-        .INITADDR_C15({nc1910, nc1911, nc1912, nc1913, nc1914, nc1915, 
-        nc1916, nc1917, nc1918, nc1919, nc1920, nc1921}), 
-        .INITDATA_C15({nc1922, nc1923, nc1924, nc1925, nc1926, nc1927, 
-        nc1928, nc1929, nc1930, nc1931, nc1932, nc1933, nc1934, nc1935, 
-        nc1936, nc1937, nc1938, nc1939, nc1940, nc1941, nc1942, nc1943, 
-        nc1944, nc1945, nc1946, nc1947, nc1948, nc1949, nc1950, nc1951, 
-        nc1952, nc1953}));
-    VCC VCC (.Y(VCC_net));
-    GND GND (.Y(rs485_nre));
-    psram_cr psram_cr_0 (.HSEL(CoreAHBLite_0_AHBmslave5_HSELx), 
-        .HWRITE(CoreAHBLite_0_AHBmslave5_HWRITE), .HMASTLOCK(
-        CoreAHBLite_0_AHBmslave5_HMASTLOCK), .HREADY(
-        CoreAHBLite_0_AHBmslave5_HREADY), .HRESETn(
-        MSS_CORE2_0_M2F_RESET_N), .HCLK(MSS_CORE2_0_FAB_CLK), 
-        .HREADYOUT(CoreAHBLite_0_AHBmslave5_HREADYOUT), .ncs0(
-        psram_ncs0), .ncs1(psram_ncs1), .noe0(psram_noe0), .noe1(
-        psram_noe1), .nwe(psram_nwe), .HADDR({
-        \CoreAHBLite_0_AHBmslave5_HADDR_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HADDR_[0] }), .HWDATA({
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HWDATA_[0] }), .HSIZE({
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HSIZE_[0] }), .HBURST({
-        \CoreAHBLite_0_AHBmslave5_HBURST_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HBURST_[0] }), .HPROT({
-        \CoreAHBLite_0_AHBmslave5_HPROT_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HPROT_[0] }), .HTRANS({
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HTRANS_[0] }), .HRESP({
-        \CoreAHBLite_0_AHBmslave5_HRESP_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HRESP_[0] }), .HRDATA({
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[31] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[30] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[29] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[28] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[27] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[26] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[25] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[24] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[23] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[22] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[21] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[20] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[19] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[18] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[17] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[16] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[15] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[14] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[13] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[12] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[11] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[10] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[9] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[8] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[7] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[6] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[5] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[4] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[3] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[2] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[1] , 
-        \CoreAHBLite_0_AHBmslave5_HRDATA_[0] }), .address({
-        psram_address[24], psram_address[23], psram_address[22], 
-        psram_address[21], psram_address[20], psram_address[19], 
-        psram_address[18], psram_address[17], psram_address[16], 
-        psram_address[15], psram_address[14], psram_address[13], 
-        psram_address[12], psram_address[11], psram_address[10], 
-        psram_address[9], psram_address[8], psram_address[7], 
-        psram_address[6], psram_address[5], psram_address[4], 
-        psram_address[3], psram_address[2], psram_address[1], 
-        psram_address[0]}), .nbyte_en({psram_nbyte_en[1], 
-        psram_nbyte_en[0]}), .data({psram_data[15], psram_data[14], 
-        psram_data[13], psram_data[12], psram_data[11], psram_data[10], 
-        psram_data[9], psram_data[8], psram_data[7], psram_data[6], 
-        psram_data[5], psram_data[4], psram_data[3], psram_data[2], 
-        psram_data[1], psram_data[0]}));
-    
+//--------------------------------------------------------------------
+// Input
+//--------------------------------------------------------------------
+input         CLK50;
+input         MAC_CRSDV;
+input  [1:0]  MAC_RXD;
+input         MAC_RXER;
+input         MAINXIN;
+input         MSS_RESET_N;
+input         UART_0_RXD;
+//--------------------------------------------------------------------
+// Output
+//--------------------------------------------------------------------
+output        MAC_MDC;
+output [1:0]  MAC_TXD;
+output        MAC_TXEN;
+output        Phy_RMII_CLK;
+output        UART_0_TXD;
+output [7:0]  led;
+output [24:0] psram_address;
+output [1:0]  psram_nbyte_en;
+output        psram_ncs0;
+output        psram_ncs1;
+output        psram_noe0;
+output        psram_noe1;
+output        psram_nwe;
+output        rs485_de;
+output        rs485_nre;
+//--------------------------------------------------------------------
+// Inout
+//--------------------------------------------------------------------
+inout         MAC_MDIO;
+inout  [15:0] psram_data;
+//--------------------------------------------------------------------
+// Nets
+//--------------------------------------------------------------------
+wire          CLK50;
+wire   [31:0] CoreAHBLite_0_AHBmslave5_HADDR;
+wire   [2:0]  CoreAHBLite_0_AHBmslave5_HBURST;
+wire          CoreAHBLite_0_AHBmslave5_HMASTLOCK;
+wire   [3:0]  CoreAHBLite_0_AHBmslave5_HPROT;
+wire   [31:0] CoreAHBLite_0_AHBmslave5_HRDATA;
+wire          CoreAHBLite_0_AHBmslave5_HREADY;
+wire          CoreAHBLite_0_AHBmslave5_HREADYOUT;
+wire   [1:0]  CoreAHBLite_0_AHBmslave5_HRESP;
+wire          CoreAHBLite_0_AHBmslave5_HSELx;
+wire   [2:0]  CoreAHBLite_0_AHBmslave5_HSIZE;
+wire   [1:0]  CoreAHBLite_0_AHBmslave5_HTRANS;
+wire   [31:0] CoreAHBLite_0_AHBmslave5_HWDATA;
+wire          CoreAHBLite_0_AHBmslave5_HWRITE;
+wire   [15:0] psram_data;
+wire          MAC_CRSDV;
+wire          MAC_MDC_net_0;
+wire          MAC_MDIO;
+wire   [1:0]  MAC_RXD;
+wire          MAC_RXER;
+wire   [1:0]  MAC_TXD_net_0;
+wire          MAC_TXEN_net_0;
+wire          MAINXIN;
+wire          MSS_CORE2_0_FAB_CLK;
+wire          MSS_CORE2_0_M2F_RESET_N;
+wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK;
+wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA;
+wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS;
+wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA;
+wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE;
+wire          MSS_RESET_N;
+wire   [1:0]  nbyte_en;
+wire          ncs0;
+wire          ncs1;
+wire          noe0;
+wire          noe1;
+wire          nwe;
+wire          Phy_RMII_CLK_net_0;
+wire   [24:0] psram_address_net_0;
+wire          UART_0_RXD;
+wire          UART_0_TXD_net_0;
+wire          Phy_RMII_CLK_net_1;
+wire          ncs0_net_0;
+wire          nwe_net_0;
+wire          ncs1_net_0;
+wire          noe1_net_0;
+wire          noe0_net_0;
+wire          UART_0_TXD_net_1;
+wire          MAC_MDC_net_1;
+wire          MAC_TXEN_net_1;
+wire   [1:0]  nbyte_en_net_0;
+wire   [24:0] psram_address_net_1;
+wire   [1:0]  MAC_TXD_net_1;
+//--------------------------------------------------------------------
+// TiedOff Nets
+//--------------------------------------------------------------------
+wire          GND_net;
+wire          VCC_net;
+wire   [7:0]  led_const_net_0;
+wire   [31:0] HADDR_M0_const_net_0;
+wire   [1:0]  HTRANS_M0_const_net_0;
+wire   [2:0]  HSIZE_M0_const_net_0;
+wire   [2:0]  HBURST_M0_const_net_0;
+wire   [3:0]  HPROT_M0_const_net_0;
+wire   [31:0] HWDATA_M0_const_net_0;
+wire   [2:0]  HBURST_M1_const_net_0;
+wire   [3:0]  HPROT_M1_const_net_0;
+wire   [31:0] HRDATA_S0_const_net_0;
+wire   [1:0]  HRESP_S0_const_net_0;
+wire   [31:0] HRDATA_S1_const_net_0;
+wire   [1:0]  HRESP_S1_const_net_0;
+wire   [31:0] HRDATA_S2_const_net_0;
+wire   [1:0]  HRESP_S2_const_net_0;
+wire   [31:0] HRDATA_S3_const_net_0;
+wire   [1:0]  HRESP_S3_const_net_0;
+wire   [31:0] HRDATA_S4_const_net_0;
+wire   [1:0]  HRESP_S4_const_net_0;
+wire   [31:0] HRDATA_S6_const_net_0;
+wire   [1:0]  HRESP_S6_const_net_0;
+wire   [31:0] HRDATA_S7_const_net_0;
+wire   [1:0]  HRESP_S7_const_net_0;
+wire   [31:0] HRDATA_S8_const_net_0;
+wire   [1:0]  HRESP_S8_const_net_0;
+wire   [31:0] HRDATA_S9_const_net_0;
+wire   [1:0]  HRESP_S9_const_net_0;
+wire   [31:0] HRDATA_S10_const_net_0;
+wire   [1:0]  HRESP_S10_const_net_0;
+wire   [31:0] HRDATA_S11_const_net_0;
+wire   [1:0]  HRESP_S11_const_net_0;
+wire   [31:0] HRDATA_S12_const_net_0;
+wire   [1:0]  HRESP_S12_const_net_0;
+wire   [31:0] HRDATA_S13_const_net_0;
+wire   [1:0]  HRESP_S13_const_net_0;
+wire   [31:0] HRDATA_S14_const_net_0;
+wire   [1:0]  HRESP_S14_const_net_0;
+wire   [31:0] HRDATA_S15_const_net_0;
+wire   [1:0]  HRESP_S15_const_net_0;
+wire   [31:0] HRDATA_SHG_const_net_0;
+wire   [1:0]  HRESP_SHG_const_net_0;
+//--------------------------------------------------------------------
+// Constant assignments
+//--------------------------------------------------------------------
+assign GND_net                = 1'b0;
+assign VCC_net                = 1'b1;
+assign led_const_net_0        = 8'h00;
+assign HADDR_M0_const_net_0   = 32'h00000000;
+assign HTRANS_M0_const_net_0  = 2'h0;
+assign HSIZE_M0_const_net_0   = 3'h0;
+assign HBURST_M0_const_net_0  = 3'h0;
+assign HPROT_M0_const_net_0   = 4'h0;
+assign HWDATA_M0_const_net_0  = 32'h00000000;
+assign HBURST_M1_const_net_0  = 3'h0;
+assign HPROT_M1_const_net_0   = 4'h0;
+assign HRDATA_S0_const_net_0  = 32'h00000000;
+assign HRESP_S0_const_net_0   = 2'h0;
+assign HRDATA_S1_const_net_0  = 32'h00000000;
+assign HRESP_S1_const_net_0   = 2'h0;
+assign HRDATA_S2_const_net_0  = 32'h00000000;
+assign HRESP_S2_const_net_0   = 2'h0;
+assign HRDATA_S3_const_net_0  = 32'h00000000;
+assign HRESP_S3_const_net_0   = 2'h0;
+assign HRDATA_S4_const_net_0  = 32'h00000000;
+assign HRESP_S4_const_net_0   = 2'h0;
+assign HRDATA_S6_const_net_0  = 32'h00000000;
+assign HRESP_S6_const_net_0   = 2'h0;
+assign HRDATA_S7_const_net_0  = 32'h00000000;
+assign HRESP_S7_const_net_0   = 2'h0;
+assign HRDATA_S8_const_net_0  = 32'h00000000;
+assign HRESP_S8_const_net_0   = 2'h0;
+assign HRDATA_S9_const_net_0  = 32'h00000000;
+assign HRESP_S9_const_net_0   = 2'h0;
+assign HRDATA_S10_const_net_0 = 32'h00000000;
+assign HRESP_S10_const_net_0  = 2'h0;
+assign HRDATA_S11_const_net_0 = 32'h00000000;
+assign HRESP_S11_const_net_0  = 2'h0;
+assign HRDATA_S12_const_net_0 = 32'h00000000;
+assign HRESP_S12_const_net_0  = 2'h0;
+assign HRDATA_S13_const_net_0 = 32'h00000000;
+assign HRESP_S13_const_net_0  = 2'h0;
+assign HRDATA_S14_const_net_0 = 32'h00000000;
+assign HRESP_S14_const_net_0  = 2'h0;
+assign HRDATA_S15_const_net_0 = 32'h00000000;
+assign HRESP_S15_const_net_0  = 2'h0;
+assign HRDATA_SHG_const_net_0 = 32'h00000000;
+assign HRESP_SHG_const_net_0  = 2'h0;
+//--------------------------------------------------------------------
+// TieOff assignments
+//--------------------------------------------------------------------
+assign rs485_nre           = 1'b0;
+assign rs485_de            = 1'b1;
+assign led[7:0]            = 8'h00;
+//--------------------------------------------------------------------
+// Top level output port assignments
+//--------------------------------------------------------------------
+assign Phy_RMII_CLK_net_1  = Phy_RMII_CLK_net_0;
+assign Phy_RMII_CLK        = Phy_RMII_CLK_net_1;
+assign ncs0_net_0          = ncs0;
+assign psram_ncs0          = ncs0_net_0;
+assign nwe_net_0           = nwe;
+assign psram_nwe           = nwe_net_0;
+assign ncs1_net_0          = ncs1;
+assign psram_ncs1          = ncs1_net_0;
+assign noe1_net_0          = noe1;
+assign psram_noe1          = noe1_net_0;
+assign noe0_net_0          = noe0;
+assign psram_noe0          = noe0_net_0;
+assign UART_0_TXD_net_1    = UART_0_TXD_net_0;
+assign UART_0_TXD          = UART_0_TXD_net_1;
+assign MAC_MDC_net_1       = MAC_MDC_net_0;
+assign MAC_MDC             = MAC_MDC_net_1;
+assign MAC_TXEN_net_1      = MAC_TXEN_net_0;
+assign MAC_TXEN            = MAC_TXEN_net_1;
+assign nbyte_en_net_0      = nbyte_en;
+assign psram_nbyte_en[1:0] = nbyte_en_net_0;
+assign psram_address_net_1 = psram_address_net_0;
+assign psram_address[24:0] = psram_address_net_1;
+assign MAC_TXD_net_1       = MAC_TXD_net_0;
+assign MAC_TXD[1:0]        = MAC_TXD_net_1;
+//--------------------------------------------------------------------
+// Bus Interface Nets - Unequal Pin Widths
+//--------------------------------------------------------------------
+wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
+wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
+
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
+wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
+wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
+
+wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
+wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
+assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };
+
+//--------------------------------------------------------------------
+// Component instances
+//--------------------------------------------------------------------
+//--------CoreAHBLite   -   Actel:DirectCore:CoreAHBLite:3.1.102
+CoreAHBLite #( 
+        .FAMILY             ( 15 ),
+        .HADDR_SHG_CFG      ( 1 ),
+        .M0_AHBSLOT0ENABLE  ( 0 ),
+        .M0_AHBSLOT1ENABLE  ( 0 ),
+        .M0_AHBSLOT2ENABLE  ( 0 ),
+        .M0_AHBSLOT3ENABLE  ( 0 ),
+        .M0_AHBSLOT4ENABLE  ( 0 ),
+        .M0_AHBSLOT5ENABLE  ( 0 ),
+        .M0_AHBSLOT6ENABLE  ( 0 ),
+        .M0_AHBSLOT7ENABLE  ( 0 ),
+        .M0_AHBSLOT8ENABLE  ( 0 ),
+        .M0_AHBSLOT9ENABLE  ( 0 ),
+        .M0_AHBSLOT10ENABLE ( 0 ),
+        .M0_AHBSLOT11ENABLE ( 0 ),
+        .M0_AHBSLOT12ENABLE ( 0 ),
+        .M0_AHBSLOT13ENABLE ( 0 ),
+        .M0_AHBSLOT14ENABLE ( 0 ),
+        .M0_AHBSLOT15ENABLE ( 0 ),
+        .M0_HUGESLOTENABLE  ( 0 ),
+        .M0_INITCFG0ENABLE  ( 0 ),
+        .M0_INITCFG1ENABLE  ( 0 ),
+        .M0_INITCFG2ENABLE  ( 0 ),
+        .M0_INITCFG3ENABLE  ( 0 ),
+        .M0_INITCFG4ENABLE  ( 0 ),
+        .M0_INITCFG5ENABLE  ( 0 ),
+        .M0_INITCFG6ENABLE  ( 0 ),
+        .M0_INITCFG7ENABLE  ( 0 ),
+        .M0_INITCFG8ENABLE  ( 0 ),
+        .M0_INITCFG9ENABLE  ( 0 ),
+        .M0_INITCFG10ENABLE ( 0 ),
+        .M0_INITCFG11ENABLE ( 0 ),
+        .M0_INITCFG12ENABLE ( 0 ),
+        .M0_INITCFG13ENABLE ( 0 ),
+        .M0_INITCFG14ENABLE ( 0 ),
+        .M0_INITCFG15ENABLE ( 0 ),
+        .M1_AHBSLOT0ENABLE  ( 0 ),
+        .M1_AHBSLOT1ENABLE  ( 0 ),
+        .M1_AHBSLOT2ENABLE  ( 0 ),
+        .M1_AHBSLOT3ENABLE  ( 0 ),
+        .M1_AHBSLOT4ENABLE  ( 0 ),
+        .M1_AHBSLOT5ENABLE  ( 1 ),
+        .M1_AHBSLOT6ENABLE  ( 0 ),
+        .M1_AHBSLOT7ENABLE  ( 0 ),
+        .M1_AHBSLOT8ENABLE  ( 0 ),
+        .M1_AHBSLOT9ENABLE  ( 0 ),
+        .M1_AHBSLOT10ENABLE ( 0 ),
+        .M1_AHBSLOT11ENABLE ( 0 ),
+        .M1_AHBSLOT12ENABLE ( 0 ),
+        .M1_AHBSLOT13ENABLE ( 0 ),
+        .M1_AHBSLOT14ENABLE ( 0 ),
+        .M1_AHBSLOT15ENABLE ( 0 ),
+        .M1_HUGESLOTENABLE  ( 0 ),
+        .M1_INITCFG0ENABLE  ( 0 ),
+        .M1_INITCFG1ENABLE  ( 0 ),
+        .M1_INITCFG2ENABLE  ( 0 ),
+        .M1_INITCFG3ENABLE  ( 0 ),
+        .M1_INITCFG4ENABLE  ( 0 ),
+        .M1_INITCFG5ENABLE  ( 0 ),
+        .M1_INITCFG6ENABLE  ( 0 ),
+        .M1_INITCFG7ENABLE  ( 0 ),
+        .M1_INITCFG8ENABLE  ( 0 ),
+        .M1_INITCFG9ENABLE  ( 0 ),
+        .M1_INITCFG10ENABLE ( 0 ),
+        .M1_INITCFG11ENABLE ( 0 ),
+        .M1_INITCFG12ENABLE ( 0 ),
+        .M1_INITCFG13ENABLE ( 0 ),
+        .M1_INITCFG14ENABLE ( 0 ),
+        .M1_INITCFG15ENABLE ( 0 ),
+        .MODE_CFG           ( 1 ) )
+CoreAHBLite_0(
+        // Inputs
+        .HCLK           ( MSS_CORE2_0_FAB_CLK ),
+        .HRESETN        ( MSS_CORE2_0_M2F_RESET_N ),
+        .REMAP_M0       ( GND_net ), // tied to 1'b0 from definition
+        .HMASTLOCK_M0   ( GND_net ), // tied to 1'b0 from definition
+        .HWRITE_M0      ( GND_net ), // tied to 1'b0 from definition
+        .HMASTLOCK_M1   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK ),
+        .HWRITE_M1      ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE ),
+        .HREADYOUT_S0   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S1   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S2   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S3   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S4   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S5   ( CoreAHBLite_0_AHBmslave5_HREADYOUT ),
+        .HREADYOUT_S6   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S7   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S8   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S9   ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S10  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S11  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S12  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S13  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S14  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_S15  ( VCC_net ), // tied to 1'b1 from definition
+        .HREADYOUT_SHG  ( VCC_net ), // tied to 1'b1 from definition
+        .HADDR_M0       ( HADDR_M0_const_net_0 ), // tied to 32'h00000000 from definition
+        .HSIZE_M0       ( HSIZE_M0_const_net_0 ), // tied to 3'h0 from definition
+        .HTRANS_M0      ( HTRANS_M0_const_net_0 ), // tied to 2'h0 from definition
+        .HWDATA_M0      ( HWDATA_M0_const_net_0 ), // tied to 32'h00000000 from definition
+        .HBURST_M0      ( HBURST_M0_const_net_0 ), // tied to 3'h0 from definition
+        .HPROT_M0       ( HPROT_M0_const_net_0 ), // tied to 4'h0 from definition
+        .HADDR_M1       ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 ),
+        .HSIZE_M1       ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 ),
+        .HTRANS_M1      ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS ),
+        .HWDATA_M1      ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA ),
+        .HBURST_M1      ( HBURST_M1_const_net_0 ), // tied to 3'h0 from definition
+        .HPROT_M1       ( HPROT_M1_const_net_0 ), // tied to 4'h0 from definition
+        .HRDATA_S0      ( HRDATA_S0_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S0       ( HRESP_S0_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S1      ( HRDATA_S1_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S1       ( HRESP_S1_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S2      ( HRDATA_S2_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S2       ( HRESP_S2_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S3      ( HRDATA_S3_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S3       ( HRESP_S3_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S4      ( HRDATA_S4_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S4       ( HRESP_S4_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S5      ( CoreAHBLite_0_AHBmslave5_HRDATA ),
+        .HRESP_S5       ( CoreAHBLite_0_AHBmslave5_HRESP ),
+        .HRDATA_S6      ( HRDATA_S6_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S6       ( HRESP_S6_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S7      ( HRDATA_S7_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S7       ( HRESP_S7_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S8      ( HRDATA_S8_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S8       ( HRESP_S8_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S9      ( HRDATA_S9_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S9       ( HRESP_S9_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S10     ( HRDATA_S10_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S10      ( HRESP_S10_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S11     ( HRDATA_S11_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S11      ( HRESP_S11_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S12     ( HRDATA_S12_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S12      ( HRESP_S12_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S13     ( HRDATA_S13_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S13      ( HRESP_S13_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S14     ( HRDATA_S14_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S14      ( HRESP_S14_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_S15     ( HRDATA_S15_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S15      ( HRESP_S15_const_net_0 ), // tied to 2'h0 from definition
+        .HRDATA_SHG     ( HRDATA_SHG_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_SHG      ( HRESP_SHG_const_net_0 ), // tied to 2'h0 from definition
+        // Outputs
+        .HREADY_M0      (  ),
+        .HREADY_M1      ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY ),
+        .HSEL_S0        (  ),
+        .HWRITE_S0      (  ),
+        .HREADY_S0      (  ),
+        .HMASTLOCK_S0   (  ),
+        .HSEL_S1        (  ),
+        .HWRITE_S1      (  ),
+        .HREADY_S1      (  ),
+        .HMASTLOCK_S1   (  ),
+        .HSEL_S2        (  ),
+        .HWRITE_S2      (  ),
+        .HREADY_S2      (  ),
+        .HMASTLOCK_S2   (  ),
+        .HSEL_S3        (  ),
+        .HWRITE_S3      (  ),
+        .HREADY_S3      (  ),
+        .HMASTLOCK_S3   (  ),
+        .HSEL_S4        (  ),
+        .HWRITE_S4      (  ),
+        .HREADY_S4      (  ),
+        .HMASTLOCK_S4   (  ),
+        .HSEL_S5        ( CoreAHBLite_0_AHBmslave5_HSELx ),
+        .HWRITE_S5      ( CoreAHBLite_0_AHBmslave5_HWRITE ),
+        .HREADY_S5      ( CoreAHBLite_0_AHBmslave5_HREADY ),
+        .HMASTLOCK_S5   ( CoreAHBLite_0_AHBmslave5_HMASTLOCK ),
+        .HSEL_S6        (  ),
+        .HWRITE_S6      (  ),
+        .HREADY_S6      (  ),
+        .HMASTLOCK_S6   (  ),
+        .HSEL_S7        (  ),
+        .HWRITE_S7      (  ),
+        .HREADY_S7      (  ),
+        .HMASTLOCK_S7   (  ),
+        .HSEL_S8        (  ),
+        .HWRITE_S8      (  ),
+        .HREADY_S8      (  ),
+        .HMASTLOCK_S8   (  ),
+        .HSEL_S9        (  ),
+        .HWRITE_S9      (  ),
+        .HREADY_S9      (  ),
+        .HMASTLOCK_S9   (  ),
+        .HSEL_S10       (  ),
+        .HWRITE_S10     (  ),
+        .HREADY_S10     (  ),
+        .HMASTLOCK_S10  (  ),
+        .HSEL_S11       (  ),
+        .HWRITE_S11     (  ),
+        .HREADY_S11     (  ),
+        .HMASTLOCK_S11  (  ),
+        .HSEL_S12       (  ),
+        .HWRITE_S12     (  ),
+        .HREADY_S12     (  ),
+        .HMASTLOCK_S12  (  ),
+        .HSEL_S13       (  ),
+        .HWRITE_S13     (  ),
+        .HREADY_S13     (  ),
+        .HMASTLOCK_S13  (  ),
+        .HSEL_S14       (  ),
+        .HWRITE_S14     (  ),
+        .HREADY_S14     (  ),
+        .HMASTLOCK_S14  (  ),
+        .HSEL_S15       (  ),
+        .HWRITE_S15     (  ),
+        .HREADY_S15     (  ),
+        .HMASTLOCK_S15  (  ),
+        .HSEL_SHG       (  ),
+        .HWRITE_SHG     (  ),
+        .HREADY_SHG     (  ),
+        .HMASTLOCK_SHG  (  ),
+        .INITDATVAL_C0  (  ),
+        .INITDONE_C0    (  ),
+        .INITDATVAL_C1  (  ),
+        .INITDONE_C1    (  ),
+        .INITDATVAL_C2  (  ),
+        .INITDONE_C2    (  ),
+        .INITDATVAL_C3  (  ),
+        .INITDONE_C3    (  ),
+        .INITDATVAL_C4  (  ),
+        .INITDONE_C4    (  ),
+        .INITDATVAL_C5  (  ),
+        .INITDONE_C5    (  ),
+        .INITDATVAL_C6  (  ),
+        .INITDONE_C6    (  ),
+        .INITDATVAL_C7  (  ),
+        .INITDONE_C7    (  ),
+        .INITDATVAL_C8  (  ),
+        .INITDONE_C8    (  ),
+        .INITDATVAL_C9  (  ),
+        .INITDONE_C9    (  ),
+        .INITDATVAL_C10 (  ),
+        .INITDONE_C10   (  ),
+        .INITDATVAL_C11 (  ),
+        .INITDONE_C11   (  ),
+        .INITDATVAL_C12 (  ),
+        .INITDONE_C12   (  ),
+        .INITDATVAL_C13 (  ),
+        .INITDONE_C13   (  ),
+        .INITDATVAL_C14 (  ),
+        .INITDONE_C14   (  ),
+        .INITDATVAL_C15 (  ),
+        .INITDONE_C15   (  ),
+        .HRESP_M0       (  ),
+        .HRDATA_M0      (  ),
+        .HRESP_M1       ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP ),
+        .HRDATA_M1      ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
+        .HADDR_S0       (  ),
+        .HSIZE_S0       (  ),
+        .HTRANS_S0      (  ),
+        .HWDATA_S0      (  ),
+        .HBURST_S0      (  ),
+        .HPROT_S0       (  ),
+        .HADDR_S1       (  ),
+        .HSIZE_S1       (  ),
+        .HTRANS_S1      (  ),
+        .HWDATA_S1      (  ),
+        .HBURST_S1      (  ),
+        .HPROT_S1       (  ),
+        .HADDR_S2       (  ),
+        .HSIZE_S2       (  ),
+        .HTRANS_S2      (  ),
+        .HWDATA_S2      (  ),
+        .HBURST_S2      (  ),
+        .HPROT_S2       (  ),
+        .HADDR_S3       (  ),
+        .HSIZE_S3       (  ),
+        .HTRANS_S3      (  ),
+        .HWDATA_S3      (  ),
+        .HBURST_S3      (  ),
+        .HPROT_S3       (  ),
+        .HADDR_S4       (  ),
+        .HSIZE_S4       (  ),
+        .HTRANS_S4      (  ),
+        .HWDATA_S4      (  ),
+        .HBURST_S4      (  ),
+        .HPROT_S4       (  ),
+        .HADDR_S5       ( CoreAHBLite_0_AHBmslave5_HADDR ),
+        .HSIZE_S5       ( CoreAHBLite_0_AHBmslave5_HSIZE ),
+        .HTRANS_S5      ( CoreAHBLite_0_AHBmslave5_HTRANS ),
+        .HWDATA_S5      ( CoreAHBLite_0_AHBmslave5_HWDATA ),
+        .HBURST_S5      ( CoreAHBLite_0_AHBmslave5_HBURST ),
+        .HPROT_S5       ( CoreAHBLite_0_AHBmslave5_HPROT ),
+        .HADDR_S6       (  ),
+        .HSIZE_S6       (  ),
+        .HTRANS_S6      (  ),
+        .HWDATA_S6      (  ),
+        .HBURST_S6      (  ),
+        .HPROT_S6       (  ),
+        .HADDR_S7       (  ),
+        .HSIZE_S7       (  ),
+        .HTRANS_S7      (  ),
+        .HWDATA_S7      (  ),
+        .HBURST_S7      (  ),
+        .HPROT_S7       (  ),
+        .HADDR_S8       (  ),
+        .HSIZE_S8       (  ),
+        .HTRANS_S8      (  ),
+        .HWDATA_S8      (  ),
+        .HBURST_S8      (  ),
+        .HPROT_S8       (  ),
+        .HADDR_S9       (  ),
+        .HSIZE_S9       (  ),
+        .HTRANS_S9      (  ),
+        .HWDATA_S9      (  ),
+        .HBURST_S9      (  ),
+        .HPROT_S9       (  ),
+        .HADDR_S10      (  ),
+        .HSIZE_S10      (  ),
+        .HTRANS_S10     (  ),
+        .HWDATA_S10     (  ),
+        .HBURST_S10     (  ),
+        .HPROT_S10      (  ),
+        .HADDR_S11      (  ),
+        .HSIZE_S11      (  ),
+        .HTRANS_S11     (  ),
+        .HWDATA_S11     (  ),
+        .HBURST_S11     (  ),
+        .HPROT_S11      (  ),
+        .HADDR_S12      (  ),
+        .HSIZE_S12      (  ),
+        .HTRANS_S12     (  ),
+        .HWDATA_S12     (  ),
+        .HBURST_S12     (  ),
+        .HPROT_S12      (  ),
+        .HADDR_S13      (  ),
+        .HSIZE_S13      (  ),
+        .HTRANS_S13     (  ),
+        .HWDATA_S13     (  ),
+        .HBURST_S13     (  ),
+        .HPROT_S13      (  ),
+        .HADDR_S14      (  ),
+        .HSIZE_S14      (  ),
+        .HTRANS_S14     (  ),
+        .HWDATA_S14     (  ),
+        .HBURST_S14     (  ),
+        .HPROT_S14      (  ),
+        .HADDR_S15      (  ),
+        .HSIZE_S15      (  ),
+        .HTRANS_S15     (  ),
+        .HWDATA_S15     (  ),
+        .HBURST_S15     (  ),
+        .HPROT_S15      (  ),
+        .HADDR_SHG      (  ),
+        .HSIZE_SHG      (  ),
+        .HTRANS_SHG     (  ),
+        .HWDATA_SHG     (  ),
+        .HBURST_SHG     (  ),
+        .HPROT_SHG      (  ),
+        .INITADDR_C0    (  ),
+        .INITDATA_C0    (  ),
+        .INITADDR_C1    (  ),
+        .INITDATA_C1    (  ),
+        .INITADDR_C2    (  ),
+        .INITDATA_C2    (  ),
+        .INITADDR_C3    (  ),
+        .INITDATA_C3    (  ),
+        .INITADDR_C4    (  ),
+        .INITDATA_C4    (  ),
+        .INITADDR_C5    (  ),
+        .INITDATA_C5    (  ),
+        .INITADDR_C6    (  ),
+        .INITDATA_C6    (  ),
+        .INITADDR_C7    (  ),
+        .INITDATA_C7    (  ),
+        .INITADDR_C8    (  ),
+        .INITDATA_C8    (  ),
+        .INITADDR_C9    (  ),
+        .INITDATA_C9    (  ),
+        .INITADDR_C10   (  ),
+        .INITDATA_C10   (  ),
+        .INITADDR_C11   (  ),
+        .INITDATA_C11   (  ),
+        .INITADDR_C12   (  ),
+        .INITDATA_C12   (  ),
+        .INITADDR_C13   (  ),
+        .INITDATA_C13   (  ),
+        .INITADDR_C14   (  ),
+        .INITDATA_C14   (  ),
+        .INITADDR_C15   (  ),
+        .INITDATA_C15   (  ) 
+        );
+
+//--------MSS_CORE2
+MSS_CORE2 MSS_CORE2_0(
+        // Inputs
+        .MSS_RESET_N ( MSS_RESET_N ),
+        .MAC_CRSDV   ( MAC_CRSDV ),
+        .MAC_RXER    ( MAC_RXER ),
+        .CLKC        ( CLK50 ),
+        .MAINXIN     ( MAINXIN ),
+        .FABINT      ( GND_net ),
+        .UART_0_RXD  ( UART_0_RXD ),
+        .MSSHREADY   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY ),
+        .MSSHRESP    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 ),
+        .MAC_RXD     ( MAC_RXD ),
+        .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
+        // Outputs
+        .MAC_TXEN    ( MAC_TXEN_net_0 ),
+        .MAC_MDC     ( MAC_MDC_net_0 ),
+        .GLC         ( Phy_RMII_CLK_net_0 ),
+        .FAB_CLK     ( MSS_CORE2_0_FAB_CLK ),
+        .M2F_RESET_N ( MSS_CORE2_0_M2F_RESET_N ),
+        .UART_0_TXD  ( UART_0_TXD_net_0 ),
+        .MSSHWRITE   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE ),
+        .MSSHLOCK    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK ),
+        .MAC_TXD     ( MAC_TXD_net_0 ),
+        .MSSHADDR    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR ),
+        .MSSHTRANS   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS ),
+        .MSSHSIZE    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE ),
+        .MSSHWDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWDATA ),
+        // Inouts
+        .MAC_MDIO    ( MAC_MDIO ) 
+        );
+
+//--------psram_cr
+psram_cr psram_cr_0(
+        // Inputs
+        .HSEL      ( CoreAHBLite_0_AHBmslave5_HSELx ),
+        .HWRITE    ( CoreAHBLite_0_AHBmslave5_HWRITE ),
+        .HMASTLOCK ( CoreAHBLite_0_AHBmslave5_HMASTLOCK ),
+        .HREADY    ( CoreAHBLite_0_AHBmslave5_HREADY ),
+        .HRESETn   ( MSS_CORE2_0_M2F_RESET_N ),
+        .HCLK      ( MSS_CORE2_0_FAB_CLK ),
+        .HADDR     ( CoreAHBLite_0_AHBmslave5_HADDR ),
+        .HWDATA    ( CoreAHBLite_0_AHBmslave5_HWDATA ),
+        .HSIZE     ( CoreAHBLite_0_AHBmslave5_HSIZE ),
+        .HBURST    ( CoreAHBLite_0_AHBmslave5_HBURST ),
+        .HPROT     ( CoreAHBLite_0_AHBmslave5_HPROT ),
+        .HTRANS    ( CoreAHBLite_0_AHBmslave5_HTRANS ),
+        // Outputs
+        .HREADYOUT ( CoreAHBLite_0_AHBmslave5_HREADYOUT ),
+        .ncs0      ( ncs0 ),
+        .ncs1      ( ncs1 ),
+        .noe0      ( noe0 ),
+        .noe1      ( noe1 ),
+        .nwe       ( nwe ),
+        .HRESP     ( CoreAHBLite_0_AHBmslave5_HRESP ),
+        .HRDATA    ( CoreAHBLite_0_AHBmslave5_HRDATA ),
+        .address   ( psram_address_net_0 ),
+        .nbyte_en  ( nbyte_en ),
+        // Inouts
+        .data      ( psram_data ) 
+        );
+
+
 endmodule

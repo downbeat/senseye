@@ -1,0 +1,72 @@
+FlashPro
+Version: 10.1.3.1
+Release: v10.1 SP3
+
+Software Version: 10.1.3.1
+PDB file
+'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL\
+_fp\TOPLEVEL.pdb' has been loaded successfully.
+DESIGN : TOPLEVEL;  CHECKSUM : EB61;  PDB_VERSION : 1.7
+Driver : 3.0.0 build 1
+programmer '51638' : FlashPro3
+Opened
+'Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/designer/impl1/TOPLEVEL\
+_fp/TOPLEVEL.pro'
+The 'open_project' command succeeded.
+The 'set_programming_file' command succeeded.
+The 'set_device_type' command succeeded.
+The 'set_device_package' command succeeded.
+Info: Adding Flash Memory data from file
+      Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS\
+      _CORE2\MSS_ENVM_0\MSS_ENVM_0.efc.
+Info: Adding FPGA Array data from file
+      Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOP\
+      LEVEL.fdb.
+PDB file
+'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL\
+_fp\TOPLEVEL.pdb' has been loaded successfully.
+DESIGN : TOPLEVEL;  CHECKSUM : 2653;  PDB_VERSION : 1.7
+Warning: One or more programming or configuration files have changed since generation.
+         To view details and update a PDB, you may click on Modify PDB button for the target
+         device.
+         To update a STAPL file, you may reload the file or reload the project.
+The 'update_programming_file' command succeeded.
+The 'set_programming_action' command succeeded.
+Warning: One or more programming or configuration files have changed since generation.
+         To view details and update a PDB, you may click on Modify PDB button for the target
+         device.
+         To update a STAPL file, you may reload the file or reload the project.
+         
+         --------------------------------------------------------------------------------------\
+         -----
+         Audit Status of Programming file 'TOPLEVEL.pdb'
+         --------------------------------------------------------------------------------------\
+         -----
+         The following original file[s] could not be located from the disk and will not be
+         monitored for changes:
+                 'C:\Actelprj\SDRv2_Linux_AHB\Emcraft_Firmware\u-boot.hex'
+         
+         
+         Do you want to Continue Programming? [YES]
+programmer '51638' : Scan Chain...
+Warning: programmer '51638' : Vpump has been selected on programmer AND an externally provided
+         Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer '51638' : Scan Chain PASSED.
+programmer '51638' : Executing action PROGRAM
+programmer '51638' : EXPORT FSN[48] = 01216964405c
+programmer '51638' : Erase ...
+programmer '51638' : Completed erase
+programmer '51638' : Programming FPGA Array
+programmer '51638' : Verifying FPGA Array
+programmer '51638' :         Verifying FPGA Array -- pass
+programmer '51638' : Program System Init and Boot Clients...
+programmer '51638' : Program Embedded Flash Memory Module ALL....
+programmer '51638' : Verify System Init and Boot Clients...
+programmer '51638' : Verify Embedded Flash Memory Module ALL...
+programmer '51638' : Finished: Tue Feb 26 00:21:57 2013 (Elapsed time 00:01:03)
+programmer '51638' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+The 'save_project' command succeeded.

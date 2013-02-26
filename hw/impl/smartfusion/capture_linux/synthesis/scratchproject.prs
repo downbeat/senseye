@@ -1,30 +1,30 @@
-#-- Synopsys, Inc.
-#-- Version E-2010.09A-1
-#-- Project file C:\Actelprj\SDRv2_Linux_AHB\synthesis\scratchproject.prs
+#--  Synopsys, Inc.
+#--  Version F-2012.03M-SP1 
+#--  Project file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\scratchproject.prs
 
 #project files
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/mss_tshell.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/MSS_CORE2/MSS_CORE2.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/ahb.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/cr_int.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/hdl/psram_cr.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
-add_file -verilog -lib COREAHBLITE_LIB "C:/Actelprj/SDRv2_Linux_AHB/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
-add_file -verilog "C:/Actelprj/SDRv2_Linux_AHB/component/work/TOPLEVEL/TOPLEVEL.v"
-add_file -constraint "C:/Actelprj/SDRv2_Linux_AHB/constraint/synthesis.sdc"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/mss_tshell.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/MSS_CORE2/MSS_CORE2.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/ahb.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/cr_int.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/hdl/psram_cr.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/component/work/TOPLEVEL/TOPLEVEL.v"
+add_file -constraint "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/constraint/synthesis.sdc"
 
 
 #implementation: "synthesis"
-impl -add C:\Actelprj\SDRv2_Linux_AHB\synthesis -type fpga
+impl -add Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis -type fpga
 
 #
 #implementation attributes
@@ -50,7 +50,6 @@ set_option -write_vhdl 0
 # Actel 500K
 set_option -run_prop_extract 1
 set_option -maxfan 3000
-set_option -maxfan_hard3 0
 set_option -disable_io_insertion 0
 set_option -retiming 0
 set_option -report_path 0
@@ -77,5 +76,5 @@ set_option -resource_sharing 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/Actelprj/SDRv2_Linux_AHB/synthesis/TOPLEVEL.edn"
+project -result_file "Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/synthesis/TOPLEVEL.edn"
 impl -active "synthesis"

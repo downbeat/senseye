@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\synlog\TOPLEVEL_fpga_mapper.srr</data>
+<title>##### START OF TIMING REPORT #####[</title>
+</report_link>
+<row>
+<data>Clock Name</data>
+<data>Req Freq</data>
+<data>Est Freq</data>
+<data>Slack</data>
+</row>
+<row>
+<data>MSS_CORE2_0.MSS_CCC_0.FAB_CLK</data>
+<data>40.0 MHz</data>
+<data>47.6 MHz</data>
+<data>3.990</data>
+</row>
+<row>
+<data>System</data>
+<data>80.0 MHz</data>
+<data>171.5 MHz</data>
+<data>6.669</data>
+</row>
+</report_table>

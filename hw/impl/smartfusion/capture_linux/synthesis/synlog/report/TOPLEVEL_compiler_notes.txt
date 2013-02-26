@@ -1,0 +1,32 @@
+@N|Running in 64-bit mode
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v":13:0:13:8|Synthesizing module CAHBLTO10
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@N: CL177 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@N: CL177 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":13:0:13:8|Synthesizing module CAHBLTlI1
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v":13:0:13:9|Synthesizing module CAHBLTl0Il
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":13:0:13:9|Synthesizing module CAHBLTOl0l
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":13:0:13:9|Synthesizing module CAHBLTllO0
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":13:0:13:9|Synthesizing module CAHBLTlOl0
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Synthesizing module CoreAHBLite
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":260:7:260:12|Synthesizing module PLLINT
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CORE2.v":5:7:5:15|Synthesizing module MSS_CORE2
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
+@N: CG179 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI
+

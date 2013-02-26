@@ -1,80 +1,43 @@
-#Build: Synplify Pro E-2010.09A-1, Build 006R, Oct  6 2010
-#install: C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1
-#OS:  6.1
-#Hostname: EECS-WIRELESS
+#Build: Synplify Pro F-2012.03M-SP1 , Build 084R, Jun 15 2012
+#install: C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
+#OS: Windows 7 6.2
+#Hostname: WIN-NC2O5989FQA
 
 #Implementation: synthesis
 
-#Fri Sep 14 11:07:55 2012
-
 $ Start of Compile
-#Fri Sep 14 11:07:55 2012
+#Tue Feb 12 20:41:17 2013
 
-Synopsys Verilog Compiler, version comp520rcp1, Build 028R, built Sep 23 2010
-@N|Running in 32-bit mode
-Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
+Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
+@N|Running in 64-bit mode
+Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
 
-@I::"C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\smartfusion.v"
-@I::"C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\vlog\hypermods.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\mss_tshell.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CORE2.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\hdl\psram_cr.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v"
-@I::"C:\Actelprj\SDRv2_Linux_AHB\component\work\TOPLEVEL\TOPLEVEL.v"
+@I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v"
+@I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\umr_capim.v"
+@I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_objects.v"
+@I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_pipes.svh"
+@I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\mss_tshell.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CORE2.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\psram_cr.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v"
+@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\TOPLEVEL\TOPLEVEL.v"
 Verilog syntax check successful!
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\mss_tshell.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CORE2.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v changed - recompiling
-File C:\Actelprj\SDRv2_Linux_AHB\component\work\TOPLEVEL\TOPLEVEL.v changed - recompiling
 Selecting top level module TOPLEVEL
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
-
-@N: CG364 :"C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\smartfusion.v":1133:7:1133:9|Synthesizing module GND
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
-
-@N: CG364 :"C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\smartfusion.v":1814:7:1814:9|Synthesizing module VCC
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
-
-@N: CG364 :"C:\Actel\Libero_v9.1\Synopsys\synplify_E201009A-1\lib\proasic\smartfusion.v":260:7:260:12|Synthesizing module PLLINT
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
-
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CORE2.v":5:7:5:15|Synthesizing module MSS_CORE2
-
-@W: CG775 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Found Component CoreAHBLite in library COREAHBLITE_LIB
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@W: CG775 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Found Component CoreAHBLite in library COREAHBLITE_LIB
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000000000
@@ -114,11 +77,11 @@ Selecting top level module TOPLEVEL
 	CAHBLTl0l=16'b0000000000000000
    Generated name = CAHBLTO_Z1
 
-@W: CG133 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
-@W: CG133 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v":13:0:13:8|Synthesizing module CAHBLTO10
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v":13:0:13:8|Synthesizing module CAHBLTO10
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000000000
@@ -129,8 +92,8 @@ Selecting top level module TOPLEVEL
 	CAHBLTlllI=16'b0000000000000000
    Generated name = CAHBLTO0OI_1_0_0_0_1_0_0
 
-@N: CL177 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@N: CL177 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000100000
@@ -170,9 +133,9 @@ Selecting top level module TOPLEVEL
 	CAHBLTl0l=16'b0000000000000000
    Generated name = CAHBLTO_Z2
 
-@W: CG133 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
-@W: CG133 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000100000
@@ -183,12 +146,12 @@ Selecting top level module TOPLEVEL
 	CAHBLTlllI=16'b0000000000000000
    Generated name = CAHBLTO0OI_1_32_0_0_1_0_0
 
-@N: CL177 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":13:0:13:8|Synthesizing module CAHBLTlI1
+@N: CL177 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":13:0:13:8|Synthesizing module CAHBLTlI1
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v":13:0:13:9|Synthesizing module CAHBLTl0Il
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v":13:0:13:9|Synthesizing module CAHBLTl0Il
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":13:0:13:9|Synthesizing module CAHBLTOl0l
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":13:0:13:9|Synthesizing module CAHBLTOl0l
 
 	MODE_CFG=1'b1
 	CAHBLTl1ll=2'b00
@@ -202,9 +165,9 @@ Selecting top level module TOPLEVEL
 	CAHBLTII1l=3'b010
    Generated name = CAHBLTOl0l_1_0_1_2_3_0_1_0_1_2
 
-@W: CL169 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Pruning Register CAHBLTIl1l 
+@W: CL169 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Pruning register CAHBLTIl1l 
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":13:0:13:9|Synthesizing module CAHBLTllO0
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":13:0:13:9|Synthesizing module CAHBLTllO0
 
 	MODE_CFG=1'b1
 	CAHBLTO0O0=16'b0000000000000000
@@ -214,7 +177,7 @@ Selecting top level module TOPLEVEL
 	CAHBLTOlOI=2'b00
    Generated name = CAHBLTllO0_1_0_0_4294967280s_0_0
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":13:0:13:9|Synthesizing module CAHBLTlOl0
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":13:0:13:9|Synthesizing module CAHBLTlOl0
 
 	MODE_CFG=1'b1
 	CAHBLTOIl0=17'b00000000000000000
@@ -223,7 +186,7 @@ Selecting top level module TOPLEVEL
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CAHBLTlOl0_1_0_32_0_0
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Synthesizing module CoreAHBLite
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Synthesizing module CoreAHBLite
 
 	FAMILY=6'b001111
 	MODE_CFG=1'b1
@@ -300,126 +263,164 @@ Selecting top level module TOPLEVEL
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CoreAHBLite_Z3
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
 
-@N: CG179 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
 
-@N: CG364 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\TOPLEVEL\TOPLEVEL.v":5:7:5:14|Synthesizing module TOPLEVEL
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
 
-@W: CL260 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v":170:0:170:5|Pruning Register bit 1 of nbyte_en[1:0] 
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":17:15:17:19|Input port bits 31 to 10 of HADDR[31:0] are unused
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":260:7:260:12|Synthesizing module PLLINT
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":20:14:20:19|Input port bit 0 of HTRANS[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
 
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":16:23:16:31|Input HMASTLOCK is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":18:21:18:26|Input HBURST is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\hdl\ahb.v":19:14:19:18|Input HPROT is unused
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CORE2.v":5:7:5:15|Synthesizing module MSS_CORE2
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":858:0:858:7|Input port bit 1 of HRESP_S0[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":934:0:934:7|Input port bit 1 of HRESP_S1[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1010:0:1010:7|Input port bit 1 of HRESP_S2[1:0] is unused
+@N: CG179 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1086:0:1086:7|Input port bit 1 of HRESP_S3[1:0] is unused
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1162:0:1162:7|Input port bit 1 of HRESP_S4[1:0] is unused
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1238:0:1238:7|Input port bit 1 of HRESP_S5[1:0] is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1314:0:1314:7|Input port bit 1 of HRESP_S6[1:0] is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1390:0:1390:7|Input port bit 1 of HRESP_S7[1:0] is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":17:15:17:19|Input port bits 31 to 10 of HADDR[31:0] are unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1466:0:1466:7|Input port bit 1 of HRESP_S8[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":20:14:20:19|Input port bit 0 of HTRANS[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1542:0:1542:7|Input port bit 1 of HRESP_S9[1:0] is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":16:23:16:31|Input HMASTLOCK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":18:21:18:26|Input HBURST is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\ahb.v":19:14:19:18|Input HPROT is unused
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1618:0:1618:8|Input port bit 1 of HRESP_S10[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1694:0:1694:8|Input port bit 1 of HRESP_S11[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":858:0:858:7|Input port bit 1 of HRESP_S0[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1770:0:1770:8|Input port bit 1 of HRESP_S12[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":934:0:934:7|Input port bit 1 of HRESP_S1[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1846:0:1846:8|Input port bit 1 of HRESP_S13[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1010:0:1010:7|Input port bit 1 of HRESP_S2[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1922:0:1922:8|Input port bit 1 of HRESP_S14[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1086:0:1086:7|Input port bit 1 of HRESP_S3[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1998:0:1998:8|Input port bit 1 of HRESP_S15[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1162:0:1162:7|Input port bit 1 of HRESP_S4[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":2074:0:2074:8|Input port bit 1 of HRESP_SHG[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1238:0:1238:7|Input port bit 1 of HRESP_S5[1:0] is unused
 
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":751:0:751:8|Input HBURST_M0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":758:0:758:7|Input HPROT_M0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":816:0:816:8|Input HBURST_M1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":823:0:823:7|Input HPROT_M1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":111:0:111:8|Input HWDATA_M0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":173:0:173:8|Input HRDATA_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":175:0:175:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":177:0:177:7|Input HRESP_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":223:0:223:8|Input HRDATA_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":225:0:225:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":227:0:227:7|Input HRESP_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":273:0:273:8|Input HRDATA_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":275:0:275:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":277:0:277:7|Input HRESP_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":323:0:323:8|Input HRDATA_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":325:0:325:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":327:0:327:7|Input HRESP_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":373:0:373:8|Input HRDATA_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":375:0:375:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":377:0:377:7|Input HRESP_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":473:0:473:8|Input HRDATA_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":475:0:475:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":477:0:477:7|Input HRESP_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":523:0:523:8|Input HRDATA_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":525:0:525:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":527:0:527:7|Input HRESP_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":573:0:573:8|Input HRDATA_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":575:0:575:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":577:0:577:7|Input HRESP_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":623:0:623:8|Input HRDATA_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":625:0:625:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":627:0:627:7|Input HRESP_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":673:0:673:9|Input HRDATA_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":675:0:675:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":677:0:677:8|Input HRESP_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":723:0:723:9|Input HRDATA_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":725:0:725:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":727:0:727:8|Input HRESP_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":773:0:773:9|Input HRDATA_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":775:0:775:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":777:0:777:8|Input HRESP_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":823:0:823:9|Input HRDATA_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":825:0:825:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":827:0:827:8|Input HRESP_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":873:0:873:9|Input HRDATA_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":875:0:875:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":877:0:877:8|Input HRESP_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":923:0:923:9|Input HRDATA_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":925:0:925:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":927:0:927:8|Input HRESP_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":973:0:973:9|Input HRDATA_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":975:0:975:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":977:0:977:8|Input HRESP_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":60:0:60:9|Input CAHBLTl0O0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":67:0:67:9|Input CAHBLTO1O0 is unused
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":37:0:37:9|Input port bits 31 to 12 of CAHBLTI0OI[31:0] are unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1314:0:1314:7|Input port bit 1 of HRESP_S6[1:0] is unused
 
-@W: CL247 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":60:0:60:9|Input port bit 0 of CAHBLTI1OI[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1390:0:1390:7|Input port bit 1 of HRESP_S7[1:0] is unused
 
-@N: CL201 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1466:0:1466:7|Input port bit 1 of HRESP_S8[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1542:0:1542:7|Input port bit 1 of HRESP_S9[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1618:0:1618:8|Input port bit 1 of HRESP_S10[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1694:0:1694:8|Input port bit 1 of HRESP_S11[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1770:0:1770:8|Input port bit 1 of HRESP_S12[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1846:0:1846:8|Input port bit 1 of HRESP_S13[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1922:0:1922:8|Input port bit 1 of HRESP_S14[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1998:0:1998:8|Input port bit 1 of HRESP_S15[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":2074:0:2074:8|Input port bit 1 of HRESP_SHG[1:0] is unused
+
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":751:0:751:8|Input HBURST_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":758:0:758:7|Input HPROT_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":816:0:816:8|Input HBURST_M1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":823:0:823:7|Input HPROT_M1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":111:0:111:8|Input HWDATA_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":173:0:173:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":175:0:175:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":177:0:177:7|Input HRESP_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":223:0:223:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":225:0:225:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":227:0:227:7|Input HRESP_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":273:0:273:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":275:0:275:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":277:0:277:7|Input HRESP_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":323:0:323:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":325:0:325:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":327:0:327:7|Input HRESP_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":373:0:373:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":375:0:375:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":377:0:377:7|Input HRESP_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":473:0:473:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":475:0:475:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":477:0:477:7|Input HRESP_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":523:0:523:8|Input HRDATA_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":525:0:525:11|Input HREADYOUT_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":527:0:527:7|Input HRESP_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":573:0:573:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":575:0:575:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":577:0:577:7|Input HRESP_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":623:0:623:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":625:0:625:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":627:0:627:7|Input HRESP_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":673:0:673:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":675:0:675:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":677:0:677:8|Input HRESP_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":723:0:723:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":725:0:725:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":727:0:727:8|Input HRESP_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":773:0:773:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":775:0:775:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":777:0:777:8|Input HRESP_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":823:0:823:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":825:0:825:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":827:0:827:8|Input HRESP_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":873:0:873:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":875:0:875:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":877:0:877:8|Input HRESP_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":923:0:923:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":925:0:925:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":927:0:927:8|Input HRESP_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":973:0:973:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":975:0:975:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":977:0:977:8|Input HRESP_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":60:0:60:9|Input CAHBLTl0O0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":67:0:67:9|Input CAHBLTO1O0 is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":37:0:37:9|Input port bits 31 to 12 of CAHBLTI0OI[31:0] are unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":60:0:60:9|Input port bit 0 of CAHBLTI1OI[1:0] is unused
+
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI
 Extracted state machine for register CAHBLTllOI
 State machine has 8 reachable states with original encodings of:
    000
@@ -430,164 +431,190 @@ State machine has 8 reachable states with original encodings of:
    101
    110
    111
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 16 to 6 of CAHBLTIIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 16 to 6 of CAHBLTIIII[16:0] are unused
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 4 to 0 of CAHBLTIIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 4 to 0 of CAHBLTIIII[16:0] are unused
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 16 to 6 of CAHBLTlIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 16 to 6 of CAHBLTlIII[16:0] are unused
 
-@W: CL246 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 4 to 0 of CAHBLTlIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 4 to 0 of CAHBLTlIII[16:0] are unused
 
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input CAHBLTIIII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input CAHBLTlIII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":229:0:229:8|Input HRDATA_S5 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":231:0:231:11|Input HREADYOUT_S5 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
-@W: CL157 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits - a simulation mismatch is possible 
-@W: CL157 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits - a simulation mismatch is possible 
-@W: CL157 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits - a simulation mismatch is possible 
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
-@W: CL159 :"C:\Actelprj\SDRv2_Linux_AHB\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input CAHBLTIIII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input CAHBLTlIII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":229:0:229:8|Input HRDATA_S5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":231:0:231:11|Input HREADYOUT_S5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
 @END
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Sep 14 11:07:56 2012
+# Tue Feb 12 20:41:19 2013
 
 ###########################################################]
-Synopsys Actel Technology Mapper, Version mapact, Build 023R, Built Sep 29 2010 09:29:00
-Copyright (C) 1994-2010, Synopsys Inc.  All Rights Reserved
-Product Version E-2010.09A-1
-Reading constraint file: C:\Actelprj\SDRv2_Linux_AHB\constraint\synthesis.sdc
-@N: MF249 |Running in 32-bit mode.
-@N: MF258 |Gated clock conversion disabled 
+Premap Report
 
-@W: MO111 :"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
-@W: MO111 :"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
-@W: MO111 :"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Register bit CAHBLTOI0I is always 0, optimizing ...
-@N: BN116 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CAHBLTIO0I of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@N: BN116 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":691:0:691:5|Removing sequential instance CAHBLTIO0l[1:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":335:0:335:9|Removing instance CAHBLTO1I0 of view:COREAHBLITE_LIB.CAHBLTlI1_CAHBLTO1I0_CAHBLTO1I0(verilog) because there are no references to its outputs 
-@N: BN116 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0I0l.CAHBLTIOl0.CAHBLTl11l[15:0] of view:PrimLib.dffre(prim) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":18889:0:18889:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTO0I0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":18711:0:18711:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTllI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":18533:0:18533:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":18355:0:18355:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTOlI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":18177:0:18177:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTlII0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17999:0:17999:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIII0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17821:0:17821:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTOII0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17643:0:17643:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTlOI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17465:0:17465:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIOI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17287:0:17287:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTOOI0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":17109:0:17109:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTl1O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16753:0:16753:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTO1O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16575:0:16575:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTl0O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16397:0:16397:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16219:0:16219:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTO0O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@N: BN115 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16041:0:16041:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTllO0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTllO0l(verilog) because there are no references to its outputs 
-@W: BN132 :"c:\actelprj\sdrv2_linux_ahb\hdl\cr_int.v":170:0:170:5|Removing sequential instance psram_cr_0.cr_int_i0.ncs0,  because it is equivalent to instance psram_cr_0.cr_int_i0.nbyte_en_1[0]
+Synopsys Actel Technology Pre-mapping, Version mapact, Build 729R, Built Jun 20 2012 09:47:40
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03M-SP1 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+Reading constraint file: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\constraint\synthesis.sdc
+@L: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@N: MF547 |Generated clock conversion disabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@W: BN132 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+
+
+Clock Summary
+**************
+
+Start                             Requested     Requested     Clock        Clock             
+Clock                             Frequency     Period        Type         Group             
+---------------------------------------------------------------------------------------------
+System                            1.0 MHz       1000.000      system       system_clkgroup   
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      25.000        declared     default_clkgroup_0
+=============================================================================================
+
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
+
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 110MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 12 20:41:21 2013
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Actel Technology Mapper, Version mapact, Build 729R, Built Jun 20 2012 09:47:40
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03M-SP1 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@N: MF547 |Generated clock conversion disabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+
+
+Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 107MB)
+
+@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|Tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Register bit CAHBLTOI0I is always 0, optimizing ...
+@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CAHBLTIO0I of view:PrimLib.dffre(prim) in hierarchy view:COREAHBLITE_LIB.CAHBLTO0OI_1_0_0_0_1_0_0(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":691:0:691:5|Removing sequential instance CAHBLTIO0l[1:0] of view:PrimLib.dffre(prim) in hierarchy view:COREAHBLITE_LIB.CAHBLTllO0_1_0_0_4294967280s_0_0(verilog) because there are no references to its outputs 
+@N: BN115 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":335:0:335:9|Removing instance CAHBLTO1I0 of view:COREAHBLITE_LIB.CAHBLTlI1_CAHBLTO1I0(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0I0l.CAHBLTIOl0.CAHBLTl11l[15:0] of view:PrimLib.dffre(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN115 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16397:0:16397:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTI0O0l(verilog) because there are no references to its outputs 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
-@W:"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":77:40:77:47|Net MSS_CORE2_0.MSS_ADLIB_INST_FCLK appears to be a clock source which was not identfied. Assuming default frequency. 
-@W:"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":77:40:77:47|Net MSS_CORE2_0.MSS_ADLIB_INST_MACCLKCCC appears to be a clock source which was not identfied. Assuming default frequency. 
-Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 59MB peak: 61MB)
 
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[31] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[30] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[29] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[28] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[27] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[26] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[25] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[24] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[23] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[22] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[21] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[20] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[4] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOO0I[2] is always 0, optimizing ...
-Encoding state machine COREAHBLITE_LIB.CAHBLTlI1_CAHBLTO1I0(verilog)-CAHBLTllOI[7:0]
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 108MB)
+
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOO0I[2] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[31] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[30] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[29] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[28] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[27] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[26] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[25] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[24] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[23] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[22] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[21] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[20] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[4] is always 0, optimizing ...
+Encoding state machine CAHBLTllOI[7:0] (netlist:statemachine)
 original code -> new code
    000 -> 00000001
    001 -> 00000010
@@ -597,59 +624,64 @@ original code -> new code
    101 -> 00100000
    110 -> 01000000
    111 -> 10000000
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":314:0:314:8|Register bit CAHBLTllOI[1] is always 0, optimizing ...
-@N:"c:\actelprj\sdrv2_linux_ahb\hdl\cr_int.v":116:0:116:5|Found counter in view:work.cr_int(verilog) inst ac_counter[3:0]
-@N:"c:\actelprj\sdrv2_linux_ahb\hdl\cr_int.v":91:0:91:5|Found counter in view:work.cr_int(verilog) inst op_counter[3:0]
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[16] is always 0, optimizing ...
-@W: MO161 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1610:0:1610:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIlIl is always 0, optimizing ...
-Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 61MB peak: 61MB)
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":314:0:314:8|Register bit CAHBLTllOI[1] is always 0, optimizing ...
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":116:0:116:5|Found counter in view:work.cr_int(verilog) inst ac_counter[3:0]
+@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":91:0:91:5|Found counter in view:work.cr_int(verilog) inst op_counter[3:0]
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[16] is always 0, optimizing ...
+@W: MO160 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1610:0:1610:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIlIl is always 0, optimizing ...
 
-@N: BN116 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[11] of view:PrimLib.dffr(prim) because there are no references to its outputs 
-@A: BN291 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Boundary register CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[11] has been packed into a complex cell. To disable this register packing, set syn_keep=1 on the net between the register and the complex cell. 
-@N: BN116 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[10] of view:PrimLib.dffr(prim) because there are no references to its outputs 
-@A: BN291 :"c:\actelprj\sdrv2_linux_ahb\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Boundary register CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[10] has been packed into a complex cell. To disable this register packing, set syn_keep=1 on the net between the register and the complex cell. 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 60MB peak: 61MB)
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 108MB)
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 61MB)
+@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[11] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[10] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 108MB)
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 108MB)
 
-Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
 
-Finished technology mapping (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 108MB)
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 108MB)
+
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 108MB)
+
+
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 108MB)
+
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_789 
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 112MB)
 
 
 Added 0 Buffers
 Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
-Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 61MB peak: 62MB)
 
-Writing Analyst data base C:\Actelprj\SDRv2_Linux_AHB\synthesis\TOPLEVEL.srm
-Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 60MB peak: 62MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 112MB)
+
+Writing Analyst data base Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.srm
+
+Finished Writing Netlist Databases (Time elapsed 0h:00m:01s; Memory used current: 110MB peak: 112MB)
 
 Writing EDIF Netlist and constraint files
-E-2010.09A-1
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:02s; Memory used current: 61MB peak: 62MB)
+F-2012.03M-SP1 
 
-@W: MT246 :"c:\actelprj\sdrv2_linux_ahb\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
-@W: MT420 |Found inferred clock MSS_CORE2|MSS_ADLIB_INST_EMCCLK_inferred_clock with period 12.50ns. A user-defined clock should be declared on object "n:MSS_CORE2_0.MSS_ADLIB_INST_EMCCLK"
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 112MB)
 
-@W: MT420 |Found inferred clock MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_MACCLKCCC_inferred_clock with period 12.50ns. A user-defined clock should be declared on object "n:MSS_CORE2_0.MSS_ADLIB_INST_MACCLKCCC"
-
-@W: MT420 |Found inferred clock MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock with period 12.50ns. A user-defined clock should be declared on object "n:MSS_CORE2_0.MSS_ADLIB_INST_FCLK"
-
+@W: MT246 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 Found clock MSS_CORE2_0.MSS_CCC_0.FAB_CLK with period 25.00ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Sep 14 11:07:59 2012
+# Timing Report written on Tue Feb 12 20:41:23 2013
 #
 
 
@@ -660,11 +692,11 @@ Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
-Constraint File(s):    C:\Actelprj\SDRv2_Linux_AHB\constraint\synthesis.sdc
+Constraint File(s):    Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\constraint\synthesis.sdc
                        
-@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
-@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
 
 
 
@@ -672,14 +704,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 3.834
+Worst slack in design: 3.990
 
-                                                                       Requested     Estimated     Requested     Estimated               Clock        Clock              
-Starting Clock                                                         Frequency     Frequency     Period        Period        Slack     Type         Group              
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK                                          40.0 MHz      47.2 MHz      25.000        21.166        3.834     declared     default_clkgroup_0 
-MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock     80.0 MHz      NA            12.500        NA            NA        inferred     Inferred_clkgroup_1
-=========================================================================================================================================================================
+                                  Requested     Estimated     Requested     Estimated               Clock        Clock             
+Starting Clock                    Frequency     Frequency     Period        Period        Slack     Type         Group             
+-----------------------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      47.6 MHz      25.000        21.010        3.990     declared     default_clkgroup_0
+System                            80.0 MHz      171.5 MHz     12.500        5.831         6.669     system       system_clkgroup   
+===================================================================================================================================
 
 
 
@@ -688,14 +720,15 @@ MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock     80.0 MHz 
 Clock Relationships
 *******************
 
-Clocks                                                                                                                                  |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                                                            Ending                                                              |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK                                       MSS_CORE2_0.MSS_CCC_0.FAB_CLK                                       |  25.000      3.834  |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK                                       MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock  MSS_CORE2_0.MSS_CCC_0.FAB_CLK                                       |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-==============================================================================================================================================================================================================================
+Clocks                                                        |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                       Ending                         |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+System                         System                         |  12.500      6.669   |  No paths    -      |  No paths    -      |  No paths    -    
+System                         MSS_CORE2_0.MSS_CCC_0.FAB_CLK  |  25.000      6.653   |  No paths    -      |  No paths    -      |  No paths    -    
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK  System                         |  25.000      16.735  |  No paths    -      |  No paths    -      |  No paths    -    
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK  MSS_CORE2_0.MSS_CCC_0.FAB_CLK  |  25.000      3.990   |  No paths    -      |  No paths    -      |  No paths    -    
+=====================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -704,7 +737,7 @@ MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC|MSS_ADLIB_INST_FCLK_inferred_clock  MSS_CORE2_0.
 Interface Information 
 *********************
 
-		No IO constraint found 
+No IO constraint found
 
 
 
@@ -721,16 +754,16 @@ Starting Points with Worst Slack
 Instance                                                 Reference                         Type         Pin     Net                Time        Slack
                                                          Clock                                                                                      
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1C0       Q       CAHBLTOI0I         0.737       3.834
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       5.831
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[19]     0.737       6.196
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I         MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1C0       Q       CAHBLTIO0I         0.737       6.340
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[17]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[17]     0.737       6.931
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[16]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[16]     0.737       7.206
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[1]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTl00I[1]      0.737       7.979
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[0]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTl00I[0]      0.737       8.118
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[3]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTl00I[3]      0.737       8.118
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[2]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTl00I[2]      0.737       8.257
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1C0       Q       CAHBLTOI0I         0.737       3.990
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       5.987
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[19]     0.580       6.371
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I         MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1C0       Q       CAHBLTIO0I         0.737       6.557
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[16]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[16]     0.737       7.006
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[10]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[10]     0.737       7.065
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[12]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[12]     0.737       7.107
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[7]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[7]      0.580       7.108
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[1]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[1]      0.580       7.200
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[13]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[13]     0.737       7.204
 ====================================================================================================================================================
 
 
@@ -741,16 +774,16 @@ Ending Points with Worst Slack
 Instance                         Reference                         Type     Pin     Net                  Time         Slack
                                  Clock                                                                                     
 ---------------------------------------------------------------------------------------------------------------------------
-psram_cr_0.ahb0.haddr_reg[0]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[0]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[1]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[1]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[2]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[2]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[3]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[3]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[4]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[4]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[5]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[5]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[6]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[6]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[7]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[7]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[8]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[8]     24.461       3.834
-psram_cr_0.ahb0.haddr_reg[9]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[9]     24.461       3.834
+psram_cr_0.ahb0.haddr_reg[0]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[0]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[1]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[1]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[2]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[2]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[3]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[3]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[4]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[4]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[5]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[5]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[6]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[6]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[7]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[7]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[8]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[8]     24.461       3.990
+psram_cr_0.ahb0.haddr_reg[9]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[9]     24.461       3.990
 ===========================================================================================================================
 
 
@@ -765,9 +798,9 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         24.461
 
-    - Propagation time:                      20.627
+    - Propagation time:                      20.471
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     3.834
+    = Slack (critical) :                     3.990
 
     Number of logic level(s):                11
     Starting point:                          CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I / Q
@@ -780,42 +813,156 @@ Name                                                                            
 --------------------------------------------------------------------------------------------------------------------------------------------
 CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I                                DFN1C0     Q        Out     0.737     0.737       -         
 CAHBLTOI0I                                                                      Net        -        -       2.494     -           25        
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UD[18]                    MX2        S        In      -         3.231       -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UD[18]                    MX2        Y        Out     0.396     3.627       -         
-CAHBLTI0ll[18]                                                                  Net        -        -       1.776     -           11        
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A      A        In      -         5.403       -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A      Y        Out     0.627     6.031       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UL[18]                    MX2        S        In      -         3.231       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UL[18]                    MX2        Y        Out     0.396     3.627       -         
+CAHBLTI0ll[18]                                                                  Net        -        -       1.526     -           7         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A      A        In      -         5.153       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A      Y        Out     0.627     5.781       -         
 N_79                                                                            Net        -        -       1.423     -           6         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTN12[16]                   NOR2A      A        In      -         7.454       -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTN12[16]                   NOR2A      Y        Out     0.627     8.082       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTNH3[16]                   NOR2B      B        In      -         7.204       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTNH3[16]                   NOR2B      Y        Out     0.627     7.831       -         
 CAHBLTO1lII                                                                     Net        -        -       1.639     -           8         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            NOR2A      A        In      -         9.720       -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            NOR2A      Y        Out     0.627     10.348      -         
-N_92                                                                            Net        -        -       0.386     -           2         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL2[2]         AOI1       A        In      -         10.734      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL2[2]         AOI1       Y        Out     0.911     11.644      -         
-N_102                                                                           Net        -        -       0.386     -           2         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP85[2]         OR2B       B        In      -         12.030      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP85[2]         OR2B       Y        Out     0.516     12.546      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A       A        In      -         9.470       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A       Y        Out     0.466     9.936       -         
+N_94                                                                            Net        -        -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       B        In      -         10.322      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       Y        Out     0.900     11.222      -         
+N_104                                                                           Net        -        -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       B        In      -         11.608      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       Y        Out     0.516     12.124      -         
 CAHBLTOO0l[1]                                                                   Net        -        -       0.806     -           3         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB5[6]         OR2A       A        In      -         13.353      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB5[6]         OR2A       Y        Out     0.466     13.818      -         
-CAHBLTI1Il6                                                                     Net        -        -       1.994     -           12        
-psram_cr_0.ahb0.hready_reg_RNIRPPRC                                             NOR3B      C        In      -         15.812      -         
-psram_cr_0.ahb0.hready_reg_RNIRPPRC                                             NOR3B      Y        Out     0.360     16.172      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      A        In      -         12.930      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      Y        Out     0.627     13.558      -         
+CAHBLTI1Il6                                                                     Net        -        -       1.669     -           9         
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR2B      B        In      -         15.226      -         
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR2B      Y        Out     0.627     15.854      -         
 hwrite_reg4                                                                     Net        -        -       0.386     -           2         
-psram_cr_0.ahb0.fsm_RNII42VC                                                    OR2A       A        In      -         16.557      -         
-psram_cr_0.ahb0.fsm_RNII42VC                                                    OR2A       Y        Out     0.466     17.023      -         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      A        In      -         16.239      -         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      Y        Out     0.627     16.867      -         
 fsm_0_sqmuxa                                                                    Net        -        -       1.994     -           12        
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         19.017      -         
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     19.496      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         18.860      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     19.340      -         
 N_169                                                                           Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         19.818      -         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     20.306      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         19.661      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     20.150      -         
 haddr_reg_RNO[0]                                                                Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         20.627      -         
+psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         20.471      -         
 ============================================================================================================================================
-Total path delay (propagation time + setup) of 21.166 is 7.240(34.2%) logic and 13.926(65.8%) route.
+Total path delay (propagation time + setup) of 21.010 is 7.659(36.5%) logic and 13.351(63.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                   Starting                                                                                    Arrival           
+Instance                           Reference     Type           Pin              Net                                           Time        Slack 
+                                   Clock                                                                                                         
+-------------------------------------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]     0.000       6.653 
+MSS_CORE2_0.MSS_CCC_0.I_XTLOSC     System        MSS_XTLOSC     CLKOUT           N_CLKA_XTLOSC                                 0.000       6.669 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[19]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19]     0.000       6.905 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHTRANS[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS[1]     0.000       7.287 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[16]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[16]     0.000       7.671 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[17]     0.000       7.963 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHLOCK         MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK         0.000       10.631
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        EMCCLK           MSS_ADLIB_INST_EMCCLK                         0.000       12.179
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        M2FRESETn        MSS_ADLIB_INST_M2FRESETn                      0.000       13.307
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHSIZE[1]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1]      0.000       16.153
+=================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                 Starting                                            Required          
+Instance                         Reference     Type     Pin     Net                  Time         Slack
+                                 Clock                                                                 
+-------------------------------------------------------------------------------------------------------
+psram_cr_0.ahb0.haddr_reg[0]     System        DFN1     D       haddr_reg_RNO[0]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[1]     System        DFN1     D       haddr_reg_RNO[1]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[2]     System        DFN1     D       haddr_reg_RNO[2]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[3]     System        DFN1     D       haddr_reg_RNO[3]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[4]     System        DFN1     D       haddr_reg_RNO[4]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[5]     System        DFN1     D       haddr_reg_RNO[5]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[6]     System        DFN1     D       haddr_reg_RNO[6]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[7]     System        DFN1     D       haddr_reg_RNO[7]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[8]     System        DFN1     D       haddr_reg_RNO[8]     24.461       6.653
+psram_cr_0.ahb0.haddr_reg[9]     System        DFN1     D       haddr_reg_RNO[9]     24.461       6.653
+=======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      25.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         24.461
+
+    - Propagation time:                      17.808
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 6.653
+
+    Number of logic level(s):                11
+    Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / MSSHADDR[18]
+    Ending point:                            psram_cr_0.ahb0.haddr_reg[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            MSS_CORE2_0.MSS_CCC_0.FAB_CLK [rising] on pin CLK
+
+Instance / Net                                                                              Pin              Pin               Arrival     No. of    
+Name                                                                            Type        Name             Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                                                      MSS_AHB     MSSHADDR[18]     Out     0.000     0.000       -         
+MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]                                       Net         -                -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UL[18]                    MX2         A                In      -         0.386       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNIM7UL[18]                    MX2         Y                Out     0.579     0.965       -         
+CAHBLTI0ll[18]                                                                  Net         -                -       1.526     -           7         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A       A                In      -         2.490       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTO0Il.CAHBLTIO0_22_sqmuxa_0_a2_0     NOR2A       Y                Out     0.627     3.118       -         
+N_79                                                                            Net         -                -       1.423     -           6         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTNH3[16]                   NOR2B       B                In      -         4.541       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI_RNINTNH3[16]                   NOR2B       Y                Out     0.627     5.169       -         
+CAHBLTO1lII                                                                     Net         -                -       1.639     -           8         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A        A                In      -         6.808       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A        Y                Out     0.466     7.273       -         
+N_94                                                                            Net         -                -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C        B                In      -         7.659       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C        Y                Out     0.900     8.559       -         
+N_104                                                                           Net         -                -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B        B                In      -         8.945       -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B        Y                Out     0.516     9.461       -         
+CAHBLTOO0l[1]                                                                   Net         -                -       0.806     -           3         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A       A                In      -         10.268      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A       Y                Out     0.627     10.895      -         
+CAHBLTI1Il6                                                                     Net         -                -       1.669     -           9         
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR2B       B                In      -         12.563      -         
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR2B       Y                Out     0.627     13.191      -         
+hwrite_reg4                                                                     Net         -                -       0.386     -           2         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A       A                In      -         13.577      -         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A       Y                Out     0.627     14.204      -         
+fsm_0_sqmuxa                                                                    Net         -                -       1.994     -           12        
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2         S                In      -         16.198      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2         Y                Out     0.480     16.677      -         
+N_169                                                                           Net         -                -       0.322     -           1         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B       A                In      -         16.999      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B       Y                Out     0.488     17.487      -         
+haddr_reg_RNO[0]                                                                Net         -                -       0.322     -           1         
+psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1        D                In      -         17.808      -         
+=====================================================================================================================================================
+Total path delay (propagation time + setup) of 18.347 is 7.104(38.7%) logic and 11.243(61.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -827,51 +974,53 @@ Target Part: A2F500M3G_FBGA484_Std
 Report for cell TOPLEVEL.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     2      1.0        2.0
-              AO1A     2      1.0        2.0
-              AO1B     2      1.0        2.0
-              AO1C    18      1.0       18.0
-              AOI1     4      1.0        4.0
-             AOI1B    15      1.0       15.0
-               AX1     1      1.0        1.0
+               AO1    42      1.0       42.0
+              AO1A    13      1.0       13.0
+              AO1B     1      1.0        1.0
+              AOI1     2      1.0        2.0
+              AX1A     2      1.0        2.0
               AX1E     1      1.0        1.0
+            CLKINT     1      0.0        0.0
                GND    13      0.0        0.0
+           MSS_AHB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-               MX2   180      1.0      180.0
-              MX2C    28      1.0       28.0
-             NAND2     2      1.0        2.0
-              NOR2    35      1.0       35.0
-             NOR2A    66      1.0       66.0
-             NOR2B   237      1.0      237.0
+               MX2   128      1.0      128.0
+              MX2B    80      1.0       80.0
+              MX2C     1      1.0        1.0
+              NOR2    21      1.0       21.0
+             NOR2A    17      1.0       17.0
+             NOR2B   333      1.0      333.0
               NOR3     1      1.0        1.0
-             NOR3A    23      1.0       23.0
-             NOR3B    18      1.0       18.0
-             NOR3C    13      1.0       13.0
-               OA1     1      1.0        1.0
-              OA1A    17      1.0       17.0
-              OA1C     1      1.0        1.0
-              OAI1     4      1.0        4.0
-               OR2    14      1.0       14.0
-              OR2A    37      1.0       37.0
-              OR2B    53      1.0       53.0
-               OR3     2      1.0        2.0
-              OR3A     3      1.0        3.0
-              OR3B     3      1.0        3.0
-              OR3C    26      1.0       26.0
+             NOR3A    17      1.0       17.0
+             NOR3B    28      1.0       28.0
+             NOR3C    30      1.0       30.0
+               OA1     2      1.0        2.0
+              OA1A     1      1.0        1.0
+              OA1B     2      1.0        2.0
+              OA1C     3      1.0        3.0
+              OAI1     2      1.0        2.0
+               OR2     6      1.0        6.0
+              OR2A    12      1.0       12.0
+              OR2B     7      1.0        7.0
+               OR3    20      1.0       20.0
+              OR3A     2      1.0        2.0
+              OR3B    32      1.0       32.0
             PLLINT     1      0.0        0.0
                VCC    13      0.0        0.0
-              XA1B     4      1.0        4.0
+              XA1B     1      1.0        1.0
+             XNOR2     1      1.0        1.0
                XO1     1      1.0        1.0
+              XOR2     1      1.0        1.0
 
 
               DFN1   186      1.0      186.0
             DFN1C0     9      1.0        9.0
+          DFN1E0C0    33      1.0       33.0
             DFN1E1    36      1.0       36.0
-          DFN1E1C0    57      1.0       57.0
+          DFN1E1C0    24      1.0       24.0
             DFN1P0     1      1.0        1.0
-           MSS_AHB     1      0.0        0.0
                    -----          ----------
-             TOTAL  1132              1103.0
+             TOTAL  1129              1099.0
 
 
   IO Cell usage:
@@ -887,14 +1036,17 @@ Report for cell TOPLEVEL.verilog
              TOTAL    73
 
 
-Core Cells         : 1103 of 11520 (10%)
+Core Cells         : 1099 of 11520 (10%)
 IO Cells           : 73
 
   RAM/ROM Usage Summary
 Block Rams : 0 of 24 (0%)
 
 Mapper successful!
-Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Fri Sep 14 11:07:59 2012
+
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 41MB peak: 112MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 12 20:41:23 2013
 
 ###########################################################]

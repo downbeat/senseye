@@ -1,0 +1,43 @@
+Synopsys Actel Technology Pre-mapping, Version mapact, Build 729R, Built Jun 20 2012 09:47:40
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version F-2012.03M-SP1 
+
+Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+Reading constraint file: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\constraint\synthesis.sdc
+@L: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF258 |Gated clock conversion disabled 
+@N: MF547 |Generated clock conversion disabled 
+
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@W: BN132 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+
+
+Clock Summary
+**************
+
+Start                             Requested     Requested     Clock        Clock             
+Clock                             Frequency     Period        Type         Group             
+---------------------------------------------------------------------------------------------
+System                            1.0 MHz       1000.000      system       system_clkgroup   
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      25.000        declared     default_clkgroup_0
+=============================================================================================
+
+
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
+
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 110MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 12 20:41:21 2013
+
+###########################################################]

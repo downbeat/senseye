@@ -2,7 +2,7 @@
 
 # Clocks
 
-create_clock -period 25.000000 -waveform {0.000000 12.500000} MSS_CORE2_0/MSS_CCC_0/I_MSSCCC:GLB
+create_clock -name {MSS_CORE2_0.MSS_CCC_0.FAB_CLK} -period 25.000000 -waveform {0.000000 12.500000} MSS_CORE2_0/MSS_CCC_0/I_MSSCCC:GLB
 
 # False Paths Between Clocks
 

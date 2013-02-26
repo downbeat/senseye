@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360612688"
+TIME="1360719636"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360719636"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -56,14 +56,14 @@ IS_INCLUDED="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\scripts\wave_user.do,do"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717846"
 SIZE="912"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="28650"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -71,7 +71,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717847"
 SIZE="7717"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -79,7 +79,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="1299"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -87,7 +87,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="6699"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -95,7 +95,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="4604"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -103,7 +103,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="25186"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -111,7 +111,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="116411"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -119,7 +119,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="3648"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -127,7 +127,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v,hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717848"
 SIZE="4540"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -135,7 +135,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717846"
 SIZE="41996"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
@@ -257,6 +257,16 @@ TIME="1360612688"
 SIZE="257"
 PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1360717852"
+SIZE="2400"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1360717871"
+SIZE="413"
+ENDFILE
 VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
 STATE="utd"
 TIME="1360612688"
@@ -321,20 +331,20 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1360612688"
+TIME="1360719637"
 SIZE="1937"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360612688"
-SIZE="8617"
+TIME="1360719645"
+SIZE="8710"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1360612688"
-SIZE="4837"
+TIME="1360719634"
+SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
@@ -344,8 +354,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1360612688"
-SIZE="68354"
+TIME="1360719637"
+SIZE="29575"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -356,18 +366,58 @@ SIZE="8624"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1360717615"
-SIZE="1433088"
+TIME="1361856025"
+SIZE="1428480"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1360612688"
-SIZE="123965"
+TIME="1361856024"
+SIZE="121951"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
+STATE="utd"
+TIME="1361856025"
+SIZE="1282"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
+STATE="utd"
+TIME="1360719693"
+SIZE="30044"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
+STATE="utd"
+TIME="1361856120"
+SIZE="208896"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
+STATE="utd"
+TIME="1361856053"
+SIZE="208896"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1360612688"
-SIZE="1954"
+TIME="1361856120"
+SIZE="2083"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1361856004"
+SIZE="2440"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1361856026"
+SIZE="978"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1361856009"
+SIZE="1221"
+ENDFILE
+VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
+STATE="utd"
+TIME="1360719522"
+SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -401,7 +451,7 @@ SIZE="1231"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717846"
 SIZE="1462"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
@@ -413,25 +463,25 @@ PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\coreahblite_usertb_ahb_master0.bfm,sim"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717847"
 SIZE="10597"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
 VALUE "<project>\simulation\coreahblite_usertb_ahb_master1.bfm,sim"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717847"
 SIZE="10540"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
 VALUE "<project>\simulation\coreahblite_usertb_include.bfm,sim"
 STATE="utd"
-TIME="1360612688"
+TIME="1360717847"
 SIZE="10049"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1360612688"
+TIME="1360719637"
 SIZE="629"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -449,8 +499,13 @@ PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1360612688"
-SIZE="875985"
+TIME="1360719683"
+SIZE="902403"
+ENDFILE
+VALUE "<project>\synthesis\TOPLEVEL.so,so"
+STATE="utd"
+TIME="1360719683"
+SIZE="256"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
 STATE="utd"
@@ -459,13 +514,13 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1360612688"
-SIZE="408"
+TIME="1360719683"
+SIZE="446"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1360717621"
-SIZE="4318"
+TIME="1360719685"
+SIZE="4433"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -741,6 +796,10 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
+SmartDesign;TOPLEVEL
+SmartDesign;MSS_CORE2
+Reports;Reports
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AHB::work","hdl\ahb.v","FALSE","FALSE"
@@ -752,6 +811,23 @@ ENDLIST
 LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "cr_int::work","hdl\cr_int.v","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "HAL::work","","FALSE","FALSE"
+SUBBLOCK "MSS_Ethernet_MAC_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_GPIO_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_IAP_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_PDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_RTC_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_Timer_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_UART_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_Watchdog_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "HAL::work","","FALSE","FALSE"
 ENDLIST
 LIST "INBUF_LVDS_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
@@ -780,7 +856,25 @@ LIST "MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC::work","component\work\MSS_CORE2\MSS_CCC_0
 SUBBLOCK "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 SUBBLOCK "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "MSS_Ethernet_MAC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_GPIO_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_IAP_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_LPXTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_PDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_RTC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_UART_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_Watchdog_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
@@ -791,6 +885,8 @@ ENDLIST
 LIST "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
 SUBBLOCK "AHB::work","hdl\ahb.v","FALSE","FALSE"
 SUBBLOCK "cr_int::work","hdl\cr_int.v","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
 ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"

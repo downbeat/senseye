@@ -2,5 +2,5 @@
 <SynplifyOutput>
 	<result>Success</result>
 	<design>TOPLEVEL</design>
-	<target_edif>C:\Actelprj\SDRv2_Linux_AHB\synthesis\TOPLEVEL.edn</target_edif>
+	<target_edif>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.edn</target_edif>
 </SynplifyOutput>

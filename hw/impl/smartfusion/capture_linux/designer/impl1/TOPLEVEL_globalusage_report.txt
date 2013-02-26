@@ -1,0 +1,25 @@
+********************************************************************
+                            Global Usage Report
+********************************************************************
+  
+Product: Designer
+Release: v10.1 SP3
+Version: 10.1.3.1
+Date: Tue Feb 26 00:20:03 2013
+Design Name: TOPLEVEL  Family: SmartFusion  Die: A2F500M3G  Package: 484 FBGA
+Design State: Post-Layout
+
+The following nets have been routed to a chip global resource:
+
+    Fanout            Name
+    ----------------------
+    290               Net   : FAB_CLK
+                      Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE2
+    259               Net   : MSS_CORE2_0_M2F_RESET_N
+                      Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC/U_GL
+    1                 Net   : Phy_RMII_CLK_c
+                      Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE3
+
+
+
+

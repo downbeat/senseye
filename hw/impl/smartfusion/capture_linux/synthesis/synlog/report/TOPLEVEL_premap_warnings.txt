@@ -1,0 +1,1 @@
+@W: BN132 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
