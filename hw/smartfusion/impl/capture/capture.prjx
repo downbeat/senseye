@@ -17,7 +17,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture"
+KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -36,13 +36,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322059"
+TIME="1361861209"
 SIZE="945"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v,hdl"
 STATE="utd"
-TIME="1357940463"
+TIME="1361861209"
 SIZE="11243"
 PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -54,101 +54,101 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CCC\2.0.106\MSS_CCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_COM\1.0.200\MSS_COM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_DMA\1.0.101\MSS_DMA.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ENVM\2.3.102\MSS_ENVM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322046"
+TIME="1361861209"
 SIZE="253"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIC\1.0.101\MSS_FIC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322046"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIO\1.0.203\MSS_FIO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322046"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_GPIO\1.0.101\MSS_GPIO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="253"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_INTR\1.0.101\MSS_INTR.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="253"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RESET\1.0.101\MSS_RESET.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="254"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RTC\1.0.100\MSS_RTC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="252"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_TIMER\1.0.100\MSS_TIMER.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="254"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UFROM\1.0.100\MSS_UFROM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="254"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361319176"
+TIME="1361861209"
 SIZE="1863"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360103467"
+TIME="1361861209"
 SIZE="413"
 ENDFILE
 VALUE "<project>\component\work\mss_capture\mss_capture.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361331500"
+TIME="1361862284"
 SIZE="3961"
 ENDFILE
 VALUE "<project>\component\work\mss_capture\mss_capture.pdc,pdc"
 STATE="utd"
-TIME="1361331497"
-SIZE="11111"
+TIME="1361862280"
+SIZE="667"
 PARENT="<project>\component\work\mss_capture\mss_capture.cxf"
 BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
@@ -158,33 +158,33 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture\mss_capture.v,hdl"
 STATE="utd"
-TIME="1361331497"
-SIZE="4855"
+TIME="1361862280"
+SIZE="5153"
 PARENT="<project>\component\work\mss_capture\mss_capture.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1361331497"
+TIME="1361862280"
 SIZE="1617"
 PARENT="<project>\component\work\mss_capture\mss_capture.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\MSS_ACE_0\MSS_ACE_0.log,???"
 STATE="utd"
-TIME="1360367152"
+TIME="1361861209"
 SIZE="31587"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322059"
+TIME="1361861209"
 SIZE="8580"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\mss_capture_MSS.pdc,pdc"
 STATE="utd"
-TIME="1361322041"
+TIME="1361861209"
 SIZE="10148"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -195,34 +195,34 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\mss_capture_MSS.v,hdl"
 STATE="utd"
-TIME="1361322059"
+TIME="1361861209"
 SIZE="16591"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="497"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v,hdl"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="2891"
 PARENT="<project>\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
 STATE="utd"
-TIME="1361322046"
+TIME="1361861209"
 SIZE="15874"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\mss_tshell.v,hdl"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="12226"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -234,7 +234,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\mss_tshell_syn.sdc,sdc"
 STATE="utd"
-TIME="1361322047"
+TIME="1361861209"
 SIZE="200"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -246,153 +246,148 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\mss_capture_MSS\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1361322059"
+TIME="1361861209"
 SIZE="1496"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\designer\impl1\blinker.ide_des,ide_des"
 STATE="utd"
-TIME="1360102088"
+TIME="1361861209"
 SIZE="223"
 ENDFILE
 VALUE "<project>\designer\impl1\MSSINT.ide_des,ide_des"
 STATE="utd"
-TIME="1360105802"
+TIME="1361861209"
 SIZE="222"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.adb,adb"
-STATE="ood"
-TIME="1360721967"
-SIZE="558080"
+STATE="utd"
+TIME="1361572145"
+SIZE="1704448"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.fdb,fdb"
-STATE="ood"
-TIME="1361340834"
-SIZE="98200"
+STATE="utd"
+TIME="1361572144"
+SIZE="108440"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.ide_des,ide_des"
 STATE="utd"
-TIME="1360721967"
+TIME="1361861209"
 SIZE="1151"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_compile_log.rpt,log"
 STATE="utd"
-TIME="1361325370"
-SIZE="36110"
+TIME="1361572092"
+SIZE="37310"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pdb,pdb"
-STATE="ood"
-TIME="1360735416"
-SIZE="94720"
+STATE="utd"
+TIME="1361572167"
+SIZE="117248"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pro,pro"
 STATE="utd"
-TIME="1360735472"
+TIME="1361860667"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\projectData\mss_capture.pdb,pdb"
 STATE="utd"
-TIME="1361345761"
-SIZE="111104"
+TIME="1361862482"
+SIZE="117248"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_MSS.ide_des,ide_des"
 STATE="utd"
-TIME="1360367177"
+TIME="1361861209"
 SIZE="360"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1361325585"
+TIME="1361572125"
 SIZE="2476"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1361340835"
-SIZE="794"
+TIME="1361572145"
+SIZE="954"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1361325589"
+TIME="1361572129"
 SIZE="1230"
 ENDFILE
 VALUE "<project>\designer\impl1\stonyman.ide_des,ide_des"
 STATE="utd"
-TIME="1361318809"
+TIME="1361861209"
 SIZE="224"
 ENDFILE
 VALUE "<project>\designer\impl1\TRIBUFF_MSS.ide_des,ide_des"
 STATE="utd"
-TIME="1361322008"
+TIME="1361861209"
 SIZE="227"
 ENDFILE
 VALUE "<project>\hdl\AdcCap.v,hdl"
 STATE="utd"
-TIME="1360552786"
-SIZE="2563"
-ENDFILE
-VALUE "<project>\hdl\AdcCapStub.v,hdl"
-STATE="utd"
-TIME="1360369118"
-SIZE="1306"
+TIME="1361377156"
+SIZE="2712"
 ENDFILE
 VALUE "<project>\hdl\blinker.v,hdl"
 STATE="utd"
-TIME="1360137686"
+TIME="1361861209"
 SIZE="1017"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1361346017"
-SIZE="25363"
+TIME="1361862230"
+SIZE="47759"
 ENDFILE
 VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 STATE="utd"
-TIME="1357940456"
+TIME="1361861209"
 SIZE="41"
 PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1361331497"
+TIME="1361862280"
 SIZE="598"
 PARENT="<project>\component\work\mss_capture\mss_capture.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
 STATE="utd"
-TIME="1361322045"
+TIME="1361861209"
 SIZE="5460"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\user.bfm,sim"
 STATE="utd"
-TIME="1360103425"
+TIME="1361861209"
 SIZE="670"
 PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.edn,syn_edn"
-STATE="ood"
-TIME="1360721918"
-SIZE="268182"
+STATE="utd"
+TIME="1361572082"
+SIZE="496930"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.so,so"
 STATE="utd"
-TIME="1360721918"
+TIME="1361861209"
 SIZE="256"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_sdc.sdc,sdc"
 STATE="utd"
-TIME="1360721918"
+TIME="1361861209"
 SIZE="550"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_syn.prj,prj"
 STATE="utd"
-TIME="1360721919"
-SIZE="2568"
+TIME="1361860667"
+SIZE="2566"
 ENDFILE
 VALUE "<project>\synthesis\synwork\mss_capture_compiler.so,so"
 STATE="utd"
-TIME="1360367191"
+TIME="1361861209"
 SIZE="159"
 ENDFILE
 ENDLIST
@@ -414,7 +409,10 @@ VALUE "<project>\component\work\mss_capture_MSS\mss_tshell_syn.sdc,sdc"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
+LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\mss_capture.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\mss_capture.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -554,7 +552,10 @@ ENDLIST
 LIST ProjectState5.1
 LIST "mss_capture::work"
 LIST Impl1
+LiberoState=Post_Layout
 ideSTIMULUS=StateSuccess
+ideSYNTHESIS(<project>\synthesis\mss_capture.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\mss_capture.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -589,12 +590,10 @@ LIST OpenedFileList
 SmartDesign;mss_capture
 SmartDesign;mss_capture_MSS
 Reports;Reports
-ACTIVEVIEW;mss_capture
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
-ENDLIST
-LIST "AdcCapStub::work","hdl\AdcCapStub.v","FALSE","FALSE"
 ENDLIST
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST

@@ -1,7 +1,7 @@
 
 Starting:    C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\win64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
-Date:        Wed Feb 20 02:33:36 2013
+Date:        Tue Feb 26 02:05:37 2013
 Version:     F-2012.03M-SP1 
 
 Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log mss_capture_syn.tcl
@@ -16,7 +16,7 @@ Running in Vendor Mode
 
 
 
-log file: "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srr"
+log file: "Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.srr"
 
 
 Running mss_capture_syn|synthesis
@@ -27,11 +27,11 @@ Running Compile Process on mss_capture_syn|synthesis
 
 Running Compile Input on mss_capture_syn|synthesis
 
-Copied Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\synwork\mss_capture_compiler.srs to Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srs
+Copied Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\synwork\mss_capture_compiler.srs to Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.srs
 
 compiler Completed with warnings
 Return Code: 1
-Run Time:0h:00m:02s
+Run Time:0h:00m:03s
 
 
 Job Compile Process completed on mss_capture_syn|synthesis
@@ -51,7 +51,7 @@ Running Map & Optimize on mss_capture_syn|synthesis
 
 fpga_mapper Completed with warnings
 Return Code: 1
-Run Time:0h:00m:03s
+Run Time:0h:00m:04s
 
 
 Job Map completed on mss_capture_syn|synthesis

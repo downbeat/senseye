@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Wed Feb 20 02:33:50 2013 ***************************************************************************
+                          Tue Feb 26 02:05:54 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
-File Name: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb
+File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture.adb
 Design Name: mss_capture  Design State: compile
-Last Saved: Wed Feb 20 02:29:03 2013
+Last Saved: Tue Feb 26 02:02:22 2013
 
 ***** Device Data **************************************************
 
@@ -22,9 +22,9 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Wed Feb 20 02:33:45 2013:
-        Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn
-        Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.pdc
+Source File(s) Imported on Tue Feb 26 02:05:49 2013:
+        Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.edn
+        Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.pdc
 
 
 ***** CAE Variables ************************************************
@@ -51,9 +51,9 @@ Family      : SmartFusion
 Device      : A2F500M3G
 Package     : 484 FBGA
 Source      :
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.edn
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.edn
 
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss\
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss\
 _capture.pdc
 Format      : EDIF
 Topcell     : mss_capture
@@ -435,9 +435,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        39
+  - Logic combining:        26
 
-    Total macros optimized  39
+    Total macros optimized  26
 
 There were 0 error(s) and 345 warning(s) in this design.
 =====================================================================
@@ -459,12 +459,12 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:    690  Total:  11520   (5.99%)
+    Fabric                     Used:    856  Total:  11520   (7.43%)
     Fabric IO (W/ clocks)      Used:     16  Total:    128   (12.50%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:      1  Total:     43   (2.33%)
-    GLOBAL (Chip+Quadrant)     Used:      1  Total:     15   (6.67%)
+    GLOBAL (Chip+Quadrant)     Used:      2  Total:     15   (13.33%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
@@ -478,7 +478,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 1      | 3  (33.33%)*
+    Chip global     | 2      | 3  (66.67%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -490,8 +490,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 610          | 610
-    SEQ     | 80           | 80
+    COMB    | 783          | 783
+    SEQ     | 73           | 73
 
 I/O Function:
 
@@ -523,59 +523,62 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    84      CLK_NET       Net   : FAB_CLK
+    77      CLK_NET       Net   : FAB_CLK
                           Driver: mss_capture_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    51      INT_NET       Net   : mss_capture_MSS_0_M2F_RESET_N
+    71      INT_NET       Net   : mss_capture_MSS_0_M2F_RESET_N
                           Driver: mss_capture_MSS_0/MSS_ADLIB_INST_RNISSLB/U_CLKSRC
+                          Source: NETLIST
+    55      INT_NET       Net   : stonyman_0/N_2345
+                          Driver: stonyman_0/counterWait_RNIC9HK9_0[25]/U_CLKSRC
                           Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : stonyman_0/state_i[0]
-                          Driver: stonyman_0/state_i[0]
-    23      INT_NET       Net   : stonyman_0/N_295_0
-                          Driver: stonyman_0/counterWait_RNIKLAH8[11]
-    22      INT_NET       Net   : stonyman_0/N_295
-                          Driver: stonyman_0/counterWait_RNIKLAH8_0[11]
-    20      INT_NET       Net   : stonyman_0/N_59
-                          Driver: stonyman_0/state_i_RNIALT621[0]
-    17      INT_NET       Net   : stonyman_0/state_0[1]
-                          Driver: stonyman_0/state_0[1]
-    17      INT_NET       Net   : stonyman_0/substate[9]
-                          Driver: stonyman_0/substate[9]
-    17      INT_NET       Net   : stonyman_0/state[1]
+    21      INT_NET       Net   : stonyman_0/state[1]
                           Driver: stonyman_0/state[1]
-    15      INT_NET       Net   : stonyman_0/cachedValue[3]
+    20      INT_NET       Net   : stonyman_0/un1_counterWait_0_sqmuxa_1_i_0
+                          Driver: stonyman_0/substate_RNIONMBP1[3]
+    19      INT_NET       Net   : stonyman_0/cachedValue[3]
                           Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIV0EA2[3]
-    15      INT_NET       Net   : stonyman_0/N_32
-                          Driver: stonyman_0/state_i_RNI03DVA1[0]
-    14      INT_NET       Net   : stonyman_0/substate[3]
-                          Driver: stonyman_0/substate[3]
+    17      INT_NET       Net   : stonyman_0/N_164
+                          Driver: stonyman_0/substate_RNII23L8[5]
+    17      INT_NET       Net   : stonyman_0/substate[6]
+                          Driver: stonyman_0/substate[6]
+    16      INT_NET       Net   : stonyman_0/substate[12]
+                          Driver: stonyman_0/substate[12]
+    16      INT_NET       Net   : stonyman_0/substate[5]
+                          Driver: stonyman_0/substate[5]
+    16      INT_NET       Net   : stonyman_0/cachedValue[4]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNI01EA2[4]
+    15      INT_NET       Net   : stonyman_0/cachedValue[2]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIU0EA2[2]
+    15      INT_NET       Net   : stonyman_0/N_141_1
+                          Driver: stonyman_0/state_RNIDO98[5]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : stonyman_0/state_i[0]
-                          Driver: stonyman_0/state_i[0]
-    23      INT_NET       Net   : stonyman_0/N_295_0
-                          Driver: stonyman_0/counterWait_RNIKLAH8[11]
-    22      INT_NET       Net   : stonyman_0/N_295
-                          Driver: stonyman_0/counterWait_RNIKLAH8_0[11]
-    20      INT_NET       Net   : stonyman_0/N_59
-                          Driver: stonyman_0/state_i_RNIALT621[0]
-    17      INT_NET       Net   : stonyman_0/state_0[1]
-                          Driver: stonyman_0/state_0[1]
-    17      INT_NET       Net   : stonyman_0/substate[9]
-                          Driver: stonyman_0/substate[9]
-    17      INT_NET       Net   : stonyman_0/state[1]
+    21      INT_NET       Net   : stonyman_0/state[1]
                           Driver: stonyman_0/state[1]
-    15      INT_NET       Net   : stonyman_0/cachedValue[3]
+    20      INT_NET       Net   : stonyman_0/un1_counterWait_0_sqmuxa_1_i_0
+                          Driver: stonyman_0/substate_RNIONMBP1[3]
+    19      INT_NET       Net   : stonyman_0/cachedValue[3]
                           Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIV0EA2[3]
-    15      INT_NET       Net   : stonyman_0/N_32
-                          Driver: stonyman_0/state_i_RNI03DVA1[0]
-    14      INT_NET       Net   : stonyman_0/substate[3]
-                          Driver: stonyman_0/substate[3]
+    17      INT_NET       Net   : stonyman_0/N_164
+                          Driver: stonyman_0/substate_RNII23L8[5]
+    17      INT_NET       Net   : stonyman_0/substate[6]
+                          Driver: stonyman_0/substate[6]
+    16      INT_NET       Net   : stonyman_0/substate[12]
+                          Driver: stonyman_0/substate[12]
+    16      INT_NET       Net   : stonyman_0/substate[5]
+                          Driver: stonyman_0/substate[5]
+    16      INT_NET       Net   : stonyman_0/cachedValue[4]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNI01EA2[4]
+    15      INT_NET       Net   : stonyman_0/cachedValue[2]
+                          Driver: stonyman_0/cachedValue_tile_DIN_REG1_RNIU0EA2[2]
+    15      INT_NET       Net   : stonyman_0/N_141_1
+                          Driver: stonyman_0/state_RNIDO98[5]
 
 

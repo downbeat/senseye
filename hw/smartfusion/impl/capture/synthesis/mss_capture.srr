@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Wed Feb 20 02:33:36 2013
+#Tue Feb 26 02:05:37 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -17,25 +17,24 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_objects.v"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\scemi_pipes.svh"
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_capture_MSS.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v"
-@I::"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_capture_MSS.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.v"
 Verilog syntax check successful!
 Selecting top level module mss_capture
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":25:7:25:12|Synthesizing module AdcCap
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":34:10:34:19|No assignment to cntrClkSpi
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v":21:7:21:13|Synthesizing module blinker
 
-@W: CG532 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v":27:0:27:6|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
+@W: CG532 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v":27:0:27:6|Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":2620:7:2620:11|Synthesizing module RCOSC
 
@@ -43,39 +42,27 @@ Selecting top level module mss_capture
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:43|Synthesizing module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:43|Synthesizing module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_capture_MSS.v":9:7:9:21|Synthesizing module mss_capture_MSS
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_capture_MSS.v":9:7:9:21|Synthesizing module mss_capture_MSS
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":80:7:80:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":84:7:84:14|Synthesizing module stonyman
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":91:17:91:24|No assignment to pixelout
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register flagCapturing 
+@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":105:11:105:31|No assignment to counterPixelsCaptured
+@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":374:48:374:74|Read Address width 3 does not cover RAM depth
 
-@W: CL132 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":368:48:368:74|Read Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":374:48:374:74|Write Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":368:48:368:74|Write Address width 3 does not cover RAM depth
+@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Found RAM cachedValue, depth=8, width=8
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.v":9:7:9:17|Synthesizing module mss_capture
 
-@N: CL134 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Found RAM cachedValue, depth=8, width=8
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":9:7:9:17|Synthesizing module mss_capture
+@W: CL168 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.v":119:8:119:16|Pruning instance blinker_0 -- not in use ...
 
-@W: CL168 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v":117:8:117:16|Pruning instance blinker_0 -- not in use ...
-
-@W: CL138 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Removing register 'inphi' because it is only assigned 0 or its original value.
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 31 of counterWait[31:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[30] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 30 of counterWait[30:0] 
-
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[29] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 29 of counterWait[29:0] 
-
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
-State machine has 12 reachable states with original encodings of:
+State machine has 15 reachable states with original encodings of:
    0000
    0001
    0010
@@ -88,7 +75,10 @@ State machine has 12 reachable states with original encodings of:
    1001
    1010
    1011
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Trying to extract state machine for register state
+   1100
+   1101
+   1110
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register state
 Extracted state machine for register state
 State machine has 7 reachable states with original encodings of:
    0000
@@ -98,36 +88,34 @@ State machine has 7 reachable states with original encodings of:
    0100
    0101
    0110
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Register bit counterWait[28] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":110:0:110:5|Pruning register bit 28 of counterWait[28:0] 
+@W: CL190 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Optimizing register bit inphi to a constant 0
+@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Pruning register inphi 
 
-@A: CL153 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":91:17:91:24|*Unassigned bits of pixelout[7:0] are referenced and tied to 0 -- simulation mismatch possible.
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":84:6:84:17|Input startCapture is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":85:12:85:18|Input pixelin is unused
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":44:7:44:10|Input CLKC is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":90:12:90:18|Input pixelin is unused
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":44:7:44:10|Input CLKC is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":48:7:48:13|Input MAINXIN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 
 @END
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 20 02:33:37 2013
+# Tue Feb 26 02:05:39 2013
 
 ###########################################################]
 Premap Report
@@ -138,17 +126,17 @@ Product Version F-2012.03M-SP1
 
 Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-Reading constraint file: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc
-@L: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture_scck.rpt 
-Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture_scck.rpt" file 
+Reading constraint file: Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc
+@L: Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
 
-Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 94MB)
 
 
-Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 94MB)
 
 
 
@@ -166,13 +154,13 @@ FCLK        20.0 MHz      50.000        declared     clk_group_0
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
 
-@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.sap.
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.sap.
 Pre-mapping successful!
 
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 20 02:33:38 2013
+# Tue Feb 26 02:05:41 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -196,9 +184,9 @@ Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91
 
 Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
-@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
-@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
-@W: MO111 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|Tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO111 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO111 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
+@W: MO111 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_mss\mss_ccc_0\mss_capture_mss_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|Tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC) 
 
 Available hyper_sources - for debug and ip models
 	None Found
@@ -206,9 +194,10 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
-@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitQuiet[2:0]
-@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitTrailing[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitQuiet[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Found counter in view:work.AdcCap(verilog) inst cntrWaitTrailing[2:0]
+@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Register bit startAdcCapture is always 1, optimizing ...
 
  Ram Decomposition Statistics for cachedValue[7:0]
 
@@ -223,50 +212,75 @@ original code -> new code
    0100 -> 0010001
    0101 -> 0100001
    0110 -> 1000001
-Encoding state machine substate[11:0] (netlist:statemachine)
+Encoding state machine substate[14:0] (netlist:statemachine)
 original code -> new code
-   0000 -> 000000000000
-   0001 -> 000000000011
-   0010 -> 000000000101
-   0011 -> 000000001001
-   0100 -> 000000010001
-   0101 -> 000000100001
-   0110 -> 000001000001
-   0111 -> 000010000001
-   1000 -> 000100000001
-   1001 -> 001000000001
-   1010 -> 010000000001
-   1011 -> 100000000001
-@N: MF238 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":368:48:368:76|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
-@N: MF239 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":134:27:134:40|Found 28-bit decrementor, 'un5_counterWait_1[27:0]'
+   0000 -> 000000000000000
+   0001 -> 000000000000011
+   0010 -> 000000000000101
+   0011 -> 000000000001001
+   0100 -> 000000000010001
+   0101 -> 000000000100001
+   0110 -> 000000001000001
+   0111 -> 000000010000001
+   1000 -> 000000100000001
+   1001 -> 000001000000001
+   1010 -> 000010000000001
+   1011 -> 000100000000001
+   1100 -> 001000000000001
+   1101 -> 010000000000001
+   1110 -> 100000000000001
+@N: MF238 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":374:48:374:76|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
+@N: MF239 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":141:27:141:40|Found 32-bit decrementor, 'un5_counterWait_1[31:0]'
+@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
 
-Finished factoring (Time elapsed 0h:00m:01s; Memory used current: 113MB peak: 113MB)
+Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 114MB)
 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Register bit AdcCap_0.cs is always 1, optimizing ...
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[4] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[4] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\adccap.v":41:0:41:5|Removing sequential instance AdcCap_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.mss_capture(verilog) because there are no references to its outputs 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:01s; Memory used current: 108MB peak: 113MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:02s; Memory used current: 109MB peak: 114MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 113MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 114MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 113MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 114MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 113MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 114MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 113MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 114MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 113MB)
+Finished preparing to map (Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 114MB)
 
 
 High Fanout Net Report
@@ -274,43 +288,43 @@ High Fanout Net Report
 
 Driver Instance / Pin Name                       Fanout, notes
 --------------------------------------------------------------
-mss_capture_MSS_0.MSS_ADLIB_INST / M2FRESETn     51           
-stonyman_0.state[1] / Q                          34           
-stonyman_0.state_ns_i_0_a2_0_a2_14[0] / Y        45           
+mss_capture_MSS_0.MSS_ADLIB_INST / M2FRESETn     71           
+stonyman_0.un1_state_0_sqmuxa / Y                26           
+stonyman_0.state_tr0_i_a2 / Y                    55           
 ==============================================================
 
-@N: FP130 |Promoting Net mss_capture_MSS_0_M2F_RESET_N on CLKINT  I_43 
-Replicating Combinational Instance stonyman_0.state_ns_i_0_a2_0_a2_14[0], fanout 45 segments 2
-Replicating Sequential Instance stonyman_0.state[1], fanout 34 segments 2
+@N: FP130 |Promoting Net mss_capture_MSS_0_M2F_RESET_N on CLKINT  I_12 
+@N: FP130 |Promoting Net stonyman_0.N_2345 on CLKINT  I_13 
+Replicating Combinational Instance stonyman_0.un1_state_0_sqmuxa, fanout 26 segments 2
 
-Finished technology mapping (Time elapsed 0h:00m:02s; Memory used current: 123MB peak: 124MB)
+Finished technology mapping (Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 119MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:02s; Memory used current: 123MB peak: 124MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 119MB)
 
 
 Added 0 Buffers
-Added 2 Cells via replication
-	Added 1 Sequential Cells via replication
+Added 1 Cells via replication
+	Added 0 Sequential Cells via replication
 	Added 1 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:02s; Memory used current: 123MB peak: 124MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 119MB)
 
-Writing Analyst data base Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\synthesis\mss_capture.srm
+Writing Analyst data base Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\synthesis\mss_capture.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:02s; Memory used current: 122MB peak: 124MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:02s; Memory used current: 116MB peak: 119MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:02s; Memory used current: 123MB peak: 124MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 119MB)
 
 Found clock FAB_CLK with period 50.00ns 
 Found clock FCLK with period 50.00ns 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Feb 20 02:33:42 2013
+# Timing Report written on Tue Feb 26 02:05:44 2013
 #
 
 
@@ -321,7 +335,7 @@ Requested Frequency:    20.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
-Constraint File(s):    Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc
+Constraint File(s):    Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell_syn.sdc
                        
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
@@ -338,7 +352,7 @@ Worst slack in design: 9.726
                    Requested     Estimated      Requested     Estimated                Clock        Clock          
 Starting Clock     Frequency     Frequency      Period        Period        Slack      Type         Group          
 -------------------------------------------------------------------------------------------------------------------
-FAB_CLK            20.0 MHz      55.7 MHz       50.000        17.959        32.041     declared     clk_group_0    
+FAB_CLK            20.0 MHz      59.5 MHz       50.000        16.800        33.200     declared     clk_group_0    
 FCLK               20.0 MHz      NA             50.000        NA            NA         declared     clk_group_0    
 System             100.0 MHz     3655.0 MHz     10.000        0.274         9.726      system       system_clkgroup
 ===================================================================================================================
@@ -355,8 +369,8 @@ Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  f
 Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 ----------------------------------------------------------------------------------------------------------
 System    System   |  10.000      9.726   |  No paths    -      |  No paths    -      |  No paths    -    
-System    FAB_CLK  |  50.000      42.036  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK   FAB_CLK  |  50.000      32.041  |  No paths    -      |  No paths    -      |  No paths    -    
+System    FAB_CLK  |  50.000      38.673  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK   FAB_CLK  |  50.000      33.200  |  No paths    -      |  No paths    -      |  No paths    -    
 ==========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -383,16 +397,16 @@ Starting Points with Worst Slack
 Instance                       Reference     Type     Pin     Net                 Time        Slack 
                                Clock                                                                
 ----------------------------------------------------------------------------------------------------
-stonyman_0.counterWait[21]     FAB_CLK       DFN1     Q       counterWait[21]     0.627       32.041
-stonyman_0.counterWait[9]      FAB_CLK       DFN1     Q       counterWait[9]      0.627       32.072
-stonyman_0.counterWait[10]     FAB_CLK       DFN1     Q       counterWait[10]     0.627       32.077
-stonyman_0.counterWait[24]     FAB_CLK       DFN1     Q       counterWait[24]     0.627       32.207
-stonyman_0.counterWait[16]     FAB_CLK       DFN1     Q       counterWait[16]     0.627       32.252
-stonyman_0.counterWait[22]     FAB_CLK       DFN1     Q       counterWait[22]     0.627       32.352
-stonyman_0.counterWait[20]     FAB_CLK       DFN1     Q       counterWait[20]     0.627       32.357
-stonyman_0.counterWait[23]     FAB_CLK       DFN1     Q       counterWait[23]     0.627       32.364
-stonyman_0.counterWait[26]     FAB_CLK       DFN1     Q       counterWait[26]     0.627       32.448
-stonyman_0.counterWait[14]     FAB_CLK       DFN1     Q       counterWait[14]     0.627       32.451
+stonyman_0.counterWait[5]      FAB_CLK       DFN1     Q       counterWait[5]      0.627       33.200
+stonyman_0.counterWait[13]     FAB_CLK       DFN1     Q       counterWait[13]     0.627       33.277
+stonyman_0.counterWait[4]      FAB_CLK       DFN1     Q       counterWait[4]      0.627       33.318
+stonyman_0.counterWait[12]     FAB_CLK       DFN1     Q       counterWait[12]     0.627       33.395
+stonyman_0.counterWait[0]      FAB_CLK       DFN1     Q       counterWait[0]      0.627       33.467
+stonyman_0.counterWait[10]     FAB_CLK       DFN1     Q       counterWait[10]     0.627       33.491
+stonyman_0.state[3]            FAB_CLK       DFN1     Q       state[3]            0.627       33.593
+stonyman_0.counterWait[11]     FAB_CLK       DFN1     Q       counterWait[11]     0.627       33.697
+stonyman_0.counterWait[31]     FAB_CLK       DFN1     Q       counterWait[31]     0.627       33.763
+stonyman_0.counterWait[22]     FAB_CLK       DFN1     Q       counterWait[22]     0.627       33.776
 ====================================================================================================
 
 
@@ -403,16 +417,16 @@ Ending Points with Worst Slack
 Instance                       Reference     Type     Pin     Net                     Time         Slack 
                                Clock                                                                     
 ---------------------------------------------------------------------------------------------------------
-stonyman_0.counterWait[8]      FAB_CLK       DFN1     D       counterWait_RNO[8]      49.542       32.041
-stonyman_0.counterWait[11]     FAB_CLK       DFN1     D       counterWait_RNO[11]     49.542       32.041
-stonyman_0.counterWait[13]     FAB_CLK       DFN1     D       counterWait_RNO[13]     49.542       32.041
-stonyman_0.counterWait[21]     FAB_CLK       DFN1     D       counterWait_RNO[21]     49.542       32.041
-stonyman_0.counterWait[22]     FAB_CLK       DFN1     D       counterWait_RNO[22]     49.542       32.041
-stonyman_0.counterWait[27]     FAB_CLK       DFN1     D       counterWait_RNO[27]     49.542       32.041
-stonyman_0.counterWait[7]      FAB_CLK       DFN1     D       counterWait_39[7]       49.542       32.306
-stonyman_0.counterWait[9]      FAB_CLK       DFN1     D       counterWait_39[9]       49.542       32.306
-stonyman_0.counterWait[10]     FAB_CLK       DFN1     D       counterWait_39[10]      49.542       32.306
-stonyman_0.counterWait[12]     FAB_CLK       DFN1     D       counterWait_39[12]      49.542       32.306
+stonyman_0.counterWait[8]      FAB_CLK       DFN1     D       counterWait_RNO[8]      49.542       33.200
+stonyman_0.counterWait[24]     FAB_CLK       DFN1     D       counterWait_RNO[24]     49.542       33.313
+stonyman_0.counterWait[25]     FAB_CLK       DFN1     D       counterWait_RNO[25]     49.542       33.313
+stonyman_0.counterWait[27]     FAB_CLK       DFN1     D       counterWait_RNO[27]     49.542       33.313
+stonyman_0.counterWait[29]     FAB_CLK       DFN1     D       counterWait_RNO[29]     49.542       33.313
+stonyman_0.counterWait[7]      FAB_CLK       DFN1     D       counterWait_RNO[7]      49.512       33.593
+stonyman_0.counterWait[9]      FAB_CLK       DFN1     D       counterWait_RNO[9]      49.512       33.593
+stonyman_0.counterWait[10]     FAB_CLK       DFN1     D       counterWait_RNO[10]     49.512       33.593
+stonyman_0.counterWait[15]     FAB_CLK       DFN1     D       counterWait_RNO[15]     49.512       33.593
+stonyman_0.counterWait[19]     FAB_CLK       DFN1     D       N_30                    49.512       33.593
 =========================================================================================================
 
 
@@ -427,57 +441,60 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         49.542
 
-    - Propagation time:                      17.500
+    - Propagation time:                      16.342
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 32.041
+    = Slack (non-critical) :                 33.200
 
-    Number of logic level(s):                11
-    Starting point:                          stonyman_0.counterWait[21] / Q
+    Number of logic level(s):                12
+    Starting point:                          stonyman_0.counterWait[5] / Q
     Ending point:                            stonyman_0.counterWait[8] / D
     The start point is clocked by            FAB_CLK [rising] on pin CLK
     The end   point is clocked by            FAB_CLK [rising] on pin CLK
 
-Instance / Net                                      Pin      Pin               Arrival     No. of    
-Name                                      Type      Name     Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------------------
-stonyman_0.counterWait[21]                DFN1      Q        Out     0.627     0.627       -         
-counterWait[21]                           Net       -        -       1.299     -           7         
-stonyman_0.counterWait_RNIH0CQ[23]        OR3       C        In      -         1.926       -         
-stonyman_0.counterWait_RNIH0CQ[23]        OR3       Y        Out     0.639     2.564       -         
-N_170                                     Net       -        -       0.686     -           3         
-stonyman_0.counterWait_RNIB4JT1[27]       OR3       A        In      -         3.251       -         
-stonyman_0.counterWait_RNIB4JT1[27]       OR3       Y        Out     0.415     3.666       -         
-N_182                                     Net       -        -       0.328     -           2         
-stonyman_0.counterWait_RNI3G203[0]        OR2       B        In      -         3.995       -         
-stonyman_0.counterWait_RNI3G203[0]        OR2       Y        Out     0.550     4.545       -         
-N_189                                     Net       -        -       0.686     -           3         
-stonyman_0.counterWait_RNIKLAH8_0[11]     NOR3B     C        In      -         5.231       -         
-stonyman_0.counterWait_RNIKLAH8_0[11]     NOR3B     Y        Out     0.415     5.646       -         
-N_295                                     Net       -        -       2.050     -           22        
-stonyman_0.state_i_RNILNMH8_0[0]          NOR2      B        In      -         7.696       -         
-stonyman_0.state_i_RNILNMH8_0[0]          NOR2      Y        Out     0.438     8.134       -         
-state_0_sqmuxa                            Net       -        -       0.686     -           3         
-stonyman_0.state_i_RNI7M12K[0]            OR2       B        In      -         8.820       -         
-stonyman_0.state_i_RNI7M12K[0]            OR2       Y        Out     0.550     9.370       -         
-un1_state_0_sqmuxa                        Net       -        -       1.211     -           6         
-stonyman_0.state_i_RNI17RES[0]            OR2       B        In      -         10.582      -         
-stonyman_0.state_i_RNI17RES[0]            OR2       Y        Out     0.550     11.132      -         
-N_123                                     Net       -        -       0.328     -           2         
-stonyman_0.state_i_RNIGGC221[0]           NOR2      A        In      -         11.460      -         
-stonyman_0.state_i_RNIGGC221[0]           NOR2      Y        Out     0.432     11.892      -         
-un1_state_0_sqmuxa_1_i_0                  Net       -        -       1.395     -           8         
-stonyman_0.state_i_RNI6GVNR1[0]           NOR2A     B        In      -         13.287      -         
-stonyman_0.state_i_RNI6GVNR1[0]           NOR2A     Y        Out     0.328     13.615      -         
-N_1659                                    Net       -        -       1.211     -           6         
-stonyman_0.state_i_RNIC2JAU2[0]           OR2       B        In      -         14.826      -         
-stonyman_0.state_i_RNIC2JAU2[0]           OR2       Y        Out     0.550     15.376      -         
-N_1368                                    Net       -        -       1.211     -           6         
-stonyman_0.counterWait_RNO[8]             NOR3      C        In      -         16.588      -         
-stonyman_0.counterWait_RNO[8]             NOR3      Y        Out     0.639     17.227      -         
-counterWait_RNO[8]                        Net       -        -       0.274     -           1         
-stonyman_0.counterWait[8]                 DFN1      D        In      -         17.500      -         
-=====================================================================================================
-Total path delay (propagation time + setup) of 17.959 is 6.592(36.7%) logic and 11.366(63.3%) route.
+Instance / Net                                       Pin      Pin               Arrival     No. of    
+Name                                      Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------
+stonyman_0.counterWait[5]                 DFN1       Q        Out     0.627     0.627       -         
+counterWait[5]                            Net        -        -       1.299     -           7         
+stonyman_0.counterWait_RNINIVM[4]         OR2        B        In      -         1.926       -         
+stonyman_0.counterWait_RNINIVM[4]         OR2        Y        Out     0.550     2.476       -         
+N_2055                                    Net        -        -       0.328     -           2         
+stonyman_0.counterWait_RNIA5VD1[2]        NOR3       C        In      -         2.804       -         
+stonyman_0.counterWait_RNIA5VD1[2]        NOR3       Y        Out     0.639     3.443       -         
+N_96                                      Net        -        -       0.274     -           1         
+stonyman_0.counterWait_RNI4BUR2[2]        NOR3A      A        In      -         3.716       -         
+stonyman_0.counterWait_RNI4BUR2[2]        NOR3A      Y        Out     0.565     4.281       -         
+N_2280_2                                  Net        -        -       0.328     -           2         
+stonyman_0.counterWait_RNI6F6V3[26]       NOR3A      A        In      -         4.610       -         
+stonyman_0.counterWait_RNI6F6V3[26]       NOR3A      Y        Out     0.565     5.175       -         
+state_tr0_i_a2_3                          Net        -        -       0.328     -           2         
+stonyman_0.counterWait_RNIC9HK9[25]       NOR3C      A        In      -         5.503       -         
+stonyman_0.counterWait_RNIC9HK9[25]       NOR3C      Y        Out     0.447     5.949       -         
+counterWait_RNIC9HK9[25]                  Net        -        -       0.274     -           1         
+stonyman_0.counterWait_RNIC9HK9_0[25]     CLKINT     A        In      -         6.223       -         
+stonyman_0.counterWait_RNIC9HK9_0[25]     CLKINT     Y        Out     0.148     6.371       -         
+N_2345                                    Net        -        -       1.362     -           55        
+stonyman_0.state_i_RNIDBTK9[0]            OR2        B        In      -         7.733       -         
+stonyman_0.state_i_RNIDBTK9[0]            OR2        Y        Out     0.438     8.171       -         
+N_2326                                    Net        -        -       1.007     -           4         
+stonyman_0.state_RNIN1B1P_0[1]            OR2A       A        In      -         9.178       -         
+stonyman_0.state_RNIN1B1P_0[1]            OR2A       Y        Out     0.457     9.635       -         
+un1_state_0_sqmuxa_0                      Net        -        -       1.733     -           13        
+stonyman_0.substate_RNIONMBP1[3]          NOR3A      C        In      -         11.368      -         
+stonyman_0.substate_RNIONMBP1[3]          NOR3A      Y        Out     0.609     11.978      -         
+un1_counterWait_0_sqmuxa_1_i_0            Net        -        -       2.003     -           20        
+stonyman_0.counterWait_RNI3ES2Q1[8]       OR3C       B        In      -         13.980      -         
+stonyman_0.counterWait_RNI3ES2Q1[8]       OR3C       Y        Out     0.531     14.511      -         
+N_2353                                    Net        -        -       0.328     -           2         
+stonyman_0.counterWait_RNO_0[8]           AO1A       B        In      -         14.839      -         
+stonyman_0.counterWait_RNO_0[8]           AO1A       Y        Out     0.509     15.348      -         
+counterWait_81_0_iv_i_0[8]                Net        -        -       0.274     -           1         
+stonyman_0.counterWait_RNO[8]             AOI1       C        In      -         15.622      -         
+stonyman_0.counterWait_RNO[8]             AOI1       Y        Out     0.447     16.068      -         
+counterWait_RNO[8]                        Net        -        -       0.274     -           1         
+stonyman_0.counterWait[8]                 DFN1       D        In      -         16.342      -         
+======================================================================================================
+Total path delay (propagation time + setup) of 16.800 is 6.989(41.6%) logic and 9.812(58.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -497,7 +514,7 @@ Instance                             Reference     Type        Pin           Net
                                      Clock                                                                                  
 ----------------------------------------------------------------------------------------------------------------------------
 mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB     EMCCLK        MSS_ADLIB_INST_EMCCLK        0.000       9.726 
-mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB     M2FRESETn     MSS_ADLIB_INST_M2FRESETn     0.000       42.036
+mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB     M2FRESETn     MSS_ADLIB_INST_M2FRESETn     0.000       38.673
 ============================================================================================================================
 
 
@@ -509,15 +526,15 @@ Instance                             Reference     Type          Pin           N
                                      Clock                                                                                  
 ----------------------------------------------------------------------------------------------------------------------------
 mss_capture_MSS_0.MSS_ADLIB_INST     System        MSS_APB       EMCCLKRTN     MSS_ADLIB_INST_EMCCLK     10.000       9.726 
-stonyman_0.substate_i_0[0]           System        DFN1          D             substate_ns_i[0]          49.512       42.036
-stonyman_0.cachedPOINTER[2]          System        DFN1          D             N_17_0                    49.542       42.427
-stonyman_0.cachedValue_tile.I_1      System        RAM512X18     RADDR2        N_17_0                    49.761       42.646
-stonyman_0.cachedPOINTER[1]          System        DFN1          D             N_15                      49.542       43.116
-stonyman_0.cachedValue_tile.I_1      System        RAM512X18     RADDR1        N_15                      49.761       43.335
-stonyman_0.counterWait[1]            System        DFN1          D             counterWait_39[1]         49.512       43.641
-stonyman_0.cachedPOINTER[0]          System        DFN1          D             N_13                      49.542       43.883
-stonyman_0.counterWait[8]            System        DFN1          D             counterWait_RNO[8]        49.512       43.902
-stonyman_0.counterWait[11]           System        DFN1          D             counterWait_RNO[11]       49.512       43.902
+stonyman_0.state_i[0]                System        DFN1          D             state_ns_i[0]             49.512       38.673
+stonyman_0.substate_i_0[0]           System        DFN1          D             substate_ns_i[0]          49.512       40.905
+stonyman_0.cachedPOINTER[2]          System        DFN1          D             N_18                      49.542       42.137
+stonyman_0.cachedValue_tile.I_1      System        RAM512X18     RADDR2        N_18                      49.761       42.356
+stonyman_0.counterWait[13]           System        DFN1          D             N_10                      49.512       42.645
+stonyman_0.counterWait[14]           System        DFN1          D             N_12                      49.512       42.645
+stonyman_0.counterWait[16]           System        DFN1          D             counterWait_RNO[16]       49.512       42.645
+stonyman_0.counterWait[26]           System        DFN1          D             counterWait_RNO[26]       49.512       42.645
+stonyman_0.counterWait[30]           System        DFN1          D             counterWait_RNO[30]       49.512       42.645
 ============================================================================================================================
 
 
@@ -563,55 +580,53 @@ Target Part: A2F500M3G_FBGA484_-1
 Report for cell mss_capture.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     3      1.0        3.0
+              AND2     6      1.0        6.0
               AND3     6      1.0        6.0
-               AO1    27      1.0       27.0
-              AO1A    20      1.0       20.0
-              AO1B     2      1.0        2.0
+               AO1    50      1.0       50.0
+              AO1A    33      1.0       33.0
+              AO1B     4      1.0        4.0
               AO1C     2      1.0        2.0
-              AO1D     1      1.0        1.0
-              AOI1     5      1.0        5.0
-             AOI1B     7      1.0        7.0
-              AX1E     1      1.0        1.0
-            CLKINT     1      0.0        0.0
-               GND     5      0.0        0.0
+              AO1D     2      1.0        2.0
+              AOI1     6      1.0        6.0
+             AOI1B     4      1.0        4.0
+            CLKINT     2      0.0        0.0
+               GND     4      0.0        0.0
                INV     1      1.0        1.0
            MSS_APB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-               MX2    16      1.0       16.0
-              MX2B     4      1.0        4.0
-              MX2C     1      1.0        1.0
-              NOR2    51      1.0       51.0
-             NOR2A    65      1.0       65.0
-             NOR2B    63      1.0       63.0
-              NOR3    19      1.0       19.0
-             NOR3A    29      1.0       29.0
-             NOR3B    34      1.0       34.0
-             NOR3C    24      1.0       24.0
-               OA1    13      1.0       13.0
-              OA1A    12      1.0       12.0
-              OA1B     2      1.0        2.0
-              OA1C    15      1.0       15.0
-               OR2    58      1.0       58.0
-              OR2A    24      1.0       24.0
-              OR2B    14      1.0       14.0
-               OR3    74      1.0       74.0
-              OR3A     6      1.0        6.0
-              OR3B     2      1.0        2.0
-              OR3C     1      1.0        1.0
+               MX2    27      1.0       27.0
+              MX2A     3      1.0        3.0
+              MX2B     1      1.0        1.0
+              MX2C     3      1.0        3.0
+              NOR2    40      1.0       40.0
+             NOR2A    60      1.0       60.0
+             NOR2B    93      1.0       93.0
+              NOR3    31      1.0       31.0
+             NOR3A    31      1.0       31.0
+             NOR3B    36      1.0       36.0
+             NOR3C    44      1.0       44.0
+               OA1    11      1.0       11.0
+              OA1A     7      1.0        7.0
+              OA1B    14      1.0       14.0
+              OA1C    13      1.0       13.0
+               OR2    86      1.0       86.0
+              OR2A    30      1.0       30.0
+              OR2B    11      1.0       11.0
+               OR3    91      1.0       91.0
+              OR3A    12      1.0       12.0
+              OR3B     1      1.0        1.0
+              OR3C     6      1.0        6.0
              RCOSC     1      0.0        0.0
-               VCC     5      0.0        0.0
+               VCC     4      0.0        0.0
               XA1A     1      1.0        1.0
-              XA1C     1      1.0        1.0
-             XNOR2    28      1.0       28.0
-              XOR2    17      1.0       17.0
+             XNOR2    31      1.0       31.0
+              XOR2    12      1.0       12.0
 
 
-              DFN1    70      1.0       70.0
-            DFN1E1    10      1.0       10.0
+              DFN1    73      1.0       73.0
          RAM512X18     1      0.0        0.0
                    -----          ----------
-             TOTAL   744               729.0
+             TOTAL   896               882.0
 
 
   IO Cell usage:
@@ -622,7 +637,7 @@ Report for cell mss_capture.verilog
              TOTAL    17
 
 
-Core Cells         : 729 of 11520 (6%)
+Core Cells         : 882 of 11520 (8%)
 IO Cells           : 17
 
   RAM/ROM Usage Summary
@@ -630,9 +645,9 @@ Block Rams : 1 of 24 (4%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 41MB peak: 124MB)
+At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 41MB peak: 119MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Wed Feb 20 02:33:42 2013
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+# Tue Feb 26 02:05:44 2013
 
 ###########################################################]

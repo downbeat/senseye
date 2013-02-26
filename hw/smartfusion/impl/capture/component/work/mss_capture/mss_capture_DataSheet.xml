@@ -11,66 +11,29 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture</location>
-    <state>GENERATED ( Tue Feb 19 22:38:19 2013 )</state>
-    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\SoftConsole</swide-toolchain>
+    <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/capture/component/work/mss_capture</location>
+    <state>GENERATED ( Tue Feb 26 02:04:43 2013 )</state>
+    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture\mss_capture.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_capture_MSS.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_capture_MSS\mss_tshell.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCap.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\AdcCapStub.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\blinker.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture\mss_capture.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_capture_MSS.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\MSS_CCC_0\mss_capture_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_capture_MSS\mss_tshell.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\AdcCap.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\blinker.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\hdl\stonyman.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
-    <port-name>ledsout[7]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>incv</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>resp</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[5]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MSS_RESET_N</port-name>
-    <direction>IN</direction>
-    <pin-number>R1</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>resv</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[2]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -82,43 +45,31 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>miso</port-name>
+    <port-name>ledsout[2]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>resp</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MSS_RESET_N</port-name>
     <direction>IN</direction>
-    <pin-number>-</pin-number>
+    <pin-number>R1</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[1]</port-name>
+    <port-name>ledsout[3]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>startCaptureTP</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>cs</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>ledsout[6]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>inphi</port-name>
+    <port-name>ledsout[7]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -130,13 +81,61 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>miso</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[6]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>startCaptureTP</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[5]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>cs</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>resv</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>ledsout[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>SPI_CLK</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>ledsout[3]</port-name>
+    <port-name>inphi</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -156,7 +155,7 @@
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>HierSpiritDesign</core-exttype>
-    <core-location>Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/component/work/mss_capture_MSS</core-location>
+    <core-location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/capture/component/work/mss_capture_MSS</core-location>
     <core-name>mss_capture_MSS_0</core-name>
   </core>
   <core type="HdlModule">

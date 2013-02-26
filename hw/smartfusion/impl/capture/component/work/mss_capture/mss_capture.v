@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 19 22:38:17 2013
+// Created by SmartDesign Tue Feb 26 02:04:40 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -42,6 +42,8 @@ output       startCaptureTP;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire         AdcCap_0_conversionComplete;
+wire   [7:0] AdcCap_0_dataout_0;
 wire         cs_net_0;
 wire         incp_net_0;
 wire         incv_net_0;
@@ -54,25 +56,24 @@ wire         MSS_RESET_N;
 wire         resp_net_0;
 wire         resv_net_0;
 wire         SPI_CLK_net_0;
+wire         stonyman_0_startAdcCapture;
 wire         cs_net_1;
 wire         SPI_CLK_net_1;
-wire   [3:0] ledsout_0_net_0;
-wire   [7:4] ledsout_net_1;
 wire         incv_net_1;
 wire         resv_net_1;
 wire         resp_net_1;
 wire         incp_net_1;
 wire         inphi_net_1;
+wire   [3:0] ledsout_0_net_0;
+wire   [7:4] ledsout_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire         GND_net;
-wire   [7:0] pixelin_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GND_net             = 1'b0;
-assign pixelin_const_net_0 = 8'h00;
+assign GND_net = 1'b0;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
@@ -84,10 +85,6 @@ assign cs_net_1        = cs_net_0;
 assign cs              = cs_net_1;
 assign SPI_CLK_net_1   = SPI_CLK_net_0;
 assign SPI_CLK         = SPI_CLK_net_1;
-assign ledsout_0_net_0 = ledsout_0;
-assign ledsout[3:0]    = ledsout_0_net_0;
-assign ledsout_net_1   = ledsout_net_0;
-assign ledsout[7:4]    = ledsout_net_1;
 assign incv_net_1      = incv_net_0;
 assign incv            = incv_net_1;
 assign resv_net_1      = resv_net_0;
@@ -98,19 +95,24 @@ assign incp_net_1      = incp_net_0;
 assign incp            = incp_net_1;
 assign inphi_net_1     = inphi_net_0;
 assign inphi           = inphi_net_1;
+assign ledsout_0_net_0 = ledsout_0;
+assign ledsout[3:0]    = ledsout_0_net_0;
+assign ledsout_net_1   = ledsout_net_0;
+assign ledsout[7:4]    = ledsout_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
 //--------AdcCap
 AdcCap AdcCap_0(
         // Inputs
-        .clk          ( SPI_CLK_net_0 ),
-        .reset        ( mss_capture_MSS_0_M2F_RESET_N ),
-        .startCapture ( GND_net ),
-        .miso         ( miso ),
+        .clk                ( SPI_CLK_net_0 ),
+        .reset              ( mss_capture_MSS_0_M2F_RESET_N ),
+        .startCapture       ( stonyman_0_startAdcCapture ),
+        .miso               ( miso ),
         // Outputs
-        .cs           ( cs_net_0 ),
-        .dataout      (  ) 
+        .cs                 ( cs_net_0 ),
+        .conversionComplete ( AdcCap_0_conversionComplete ),
+        .dataout            ( AdcCap_0_dataout_0 ) 
         );
 
 //--------blinker
@@ -134,19 +136,21 @@ mss_capture_MSS mss_capture_MSS_0(
 //--------stonyman
 stonyman stonyman_0(
         // Inputs
-        .clk            ( SPI_CLK_net_0 ),
-        .reset          ( mss_capture_MSS_0_M2F_RESET_N ),
-        .startCapture   ( GND_net ),
-        .pixelin        ( pixelin_const_net_0 ),
+        .clk             ( SPI_CLK_net_0 ),
+        .reset           ( mss_capture_MSS_0_M2F_RESET_N ),
+        .startCapture    ( GND_net ),
+        .adcConvComplete ( AdcCap_0_conversionComplete ),
+        .pixelin         ( AdcCap_0_dataout_0 ),
         // Outputs
-        .resp           ( resp_net_0 ),
-        .incp           ( incp_net_0 ),
-        .resv           ( resv_net_0 ),
-        .incv           ( incv_net_0 ),
-        .inphi          ( inphi_net_0 ),
-        .pixelout       (  ),
-        .tp_stateout    ( ledsout_net_0 ),
-        .tp_substateout ( ledsout_0 ) 
+        .resp            ( resp_net_0 ),
+        .incp            ( incp_net_0 ),
+        .resv            ( resv_net_0 ),
+        .incv            ( incv_net_0 ),
+        .inphi           ( inphi_net_0 ),
+        .startAdcCapture ( stonyman_0_startAdcCapture ),
+        .pixelout        (  ),
+        .tp_stateout     ( ledsout_net_0 ),
+        .tp_substateout  ( ledsout_0 ) 
         );
 
 

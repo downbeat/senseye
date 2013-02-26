@@ -10,7 +10,7 @@ Opened an existing Libero design mss_capture.adb.
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
 'IDE_DESIGNERVIEW_ROOTDIR' set to
-'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer'
+'Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 ***** Layout Variables *********************************************
 
@@ -34,16 +34,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Wed Feb 20 02:33:54 2013
+Timing-driven Placer Started: Tue Feb 26 02:05:58 2013
 
-Placer Finished: Wed Feb 20 02:34:02 2013
-Total Placer CPU Time:     00:00:08
+Placer Finished: Tue Feb 26 02:06:07 2013
+Total Placer CPU Time:     00:00:09
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: mss_capture                     Started: Wed Feb 20 02:34:05 2013
+Design: mss_capture                     Started: Tue Feb 26 02:06:09 2013
 
  
 Iterative improvement...
@@ -51,8 +51,8 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: mss_capture                     
-Finished: Wed Feb 20 02:34:23 2013
-Total CPU Time:     00:00:18            Total Elapsed Time: 00:00:18
+Finished: Tue Feb 26 02:06:24 2013
+Total CPU Time:     00:00:14            Total Elapsed Time: 00:00:15
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -60,7 +60,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:33 )
+The Layout command succeeded ( 00:00:31 )
 Wrote status report to file: mss_capture_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -74,8 +74,8 @@ Wrote iobank report to file: mss_capture_iobank_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Design saved to file
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture.adb.
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture.adb.
 
-The Execute Script command succeeded ( 00:00:35 )
+The Execute Script command succeeded ( 00:00:32 )
 Design closed.
 

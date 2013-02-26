@@ -22,16 +22,16 @@
 `define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
 
 
-module AdcCap( clk, reset, startCapture, miso, cs, dataout );
+module AdcCap( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
 
 input clk;
 input reset;
-input startCapture;
+input startCapture;                   // active low
 input miso;
 output reg cs;
 output reg [(`ADC_RES-1):0] dataout;
+output reg conversionComplete;        // active low
 
-reg [7:0] cntrClkSpi;
 reg [2:0] cntrWaitLeading;
 reg [2:0] cntrWaitTrailing;
 reg [2:0] cntrWaitQuiet;
@@ -56,6 +56,7 @@ begin
          cntrWaitLeading <= `TICKS_WAIT_LEADING;
          cntrWaitTrailing <= `TICKS_WAIT_TRAILING;
          cntrWaitQuiet <= `TICKS_WAIT_QUIET;
+         conversionComplete <= 1;
          bitsRead <= 0;
       end
    end
@@ -78,6 +79,7 @@ begin
    if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
    begin
       cntrWaitTrailing <= cntrWaitTrailing - 1;
+      conversionComplete <= 0;
    end
 
    // state: trailing wait finished

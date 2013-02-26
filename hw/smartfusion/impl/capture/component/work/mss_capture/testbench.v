@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Tue Feb 19 22:38:17 2013
+// Created by Actel SmartDesign Tue Feb 26 02:04:40 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -51,12 +51,12 @@ mss_capture mss_capture_0 (
     .cs( ),
     .SPI_CLK( ),
     .startCaptureTP( ),
-    .ledsout( ),
     .incv( ),
     .resv( ),
     .resp( ),
     .incp( ),
-    .inphi( )
+    .inphi( ),
+    .ledsout( )
 
     // Inouts
 

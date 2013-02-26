@@ -4,28 +4,28 @@ Release: v10.1 SP3
 
 Software Version: 10.1.3.1
 PDB file
-'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture_fp\
+'Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture_fp\
 \mss_capture.pdb' has been loaded successfully.
-DESIGN : mss_capture;  CHECKSUM : BFA0;  PDB_VERSION : 1.7
+DESIGN : mss_capture;  CHECKSUM : 36AC;  PDB_VERSION : 1.7
 Driver : 3.0.0 build 1
 programmer '51638' : FlashPro3
 Opened
-'Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture/designer/impl1/mss_capture_fp\
+'Z:/russ/private/research/insight/git/hw/smartfusion/impl/capture/designer/impl1/mss_capture_fp\
 /mss_capture.pro'
 The 'open_project' command succeeded.
 The 'set_programming_file' command succeeded.
 The 'set_device_type' command succeeded.
 The 'set_device_package' command succeeded.
 Info: Adding Flash Memory data from file
-      Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\component\work\mss_captu\
+      Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\component\work\mss_captu\
       re_MSS\MSS_ENVM_0\MSS_ENVM_0.efc.
 Info: Adding FPGA Array data from file
-      Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_captu\
+      Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_captu\
       re.fdb.
 PDB file
-'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\designer\impl1\mss_capture_fp\
+'Z:\russ\private\research\insight\git\hw\smartfusion\impl\capture\designer\impl1\mss_capture_fp\
 \mss_capture.pdb' has been loaded successfully.
-DESIGN : mss_capture;  CHECKSUM : C913;  PDB_VERSION : 1.7
+DESIGN : mss_capture;  CHECKSUM : 36AC;  PDB_VERSION : 1.7
 The 'update_programming_file' command succeeded.
 The 'set_programming_action' command succeeded.
 programmer '51638' : Scan Chain...
@@ -41,7 +41,7 @@ programmer '51638' : Verifying FPGA Array
 programmer '51638' :         Verifying FPGA Array -- pass
 programmer '51638' : Program System Init and Boot Clients...
 programmer '51638' : Verify System Init and Boot Clients...
-programmer '51638' : Finished: Wed Feb 20 02:35:58 2013 (Elapsed time 00:00:49)
+programmer '51638' : Finished: Tue Feb 26 02:07:59 2013 (Elapsed time 00:00:49)
 programmer '51638' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o
