@@ -45,9 +45,12 @@ MSS_CCC_0
 MSS_RESET_0_MSS_RESET_N
 ahb0
 cr_int_i0
+AdcCap_0
+clkgenerator_0
 CoreAHBLite_0
 MSS_CORE2_0
 psram_cr_0
+stonyman_0
 sign
 zero
 mul
@@ -248,6 +251,3 @@ r
 s
 t
 u
-v
-w
-x

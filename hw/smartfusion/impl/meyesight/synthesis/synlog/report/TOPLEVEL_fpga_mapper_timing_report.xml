@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\synlog\TOPLEVEL_fpga_mapper.srr</data>
+<data>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\synlog\TOPLEVEL_fpga_mapper.srr</data>
 <title>##### START OF TIMING REPORT #####[</title>
 </report_link>
 <row>
@@ -17,8 +17,14 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>MSS_CORE2_0.MSS_CCC_0.FAB_CLK</data>
 <data>40.0 MHz</data>
-<data>47.6 MHz</data>
-<data>3.990</data>
+<data>44.0 MHz</data>
+<data>2.291</data>
+</row>
+<row>
+<data>clkgenerator|SCLK_inferred_clock</data>
+<data>80.0 MHz</data>
+<data>47.4 MHz</data>
+<data>-8.611</data>
 </row>
 <row>
 <data>System</data>

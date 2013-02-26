@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 12 20:40:37 2013
+// Created by SmartDesign Tue Feb 26 02:48:21 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -13,14 +13,20 @@ module TOPLEVEL(
     MAC_RXD,
     MAC_RXER,
     MAINXIN,
+    MISO,
     MSS_RESET_N,
     UART_0_RXD,
     // Outputs
+    CS,
     MAC_MDC,
     MAC_TXD,
     MAC_TXEN,
     Phy_RMII_CLK,
+    SCLK,
     UART_0_TXD,
+    incp,
+    incv,
+    inphi,
     led,
     psram_address,
     psram_nbyte_en,
@@ -29,6 +35,8 @@ module TOPLEVEL(
     psram_noe0,
     psram_noe1,
     psram_nwe,
+    resp,
+    resv,
     rs485_de,
     rs485_nre,
     // Inouts
@@ -44,16 +52,22 @@ input         MAC_CRSDV;
 input  [1:0]  MAC_RXD;
 input         MAC_RXER;
 input         MAINXIN;
+input         MISO;
 input         MSS_RESET_N;
 input         UART_0_RXD;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output        CS;
 output        MAC_MDC;
 output [1:0]  MAC_TXD;
 output        MAC_TXEN;
 output        Phy_RMII_CLK;
+output        SCLK;
 output        UART_0_TXD;
+output        incp;
+output        incv;
+output        inphi;
 output [7:0]  led;
 output [24:0] psram_address;
 output [1:0]  psram_nbyte_en;
@@ -62,6 +76,8 @@ output        psram_ncs1;
 output        psram_noe0;
 output        psram_noe1;
 output        psram_nwe;
+output        resp;
+output        resv;
 output        rs485_de;
 output        rs485_nre;
 //--------------------------------------------------------------------
@@ -72,6 +88,8 @@ inout  [15:0] psram_data;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          AdcCap_0_conversionComplete;
+wire   [7:0]  AdcCap_0_dataout;
 wire          CLK50;
 wire   [31:0] CoreAHBLite_0_AHBmslave5_HADDR;
 wire   [2:0]  CoreAHBLite_0_AHBmslave5_HBURST;
@@ -86,7 +104,13 @@ wire   [2:0]  CoreAHBLite_0_AHBmslave5_HSIZE;
 wire   [1:0]  CoreAHBLite_0_AHBmslave5_HTRANS;
 wire   [31:0] CoreAHBLite_0_AHBmslave5_HWDATA;
 wire          CoreAHBLite_0_AHBmslave5_HWRITE;
+wire          cs;
 wire   [15:0] psram_data;
+wire          incp_net_0;
+wire          incv_net_0;
+wire          inphi_net_0;
+wire   [3:0]  led_net_0;
+wire   [3:0]  led_0;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -95,6 +119,7 @@ wire          MAC_RXER;
 wire   [1:0]  MAC_TXD_net_0;
 wire          MAC_TXEN_net_0;
 wire          MAINXIN;
+wire          MISO;
 wire          MSS_CORE2_0_FAB_CLK;
 wire          MSS_CORE2_0_M2F_RESET_N;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK;
@@ -112,6 +137,10 @@ wire          noe1;
 wire          nwe;
 wire          Phy_RMII_CLK_net_0;
 wire   [24:0] psram_address_net_0;
+wire          resp_net_0;
+wire          resv_net_0;
+wire          SCLK_net_0;
+wire          stonyman_0_startAdcCapture;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          Phy_RMII_CLK_net_1;
@@ -126,12 +155,20 @@ wire          MAC_TXEN_net_1;
 wire   [1:0]  nbyte_en_net_0;
 wire   [24:0] psram_address_net_1;
 wire   [1:0]  MAC_TXD_net_1;
+wire   [3:0]  led_0_net_0;
+wire   [7:4]  led_net_1;
+wire          incp_net_1;
+wire          incv_net_1;
+wire          inphi_net_1;
+wire          resp_net_1;
+wire          resv_net_1;
+wire          cs_net_0;
+wire          SCLK_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          GND_net;
 wire          VCC_net;
-wire   [7:0]  led_const_net_0;
 wire   [31:0] HADDR_M0_const_net_0;
 wire   [1:0]  HTRANS_M0_const_net_0;
 wire   [2:0]  HSIZE_M0_const_net_0;
@@ -177,7 +214,6 @@ wire   [1:0]  HRESP_SHG_const_net_0;
 //--------------------------------------------------------------------
 assign GND_net                = 1'b0;
 assign VCC_net                = 1'b1;
-assign led_const_net_0        = 8'h00;
 assign HADDR_M0_const_net_0   = 32'h00000000;
 assign HTRANS_M0_const_net_0  = 2'h0;
 assign HSIZE_M0_const_net_0   = 3'h0;
@@ -223,7 +259,6 @@ assign HRESP_SHG_const_net_0  = 2'h0;
 //--------------------------------------------------------------------
 assign rs485_nre           = 1'b0;
 assign rs485_de            = 1'b1;
-assign led[7:0]            = 8'h00;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -251,27 +286,45 @@ assign psram_address_net_1 = psram_address_net_0;
 assign psram_address[24:0] = psram_address_net_1;
 assign MAC_TXD_net_1       = MAC_TXD_net_0;
 assign MAC_TXD[1:0]        = MAC_TXD_net_1;
+assign led_0_net_0         = led_0;
+assign led[3:0]            = led_0_net_0;
+assign led_net_1           = led_net_0;
+assign led[7:4]            = led_net_1;
+assign incp_net_1          = incp_net_0;
+assign incp                = incp_net_1;
+assign incv_net_1          = incv_net_0;
+assign incv                = incv_net_1;
+assign inphi_net_1         = inphi_net_0;
+assign inphi               = inphi_net_1;
+assign resp_net_1          = resp_net_0;
+assign resp                = resp_net_1;
+assign resv_net_1          = resv_net_0;
+assign resv                = resv_net_1;
+assign cs_net_0            = cs;
+assign CS                  = cs_net_0;
+assign SCLK_net_1          = SCLK_net_0;
+assign SCLK                = SCLK_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
-wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
 
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
 
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
 wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
 wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };
@@ -279,6 +332,28 @@ assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LI
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------AdcCap
+AdcCap AdcCap_0(
+        // Inputs
+        .clk                ( SCLK_net_0 ),
+        .reset              ( MSS_CORE2_0_M2F_RESET_N ),
+        .startCapture       ( stonyman_0_startAdcCapture ),
+        .miso               ( MISO ),
+        // Outputs
+        .cs                 ( cs ),
+        .dataout            ( AdcCap_0_dataout ),
+        .conversionComplete ( AdcCap_0_conversionComplete ) 
+        );
+
+//--------clkgenerator
+clkgenerator clkgenerator_0(
+        // Inputs
+        .clk         ( MSS_CORE2_0_FAB_CLK ),
+        .rst         ( MSS_CORE2_0_M2F_RESET_N ),
+        // Outputs
+        .clkCameraSS ( SCLK_net_0 ) 
+        );
+
 //--------CoreAHBLite   -   Actel:DirectCore:CoreAHBLite:3.1.102
 CoreAHBLite #( 
         .FAMILY             ( 15 ),
@@ -725,6 +800,26 @@ psram_cr psram_cr_0(
         .nbyte_en  ( nbyte_en ),
         // Inouts
         .data      ( psram_data ) 
+        );
+
+//--------stonyman
+stonyman stonyman_0(
+        // Inputs
+        .clk             ( SCLK_net_0 ),
+        .reset           ( MSS_CORE2_0_M2F_RESET_N ),
+        .startCapture    ( GND_net ),
+        .pixelin         ( AdcCap_0_dataout ),
+        .adcConvComplete ( AdcCap_0_conversionComplete ),
+        // Outputs
+        .resp            ( resp_net_0 ),
+        .incp            ( incp_net_0 ),
+        .resv            ( resv_net_0 ),
+        .incv            ( incv_net_0 ),
+        .inphi           ( inphi_net_0 ),
+        .pixelout        (  ),
+        .startAdcCapture ( stonyman_0_startAdcCapture ),
+        .tp_stateout     ( led_net_0 ),
+        .tp_substateout  ( led_0 ) 
         );
 
 

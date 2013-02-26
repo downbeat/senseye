@@ -3,26 +3,23 @@ Version: 10.1.3.1
 Release: v10.1 SP3
 
 Info: The design
-      Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/designer/impl1/TOP\
-      LEVEL.adb was last modified by software version 10.1.3.1.
+      Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/designer/impl1/TOPLEVE\
+      L.adb was last modified by software version 10.1.3.1.
 Opened an existing Libero design
-Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/designer/impl1/TOPLEVEL.\
-adb.
+Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/designer/impl1/TOPLEVEL.adb.
 Warning: Overwriting the existing file:
-         Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/designer/impl1/\
-         TOPLEVEL.fdb.
+         Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/designer/impl1/TOPL\
+         EVEL.fdb.
 
-The Export-map command succeeded ( 00:00:12 )
-CHECKSUM: 2653
+The Export-map command succeeded ( 00:00:13 )
+CHECKSUM: 3ACB
 Wrote to the file:
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL.\
-fdb
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.fdb
 
 The Export command succeeded ( 00:00:14 )
 Design saved to file
-Z:/russ/private/research/insight/git/hw/impl/smartfusion/capture_linux/designer/impl1/TOPLEVEL.\
-adb.
+Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/designer/impl1/TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:15 )
+The Execute Script command succeeded ( 00:00:16 )
 Design closed.
 

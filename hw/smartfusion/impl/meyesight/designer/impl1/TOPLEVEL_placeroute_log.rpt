@@ -10,7 +10,7 @@ Opened an existing Libero design TOPLEVEL.adb.
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
 'IDE_DESIGNERVIEW_ROOTDIR' set to
-'Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer'
+'Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 ***** Layout Variables *********************************************
 
@@ -34,24 +34,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Feb 26 00:19:38 2013
+Timing-driven Placer Started: Tue Feb 26 02:59:10 2013
 
-Placer Finished: Tue Feb 26 00:19:44 2013
-Total Placer CPU Time:     00:00:06
+Placer Finished: Tue Feb 26 02:59:22 2013
+Total Placer CPU Time:     00:00:12
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Tue Feb 26 00:19:47 2013
+Design: TOPLEVEL                        Started: Tue Feb 26 02:59:25 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Tue Feb 26 00:20:00 2013
-Total CPU Time:     00:00:12            Total Elapsed Time: 00:00:13
+Finished: Tue Feb 26 02:59:42 2013
+Total CPU Time:     00:00:16            Total Elapsed Time: 00:00:17
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -59,7 +59,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:26 )
+The Layout command succeeded ( 00:00:39 )
 Wrote status report to file: TOPLEVEL_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -71,11 +71,10 @@ Wrote globalusage report to file: TOPLEVEL_globalusage_report.txt
 The Report command succeeded ( 00:00:00 )
 Wrote iobank report to file: TOPLEVEL_iobank_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Design saved to file
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL.\
-adb.
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:28 )
+The Execute Script command succeeded ( 00:00:42 )
 Design closed.
 

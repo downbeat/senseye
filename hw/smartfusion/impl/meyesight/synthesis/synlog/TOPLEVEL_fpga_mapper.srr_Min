@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 12 20:41:23 2013
+# Timing Report written on Tue Feb 26 02:52:58 2013
 #
 
 
@@ -11,7 +11,7 @@ Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
-Constraint File(s):    Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\constraint\synthesis.sdc
+Constraint File(s):    Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\constraint\synthesis.sdc
                        
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
@@ -25,27 +25,30 @@ Performance Summary
 
 Worst slack in design: 0.225
 
-                                  Requested     Estimated     Requested     Estimated               Clock        Clock             
-Starting Clock                    Frequency     Frequency     Period        Period        Slack     Type         Group             
------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      47.6 MHz      25.000        21.010        3.990     declared     default_clkgroup_0
-System                            80.0 MHz      171.5 MHz     12.500        5.831         6.669     system       system_clkgroup   
-===================================================================================================================================
+                                     Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                       Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK        40.0 MHz      44.0 MHz      25.000        22.709        2.291      declared     default_clkgroup_0 
+clkgenerator|SCLK_inferred_clock     80.0 MHz      47.4 MHz      12.500        21.111        -8.611     inferred     Inferred_clkgroup_0
+System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669      system       system_clkgroup    
+========================================================================================================================================
 
 
 
 Clock Relationships
 *******************
 
-Clocks                                                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-----------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                       Ending                         |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
-----------------------------------------------------------------------------------------------------------------------------------------------------
-System                         System                         |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
-System                         MSS_CORE2_0.MSS_CCC_0.FAB_CLK  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK  System                         |  0.000       1.519  |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK  MSS_CORE2_0.MSS_CCC_0.FAB_CLK  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-====================================================================================================================================================
+Clocks                                                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                          Ending                            |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+System                            System                            |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
+System                            MSS_CORE2_0.MSS_CCC_0.FAB_CLK     |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                            clkgenerator|SCLK_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK     System                            |  0.000       1.519  |  No paths    -      |  No paths    -      |  No paths    -    
+MSS_CORE2_0.MSS_CCC_0.FAB_CLK     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 

@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Tue Feb 26 00:20:03 2013 ***************************************************************************
+                          Tue Feb 26 02:59:46 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
-File Name: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL.adb
+File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb
 Design Name: TOPLEVEL  Design State: layout
-Last Saved: Tue Feb 26 00:19:11 2013
+Last Saved: Tue Feb 26 02:58:47 2013
 
 ***** Device Data **************************************************
 
@@ -22,8 +22,8 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Tue Feb 12 20:41:28 2013:
-        Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.edn
+Source File(s) Imported on Tue Feb 26 02:53:40 2013:
+        Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
 
 
 ***** CAE Variables ************************************************
@@ -50,14 +50,14 @@ Family      : SmartFusion
 Device      : A2F500M3G
 Package     : 484 FBGA
 Source      :
-Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.edn
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
 Format      : EDIF
 Topcell     : TOPLEVEL
 Speed grade : STD
 Temp        : -40:25:100
 Voltage     : 1.58:1.50:1.42
 
-Keep Existing Physical Constraints : No
+Keep Existing Physical Constraints : Yes
 Keep Existing Timing Constraints   : Yes
 
 pdc_abort_on_error                 : Yes
@@ -351,6 +351,17 @@ Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_GLA drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_LOCK drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_YB drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_YC drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[8] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[9] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[10] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[11] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[12] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[13] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[14] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[15] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[16] drives no load.
+Warning: CMP201: Net stonyman_0/DOUT_TMP[17] drives no load.
+Warning: Top level port MISO is not connected to any IO pad
 
 Netlist Optimization Report
 ===========================
@@ -360,43 +371,123 @@ Optimized macros:
   - Buffers:                1
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        3
+  - Logic combining:        42
 
-    Total macros optimized  4
+    Total macros optimized  43
 
-There were 0 error(s) and 274 warning(s) in this design.
+There were 0 error(s) and 285 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
 
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNINTNH3[16] -fixed no 36 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[5] -fixed no 27 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIF0GE[9] -fixed no 29 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52[18] -fixed no 25 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg_RNI4TVH -fixed no 33 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI79GT2[4] -fixed no 28 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI3SHM[2] -fixed no 31 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[13] -fixed no 33 35
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/un1_CAHBLTI1OI -fixed no 34 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[2] -fixed no 51 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIQBUP[6] -fixed no 22 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI10I_RNI2P0Q4 -fixed no 36 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/ac_counter_RNI1L5I2[0] -fixed no 35 46
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI6QN17[2] -fixed no 30 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI01AQ2[4] -fixed no 29 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTII1_RNIJE4GB -fixed no 36 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIS5013[4] -fixed no 32 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIA52K3_1[2] -fixed no 27 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIJ5VC[2] -fixed no 25 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hready_reg_RNI814J1 -fixed no 51 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI74PR6[4] -fixed no 33 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI76CAC[5] -fixed no 53 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52_1[18] -fixed no 24 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[9] -fixed no 41 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/ac_counter_RNILLIU[1] -fixed no 40 56
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIAAR52_0[16] -fixed no 36 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIA52K3_2[2] -fixed no 28 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[4] -fixed no 30 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTOI1_m_i_a2 -fixed no 37 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNO_0[6] -fixed no 23 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2] -fixed no 28 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNIS870A[6] -fixed no 29 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52_0[18] -fixed no 24 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l_RNIDF1N[1] -fixed no 38 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/ac_counter_RNO_0[1] -fixed no 42 56
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTOI0I_RNI1K7SP -fixed no 52 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_RNO_4[6] -fixed no 48 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIA52K3_3[2] -fixed no 30 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI0U57C[5] -fixed no 37 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIV5BQ1[10] -fixed no 24 15
 
-There were 0 error(s) and 0 warning(s).
+There were 0 error(s) and 40 warning(s).
 
 =====================================================================
 Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   1096  Total:  11520   (9.51%)
-    Fabric IO (W/ clocks)      Used:     60  Total:    128   (46.88%)
+    Fabric                     Used:   2041  Total:  11520   (17.72%)
+    Fabric IO (W/ clocks)      Used:     67  Total:    128   (52.34%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:     12  Total:     43   (27.91%)
-    GLOBAL (Chip+Quadrant)     Used:      1  Total:     15   (6.67%)
+    GLOBAL (Chip+Quadrant)     Used:      3  Total:     15   (20.00%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
     On-chip RC oscillator      Used:      0  Total:      1   (0.00%)
     Main Crystal oscillator    Used:      1  Total:      1   (100.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      0  Total:     24   (0.00%)
+    RAM/FIFO                   Used:      1  Total:     24   (4.17%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 1      | 3  (33.33%)*
+    Chip global     | 3      | 3  (100.00%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -408,15 +499,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 807          | 807
-    SEQ     | 289          | 289
+    COMB    | 1678         | 1678
+    SEQ     | 363          | 363
 
 I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
     Input I/O                     | 1             | 0            | 0
-    Output I/O                    | 43            | 0            | 0
+    Output I/O                    | 50            | 0            | 0
     Bidirectional I/O             | 16            | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -427,13 +518,15 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 1     | 43     | 16
+    LVTTL                           | 3.30v | N/A   | 1     | 50     | 16
 
 I/O Placement:
 
-    Locked  :   0
-    Placed  :  60 ( 100.00% )
-    UnPlaced:   0
+    Locked  :  60 ( 89.55% )
+    Placed  :   0
+    UnPlaced:   7 ( 10.45% )
+
+Warning: Only some I/Os are locked
 
 Net information report:
 =======================
@@ -441,11 +534,17 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    290     CLK_NET       Net   : FAB_CLK
+    320     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
+                          Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
+                          Source: NETLIST
+    291     CLK_NET       Net   : FAB_CLK
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    259     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
-                          Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
+    76      CLK_NET       Net   : SCLK_c
+                          Driver: clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC
+                          Source: NETLIST
+    57      INT_NET       Net   : stonyman_0/N_2345
+                          Driver: stonyman_0/counterWait_RNIC9HK9_0[20]/U_CLKSRC
                           Source: NETLIST
     1       INT_NET       Net   : Phy_RMII_CLK_c
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
@@ -454,50 +553,50 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
+    56      INT_NET       Net   : stonyman_0/counterWait_81_0_iv_i_o2_1tt_13_m3_i_0_N_4
+                          Driver: stonyman_0/state_i_RNIN1B1P[0]
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
+    40      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
-    34      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIIlI_iv
+    34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
     32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[4]
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
-    32      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[0]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[0]
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[9]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
+    56      INT_NET       Net   : stonyman_0/counterWait_81_0_iv_i_o2_1tt_13_m3_i_0_N_4
+                          Driver: stonyman_0/state_i_RNIN1B1P[0]
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
+    40      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
-    34      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIIlI_iv
+    34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
     32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[4]
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
-    32      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[0]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[0]
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[9]
 
 
 Layout Output:
@@ -523,24 +622,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Feb 26 00:19:38 2013
+Timing-driven Placer Started: Tue Feb 26 02:59:10 2013
 
-Placer Finished: Tue Feb 26 00:19:44 2013
-Total Placer CPU Time:     00:00:06
+Placer Finished: Tue Feb 26 02:59:22 2013
+Total Placer CPU Time:     00:00:12
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Tue Feb 26 00:19:47 2013
+Design: TOPLEVEL                        Started: Tue Feb 26 02:59:25 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Tue Feb 26 00:20:00 2013
-Total CPU Time:     00:00:12            Total Elapsed Time: 00:00:13
+Finished: Tue Feb 26 02:59:42 2013
+Total CPU Time:     00:00:16            Total Elapsed Time: 00:00:17
                         o - o - o - o - o - o
 
 

@@ -4,9 +4,9 @@ Product Version F-2012.03M-SP1
 
 Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-Reading constraint file: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\constraint\synthesis.sdc
-@L: Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt 
-Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_scck.rpt" file 
+Reading constraint file: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\constraint\synthesis.sdc
+@L: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
@@ -16,7 +16,7 @@ Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 
 
 Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
-@W: BN132 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@W: BN132 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
 
 
 Clock Summary
@@ -29,15 +29,17 @@ System                            1.0 MHz       1000.000      system       syste
 MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      25.000        declared     default_clkgroup_0
 =============================================================================================
 
+@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including AdcCap_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 110MB)
 
-@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.sap.
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 45MB peak: 110MB)
+At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 110MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 12 20:41:21 2013
+# Tue Feb 26 02:52:49 2013
 
 ###########################################################]

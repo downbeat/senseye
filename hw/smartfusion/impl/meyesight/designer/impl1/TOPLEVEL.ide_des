@@ -20,13 +20,13 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\designer\impl1\TOPLEVEL.adb"
+KEY IDE_DES_ADB_PATH "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb"
 LIST SOURCE_FILES
-VALUE "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL.edn;edn"
+VALUE "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn;edn"
 ENDLIST
 LIST OPTIONAL_FILES
-VALUE "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\component\work\TOPLEVEL\TOPLEVEL.pdc;Skipped"
-VALUE "Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\synthesis\TOPLEVEL_sdc.sdc;Skipped"
+VALUE "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\TOPLEVEL\TOPLEVEL.pdc;Skipped"
+VALUE "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL_sdc.sdc;Skipped"
 ENDLIST
 LIST VCD_FILES
 ENDLIST

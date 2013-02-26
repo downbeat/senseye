@@ -13,7 +13,7 @@ KEY VendorTechnology_IO_DEFT_STD ""
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_TEMPR ""
 KEY VendorTechnology_VOLTR ""
-KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\impl\smartfusion\meyesight"
+KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360719636"
+TIME="1361864900"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1360719636"
+TIME="1361864900"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -259,12 +259,12 @@ PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360717852"
+TIME="1361861209"
 SIZE="2400"
 ENDFILE
 VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360717871"
+TIME="1361861209"
 SIZE="413"
 ENDFILE
 VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
@@ -331,19 +331,19 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1360719637"
-SIZE="1937"
+TIME="1361864901"
+SIZE="2064"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1360719645"
-SIZE="8710"
+TIME="1361864908"
+SIZE="10210"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1360719634"
+TIME="1361864899"
 SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
@@ -354,8 +354,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1360719637"
-SIZE="29575"
+TIME="1361864901"
+SIZE="32477"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -366,7 +366,7 @@ SIZE="8624"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1361856025"
+TIME="1361861209"
 SIZE="1428480"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
@@ -381,43 +381,48 @@ SIZE="1282"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1360719693"
-SIZE="30044"
+TIME="1361865225"
+SIZE="36819"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361856120"
-SIZE="208896"
+TIME="1361865824"
+SIZE="235520"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361856053"
+TIME="1361861209"
 SIZE="208896"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1361856725"
+TIME="1361861209"
 SIZE="2071"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1361856004"
-SIZE="2440"
+TIME="1361865587"
+SIZE="2429"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1361856026"
+TIME="1361861209"
 SIZE="978"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1361856009"
-SIZE="1221"
+TIME="1361865593"
+SIZE="1210"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
 STATE="utd"
-TIME="1360719522"
+TIME="1361861209"
 SIZE="232"
+ENDFILE
+VALUE "<project>\hdl\AdcCap.v,hdl"
+STATE="utd"
+TIME="1361863242"
+SIZE="2712"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -428,6 +433,11 @@ VALUE "<project>\hdl\apb.v,hdl"
 STATE="utd"
 TIME="1360612688"
 SIZE="6659"
+ENDFILE
+VALUE "<project>\hdl\clkgenerator.v,hdl"
+STATE="utd"
+TIME="1361865159"
+SIZE="1298"
 ENDFILE
 VALUE "<project>\hdl\cr_int.v,hdl"
 STATE="utd"
@@ -443,6 +453,11 @@ VALUE "<project>\hdl\psram_cr.v,hdl"
 STATE="utd"
 TIME="1360612688"
 SIZE="2343"
+ENDFILE
+VALUE "<project>\hdl\stonyman.v,hdl"
+STATE="utd"
+TIME="1361863234"
+SIZE="47759"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
@@ -481,7 +496,7 @@ PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1360719637"
+TIME="1361864901"
 SIZE="629"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -496,6 +511,11 @@ STATE="utd"
 TIME="1360612688"
 SIZE="670"
 PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
+ENDFILE
+VALUE "<project>\synthesis\synwork\TOPLEVEL_compiler.so,so"
+STATE="utd"
+TIME="1361864649"
+SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
@@ -519,7 +539,7 @@ SIZE="446"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1361856725"
+TIME="1361861209"
 SIZE="4357"
 ENDFILE
 ENDLIST
@@ -607,17 +627,6 @@ ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -708,8 +717,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -773,17 +782,6 @@ VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST "CoreAHBLite::COREAHBLITE_LIB"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -798,10 +796,13 @@ ENDLIST
 LIST OpenedFileList
 SmartDesign;TOPLEVEL
 SmartDesign;MSS_CORE2
+HDL;hdl\clkgenerator.v
 Reports;Reports
 ACTIVEVIEW;TOPLEVEL
 ENDLIST
 LIST ModuleSubBlockList
+LIST "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
+ENDLIST
 LIST "AHB::work","hdl\ahb.v","FALSE","FALSE"
 ENDLIST
 LIST "apb::work","hdl\apb.v","FALSE","FALSE"
@@ -809,6 +810,8 @@ ENDLIST
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
 ENDLIST
 LIST "cr_int::work","hdl\cr_int.v","FALSE","FALSE"
 ENDLIST
@@ -888,10 +891,15 @@ SUBBLOCK "cr_int::work","hdl\cr_int.v","FALSE","FALSE"
 ENDLIST
 LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
 ENDLIST
+LIST "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
+ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
+SUBBLOCK "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
+SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
+SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
 ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST

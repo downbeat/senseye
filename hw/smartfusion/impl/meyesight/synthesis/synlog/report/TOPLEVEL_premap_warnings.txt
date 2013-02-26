@@ -1,1 +1,2 @@
-@W: BN132 :"z:\russ\private\research\insight\git\hw\impl\smartfusion\capture_linux\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@W: BN132 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adccap.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including AdcCap_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 

@@ -1,37 +1,49 @@
-@P:  Worst Slack : 3.990
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency : 47.6 MHz
+@P:  Worst Slack : -8.611
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency : 44.0 MHz
 @P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Frequency : 40.0 MHz
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period : 21.010
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period : 22.709
 @P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Period : 25.000
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack : 3.990
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack : 2.291
+@P:  clkgenerator|SCLK_inferred_clock - Estimated Frequency : 47.4 MHz
+@P:  clkgenerator|SCLK_inferred_clock - Requested Frequency : 80.0 MHz
+@P:  clkgenerator|SCLK_inferred_clock - Estimated Period : 21.111
+@P:  clkgenerator|SCLK_inferred_clock - Requested Period : 12.500
+@P:  clkgenerator|SCLK_inferred_clock - Slack : -8.611
 @P:  System - Estimated Frequency : 171.5 MHz
 @P:  System - Requested Frequency : 80.0 MHz
 @P:  System - Estimated Period : 5.831
 @P:  System - Requested Period : 12.500
 @P:  System - Slack : 6.669
 @P:  Worst Slack(min analysis) : 0.225
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency(min analysis) : 47.6 MHz
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Frequency(min analysis) : 44.0 MHz
 @P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Frequency(min analysis) : 40.0 MHz
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period(min analysis) : 21.010
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Estimated Period(min analysis) : 22.709
 @P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Requested Period(min analysis) : 25.000
-@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack(min analysis) : 3.990
+@P:  MSS_CORE2_0.MSS_CCC_0.FAB_CLK - Slack(min analysis) : 2.291
+@P:  clkgenerator|SCLK_inferred_clock - Estimated Frequency(min analysis) : 47.4 MHz
+@P:  clkgenerator|SCLK_inferred_clock - Requested Frequency(min analysis) : 80.0 MHz
+@P:  clkgenerator|SCLK_inferred_clock - Estimated Period(min analysis) : 21.111
+@P:  clkgenerator|SCLK_inferred_clock - Requested Period(min analysis) : 12.500
+@P:  clkgenerator|SCLK_inferred_clock - Slack(min analysis) : -8.611
 @P:  System - Estimated Frequency(min analysis) : 171.5 MHz
 @P:  System - Requested Frequency(min analysis) : 80.0 MHz
 @P:  System - Estimated Period(min analysis) : 5.831
 @P:  System - Requested Period(min analysis) : 12.500
 @P:  System - Slack(min analysis) : 6.669
-@P:  Total Area : 1099.0
-@P:  Total Area : 823.0
-@P:  Total Area : 299.0
-@P:  Total Area : 524.0
+@P:  Total Area : 2083.0
+@P:  Total Area : 982.0
+@P:  Total Area : 820.0
+@P:  Total Area : 298.0
+@P:  Total Area : 522.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
-@P:  Total Area : 276.0
-@P:  Total Area : 276.0
-@P:  Total Area : 77.0
-@P:  Total Area : 41.0
-@P:  Total Area : 199.0
-@P:  Total Area : 18.0
-@P:  Total Area : 6.0
-@P:  Total Area : 1099.0
-@P:  CPU Time : 0h:00m:01s
+@P:  Total Area : 279.0
+@P:  Total Area : 279.0
+@P:  Total Area : 78.0
+@P:  Total Area : 43.0
+@P:  Total Area : 201.0
+@P:  Total Area : 16.0
+@P:  Total Area : 7.0
+@P:  Total Area : 2.0
+@P:  Total Area : 2083.0
+@P:  CPU Time : 0h:00m:09s

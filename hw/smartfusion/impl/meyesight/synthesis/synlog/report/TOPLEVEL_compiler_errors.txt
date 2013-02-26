@@ -1,0 +1,2 @@
+@E: CL123 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v":33:0:33:5|Logic for clkCameraSS does not match a standard flip-flop
+
