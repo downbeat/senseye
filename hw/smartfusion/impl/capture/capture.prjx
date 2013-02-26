@@ -263,32 +263,32 @@ SIZE="222"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.adb,adb"
 STATE="utd"
-TIME="1361572145"
+TIME="1361862407"
 SIZE="1704448"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.fdb,fdb"
 STATE="utd"
-TIME="1361572144"
-SIZE="108440"
+TIME="1361862407"
+SIZE="108441"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture.ide_des,ide_des"
 STATE="utd"
-TIME="1361861209"
+TIME="1361862408"
 SIZE="1151"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_compile_log.rpt,log"
 STATE="utd"
-TIME="1361572092"
+TIME="1361862354"
 SIZE="37310"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pdb,pdb"
 STATE="utd"
-TIME="1361572167"
+TIME="1361862429"
 SIZE="117248"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\mss_capture.pro,pro"
 STATE="utd"
-TIME="1361860667"
+TIME="1361862482"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_fp\projectData\mss_capture.pdb,pdb"
@@ -303,17 +303,17 @@ SIZE="360"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1361572125"
+TIME="1361862388"
 SIZE="2476"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1361572145"
+TIME="1361862408"
 SIZE="954"
 ENDFILE
 VALUE "<project>\designer\impl1\mss_capture_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1361572129"
+TIME="1361862392"
 SIZE="1230"
 ENDFILE
 VALUE "<project>\designer\impl1\stonyman.ide_des,ide_des"
@@ -367,22 +367,22 @@ PARENT="<project>\component\work\mss_capture_MSS\mss_capture_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.edn,syn_edn"
 STATE="utd"
-TIME="1361572082"
-SIZE="496930"
+TIME="1361862344"
+SIZE="496929"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture.so,so"
 STATE="utd"
-TIME="1361861209"
+TIME="1361862344"
 SIZE="256"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_sdc.sdc,sdc"
 STATE="utd"
-TIME="1361861209"
+TIME="1361862344"
 SIZE="550"
 ENDFILE
 VALUE "<project>\synthesis\mss_capture_syn.prj,prj"
 STATE="utd"
-TIME="1361860667"
+TIME="1361862346"
 SIZE="2566"
 ENDFILE
 VALUE "<project>\synthesis\synwork\mss_capture_compiler.so,so"
@@ -524,8 +524,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -587,10 +587,8 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-SmartDesign;mss_capture
-SmartDesign;mss_capture_MSS
-Reports;Reports
-ACTIVEVIEW;Reports
+StartPage;StartPage
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "AdcCap::work","hdl\AdcCap.v","FALSE","FALSE"
