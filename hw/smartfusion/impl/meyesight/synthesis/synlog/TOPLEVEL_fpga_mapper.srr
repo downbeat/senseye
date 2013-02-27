@@ -138,28 +138,28 @@ Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 115MB peak: 11
 Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 116MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:02s; Memory used current: 110MB peak: 116MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:02s; Memory used current: 110MB peak: 118MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 110MB peak: 116MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 111MB peak: 118MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:05s; Memory used current: 122MB peak: 122MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:07s; Memory used current: 127MB peak: 128MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:05s; Memory used current: 121MB peak: 123MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:07s; Memory used current: 127MB peak: 128MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:06s; Memory used current: 121MB peak: 123MB)
+Finished preparing to map (Time elapsed 0h:00m:07s; Memory used current: 126MB peak: 128MB)
 
-@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_801 
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_799 
 @N: FP130 |Promoting Net SCLK_c on CLKINT  clkgenerator_0.SCLK_inferred_clock 
-@N: FP130 |Promoting Net stonyman_0.N_2422_i on CLKINT  I_802 
+@N: FP130 |Promoting Net stonyman_0.N_2422_i on CLKINT  I_800 
 
-Finished technology mapping (Time elapsed 0h:00m:06s; Memory used current: 137MB peak: 139MB)
+Finished technology mapping (Time elapsed 0h:00m:07s; Memory used current: 136MB peak: 138MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:06s; Memory used current: 137MB peak: 139MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:07s; Memory used current: 136MB peak: 138MB)
 
 
 Added 0 Buffers
@@ -167,25 +167,27 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:06s; Memory used current: 138MB peak: 139MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:07s; Memory used current: 137MB peak: 138MB)
 
 Writing Analyst data base Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:06s; Memory used current: 135MB peak: 139MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:07s; Memory used current: 134MB peak: 138MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:06s; Memory used current: 137MB peak: 139MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:08s; Memory used current: 136MB peak: 138MB)
 
+@W: MT246 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_core2.v":636:7:636:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
-Found clock MSS_CORE2_0.MSS_CCC_0.FAB_CLK with period 25.00ns 
+Found clock FAB_CLK with period 25.00ns 
+Found clock FCLK with period 25.00ns 
 @W: MT420 |Found inferred clock clkgenerator|SCLK_inferred_clock with period 12.50ns. Please declare a user-defined clock on object "n:SCLK"
 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Feb 26 04:42:46 2013
+# Timing Report written on Wed Feb 27 01:56:14 2013
 #
 
 
@@ -196,7 +198,7 @@ Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
-Constraint File(s):    Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\constraint\synthesis.sdc
+Constraint File(s):    Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell_syn.sdc
                        
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
@@ -208,13 +210,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -4.288
+Worst slack in design: -5.755
 
                                      Requested     Estimated     Requested     Estimated                Clock        Clock              
 Starting Clock                       Frequency     Frequency     Period        Period        Slack      Type         Group              
 ----------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK        40.0 MHz      49.9 MHz      25.000        20.059        4.941      declared     default_clkgroup_0 
-clkgenerator|SCLK_inferred_clock     80.0 MHz      59.6 MHz      12.500        16.788        -4.288     inferred     Inferred_clkgroup_0
+FAB_CLK                              40.0 MHz      47.4 MHz      25.000        21.118        3.882      declared     clk_group_0        
+FCLK                                 40.0 MHz      NA            25.000        NA            NA         declared     clk_group_0        
+clkgenerator|SCLK_inferred_clock     80.0 MHz      54.8 MHz      12.500        18.255        -5.755     inferred     Inferred_clkgroup_0
 System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669      system       system_clkgroup    
 ========================================================================================================================================
 
@@ -230,11 +233,11 @@ Clocks                                                              |    rise  t
 Starting                          Ending                            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 System                            System                            |  12.500      6.669   |  No paths    -      |  No paths    -      |  No paths    -    
-System                            MSS_CORE2_0.MSS_CCC_0.FAB_CLK     |  25.000      7.603   |  No paths    -      |  No paths    -      |  No paths    -    
-System                            clkgenerator|SCLK_inferred_clock  |  12.500      2.107   |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK     System                            |  25.000      15.750  |  No paths    -      |  No paths    -      |  No paths    -    
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     |  25.000      4.941   |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  12.500      -4.288  |  No paths    -      |  No paths    -      |  No paths    -    
+System                            FAB_CLK                           |  25.000      6.545   |  No paths    -      |  No paths    -      |  No paths    -    
+System                            clkgenerator|SCLK_inferred_clock  |  12.500      1.143   |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                           System                            |  25.000      16.782  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                           FAB_CLK                           |  25.000      3.883   |  No paths    -      |  No paths    -      |  No paths    -    
+clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  12.500      -5.755  |  No paths    -      |  No paths    -      |  No paths    -    
 ===========================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -249,7 +252,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: MSS_CORE2_0.MSS_CCC_0.FAB_CLK
+Detailed Report for Clock: FAB_CLK
 ====================================
 
 
@@ -257,41 +260,41 @@ Detailed Report for Clock: MSS_CORE2_0.MSS_CCC_0.FAB_CLK
 Starting Points with Worst Slack
 ********************************
 
-                                                         Starting                                                                  Arrival          
-Instance                                                 Reference                         Type         Pin     Net                Time        Slack
-                                                         Clock                                                                                      
-----------------------------------------------------------------------------------------------------------------------------------------------------
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1C0       Q       CAHBLTOI0I         0.737       4.941
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       6.938
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E1C0     Q       CAHBLTI1lI[19]     0.580       7.322
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[15]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[15]     0.580       7.362
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[7]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[7]      0.580       7.397
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[10]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[10]     0.580       7.397
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[1]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[1]      0.580       7.489
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[14]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[14]     0.580       7.513
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[6]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[6]      0.737       7.538
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[8]      MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1E0C0     Q       CAHBLTl00I[8]      0.580       7.548
-====================================================================================================================================================
+                                                         Starting                                              Arrival           
+Instance                                                 Reference     Type         Pin     Net                Time        Slack 
+                                                         Clock                                                                   
+---------------------------------------------------------------------------------------------------------------------------------
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         FAB_CLK       DFN1C0       Q       CAHBLTOI0I         0.737       3.882 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       5.879 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[19]     0.580       6.264 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I         FAB_CLK       DFN1C0       Q       CAHBLTIO0I         0.737       6.514 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[16]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[16]     0.737       7.200 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[17]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[17]     0.580       7.584 
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl1lI         FAB_CLK       DFN1E1C0     Q       CAHBLTl1lI         0.737       10.596
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[14]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[14]     0.737       11.233
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[7]      FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[7]      0.737       11.274
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[10]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[10]     0.737       11.276
+=================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                 Starting                                                                Required          
-Instance                         Reference                         Type     Pin     Net                  Time         Slack
-                                 Clock                                                                                     
----------------------------------------------------------------------------------------------------------------------------
-psram_cr_0.ahb0.haddr_reg[0]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[0]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[1]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[1]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[2]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[2]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[3]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[3]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[4]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[4]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[5]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[5]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[6]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[6]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[7]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[7]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[8]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[8]     24.461       4.941
-psram_cr_0.ahb0.haddr_reg[9]     MSS_CORE2_0.MSS_CCC_0.FAB_CLK     DFN1     D       haddr_reg_RNO[9]     24.461       4.941
-===========================================================================================================================
+                                 Starting                                            Required          
+Instance                         Reference     Type     Pin     Net                  Time         Slack
+                                 Clock                                                                 
+-------------------------------------------------------------------------------------------------------
+psram_cr_0.ahb0.haddr_reg[0]     FAB_CLK       DFN1     D       haddr_reg_RNO[0]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[1]     FAB_CLK       DFN1     D       haddr_reg_RNO[1]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[2]     FAB_CLK       DFN1     D       haddr_reg_RNO[2]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[3]     FAB_CLK       DFN1     D       haddr_reg_RNO[3]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[4]     FAB_CLK       DFN1     D       haddr_reg_RNO[4]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[5]     FAB_CLK       DFN1     D       haddr_reg_RNO[5]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[6]     FAB_CLK       DFN1     D       haddr_reg_RNO[6]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[7]     FAB_CLK       DFN1     D       haddr_reg_RNO[7]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[8]     FAB_CLK       DFN1     D       haddr_reg_RNO[8]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[9]     FAB_CLK       DFN1     D       haddr_reg_RNO[9]     24.461       3.882
+=======================================================================================================
 
 
 
@@ -305,15 +308,15 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         24.461
 
-    - Propagation time:                      19.521
+    - Propagation time:                      20.579
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 4.941
+    = Slack (non-critical) :                 3.883
 
-    Number of logic level(s):                10
+    Number of logic level(s):                11
     Starting point:                          CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I / Q
     Ending point:                            psram_cr_0.ahb0.haddr_reg[0] / D
-    The start point is clocked by            MSS_CORE2_0.MSS_CCC_0.FAB_CLK [rising] on pin CLK
-    The end   point is clocked by            MSS_CORE2_0.MSS_CCC_0.FAB_CLK [rising] on pin CLK
+    The start point is clocked by            FAB_CLK [rising] on pin CLK
+    The end   point is clocked by            FAB_CLK [rising] on pin CLK
 
 Instance / Net                                                                             Pin      Pin               Arrival     No. of    
 Name                                                                            Type       Name     Dir     Delay     Time        Fan Out(s)
@@ -331,28 +334,31 @@ CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I_RNIEQR52                       
 CAHBLTl1II_0[7]                                                                 Net        -        -       0.806     -           3         
 CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I_RNINTNH3                       NOR2B      A        In      -         8.056       -         
 CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I_RNINTNH3                       NOR2B      Y        Out     0.514     8.570       -         
-CAHBLTO1lII                                                                     Net        -        -       1.669     -           9         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI3SQI4[7]         OA1C       A        In      -         10.238      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI3SQI4[7]         OA1C       Y        Out     0.931     11.170      -         
-N_110                                                                           Net        -        -       0.386     -           2         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR3B       B        In      -         11.556      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR3B       Y        Out     0.624     12.180      -         
-CAHBLTOO0l[1]                                                                   Net        -        -       2.082     -           14        
-psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR3B      A        In      -         14.262      -         
-psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR3B      Y        Out     0.641     14.903      -         
-hwrite_reg4                                                                     Net        -        -       0.386     -           2         
-psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      A        In      -         15.289      -         
-psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      Y        Out     0.627     15.916      -         
+CAHBLTO1lII                                                                     Net        -        -       1.639     -           8         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A       A        In      -         10.209      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_ns_o3[0]            OR2A       Y        Out     0.466     10.675      -         
+N_94                                                                            Net        -        -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       B        In      -         11.060      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       Y        Out     0.900     11.961      -         
+N_104                                                                           Net        -        -       0.386     -           2         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       B        In      -         12.346      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       Y        Out     0.516     12.862      -         
+CAHBLTOO0l[1]                                                                   Net        -        -       0.806     -           3         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      A        In      -         13.669      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      Y        Out     0.627     14.296      -         
+CAHBLTI1Il6                                                                     Net        -        -       2.037     -           13        
+psram_cr_0.ahb0.fsm_RNIEDGIM                                                    NOR3B      A        In      -         16.333      -         
+psram_cr_0.ahb0.fsm_RNIEDGIM                                                    NOR3B      Y        Out     0.641     16.974      -         
 fsm_0_sqmuxa                                                                    Net        -        -       1.994     -           12        
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         17.910      -         
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     18.389      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         18.968      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     19.448      -         
 N_169                                                                           Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         18.711      -         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     19.199      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         19.769      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     20.257      -         
 haddr_reg_RNO[0]                                                                Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         19.521      -         
+psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         20.579      -         
 ============================================================================================================================================
-Total path delay (propagation time + setup) of 20.059 is 7.233(36.1%) logic and 12.826(63.9%) route.
+Total path delay (propagation time + setup) of 21.118 is 7.560(35.8%) logic and 13.558(64.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -367,41 +373,41 @@ Detailed Report for Clock: clkgenerator|SCLK_inferred_clock
 Starting Points with Worst Slack
 ********************************
 
-                                Starting                                                                   Arrival           
-Instance                        Reference                            Type     Pin     Net                  Time        Slack 
-                                Clock                                                                                        
------------------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[0]     clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[0]     0.737       -4.288
-stonyman_0.state[3]             clkgenerator|SCLK_inferred_clock     DFN1     Q       state[3]             0.737       -3.922
-stonyman_0.cachedPOINTER[1]     clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[1]     0.737       -3.869
-stonyman_0.state[4]             clkgenerator|SCLK_inferred_clock     DFN1     Q       state[4]             0.737       -3.692
-stonyman_0.substate[12]         clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[12]         0.737       -3.664
-stonyman_0.cachedPOINTER[2]     clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[2]     0.737       -3.487
-stonyman_0.counterWait[12]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterWait[12]      0.580       -3.343
-stonyman_0.substate[11]         clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[11]         0.737       -3.341
-stonyman_0.substate[8]          clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[8]          0.737       -3.247
-stonyman_0.counterWait[29]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterWait[29]      0.580       -3.233
-=============================================================================================================================
+                                              Starting                                                                   Arrival           
+Instance                                      Reference                            Type     Pin     Net                  Time        Slack 
+                                              Clock                                                                                        
+-------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.cachedPOINTER[0]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[0]     0.737       -5.755
+stonyman_0.state[3]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[3]             0.737       -5.401
+stonyman_0.cachedPOINTER[2]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[2]     0.737       -5.251
+stonyman_0.state[4]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[4]             0.737       -5.173
+stonyman_0.substate[13]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[13]         0.580       -4.898
+stonyman_0.cachedPOINTER[1]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[1]     0.737       -4.819
+stonyman_0.state[1]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[1]             0.737       -4.801
+stonyman_0.substate[12]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[12]         0.580       -4.683
+stonyman_0.cachedValue_tile.WADDR_REG1[2]     clkgenerator|SCLK_inferred_clock     DFN1     Q       WADDR_REG1[2]        0.737       -4.505
+stonyman_0.substate[11]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[11]         0.737       -4.400
+===========================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                               Starting                                                                         Required           
-Instance                       Reference                            Type     Pin     Net                        Time         Slack 
-                               Clock                                                                                               
------------------------------------------------------------------------------------------------------------------------------------
-stonyman_0.substate[3]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_ns[3]             11.927       -4.288
-stonyman_0.counterWait[2]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81_1_iv[2]     11.927       -3.922
-stonyman_0.counterWait[1]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[1]          11.961       -3.918
-stonyman_0.counterWait[0]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81_0_iv[0]     11.927       -3.804
-stonyman_0.counterWait[9]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[9]          11.961       -3.769
-stonyman_0.counterWait[20]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[20]         11.961       -3.769
-stonyman_0.counterWait[23]     clkgenerator|SCLK_inferred_clock     DFN1     D       N_48                       11.961       -3.769
-stonyman_0.state[3]            clkgenerator|SCLK_inferred_clock     DFN1     D       state_RNO[3]               11.961       -3.618
-stonyman_0.substate[1]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_RNO[1]            11.961       -3.350
-stonyman_0.state[5]            clkgenerator|SCLK_inferred_clock     DFN1     D       state_RNO[5]               11.961       -2.976
-===================================================================================================================================
+                               Starting                                                                      Required           
+Instance                       Reference                            Type     Pin     Net                     Time         Slack 
+                               Clock                                                                                            
+--------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.substate[3]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_ns[3]          11.961       -5.755
+stonyman_0.counterWait[20]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[20]      11.927       -5.401
+stonyman_0.counterWait[15]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[15]      11.927       -5.335
+stonyman_0.counterWait[23]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_RNO[23]     11.927       -5.053
+stonyman_0.substate[1]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_RNO[1]         11.961       -5.036
+stonyman_0.state_i[0]          clkgenerator|SCLK_inferred_clock     DFN1     D       N_173                   11.927       -4.999
+stonyman_0.state[3]            clkgenerator|SCLK_inferred_clock     DFN1     D       state_RNO[3]            11.961       -4.950
+stonyman_0.counterWait[7]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[7]       11.961       -4.898
+stonyman_0.counterWait[1]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[1]       11.927       -4.582
+stonyman_0.counterWait[3]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[3]       11.927       -4.582
+================================================================================================================================
 
 
 
@@ -411,15 +417,15 @@ Worst Path Information
 
 Path information for path number 1: 
       Requested Period:                      12.500
-    - Setup time:                            0.573
+    - Setup time:                            0.539
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
+    = Required time:                         11.961
 
-    - Propagation time:                      16.215
+    - Propagation time:                      17.717
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -4.288
+    = Slack (critical) :                     -5.755
 
-    Number of logic level(s):                10
+    Number of logic level(s):                11
     Starting point:                          stonyman_0.cachedPOINTER[0] / Q
     Ending point:                            stonyman_0.substate[3] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
@@ -429,40 +435,43 @@ Instance / Net                                                     Pin      Pin 
 Name                                                     Type      Name     Dir     Delay     Time        Fan Out(s)
 --------------------------------------------------------------------------------------------------------------------
 stonyman_0.cachedPOINTER[0]                              DFN1      Q        Out     0.737     0.737       -         
-cachedPOINTER[0]                                         Net       -        -       2.037     -           13        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      B        In      -         2.774       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      Y        Out     0.937     3.711       -         
-I_4_0                                                    Net       -        -       1.639     -           8         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     OR3A      B        In      -         5.349       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     OR3A      Y        Out     0.641     5.991       -         
-substate_tr13_a1_0_N_5                                   Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIVOH12[0]         NOR2      A        In      -         7.270       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIVOH12[0]         NOR2      Y        Out     0.363     7.633       -         
-substate_tr13_a1_0_N_9                                   Net       -        -       0.386     -           2         
-stonyman_0.cachedValue_tile.I_1_RNIU74A4                 OA1C      C        In      -         8.019       -         
-stonyman_0.cachedValue_tile.I_1_RNIU74A4                 OA1C      Y        Out     0.525     8.544       -         
-N_1290_i_i_a2_4_o2_2_m1_0_a2_0                           Net       -        -       0.322     -           1         
-stonyman_0.cachedValue_tile.I_1_RNIR90V8                 OA1       C        In      -         8.865       -         
-stonyman_0.cachedValue_tile.I_1_RNIR90V8                 OA1       Y        Out     0.666     9.531       -         
-I_1_RNIR90V8                                             Net       -        -       1.184     -           4         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      B        In      -         10.714      -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      Y        Out     0.516     11.230      -         
-N_271                                                    Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       B        In      -         12.510      -         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       Y        Out     0.646     13.156      -         
-N_277                                                    Net       -        -       0.386     -           2         
-stonyman_0.substate_RNO_4[3]                             NOR3B     C        In      -         13.542      -         
-stonyman_0.substate_RNO_4[3]                             NOR3B     Y        Out     0.488     14.030      -         
-N_390                                                    Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_0[3]                             NOR3A     C        In      -         14.352      -         
-stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.641     14.993      -         
-substate_RNO_0[3]                                        Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO[3]                               MX2       A        In      -         15.315      -         
-stonyman_0.substate_RNO[3]                               MX2       Y        Out     0.579     15.893      -         
+cachedPOINTER[0]                                         Net       -        -       1.994     -           12        
+stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      B        In      -         2.730       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      Y        Out     0.627     3.358       -         
+I_4_0                                                    Net       -        -       0.322     -           1         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     B        In      -         3.679       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     Y        Out     0.407     4.086       -         
+I_5_1                                                    Net       -        -       2.037     -           13        
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     A        In      -         6.123       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     Y        Out     0.516     6.639       -         
+state48_0_a2_1_o2_1_0_N_8_i_0_li                         Net       -        -       1.669     -           9         
+stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     B        In      -         8.307       -         
+stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     Y        Out     0.386     8.693       -         
+state_ns_i_0_a2_i_i_o2_1_0_N_6                           Net       -        -       0.322     -           1         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       B        In      -         9.015       -         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       Y        Out     0.646     9.661       -         
+state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.279     -           5         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     B        In      -         10.940      -         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     Y        Out     0.627     11.568      -         
+DIN_REG1_RNI63AV6[5]                                     Net       -        -       0.806     -           3         
+stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     A        In      -         12.374      -         
+stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     Y        Out     0.627     13.002      -         
+N_426                                                    Net       -        -       1.279     -           5         
+stonyman_0.substate_RNO_10[3]                            NOR2B     B        In      -         14.281      -         
+stonyman_0.substate_RNO_10[3]                            NOR2B     Y        Out     0.627     14.908      -         
+substate_ns_0_0_a2_2_1[3]                                Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO_4[3]                             NOR2B     A        In      -         15.230      -         
+stonyman_0.substate_RNO_4[3]                             NOR2B     Y        Out     0.514     15.744      -         
+N_391                                                    Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO_0[3]                             NOR3A     B        In      -         16.066      -         
+stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.488     16.554      -         
+substate_ns_0_0_a2_0_8[3]                                Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO[3]                               AO1       A        In      -         16.875      -         
+stonyman_0.substate_RNO[3]                               AO1       Y        Out     0.520     17.395      -         
 substate_ns[3]                                           Net       -        -       0.322     -           1         
-stonyman_0.substate[3]                                   DFN1      D        In      -         16.215      -         
+stonyman_0.substate[3]                                   DFN1      D        In      -         17.717      -         
 ====================================================================================================================
-Total path delay (propagation time + setup) of 16.788 is 7.313(43.6%) logic and 9.475(56.4%) route.
+Total path delay (propagation time + setup) of 18.255 is 7.262(39.8%) logic and 10.993(60.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -472,12 +481,63 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         11.927
 
-    - Propagation time:                      16.076
+    - Propagation time:                      17.327
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -4.149
+    = Slack (non-critical) :                 -5.401
 
-    Number of logic level(s):                9
-    Starting point:                          stonyman_0.cachedPOINTER[0] / Q
+    Number of logic level(s):                8
+    Starting point:                          stonyman_0.state[3] / Q
+    Ending point:                            stonyman_0.counterWait[20] / D
+    The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                 Type      Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+stonyman_0.state[3]                  DFN1      Q        Out     0.737     0.737       -         
+state[3]                             Net       -        -       2.082     -           14        
+stonyman_0.state_RNIDO98_0[4]        NOR2      B        In      -         2.819       -         
+stonyman_0.state_RNIDO98_0[4]        NOR2      Y        Out     0.646     3.466       -         
+N_65                                 Net       -        -       1.776     -           11        
+stonyman_0.state_RNIUCOK[5]          NOR2B     B        In      -         5.242       -         
+stonyman_0.state_RNIUCOK[5]          NOR2B     Y        Out     0.516     5.758       -         
+N_431                                Net       -        -       1.423     -           6         
+stonyman_0.state_RNIDJ233[4]         AO1       C        In      -         7.181       -         
+stonyman_0.state_RNIDJ233[4]         AO1       Y        Out     0.655     7.836       -         
+N_26_i_0_0_o2_3_3                    Net       -        -       0.322     -           1         
+stonyman_0.state_RNIPOFE8[4]         OR3       C        In      -         8.158       -         
+stonyman_0.state_RNIPOFE8[4]         OR3       Y        Out     0.683     8.841       -         
+N_177                                Net       -        -       2.550     -           27        
+stonyman_0.state_RNIDON9K[1]         OR2B      B        In      -         11.390      -         
+stonyman_0.state_RNIDON9K[1]         OR2B      Y        Out     0.516     11.907      -         
+N_209                                Net       -        -       2.353     -           20        
+stonyman_0.state_RNIDPDRS[4]         NOR2      B        In      -         14.260      -         
+stonyman_0.state_RNIDPDRS[4]         NOR2      Y        Out     0.646     14.906      -         
+N_1_18                               Net       -        -       0.386     -           2         
+stonyman_0.counterWait_RNO_1[20]     NOR3A     C        In      -         15.292      -         
+stonyman_0.counterWait_RNO_1[20]     NOR3A     Y        Out     0.641     15.934      -         
+N_125                                Net       -        -       0.322     -           1         
+stonyman_0.counterWait_RNO[20]       OR3       C        In      -         16.255      -         
+stonyman_0.counterWait_RNO[20]       OR3       Y        Out     0.751     17.006      -         
+counterWait_81[20]                   Net       -        -       0.322     -           1         
+stonyman_0.counterWait[20]           DFN1      D        In      -         17.327      -         
+================================================================================================
+Total path delay (propagation time + setup) of 17.901 is 6.366(35.6%) logic and 11.535(64.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      12.500
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         11.961
+
+    - Propagation time:                      17.212
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -5.251
+
+    Number of logic level(s):                11
+    Starting point:                          stonyman_0.cachedPOINTER[2] / Q
     Ending point:                            stonyman_0.substate[3] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
@@ -485,140 +545,95 @@ Path information for path number 2:
 Instance / Net                                                     Pin      Pin               Arrival     No. of    
 Name                                                     Type      Name     Dir     Delay     Time        Fan Out(s)
 --------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[0]                              DFN1      Q        Out     0.737     0.737       -         
-cachedPOINTER[0]                                         Net       -        -       2.037     -           13        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      B        In      -         2.774       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      Y        Out     0.937     3.711       -         
-I_4_0                                                    Net       -        -       1.639     -           8         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_1[1]     NOR3A     B        In      -         5.349       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_1[1]     NOR3A     Y        Out     0.360     5.709       -         
+stonyman_0.cachedPOINTER[2]                              DFN1      Q        Out     0.737     0.737       -         
+cachedPOINTER[2]                                         Net       -        -       1.526     -           7         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI2T4R[2]        XA1A      A        In      -         2.263       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI2T4R[2]        XA1A      Y        Out     0.481     2.744       -         
+I_5_1_0                                                  Net       -        -       0.322     -           1         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     A        In      -         3.066       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     Y        Out     0.516     3.582       -         
+I_5_1                                                    Net       -        -       2.037     -           13        
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     A        In      -         5.619       -         
+stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     Y        Out     0.516     6.135       -         
 state48_0_a2_1_o2_1_0_N_8_i_0_li                         Net       -        -       1.669     -           9         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI3R5L2[6]         MX2       S        In      -         7.378       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI3R5L2[6]         MX2       Y        Out     0.480     7.857       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.423     -           6         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI4SJV4[5]         NOR2B     B        In      -         9.281       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI4SJV4[5]         NOR2B     Y        Out     0.516     9.797       -         
-DIN_REG1_RNI4SJV4[5]                                     Net       -        -       0.806     -           3         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      A        In      -         10.603      -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      Y        Out     0.488     11.091      -         
-N_271                                                    Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       B        In      -         12.371      -         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       Y        Out     0.646     13.017      -         
-N_277                                                    Net       -        -       0.386     -           2         
-stonyman_0.substate_RNO_4[3]                             NOR3B     C        In      -         13.403      -         
-stonyman_0.substate_RNO_4[3]                             NOR3B     Y        Out     0.488     13.891      -         
-N_390                                                    Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_0[3]                             NOR3A     C        In      -         14.213      -         
-stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.641     14.854      -         
-substate_RNO_0[3]                                        Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO[3]                               MX2       A        In      -         15.176      -         
-stonyman_0.substate_RNO[3]                               MX2       Y        Out     0.579     15.754      -         
+stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     B        In      -         7.803       -         
+stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     Y        Out     0.386     8.189       -         
+state_ns_i_0_a2_i_i_o2_1_0_N_6                           Net       -        -       0.322     -           1         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       B        In      -         8.511       -         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       Y        Out     0.646     9.157       -         
+state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.279     -           5         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     B        In      -         10.436      -         
+stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     Y        Out     0.627     11.064      -         
+DIN_REG1_RNI63AV6[5]                                     Net       -        -       0.806     -           3         
+stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     A        In      -         11.870      -         
+stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     Y        Out     0.627     12.498      -         
+N_426                                                    Net       -        -       1.279     -           5         
+stonyman_0.substate_RNO_10[3]                            NOR2B     B        In      -         13.777      -         
+stonyman_0.substate_RNO_10[3]                            NOR2B     Y        Out     0.627     14.404      -         
+substate_ns_0_0_a2_2_1[3]                                Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO_4[3]                             NOR2B     A        In      -         14.726      -         
+stonyman_0.substate_RNO_4[3]                             NOR2B     Y        Out     0.514     15.240      -         
+N_391                                                    Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO_0[3]                             NOR3A     B        In      -         15.562      -         
+stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.488     16.050      -         
+substate_ns_0_0_a2_0_8[3]                                Net       -        -       0.322     -           1         
+stonyman_0.substate_RNO[3]                               AO1       A        In      -         16.371      -         
+stonyman_0.substate_RNO[3]                               AO1       Y        Out     0.520     16.891      -         
 substate_ns[3]                                           Net       -        -       0.322     -           1         
-stonyman_0.substate[3]                                   DFN1      D        In      -         16.076      -         
+stonyman_0.substate[3]                                   DFN1      D        In      -         17.212      -         
 ====================================================================================================================
-Total path delay (propagation time + setup) of 16.649 is 6.446(38.7%) logic and 10.204(61.3%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 3: 
-      Requested Period:                      12.500
-    - Setup time:                            0.573
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
-
-    - Propagation time:                      15.848
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -3.922
-
-    Number of logic level(s):                8
-    Starting point:                          stonyman_0.state[3] / Q
-    Ending point:                            stonyman_0.counterWait[2] / D
-    The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
-    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
-
-Instance / Net                                Pin      Pin               Arrival     No. of    
-Name                                Type      Name     Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------------
-stonyman_0.state[3]                 DFN1      Q        Out     0.737     0.737       -         
-state[3]                            Net       -        -       2.127     -           15        
-stonyman_0.state_RNIDO98[4]         NOR2      B        In      -         2.864       -         
-stonyman_0.state_RNIDO98[4]         NOR2      Y        Out     0.646     3.511       -         
-N_65                                Net       -        -       1.776     -           11        
-stonyman_0.state_RNIQGJG[5]         OR2A      A        In      -         5.287       -         
-stonyman_0.state_RNIQGJG[5]         OR2A      Y        Out     0.537     5.824       -         
-N_26_i_0_0_o2_3_N_10                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNIAL4S[11]     AND2      A        In      -         6.145       -         
-stonyman_0.substate_RNIAL4S[11]     AND2      Y        Out     0.514     6.660       -         
-N_26_i_0_0_o2_3_N_21                Net       -        -       0.322     -           1         
-stonyman_0.state_RNI0R5V4[1]        OR2       B        In      -         6.981       -         
-stonyman_0.state_RNI0R5V4[1]        OR2       Y        Out     0.646     7.628       -         
-state_RNI0R5V4[1]                   Net       -        -       1.994     -           12        
-stonyman_0.state_RNICR27G[4]        OR2A      B        In      -         9.621       -         
-stonyman_0.state_RNICR27G[4]        OR2A      Y        Out     0.646     10.268      -         
-N_88                                Net       -        -       1.708     -           10        
-stonyman_0.state_i_RNIQT1271[0]     NOR3      C        In      -         11.976      -         
-stonyman_0.state_i_RNIQT1271[0]     NOR3      Y        Out     0.751     12.727      -         
-N_166                               Net       -        -       1.279     -           5         
-stonyman_0.counterWait_RNO_2[2]     NOR2B     B        In      -         14.006      -         
-stonyman_0.counterWait_RNO_2[2]     NOR2B     Y        Out     0.516     14.522      -         
-N_140                               Net       -        -       0.322     -           1         
-stonyman_0.counterWait_RNO[2]       NOR3      C        In      -         14.844      -         
-stonyman_0.counterWait_RNO[2]       NOR3      Y        Out     0.683     15.527      -         
-counterWait_81_1_iv[2]              Net       -        -       0.322     -           1         
-stonyman_0.counterWait[2]           DFN1      D        In      -         15.848      -         
-===============================================================================================
-Total path delay (propagation time + setup) of 16.422 is 6.251(38.1%) logic and 10.171(61.9%) route.
+Total path delay (propagation time + setup) of 17.751 is 7.226(40.7%) logic and 10.525(59.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
       Requested Period:                      12.500
-    - Setup time:                            0.539
+    - Setup time:                            0.573
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.961
+    = Required time:                         11.927
 
-    - Propagation time:                      15.880
+    - Propagation time:                      17.100
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -3.918
+    = Slack (non-critical) :                 -5.173
 
     Number of logic level(s):                8
-    Starting point:                          stonyman_0.state[3] / Q
-    Ending point:                            stonyman_0.counterWait[1] / D
+    Starting point:                          stonyman_0.state[4] / Q
+    Ending point:                            stonyman_0.counterWait[20] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                Pin      Pin               Arrival     No. of    
-Name                                Type      Name     Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------------
-stonyman_0.state[3]                 DFN1      Q        Out     0.737     0.737       -         
-state[3]                            Net       -        -       2.127     -           15        
-stonyman_0.state_RNIDO98[4]         NOR2      B        In      -         2.864       -         
-stonyman_0.state_RNIDO98[4]         NOR2      Y        Out     0.646     3.511       -         
-N_65                                Net       -        -       1.776     -           11        
-stonyman_0.state_RNIQGJG[5]         OR2A      A        In      -         5.287       -         
-stonyman_0.state_RNIQGJG[5]         OR2A      Y        Out     0.537     5.824       -         
-N_26_i_0_0_o2_3_N_10                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNIAL4S[11]     AND2      A        In      -         6.145       -         
-stonyman_0.substate_RNIAL4S[11]     AND2      Y        Out     0.514     6.660       -         
-N_26_i_0_0_o2_3_N_21                Net       -        -       0.322     -           1         
-stonyman_0.state_RNI0R5V4[1]        OR2       B        In      -         6.981       -         
-stonyman_0.state_RNI0R5V4[1]        OR2       Y        Out     0.646     7.628       -         
-state_RNI0R5V4[1]                   Net       -        -       1.994     -           12        
-stonyman_0.state_RNICR27G[4]        OR2A      B        In      -         9.621       -         
-stonyman_0.state_RNICR27G[4]        OR2A      Y        Out     0.646     10.268      -         
-N_88                                Net       -        -       1.708     -           10        
-stonyman_0.state_RNI67JMG1[1]       NOR3A     B        In      -         11.976      -         
-stonyman_0.state_RNI67JMG1[1]       NOR3A     Y        Out     0.488     12.465      -         
-N_421                               Net       -        -       1.423     -           6         
-stonyman_0.counterWait_RNO_2[1]     NOR3C     C        In      -         13.888      -         
-stonyman_0.counterWait_RNO_2[1]     NOR3C     Y        Out     0.666     14.554      -         
-counterWait_2_m[1]                  Net       -        -       0.322     -           1         
-stonyman_0.counterWait_RNO[1]       OR3       C        In      -         14.875      -         
-stonyman_0.counterWait_RNO[1]       OR3       Y        Out     0.683     15.558      -         
-counterWait_81[1]                   Net       -        -       0.322     -           1         
-stonyman_0.counterWait[1]           DFN1      D        In      -         15.880      -         
-===============================================================================================
-Total path delay (propagation time + setup) of 16.418 is 6.103(37.2%) logic and 10.315(62.8%) route.
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                 Type      Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+stonyman_0.state[4]                  DFN1      Q        Out     0.737     0.737       -         
+state[4]                             Net       -        -       1.994     -           12        
+stonyman_0.state_RNIDO98_0[4]        NOR2      A        In      -         2.730       -         
+stonyman_0.state_RNIDO98_0[4]        NOR2      Y        Out     0.507     3.238       -         
+N_65                                 Net       -        -       1.776     -           11        
+stonyman_0.state_RNIUCOK[5]          NOR2B     B        In      -         5.014       -         
+stonyman_0.state_RNIUCOK[5]          NOR2B     Y        Out     0.516     5.530       -         
+N_431                                Net       -        -       1.423     -           6         
+stonyman_0.state_RNIDJ233[4]         AO1       C        In      -         6.954       -         
+stonyman_0.state_RNIDJ233[4]         AO1       Y        Out     0.655     7.609       -         
+N_26_i_0_0_o2_3_3                    Net       -        -       0.322     -           1         
+stonyman_0.state_RNIPOFE8[4]         OR3       C        In      -         7.930       -         
+stonyman_0.state_RNIPOFE8[4]         OR3       Y        Out     0.683     8.613       -         
+N_177                                Net       -        -       2.550     -           27        
+stonyman_0.state_RNIDON9K[1]         OR2B      B        In      -         11.163      -         
+stonyman_0.state_RNIDON9K[1]         OR2B      Y        Out     0.516     11.679      -         
+N_209                                Net       -        -       2.353     -           20        
+stonyman_0.state_RNIDPDRS[4]         NOR2      B        In      -         14.032      -         
+stonyman_0.state_RNIDPDRS[4]         NOR2      Y        Out     0.646     14.679      -         
+N_1_18                               Net       -        -       0.386     -           2         
+stonyman_0.counterWait_RNO_1[20]     NOR3A     C        In      -         15.065      -         
+stonyman_0.counterWait_RNO_1[20]     NOR3A     Y        Out     0.641     15.706      -         
+N_125                                Net       -        -       0.322     -           1         
+stonyman_0.counterWait_RNO[20]       OR3       C        In      -         16.027      -         
+stonyman_0.counterWait_RNO[20]       OR3       Y        Out     0.751     16.778      -         
+counterWait_81[20]                   Net       -        -       0.322     -           1         
+stonyman_0.counterWait[20]           DFN1      D        In      -         17.100      -         
+================================================================================================
+Total path delay (propagation time + setup) of 17.673 is 6.227(35.2%) logic and 11.446(64.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -628,51 +643,51 @@ Path information for path number 5:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         11.927
 
-    - Propagation time:                      15.796
+    - Propagation time:                      16.980
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -3.869
+    = Slack (non-critical) :                 -5.053
 
     Number of logic level(s):                9
-    Starting point:                          stonyman_0.cachedPOINTER[1] / Q
-    Ending point:                            stonyman_0.substate[3] / D
+    Starting point:                          stonyman_0.state[3] / Q
+    Ending point:                            stonyman_0.counterWait[23] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                     Pin      Pin               Arrival     No. of    
-Name                                                     Type      Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[1]                              DFN1      Q        Out     0.737     0.737       -         
-cachedPOINTER[1]                                         Net       -        -       2.308     -           19        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1L8I[1]        XOR2      B        In      -         3.045       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1L8I[1]        XOR2      Y        Out     0.937     3.982       -         
-I_4_1                                                    Net       -        -       0.806     -           3         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_1[1]     NOR3A     C        In      -         4.788       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_1[1]     NOR3A     Y        Out     0.641     5.429       -         
-state48_0_a2_1_o2_1_0_N_8_i_0_li                         Net       -        -       1.669     -           9         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI3R5L2[6]         MX2       S        In      -         7.098       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI3R5L2[6]         MX2       Y        Out     0.480     7.577       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.423     -           6         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI4SJV4[5]         NOR2B     B        In      -         9.001       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI4SJV4[5]         NOR2B     Y        Out     0.516     9.517       -         
-DIN_REG1_RNI4SJV4[5]                                     Net       -        -       0.806     -           3         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      A        In      -         10.323      -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNIV5KUD[5]         OR2B      Y        Out     0.488     10.812      -         
-N_271                                                    Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       B        In      -         12.091      -         
-stonyman_0.cachedValue_tile.I_1_RNITTORM                 OR2       Y        Out     0.646     12.737      -         
-N_277                                                    Net       -        -       0.386     -           2         
-stonyman_0.substate_RNO_4[3]                             NOR3B     C        In      -         13.123      -         
-stonyman_0.substate_RNO_4[3]                             NOR3B     Y        Out     0.488     13.611      -         
-N_390                                                    Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_0[3]                             NOR3A     C        In      -         13.933      -         
-stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.641     14.574      -         
-substate_RNO_0[3]                                        Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO[3]                               MX2       A        In      -         14.896      -         
-stonyman_0.substate_RNO[3]                               MX2       Y        Out     0.579     15.475      -         
-substate_ns[3]                                           Net       -        -       0.322     -           1         
-stonyman_0.substate[3]                                   DFN1      D        In      -         15.796      -         
-====================================================================================================================
-Total path delay (propagation time + setup) of 16.369 is 6.727(41.1%) logic and 9.642(58.9%) route.
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+stonyman_0.state[3]                      DFN1      Q        Out     0.737     0.737       -         
+state[3]                                 Net       -        -       2.082     -           14        
+stonyman_0.state_RNIDO98_0[4]            NOR2      B        In      -         2.819       -         
+stonyman_0.state_RNIDO98_0[4]            NOR2      Y        Out     0.646     3.466       -         
+N_65                                     Net       -        -       1.776     -           11        
+stonyman_0.state_RNIUCOK[5]              NOR2B     B        In      -         5.242       -         
+stonyman_0.state_RNIUCOK[5]              NOR2B     Y        Out     0.516     5.758       -         
+N_431                                    Net       -        -       1.423     -           6         
+stonyman_0.state_RNIDJ233[4]             AO1       C        In      -         7.181       -         
+stonyman_0.state_RNIDJ233[4]             AO1       Y        Out     0.655     7.836       -         
+N_26_i_0_0_o2_3_3                        Net       -        -       0.322     -           1         
+stonyman_0.state_RNIPOFE8[4]             OR3       C        In      -         8.158       -         
+stonyman_0.state_RNIPOFE8[4]             OR3       Y        Out     0.683     8.841       -         
+N_177                                    Net       -        -       2.550     -           27        
+stonyman_0.state_RNI5213I[4]             NOR2A     B        In      -         11.390      -         
+stonyman_0.state_RNI5213I[4]             NOR2A     Y        Out     0.386     11.776      -         
+N_416                                    Net       -        -       0.806     -           3         
+stonyman_0.state_RNIGTJCR1[1]            AO1       C        In      -         12.583      -         
+stonyman_0.state_RNIGTJCR1[1]            AO1       Y        Out     0.633     13.215      -         
+N_176                                    Net       -        -       0.386     -           2         
+stonyman_0.state_RNIN5QFR1[1]            NOR2A     A        In      -         13.601      -         
+stonyman_0.state_RNIN5QFR1[1]            NOR2A     Y        Out     0.627     14.229      -         
+N_124                                    Net       -        -       0.806     -           3         
+stonyman_0.counterWait_RNO_1[23]         NOR2      B        In      -         15.035      -         
+stonyman_0.counterWait_RNO_1[23]         NOR2      Y        Out     0.646     15.681      -         
+counterWait_81_0_iv_i_i_23_m2_0_a2_0     Net       -        -       0.322     -           1         
+stonyman_0.counterWait_RNO[23]           AO1C      C        In      -         16.003      -         
+stonyman_0.counterWait_RNO[23]           AO1C      Y        Out     0.655     16.658      -         
+counterWait_RNO[23]                      Net       -        -       0.322     -           1         
+stonyman_0.counterWait[23]               DFN1      D        In      -         16.980      -         
+====================================================================================================
+Total path delay (propagation time + setup) of 17.553 is 6.759(38.5%) logic and 10.794(61.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -691,37 +706,37 @@ Starting Points with Worst Slack
 Instance                           Reference     Type           Pin              Net                                           Time        Slack 
                                    Clock                                                                                                         
 -------------------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        M2FRESETn        MSS_ADLIB_INST_M2FRESETn                      0.000       2.107 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        M2FRESETn        MSS_ADLIB_INST_M2FRESETn                      0.000       1.143 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]     0.000       6.545 
 MSS_CORE2_0.MSS_CCC_0.I_XTLOSC     System        MSS_XTLOSC     CLKOUT           N_CLKA_XTLOSC                                 0.000       6.669 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]     0.000       7.603 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[19]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19]     0.000       7.855 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHTRANS[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS[1]     0.000       8.584 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[16]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[16]     0.000       9.301 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[17]     0.000       9.553 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHLOCK         MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK         0.000       11.809
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[19]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19]     0.000       6.797 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHTRANS[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS[1]     0.000       7.244 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[16]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[16]     0.000       7.866 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[17]     0.000       8.118 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHLOCK         MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK         0.000       11.201
 MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        EMCCLK           MSS_ADLIB_INST_EMCCLK                         0.000       12.179
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHSIZE[1]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1]      0.000       16.060
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        GPO[0]           GPO_net_0[0]                                  0.000       12.179
 =================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                               Starting                                              Required          
-Instance                       Reference     Type     Pin     Net                    Time         Slack
-                               Clock                                                                   
--------------------------------------------------------------------------------------------------------
-stonyman_0.substate_i_0[0]     System        DFN1     D       substate_ns_i[0]       11.927       2.107
-stonyman_0.counterWait[4]      System        DFN1     D       counterWait_81[4]      11.961       2.291
-stonyman_0.counterWait[5]      System        DFN1     D       counterWait_81[5]      11.961       2.291
-stonyman_0.counterWait[6]      System        DFN1     D       counterWait_81[6]      11.961       2.291
-stonyman_0.counterWait[8]      System        DFN1     D       N_45                   11.961       2.291
-stonyman_0.counterWait[11]     System        DFN1     D       N_43                   11.961       2.291
-stonyman_0.counterWait[13]     System        DFN1     D       N_41                   11.961       2.291
-stonyman_0.counterWait[21]     System        DFN1     D       counterWait_81[21]     11.961       2.291
-stonyman_0.counterWait[26]     System        DFN1     D       counterWait_81[26]     11.961       2.291
-stonyman_0.counterWait[27]     System        DFN1     D       counterWait_81[27]     11.961       2.291
-=======================================================================================================
+                                    Starting                                                       Required          
+Instance                            Reference     Type          Pin        Net                     Time         Slack
+                                    Clock                                                                            
+---------------------------------------------------------------------------------------------------------------------
+stonyman_0.substate_i_0[0]          System        DFN1          D          substate_ns_i[0]        11.961       1.143
+stonyman_0.cachedPOINTER[2]         System        DFN1          D          N_18                    11.961       3.600
+stonyman_0.counterWait[27]          System        DFN1          D          counterWait_81[27]      11.927       3.769
+stonyman_0.counterWait[30]          System        DFN1          D          N_39                    11.927       3.769
+stonyman_0.cachedValue_tile.I_1     System        RAM512X18     RADDR2     N_18                    12.219       3.857
+stonyman_0.counterWait[23]          System        DFN1          D          counterWait_RNO[23]     11.927       4.221
+stonyman_0.cachedPOINTER[1]         System        DFN1          D          N_16                    11.961       4.410
+stonyman_0.cachedValue_tile.I_1     System        RAM512X18     RADDR1     N_16                    12.219       4.667
+stonyman_0.counterWait[4]           System        DFN1          D          counterWait_81[4]       11.927       4.832
+stonyman_0.counterWait[5]           System        DFN1          D          counterWait_81[5]       11.927       4.832
+=====================================================================================================================
 
 
 
@@ -731,53 +746,56 @@ Worst Path Information
 
 Path information for path number 1: 
       Requested Period:                      12.500
-    - Setup time:                            0.573
+    - Setup time:                            0.539
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
+    = Required time:                         11.961
 
-    - Propagation time:                      9.819
+    - Propagation time:                      10.819
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 2.107
+    = Slack (non-critical) :                 1.143
 
-    Number of logic level(s):                8
+    Number of logic level(s):                9
     Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
     Ending point:                            stonyman_0.substate_i_0[0] / D
     The start point is clocked by            System [rising]
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                     Pin           Pin               Arrival     No. of    
-Name                                   Type        Name          Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_ADLIB_INST             MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
-MSS_ADLIB_INST_M2FRESETn               Net         -             -       0.322     -           1         
-MSS_CORE2_0.MSS_ADLIB_INST_RNI7863     CLKINT      A             In      -         0.322       -         
-MSS_CORE2_0.MSS_ADLIB_INST_RNI7863     CLKINT      Y             Out     0.174     0.495       -         
-MSS_CORE2_0_M2F_RESET_N                Net         -             -       1.601     -           304       
-stonyman_0.state_i_RNI8AI3[0]          NOR2B       A             In      -         2.096       -         
-stonyman_0.state_i_RNI8AI3[0]          NOR2B       Y             Out     0.514     2.610       -         
-N_1638                                 Net         -             -       1.279     -           5         
-stonyman_0.state_i_RNIRILR[0]          NOR2B       A             In      -         3.890       -         
-stonyman_0.state_i_RNIRILR[0]          NOR2B       Y             Out     0.514     4.404       -         
-N_1661                                 Net         -             -       0.806     -           3         
-stonyman_0.substate_i_0_RNO_30[0]      NOR3        A             In      -         5.210       -         
-stonyman_0.substate_i_0_RNO_30[0]      NOR3        Y             Out     0.488     5.699       -         
-substate_i_0_RNO_30[0]                 Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_12[0]      NOR3A       C             In      -         6.020       -         
-stonyman_0.substate_i_0_RNO_12[0]      NOR3A       Y             Out     0.641     6.662       -         
-N_1656                                 Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_3[0]       AOI1        C             In      -         6.983       -         
-stonyman_0.substate_i_0_RNO_3[0]       AOI1        Y             Out     0.525     7.508       -         
-substate_ns_i_0tt_0_N_4                Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_0[0]       OA1         A             In      -         7.829       -         
-stonyman_0.substate_i_0_RNO_0[0]       OA1         Y             Out     0.984     8.813       -         
-substate_i_0_RNO_0[0]                  Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO[0]         AO1A        A             In      -         9.134       -         
-stonyman_0.substate_i_0_RNO[0]         AO1A        Y             Out     0.363     9.498       -         
-substate_ns_i[0]                       Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0[0]             DFN1        D             In      -         9.819       -         
-=========================================================================================================
-Total path delay (propagation time + setup) of 10.393 is 4.777(46.0%) logic and 5.615(54.0%) route.
+Instance / Net                                          Pin           Pin               Arrival     No. of    
+Name                                        Type        Name          Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                  MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                    Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863          CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863          CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                     Net         -             -       1.601     -           303       
+stonyman_0.state_i_RNI8AI3[0]               NOR2B       B             In      -         2.096       -         
+stonyman_0.state_i_RNI8AI3[0]               NOR2B       Y             Out     0.516     2.612       -         
+N_1638                                      Net         -             -       1.279     -           5         
+stonyman_0.substate_ns_i_0_a2_4[0]          OR2B        A             In      -         3.891       -         
+stonyman_0.substate_ns_i_0_a2_4[0]          OR2B        Y             Out     0.488     4.380       -         
+N_1661_i                                    Net         -             -       0.322     -           1         
+stonyman_0.substate_ns_i_0_a2_2_a1_0[0]     AND2        B             In      -         4.701       -         
+stonyman_0.substate_ns_i_0_a2_2_a1_0[0]     AND2        Y             Out     0.627     5.329       -         
+substate_ns_i_0_a2_2_a1_0[0]                Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0_RNO_10[0]           AOI1B       A             In      -         5.650       -         
+stonyman_0.substate_i_0_RNO_10[0]           AOI1B       Y             Out     0.933     6.583       -         
+substate_ns_i_0_a2_0_0[0]                   Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0_RNO_7[0]            OA1         C             In      -         6.905       -         
+stonyman_0.substate_i_0_RNO_7[0]            OA1         Y             Out     0.666     7.570       -         
+N_1656                                      Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0_RNO_4[0]            AO1         C             In      -         7.892       -         
+stonyman_0.substate_i_0_RNO_4[0]            AO1         Y             Out     0.655     8.547       -         
+N_1583                                      Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0_RNO_1[0]            NOR3B       A             In      -         8.869       -         
+stonyman_0.substate_i_0_RNO_1[0]            NOR3B       Y             Out     0.666     9.534       -         
+N_1592                                      Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0_RNO[0]              OR3         B             In      -         9.856       -         
+stonyman_0.substate_i_0_RNO[0]              OR3         Y             Out     0.641     10.497      -         
+substate_ns_i[0]                            Net         -             -       0.322     -           1         
+stonyman_0.substate_i_0[0]                  DFN1        D             In      -         10.819      -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 11.357 is 5.905(52.0%) logic and 5.452(48.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -789,51 +807,51 @@ Target Part: A2F500M3G_FBGA484_Std
 Report for cell TOPLEVEL.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2    17      1.0       17.0
+              AND2    10      1.0       10.0
               AND3     6      1.0        6.0
-               AO1    83      1.0       83.0
-              AO1A    20      1.0       20.0
-              AO1B     9      1.0        9.0
-              AO1C     3      1.0        3.0
-              AO1D     3      1.0        3.0
-              AOI1     5      1.0        5.0
-             AOI1B     8      1.0        8.0
+               AO1    86      1.0       86.0
+              AO1A    23      1.0       23.0
+              AO1B    10      1.0       10.0
+              AO1C     5      1.0        5.0
+              AO1D     5      1.0        5.0
+              AOI1     8      1.0        8.0
+             AOI1B     3      1.0        3.0
               AX1A     1      1.0        1.0
               AX1E     1      1.0        1.0
             CLKINT     3      0.0        0.0
                GND    15      0.0        0.0
-               INV     3      1.0        3.0
+               INV     2      1.0        2.0
+            MSSINT     2      0.0        0.0
            MSS_AHB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-               MX2   143      1.0      143.0
-              MX2A     1      1.0        1.0
+               MX2   145      1.0      145.0
+              MX2A     2      1.0        2.0
               MX2B    81      1.0       81.0
-              MX2C     4      1.0        4.0
-              NOR2    49      1.0       49.0
-             NOR2A    64      1.0       64.0
-             NOR2B   373      1.0      373.0
-              NOR3    28      1.0       28.0
-             NOR3A    59      1.0       59.0
-             NOR3B    81      1.0       81.0
-             NOR3C    55      1.0       55.0
-               OA1    16      1.0       16.0
-              OA1A    19      1.0       19.0
-              OA1B     9      1.0        9.0
+              MX2C     5      1.0        5.0
+              NOR2    55      1.0       55.0
+             NOR2A   108      1.0      108.0
+             NOR2B   389      1.0      389.0
+              NOR3    27      1.0       27.0
+             NOR3A    55      1.0       55.0
+             NOR3B    60      1.0       60.0
+             NOR3C    87      1.0       87.0
+               OA1    14      1.0       14.0
+              OA1A    17      1.0       17.0
+              OA1B     6      1.0        6.0
               OA1C    12      1.0       12.0
-              OAI1     5      1.0        5.0
-               OR2    62      1.0       62.0
-              OR2A    34      1.0       34.0
-              OR2B    11      1.0       11.0
-               OR3    96      1.0       96.0
-              OR3A     8      1.0        8.0
-              OR3B    38      1.0       38.0
-              OR3C     4      1.0        4.0
+              OAI1     3      1.0        3.0
+               OR2    72      1.0       72.0
+              OR2A    32      1.0       32.0
+              OR2B    14      1.0       14.0
+               OR3    94      1.0       94.0
+              OR3A     7      1.0        7.0
+              OR3B    34      1.0       34.0
             PLLINT     1      0.0        0.0
                VCC    15      0.0        0.0
-              XA1A     1      1.0        1.0
+              XA1A     2      1.0        2.0
               XA1B     3      1.0        3.0
-              XA1C     4      1.0        4.0
-             XNOR2    32      1.0       32.0
+              XA1C     3      1.0        3.0
+             XNOR2    33      1.0       33.0
                XO1     1      1.0        1.0
               XOR2    12      1.0       12.0
 
@@ -846,7 +864,7 @@ Report for cell TOPLEVEL.verilog
             DFN1P0     1      1.0        1.0
          RAM512X18     1      0.0        0.0
                    -----          ----------
-             TOTAL  1864              1827.0
+             TOTAL  1935              1896.0
 
 
   IO Cell usage:
@@ -862,7 +880,7 @@ Report for cell TOPLEVEL.verilog
              TOTAL    80
 
 
-Core Cells         : 1827 of 11520 (16%)
+Core Cells         : 1896 of 11520 (16%)
 IO Cells           : 80
 
   RAM/ROM Usage Summary
@@ -870,9 +888,9 @@ Block Rams : 1 of 24 (4%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:06s; Memory used current: 44MB peak: 139MB)
+At Mapper Exit (Time elapsed 0h:00m:08s; Memory used current: 45MB peak: 138MB)
 
-Process took 0h:00m:07s realtime, 0h:00m:07s cputime
-# Tue Feb 26 04:42:46 2013
+Process took 0h:00m:08s realtime, 0h:00m:08s cputime
+# Wed Feb 27 01:56:14 2013
 
 ###########################################################]

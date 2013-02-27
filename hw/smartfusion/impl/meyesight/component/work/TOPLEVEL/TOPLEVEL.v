@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 26 03:55:46 2013
+// Created by SmartDesign Wed Feb 27 01:55:26 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -110,7 +110,8 @@ wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
 wire   [3:0]  led_net_0;
-wire   [3:0]  led_0;
+wire          led_0;
+wire          led_1;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -162,13 +163,15 @@ wire          SCLK_net_1;
 wire   [1:0]  nbyte_en_net_0;
 wire   [24:0] psram_address_net_1;
 wire   [1:0]  MAC_TXD_net_1;
-wire   [3:0]  led_0_net_0;
+wire   [0:0]  led_0_net_0;
+wire   [1:1]  led_1_net_0;
 wire   [7:4]  led_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          GND_net;
 wire          VCC_net;
+wire   [3:2]  led_const_net_0;
 wire   [31:0] HADDR_M0_const_net_0;
 wire   [1:0]  HTRANS_M0_const_net_0;
 wire   [2:0]  HSIZE_M0_const_net_0;
@@ -214,6 +217,7 @@ wire   [1:0]  HRESP_SHG_const_net_0;
 //--------------------------------------------------------------------
 assign GND_net                = 1'b0;
 assign VCC_net                = 1'b1;
+assign led_const_net_0        = 2'h3;
 assign HADDR_M0_const_net_0   = 32'h00000000;
 assign HTRANS_M0_const_net_0  = 2'h0;
 assign HSIZE_M0_const_net_0   = 3'h0;
@@ -259,6 +263,7 @@ assign HRESP_SHG_const_net_0  = 2'h0;
 //--------------------------------------------------------------------
 assign rs485_nre           = 1'b0;
 assign rs485_de            = 1'b1;
+assign led[3:2]            = 2'h3;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -300,31 +305,33 @@ assign psram_address_net_1 = psram_address_net_0;
 assign psram_address[24:0] = psram_address_net_1;
 assign MAC_TXD_net_1       = MAC_TXD_net_0;
 assign MAC_TXD[1:0]        = MAC_TXD_net_1;
-assign led_0_net_0         = led_0;
-assign led[3:0]            = led_0_net_0;
+assign led_0_net_0[0]      = led_0;
+assign led[0:0]            = led_0_net_0[0];
+assign led_1_net_0[1]      = led_1;
+assign led[1:1]            = led_1_net_0[1];
 assign led_net_1           = led_net_0;
 assign led[7:4]            = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
-wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
 
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
 
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
 wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
 wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };
@@ -341,8 +348,8 @@ adc081s101 adc081s101_0(
         .miso               ( MISO ),
         // Outputs
         .cs                 ( CS_net_0 ),
-        .dataout            ( adc081s101_0_dataout ),
-        .conversionComplete ( adc081s101_0_conversionComplete ) 
+        .conversionComplete ( adc081s101_0_conversionComplete ),
+        .dataout            ( adc081s101_0_dataout ) 
         );
 
 //--------clkgenerator
@@ -763,6 +770,8 @@ MSS_CORE2 MSS_CORE2_0(
         .UART_0_TXD  ( UART_0_TXD_net_0 ),
         .MSSHWRITE   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE ),
         .MSSHLOCK    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK ),
+        .M2F_GPO_1   ( led_1 ),
+        .M2F_GPO_0   ( led_0 ),
         .MAC_TXD     ( MAC_TXD_net_0 ),
         .MSSHADDR    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR ),
         .MSSHTRANS   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS ),
@@ -819,7 +828,7 @@ stonyman stonyman_0(
         .startAdcCapture ( stonyman_0_startAdcCapture ),
         .pixelout        (  ),
         .tp_stateout     ( led_net_0 ),
-        .tp_substateout  ( led_0 ) 
+        .tp_substateout  (  ) 
         );
 
 

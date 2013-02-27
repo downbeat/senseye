@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>TOPLEVEL</header>
+  <drc>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin MSS_CORE2_0:F2M_GPI_21</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/MSS_CORE2_0:F2M_GPI_21</crossprobe>
+  </drc>
+</drcreport>

@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Tue Feb 26 03:55:52 2013 )</state>
+    <state>GENERATED ( Wed Feb 27 01:55:32 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -45,7 +45,7 @@
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>psram_data[12]</port-name>

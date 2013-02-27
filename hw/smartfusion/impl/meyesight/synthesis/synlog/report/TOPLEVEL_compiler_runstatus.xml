@@ -14,7 +14,7 @@ The file contains the job information from compiler to be displayed as part of t
   </job_status>
 <job_info> 
 			<info name="Notes">
-  <data>37</data>
+  <data>38</data>
   <report_link name="more"><data>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\synlog\report\TOPLEVEL_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
@@ -35,7 +35,7 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1361871756</data>
+  <data type="timestamp">1361948161</data>
   </info>
 			</job_info>
 </job_run_status>

@@ -6,7 +6,7 @@ Software Version: 10.1.3.1
 PDB file
 'Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL_fp\\
 TOPLEVEL.pdb' has been loaded successfully.
-DESIGN : TOPLEVEL;  CHECKSUM : 0EE4;  PDB_VERSION : 1.7
+DESIGN : TOPLEVEL;  CHECKSUM : F032;  PDB_VERSION : 1.7
 Driver : 3.0.0 build 1
 programmer '51638' : FlashPro3
 Opened
@@ -25,29 +25,9 @@ Info: Adding FPGA Array data from file
 PDB file
 'Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL_fp\\
 TOPLEVEL.pdb' has been loaded successfully.
-DESIGN : TOPLEVEL;  CHECKSUM : 0EE4;  PDB_VERSION : 1.7
-Warning: One or more programming or configuration files have changed since generation.
-         To view details and update a PDB, you may click on Modify PDB button for the target
-         device.
-         To update a STAPL file, you may reload the file or reload the project.
+DESIGN : TOPLEVEL;  CHECKSUM : F032;  PDB_VERSION : 1.7
 The 'update_programming_file' command succeeded.
 The 'set_programming_action' command succeeded.
-Warning: One or more programming or configuration files have changed since generation.
-         To view details and update a PDB, you may click on Modify PDB button for the target
-         device.
-         To update a STAPL file, you may reload the file or reload the project.
-         
-         --------------------------------------------------------------------------------------\
-         -----
-         Audit Status of Programming file 'TOPLEVEL.pdb'
-         --------------------------------------------------------------------------------------\
-         -----
-         The following original file[s] could not be located from the disk and will not be
-         monitored for changes:
-                 'C:\Actelprj\SDRv2_Linux_AHB\Emcraft_Firmware\u-boot.hex'
-         
-         
-         Do you want to Continue Programming? [YES]
 programmer '51638' : Scan Chain...
 Warning: programmer '51638' : Vpump has been selected on programmer AND an externally provided
          Vpump has also been detected. Using externally provided Vpump voltage source.
@@ -63,7 +43,7 @@ programmer '51638' : Program System Init and Boot Clients...
 programmer '51638' : Program Embedded Flash Memory Module ALL....
 programmer '51638' : Verify System Init and Boot Clients...
 programmer '51638' : Verify Embedded Flash Memory Module ALL...
-programmer '51638' : Finished: Tue Feb 26 04:50:21 2013 (Elapsed time 00:01:03)
+programmer '51638' : Finished: Wed Feb 27 02:11:33 2013 (Elapsed time 00:01:03)
 programmer '51638' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

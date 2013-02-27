@@ -4,7 +4,7 @@ Product Version F-2012.03M-SP1
 
 Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-Reading constraint file: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\constraint\synthesis.sdc
+Reading constraint file: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell_syn.sdc
 @L: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL_scck.rpt 
 Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
@@ -22,12 +22,13 @@ Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99
 Clock Summary
 **************
 
-Start                             Requested     Requested     Clock        Clock             
-Clock                             Frequency     Period        Type         Group             
----------------------------------------------------------------------------------------------
-System                            1.0 MHz       1000.000      system       system_clkgroup   
-MSS_CORE2_0.MSS_CCC_0.FAB_CLK     40.0 MHz      25.000        declared     default_clkgroup_0
-=============================================================================================
+Start       Requested     Requested     Clock        Clock          
+Clock       Frequency     Period        Type         Group          
+--------------------------------------------------------------------
+System      1.0 MHz       1000.000      system       system_clkgroup
+FAB_CLK     40.0 MHz      25.000        declared     clk_group_0    
+FCLK        40.0 MHz      25.000        declared     clk_group_0    
+====================================================================
 
 @W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including adc081s101_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
@@ -40,6 +41,6 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 110MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Feb 26 04:42:39 2013
+# Wed Feb 27 01:56:04 2013
 
 ###########################################################]

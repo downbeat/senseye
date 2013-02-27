@@ -232,16 +232,6 @@ Selecting top level module TOPLEVEL
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CoreAHBLite_Z3
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
-
-@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
-
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
-
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
-
-@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
-
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
@@ -250,9 +240,21 @@ Selecting top level module TOPLEVEL
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
 
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
+
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CORE2.v":5:7:5:15|Synthesizing module MSS_CORE2
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":145:7:145:12|Synthesizing module MSSINT
+
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CORE2.v":9:7:9:15|Synthesizing module MSS_CORE2
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
 

@@ -38,9 +38,9 @@
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_801 
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_799 
 @N: FP130 |Promoting Net SCLK_c on CLKINT  clkgenerator_0.SCLK_inferred_clock 
-@N: FP130 |Promoting Net stonyman_0.N_2422_i on CLKINT  I_802 
+@N: FP130 |Promoting Net stonyman_0.N_2422_i on CLKINT  I_800 
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 @N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.

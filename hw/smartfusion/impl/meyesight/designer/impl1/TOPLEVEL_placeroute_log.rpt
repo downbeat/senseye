@@ -34,24 +34,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Feb 26 04:43:03 2013
+Timing-driven Placer Started: Wed Feb 27 02:07:25 2013
 
-Placer Finished: Tue Feb 26 04:43:13 2013
-Total Placer CPU Time:     00:00:10
+Placer Finished: Wed Feb 27 02:07:37 2013
+Total Placer CPU Time:     00:00:12
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Tue Feb 26 04:43:17 2013
+Design: TOPLEVEL                        Started: Wed Feb 27 02:07:41 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Tue Feb 26 04:43:34 2013
-Total CPU Time:     00:00:16            Total Elapsed Time: 00:00:17
+Finished: Wed Feb 27 02:07:56 2013
+Total CPU Time:     00:00:14            Total Elapsed Time: 00:00:15
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -75,6 +75,6 @@ The Report command succeeded ( 00:00:00 )
 Design saved to file
 Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:41 )
+The Execute Script command succeeded ( 00:00:40 )
 Design closed.
 
