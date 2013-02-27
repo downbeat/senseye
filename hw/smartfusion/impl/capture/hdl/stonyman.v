@@ -172,7 +172,7 @@ begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                end
             end
             `SUB_S_RESP_WAIT_AFTER:
@@ -204,7 +204,7 @@ begin
                begin
                   resv <= 1'b0;
                   cachedValue[cachedPOINTER] <= 8'd0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESV_WAIT_AFTER;
                end
             end
@@ -296,7 +296,7 @@ begin
                begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
                end
             end
@@ -329,7 +329,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -372,7 +372,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end
@@ -431,7 +431,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -474,7 +474,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end
@@ -533,7 +533,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -576,7 +576,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end
@@ -635,7 +635,7 @@ begin
                begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
                end
             end
@@ -668,7 +668,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -711,7 +711,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end
@@ -793,7 +793,7 @@ begin
                begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
                end
             end
@@ -835,7 +835,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -887,7 +887,7 @@ begin
                begin
                   resv <= 1'b0;
                   cachedValue[cachedPOINTER] <= 0;
-                  substate <= `TICKS_PULSE_WAIT_AFTER-1;
+                  substate <= `TICKS_PULSE_WAIT_AFTER-2;
                   counterWait <= `SUB_S_RESV_WAIT_AFTER;
                end
             end
@@ -944,7 +944,7 @@ begin
                begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
                end
             end
@@ -986,7 +986,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -1038,7 +1038,7 @@ begin
                begin
                   resv <= 1'b0;
                   cachedValue[cachedPOINTER] <= 0;
-                  substate <= `TICKS_PULSE_WAIT_AFTER-1;
+                  substate <= `TICKS_PULSE_WAIT_AFTER-2;
                   counterWait <= `SUB_S_RESV_WAIT_AFTER;
                end
             end
@@ -1166,7 +1166,7 @@ begin
                begin
                   resp <= 1'b0;
                   cachedPOINTER <= 0;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_RESP_WAIT_AFTER;
                end
             end
@@ -1208,7 +1208,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -1259,7 +1259,7 @@ begin
                begin
                   resv <= 1'b0;
                   cachedValue[cachedPOINTER] <= 0;
-                  substate <= `TICKS_PULSE_WAIT_AFTER-1;
+                  substate <= `TICKS_PULSE_WAIT_AFTER-2;
                   counterWait <= `SUB_S_RESV_WAIT_AFTER;
                end
             end
@@ -1293,7 +1293,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end
@@ -1355,7 +1355,7 @@ begin
                begin
                   incp <= 1'b0;
                   cachedPOINTER <= cachedPOINTER+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCP_WAIT_AFTER;
                end
             end
@@ -1399,7 +1399,7 @@ begin
                begin
                   incv <= 1'b0;
                   cachedValue[cachedPOINTER] <= cachedValue[cachedPOINTER]+1;
-                  counterWait <= `TICKS_PULSE_WAIT_AFTER-1;
+                  counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
                   substate <= `SUB_S_INCV_WAIT_AFTER;
                end
             end

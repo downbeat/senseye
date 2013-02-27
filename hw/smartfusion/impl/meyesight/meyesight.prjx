@@ -366,52 +366,52 @@ SIZE="8624"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1361865609"
-SIZE="1904640"
+TIME="1361871841"
+SIZE="2063360"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1361865609"
-SIZE="149103"
+TIME="1361871840"
+SIZE="145008"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1361865610"
+TIME="1361871841"
 SIZE="1266"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1361865225"
-SIZE="36819"
+TIME="1361871777"
+SIZE="89877"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361869768"
-SIZE="235520"
+TIME="1361872223"
+SIZE="231424"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361865757"
-SIZE="235520"
+TIME="1361872157"
+SIZE="231424"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1361865824"
+TIME="1361872223"
 SIZE="2071"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1361865587"
+TIME="1361871819"
 SIZE="2429"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1361865610"
+TIME="1361871841"
 SIZE="949"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1361865593"
+TIME="1361871825"
 SIZE="1210"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -456,8 +456,8 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1361863234"
-SIZE="47759"
+TIME="1361871725"
+SIZE="47771"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
@@ -519,12 +519,12 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1361865178"
-SIZE="1336207"
+TIME="1361871766"
+SIZE="1229560"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1361865178"
+TIME="1361871766"
 SIZE="252"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
@@ -534,13 +534,13 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1361865178"
+TIME="1361871766"
 SIZE="446"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1361865180"
-SIZE="4668"
+TIME="1361871768"
+SIZE="4672"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -627,6 +627,17 @@ ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -717,8 +728,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -782,6 +793,17 @@ VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 ENDUsed_File_List
 ENDLIST
 ENDLIST
+LIST "CoreAHBLite::COREAHBLITE_LIB"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -794,9 +816,8 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-SmartDesign;TOPLEVEL
-SmartDesign;MSS_CORE2
-ACTIVEVIEW;TOPLEVEL
+StartPage;StartPage
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
@@ -947,4 +968,7 @@ SUBBLOCK "BFM_AHBSLAVE::COREAHBLITE_LIB","","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
+LIST "TOPLEVEL::work"
+ACTIVETESTBENCH "","","FALSE"
+ENDLIST
 ENDLIST

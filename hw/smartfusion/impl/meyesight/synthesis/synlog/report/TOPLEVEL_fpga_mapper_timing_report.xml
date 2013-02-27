@@ -17,14 +17,14 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>MSS_CORE2_0.MSS_CCC_0.FAB_CLK</data>
 <data>40.0 MHz</data>
-<data>44.0 MHz</data>
-<data>2.291</data>
+<data>49.9 MHz</data>
+<data>4.941</data>
 </row>
 <row>
 <data>clkgenerator|SCLK_inferred_clock</data>
 <data>80.0 MHz</data>
-<data>47.4 MHz</data>
-<data>-8.611</data>
+<data>59.6 MHz</data>
+<data>-4.288</data>
 </row>
 <row>
 <data>System</data>
