@@ -13,7 +13,7 @@ KEY VendorTechnology_IO_DEFT_STD ""
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_TEMPR ""
 KEY VendorTechnology_VOLTR ""
-KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight"
+KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -383,17 +383,17 @@ SIZE="466"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1362106674"
+TIME="1362107199"
 SIZE="3850240"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1362106673"
+TIME="1362107198"
 SIZE="150707"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1362106674"
+TIME="1362107199"
 SIZE="1266"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
@@ -413,7 +413,7 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1362106603"
+TIME="1362107128"
 SIZE="30517"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
@@ -423,27 +423,27 @@ SIZE="237056"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362106702"
+TIME="1362107227"
 SIZE="237056"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1362106771"
+TIME="1362107295"
 SIZE="2071"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1362106650"
+TIME="1362107175"
 SIZE="2429"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1362106675"
+TIME="1362107199"
 SIZE="949"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1362106656"
+TIME="1362107182"
 SIZE="1210"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -566,12 +566,12 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1362106593"
-SIZE="1436386"
+TIME="1362107117"
+SIZE="1436385"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1362106593"
+TIME="1362107117"
 SIZE="252"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
@@ -581,12 +581,12 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1362106593"
+TIME="1362107117"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1362106594"
+TIME="1362107119"
 SIZE="4802"
 ENDFILE
 ENDLIST
@@ -777,15 +777,15 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_v10.1\Model\win32acoem\modelsim.exe"
-PARAM="-l testbench_postlayout_simulation.log -c"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="WFL"
 FUNCTION="Stimulus"
