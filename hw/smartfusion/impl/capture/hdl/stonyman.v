@@ -1,1 +1,1 @@
-../../meyesight/hdl/stonyman.v
+../../insight/hdl/stonyman.v

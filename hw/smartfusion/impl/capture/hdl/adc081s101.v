@@ -1,1 +1,1 @@
-../../meyesight/hdl/adc081s101.v
+../../insight/hdl/adc081s101.v
