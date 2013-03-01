@@ -28,4 +28,13 @@ entity MSS_BFM_AHBSLAVE is
         HPROT           : in     vl_logic_vector(3 downto 0);
         HRESP           : out    vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of AWIDTH : constant is 1;
+    attribute mti_svvh_generic_type of DEPTH : constant is 1;
+    attribute mti_svvh_generic_type of INITFILE : constant is 1;
+    attribute mti_svvh_generic_type of ID : constant is 1;
+    attribute mti_svvh_generic_type of ENFUNC : constant is 1;
+    attribute mti_svvh_generic_type of TPD : constant is 1;
+    attribute mti_svvh_generic_type of DEBUG : constant is 1;
+    attribute mti_svvh_generic_type of NAME : constant is 1;
 end MSS_BFM_AHBSLAVE;

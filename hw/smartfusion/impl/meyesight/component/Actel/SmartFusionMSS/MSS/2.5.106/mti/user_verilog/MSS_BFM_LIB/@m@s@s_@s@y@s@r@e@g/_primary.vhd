@@ -52,4 +52,7 @@ entity MSS_SYSREG is
         HPROT           : in     vl_logic_vector(3 downto 0);
         HRESP           : out    vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of DEBUG : constant is 1;
+    attribute mti_svvh_generic_type of INITFILE : constant is 1;
 end MSS_SYSREG;

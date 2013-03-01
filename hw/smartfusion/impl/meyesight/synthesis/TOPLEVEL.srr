@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Wed Feb 27 01:55:58 2013
+#Thu Feb 28 22:05:00 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -19,6 +19,7 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\vlog\hypermods.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v"
+@I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
 @I::"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
@@ -272,6 +273,8 @@ Selecting top level module TOPLEVEL
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CoreAHBLite_Z3
 
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v":19:7:19:22|Synthesizing module inputConditioner
+
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
@@ -303,19 +306,45 @@ Selecting top level module TOPLEVEL
 @N: CG179 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":84:7:84:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":105:11:105:31|No assignment to counterPixelsCaptured
-@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:74|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:77|Read Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:74|Write Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:77|Write Address width 3 does not cover RAM depth
 
-@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Found RAM cachedValue, depth=8, width=8
+@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register substate
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 31 of counterWait[31:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 30 of counterWait[30:0] 
+
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
-State machine has 15 reachable states with original encodings of:
+State machine has 18 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 13 reachable states with original encodings of:
    0000
    0001
    0010
@@ -329,22 +358,6 @@ State machine has 15 reachable states with original encodings of:
    1010
    1011
    1100
-   1101
-   1110
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register state
-Extracted state machine for register state
-State machine has 7 reachable states with original encodings of:
-   0000
-   0001
-   0010
-   0011
-   0100
-   0101
-   0110
-@W: CL190 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Optimizing register bit inphi to a constant 0
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Pruning register inphi 
-
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":90:12:90:18|Input pixelin is unused
 @W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
@@ -374,6 +387,7 @@ State machine has 7 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v":22:6:22:8|Input rst is unused
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
 
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
@@ -569,8 +583,8 @@ State machine has 8 reachable states with original encodings of:
 @W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 
 @END
-Process took 0h:00m:03s realtime, 0h:00m:03s cputime
-# Wed Feb 27 01:56:01 2013
+Process took 0h:00m:04s realtime, 0h:00m:03s cputime
+# Thu Feb 28 22:05:04 2013
 
 ###########################################################]
 Premap Report
@@ -594,6 +608,7 @@ Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 
 Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
 @W: BN132 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@N: MF237 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":1162:35:1162:73|Generating a type rem remainder 
 
 
 Clock Summary
@@ -607,18 +622,18 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including adc081s101_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 130 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 108MB peak: 110MB)
 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 110MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 46MB peak: 110MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 27 01:56:04 2013
+# Thu Feb 28 22:05:08 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -640,7 +655,7 @@ Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91
 
 
 
-Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 107MB)
+Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 108MB)
 
 @W: MO111 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
 @W: MO111 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
@@ -649,6 +664,8 @@ Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current:
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CAHBLTIO0I of view:PrimLib.dffre(prim) in hierarchy view:COREAHBLITE_LIB.CAHBLTO0OI_1_0_0_0_1_0_0(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":691:0:691:5|Removing sequential instance CAHBLTIO0l[1:0] of view:PrimLib.dffre(prim) in hierarchy view:COREAHBLITE_LIB.CAHBLTllO0_1_0_0_4294967280s_0_0(verilog) because there are no references to its outputs 
 @N: BN115 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":335:0:335:9|Removing instance CAHBLTO1I0 of view:COREAHBLITE_LIB.CAHBLTlI1_CAHBLTO1I0(verilog) because there are no references to its outputs 
+@N: BN114 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_core2.v":636:7:636:18|Removing instance MSS_CORE2_0.MSSINT_GPO_1 of black_box view:work.MSSINT(verilog) because there are no references to its outputs 
+@N: BN114 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_core2.v":628:7:628:18|Removing instance MSS_CORE2_0.MSSINT_GPO_0 of black_box view:work.MSSINT(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0I0l.CAHBLTIOl0.CAHBLTl11l[15:0] of view:PrimLib.dffre(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN115 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":16397:0:16397:10|Removing instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI0O0l of view:COREAHBLITE_LIB.CAHBLTl0Il_CAHBLTI0O0l(verilog) because there are no references to its outputs 
 
@@ -656,7 +673,7 @@ Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 108MB)
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 109MB)
 
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[4] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOO0I[2] is always 0, optimizing ...
@@ -672,9 +689,9 @@ Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 105MB 
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[22] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[21] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[20] is always 0, optimizing ...
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitQuiet[2:0]
-@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst bitsRead[3:0]
 @N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitTrailing[2:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101(verilog) inst cntrWaitQuiet[2:0]
 Encoding state machine CAHBLTllOI[7:0] (netlist:statemachine)
 original code -> new code
    000 -> 00000001
@@ -688,59 +705,73 @@ original code -> new code
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":314:0:314:8|Register bit CAHBLTllOI[1] is always 0, optimizing ...
 @N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":116:0:116:5|Found counter in view:work.cr_int(verilog) inst ac_counter[3:0]
 @N:"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":91:0:91:5|Found counter in view:work.cr_int(verilog) inst op_counter[3:0]
-@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Register bit startAdcCapture is always 1, optimizing ...
 
  Ram Decomposition Statistics for cachedValue[7:0]
 
  RAM 512x9 : 0
  RAM 512x9 : 0
-Encoding state machine state[6:0] (netlist:statemachine)
+Encoding state machine state[12:0] (netlist:statemachine)
 original code -> new code
-   0000 -> 0000000
-   0001 -> 0000011
-   0010 -> 0000101
-   0011 -> 0001001
-   0100 -> 0010001
-   0101 -> 0100001
-   0110 -> 1000001
-Encoding state machine substate[14:0] (netlist:statemachine)
+   0000 -> 0000000000000
+   0001 -> 0000000000011
+   0010 -> 0000000000101
+   0011 -> 0000000001001
+   0100 -> 0000000010001
+   0101 -> 0000000100001
+   0110 -> 0000001000001
+   0111 -> 0000010000001
+   1000 -> 0000100000001
+   1001 -> 0001000000001
+   1010 -> 0010000000001
+   1011 -> 0100000000001
+   1100 -> 1000000000001
+Encoding state machine substate[17:0] (netlist:statemachine)
 original code -> new code
-   0000 -> 000000000000000
-   0001 -> 000000000000011
-   0010 -> 000000000000101
-   0011 -> 000000000001001
-   0100 -> 000000000010001
-   0101 -> 000000000100001
-   0110 -> 000000001000001
-   0111 -> 000000010000001
-   1000 -> 000000100000001
-   1001 -> 000001000000001
-   1010 -> 000010000000001
-   1011 -> 000100000000001
-   1100 -> 001000000000001
-   1101 -> 010000000000001
-   1110 -> 100000000000001
-@N: MF238 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:76|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
-@N: MF239 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":141:27:141:40|Found 32-bit decrementor, 'un5_counterWait[31:0]'
+   00000 -> 000000000000000000
+   00001 -> 000000000000000011
+   00010 -> 000000000000000101
+   00011 -> 000000000000001001
+   00100 -> 000000000000010001
+   00101 -> 000000000000100001
+   00110 -> 000000000001000001
+   00111 -> 000000000010000001
+   01000 -> 000000000100000001
+   01001 -> 000000001000000001
+   01010 -> 000000010000000001
+   01011 -> 000000100000000001
+   01100 -> 000001000000000001
+   01101 -> 000010000000000001
+   01110 -> 000100000000000001
+   01111 -> 001000000000000001
+   10000 -> 010000000000000001
+   10001 -> 100000000000000001
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MF238 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:79|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
+@N: MF239 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":148:30:148:43|Found 30-bit decrementor, 'un3_counterWait[29:0]'
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1581:0:1581:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[16] is always 0, optimizing ...
 @W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1610:0:1610:5|Register bit CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIlIl is always 0, optimizing ...
-@W: MO160 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit conversionComplete is always 0, optimizing ...
 
-Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 115MB peak: 116MB)
+Finished factoring (Time elapsed 0h:00m:04s; Memory used current: 118MB peak: 126MB)
 
-@W: MO161 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Register bit adc081s101_0.cs is always 1, optimizing ...
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[11] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\actel\directcore\coreahblite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":1319:0:1319:5|Removing sequential instance CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[10] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[4] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Removing sequential instance stonyman_0.pixelout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitLeading[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[4] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Removing sequential instance stonyman_0.pixelout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[7] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[6] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[5] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -749,42 +780,31 @@ Finished factoring (Time elapsed 0h:00m:02s; Memory used current: 115MB peak: 11
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.dataout[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitQuiet[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.cntrWaitTrailing[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[3] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[2] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[1] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance adc081s101_0.bitsRead[0] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 116MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:04s; Memory used current: 115MB peak: 126MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:02s; Memory used current: 110MB peak: 118MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:04s; Memory used current: 115MB peak: 127MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:02s; Memory used current: 111MB peak: 118MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:04s; Memory used current: 116MB peak: 127MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:07s; Memory used current: 127MB peak: 128MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:08s; Memory used current: 142MB peak: 143MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:07s; Memory used current: 127MB peak: 128MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:08s; Memory used current: 142MB peak: 143MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:07s; Memory used current: 126MB peak: 128MB)
+Finished preparing to map (Time elapsed 0h:00m:08s; Memory used current: 142MB peak: 143MB)
 
-@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_799 
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_881 
 @N: FP130 |Promoting Net SCLK_c on CLKINT  clkgenerator_0.SCLK_inferred_clock 
-@N: FP130 |Promoting Net stonyman_0.N_2422_i on CLKINT  I_800 
 
-Finished technology mapping (Time elapsed 0h:00m:07s; Memory used current: 136MB peak: 138MB)
+Finished technology mapping (Time elapsed 0h:00m:08s; Memory used current: 162MB peak: 164MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:07s; Memory used current: 136MB peak: 138MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:09s; Memory used current: 162MB peak: 164MB)
 
 
 Added 0 Buffers
@@ -792,18 +812,17 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:07s; Memory used current: 137MB peak: 138MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:09s; Memory used current: 163MB peak: 164MB)
 
 Writing Analyst data base Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:07s; Memory used current: 134MB peak: 138MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:09s; Memory used current: 159MB peak: 164MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:08s; Memory used current: 136MB peak: 138MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:09s; Memory used current: 162MB peak: 164MB)
 
-@W: MT246 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_core2.v":636:7:636:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 Found clock FAB_CLK with period 25.00ns 
 Found clock FCLK with period 25.00ns 
@@ -812,7 +831,7 @@ Found clock FCLK with period 25.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Feb 27 01:56:14 2013
+# Timing Report written on Thu Feb 28 22:05:18 2013
 #
 
 
@@ -835,16 +854,16 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -5.755
+Worst slack in design: -22.173
 
-                                     Requested     Estimated     Requested     Estimated                Clock        Clock              
-Starting Clock                       Frequency     Frequency     Period        Period        Slack      Type         Group              
-----------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                              40.0 MHz      47.4 MHz      25.000        21.118        3.882      declared     clk_group_0        
-FCLK                                 40.0 MHz      NA            25.000        NA            NA         declared     clk_group_0        
-clkgenerator|SCLK_inferred_clock     80.0 MHz      54.8 MHz      12.500        18.255        -5.755     inferred     Inferred_clkgroup_0
-System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669      system       system_clkgroup    
-========================================================================================================================================
+                                     Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                       Frequency     Frequency     Period        Period        Slack       Type         Group              
+-----------------------------------------------------------------------------------------------------------------------------------------
+FAB_CLK                              40.0 MHz      48.1 MHz      25.000        20.805        4.195       declared     clk_group_0        
+FCLK                                 40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
+clkgenerator|SCLK_inferred_clock     80.0 MHz      28.8 MHz      12.500        34.673        -22.173     inferred     Inferred_clkgroup_0
+System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
+=========================================================================================================================================
 
 
 
@@ -853,17 +872,17 @@ System                               80.0 MHz      171.5 MHz     12.500        5
 Clock Relationships
 *******************
 
-Clocks                                                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                          Ending                            |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                            System                            |  12.500      6.669   |  No paths    -      |  No paths    -      |  No paths    -    
-System                            FAB_CLK                           |  25.000      6.545   |  No paths    -      |  No paths    -      |  No paths    -    
-System                            clkgenerator|SCLK_inferred_clock  |  12.500      1.143   |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                           System                            |  25.000      16.782  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                           FAB_CLK                           |  25.000      3.883   |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  12.500      -5.755  |  No paths    -      |  No paths    -      |  No paths    -    
-===========================================================================================================================================================
+Clocks                                                              |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                          Ending                            |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                            System                            |  12.500      6.669    |  No paths    -      |  No paths    -      |  No paths    -    
+System                            FAB_CLK                           |  25.000      6.858    |  No paths    -      |  No paths    -      |  No paths    -    
+System                            clkgenerator|SCLK_inferred_clock  |  12.500      -2.333   |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                           System                            |  25.000      17.202   |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                           FAB_CLK                           |  25.000      4.195    |  No paths    -      |  No paths    -      |  No paths    -    
+clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  12.500      -22.173  |  No paths    -      |  No paths    -      |  No paths    -    
+============================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -885,21 +904,21 @@ Detailed Report for Clock: FAB_CLK
 Starting Points with Worst Slack
 ********************************
 
-                                                         Starting                                              Arrival           
-Instance                                                 Reference     Type         Pin     Net                Time        Slack 
-                                                         Clock                                                                   
----------------------------------------------------------------------------------------------------------------------------------
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         FAB_CLK       DFN1C0       Q       CAHBLTOI0I         0.737       3.882 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       5.879 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[19]     0.580       6.264 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I         FAB_CLK       DFN1C0       Q       CAHBLTIO0I         0.737       6.514 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[16]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[16]     0.737       7.200 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[17]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[17]     0.580       7.584 
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl1lI         FAB_CLK       DFN1E1C0     Q       CAHBLTl1lI         0.737       10.596
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[14]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[14]     0.737       11.233
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[7]      FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[7]      0.737       11.274
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[10]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[10]     0.737       11.276
-=================================================================================================================================
+                                                         Starting                                              Arrival          
+Instance                                                 Reference     Type         Pin     Net                Time        Slack
+                                                         Clock                                                                  
+--------------------------------------------------------------------------------------------------------------------------------
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I         FAB_CLK       DFN1C0       Q       CAHBLTOI0I         0.737       4.195
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[18]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[18]     0.737       6.192
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[19]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[19]     0.580       6.576
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[16]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[16]     0.737       6.988
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIO0I         FAB_CLK       DFN1C0       Q       CAHBLTIO0I         0.737       7.063
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTI1lI[17]     FAB_CLK       DFN1E1C0     Q       CAHBLTI1lI[17]     0.580       7.372
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[14]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[14]     0.737       7.917
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[10]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[10]     0.737       7.958
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[7]      FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[7]      0.737       7.960
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTl00I[15]     FAB_CLK       DFN1E0C0     Q       CAHBLTl00I[15]     0.737       8.056
+================================================================================================================================
 
 
 Ending Points with Worst Slack
@@ -909,16 +928,16 @@ Ending Points with Worst Slack
 Instance                         Reference     Type     Pin     Net                  Time         Slack
                                  Clock                                                                 
 -------------------------------------------------------------------------------------------------------
-psram_cr_0.ahb0.haddr_reg[0]     FAB_CLK       DFN1     D       haddr_reg_RNO[0]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[1]     FAB_CLK       DFN1     D       haddr_reg_RNO[1]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[2]     FAB_CLK       DFN1     D       haddr_reg_RNO[2]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[3]     FAB_CLK       DFN1     D       haddr_reg_RNO[3]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[4]     FAB_CLK       DFN1     D       haddr_reg_RNO[4]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[5]     FAB_CLK       DFN1     D       haddr_reg_RNO[5]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[6]     FAB_CLK       DFN1     D       haddr_reg_RNO[6]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[7]     FAB_CLK       DFN1     D       haddr_reg_RNO[7]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[8]     FAB_CLK       DFN1     D       haddr_reg_RNO[8]     24.461       3.882
-psram_cr_0.ahb0.haddr_reg[9]     FAB_CLK       DFN1     D       haddr_reg_RNO[9]     24.461       3.882
+psram_cr_0.ahb0.haddr_reg[0]     FAB_CLK       DFN1     D       haddr_reg_RNO[0]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[1]     FAB_CLK       DFN1     D       haddr_reg_RNO[1]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[2]     FAB_CLK       DFN1     D       haddr_reg_RNO[2]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[3]     FAB_CLK       DFN1     D       haddr_reg_RNO[3]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[4]     FAB_CLK       DFN1     D       haddr_reg_RNO[4]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[5]     FAB_CLK       DFN1     D       haddr_reg_RNO[5]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[6]     FAB_CLK       DFN1     D       haddr_reg_RNO[6]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[7]     FAB_CLK       DFN1     D       haddr_reg_RNO[7]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[8]     FAB_CLK       DFN1     D       haddr_reg_RNO[8]     24.461       4.195
+psram_cr_0.ahb0.haddr_reg[9]     FAB_CLK       DFN1     D       haddr_reg_RNO[9]     24.461       4.195
 =======================================================================================================
 
 
@@ -933,9 +952,9 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         24.461
 
-    - Propagation time:                      20.579
+    - Propagation time:                      20.266
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 3.883
+    = Slack (non-critical) :                 4.195
 
     Number of logic level(s):                11
     Starting point:                          CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTOI0I / Q
@@ -966,24 +985,24 @@ N_94                                                                            
 CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       B        In      -         11.060      -         
 CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNI8HUL4[2]         OA1C       Y        Out     0.900     11.961      -         
 N_104                                                                           Net        -        -       0.386     -           2         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       B        In      -         12.346      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[2]         OR2B       Y        Out     0.516     12.862      -         
-CAHBLTOO0l[1]                                                                   Net        -        -       0.806     -           3         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      A        In      -         13.669      -         
-CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNITMUB9[6]         NOR2A      Y        Out     0.627     14.296      -         
-CAHBLTI1Il6                                                                     Net        -        -       2.037     -           13        
-psram_cr_0.ahb0.fsm_RNIEDGIM                                                    NOR3B      A        In      -         16.333      -         
-psram_cr_0.ahb0.fsm_RNIEDGIM                                                    NOR3B      Y        Out     0.641     16.974      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[7]         OR3B       B        In      -         12.346      -         
+CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l.CAHBLTlI0l.CAHBLTllOI_RNIBDP89[7]         OR3B       Y        Out     0.624     12.970      -         
+CAHBLTOO0l[1]                                                                   Net        -        -       2.037     -           13        
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR3B      A        In      -         15.007      -         
+psram_cr_0.ahb0.hready_reg_RNIQ3IRN                                             NOR3B      Y        Out     0.641     15.648      -         
+hwrite_reg4                                                                     Net        -        -       0.386     -           2         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      A        In      -         16.034      -         
+psram_cr_0.ahb0.fsm_RNIHEQUN                                                    NOR2A      Y        Out     0.627     16.662      -         
 fsm_0_sqmuxa                                                                    Net        -        -       1.994     -           12        
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         18.968      -         
-psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     19.448      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        S        In      -         18.655      -         
+psram_cr_0.ahb0.haddr_reg_RNO_0[0]                                              MX2        Y        Out     0.480     19.135      -         
 N_169                                                                           Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         19.769      -         
-psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     20.257      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      A        In      -         19.456      -         
+psram_cr_0.ahb0.haddr_reg_RNO[0]                                                NOR2B      Y        Out     0.488     19.945      -         
 haddr_reg_RNO[0]                                                                Net        -        -       0.322     -           1         
-psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         20.579      -         
+psram_cr_0.ahb0.haddr_reg[0]                                                    DFN1       D        In      -         20.266      -         
 ============================================================================================================================================
-Total path delay (propagation time + setup) of 21.118 is 7.560(35.8%) logic and 13.558(64.2%) route.
+Total path delay (propagation time + setup) of 20.805 is 7.667(36.9%) logic and 13.137(63.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -998,41 +1017,41 @@ Detailed Report for Clock: clkgenerator|SCLK_inferred_clock
 Starting Points with Worst Slack
 ********************************
 
-                                              Starting                                                                   Arrival           
-Instance                                      Reference                            Type     Pin     Net                  Time        Slack 
-                                              Clock                                                                                        
--------------------------------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[0]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[0]     0.737       -5.755
-stonyman_0.state[3]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[3]             0.737       -5.401
-stonyman_0.cachedPOINTER[2]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[2]     0.737       -5.251
-stonyman_0.state[4]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[4]             0.737       -5.173
-stonyman_0.substate[13]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[13]         0.580       -4.898
-stonyman_0.cachedPOINTER[1]                   clkgenerator|SCLK_inferred_clock     DFN1     Q       cachedPOINTER[1]     0.737       -4.819
-stonyman_0.state[1]                           clkgenerator|SCLK_inferred_clock     DFN1     Q       state[1]             0.737       -4.801
-stonyman_0.substate[12]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[12]         0.580       -4.683
-stonyman_0.cachedValue_tile.WADDR_REG1[2]     clkgenerator|SCLK_inferred_clock     DFN1     Q       WADDR_REG1[2]        0.737       -4.505
-stonyman_0.substate[11]                       clkgenerator|SCLK_inferred_clock     DFN1     Q       substate[11]         0.737       -4.400
-===========================================================================================================================================
+                                         Starting                                                                            Arrival            
+Instance                                 Reference                            Type     Pin     Net                           Time        Slack  
+                                         Clock                                                                                                  
+------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[13]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[13]     0.737       -22.173
+stonyman_0.counterPixelsCaptured[12]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[12]     0.737       -22.015
+stonyman_0.counterPixelsCaptured[14]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[14]     0.737       -21.193
+stonyman_0.counterPixelsCaptured[15]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[15]     0.580       -20.704
+stonyman_0.counterPixelsCaptured[11]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[11]     0.737       -19.196
+stonyman_0.counterPixelsCaptured[10]     clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[10]     0.737       -16.928
+stonyman_0.counterPixelsCaptured[9]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[9]      0.737       -15.207
+stonyman_0.counterPixelsCaptured[8]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[8]      0.737       -10.928
+stonyman_0.counterPixelsCaptured[7]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[7]      0.737       -9.345 
+stonyman_0.counterPixelsCaptured[6]      clkgenerator|SCLK_inferred_clock     DFN1     Q       counterPixelsCaptured[6]      0.737       -6.410 
+================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                               Starting                                                                      Required           
-Instance                       Reference                            Type     Pin     Net                     Time         Slack 
-                               Clock                                                                                            
---------------------------------------------------------------------------------------------------------------------------------
-stonyman_0.substate[3]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_ns[3]          11.961       -5.755
-stonyman_0.counterWait[20]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[20]      11.927       -5.401
-stonyman_0.counterWait[15]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[15]      11.927       -5.335
-stonyman_0.counterWait[23]     clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_RNO[23]     11.927       -5.053
-stonyman_0.substate[1]         clkgenerator|SCLK_inferred_clock     DFN1     D       substate_RNO[1]         11.961       -5.036
-stonyman_0.state_i[0]          clkgenerator|SCLK_inferred_clock     DFN1     D       N_173                   11.927       -4.999
-stonyman_0.state[3]            clkgenerator|SCLK_inferred_clock     DFN1     D       state_RNO[3]            11.961       -4.950
-stonyman_0.counterWait[7]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[7]       11.961       -4.898
-stonyman_0.counterWait[1]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[1]       11.927       -4.582
-stonyman_0.counterWait[3]      clkgenerator|SCLK_inferred_clock     DFN1     D       counterWait_81[3]       11.927       -4.582
-================================================================================================================================
+                                    Starting                                                                            Required            
+Instance                            Reference                            Type          Pin        Net                   Time         Slack  
+                                    Clock                                                                                                   
+--------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.substate_i[0]            clkgenerator|SCLK_inferred_clock     DFN1          D          substate_i_RNO[0]     11.961       -22.173
+stonyman_0.state[12]                clkgenerator|SCLK_inferred_clock     DFN1          D          state_RNO[12]         11.961       -21.374
+stonyman_0.substate[1]              clkgenerator|SCLK_inferred_clock     DFN1          D          substate_RNO[1]       11.961       -21.374
+stonyman_0.state[11]                clkgenerator|SCLK_inferred_clock     DFN1          D          state_RNO[11]         11.927       -21.371
+stonyman_0.cachedPOINTER[2]         clkgenerator|SCLK_inferred_clock     DFN1          D          N_22_0                11.961       -6.336 
+stonyman_0.cachedValue_tile.I_1     clkgenerator|SCLK_inferred_clock     RAM512X18     RADDR2     N_22_0                12.219       -6.079 
+stonyman_0.counterWait[3]           clkgenerator|SCLK_inferred_clock     DFN1E0        D          N_25                  11.961       -5.924 
+stonyman_0.counterWait[0]           clkgenerator|SCLK_inferred_clock     DFN1E0        D          N_23                  11.927       -5.905 
+stonyman_0.counterWait[2]           clkgenerator|SCLK_inferred_clock     DFN1E0        D          N_14                  11.927       -5.905 
+stonyman_0.counterWait[4]           clkgenerator|SCLK_inferred_clock     DFN1E0        D          N_27_0                11.961       -5.698 
+============================================================================================================================================
 
 
 
@@ -1046,108 +1065,195 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         11.961
 
-    - Propagation time:                      17.717
+    - Propagation time:                      34.135
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -5.755
+    = Slack (critical) :                     -22.173
 
-    Number of logic level(s):                11
-    Starting point:                          stonyman_0.cachedPOINTER[0] / Q
-    Ending point:                            stonyman_0.substate[3] / D
+    Number of logic level(s):                24
+    Starting point:                          stonyman_0.counterPixelsCaptured[13] / Q
+    Ending point:                            stonyman_0.substate_i[0] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                     Pin      Pin               Arrival     No. of    
-Name                                                     Type      Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[0]                              DFN1      Q        Out     0.737     0.737       -         
-cachedPOINTER[0]                                         Net       -        -       1.994     -           12        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      B        In      -         2.730       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNIVK8I[0]        XOR2      Y        Out     0.627     3.358       -         
-I_4_0                                                    Net       -        -       0.322     -           1         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     B        In      -         3.679       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     Y        Out     0.407     4.086       -         
-I_5_1                                                    Net       -        -       2.037     -           13        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     A        In      -         6.123       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     Y        Out     0.516     6.639       -         
-state48_0_a2_1_o2_1_0_N_8_i_0_li                         Net       -        -       1.669     -           9         
-stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     B        In      -         8.307       -         
-stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     Y        Out     0.386     8.693       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_6                           Net       -        -       0.322     -           1         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       B        In      -         9.015       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       Y        Out     0.646     9.661       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     B        In      -         10.940      -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     Y        Out     0.627     11.568      -         
-DIN_REG1_RNI63AV6[5]                                     Net       -        -       0.806     -           3         
-stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     A        In      -         12.374      -         
-stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     Y        Out     0.627     13.002      -         
-N_426                                                    Net       -        -       1.279     -           5         
-stonyman_0.substate_RNO_10[3]                            NOR2B     B        In      -         14.281      -         
-stonyman_0.substate_RNO_10[3]                            NOR2B     Y        Out     0.627     14.908      -         
-substate_ns_0_0_a2_2_1[3]                                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_4[3]                             NOR2B     A        In      -         15.230      -         
-stonyman_0.substate_RNO_4[3]                             NOR2B     Y        Out     0.514     15.744      -         
-N_391                                                    Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_0[3]                             NOR3A     B        In      -         16.066      -         
-stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.488     16.554      -         
-substate_ns_0_0_a2_0_8[3]                                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO[3]                               AO1       A        In      -         16.875      -         
-stonyman_0.substate_RNO[3]                               AO1       Y        Out     0.520     17.395      -         
-substate_ns[3]                                           Net       -        -       0.322     -           1         
-stonyman_0.substate[3]                                   DFN1      D        In      -         17.717      -         
-====================================================================================================================
-Total path delay (propagation time + setup) of 18.255 is 7.262(39.8%) logic and 10.993(60.2%) route.
+Instance / Net                                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[13]                                                                      DFN1      Q        Out     0.737     0.737       -         
+counterPixelsCaptured[13]                                                                                 Net       -        -       2.127     -           15        
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     B        In      -         2.864       -         
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     Y        Out     0.627     3.492       -         
+state100_7                                                                                                Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     A        In      -         4.771       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     Y        Out     0.933     5.704       -         
+mult1_un61_sum[7]                                                                                         Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     B        In      -         6.888       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     Y        Out     0.937     7.824       -         
+mult1_un68_sum_1[5]                                                                                       Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     B        In      -         9.008       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     Y        Out     0.516     9.524       -         
+ADD_9x9_fast_I12_Y_N_7                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      A        In      -         9.846       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      Y        Out     0.568     10.414      -         
+N148                                                                                                      Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      B        In      -         10.800      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      Y        Out     0.937     11.736      -         
+ADD_9x9_fast_I17_Y_0_0                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      A        In      -         12.122      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      Y        Out     0.408     12.531      -         
+mult1_un75_sum[7]                                                                                         Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     A        In      -         13.337      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     Y        Out     0.627     13.964      -         
+N125_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       B        In      -         14.286      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       Y        Out     0.646     14.932      -         
+N150_3                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     C        In      -         15.254      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     Y        Out     0.985     16.239      -         
+ADD_9x9_fast_I17_Y_4                                                                                      Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      C        In      -         17.519      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      Y        Out     0.751     18.269      -         
+ADD_9x9_fast_I9_Y_N_20                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       C        In      -         18.591      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       Y        Out     0.683     19.274      -         
+ADD_9x9_fast_I9_Y_m9_i_1                                                                                  Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      C        In      -         19.595      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      Y        Out     0.655     20.250      -         
+ADD_9x9_fast_I9_Y_N_13                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      A        In      -         20.572      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      Y        Out     0.537     21.109      -         
+N150_0                                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      B        In      -         21.495      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      Y        Out     0.987     22.482      -         
+ADD_9x9_fast_I11_Y_m3_0                                                                                   Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      S        In      -         22.803      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      Y        Out     0.396     23.200      -         
+N146                                                                                                      Net       -        -       1.669     -           9         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       B        In      -         24.868      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       Y        Out     0.646     25.515      -         
+N132_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     B        In      -         25.836      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     Y        Out     0.627     26.464      -         
+I11_un1_Y                                                                                                 Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       B        In      -         26.849      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       Y        Out     0.646     27.496      -         
+N146_1                                                                                                    Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     B        In      -         28.302      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     Y        Out     0.627     28.930      -         
+N131                                                                                                      Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      A        In      -         29.251      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      Y        Out     1.001     30.252      -         
+N_131                                                                                                     Net       -        -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       B        In      -         30.574      -         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       Y        Out     0.646     31.220      -         
+N_99                                                                                                      Net       -        -       1.184     -           4         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     B        In      -         32.404      -         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     Y        Out     0.407     32.810      -         
+substate_i_RNO_2[0]                                                                                       Net       -        -       0.322     -           1         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      C        In      -         33.132      -         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      Y        Out     0.681     33.813      -         
+substate_i_RNO[0]                                                                                         Net       -        -       0.322     -           1         
+stonyman_0.substate_i[0]                                                                                  DFN1      D        In      -         34.135      -         
+=====================================================================================================================================================================
+Total path delay (propagation time + setup) of 34.673 is 17.754(51.2%) logic and 16.919(48.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 2: 
       Requested Period:                      12.500
-    - Setup time:                            0.573
+    - Setup time:                            0.539
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
+    = Required time:                         11.961
 
-    - Propagation time:                      17.327
+    - Propagation time:                      34.119
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -5.401
+    = Slack (non-critical) :                 -22.157
 
-    Number of logic level(s):                8
-    Starting point:                          stonyman_0.state[3] / Q
-    Ending point:                            stonyman_0.counterWait[20] / D
+    Number of logic level(s):                24
+    Starting point:                          stonyman_0.counterPixelsCaptured[13] / Q
+    Ending point:                            stonyman_0.substate_i[0] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                 Pin      Pin               Arrival     No. of    
-Name                                 Type      Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------
-stonyman_0.state[3]                  DFN1      Q        Out     0.737     0.737       -         
-state[3]                             Net       -        -       2.082     -           14        
-stonyman_0.state_RNIDO98_0[4]        NOR2      B        In      -         2.819       -         
-stonyman_0.state_RNIDO98_0[4]        NOR2      Y        Out     0.646     3.466       -         
-N_65                                 Net       -        -       1.776     -           11        
-stonyman_0.state_RNIUCOK[5]          NOR2B     B        In      -         5.242       -         
-stonyman_0.state_RNIUCOK[5]          NOR2B     Y        Out     0.516     5.758       -         
-N_431                                Net       -        -       1.423     -           6         
-stonyman_0.state_RNIDJ233[4]         AO1       C        In      -         7.181       -         
-stonyman_0.state_RNIDJ233[4]         AO1       Y        Out     0.655     7.836       -         
-N_26_i_0_0_o2_3_3                    Net       -        -       0.322     -           1         
-stonyman_0.state_RNIPOFE8[4]         OR3       C        In      -         8.158       -         
-stonyman_0.state_RNIPOFE8[4]         OR3       Y        Out     0.683     8.841       -         
-N_177                                Net       -        -       2.550     -           27        
-stonyman_0.state_RNIDON9K[1]         OR2B      B        In      -         11.390      -         
-stonyman_0.state_RNIDON9K[1]         OR2B      Y        Out     0.516     11.907      -         
-N_209                                Net       -        -       2.353     -           20        
-stonyman_0.state_RNIDPDRS[4]         NOR2      B        In      -         14.260      -         
-stonyman_0.state_RNIDPDRS[4]         NOR2      Y        Out     0.646     14.906      -         
-N_1_18                               Net       -        -       0.386     -           2         
-stonyman_0.counterWait_RNO_1[20]     NOR3A     C        In      -         15.292      -         
-stonyman_0.counterWait_RNO_1[20]     NOR3A     Y        Out     0.641     15.934      -         
-N_125                                Net       -        -       0.322     -           1         
-stonyman_0.counterWait_RNO[20]       OR3       C        In      -         16.255      -         
-stonyman_0.counterWait_RNO[20]       OR3       Y        Out     0.751     17.006      -         
-counterWait_81[20]                   Net       -        -       0.322     -           1         
-stonyman_0.counterWait[20]           DFN1      D        In      -         17.327      -         
-================================================================================================
-Total path delay (propagation time + setup) of 17.901 is 6.366(35.6%) logic and 11.535(64.4%) route.
+Instance / Net                                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[13]                                                                      DFN1      Q        Out     0.737     0.737       -         
+counterPixelsCaptured[13]                                                                                 Net       -        -       2.127     -           15        
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     B        In      -         2.864       -         
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     Y        Out     0.627     3.492       -         
+state100_7                                                                                                Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     A        In      -         4.771       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     Y        Out     0.933     5.704       -         
+mult1_un61_sum[7]                                                                                         Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     B        In      -         6.888       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     Y        Out     0.937     7.824       -         
+mult1_un68_sum_1[5]                                                                                       Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m4            NOR2B     B        In      -         9.008       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m4            NOR2B     Y        Out     0.516     9.524       -         
+ADD_9x9_fast_I12_Y_N_8                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      B        In      -         9.846       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      Y        Out     0.553     10.398      -         
+N148                                                                                                      Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      B        In      -         10.784      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      Y        Out     0.937     11.721      -         
+ADD_9x9_fast_I17_Y_0_0                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      A        In      -         12.107      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      Y        Out     0.408     12.515      -         
+mult1_un75_sum[7]                                                                                         Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     A        In      -         13.321      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     Y        Out     0.627     13.949      -         
+N125_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       B        In      -         14.270      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       Y        Out     0.646     14.917      -         
+N150_3                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     C        In      -         15.238      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     Y        Out     0.985     16.224      -         
+ADD_9x9_fast_I17_Y_4                                                                                      Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      C        In      -         17.503      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      Y        Out     0.751     18.254      -         
+ADD_9x9_fast_I9_Y_N_20                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       C        In      -         18.575      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       Y        Out     0.683     19.258      -         
+ADD_9x9_fast_I9_Y_m9_i_1                                                                                  Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      C        In      -         19.580      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      Y        Out     0.655     20.235      -         
+ADD_9x9_fast_I9_Y_N_13                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      A        In      -         20.556      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      Y        Out     0.537     21.093      -         
+N150_0                                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      B        In      -         21.479      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      Y        Out     0.987     22.466      -         
+ADD_9x9_fast_I11_Y_m3_0                                                                                   Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      S        In      -         22.788      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      Y        Out     0.396     23.184      -         
+N146                                                                                                      Net       -        -       1.669     -           9         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       B        In      -         24.852      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       Y        Out     0.646     25.499      -         
+N132_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     B        In      -         25.820      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     Y        Out     0.627     26.448      -         
+I11_un1_Y                                                                                                 Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       B        In      -         26.834      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       Y        Out     0.646     27.480      -         
+N146_1                                                                                                    Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     B        In      -         28.287      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     Y        Out     0.627     28.914      -         
+N131                                                                                                      Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      A        In      -         29.235      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      Y        Out     1.001     30.236      -         
+N_131                                                                                                     Net       -        -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       B        In      -         30.558      -         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       Y        Out     0.646     31.204      -         
+N_99                                                                                                      Net       -        -       1.184     -           4         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     B        In      -         32.388      -         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     Y        Out     0.407     32.795      -         
+substate_i_RNO_2[0]                                                                                       Net       -        -       0.322     -           1         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      C        In      -         33.116      -         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      Y        Out     0.681     33.797      -         
+substate_i_RNO[0]                                                                                         Net       -        -       0.322     -           1         
+stonyman_0.substate_i[0]                                                                                  DFN1      D        In      -         34.119      -         
+=====================================================================================================================================================================
+Total path delay (propagation time + setup) of 34.657 is 17.739(51.2%) logic and 16.919(48.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -1157,162 +1263,294 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         11.961
 
-    - Propagation time:                      17.212
+    - Propagation time:                      34.039
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -5.251
+    = Slack (non-critical) :                 -22.078
 
-    Number of logic level(s):                11
-    Starting point:                          stonyman_0.cachedPOINTER[2] / Q
-    Ending point:                            stonyman_0.substate[3] / D
+    Number of logic level(s):                24
+    Starting point:                          stonyman_0.counterPixelsCaptured[13] / Q
+    Ending point:                            stonyman_0.substate_i[0] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                     Pin      Pin               Arrival     No. of    
-Name                                                     Type      Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------------------------
-stonyman_0.cachedPOINTER[2]                              DFN1      Q        Out     0.737     0.737       -         
-cachedPOINTER[2]                                         Net       -        -       1.526     -           7         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI2T4R[2]        XA1A      A        In      -         2.263       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI2T4R[2]        XA1A      Y        Out     0.481     2.744       -         
-I_5_1_0                                                  Net       -        -       0.322     -           1         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     A        In      -         3.066       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI1IDD1[0]       NOR2A     Y        Out     0.516     3.582       -         
-I_5_1                                                    Net       -        -       2.037     -           13        
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     A        In      -         5.619       -         
-stonyman_0.cachedValue_tile.WADDR_REG1_RNI27MV1_0[1]     NOR2A     Y        Out     0.516     6.135       -         
-state48_0_a2_1_o2_1_0_N_8_i_0_li                         Net       -        -       1.669     -           9         
-stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     B        In      -         7.803       -         
-stonyman_0.cachedValue_tile.I_1_RNISMEH2_0               NOR2A     Y        Out     0.386     8.189       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_6                           Net       -        -       0.322     -           1         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       B        In      -         8.511       -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI52SK4[6]         OR2       Y        Out     0.646     9.157       -         
-state_ns_i_0_a2_i_i_o2_1_0_N_5                           Net       -        -       1.279     -           5         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     B        In      -         10.436      -         
-stonyman_0.cachedValue_tile.DIN_REG1_RNI63AV6[5]         NOR2B     Y        Out     0.627     11.064      -         
-DIN_REG1_RNI63AV6[5]                                     Net       -        -       0.806     -           3         
-stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     A        In      -         11.870      -         
-stonyman_0.cachedValue_tile.I_1_RNI0UFK9                 NOR2A     Y        Out     0.627     12.498      -         
-N_426                                                    Net       -        -       1.279     -           5         
-stonyman_0.substate_RNO_10[3]                            NOR2B     B        In      -         13.777      -         
-stonyman_0.substate_RNO_10[3]                            NOR2B     Y        Out     0.627     14.404      -         
-substate_ns_0_0_a2_2_1[3]                                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_4[3]                             NOR2B     A        In      -         14.726      -         
-stonyman_0.substate_RNO_4[3]                             NOR2B     Y        Out     0.514     15.240      -         
-N_391                                                    Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO_0[3]                             NOR3A     B        In      -         15.562      -         
-stonyman_0.substate_RNO_0[3]                             NOR3A     Y        Out     0.488     16.050      -         
-substate_ns_0_0_a2_0_8[3]                                Net       -        -       0.322     -           1         
-stonyman_0.substate_RNO[3]                               AO1       A        In      -         16.371      -         
-stonyman_0.substate_RNO[3]                               AO1       Y        Out     0.520     16.891      -         
-substate_ns[3]                                           Net       -        -       0.322     -           1         
-stonyman_0.substate[3]                                   DFN1      D        In      -         17.212      -         
-====================================================================================================================
-Total path delay (propagation time + setup) of 17.751 is 7.226(40.7%) logic and 10.525(59.3%) route.
+Instance / Net                                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[13]                                                                      DFN1      Q        Out     0.737     0.737       -         
+counterPixelsCaptured[13]                                                                                 Net       -        -       2.127     -           15        
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     B        In      -         2.864       -         
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     Y        Out     0.627     3.492       -         
+state100_7                                                                                                Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     A        In      -         4.771       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     Y        Out     0.933     5.704       -         
+mult1_un61_sum[7]                                                                                         Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     B        In      -         6.888       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     Y        Out     0.937     7.824       -         
+mult1_un68_sum_1[5]                                                                                       Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     B        In      -         9.008       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     Y        Out     0.516     9.524       -         
+ADD_9x9_fast_I12_Y_N_7                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      A        In      -         9.846       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      Y        Out     0.568     10.414      -         
+N148                                                                                                      Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      B        In      -         10.800      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      Y        Out     0.937     11.736      -         
+ADD_9x9_fast_I17_Y_0_0                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      A        In      -         12.122      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      Y        Out     0.408     12.531      -         
+mult1_un75_sum[7]                                                                                         Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     A        In      -         13.337      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     Y        Out     0.627     13.964      -         
+N125_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       B        In      -         14.286      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       Y        Out     0.646     14.932      -         
+N150_3                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     C        In      -         15.254      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     Y        Out     0.985     16.239      -         
+ADD_9x9_fast_I17_Y_4                                                                                      Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      C        In      -         17.519      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      Y        Out     0.751     18.269      -         
+ADD_9x9_fast_I9_Y_N_20                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       C        In      -         18.591      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       Y        Out     0.683     19.274      -         
+ADD_9x9_fast_I9_Y_m9_i_1                                                                                  Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      C        In      -         19.595      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      Y        Out     0.655     20.250      -         
+ADD_9x9_fast_I9_Y_N_13                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      A        In      -         20.572      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      Y        Out     0.537     21.109      -         
+N150_0                                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      B        In      -         21.495      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      Y        Out     0.987     22.482      -         
+ADD_9x9_fast_I11_Y_m3_0                                                                                   Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      S        In      -         22.803      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      Y        Out     0.396     23.200      -         
+N146                                                                                                      Net       -        -       1.669     -           9         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y_0        OA1A      A        In      -         24.868      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y_0        OA1A      Y        Out     0.933     25.801      -         
+ADD_9x9_fast_I11_un1_Y_0_0                                                                                Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     A        In      -         26.123      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     Y        Out     0.488     26.611      -         
+I11_un1_Y                                                                                                 Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       B        In      -         26.997      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       Y        Out     0.514     27.511      -         
+N146_1                                                                                                    Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     B        In      -         28.318      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     Y        Out     0.516     28.834      -         
+N131                                                                                                      Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      A        In      -         29.155      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      Y        Out     1.001     30.156      -         
+N_131                                                                                                     Net       -        -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       B        In      -         30.478      -         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       Y        Out     0.646     31.124      -         
+N_99                                                                                                      Net       -        -       1.184     -           4         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     B        In      -         32.308      -         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     Y        Out     0.407     32.715      -         
+substate_i_RNO_2[0]                                                                                       Net       -        -       0.322     -           1         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      C        In      -         33.036      -         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      Y        Out     0.681     33.717      -         
+substate_i_RNO[0]                                                                                         Net       -        -       0.322     -           1         
+stonyman_0.substate_i[0]                                                                                  DFN1      D        In      -         34.039      -         
+=====================================================================================================================================================================
+Total path delay (propagation time + setup) of 34.578 is 17.659(51.1%) logic and 16.919(48.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
       Requested Period:                      12.500
-    - Setup time:                            0.573
+    - Setup time:                            0.539
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
+    = Required time:                         11.961
 
-    - Propagation time:                      17.100
+    - Propagation time:                      34.023
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -5.173
+    = Slack (non-critical) :                 -22.062
 
-    Number of logic level(s):                8
-    Starting point:                          stonyman_0.state[4] / Q
-    Ending point:                            stonyman_0.counterWait[20] / D
+    Number of logic level(s):                24
+    Starting point:                          stonyman_0.counterPixelsCaptured[13] / Q
+    Ending point:                            stonyman_0.substate_i[0] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                 Pin      Pin               Arrival     No. of    
-Name                                 Type      Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------
-stonyman_0.state[4]                  DFN1      Q        Out     0.737     0.737       -         
-state[4]                             Net       -        -       1.994     -           12        
-stonyman_0.state_RNIDO98_0[4]        NOR2      A        In      -         2.730       -         
-stonyman_0.state_RNIDO98_0[4]        NOR2      Y        Out     0.507     3.238       -         
-N_65                                 Net       -        -       1.776     -           11        
-stonyman_0.state_RNIUCOK[5]          NOR2B     B        In      -         5.014       -         
-stonyman_0.state_RNIUCOK[5]          NOR2B     Y        Out     0.516     5.530       -         
-N_431                                Net       -        -       1.423     -           6         
-stonyman_0.state_RNIDJ233[4]         AO1       C        In      -         6.954       -         
-stonyman_0.state_RNIDJ233[4]         AO1       Y        Out     0.655     7.609       -         
-N_26_i_0_0_o2_3_3                    Net       -        -       0.322     -           1         
-stonyman_0.state_RNIPOFE8[4]         OR3       C        In      -         7.930       -         
-stonyman_0.state_RNIPOFE8[4]         OR3       Y        Out     0.683     8.613       -         
-N_177                                Net       -        -       2.550     -           27        
-stonyman_0.state_RNIDON9K[1]         OR2B      B        In      -         11.163      -         
-stonyman_0.state_RNIDON9K[1]         OR2B      Y        Out     0.516     11.679      -         
-N_209                                Net       -        -       2.353     -           20        
-stonyman_0.state_RNIDPDRS[4]         NOR2      B        In      -         14.032      -         
-stonyman_0.state_RNIDPDRS[4]         NOR2      Y        Out     0.646     14.679      -         
-N_1_18                               Net       -        -       0.386     -           2         
-stonyman_0.counterWait_RNO_1[20]     NOR3A     C        In      -         15.065      -         
-stonyman_0.counterWait_RNO_1[20]     NOR3A     Y        Out     0.641     15.706      -         
-N_125                                Net       -        -       0.322     -           1         
-stonyman_0.counterWait_RNO[20]       OR3       C        In      -         16.027      -         
-stonyman_0.counterWait_RNO[20]       OR3       Y        Out     0.751     16.778      -         
-counterWait_81[20]                   Net       -        -       0.322     -           1         
-stonyman_0.counterWait[20]           DFN1      D        In      -         17.100      -         
-================================================================================================
-Total path delay (propagation time + setup) of 17.673 is 6.227(35.2%) logic and 11.446(64.8%) route.
+Instance / Net                                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[13]                                                                      DFN1      Q        Out     0.737     0.737       -         
+counterPixelsCaptured[13]                                                                                 Net       -        -       2.127     -           15        
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     B        In      -         2.864       -         
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     Y        Out     0.627     3.492       -         
+state100_7                                                                                                Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     A        In      -         4.771       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     Y        Out     0.933     5.704       -         
+mult1_un61_sum[7]                                                                                         Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     B        In      -         6.888       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     Y        Out     0.937     7.824       -         
+mult1_un68_sum_1[5]                                                                                       Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m4            NOR2B     B        In      -         9.008       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m4            NOR2B     Y        Out     0.516     9.524       -         
+ADD_9x9_fast_I12_Y_N_8                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      B        In      -         9.846       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      Y        Out     0.553     10.398      -         
+N148                                                                                                      Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      B        In      -         10.784      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      Y        Out     0.937     11.721      -         
+ADD_9x9_fast_I17_Y_0_0                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      A        In      -         12.107      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      Y        Out     0.408     12.515      -         
+mult1_un75_sum[7]                                                                                         Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     A        In      -         13.321      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     Y        Out     0.627     13.949      -         
+N125_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       B        In      -         14.270      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       Y        Out     0.646     14.917      -         
+N150_3                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     C        In      -         15.238      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     Y        Out     0.985     16.224      -         
+ADD_9x9_fast_I17_Y_4                                                                                      Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      C        In      -         17.503      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      Y        Out     0.751     18.254      -         
+ADD_9x9_fast_I9_Y_N_20                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       C        In      -         18.575      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       Y        Out     0.683     19.258      -         
+ADD_9x9_fast_I9_Y_m9_i_1                                                                                  Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      C        In      -         19.580      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      Y        Out     0.655     20.235      -         
+ADD_9x9_fast_I9_Y_N_13                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      A        In      -         20.556      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      Y        Out     0.537     21.093      -         
+N150_0                                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      B        In      -         21.479      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      Y        Out     0.987     22.466      -         
+ADD_9x9_fast_I11_Y_m3_0                                                                                   Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      S        In      -         22.788      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      Y        Out     0.396     23.184      -         
+N146                                                                                                      Net       -        -       1.669     -           9         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y_0        OA1A      A        In      -         24.852      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y_0        OA1A      Y        Out     0.933     25.786      -         
+ADD_9x9_fast_I11_un1_Y_0_0                                                                                Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     A        In      -         26.107      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     Y        Out     0.488     26.596      -         
+I11_un1_Y                                                                                                 Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       B        In      -         26.981      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       Y        Out     0.514     27.496      -         
+N146_1                                                                                                    Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     B        In      -         28.302      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     Y        Out     0.516     28.818      -         
+N131                                                                                                      Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      A        In      -         29.140      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      Y        Out     1.001     30.141      -         
+N_131                                                                                                     Net       -        -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       B        In      -         30.462      -         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       Y        Out     0.646     31.109      -         
+N_99                                                                                                      Net       -        -       1.184     -           4         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     B        In      -         32.292      -         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     Y        Out     0.407     32.699      -         
+substate_i_RNO_2[0]                                                                                       Net       -        -       0.322     -           1         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      C        In      -         33.020      -         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      Y        Out     0.681     33.702      -         
+substate_i_RNO[0]                                                                                         Net       -        -       0.322     -           1         
+stonyman_0.substate_i[0]                                                                                  DFN1      D        In      -         34.023      -         
+=====================================================================================================================================================================
+Total path delay (propagation time + setup) of 34.562 is 17.643(51.0%) logic and 16.919(49.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
       Requested Period:                      12.500
-    - Setup time:                            0.573
+    - Setup time:                            0.539
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.927
+    = Required time:                         11.961
 
-    - Propagation time:                      16.980
+    - Propagation time:                      33.976
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -5.053
+    = Slack (non-critical) :                 -22.015
 
-    Number of logic level(s):                9
-    Starting point:                          stonyman_0.state[3] / Q
-    Ending point:                            stonyman_0.counterWait[23] / D
+    Number of logic level(s):                24
+    Starting point:                          stonyman_0.counterPixelsCaptured[12] / Q
+    Ending point:                            stonyman_0.substate_i[0] / D
     The start point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                     Pin      Pin               Arrival     No. of    
-Name                                     Type      Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------
-stonyman_0.state[3]                      DFN1      Q        Out     0.737     0.737       -         
-state[3]                                 Net       -        -       2.082     -           14        
-stonyman_0.state_RNIDO98_0[4]            NOR2      B        In      -         2.819       -         
-stonyman_0.state_RNIDO98_0[4]            NOR2      Y        Out     0.646     3.466       -         
-N_65                                     Net       -        -       1.776     -           11        
-stonyman_0.state_RNIUCOK[5]              NOR2B     B        In      -         5.242       -         
-stonyman_0.state_RNIUCOK[5]              NOR2B     Y        Out     0.516     5.758       -         
-N_431                                    Net       -        -       1.423     -           6         
-stonyman_0.state_RNIDJ233[4]             AO1       C        In      -         7.181       -         
-stonyman_0.state_RNIDJ233[4]             AO1       Y        Out     0.655     7.836       -         
-N_26_i_0_0_o2_3_3                        Net       -        -       0.322     -           1         
-stonyman_0.state_RNIPOFE8[4]             OR3       C        In      -         8.158       -         
-stonyman_0.state_RNIPOFE8[4]             OR3       Y        Out     0.683     8.841       -         
-N_177                                    Net       -        -       2.550     -           27        
-stonyman_0.state_RNI5213I[4]             NOR2A     B        In      -         11.390      -         
-stonyman_0.state_RNI5213I[4]             NOR2A     Y        Out     0.386     11.776      -         
-N_416                                    Net       -        -       0.806     -           3         
-stonyman_0.state_RNIGTJCR1[1]            AO1       C        In      -         12.583      -         
-stonyman_0.state_RNIGTJCR1[1]            AO1       Y        Out     0.633     13.215      -         
-N_176                                    Net       -        -       0.386     -           2         
-stonyman_0.state_RNIN5QFR1[1]            NOR2A     A        In      -         13.601      -         
-stonyman_0.state_RNIN5QFR1[1]            NOR2A     Y        Out     0.627     14.229      -         
-N_124                                    Net       -        -       0.806     -           3         
-stonyman_0.counterWait_RNO_1[23]         NOR2      B        In      -         15.035      -         
-stonyman_0.counterWait_RNO_1[23]         NOR2      Y        Out     0.646     15.681      -         
-counterWait_81_0_iv_i_i_23_m2_0_a2_0     Net       -        -       0.322     -           1         
-stonyman_0.counterWait_RNO[23]           AO1C      C        In      -         16.003      -         
-stonyman_0.counterWait_RNO[23]           AO1C      Y        Out     0.655     16.658      -         
-counterWait_RNO[23]                      Net       -        -       0.322     -           1         
-stonyman_0.counterWait[23]               DFN1      D        In      -         16.980      -         
-====================================================================================================
-Total path delay (propagation time + setup) of 17.553 is 6.759(38.5%) logic and 10.794(61.5%) route.
+Instance / Net                                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                                      Type      Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[12]                                                                      DFN1      Q        Out     0.737     0.737       -         
+counterPixelsCaptured[12]                                                                                 Net       -        -       2.082     -           14        
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     A        In      -         2.819       -         
+stonyman_0.counterPixelsCaptured_RNILUIM[12]                                                              NOR2B     Y        Out     0.514     3.333       -         
+state100_7                                                                                                Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     A        In      -         4.613       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un61_sum.ADD_9x9_fast_I17_Y_0             AOI1B     Y        Out     0.933     5.546       -         
+mult1_un61_sum[7]                                                                                         Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     B        In      -         6.729       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un68_sum.ADD_9x9_fast_I15_Y_1             XNOR2     Y        Out     0.937     7.666       -         
+mult1_un68_sum_1[5]                                                                                       Net       -        -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     B        In      -         8.850       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m2            NOR2B     Y        Out     0.516     9.366       -         
+ADD_9x9_fast_I12_Y_N_7                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      A        In      -         9.687       -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I12_Y_m5            MX2A      Y        Out     0.568     10.256      -         
+N148                                                                                                      Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      B        In      -         10.642      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y_0             XOR2      Y        Out     0.937     11.578      -         
+ADD_9x9_fast_I17_Y_0_0                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      A        In      -         11.964      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un75_sum.ADD_9x9_fast_I17_Y               XOR2      Y        Out     0.408     12.372      -         
+mult1_un75_sum[7]                                                                                         Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     A        In      -         13.179      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I1_G0N              NOR2A     Y        Out     0.627     13.806      -         
+N125_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       B        In      -         14.128      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un82_sum.ADD_9x9_fast_I9_Y                OR2       Y        Out     0.646     14.774      -         
+N150_3                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     C        In      -         15.096      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un89_sum.ADD_9x9_fast_I17_Y_4             XNOR3     Y        Out     0.985     16.081      -         
+ADD_9x9_fast_I17_Y_4                                                                                      Net       -        -       1.279     -           5         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      C        In      -         17.360      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_a5_1     NOR3      Y        Out     0.751     18.111      -         
+ADD_9x9_fast_I9_Y_N_20                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       C        In      -         18.433      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i_1        OR3       Y        Out     0.683     19.116      -         
+ADD_9x9_fast_I9_Y_m9_i_1                                                                                  Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      C        In      -         19.437      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_m9_i          AO1A      Y        Out     0.655     20.092      -         
+ADD_9x9_fast_I9_Y_N_13                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      A        In      -         20.414      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I9_Y_0             OR2A      Y        Out     0.537     20.951      -         
+N150_0                                                                                                    Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      B        In      -         21.337      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_m3_0         AO16      Y        Out     0.987     22.324      -         
+ADD_9x9_fast_I11_Y_m3_0                                                                                   Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      S        In      -         22.645      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un103_sum.ADD_9x9_fast_I11_Y_1            MX2B      Y        Out     0.396     23.041      -         
+N146                                                                                                      Net       -        -       1.669     -           9         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       B        In      -         24.710      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I3_P0N             OR2       Y        Out     0.646     25.356      -         
+N132_0                                                                                                    Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     B        In      -         25.678      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_un1_Y          NOR2B     Y        Out     0.627     26.305      -         
+I11_un1_Y                                                                                                 Net       -        -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       B        In      -         26.691      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un110_sum.ADD_9x9_fast_I11_Y              OR2       Y        Out     0.646     27.338      -         
+N146_1                                                                                                    Net       -        -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     B        In      -         28.144      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_un117_sum.ADD_9x9_fast_I3_G0N             NOR2B     Y        Out     0.627     28.771      -         
+N131                                                                                                      Net       -        -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      A        In      -         29.093      -         
+stonyman_0.un1_counterPixelsCaptured_13.if_generate_plus\.mult1_remainder_i_m2[4]                         AX1D      Y        Out     1.001     30.094      -         
+N_131                                                                                                     Net       -        -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       B        In      -         30.415      -         
+stonyman_0.counterPixelsCaptured_RNIKIE1641[0]                                                            OR2       Y        Out     0.646     31.062      -         
+N_99                                                                                                      Net       -        -       1.184     -           4         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     B        In      -         32.246      -         
+stonyman_0.substate_i_RNO_2[0]                                                                            NOR2A     Y        Out     0.407     32.652      -         
+substate_i_RNO_2[0]                                                                                       Net       -        -       0.322     -           1         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      C        In      -         32.974      -         
+stonyman_0.substate_i_RNO[0]                                                                              OR3A      Y        Out     0.681     33.655      -         
+substate_i_RNO[0]                                                                                         Net       -        -       0.322     -           1         
+stonyman_0.substate_i[0]                                                                                  DFN1      D        In      -         33.976      -         
+=====================================================================================================================================================================
+Total path delay (propagation time + setup) of 34.515 is 17.641(51.1%) logic and 16.874(48.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -1331,37 +1569,37 @@ Starting Points with Worst Slack
 Instance                           Reference     Type           Pin              Net                                           Time        Slack 
                                    Clock                                                                                                         
 -------------------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        M2FRESETn        MSS_ADLIB_INST_M2FRESETn                      0.000       1.143 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]     0.000       6.545 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        M2FRESETn        MSS_ADLIB_INST_M2FRESETn                      0.000       -2.333
 MSS_CORE2_0.MSS_CCC_0.I_XTLOSC     System        MSS_XTLOSC     CLKOUT           N_CLKA_XTLOSC                                 0.000       6.669 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[19]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19]     0.000       6.797 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHTRANS[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS[1]     0.000       7.244 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[16]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[16]     0.000       7.866 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[17]     0.000       8.118 
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHLOCK         MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK         0.000       11.201
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[18]     0.000       6.858 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[19]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19]     0.000       7.110 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[16]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[16]     0.000       7.654 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHTRANS[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HTRANS[1]     0.000       7.793 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHADDR[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[17]     0.000       7.906 
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHLOCK         MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK         0.000       12.122
 MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        EMCCLK           MSS_ADLIB_INST_EMCCLK                         0.000       12.179
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        GPO[0]           GPO_net_0[0]                                  0.000       12.179
+MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        MSSHSIZE[1]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1]      0.000       15.313
 =================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                    Starting                                                       Required          
-Instance                            Reference     Type          Pin        Net                     Time         Slack
-                                    Clock                                                                            
----------------------------------------------------------------------------------------------------------------------
-stonyman_0.substate_i_0[0]          System        DFN1          D          substate_ns_i[0]        11.961       1.143
-stonyman_0.cachedPOINTER[2]         System        DFN1          D          N_18                    11.961       3.600
-stonyman_0.counterWait[27]          System        DFN1          D          counterWait_81[27]      11.927       3.769
-stonyman_0.counterWait[30]          System        DFN1          D          N_39                    11.927       3.769
-stonyman_0.cachedValue_tile.I_1     System        RAM512X18     RADDR2     N_18                    12.219       3.857
-stonyman_0.counterWait[23]          System        DFN1          D          counterWait_RNO[23]     11.927       4.221
-stonyman_0.cachedPOINTER[1]         System        DFN1          D          N_16                    11.961       4.410
-stonyman_0.cachedValue_tile.I_1     System        RAM512X18     RADDR1     N_16                    12.219       4.667
-stonyman_0.counterWait[4]           System        DFN1          D          counterWait_81[4]       11.927       4.832
-stonyman_0.counterWait[5]           System        DFN1          D          counterWait_81[5]       11.927       4.832
-=====================================================================================================================
+                                         Starting                                                               Required           
+Instance                                 Reference     Type          Pin        Net                             Time         Slack 
+                                         Clock                                                                                     
+-----------------------------------------------------------------------------------------------------------------------------------
+stonyman_0.counterPixelsCaptured[15]     System        DFN1          D          counterPixelsCaptured_7[15]     11.961       -2.333
+stonyman_0.counterPixelsCaptured[14]     System        DFN1          D          counterPixelsCaptured_7[14]     11.961       -1.497
+stonyman_0.counterPixelsCaptured[13]     System        DFN1          D          counterPixelsCaptured_7[13]     11.961       -1.433
+stonyman_0.counterPixelsCaptured[11]     System        DFN1          D          counterPixelsCaptured_7[11]     11.961       -1.012
+stonyman_0.counterPixelsCaptured[12]     System        DFN1          D          counterPixelsCaptured_7[12]     11.961       -0.597
+stonyman_0.counterPixelsCaptured[10]     System        DFN1          D          counterPixelsCaptured_7[10]     11.961       -0.176
+stonyman_0.counterPixelsCaptured[9]      System        DFN1          D          counterPixelsCaptured_7[9]      11.961       -0.112
+stonyman_0.cachedPOINTER[2]              System        DFN1          D          N_22_0                          11.961       0.340 
+stonyman_0.cachedValue_tile.I_1          System        RAM512X18     RADDR2     N_22_0                          12.219       0.597 
+stonyman_0.counterPixelsCaptured[7]      System        DFN1          D          counterPixelsCaptured_7[7]      11.961       0.686 
+===================================================================================================================================
 
 
 
@@ -1375,52 +1613,287 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         11.961
 
-    - Propagation time:                      10.819
+    - Propagation time:                      14.294
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 1.143
+    = Slack (non-critical) :                 -2.333
 
-    Number of logic level(s):                9
+    Number of logic level(s):                11
     Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
-    Ending point:                            stonyman_0.substate_i_0[0] / D
+    Ending point:                            stonyman_0.counterPixelsCaptured[15] / D
     The start point is clocked by            System [rising]
     The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
 
-Instance / Net                                          Pin           Pin               Arrival     No. of    
-Name                                        Type        Name          Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_ADLIB_INST                  MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
-MSS_ADLIB_INST_M2FRESETn                    Net         -             -       0.322     -           1         
-MSS_CORE2_0.MSS_ADLIB_INST_RNI7863          CLKINT      A             In      -         0.322       -         
-MSS_CORE2_0.MSS_ADLIB_INST_RNI7863          CLKINT      Y             Out     0.174     0.495       -         
-MSS_CORE2_0_M2F_RESET_N                     Net         -             -       1.601     -           303       
-stonyman_0.state_i_RNI8AI3[0]               NOR2B       B             In      -         2.096       -         
-stonyman_0.state_i_RNI8AI3[0]               NOR2B       Y             Out     0.516     2.612       -         
-N_1638                                      Net         -             -       1.279     -           5         
-stonyman_0.substate_ns_i_0_a2_4[0]          OR2B        A             In      -         3.891       -         
-stonyman_0.substate_ns_i_0_a2_4[0]          OR2B        Y             Out     0.488     4.380       -         
-N_1661_i                                    Net         -             -       0.322     -           1         
-stonyman_0.substate_ns_i_0_a2_2_a1_0[0]     AND2        B             In      -         4.701       -         
-stonyman_0.substate_ns_i_0_a2_2_a1_0[0]     AND2        Y             Out     0.627     5.329       -         
-substate_ns_i_0_a2_2_a1_0[0]                Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_10[0]           AOI1B       A             In      -         5.650       -         
-stonyman_0.substate_i_0_RNO_10[0]           AOI1B       Y             Out     0.933     6.583       -         
-substate_ns_i_0_a2_0_0[0]                   Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_7[0]            OA1         C             In      -         6.905       -         
-stonyman_0.substate_i_0_RNO_7[0]            OA1         Y             Out     0.666     7.570       -         
-N_1656                                      Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_4[0]            AO1         C             In      -         7.892       -         
-stonyman_0.substate_i_0_RNO_4[0]            AO1         Y             Out     0.655     8.547       -         
-N_1583                                      Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO_1[0]            NOR3B       A             In      -         8.869       -         
-stonyman_0.substate_i_0_RNO_1[0]            NOR3B       Y             Out     0.666     9.534       -         
-N_1592                                      Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0_RNO[0]              OR3         B             In      -         9.856       -         
-stonyman_0.substate_i_0_RNO[0]              OR3         Y             Out     0.641     10.497      -         
-substate_ns_i[0]                            Net         -             -       0.322     -           1         
-stonyman_0.substate_i_0[0]                  DFN1        D             In      -         10.819      -         
-==============================================================================================================
-Total path delay (propagation time + setup) of 11.357 is 5.905(52.0%) logic and 5.452(48.0%) route.
+Instance / Net                                               Pin           Pin               Arrival     No. of    
+Name                                             Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                       MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                         Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                          Net         -             -       1.601     -           320       
+stonyman_0.substate_RNID41P[16]                  NOR2B       B             In      -         2.096       -         
+stonyman_0.substate_RNID41P[16]                  NOR2B       Y             Out     0.627     2.723       -         
+substate_RNID41P[16]                             Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         3.530       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     4.157       -         
+DWACT_ADD_CI_0_TMP[0]                            Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       A             In      -         4.543       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       Y             Out     0.514     5.057       -         
+DWACT_ADD_CI_0_g_array_1[0]                      Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       A             In      -         5.864       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       Y             Out     0.514     6.378       -         
+DWACT_ADD_CI_0_g_array_2[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       A             In      -         7.562       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       Y             Out     0.514     8.076       -         
+DWACT_ADD_CI_0_g_array_3[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       A             In      -         9.260       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       Y             Out     0.514     9.774       -         
+DWACT_ADD_CI_0_g_array_10[0]                     Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_90     NOR2B       A             In      -         10.581      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_90     NOR2B       Y             Out     0.514     11.095      -         
+DWACT_ADD_CI_0_g_array_11_2[0]                   Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_88     NOR2B       A             In      -         11.481      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_88     NOR2B       Y             Out     0.514     11.995      -         
+DWACT_ADD_CI_0_g_array_12_6[0]                   Net         -             -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_16.I_66     XOR2        B             In      -         12.317      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_66     XOR2        Y             Out     0.937     13.253      -         
+I_66                                             Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNO[15]         OA1A        C             In      -         13.575      -         
+stonyman_0.counterPixelsCaptured_RNO[15]         OA1A        Y             Out     0.398     13.973      -         
+counterPixelsCaptured_7[15]                      Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured[15]             DFN1        D             In      -         14.294      -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 14.833 is 6.388(43.1%) logic and 8.445(56.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      12.500
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         11.961
+
+    - Propagation time:                      13.459
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -1.497
+
+    Number of logic level(s):                10
+    Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
+    Ending point:                            stonyman_0.counterPixelsCaptured[14] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+
+Instance / Net                                               Pin           Pin               Arrival     No. of    
+Name                                             Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                       MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                         Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                          Net         -             -       1.601     -           320       
+stonyman_0.substate_RNID41P[16]                  NOR2B       B             In      -         2.096       -         
+stonyman_0.substate_RNID41P[16]                  NOR2B       Y             Out     0.627     2.723       -         
+substate_RNID41P[16]                             Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         3.530       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     4.157       -         
+DWACT_ADD_CI_0_TMP[0]                            Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       A             In      -         4.543       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       Y             Out     0.514     5.057       -         
+DWACT_ADD_CI_0_g_array_1[0]                      Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       A             In      -         5.864       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       Y             Out     0.514     6.378       -         
+DWACT_ADD_CI_0_g_array_2[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       A             In      -         7.562       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       Y             Out     0.514     8.076       -         
+DWACT_ADD_CI_0_g_array_3[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       A             In      -         9.260       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       Y             Out     0.514     9.774       -         
+DWACT_ADD_CI_0_g_array_10[0]                     Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_90     NOR2B       A             In      -         10.581      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_90     NOR2B       Y             Out     0.514     11.095      -         
+DWACT_ADD_CI_0_g_array_11_2[0]                   Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_65     XOR2        B             In      -         11.481      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_65     XOR2        Y             Out     0.937     12.418      -         
+I_65                                             Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNO[14]         OA1A        C             In      -         12.739      -         
+stonyman_0.counterPixelsCaptured_RNO[14]         OA1A        Y             Out     0.398     13.137      -         
+counterPixelsCaptured_7[14]                      Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured[14]             DFN1        D             In      -         13.459      -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 13.997 is 5.874(42.0%) logic and 8.123(58.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      12.500
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         11.961
+
+    - Propagation time:                      13.394
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -1.433
+
+    Number of logic level(s):                10
+    Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
+    Ending point:                            stonyman_0.counterPixelsCaptured[13] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+
+Instance / Net                                               Pin           Pin               Arrival     No. of    
+Name                                             Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                       MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                         Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                          Net         -             -       1.601     -           320       
+stonyman_0.substate_RNID41P[16]                  NOR2B       B             In      -         2.096       -         
+stonyman_0.substate_RNID41P[16]                  NOR2B       Y             Out     0.627     2.723       -         
+substate_RNID41P[16]                             Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         3.530       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     4.157       -         
+DWACT_ADD_CI_0_TMP[0]                            Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       A             In      -         4.543       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       Y             Out     0.514     5.057       -         
+DWACT_ADD_CI_0_g_array_1[0]                      Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       A             In      -         5.864       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       Y             Out     0.514     6.378       -         
+DWACT_ADD_CI_0_g_array_2[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       A             In      -         7.562       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       Y             Out     0.514     8.076       -         
+DWACT_ADD_CI_0_g_array_3[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       A             In      -         9.260       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       Y             Out     0.514     9.774       -         
+DWACT_ADD_CI_0_g_array_10[0]                     Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_73     NOR2B       A             In      -         10.581      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_73     NOR2B       Y             Out     0.514     11.095      -         
+DWACT_ADD_CI_0_g_array_12_5[0]                   Net         -             -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_16.I_60     XOR2        B             In      -         11.416      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_60     XOR2        Y             Out     0.937     12.353      -         
+I_60                                             Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNO[13]         OA1A        C             In      -         12.675      -         
+stonyman_0.counterPixelsCaptured_RNO[13]         OA1A        Y             Out     0.398     13.073      -         
+counterPixelsCaptured_7[13]                      Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured[13]             DFN1        D             In      -         13.394      -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 13.933 is 5.874(42.2%) logic and 8.059(57.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      12.500
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         11.961
+
+    - Propagation time:                      12.974
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -1.012
+
+    Number of logic level(s):                10
+    Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
+    Ending point:                            stonyman_0.counterPixelsCaptured[11] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+
+Instance / Net                                               Pin           Pin               Arrival     No. of    
+Name                                             Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                       MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                         Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                          Net         -             -       1.601     -           320       
+stonyman_0.substate_RNID41P[16]                  NOR2B       B             In      -         2.096       -         
+stonyman_0.substate_RNID41P[16]                  NOR2B       Y             Out     0.627     2.723       -         
+substate_RNID41P[16]                             Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         3.530       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     4.157       -         
+DWACT_ADD_CI_0_TMP[0]                            Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       A             In      -         4.543       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       Y             Out     0.514     5.057       -         
+DWACT_ADD_CI_0_g_array_1[0]                      Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       A             In      -         5.864       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       Y             Out     0.514     6.378       -         
+DWACT_ADD_CI_0_g_array_2[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       A             In      -         7.562       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       Y             Out     0.514     8.076       -         
+DWACT_ADD_CI_0_g_array_3[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_70     NOR2B       A             In      -         9.260       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_70     NOR2B       Y             Out     0.514     9.774       -         
+DWACT_ADD_CI_0_g_array_11_1[0]                   Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_82     NOR2B       A             In      -         10.160      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_82     NOR2B       Y             Out     0.514     10.674      -         
+DWACT_ADD_CI_0_g_array_12_4[0]                   Net         -             -       0.322     -           1         
+stonyman_0.un1_counterPixelsCaptured_16.I_56     XOR2        B             In      -         10.996      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_56     XOR2        Y             Out     0.937     11.933      -         
+I_56                                             Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNO[11]         OA1A        C             In      -         12.254      -         
+stonyman_0.counterPixelsCaptured_RNO[11]         OA1A        Y             Out     0.398     12.652      -         
+counterPixelsCaptured_7[11]                      Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured[11]             DFN1        D             In      -         12.974      -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 13.512 is 5.874(43.5%) logic and 7.638(56.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      12.500
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         11.961
+
+    - Propagation time:                      12.558
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.597
+
+    Number of logic level(s):                9
+    Starting point:                          MSS_CORE2_0.MSS_ADLIB_INST / M2FRESETn
+    Ending point:                            stonyman_0.counterPixelsCaptured[12] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            clkgenerator|SCLK_inferred_clock [rising] on pin CLK
+
+Instance / Net                                               Pin           Pin               Arrival     No. of    
+Name                                             Type        Name          Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST                       MSS_AHB     M2FRESETn     Out     0.000     0.000       -         
+MSS_ADLIB_INST_M2FRESETn                         Net         -             -       0.322     -           1         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      A             In      -         0.322       -         
+MSS_CORE2_0.MSS_ADLIB_INST_RNI7863               CLKINT      Y             Out     0.174     0.495       -         
+MSS_CORE2_0_M2F_RESET_N                          Net         -             -       1.601     -           320       
+stonyman_0.substate_RNID41P[16]                  NOR2B       B             In      -         2.096       -         
+stonyman_0.substate_RNID41P[16]                  NOR2B       Y             Out     0.627     2.723       -         
+substate_RNID41P[16]                             Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         3.530       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     4.157       -         
+DWACT_ADD_CI_0_TMP[0]                            Net         -             -       0.386     -           2         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       A             In      -         4.543       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_83     NOR2B       Y             Out     0.514     5.057       -         
+DWACT_ADD_CI_0_g_array_1[0]                      Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       A             In      -         5.864       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_86     NOR2B       Y             Out     0.514     6.378       -         
+DWACT_ADD_CI_0_g_array_2[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       A             In      -         7.562       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_71     NOR2B       Y             Out     0.514     8.076       -         
+DWACT_ADD_CI_0_g_array_3[0]                      Net         -             -       1.184     -           4         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       A             In      -         9.260       -         
+stonyman_0.un1_counterPixelsCaptured_16.I_75     NOR2B       Y             Out     0.514     9.774       -         
+DWACT_ADD_CI_0_g_array_10[0]                     Net         -             -       0.806     -           3         
+stonyman_0.un1_counterPixelsCaptured_16.I_58     XOR2        B             In      -         10.581      -         
+stonyman_0.un1_counterPixelsCaptured_16.I_58     XOR2        Y             Out     0.937     11.517      -         
+I_58                                             Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured_RNO[12]         OA1A        C             In      -         11.839      -         
+stonyman_0.counterPixelsCaptured_RNO[12]         OA1A        Y             Out     0.398     12.237      -         
+counterPixelsCaptured_7[12]                      Net         -             -       0.322     -           1         
+stonyman_0.counterPixelsCaptured[12]             DFN1        D             In      -         12.558      -         
+===================================================================================================================
+Total path delay (propagation time + setup) of 13.097 is 5.360(40.9%) logic and 7.737(59.1%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -1432,90 +1905,105 @@ Target Part: A2F500M3G_FBGA484_Std
 Report for cell TOPLEVEL.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2    10      1.0       10.0
+              AND2    16      1.0       16.0
               AND3     6      1.0        6.0
-               AO1    86      1.0       86.0
+               AO1    63      1.0       63.0
+              AO13     2      1.0        2.0
+              AO16     1      1.0        1.0
+              AO18     1      1.0        1.0
               AO1A    23      1.0       23.0
-              AO1B    10      1.0       10.0
-              AO1C     5      1.0        5.0
-              AO1D     5      1.0        5.0
-              AOI1     8      1.0        8.0
-             AOI1B     3      1.0        3.0
-              AX1A     1      1.0        1.0
+              AO1B    14      1.0       14.0
+              AO1C     9      1.0        9.0
+              AO1D     1      1.0        1.0
+              AOI1    11      1.0       11.0
+             AOI1B     9      1.0        9.0
+               AX1     1      1.0        1.0
+              AX1A     2      1.0        2.0
+              AX1B     1      1.0        1.0
+              AX1C     1      1.0        1.0
+              AX1D     2      1.0        2.0
               AX1E     1      1.0        1.0
-            CLKINT     3      0.0        0.0
-               GND    15      0.0        0.0
+             AXOI5     1      1.0        1.0
+             AXOI7     1      1.0        1.0
+            CLKINT     2      0.0        0.0
+               GND    17      0.0        0.0
                INV     2      1.0        2.0
-            MSSINT     2      0.0        0.0
            MSS_AHB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-               MX2   145      1.0      145.0
-              MX2A     2      1.0        2.0
-              MX2B    81      1.0       81.0
+               MX2   148      1.0      148.0
+              MX2A     3      1.0        3.0
+              MX2B    85      1.0       85.0
               MX2C     5      1.0        5.0
-              NOR2    55      1.0       55.0
-             NOR2A   108      1.0      108.0
-             NOR2B   389      1.0      389.0
-              NOR3    27      1.0       27.0
-             NOR3A    55      1.0       55.0
-             NOR3B    60      1.0       60.0
-             NOR3C    87      1.0       87.0
-               OA1    14      1.0       14.0
-              OA1A    17      1.0       17.0
+              NOR2    73      1.0       73.0
+             NOR2A   110      1.0      110.0
+             NOR2B   442      1.0      442.0
+              NOR3    28      1.0       28.0
+             NOR3A    50      1.0       50.0
+             NOR3B   115      1.0      115.0
+             NOR3C    66      1.0       66.0
+               OA1    19      1.0       19.0
+              OA1A    24      1.0       24.0
               OA1B     6      1.0        6.0
-              OA1C    12      1.0       12.0
-              OAI1     3      1.0        3.0
-               OR2    72      1.0       72.0
-              OR2A    32      1.0       32.0
-              OR2B    14      1.0       14.0
-               OR3    94      1.0       94.0
-              OR3A     7      1.0        7.0
-              OR3B    34      1.0       34.0
+              OA1C    13      1.0       13.0
+              OAI1     6      1.0        6.0
+               OR2    79      1.0       79.0
+              OR2A    43      1.0       43.0
+              OR2B    19      1.0       19.0
+               OR3   111      1.0      111.0
+              OR3A     9      1.0        9.0
+              OR3B    36      1.0       36.0
+              OR3C     3      1.0        3.0
             PLLINT     1      0.0        0.0
-               VCC    15      0.0        0.0
-              XA1A     2      1.0        2.0
-              XA1B     3      1.0        3.0
+               VCC    17      0.0        0.0
+               XA1     3      1.0        3.0
+              XA1A     4      1.0        4.0
+              XA1B     2      1.0        2.0
               XA1C     3      1.0        3.0
-             XNOR2    33      1.0       33.0
+              XAI1     2      1.0        2.0
+             XAI1A     1      1.0        1.0
+             XNOR2    42      1.0       42.0
+             XNOR3     2      1.0        2.0
                XO1     1      1.0        1.0
-              XOR2    12      1.0       12.0
+              XOR2    43      1.0       43.0
+              XOR3     7      1.0        7.0
 
 
-              DFN1   260      1.0      260.0
+              DFN1   265      1.0      265.0
             DFN1C0     9      1.0        9.0
+            DFN1E0    30      1.0       30.0
           DFN1E0C0    33      1.0       33.0
-            DFN1E1    36      1.0       36.0
+            DFN1E1    46      1.0       46.0
           DFN1E1C0    24      1.0       24.0
             DFN1P0     1      1.0        1.0
          RAM512X18     1      0.0        0.0
                    -----          ----------
-             TOTAL  1935              1896.0
+             TOTAL  2219              2179.0
 
 
   IO Cell usage:
               cell count
              BIBUF    16
          BIBUF_MSS     1
-             INBUF     1
+             INBUF     2
          INBUF_MSS     6
         MSS_XTLOSC     1
-            OUTBUF    50
+            OUTBUF    52
         OUTBUF_MSS     5
                    -----
-             TOTAL    80
+             TOTAL    83
 
 
-Core Cells         : 1896 of 11520 (16%)
-IO Cells           : 80
+Core Cells         : 2179 of 11520 (19%)
+IO Cells           : 83
 
   RAM/ROM Usage Summary
 Block Rams : 1 of 24 (4%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:08s; Memory used current: 45MB peak: 138MB)
+At Mapper Exit (Time elapsed 0h:00m:09s; Memory used current: 45MB peak: 164MB)
 
-Process took 0h:00m:08s realtime, 0h:00m:08s cputime
-# Wed Feb 27 01:56:14 2013
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
+# Thu Feb 28 22:05:18 2013
 
 ###########################################################]

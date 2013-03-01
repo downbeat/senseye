@@ -17,6 +17,7 @@ Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 
 Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
 @W: BN132 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@N: MF237 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":1162:35:1162:73|Generating a type rem remainder 
 
 
 Clock Summary
@@ -30,17 +31,17 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 100 sequential elements including adc081s101_0/cntrWaitQuiet[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 130 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 108MB peak: 110MB)
 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:00s; Memory used current: 46MB peak: 110MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 46MB peak: 110MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 27 01:56:04 2013
+# Thu Feb 28 22:05:08 2013
 
 ###########################################################]

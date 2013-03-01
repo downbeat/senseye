@@ -26,4 +26,7 @@ entity analog_quad is
         AC_COMP_OUT     : out    vl_logic;
         AT_COMP_OUT     : out    vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of WIDTH : constant is 1;
+    attribute mti_svvh_generic_type of WARNING_MSGS_ON : constant is 1;
 end analog_quad;

@@ -5,6 +5,7 @@
 #project files
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/hdl/adc081s101.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/hdl/clkgenerator.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/hdl/inputConditioner.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/MSS_CORE2/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"

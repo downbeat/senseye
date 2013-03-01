@@ -80,6 +80,13 @@ entity F2AB is
         OBD_ENABLE      : in     vl_logic_vector(2 downto 0);
         COMPARATOR      : out    vl_logic_vector(11 downto 0)
     );
-    attribute DAC_RESOLUTION_mti_vect_attrib : integer;
-    attribute DAC_RESOLUTION_mti_vect_attrib of DAC_RESOLUTION : constant is 0;
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of WIDTH : constant is 1;
+    attribute mti_svvh_generic_type of DAC_RESOLUTION : constant is 2;
+    attribute mti_svvh_generic_type of WARNING_MSGS_ON : constant is 1;
+    attribute mti_svvh_generic_type of FAST_ADC_CONV_SIM : constant is 1;
+    attribute mti_svvh_generic_type of ANALOG_QUAD_NUM : constant is 1;
+    attribute mti_svvh_generic_type of ADC_NUM : constant is 1;
+    attribute mti_svvh_generic_type of NUM_ADC_IN : constant is 1;
+    attribute mti_svvh_generic_type of VAREF_INT : constant is 1;
 end F2AB;

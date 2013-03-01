@@ -1,36 +1,50 @@
-@N: CD630 :".\gentmp0a01992":4:7:4:9|Synthesizing work.top.gen 
-@N: CD630 :"syng0a01992":1366:7:1366:9|Synthesizing work.dec.fdec 
-@W: CD638 :"syng0a01992":1387:9:1387:13|Signal carry is undriven 
-@W: CD638 :"syng0a01992":1388:9:1388:12|Signal asup is undriven 
-@W: CD638 :"syng0a01992":1388:15:1388:18|Signal ssup is undriven 
-@N: CD630 :"syng0a01992":357:7:357:22|Synthesizing work.dwact_bl_fincdec.impl1 
-@W: CD280 :"syng0a01992":369:12:369:14|Unbound component INV mapped to black box
-@W: CD796 :"syng0a01992":474:9:474:9|Bit 31 of signal e is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
-@W: CD796 :"syng0a01992":474:9:474:9|Bit 32 of signal e is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
-@N: CD630 :"syng0a01992":191:7:191:20|Synthesizing work.dwact_tl_l2xor.impl1 
-@W: CD280 :"syng0a01992":215:12:215:14|Unbound component OR3 mapped to black box
-@W: CD280 :"syng0a01992":223:12:223:16|Unbound component XNOR2 mapped to black box
-@N: CD630 :"syng0a01992":223:12:223:16|Synthesizing work.xnor2.syn_black_box 
-Post processing for work.xnor2.syn_black_box
-@N: CD630 :"syng0a01992":215:12:215:14|Synthesizing work.or3.syn_black_box 
+@N: CD630 :".\gentmp0a00532":4:7:4:9|Synthesizing work.top.gen 
+@N: CD630 :"syng0a00532":670:7:670:9|Synthesizing work.add.fbk 
+@N: CD630 :"syng0a00532":12:7:12:21|Synthesizing work.dwact_bl_genadd.generic_adder 
+@W: CD280 :"syng0a00532":492:12:492:15|Unbound component AND2 mapped to black box
+@W: CD280 :"syng0a00532":500:12:500:14|Unbound component OR3 mapped to black box
+@W: CD280 :"syng0a00532":508:12:508:15|Unbound component XOR2 mapped to black box
+@W: CD280 :"syng0a00532":515:12:515:14|Unbound component AO1 mapped to black box
+@W: CD638 :"syng0a00532":37:9:37:12|Signal zero is undriven 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_0 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_1 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_2 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_3 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_4 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_5 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_6 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_7 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_8 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_9 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_10 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_11 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:11:486:17|Bit 0 of signal g_array_12 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_0 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_1 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_2 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_3 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_4 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_5 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_6 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_7 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_8 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_9 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_10 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_11 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD796 :"syng0a00532":486:20:486:28|Bit 0 of signal pog_array_12 is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@W: CD638 :"syng0a00532":487:11:487:14|Signal tmp1 is undriven 
+@W: CD796 :"syng0a00532":487:17:487:27|Bit 3 of signal partial_sum is undriven. Possible simulation mismatch as initial value or default value is ignored. To avoid simulation mismatches, explicitly drive this bit. 
+@N: CD630 :"syng0a00532":492:12:492:15|Synthesizing work.and2.syn_black_box 
+Post processing for work.and2.syn_black_box
+@N: CD630 :"syng0a00532":515:12:515:14|Synthesizing work.ao1.syn_black_box 
+Post processing for work.ao1.syn_black_box
+@N: CD630 :"syng0a00532":508:12:508:15|Synthesizing work.xor2.syn_black_box 
+Post processing for work.xor2.syn_black_box
+@N: CD630 :"syng0a00532":500:12:500:14|Synthesizing work.or3.syn_black_box 
 Post processing for work.or3.syn_black_box
-Post processing for work.dwact_tl_l2xor.impl1
-@N: CD630 :"syng0a01992":81:7:81:18|Synthesizing work.dwact_tl_or2.impl1 
-@W: CD280 :"syng0a01992":103:10:103:12|Unbound component OR2 mapped to black box
-@N: CD630 :"syng0a01992":103:10:103:12|Synthesizing work.or2.syn_black_box 
-Post processing for work.or2.syn_black_box
-Post processing for work.dwact_tl_or2.impl1
-@N: CD630 :"syng0a01992":155:7:155:18|Synthesizing work.dwact_tl_or3.impl1 
-Post processing for work.dwact_tl_or3.impl1
-@N: CD630 :"syng0a01992":332:7:332:20|Synthesizing work.dwact_bl_xnor2.impl1 
-Post processing for work.dwact_bl_xnor2.impl1
-@N: CD630 :"syng0a01992":369:12:369:14|Synthesizing work.inv.syn_black_box 
-Post processing for work.inv.syn_black_box
-@N: CD630 :"syng0a01992":18:7:18:18|Synthesizing work.dwact_tl_gnd.impl1 
-@W: CD280 :"syng0a01992":38:10:38:12|Unbound component GND mapped to black box
-@N: CD630 :"syng0a01992":38:10:38:12|Synthesizing work.gnd.syn_black_box 
-Post processing for work.gnd.syn_black_box
-Post processing for work.dwact_tl_gnd.impl1
-Post processing for work.dwact_bl_fincdec.impl1
-Post processing for work.dec.fdec
+Post processing for work.dwact_bl_genadd.generic_adder
+@W: CL168 :"syng0a00532":655:19:655:19|Pruning instance level_loop.11.bit_loop.2.G1_2_4_2.P -- not in use ... 
+@W: CL168 :"syng0a00532":655:19:655:19|Pruning instance level_loop.0.bit_loop.1.G1_2_4_2.P -- not in use ... 
+@W: CL168 :"syng0a00532":602:8:602:9|Pruning instance misc_loop.0.P0 -- not in use ... 
+Post processing for work.add.fbk
 Post processing for work.top.gen

@@ -1,7 +1,7 @@
 
 Starting:    C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\win64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
-Date:        Wed Feb 27 01:55:58 2013
+Date:        Thu Feb 28 22:04:59 2013
 Version:     F-2012.03M-SP1 
 
 Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log TOPLEVEL_syn.tcl
@@ -31,7 +31,7 @@ Copied Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthe
 
 compiler Completed with warnings
 Return Code: 1
-Run Time:0h:00m:05s
+Run Time:0h:00m:06s
 
 
 Job Compile Process completed on TOPLEVEL_syn|synthesis
@@ -51,7 +51,7 @@ Running Map & Optimize on TOPLEVEL_syn|synthesis
 
 fpga_mapper Completed with warnings
 Return Code: 1
-Run Time:0h:00m:09s
+Run Time:0h:00m:10s
 
 
 Job Map completed on TOPLEVEL_syn|synthesis

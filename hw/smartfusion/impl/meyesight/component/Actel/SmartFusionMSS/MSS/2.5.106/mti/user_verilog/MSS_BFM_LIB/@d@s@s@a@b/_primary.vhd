@@ -144,4 +144,6 @@ entity DSSAB is
         ACBWDATA        : in     vl_logic_vector(7 downto 0);
         ACBRDATA        : out    vl_logic_vector(7 downto 0)
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of DAC_RESOLUTION : constant is 1;
 end DSSAB;

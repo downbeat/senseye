@@ -78,4 +78,6 @@ entity F2DSS_SSE_ENGINE is
         SSE_ADC1_RESULTS_o: out    vl_logic;
         SSE_ADC2_RESULTS_o: out    vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of RAM_DEBUG : constant is 1;
 end F2DSS_SSE_ENGINE;

@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361948125"
+TIME="1362107063"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1361948125"
+TIME="1362107063"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -343,20 +343,20 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1361948126"
-SIZE="2064"
+TIME="1362107064"
+SIZE="2142"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1361948133"
-SIZE="10218"
+TIME="1362107073"
+SIZE="10808"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1361948124"
-SIZE="3496"
+TIME="1362107061"
+SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
@@ -366,8 +366,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1361948126"
-SIZE="32835"
+TIME="1362107064"
+SIZE="33978"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -383,52 +383,67 @@ SIZE="466"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1361948185"
-SIZE="2071040"
+TIME="1362106674"
+SIZE="3850240"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1361871840"
-SIZE="145008"
+TIME="1362106673"
+SIZE="150707"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1361948185"
-SIZE="1268"
+TIME="1362106674"
+SIZE="1266"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
+STATE="ood"
+TIME="1361973557"
+SIZE="1144778"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_ba.v,ba_hdl"
+STATE="ood"
+TIME="1361973556"
+SIZE="677799"
+ENDFILE
+VALUE "<project>\designer\impl1\TOPLEVEL_ba_log.rpt,log"
+STATE="utd"
+TIME="1361973557"
+SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1361948186"
-SIZE="58894"
+TIME="1362106603"
+SIZE="30517"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361949095"
-SIZE="227328"
+TIME="1362107295"
+SIZE="237056"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1361872157"
-SIZE="231424"
+TIME="1362106702"
+SIZE="237056"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1361872223"
+TIME="1362106771"
 SIZE="2071"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1361948881"
+TIME="1362106650"
 SIZE="2429"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1361871841"
+TIME="1362106675"
 SIZE="949"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1361948886"
+TIME="1362106656"
 SIZE="1210"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -438,8 +453,8 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adc081s101.v,hdl"
 STATE="utd"
-TIME="1361867674"
-SIZE="2720"
+TIME="1362089631"
+SIZE="3516"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -453,13 +468,18 @@ SIZE="6659"
 ENDFILE
 VALUE "<project>\hdl\clkgenerator.v,hdl"
 STATE="utd"
-TIME="1361865159"
+TIME="1362106558"
 SIZE="1298"
 ENDFILE
 VALUE "<project>\hdl\cr_int.v,hdl"
 STATE="utd"
 TIME="1360612688"
 SIZE="4483"
+ENDFILE
+VALUE "<project>\hdl\inputConditioner.v,hdl"
+STATE="utd"
+TIME="1361973468"
+SIZE="1187"
 ENDFILE
 VALUE "<project>\hdl\led.v,hdl"
 STATE="utd"
@@ -473,13 +493,18 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1361871725"
-SIZE="47771"
+TIME="1362089642"
+SIZE="52404"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
 TIME="1360612688"
 SIZE="1231"
+ENDFILE
+VALUE "<project>\simulation\bfmtovec_compile.log,log"
+STATE="utd"
+TIME="1361973572"
+SIZE="940"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -511,9 +536,14 @@ TIME="1360717847"
 SIZE="10049"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1361973569"
+SIZE="1975"
+ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1361948126"
+TIME="1362107064"
 SIZE="629"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -531,17 +561,17 @@ PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
 VALUE "<project>\synthesis\synwork\TOPLEVEL_compiler.so,so"
 STATE="utd"
-TIME="1361865127"
+TIME="1362087062"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1361948174"
-SIZE="1256828"
+TIME="1362106593"
+SIZE="1436386"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1361948174"
+TIME="1362106593"
 SIZE="252"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
@@ -551,13 +581,13 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1361948173"
+TIME="1362106593"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1361948175"
-SIZE="4691"
+TIME="1362106594"
+SIZE="4802"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -754,8 +784,8 @@ NAME="ModelSim AE"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_v10.1\Model\win32acoem\modelsim.exe"
-PARAM=""
-BATCH=0
+PARAM="-l testbench_postlayout_simulation.log -c"
+BATCH=1
 EndProfile
 NAME="WFL"
 FUNCTION="Stimulus"
@@ -838,7 +868,7 @@ LIST OpenedFileList
 SmartDesign;TOPLEVEL
 SmartDesign;MSS_CORE2
 Reports;Reports
-ACTIVEVIEW;TOPLEVEL
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
@@ -879,6 +909,8 @@ ENDLIST
 LIST "INBUF_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 ENDLIST
 LIST "led_test::work","hdl\led.v","FALSE","FALSE"
 ENDLIST
@@ -937,6 +969,7 @@ ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
 SUBBLOCK "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
 SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
+SUBBLOCK "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
 SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"

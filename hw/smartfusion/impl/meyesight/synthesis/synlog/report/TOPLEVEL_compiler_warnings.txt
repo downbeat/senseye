@@ -5,11 +5,11 @@
 @W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
 @W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
 @W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Pruning register CAHBLTIl1l 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":105:11:105:31|No assignment to counterPixelsCaptured
-@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:74|Read Address width 3 does not cover RAM depth
-@W: CL190 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Optimizing register bit inphi to a constant 0
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Pruning register inphi 
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":90:12:90:18|Input pixelin is unused
+@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:77|Read Address width 3 does not cover RAM depth
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 31 of counterWait[31:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 30 of counterWait[30:0] 
 @W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 @W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
@@ -34,6 +34,7 @@
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v":22:6:22:8|Input rst is unused
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":858:0:858:7|Input port bit 1 of HRESP_S0[1:0] is unused

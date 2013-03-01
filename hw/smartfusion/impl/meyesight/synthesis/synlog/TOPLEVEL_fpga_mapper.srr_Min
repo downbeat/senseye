@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Feb 27 01:56:14 2013
+# Timing Report written on Thu Feb 28 22:05:18 2013
 #
 
 
@@ -25,14 +25,14 @@ Performance Summary
 
 Worst slack in design: 0.225
 
-                                     Requested     Estimated     Requested     Estimated                Clock        Clock              
-Starting Clock                       Frequency     Frequency     Period        Period        Slack      Type         Group              
-----------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                              40.0 MHz      47.4 MHz      25.000        21.118        3.882      declared     clk_group_0        
-FCLK                                 40.0 MHz      NA            25.000        NA            NA         declared     clk_group_0        
-clkgenerator|SCLK_inferred_clock     80.0 MHz      54.8 MHz      12.500        18.255        -5.755     inferred     Inferred_clkgroup_0
-System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669      system       system_clkgroup    
-========================================================================================================================================
+                                     Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                       Frequency     Frequency     Period        Period        Slack       Type         Group              
+-----------------------------------------------------------------------------------------------------------------------------------------
+FAB_CLK                              40.0 MHz      48.1 MHz      25.000        20.805        4.195       declared     clk_group_0        
+FCLK                                 40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
+clkgenerator|SCLK_inferred_clock     80.0 MHz      28.8 MHz      12.500        34.673        -22.173     inferred     Inferred_clkgroup_0
+System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
+=========================================================================================================================================
 
 
 
@@ -156,8 +156,6 @@ Instance                           Reference     Type           Pin        Net  
                                    Clock                                                                              
 ----------------------------------------------------------------------------------------------------------------------
 MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        EMCCLK     MSS_ADLIB_INST_EMCCLK     0.000       0.322
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        GPO[0]     GPO_net_0[0]              0.000       0.322
-MSS_CORE2_0.MSS_ADLIB_INST         System        MSS_AHB        GPO[1]     GPO_net_0[1]              0.000       0.322
 MSS_CORE2_0.MSS_CCC_0.I_XTLOSC     System        MSS_XTLOSC     CLKOUT     N_CLKA_XTLOSC             0.000       5.509
 ======================================================================================================================
 
@@ -169,8 +167,6 @@ Ending Points with Worst Slack
 Instance                       Reference     Type        Pin           Net                          Time         Slack
                                Clock                                                                                  
 ----------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSSINT_GPO_0       System        MSSINT      A             GPO_net_0[0]                 0.000        0.225
-MSS_CORE2_0.MSSINT_GPO_1       System        MSSINT      A             GPO_net_0[1]                 0.000        0.225
 MSS_CORE2_0.MSS_ADLIB_INST     System        MSS_AHB     EMCCLKRTN     MSS_ADLIB_INST_EMCCLK        0.000        0.225
 MSS_CORE2_0.MSS_ADLIB_INST     System        MSS_AHB     MACCLKCCC     MSS_ADLIB_INST_MACCLKCCC     0.000        5.317
 MSS_CORE2_0.MSS_ADLIB_INST     System        MSS_AHB     PLLLOCK       MSS_ADLIB_INST_PLLLOCK       0.000        5.638

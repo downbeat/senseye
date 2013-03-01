@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Wed Feb 27 01:55:32 2013 )</state>
+    <state>GENERATED ( Thu Feb 28 22:04:32 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -38,6 +38,7 @@
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\apb.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\led.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\psram_cr.v</file>
     <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v</file>
@@ -45,40 +46,40 @@
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
-    <port-name>psram_data[12]</port-name>
+    <port-name>psram_data[15]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[7]</port-name>
+    <port-name>psram_data[10]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[4]</port-name>
+    <port-name>led[7]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[8]</port-name>
+    <port-name>psram_address[11]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[12]</port-name>
+    <port-name>psram_address[15]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[6]</port-name>
+    <port-name>psram_data[9]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -90,20 +91,14 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MAC_RXD[0]</port-name>
-    <direction>IN</direction>
-    <pin-number>V5</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
     <port-name>inphi</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_nbyte_en[1]</port-name>
-    <direction>OUT</direction>
+    <port-name>psram_data[2]</port-name>
+    <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -114,15 +109,21 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[8]</port-name>
+    <port-name>psram_data[11]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[0]</port-name>
+    <port-name>led[3]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MAC_TXD[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>W5</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -138,7 +139,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[0]</port-name>
+    <port-name>psram_data[3]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -150,19 +151,19 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[19]</port-name>
+    <port-name>psram_address[2]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[6]</port-name>
+    <port-name>psram_address[22]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[14]</port-name>
+    <port-name>psram_address[17]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -174,25 +175,19 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[5]</port-name>
+    <port-name>psram_address[16]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[13]</port-name>
+    <port-name>psram_address[24]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[21]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_address[2]</port-name>
+    <port-name>psram_address[5]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -204,39 +199,27 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[15]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_data[1]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>led[7]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_address[15]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_data[3]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MAC_RXD[1]</port-name>
+    <port-name>CAPTURE</port-name>
     <direction>IN</direction>
-    <pin-number>U5</pin-number>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_data[4]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_address[18]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_data[6]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
@@ -246,25 +229,25 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[9]</port-name>
+    <port-name>psram_address[12]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[9]</port-name>
+    <port-name>psram_data[12]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[4]</port-name>
+    <port-name>psram_address[7]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[3]</port-name>
+    <port-name>psram_address[6]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -306,37 +289,37 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[10]</port-name>
+    <port-name>psram_data[13]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[2]</port-name>
+    <port-name>led[5]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[10]</port-name>
+    <port-name>psram_address[13]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[22]</port-name>
+    <port-name>psram_nbyte_en[0]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>led[1]</port-name>
+    <port-name>led[4]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[5]</port-name>
+    <port-name>psram_address[8]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -348,61 +331,73 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[4]</port-name>
+    <port-name>psram_data[7]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MAC_TXD[0]</port-name>
-    <direction>OUT</direction>
-    <pin-number>AA5</pin-number>
+    <port-name>MAC_RXD[0]</port-name>
+    <direction>IN</direction>
+    <pin-number>V5</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MAC_TXD[1]</port-name>
-    <direction>OUT</direction>
-    <pin-number>W5</pin-number>
+    <port-name>MAC_RXD[1]</port-name>
+    <direction>IN</direction>
+    <pin-number>U5</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[16]</port-name>
+    <port-name>psram_address[19]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[11]</port-name>
+    <port-name>led[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_data[14]</port-name>
     <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_address[17]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_data[2]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_address[24]</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>psram_address[23]</port-name>
-    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
     <port-name>psram_address[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_address[20]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_data[5]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_data[0]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_nbyte_en[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_address[3]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -414,19 +409,19 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[13]</port-name>
-    <direction>INOUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>led[3]</port-name>
+    <port-name>adcConvComplete</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[11]</port-name>
+    <port-name>led[6]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_address[14]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -438,25 +433,31 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_nbyte_en[0]</port-name>
+    <port-name>psram_data[1]</port-name>
+    <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>psram_address[1]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[18]</port-name>
+    <port-name>psram_address[21]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[6]</port-name>
+    <port-name>psram_address[9]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[5]</port-name>
+    <port-name>psram_data[8]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -474,6 +475,12 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>MAC_TXD[0]</port-name>
+    <direction>OUT</direction>
+    <pin-number>AA5</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>Phy_RMII_CLK</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
@@ -486,7 +493,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[7]</port-name>
+    <port-name>psram_address[10]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -504,6 +511,12 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>led[1]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>psram_noe0</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
@@ -516,19 +529,25 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[1]</port-name>
+    <port-name>psram_address[4]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_data[14]</port-name>
-    <direction>INOUT</direction>
+    <port-name>adcStartCapture</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>psram_address[20]</port-name>
+    <port-name>psram_address[23]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>led[2]</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -1039,6 +1058,12 @@ The CoreAHBLite component implements a multi-master AHB-Lite bus. It provides up
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreAHBLite_0</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>inputConditioner</core-exttype>
+    <core-location>hdl\inputConditioner.v</core-location>
+    <core-name>inputConditioner_0</core-name>
   </core>
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>

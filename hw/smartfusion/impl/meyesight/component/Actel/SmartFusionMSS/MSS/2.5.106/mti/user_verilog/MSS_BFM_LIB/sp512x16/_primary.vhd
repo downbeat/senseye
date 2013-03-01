@@ -16,4 +16,9 @@ entity sp512x16 is
         CSB             : in     vl_logic;
         RWB             : in     vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of word_width : constant is 1;
+    attribute mti_svvh_generic_type of word_depth : constant is 1;
+    attribute mti_svvh_generic_type of nb_address : constant is 1;
+    attribute mti_svvh_generic_type of MEMORYFILE : constant is 1;
 end sp512x16;

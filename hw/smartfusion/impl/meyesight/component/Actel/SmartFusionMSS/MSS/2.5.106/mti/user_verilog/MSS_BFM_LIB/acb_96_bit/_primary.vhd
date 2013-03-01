@@ -46,4 +46,8 @@ entity acb_96_bit is
         DAC1_CONFIG     : out    vl_logic_vector(1 downto 0);
         DAC2_CONFIG     : out    vl_logic_vector(1 downto 0)
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of ANALOG_QUAD_NUM : constant is 1;
+    attribute mti_svvh_generic_type of ACB_BYTES_NUM_PER_QUAD : constant is 1;
+    attribute mti_svvh_generic_type of WARNING_MSGS_ON : constant is 1;
 end acb_96_bit;

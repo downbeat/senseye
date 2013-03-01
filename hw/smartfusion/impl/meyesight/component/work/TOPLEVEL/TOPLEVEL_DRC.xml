@@ -5,8 +5,8 @@
   <drc>
     <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
     <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin MSS_CORE2_0:F2M_GPI_21</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/MSS_CORE2_0:F2M_GPI_21</crossprobe>
+    <message>Out-of-date Instance</message>
+    <detail>Component definition is not consistent for instance stonyman_0</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/instances/stonyman_0</crossprobe>
   </drc>
 </drcreport>

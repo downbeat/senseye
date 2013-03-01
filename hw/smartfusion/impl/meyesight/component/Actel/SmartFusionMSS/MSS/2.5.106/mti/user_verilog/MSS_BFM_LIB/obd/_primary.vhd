@@ -11,6 +11,6 @@ entity obd is
         OBD_ENABLE      : in     vl_logic;
         DAC_OUT         : out    vl_logic
     );
-    attribute RESOLUTION_mti_vect_attrib : integer;
-    attribute RESOLUTION_mti_vect_attrib of RESOLUTION : constant is 0;
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of RESOLUTION : constant is 2;
 end obd;

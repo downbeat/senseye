@@ -12,14 +12,14 @@ Warning: Overwriting the existing file:
          EVEL.fdb.
 
 The Export-map command succeeded ( 00:00:13 )
-CHECKSUM: F032
+CHECKSUM: D183
 Wrote to the file:
 Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.fdb
 
-The Export command succeeded ( 00:00:14 )
+The Export command succeeded ( 00:00:15 )
 Design saved to file
 Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/designer/impl1/TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:17 )
+The Execute Script command succeeded ( 00:00:16 )
 Design closed.
 

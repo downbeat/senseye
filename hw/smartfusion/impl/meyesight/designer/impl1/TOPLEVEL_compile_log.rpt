@@ -201,6 +201,8 @@ Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_GPOE[28] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_GPOE[29] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_GPOE[30] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_GPOE[31] drives no load.
+Warning: CMP201: Net MSS_CORE2_0/GPO_net_0[0] drives no load.
+Warning: CMP201: Net MSS_CORE2_0/GPO_net_0[1] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/GPO_net_0[2] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/GPO_net_0[3] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/GPO_net_0[4] drives no load.
@@ -342,458 +344,32 @@ Netlist Optimization Report
 
 Optimized macros:
   - Dangling net drivers:   0
-  - Buffers:                3
+  - Buffers:                1
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        54
+  - Logic combining:        68
 
-    Total macros optimized  57
+    Total macros optimized  69
 
-There were 0 error(s) and 283 warning(s) in this design.
+There were 0 error(s) and 285 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
 
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_lb1_RNIJ2UN -fixed no 22 50
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNII3JG1[5] -fixed no 136 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNIMK3O[0] -fixed no 133 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIDBTK9[0] -fixed no 136 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIEH3S[6] -fixed no 144 17
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNICTO3P[6] -fixed no 129 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_82 -fixed no 155 34
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_89 -fixed no 146 29
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_40[0] -fixed no 135 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNI08ES3[31] -fixed no 148 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIS22T[31] -fixed no 150 32
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIS5924[8] -fixed no 134 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_ns_i_0_o2_7_0_RNO_0[0] -fixed no 128 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNO_6[0] -fixed no 50 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIL2U51[4] -fixed no 137 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNIUN4T8 -fixed no 148 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52[18] -fixed no 52 17
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNO_10[3] -fixed no 137 14
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIQ5DV_0[3] -fixed no 137 17
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[14] -fixed no 52 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIRILR[0] -fixed no 122 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIODSK4[11] -fixed no 149 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIJ9IH[20] -fixed no 143 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNIR90V8 -fixed no 124 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIFO98_0[4] -fixed no 148 8
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIK7T8D[6] -fixed no 133 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIM9A1T[6] -fixed no 133 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIDBTK9_0[0] -fixed no 135 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNO_3[10] -fixed no 137 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIU4EM61[0] -fixed no 136 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIEL1K1[31] -fixed no 149 32
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNI988JA[8] -fixed no 134 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNICBNO[1] -fixed no 126 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_62 -fixed no 142 53
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_29[0] -fixed no 122 29
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI9SAPM[6] -fixed no 129 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIF3JG1[5] -fixed no 137 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_34[0] -fixed no 123 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[9] -fixed no 52 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_37 -fixed no 154 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_32[0] -fixed no 133 14
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNO_3[23] -fixed no 136 35
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI3R5L2[6] -fixed no 126 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-MSS_CORE2_0/MSS_ADLIB_INST_RNIJCTME -fixed no 132 35
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI63K7M[1] -fixed no 131 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIAL4S[11] -fixed no 123 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_ns_i_0_a2_13[0] -fixed no 126 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_92 -fixed no 146 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNIUN4T8_0 -fixed no 154 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-MSS_CORE2_0/MSS_ADLIB_INST_RNO -fixed no 58 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNI6QVQN[6] -fixed no 134 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIOIRP1[6] -fixed no 134 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIRQCSB[12] -fixed no 133 18
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNIRQ5L2[1] -fixed no 127 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNI7V431[11] -fixed no 146 35
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNIQNPI4[0] -fixed no 48 18
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIV5JT[2] -fixed no 126 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNICR27G[4] -fixed no 130 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI83G14[3] -fixed no 131 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_53 -fixed no 158 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNICDAM1[1] -fixed no 125 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIQ6112[8] -fixed no 135 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIKI0C1[12] -fixed no 149 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIE55M[6] -fixed no 134 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_26[0] -fixed no 125 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI5BK5L1[1] -fixed no 130 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIQIEL[10] -fixed no 140 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hready_reg_RNITCJFE -fixed no 53 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_14 -fixed no 148 49
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_37[0] -fixed no 126 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIRS0HA[0] -fixed no 144 18
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_98 -fixed no 151 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_45[0] -fixed no 125 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_38[0] -fixed no 126 29
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNITTORM -fixed no 153 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIHOC31_0[14] -fixed no 136 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIT2HC2[14] -fixed no 135 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_49 -fixed no 155 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNO_4[23] -fixed no 136 37
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_86 -fixed no 145 32
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/fsm_RNIHEQUN -fixed no 45 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_RNI28G7[2] -fixed no 44 47
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIM72P9[6] -fixed no 119 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNI83531[11] -fixed no 146 34
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI3A6G9[6] -fixed no 128 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_41[0] -fixed no 133 15
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNINK0I1[6] -fixed no 147 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI277PA[2] -fixed no 132 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTOI0I_RNIMJURD -fixed no 57 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_30[0] -fixed no 122 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_WADDR_REG1_RNI27MV1_1[1] -fixed no 127 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI74N3[6] -fixed no 127 6
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedPOINTER_RNIEFKB1[2] -fixed no 120 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_17 -fixed no 161 37
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNITF0J4 -fixed no 120 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIKQDQG[0] -fixed no 138 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_70 -fixed no 141 36
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_49[0] -fixed no 127 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIBUB0H[6] -fixed no 144 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNIVOH12[0] -fixed no 123 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_77 -fixed no 152 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_33[0] -fixed no 133 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTII1_RNIJE4GB -fixed no 56 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_RNI14O3[2] -fixed no 44 48
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II_0[10] -fixed no 51 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIKQDQG_0[0] -fixed no 131 34
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI3N612[1] -fixed no 134 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_5[0] -fixed no 25 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedPOINTER_RNI9A18D[2] -fixed no 133 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIK0EQ3[11] -fixed no 147 34
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II_0[9] -fixed no 51 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI0R5V4[1] -fixed no 124 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIC9HK9[11] -fixed no 143 19
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIQT1271[0] -fixed no 130 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIV9K3G1[0] -fixed no 135 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[8] -fixed no 53 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI3DOK[6] -fixed no 144 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_ns_i_0_o2_7[0] -fixed no 127 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTlOII_iv -fixed no 57 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI374K[5] -fixed no 124 6
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNISSQJ[11] -fixed no 116 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNO_24[3] -fixed no 131 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_24[0] -fixed no 119 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI4SJV4[5] -fixed no 125 7
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_22[0] -fixed no 124 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[11] -fixed no 55 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI2UV0A[6] -fixed no 137 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[12] -fixed no 53 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_5[1] -fixed no 24 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIQGJG[5] -fixed no 123 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_46[0] -fixed no 126 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNITUTUB[0] -fixed no 141 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNI384A4 -fixed no 124 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_46 -fixed no 158 30
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNI436F[0] -fixed no 116 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIMLIH[30] -fixed no 147 35
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNI8AKT[8] -fixed no 136 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI1CKI9[5] -fixed no 139 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNO_2[23] -fixed no 135 36
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI67JMG1[1] -fixed no 129 31
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIP8S7A[6] -fixed no 117 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIBFIK[5] -fixed no 140 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_27[0] -fixed no 125 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNI6DUE1[13] -fixed no 124 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_ns_i_0_o2_7_0_RNO[0] -fixed no 128 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_28[0] -fixed no 124 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_WADDR_REG1_RNIVK8I[0] -fixed no 128 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_35[0] -fixed no 122 8
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_RNI28G7_0[2] -fixed no 42 49
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIT06B4[2] -fixed no 133 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTlOII_iv_RNIS53A -fixed no 58 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI4UN11[3] -fixed no 130 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_95 -fixed no 150 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIJ5TF11[0] -fixed no 134 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIBO98_0[3] -fixed no 141 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIO4KRP[4] -fixed no 129 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIEPGNA[3] -fixed no 138 17
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II_0[8] -fixed no 52 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_31[0] -fixed no 134 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNIPFCSI[0] -fixed no 140 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNIO3O99[0] -fixed no 141 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hready_reg_RNIQ3IRN -fixed no 52 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[15] -fixed no 54 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNIPIHPK -fixed no 150 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIJA2E_0[10] -fixed no 133 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI7RSEK[6] -fixed no 131 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[10] -fixed no 52 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIM9474[4] -fixed no 137 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II_0[11] -fixed no 55 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_i_RNIT6KS[0] -fixed no 125 29
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI4IAQD[6] -fixed no 134 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl1II[13] -fixed no 53 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI6UP6R[1] -fixed no 130 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI4BOT[1] -fixed no 125 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIOANFA[11] -fixed no 117 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_39[0] -fixed no 121 28
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_44[0] -fixed no 127 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_23[0] -fixed no 120 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_42[0] -fixed no 121 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/un5_counterWait_I_32 -fixed no 145 36
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI1PH12[2] -fixed no 119 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI4JO4G[6] -fixed no 126 5
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNI8VDC1[4] -fixed no 139 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIC0T7B[4] -fixed no 138 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIM5134[1] -fixed no 124 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIUKA4B[1] -fixed no 121 21
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIBO98[3] -fixed no 124 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNITVSD9[2] -fixed no 141 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNIQL1B1[0] -fixed no 130 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNISDSR9[6] -fixed no 118 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNITQ591[9] -fixed no 138 20
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNI074K[2] -fixed no 120 6
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_36[0] -fixed no 126 13
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_47[0] -fixed no 122 27
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_DIN_REG1_RNIQ3O99[0] -fixed no 142 10
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_RNI14O3_0[2] -fixed no 46 47
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIIll_1[1] -fixed no 57 8
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIMM9H[10] -fixed no 135 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_48[0] -fixed no 133 16
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIPTIH[31] -fixed no 150 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIB0712[7] -fixed no 117 22
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/counterWait_RNIKM8F2[12] -fixed no 148 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIIKEC[3] -fixed no 151 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/ahb0/hrdata_reg_RNO_6[0] -fixed no 40 24
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/enable_RNIEAE8 -fixed no 43 49
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIALETH[6] -fixed no 145 12
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNI2E9DD[3] -fixed no 141 11
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIH37K4[10] -fixed no 139 23
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/cachedValue_tile_I_1_RNIU74A4 -fixed no 124 9
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/state_RNIHUA2O[1] -fixed no 135 26
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_RNIS09P1[6] -fixed no 132 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-stonyman_0/substate_i_0_RNO_25[0] -fixed no 118 25
-Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
-psram_cr_0/cr_int_i0/op_counter_RNI14O3_0[3] -fixed no 43 48
 
-There were 0 error(s) and 213 warning(s).
+There were 0 error(s) and 0 warning(s).
 
 =====================================================================
 Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   1842  Total:  11520   (15.99%)
-    Fabric IO (W/ clocks)      Used:     67  Total:    128   (52.34%)
+    Fabric                     Used:   2111  Total:  11520   (18.32%)
+    Fabric IO (W/ clocks)      Used:     70  Total:    128   (54.69%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:     12  Total:     43   (27.91%)
-    GLOBAL (Chip+Quadrant)     Used:      3  Total:     15   (20.00%)
+    GLOBAL (Chip+Quadrant)     Used:      2  Total:     15   (13.33%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
@@ -807,7 +383,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 3      | 3  (100.00%)*
+    Chip global     | 2      | 3  (66.67%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -819,15 +395,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 1479         | 1479
-    SEQ     | 363          | 363
+    COMB    | 1703         | 1703
+    SEQ     | 408          | 408
 
 I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
-    Input I/O                     | 1             | 0            | 0
-    Output I/O                    | 50            | 0            | 0
+    Input I/O                     | 2             | 0            | 0
+    Output I/O                    | 52            | 0            | 0
     Bidirectional I/O             | 16            | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -838,11 +414,11 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 1     | 50     | 16
+    LVTTL                           | 3.30v | N/A   | 2     | 52     | 16
 
 I/O Placement:
 
-    Locked  :  67 ( 100.00% )
+    Locked  :  70 ( 100.00% )
     Placed  :   0
     UnPlaced:   0
 
@@ -852,17 +428,14 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    303     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
+    320     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
                           Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
                           Source: NETLIST
     291     CLK_NET       Net   : FAB_CLK
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    76      CLK_NET       Net   : SCLK_c
+    121     CLK_NET       Net   : SCLK_c
                           Driver: clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC
-                          Source: NETLIST
-    67      INT_NET       Net   : stonyman_0/N_2422_i
-                          Driver: stonyman_0/counterWait_RNIC9HK9_0[20]/U_CLKSRC
                           Source: NETLIST
     1       INT_NET       Net   : Phy_RMII_CLK_c
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
@@ -871,48 +444,48 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    46      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
+    45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/state[1]
-                          Driver: stonyman_0/state[1]
+    38      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29[10]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
+    34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
+                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
+    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
                           Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTIIlI_iv
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
     33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
     32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[4]
+                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
     32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
                           Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    46      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
+    45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/state[1]
-                          Driver: stonyman_0/state[1]
+    38      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29[10]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
+    34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
+                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
+    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
                           Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTIIlI_iv
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
     33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
     32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNI74PR6[4]
+                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
     32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
                           Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
 

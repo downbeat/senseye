@@ -25,4 +25,8 @@ entity adc is
         SAMPLE          : out    vl_logic;
         RESULT          : out    vl_logic_vector(11 downto 0)
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of WARNING_MSGS_ON : constant is 1;
+    attribute mti_svvh_generic_type of FAST_ADC_CONV_SIM : constant is 1;
+    attribute mti_svvh_generic_type of VA_REF_INTERNAL : constant is 1;
 end adc;

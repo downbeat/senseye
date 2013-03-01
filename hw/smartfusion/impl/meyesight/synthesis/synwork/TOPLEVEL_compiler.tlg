@@ -232,6 +232,8 @@ Selecting top level module TOPLEVEL
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CoreAHBLite_Z3
 
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v":19:7:19:22|Synthesizing module inputConditioner
+
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
 
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
@@ -263,19 +265,45 @@ Selecting top level module TOPLEVEL
 @N: CG179 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":84:7:84:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":105:11:105:31|No assignment to counterPixelsCaptured
-@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:74|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:77|Read Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":374:48:374:74|Write Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":381:51:381:77|Write Address width 3 does not cover RAM depth
 
-@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Found RAM cachedValue, depth=8, width=8
+@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register substate
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 31 of counterWait[31:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Pruning register bit 30 of counterWait[30:0] 
+
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
-State machine has 15 reachable states with original encodings of:
+State machine has 18 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 13 reachable states with original encodings of:
    0000
    0001
    0010
@@ -289,22 +317,6 @@ State machine has 15 reachable states with original encodings of:
    1010
    1011
    1100
-   1101
-   1110
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Trying to extract state machine for register state
-Extracted state machine for register state
-State machine has 7 reachable states with original encodings of:
-   0000
-   0001
-   0010
-   0011
-   0100
-   0101
-   0110
-@W: CL190 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Optimizing register bit inphi to a constant 0
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":117:0:117:5|Pruning register inphi 
-
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v":90:12:90:18|Input pixelin is unused
 @W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
@@ -334,6 +346,7 @@ State machine has 7 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v":22:6:22:8|Input rst is unused
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
 
 @W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused

@@ -44,54 +44,73 @@ begin
    begin
       cs <= 1;
       cntrWaitQuiet <= 16; // just a guess
+      conversionComplete <= 1;
    end
-
-   // state: idle
-   if((1 == cs) && (0 == cntrWaitQuiet))
+   else
    begin
-      // start conversion
-      if(0 == startCapture)
+      // state: idle
+      if((1 == cs) && (0 == cntrWaitQuiet))
       begin
-         cs <= 0;
-         cntrWaitLeading <= `TICKS_WAIT_LEADING;
-         cntrWaitTrailing <= `TICKS_WAIT_TRAILING;
-         cntrWaitQuiet <= `TICKS_WAIT_QUIET;
-         conversionComplete <= 1;
-         bitsRead <= 0;
+         // start conversion
+         if(0 == startCapture)
+         begin
+            cs <= 0;
+            cntrWaitLeading <= `TICKS_WAIT_LEADING;
+            cntrWaitTrailing <= `TICKS_WAIT_TRAILING;
+            cntrWaitQuiet <= `TICKS_WAIT_QUIET;
+            conversionComplete <= 1;
+            bitsRead <= 0;
+         end
       end
-   end
 
-   // state: waiting (leading)
-   if((0 == cs) && (0 < cntrWaitLeading))
-   begin
-      cntrWaitLeading <= cntrWaitLeading - 1;
-   end
+      // state: waiting (leading)
+      if((0 == cs) && (0 < cntrWaitLeading))
+      begin
+         cntrWaitLeading <= cntrWaitLeading - 1;
+      end
 
-   // state: reading data
-   if((0 == cs) && (0 == cntrWaitLeading) && (`ADC_RES > bitsRead))
-   begin
-      // shift in data
-      dataout <= {dataout[(`ADC_RES-1):0],~miso};
-      bitsRead <= bitsRead + 1;
-   end
+      // state: reading data
+      if((0 == cs) && (0 == cntrWaitLeading) && (`ADC_RES > bitsRead))
+      begin
+         // shift in data
+         dataout <= {dataout[(`ADC_RES-1):0],~miso};
+         bitsRead <= bitsRead + 1;
+      end
 
-   // state: waiting (trailing)
-   if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
-   begin
-      cntrWaitTrailing <= cntrWaitTrailing - 1;
-      conversionComplete <= 0;
-   end
+      // state: waiting (trailing)
+      if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
+      begin
+         cntrWaitTrailing <= cntrWaitTrailing - 1;
+      end
 
-   // state: trailing wait finished
-   if((0 == cs) && (`ADC_RES == bitsRead) && (0 == cntrWaitTrailing))
-   begin
-      cs <= 1;
-   end
+      // state: trailing wait finished
+      if((0 == cs) && (`ADC_RES == bitsRead) && (0 == cntrWaitTrailing))
+      begin
+         cs <= 1;
+      end
 
-   // state: quiet time
-   if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet))
-   begin
-      cntrWaitQuiet <= cntrWaitQuiet - 1;
+      // conversion is complete after the chip select rises (we'll wait one
+      // clock)
+      if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet) && (0 == startCapture))
+      begin
+         conversionComplete <= 0;
+      end
+
+      // need to raise the conversion complete when the start capture line rises
+      // (like an ACK)
+      if( (1 == cs) && (`ADC_RES == bitsRead) && (0 == conversionComplete)
+           && (0 < cntrWaitQuiet) && (1 == startCapture) )
+      begin
+         conversionComplete <= 1;
+      end
+
+      // state: quiet time
+      // (counting while the conversion acknowledgement stuff goes on
+      // simultaneously)
+      if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet))
+      begin
+         cntrWaitQuiet <= cntrWaitQuiet - 1;
+      end
    end
 end
 

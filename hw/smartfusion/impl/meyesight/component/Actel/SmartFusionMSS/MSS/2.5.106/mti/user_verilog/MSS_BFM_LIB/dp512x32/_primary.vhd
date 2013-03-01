@@ -23,4 +23,9 @@ entity dp512x32 is
         CSBB            : in     vl_logic;
         RWBB            : in     vl_logic
     );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of word_width : constant is 1;
+    attribute mti_svvh_generic_type of word_depth : constant is 1;
+    attribute mti_svvh_generic_type of nb_address : constant is 1;
+    attribute mti_svvh_generic_type of MEMORYFILE : constant is 1;
 end dp512x32;

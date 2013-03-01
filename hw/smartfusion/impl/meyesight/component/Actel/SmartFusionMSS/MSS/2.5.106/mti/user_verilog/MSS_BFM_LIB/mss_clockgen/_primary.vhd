@@ -35,6 +35,6 @@ entity mss_clockgen is
         PER1_DIV        : out    vl_logic_vector(1 downto 0);
         ACEPCLK_DIV     : out    vl_logic_vector(1 downto 0)
     );
-    attribute CLKDIVISORS_mti_vect_attrib : integer;
-    attribute CLKDIVISORS_mti_vect_attrib of CLKDIVISORS : constant is 0;
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of CLKDIVISORS : constant is 2;
 end mss_clockgen;
