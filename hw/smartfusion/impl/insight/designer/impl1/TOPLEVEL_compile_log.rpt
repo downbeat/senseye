@@ -10,14 +10,14 @@ Opened an existing Libero design TOPLEVEL.adb.
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
 'IDE_DESIGNERVIEW_ROOTDIR' set to
-'Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer'
+'Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 
- Netlist Reading Time = 0.0 seconds
+ Netlist Reading Time = 1.0 seconds
 Imported the file:
-   Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
+   Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL.edn
 
-The Import command succeeded ( 00:00:02 )
+The Import command succeeded ( 00:00:03 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -26,7 +26,7 @@ Family      : SmartFusion
 Device      : A2F500M3G
 Package     : 484 FBGA
 Source      :
-Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL.edn
 Format      : EDIF
 Topcell     : TOPLEVEL
 Speed grade : STD
@@ -347,9 +347,9 @@ Optimized macros:
   - Buffers:                1
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        68
+  - Logic combining:        76
 
-    Total macros optimized  69
+    Total macros optimized  77
 
 There were 0 error(s) and 285 warning(s) in this design.
 =====================================================================
@@ -364,12 +364,12 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   2111  Total:  11520   (18.32%)
+    Fabric                     Used:   2242  Total:  11520   (19.46%)
     Fabric IO (W/ clocks)      Used:     70  Total:    128   (54.69%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:     12  Total:     43   (27.91%)
-    GLOBAL (Chip+Quadrant)     Used:      2  Total:     15   (13.33%)
+    GLOBAL (Chip+Quadrant)     Used:      3  Total:     15   (20.00%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
@@ -383,7 +383,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 2      | 3  (66.67%)*
+    Chip global     | 3      | 3  (100.00%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -395,7 +395,7 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 1703         | 1703
+    COMB    | 1834         | 1834
     SEQ     | 408          | 408
 
 I/O Function:
@@ -428,7 +428,7 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    320     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
+    346     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
                           Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
                           Source: NETLIST
     291     CLK_NET       Net   : FAB_CLK
@@ -436,6 +436,9 @@ The following nets have been assigned to a chip global resource:
                           Source: ESSENTIAL
     121     CLK_NET       Net   : SCLK_c
                           Driver: clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC
+                          Source: NETLIST
+    60      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29_0[10]/U_CLKSRC
                           Source: NETLIST
     1       INT_NET       Net   : Phy_RMII_CLK_c
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
@@ -446,56 +449,56 @@ High fanout nets in the post compile netlist:
     --------------------------
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
+    39      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
+    38      INT_NET       Net   : stonyman_0/counterPixelsCaptured[12]
+                          Driver: stonyman_0/counterPixelsCaptured[12]
+    37      INT_NET       Net   : stonyman_0/counterPixelsCaptured[11]
+                          Driver: stonyman_0/counterPixelsCaptured[11]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
+    35      INT_NET       Net   : stonyman_0/counterPixelsCaptured[13]
+                          Driver: stonyman_0/counterPixelsCaptured[13]
     34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-    32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
+    39      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
+    38      INT_NET       Net   : stonyman_0/counterPixelsCaptured[12]
+                          Driver: stonyman_0/counterPixelsCaptured[12]
+    37      INT_NET       Net   : stonyman_0/counterPixelsCaptured[11]
+                          Driver: stonyman_0/counterPixelsCaptured[11]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
+    35      INT_NET       Net   : stonyman_0/counterPixelsCaptured[13]
+                          Driver: stonyman_0/counterPixelsCaptured[13]
     34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-    32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
 
 The Compile command succeeded ( 00:00:02 )
 Wrote status report to file: TOPLEVEL_compile_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Design saved to file
-Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb.
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\designer\impl1\TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:06 )
+The Execute Script command succeeded ( 00:00:08 )
 Design closed.
 

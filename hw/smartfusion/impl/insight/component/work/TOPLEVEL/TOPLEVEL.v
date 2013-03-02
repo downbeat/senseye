@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Feb 28 22:04:24 2013
+// Created by SmartDesign Sat Mar 02 01:32:07 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -321,24 +321,24 @@ assign led[7:4]                         = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
-wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
 
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
 
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
 wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
 wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };

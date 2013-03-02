@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362107063"
+TIME="1362205927"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1362107063"
+TIME="1362205927"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -343,19 +343,19 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1362107064"
+TIME="1362205927"
 SIZE="2142"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362107073"
+TIME="1362205934"
 SIZE="10808"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1362107061"
+TIME="1362205925"
 SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
@@ -366,7 +366,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1362107064"
+TIME="1362205927"
 SIZE="33978"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
@@ -418,8 +418,8 @@ SIZE="30517"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362107295"
-SIZE="237056"
+TIME="1362213902"
+SIZE="239616"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
@@ -428,8 +428,8 @@ SIZE="237056"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1362107295"
-SIZE="2071"
+TIME="1362181148"
+SIZE="2065"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
@@ -493,8 +493,8 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1362089642"
-SIZE="52404"
+TIME="1362213690"
+SIZE="52775"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
@@ -543,7 +543,7 @@ SIZE="1975"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1362107064"
+TIME="1362205927"
 SIZE="629"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -586,8 +586,8 @@ SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1362107119"
-SIZE="4802"
+TIME="1362181148"
+SIZE="4756"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -675,17 +675,6 @@ ENDLIST
 LIST AssociatedStimulus
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -777,8 +766,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -839,17 +828,6 @@ VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 VALUE "<project>\designer\impl1\TOPLEVEL.pdb,pdb"
 VALUE "<project>\designer\impl1\TOPLEVEL.stp,stp"
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "CoreAHBLite::COREAHBLITE_LIB"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
@@ -972,8 +950,8 @@ SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
 SUBBLOCK "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
-SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
+SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST

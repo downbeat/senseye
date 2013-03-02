@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Thu Feb 28 22:06:13 2013 ***************************************************************************
+                          Sat Mar 02 03:43:00 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
-File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\designer\impl1\TOPLEVEL.adb
+File Name: Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\designer\impl1\TOPLEVEL.adb
 Design Name: TOPLEVEL  Design State: layout
-Last Saved: Thu Feb 28 22:05:28 2013
+Last Saved: Sat Mar 02 03:42:09 2013
 
 ***** Device Data **************************************************
 
@@ -22,8 +22,8 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Thu Feb 28 22:05:23 2013:
-        Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
+Source File(s) Imported on Sat Mar 02 03:42:02 2013:
+        Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL.edn
 
 
 ***** CAE Variables ************************************************
@@ -50,7 +50,7 @@ Family      : SmartFusion
 Device      : A2F500M3G
 Package     : 484 FBGA
 Source      :
-Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\synthesis\TOPLEVEL.edn
+Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL.edn
 Format      : EDIF
 Topcell     : TOPLEVEL
 Speed grade : STD
@@ -371,9 +371,9 @@ Optimized macros:
   - Buffers:                1
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        68
+  - Logic combining:        76
 
-    Total macros optimized  69
+    Total macros optimized  77
 
 There were 0 error(s) and 285 warning(s) in this design.
 =====================================================================
@@ -388,12 +388,12 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   2111  Total:  11520   (18.32%)
+    Fabric                     Used:   2242  Total:  11520   (19.46%)
     Fabric IO (W/ clocks)      Used:     70  Total:    128   (54.69%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
     Dedicated MSS IO           Used:     12  Total:     43   (27.91%)
-    GLOBAL (Chip+Quadrant)     Used:      2  Total:     15   (13.33%)
+    GLOBAL (Chip+Quadrant)     Used:      3  Total:     15   (20.00%)
     MSS GLOBAL                 Used:      3  Total:      3   (100.00%)
     Fabric CCC                 Used:      0  Total:      1   (0.00%)
     MSS CCC                    Used:      1  Total:      1   (100.00%)
@@ -407,7 +407,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 2      | 3  (66.67%)*
+    Chip global     | 3      | 3  (100.00%)*
     Quadrant global | 0      | 12 (0.00%)
     MSS global      | 3      | 3  (100.00%)
 
@@ -419,7 +419,7 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 1703         | 1703
+    COMB    | 1834         | 1834
     SEQ     | 408          | 408
 
 I/O Function:
@@ -452,7 +452,7 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    320     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
+    346     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
                           Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
                           Source: NETLIST
     291     CLK_NET       Net   : FAB_CLK
@@ -460,6 +460,9 @@ The following nets have been assigned to a chip global resource:
                           Source: ESSENTIAL
     121     CLK_NET       Net   : SCLK_c
                           Driver: clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC
+                          Source: NETLIST
+    60      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29_0[10]/U_CLKSRC
                           Source: NETLIST
     1       INT_NET       Net   : Phy_RMII_CLK_c
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
@@ -470,48 +473,48 @@ High fanout nets in the post compile netlist:
     --------------------------
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
+    39      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
+    38      INT_NET       Net   : stonyman_0/counterPixelsCaptured[12]
+                          Driver: stonyman_0/counterPixelsCaptured[12]
+    37      INT_NET       Net   : stonyman_0/counterPixelsCaptured[11]
+                          Driver: stonyman_0/counterPixelsCaptured[11]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
+    35      INT_NET       Net   : stonyman_0/counterPixelsCaptured[13]
+                          Driver: stonyman_0/counterPixelsCaptured[13]
     34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-    32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
-    38      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
+    39      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
+                          Driver: psram_cr_0/ahb0/haddr_reg[2]
+    38      INT_NET       Net   : stonyman_0/counterPixelsCaptured[12]
+                          Driver: stonyman_0/counterPixelsCaptured[12]
+    37      INT_NET       Net   : stonyman_0/counterPixelsCaptured[11]
+                          Driver: stonyman_0/counterPixelsCaptured[11]
     35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTllIl113
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01[5]
+    35      INT_NET       Net   : stonyman_0/counterPixelsCaptured[13]
+                          Driver: stonyman_0/counterPixelsCaptured[13]
     34      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTIIlI_iv
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIOH0SB[5]
+    34      INT_NET       Net   : psram_cr_0/ahb0/N_88
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNI99P83[3]
     33      INT_NET       Net   : psram_cr_0/ahb0/operation5
                           Driver: psram_cr_0/ahb0/operation_sel_RNIIIQ01
-    33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_4_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
     33      INT_NET       Net   : psram_cr_0/ahb0/hrdata_reg_3_sqmuxa
-                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3_0[2]
-    33      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l[1]
-    32      INT_NET       Net   : psram_cr_0/ahb0/N_18
-                          Driver: psram_cr_0/ahb0/hwrite_reg_RNI74PR6
-    32      INT_NET       Net   : psram_cr_0/ahb0/psram_addr5
-                          Driver: psram_cr_0/ahb0/psram_addr_sel_RNIOP6S
+                          Driver: psram_cr_0/ahb0/haddr_reg_RNIA52K3[2]
 
 
 Layout Output:
@@ -537,24 +540,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Thu Feb 28 22:05:34 2013
+Timing-driven Placer Started: Sat Mar 02 03:42:15 2013
 
-Placer Finished: Thu Feb 28 22:05:47 2013
-Total Placer CPU Time:     00:00:13
+Placer Finished: Sat Mar 02 03:42:30 2013
+Total Placer CPU Time:     00:00:15
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Thu Feb 28 22:05:52 2013
+Design: TOPLEVEL                        Started: Sat Mar 02 03:42:35 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Thu Feb 28 22:06:09 2013
-Total CPU Time:     00:00:17            Total Elapsed Time: 00:00:17
+Finished: Sat Mar 02 03:42:55 2013
+Total CPU Time:     00:00:19            Total Elapsed Time: 00:00:20
                         o - o - o - o - o - o
 
 

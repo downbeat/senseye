@@ -13,7 +13,6 @@ add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insi
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/hdl/ahb.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/hdl/cr_int.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/hdl/psram_cr.v"
-add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/hdl/stonyman.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
@@ -23,6 +22,7 @@ add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
+add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/TOPLEVEL/TOPLEVEL.v"
 add_file -constraint "Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/MSS_CORE2/mss_tshell_syn.sdc"
 

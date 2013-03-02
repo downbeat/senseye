@@ -105,7 +105,6 @@ output reg startAdcCapture;  // active low
 output wire [3:0] tp_stateout;
 output wire [3:0] tp_substateout;
 
-
 reg [31:0] counterWait;
 reg [15:0] counterPixelsCaptured;
 
@@ -756,11 +755,18 @@ begin
 
          `S_IDLE:
          begin
-            if(1'b0 == startCapture)
+            if(0 < counterWait)
             begin
-               counterPixelsCaptured <= 0;
-               state <= `S_CAP_SET_ROW;
-               substate <= `SUB_S_RESP_RAISE;
+               counterWait <= counterWait-1;
+            end
+            else
+            begin
+               if(1'b0 == startCapture)
+               begin
+                  counterPixelsCaptured <= 0;
+                  state <= `S_CAP_SET_ROW;
+                  substate <= `SUB_S_RESP_RAISE;
+               end
             end
          end
 
@@ -893,8 +899,8 @@ begin
                   begin
                      resv <= 1'b0;
                      cachedValue[cachedPOINTER] <= 0;
-                     substate <= `TICKS_PULSE_WAIT_AFTER-2;
-                     counterWait <= `SUB_S_RESV_WAIT_AFTER;
+                     counterWait <= `TICKS_PULSE_WAIT_AFTER-2;
+                     substate <= `SUB_S_RESV_WAIT_AFTER;
                   end
                end
                `SUB_S_RESV_WAIT_AFTER:
@@ -1158,6 +1164,9 @@ begin
                         // we've captured all the pixels
                         state <= `S_IDLE;
                         substate <= 0; // unnecessary
+                        // FIXME russ: remove this!  it's only here for when
+                        // the "button press"
+                        counterWait <= `TICKS_WAIT_STARTUP;
                      end
                      else if(0 == (counterPixelsCaptured%`RESOLUTION_COLS))
                      begin

@@ -11,42 +11,42 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Thu Feb 28 22:04:32 2013 )</state>
-    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\SoftConsole</swide-toolchain>
+    <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/TOPLEVEL</location>
+    <state>GENERATED ( Sat Mar 02 01:32:13 2013 )</state>
+    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\MSS_CORE2.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\MSS_CORE2\mss_tshell.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\TOPLEVEL\TOPLEVEL.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\adc081s101.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\ahb.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\apb.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\clkgenerator.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\cr_int.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\inputConditioner.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\led.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\psram_cr.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\stonyman.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\hdl\VersionROM.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CORE2.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\mss_tshell.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\TOPLEVEL\TOPLEVEL.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\apb.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\clkgenerator.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\inputConditioner.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\led.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\psram_cr.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\VersionROM.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\meyesight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>psram_data[15]</port-name>
@@ -1068,7 +1068,7 @@ The CoreAHBLite component implements a multi-master AHB-Lite bus. It provides up
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>HierSpiritDesign</core-exttype>
-    <core-location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/meyesight/component/work/MSS_CORE2</core-location>
+    <core-location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/MSS_CORE2</core-location>
     <core-name>MSS_CORE2_0</core-name>
   </core>
   <core type="HdlModule">

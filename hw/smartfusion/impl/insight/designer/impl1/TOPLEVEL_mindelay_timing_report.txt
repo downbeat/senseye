@@ -3,7 +3,7 @@ Timing Report Min Delay Analysis
 SmartTime Version v10.1 SP3
 Actel Corporation - Actel Designer Software Release v10.1 SP3 (Version 10.1.3.1)
 Copyright (c) 1989-2013
-Date: Thu Feb 28 22:06:21 2013
+Date: Sat Mar 02 03:43:08 2013
 
 
 Design: TOPLEVEL
@@ -105,14 +105,14 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               clkgenerator_0/clkCameraSS:Q
-Period (ns):                40.469
-Frequency (MHz):            24.710
+Period (ns):                38.352
+Frequency (MHz):            26.074
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        17.227
-External Hold (ns):         -0.537
-Min Clock-To-Out (ns):      3.095
-Max Clock-To-Out (ns):      15.664
+External Setup (ns):        13.418
+External Hold (ns):         0.294
+Min Clock-To-Out (ns):      3.530
+Max Clock-To-Out (ns):      16.145
 
 Clock Domain:               MSS_CORE_0/MSS_CCC_0/I_XTLOSC:CLKOUT
 Period (ns):                N/A
@@ -611,54 +611,54 @@ SET Register to Register
 
 Path 1
   From:                        stonyman_0/cachedPOINTER[2]:CLK
-  To:                          stonyman_0/cachedValue_tile_WADDR_REG1[2]:D
-  Delay (ns):                  0.421
+  To:                          stonyman_0/cachedValue_tile_I_1:WADDR2
+  Delay (ns):                  0.482
   Slack (ns):
-  Arrival (ns):                1.542
+  Arrival (ns):                1.688
   Required (ns):
   Hold (ns):                   0.000
 
 Path 2
   From:                        stonyman_0/cachedPOINTER[1]:CLK
-  To:                          stonyman_0/cachedValue_tile_WADDR_REG1[1]:D
-  Delay (ns):                  0.450
+  To:                          stonyman_0/cachedValue_tile_I_1:WADDR1
+  Delay (ns):                  0.513
   Slack (ns):
-  Arrival (ns):                1.574
+  Arrival (ns):                1.719
   Required (ns):
   Hold (ns):                   0.000
 
 Path 3
-  From:                        inputConditioner_0/conditioner[4]:CLK
-  To:                          inputConditioner_0/conditioner[5]:D
-  Delay (ns):                  0.668
+  From:                        stonyman_0/cachedPOINTER[0]:CLK
+  To:                          stonyman_0/cachedValue_tile_I_1:WADDR0
+  Delay (ns):                  0.629
   Slack (ns):
-  Arrival (ns):                1.792
+  Arrival (ns):                1.823
   Required (ns):
   Hold (ns):                   0.000
 
 Path 4
-  From:                        inputConditioner_0/conditioner[2]:CLK
-  To:                          inputConditioner_0/conditioner[3]:D
-  Delay (ns):                  0.668
+  From:                        inputConditioner_0/conditioner[1]:CLK
+  To:                          inputConditioner_0/conditioner[2]:D
+  Delay (ns):                  0.670
   Slack (ns):
-  Arrival (ns):                1.792
+  Arrival (ns):                1.861
   Required (ns):
   Hold (ns):                   0.000
 
 Path 5
-  From:                        inputConditioner_0/conditioner[3]:CLK
-  To:                          inputConditioner_0/conditioner[4]:D
-  Delay (ns):                  0.670
+  From:                        inputConditioner_0/conditioner[4]:CLK
+  To:                          inputConditioner_0/conditioner[5]:D
+  Delay (ns):                  0.668
   Slack (ns):
-  Arrival (ns):                1.794
+  Arrival (ns):                1.850
   Required (ns):
   Hold (ns):                   0.000
 
 
 Expanded Path 1
   From: stonyman_0/cachedPOINTER[2]:CLK
-  To: stonyman_0/cachedValue_tile_WADDR_REG1[2]:D
-  data arrival time                              1.542
+  To: stonyman_0/cachedValue_tile_I_1:WADDR2
+  data arrival time                              1.688
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -666,31 +666,31 @@ Expanded Path 1
   0.000                        clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   0.000                        clkgenerator_0/clkCameraSS:Q (r)
-               +     0.443          net: clkgenerator_0/SCLK_i
-  0.443                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
+               +     0.513          net: clkgenerator_0/SCLK_i
+  0.513                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
-  0.813                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.308          net: SCLK_c
-  1.121                        stonyman_0/cachedPOINTER[2]:CLK (r)
+  0.883                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
+               +     0.323          net: SCLK_c
+  1.206                        stonyman_0/cachedPOINTER[2]:CLK (r)
                +     0.236          cell: ADLIB:DFN1
-  1.357                        stonyman_0/cachedPOINTER[2]:Q (r)
-               +     0.185          net: stonyman_0/cachedPOINTER[2]
-  1.542                        stonyman_0/cachedValue_tile_WADDR_REG1[2]:D (r)
+  1.442                        stonyman_0/cachedPOINTER[2]:Q (r)
+               +     0.246          net: stonyman_0/cachedPOINTER[2]
+  1.688                        stonyman_0/cachedValue_tile_I_1:WADDR2 (r)
                                     
-  1.542                        data arrival time
+  1.688                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   N/C                          clkgenerator_0/clkCameraSS:Q (r)
-               +     0.443          net: clkgenerator_0/SCLK_i
+               +     0.513          net: clkgenerator_0/SCLK_i
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.323          net: SCLK_c
-  N/C                          stonyman_0/cachedValue_tile_WADDR_REG1[2]:CLK (r)
-               +     0.000          Library hold time: ADLIB:DFN1
-  N/C                          stonyman_0/cachedValue_tile_WADDR_REG1[2]:D
+               +     0.423          net: SCLK_c
+  N/C                          stonyman_0/cachedValue_tile_I_1:WCLK (r)
+               +     0.000          Library hold time: ADLIB:RAM512X18
+  N/C                          stonyman_0/cachedValue_tile_I_1:WADDR2
 
 
 END SET Register to Register
@@ -701,93 +701,89 @@ SET External Hold
 
 Path 1
   From:                        CAPTURE
-  To:                          inputConditioner_0/conditioner[4]:D
-  Delay (ns):                  1.888
+  To:                          inputConditioner_0/conditioner[0]:D
+  Delay (ns):                  1.137
   Slack (ns):
-  Arrival (ns):                1.888
+  Arrival (ns):                1.137
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.537
+  External Hold (ns):          0.294
 
 Path 2
   From:                        CAPTURE
-  To:                          inputConditioner_0/conditioner[5]:D
-  Delay (ns):                  1.986
+  To:                          inputConditioner_0/conditioner[2]:D
+  Delay (ns):                  1.505
   Slack (ns):
-  Arrival (ns):                1.986
+  Arrival (ns):                1.505
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.635
+  External Hold (ns):          -0.066
 
 Path 3
   From:                        CAPTURE
-  To:                          inputConditioner_0/conditioner[0]:D
-  Delay (ns):                  2.030
+  To:                          inputConditioner_0/conditioner[4]:D
+  Delay (ns):                  1.516
   Slack (ns):
-  Arrival (ns):                2.030
+  Arrival (ns):                1.516
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.677
+  External Hold (ns):          -0.096
 
 Path 4
   From:                        CAPTURE
   To:                          inputConditioner_0/conditioner[3]:D
-  Delay (ns):                  2.097
+  Delay (ns):                  1.521
   Slack (ns):
-  Arrival (ns):                2.097
+  Arrival (ns):                1.521
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.746
+  External Hold (ns):          -0.101
 
 Path 5
   From:                        CAPTURE
-  To:                          inputConditioner_0/conditioner[2]:D
-  Delay (ns):                  2.748
+  To:                          inputConditioner_0/conditioner[1]:D
+  Delay (ns):                  1.540
   Slack (ns):
-  Arrival (ns):                2.748
+  Arrival (ns):                1.540
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -1.397
+  External Hold (ns):          -0.109
 
 
 Expanded Path 1
   From: CAPTURE
-  To: inputConditioner_0/conditioner[4]:D
-  data arrival time                              1.888
+  To: inputConditioner_0/conditioner[0]:D
+  data arrival time                              1.137
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
-  0.000                        CAPTURE (r)
+  0.000                        CAPTURE (f)
                +     0.000          net: CAPTURE
-  0.000                        CAPTURE_pad/U0/U0:PAD (r)
-               +     0.374          cell: ADLIB:IOPAD_IN
-  0.374                        CAPTURE_pad/U0/U0:Y (r)
+  0.000                        CAPTURE_pad/U0/U0:PAD (f)
+               +     0.265          cell: ADLIB:IOPAD_IN
+  0.265                        CAPTURE_pad/U0/U0:Y (f)
                +     0.000          net: CAPTURE_pad/U0/NET1
-  0.374                        CAPTURE_pad/U0/U1:YIN (r)
-               +     0.018          cell: ADLIB:IOIN_IB
-  0.392                        CAPTURE_pad/U0/U1:Y (r)
-               +     1.119          net: CAPTURE_c
-  1.511                        inputConditioner_0/conditioner_RNO[4]:B (r)
-               +     0.240          cell: ADLIB:NOR2B
-  1.751                        inputConditioner_0/conditioner_RNO[4]:Y (r)
-               +     0.137          net: inputConditioner_0/intermediate[3]
-  1.888                        inputConditioner_0/conditioner[4]:D (r)
+  0.265                        CAPTURE_pad/U0/U1:YIN (f)
+               +     0.016          cell: ADLIB:IOIN_IB
+  0.281                        CAPTURE_pad/U0/U1:Y (f)
+               +     0.856          net: CAPTURE_c
+  1.137                        inputConditioner_0/conditioner[0]:D (f)
                                     
-  1.888                        data arrival time
+  1.137                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   N/C                          clkgenerator_0/clkCameraSS:Q (r)
-               +     0.532          net: clkgenerator_0/SCLK_i
+               +     0.616          net: clkgenerator_0/SCLK_i
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.445          cell: ADLIB:CLKSRC
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.374          net: SCLK_c
-  N/C                          inputConditioner_0/conditioner[4]:CLK (r)
+               +     0.370          net: SCLK_c
+  N/C                          inputConditioner_0/conditioner[0]:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1
-  N/C                          inputConditioner_0/conditioner[4]:D
+  N/C                          inputConditioner_0/conditioner[0]:D
 
 
 END SET External Hold
@@ -799,53 +795,53 @@ SET Clock to Output
 Path 1
   From:                        adc081s101_0/cs:CLK
   To:                          CS
-  Delay (ns):                  1.986
+  Delay (ns):                  2.348
   Slack (ns):
-  Arrival (ns):                3.095
+  Arrival (ns):                3.530
   Required (ns):
-  Clock to Out (ns):           3.095
+  Clock to Out (ns):           3.530
 
 Path 2
-  From:                        stonyman_0/resv:CLK
-  To:                          resv
-  Delay (ns):                  2.622
+  From:                        stonyman_0/startAdcCapture:CLK
+  To:                          adcStartCapture
+  Delay (ns):                  2.763
   Slack (ns):
-  Arrival (ns):                3.740
+  Arrival (ns):                3.951
   Required (ns):
-  Clock to Out (ns):           3.740
+  Clock to Out (ns):           3.951
 
 Path 3
-  From:                        stonyman_0/resp:CLK
-  To:                          resp
-  Delay (ns):                  2.848
+  From:                        stonyman_0/state[5]:CLK
+  To:                          led[6]
+  Delay (ns):                  2.757
   Slack (ns):
-  Arrival (ns):                3.969
+  Arrival (ns):                3.952
   Required (ns):
-  Clock to Out (ns):           3.969
+  Clock to Out (ns):           3.952
 
 Path 4
-  From:                        stonyman_0/inphi:CLK
-  To:                          inphi
-  Delay (ns):                  2.888
+  From:                        stonyman_0/incv:CLK
+  To:                          incv
+  Delay (ns):                  2.838
   Slack (ns):
-  Arrival (ns):                4.012
+  Arrival (ns):                4.025
   Required (ns):
-  Clock to Out (ns):           4.012
+  Clock to Out (ns):           4.025
 
 Path 5
-  From:                        stonyman_0/substate[11]:CLK
-  To:                          led[1]
-  Delay (ns):                  2.892
+  From:                        adc081s101_0/conversionComplete:CLK
+  To:                          adcConvComplete
+  Delay (ns):                  3.035
   Slack (ns):
-  Arrival (ns):                4.016
+  Arrival (ns):                4.222
   Required (ns):
-  Clock to Out (ns):           4.016
+  Clock to Out (ns):           4.222
 
 
 Expanded Path 1
   From: adc081s101_0/cs:CLK
   To: CS
-  data arrival time                              3.095
+  data arrival time                              3.530
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -853,26 +849,26 @@ Expanded Path 1
   0.000                        clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   0.000                        clkgenerator_0/clkCameraSS:Q (r)
-               +     0.443          net: clkgenerator_0/SCLK_i
-  0.443                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
+               +     0.513          net: clkgenerator_0/SCLK_i
+  0.513                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
-  0.813                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.296          net: SCLK_c
-  1.109                        adc081s101_0/cs:CLK (r)
+  0.883                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
+               +     0.299          net: SCLK_c
+  1.182                        adc081s101_0/cs:CLK (r)
                +     0.236          cell: ADLIB:DFN1
-  1.345                        adc081s101_0/cs:Q (r)
-               +     0.468          net: CS_c
-  1.813                        CS_pad/U0/U1:D (r)
+  1.418                        adc081s101_0/cs:Q (r)
+               +     0.830          net: CS_c
+  2.248                        CS_pad/U0/U1:D (r)
                +     0.243          cell: ADLIB:IOTRI_OB_EB
-  2.056                        CS_pad/U0/U1:DOUT (r)
+  2.491                        CS_pad/U0/U1:DOUT (r)
                +     0.000          net: CS_pad/U0/NET1
-  2.056                        CS_pad/U0/U0:D (r)
+  2.491                        CS_pad/U0/U0:D (r)
                +     1.039          cell: ADLIB:IOPAD_TRI
-  3.095                        CS_pad/U0/U0:PAD (r)
+  3.530                        CS_pad/U0/U0:PAD (r)
                +     0.000          net: CS
-  3.095                        CS (r)
+  3.530                        CS (r)
                                     
-  3.095                        data arrival time
+  3.530                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
