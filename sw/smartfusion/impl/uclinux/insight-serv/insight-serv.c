@@ -36,6 +36,8 @@
 //**************************************************************************************************
 // globals
 //
+const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
+const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
 
 
 //**************************************************************************************************
@@ -143,6 +145,7 @@ static void request_handler(int sd)
    uint8_t recvBuf[REQ_MAX_LEN];
    unsigned recvLen, recvLenTotal;
    unsigned flag_bad_request;
+   unsigned send_len_ret;
 
    flag_bad_request=0;
 
@@ -173,8 +176,7 @@ static void request_handler(int sd)
          recvLenTotal += recvLen;
          for(ii=0; ii<recvLen; ++ii)
          {
-            // I'll just treat a null char as a new line for now!
-            // TODO russ: is that a good thing to do?  (perhaps that should be a bad request)
+            // I'll just treat a null char as a new line
             if(    ('\0' == recvBuf[recvLenTotal-recvLen+ii])
                 || ('\n' == recvBuf[recvLenTotal-recvLen+ii]) )
             {
@@ -193,15 +195,29 @@ static void request_handler(int sd)
       {
          // good request!
          // return data
-         // TODO!
+         // TODO: remove debug output (maybe)
          fprintf(stderr, "good request!\n");
+         send_len_ret = send(sd, (const void*)(&RESP_SUCCESS_HEADER), sizeof(RESP_SUCCESS_HEADER), 0);
+         if(sizeof(RESP_SUCCESS_HEADER) != send_len_ret)
+         {
+            fprintf(stderr, "request_handler: send call returns wrong length");
+            fflush(stderr);
+            exit(1);
+         }
       }
       else
       {
          // bad request :(
-         // TODO!
-         flag_bad_request=1;
+         // TODO: remove debug output
+         flag_bad_request=1; // unnecessary
          fprintf(stderr, "bad request :(\n");
+         send_len_ret = send(sd, (const void*)(&RESP_BAD_REQUEST), sizeof(RESP_BAD_REQUEST), 0);
+         if(sizeof(RESP_BAD_REQUEST) != send_len_ret)
+         {
+            fprintf(stderr, "request_handler: send call returns wrong length");
+            fflush(stderr);
+            exit(1);
+         }
       }
    }
 }
