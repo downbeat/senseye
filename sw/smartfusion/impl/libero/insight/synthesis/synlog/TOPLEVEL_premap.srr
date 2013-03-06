@@ -4,20 +4,20 @@ Product Version F-2012.03M-SP1
 
 Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-Reading constraint file: Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
-@L: Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL_scck.rpt 
-Printing clock  summary report in "Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL_scck.rpt" file 
+Reading constraint file: Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
+@L: Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
 
-Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
 
-Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 102MB)
 
-@W: BN132 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
-@N: MF237 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":1171:35:1171:73|Generating a type rem remainder 
+@W: BN132 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
+@N: MF237 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":1171:35:1171:73|Generating a type rem remainder 
 
 
 Clock Summary
@@ -31,17 +31,17 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 130 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 228 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 108MB peak: 110MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:02s; Memory used current: 110MB peak: 112MB)
 
-@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\synthesis\TOPLEVEL.sap.
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 46MB peak: 110MB)
+At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 48MB peak: 112MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Mar 02 03:41:43 2013
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Wed Mar 06 03:24:59 2013
 
 ###########################################################]

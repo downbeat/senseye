@@ -5,7 +5,7 @@
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
-Date: Sat Mar 02 03:43:00 2013
+Date: Wed Mar 06 03:26:31 2013
 Design Name: TOPLEVEL  Family: SmartFusion  Die: A2F500M3G  Package: 484 FBGA
 
 
@@ -20,15 +20,15 @@ Global Nets Information:
         |--------------------------------------------------------|
         |Name                   |Core      |IO        |RAM       |
         |--------------------------------------------------------|
-        |FAB_CLK                |      290 |        0 |        0 |
+        |FAB_CLK                |      367 |        0 |        0 |
         |--------------------------------------------------------|
-        |MSS_CORE2_0_M2F_RESET_N|      346 |        0 |        0 |
+        |MSS_CORE2_0_M2F_RESET_N|      535 |        0 |       64 |
         |--------------------------------------------------------|
         |Phy_RMII_CLK_c         |        0 |        1 |        0 |
         |--------------------------------------------------------|
-        |SCLK_c                 |      118 |        1 |       32 |
+        |SCLK_c                 |      265 |        1 |       96 |
         |--------------------------------------------------------|
-        |stonyman_0/counterWait8|       60 |        0 |        0 |
+        |stonyman_0/counterWait8|       63 |        0 |        0 |
         |--------------------------------------------------------|
 
 Nets Sharing Loads:
@@ -39,7 +39,10 @@ Nets Sharing Loads:
         |FAB_CLK                |MSS_CORE2_0_M2F_RESET_N|
         |-----------------------------------------------|
         |MSS_CORE2_0_M2F_RESET_N|FAB_CLK                |
+        |                       |SCLK_c                 |
         |                       |stonyman_0/counterWait8|
+        |-----------------------------------------------|
+        |SCLK_c                 |MSS_CORE2_0_M2F_RESET_N|
         |-----------------------------------------------|
         |stonyman_0/counterWait8|MSS_CORE2_0_M2F_RESET_N|
         |-----------------------------------------------|

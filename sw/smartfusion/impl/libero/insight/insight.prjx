@@ -13,7 +13,7 @@ KEY VendorTechnology_IO_DEFT_STD ""
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_TEMPR ""
 KEY VendorTechnology_VOLTR ""
-KEY ProjectLocation "Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight"
+KEY ProjectLocation "Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -33,7 +33,7 @@ COMPILE_OPTION=REFRESH_AND_COMPILE
 ENDLIST
 LIST LIBRARY_COREAPB3_LIB
 ALIAS=..\component\Actel\DirectCore\CoreAPB3\3.0.103\mti\user_vlog\COREAPB3_LIB
-COMPILE_OPTION=COMPILE
+COMPILE_OPTION=REFRESH_AND_COMPILE
 ENDLIST
 LIST LIBRARY_COREAHBLITE_LIB
 ALIAS=..\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\user_vlog\COREAHBLITE_LIB
@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362205927"
+TIME="1362558241"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1362205927"
+TIME="1362558241"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -139,6 +139,139 @@ TIME="1360717846"
 SIZE="41996"
 LIBRARY="COREAHBLITE_LIB"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1362558242"
+SIZE="2540"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1362558242"
+SIZE="324"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\mti\scripts\wave_vlog.do,do"
+STATE="utd"
+TIME="1362542012"
+SIZE="1976"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v,hdl"
+STATE="utd"
+TIME="1362542013"
+SIZE="5702"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v,hdl"
+STATE="utd"
+TIME="1362542013"
+SIZE="2068"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v,hdl"
+STATE="utd"
+TIME="1362542013"
+SIZE="2414"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v,hdl"
+STATE="utd"
+TIME="1362542013"
+SIZE="1522"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v,tb_hdl"
+STATE="utd"
+TIME="1362542012"
+SIZE="8058"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
+STATE="utd"
+TIME="1362542012"
+SIZE="25127"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+STATE="utd"
+TIME="1362542012"
+SIZE="36273"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v,tb_hdl"
+STATE="utd"
+TIME="1362542012"
+SIZE="122453"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1362542012"
+SIZE="4035"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1362558243"
+SIZE="2278"
+PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1362558243"
+SIZE="882"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\mti\scripts\wave_user.do,do"
+STATE="utd"
+TIME="1360743576"
+SIZE="912"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v,hdl"
+STATE="utd"
+TIME="1360743577"
+SIZE="20552"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v,hdl"
+STATE="utd"
+TIME="1360743577"
+SIZE="6349"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1360743576"
+SIZE="16546"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
 MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
@@ -343,19 +476,19 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1362205927"
-SIZE="2142"
+TIME="1362558244"
+SIZE="2148"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362205934"
-SIZE="10808"
+TIME="1362558255"
+SIZE="11661"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1362205925"
+TIME="1362558238"
 SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
@@ -366,8 +499,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1362205927"
-SIZE="33978"
+TIME="1362558244"
+SIZE="46066"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -383,18 +516,18 @@ SIZE="466"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1362107199"
-SIZE="3850240"
+TIME="1362556666"
+SIZE="5529600"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1362107198"
-SIZE="150707"
+TIME="1362556666"
+SIZE="167124"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1362107199"
-SIZE="1266"
+TIME="1362556667"
+SIZE="1286"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
 STATE="ood"
@@ -413,38 +546,38 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1362107128"
-SIZE="30517"
+TIME="1362556578"
+SIZE="88668"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362213902"
-SIZE="239616"
+TIME="1362558514"
+SIZE="257024"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362107227"
-SIZE="237056"
+TIME="1362556692"
+SIZE="253952"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1362181148"
-SIZE="2065"
+TIME="1362556762"
+SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1362107175"
-SIZE="2429"
+TIME="1362556640"
+SIZE="2442"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1362107199"
-SIZE="949"
+TIME="1362556667"
+SIZE="983"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1362107182"
-SIZE="1210"
+TIME="1362556648"
+SIZE="1223"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
 STATE="utd"
@@ -453,8 +586,8 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adc081s101.v,hdl"
 STATE="utd"
-TIME="1362089631"
-SIZE="3516"
+TIME="1362534076"
+SIZE="3524"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -468,18 +601,33 @@ SIZE="6659"
 ENDFILE
 VALUE "<project>\hdl\clkgenerator.v,hdl"
 STATE="utd"
-TIME="1362106558"
-SIZE="1298"
+TIME="1362534100"
+SIZE="1306"
+ENDFILE
+VALUE "<project>\hdl\counter.v,hdl"
+STATE="utd"
+TIME="1362552921"
+SIZE="1828"
 ENDFILE
 VALUE "<project>\hdl\cr_int.v,hdl"
 STATE="utd"
 TIME="1360612688"
 SIZE="4483"
 ENDFILE
+VALUE "<project>\hdl\fifo_32bit_apb3.v,hdl"
+STATE="utd"
+TIME="1362556535"
+SIZE="3179"
+ENDFILE
+VALUE "<project>\hdl\fifo_8bit_apb3.v,hdl"
+STATE="utd"
+TIME="1362535549"
+SIZE="1379"
+ENDFILE
 VALUE "<project>\hdl\inputConditioner.v,hdl"
 STATE="utd"
-TIME="1361973468"
-SIZE="1187"
+TIME="1362534039"
+SIZE="1195"
 ENDFILE
 VALUE "<project>\hdl\led.v,hdl"
 STATE="utd"
@@ -493,8 +641,13 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1362213690"
-SIZE="52775"
+TIME="1362534017"
+SIZE="52783"
+ENDFILE
+VALUE "<project>\hdl\template_apb3.v,hdl"
+STATE="utd"
+TIME="1362535563"
+SIZE="1252"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
@@ -508,9 +661,11 @@ SIZE="940"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
-TIME="1360717846"
-SIZE="1462"
+TIME="1360743576"
+SIZE="1237"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
 ENDFILE
 VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 STATE="utd"
@@ -536,6 +691,24 @@ TIME="1360717847"
 SIZE="10049"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 ENDFILE
+VALUE "<project>\simulation\coreapb3_usertb_apb_master.bfm,sim"
+STATE="utd"
+TIME="1360743576"
+SIZE="10524"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+ENDFILE
+VALUE "<project>\simulation\coreapb3_usertb_include.bfm,sim"
+STATE="utd"
+TIME="1360743576"
+SIZE="3992"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
+ENDFILE
+VALUE "<project>\simulation\master.bfm,sim"
+STATE="utd"
+TIME="1362542012"
+SIZE="2823"
+PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
+ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
 TIME="1361973569"
@@ -543,8 +716,8 @@ SIZE="1975"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1362205927"
-SIZE="629"
+TIME="1362558244"
+SIZE="667"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
@@ -559,20 +732,72 @@ TIME="1360612688"
 SIZE="670"
 PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
+VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf,actgen_cxf"
+STATE="utd"
+TIME="1362512824"
+SIZE="2146"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.gen,gen"
+STATE="utd"
+TIME="1362512822"
+SIZE="965"
+PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.log,log"
+STATE="utd"
+TIME="1362512824"
+SIZE="4004"
+PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.v,hdl"
+STATE="utd"
+TIME="1362512824"
+SIZE="24627"
+PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.cxf,actgen_cxf"
+STATE="utd"
+TIME="1362513934"
+SIZE="2174"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.gen,gen"
+STATE="utd"
+TIME="1362513933"
+SIZE="972"
+PARENT="<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.log,log"
+STATE="utd"
+TIME="1362513934"
+SIZE="4028"
+PARENT="<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v,hdl"
+STATE="utd"
+TIME="1362513934"
+SIZE="26048"
+PARENT="<project>\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\synthesis\synwork\TOPLEVEL_compiler.so,so"
 STATE="utd"
-TIME="1362087062"
+TIME="1362550608"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1362107117"
-SIZE="1436385"
+TIME="1362556564"
+SIZE="2028148"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1362107117"
-SIZE="252"
+TIME="1362556564"
+SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
 STATE="utd"
@@ -581,18 +806,51 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1362107117"
+TIME="1362556563"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1362181148"
-SIZE="4756"
+TIME="1362556565"
+SIZE="6526"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "COREAHBTOAPB3::work"
+FILE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\mti\scripts\wave_vlog.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
 LIST "MSS_CORE2::work"
 FILE "<project>\component\work\MSS_CORE2\MSS_CORE2.v,hdl"
 LIST Other_Association
@@ -661,6 +919,21 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
+LIST "CoreAPB3::COREAPB3_LIB"
+FILE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreapb3_usertb_include.bfm,sim"
+VALUE "<project>\simulation\coreapb3_usertb_apb_master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\mti\scripts\wave_user.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+ENDLIST
 LIST "CoreAHBLite::COREAHBLITE_LIB"
 FILE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v,hdl"
 LIST Other_Association
@@ -682,6 +955,14 @@ LIST AssociatedStimulus
 LIST TOPLEVEL
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 ENDLIST
+LIST COREAHBTOAPB3
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
 LIST MSS_CORE2
 VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
 ENDLIST
@@ -689,12 +970,27 @@ LIST CoreAHBLite
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
 ENDLIST
+LIST CoreAPB3
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
 ENDLIST
 LIST Other_Association
 LIST TOPLEVEL
 VALUE "<project>\simulation\subsystem.bfm,sim"
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
+ENDLIST
+LIST COREAHBTOAPB3
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\mti\scripts\wave_vlog.do,do"
 ENDLIST
 LIST MSS_CORE2
 VALUE "<project>\component\work\MSS_CORE2\mss_tshell_syn.sdc,sdc"
@@ -713,6 +1009,14 @@ VALUE "<project>\simulation\coreahblite_usertb_ahb_master1.bfm,sim"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\mti\scripts\wave_user.do,do"
+ENDLIST
+LIST CoreAPB3
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreapb3_usertb_include.bfm,sim"
+VALUE "<project>\simulation\coreapb3_usertb_apb_master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\mti\scripts\wave_user.do,do"
 ENDLIST
 ENDLIST
 LIST SimulationOptions
@@ -792,6 +1096,17 @@ BATCH=0
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "COREAHBTOAPB3::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "MSS_CORE2::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -859,7 +1174,20 @@ LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v",
 ENDLIST
 LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "CAHBtoAPB3IOl::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v","FALSE","FALSE"
+ENDLIST
+LIST "CAHBtoAPB3O::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v","FALSE","FALSE"
+ENDLIST
+LIST "CAHBtoAPB3O1I::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v","FALSE","FALSE"
+ENDLIST
 LIST "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
+ENDLIST
+LIST "COREAHBTOAPB3::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v","FALSE","FALSE"
+SUBBLOCK "CAHBtoAPB3O::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v","FALSE","FALSE"
+SUBBLOCK "CAHBtoAPB3IOl::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v","FALSE","FALSE"
+SUBBLOCK "CAHBtoAPB3O1I::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v","FALSE","FALSE"
+ENDLIST
+LIST "counter::work","hdl\counter.v","FALSE","FALSE"
 ENDLIST
 LIST "cr_int::work","hdl\cr_int.v","FALSE","FALSE"
 ENDLIST
@@ -877,6 +1205,17 @@ SUBBLOCK "MSS_Watchdog_Driver::work","","FALSE","FALSE"
 SUBBLOCK "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
 ENDLIST
 LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "fifo_32bit_apb3::work","hdl\fifo_32bit_apb3.v","FALSE","FALSE"
+SUBBLOCK "fifo_32bit_ioreg::work","hdl\fifo_32bit_apb3.v","FALSE","FALSE"
+ENDLIST
+LIST "fifo_32bit_ioreg::work","hdl\fifo_32bit_apb3.v","FALSE","FALSE"
+ENDLIST
+LIST "fifo_8bit_apb3::work","hdl\fifo_8bit_apb3.v","FALSE","FALSE"
+ENDLIST
+LIST "FIFO_PIXEL::work","smartgen\FIFO_PIXEL\FIFO_PIXEL.v","TRUE","FALSE"
+ENDLIST
+LIST "FIFO_TEST_COUNTER::work","smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v","TRUE","FALSE"
 ENDLIST
 LIST "HAL::work","","FALSE","FALSE"
 ENDLIST
@@ -947,21 +1286,56 @@ ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
 SUBBLOCK "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
 SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
+SUBBLOCK "COREAHBTOAPB3::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v","FALSE","FALSE"
+SUBBLOCK "counter::work","hdl\counter.v","FALSE","FALSE"
+SUBBLOCK "fifo_32bit_apb3::work","hdl\fifo_32bit_apb3.v","FALSE","FALSE"
+SUBBLOCK "FIFO_PIXEL::work","smartgen\FIFO_PIXEL\FIFO_PIXEL.v","TRUE","FALSE"
+SUBBLOCK "FIFO_TEST_COUNTER::work","smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v","TRUE","FALSE"
 SUBBLOCK "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
-SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
 SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
+SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
+SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v","FALSE","FALSE"
 ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "VersionROM::work","hdl\VersionROM.v","FALSE","FALSE"
+ENDLIST
+LIST "BFM_AHBL::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APBSLAVE::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APBSLAVEEXT::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_MAIN::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "testbench::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "COREAHBTOAPB3::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v","FALSE","FALSE"
+SUBBLOCK "BFM_AHBL::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVE::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
 ENDLIST
 LIST "testbench::work","component\work\MSS_CORE2\testbench.v","FALSE","TRUE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 ENDLIST
 LIST "testbench::work","component\work\TOPLEVEL\testbench.v","FALSE","TRUE"
 SUBBLOCK "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
+ENDLIST
+LIST "CAPB3O::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v","FALSE","FALSE"
+ENDLIST
+LIST "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v","FALSE","FALSE"
+SUBBLOCK "CAPB3O::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v","FALSE","FALSE"
+ENDLIST
+LIST "BFM_APB::COREAPB3_LIB","","FALSE","FALSE"
+ENDLIST
+LIST "BFM_APBSLAVE::COREAPB3_LIB","","FALSE","FALSE"
+ENDLIST
+LIST "testbench::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v","FALSE","FALSE"
+SUBBLOCK "BFM_APB::COREAPB3_LIB","","FALSE","FALSE"
+SUBBLOCK "BFM_APBSLAVE::COREAPB3_LIB","","FALSE","FALSE"
 ENDLIST
 LIST "CAHBLTl0Il::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v","FALSE","FALSE"
 SUBBLOCK "CAHBLTlI1::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v","FALSE","FALSE"

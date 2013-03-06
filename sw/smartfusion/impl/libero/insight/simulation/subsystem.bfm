@@ -1,5 +1,5 @@
 #===========================================================
-# Created by Actel SmartDesign Sat Mar 02 01:32:07 2013
+# Created by Actel SmartDesign Wed Mar 06 03:24:04 2013
 #
 # Syntax: 
 # ------- 
@@ -18,3 +18,4 @@
 #-----------------------------------------------------------
 
 memmap psram_cr_0 0x40050000;
+memmap fifo_32bit_apb3_0 0x40070000;

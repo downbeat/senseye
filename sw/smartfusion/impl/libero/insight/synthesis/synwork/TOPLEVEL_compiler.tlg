@@ -1,12 +1,12 @@
 Selecting top level module TOPLEVEL
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\clkgenerator.v":23:7:23:18|Synthesizing module clkgenerator
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v":23:7:23:18|Synthesizing module clkgenerator
 
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\clkgenerator.v":33:0:33:5|Pruning register counter[2:0] 
+@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v":33:0:33:5|Pruning register counter[2:0] 
 
-@W: CG775 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Found Component CoreAHBLite in library COREAHBLITE_LIB
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@W: CG775 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Found Component CoreAHBLite in library COREAHBLITE_LIB
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000000000
@@ -46,11 +46,11 @@ Selecting top level module TOPLEVEL
 	CAHBLTl0l=16'b0000000000000000
    Generated name = CAHBLTO_Z1
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v":13:0:13:8|Synthesizing module CAHBLTO10
+@W: CG133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
+@W: CG133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v":13:0:13:8|Synthesizing module CAHBLTO10
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
 
 	MODE_CFG=1'b1
 	CAHBLTI=17'b00000000000000000
@@ -61,11 +61,11 @@ Selecting top level module TOPLEVEL
 	CAHBLTlllI=16'b0000000000000000
    Generated name = CAHBLTO0OI_1_0_0_0_1_0_0
 
-@N: CL177 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
+@N: CL177 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":13:0:13:6|Synthesizing module CAHBLTO
 
 	MODE_CFG=1'b1
-	CAHBLTI=17'b00000000000100000
+	CAHBLTI=17'b00000000010100000
 	CAHBLTl=16'b0000000000000000
 	CAHBLTO0=16'b0000000000000001
 	CAHBLTI0=16'b0000000000000010
@@ -102,25 +102,25 @@ Selecting top level module TOPLEVEL
 	CAHBLTl0l=16'b0000000000000000
    Generated name = CAHBLTO_Z2
 
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
-@W: CG133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
+@W: CG133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":327:0:327:8|No assignment to CAHBLTI1l
+@W: CG133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v":329:0:329:8|No assignment to CAHBLTl1l
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":13:0:13:9|Synthesizing module CAHBLTO0OI
 
 	MODE_CFG=1'b1
-	CAHBLTI=17'b00000000000100000
+	CAHBLTI=17'b00000000010100000
 	CAHBLTl=16'b0000000000000000
 	CAHBLTIO1=1'b0
 	CAHBLTOllI=1'b1
 	CAHBLTIllI=17'b00000000000000000
 	CAHBLTlllI=16'b0000000000000000
-   Generated name = CAHBLTO0OI_1_32_0_0_1_0_0
+   Generated name = CAHBLTO0OI_1_160_0_0_1_0_0
 
-@N: CL177 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":13:0:13:8|Synthesizing module CAHBLTlI1
+@N: CL177 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":4185:0:4185:5|Sharing sequential element CAHBLTI0lI.
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":13:0:13:8|Synthesizing module CAHBLTlI1
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v":13:0:13:9|Synthesizing module CAHBLTl0Il
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v":13:0:13:9|Synthesizing module CAHBLTl0Il
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":13:0:13:9|Synthesizing module CAHBLTOl0l
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":13:0:13:9|Synthesizing module CAHBLTOl0l
 
 	MODE_CFG=1'b1
 	CAHBLTl1ll=2'b00
@@ -134,9 +134,9 @@ Selecting top level module TOPLEVEL
 	CAHBLTII1l=3'b010
    Generated name = CAHBLTOl0l_1_0_1_2_3_0_1_0_1_2
 
-@W: CL169 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Pruning register CAHBLTIl1l 
+@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":349:0:349:5|Pruning register CAHBLTIl1l 
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":13:0:13:9|Synthesizing module CAHBLTllO0
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":13:0:13:9|Synthesizing module CAHBLTllO0
 
 	MODE_CFG=1'b1
 	CAHBLTO0O0=16'b0000000000000000
@@ -146,16 +146,16 @@ Selecting top level module TOPLEVEL
 	CAHBLTOlOI=2'b00
    Generated name = CAHBLTllO0_1_0_0_4294967280s_0_0
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":13:0:13:9|Synthesizing module CAHBLTlOl0
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":13:0:13:9|Synthesizing module CAHBLTlOl0
 
 	MODE_CFG=1'b1
 	CAHBLTOIl0=17'b00000000000000000
-	CAHBLTIIl0=17'b00000000000100000
+	CAHBLTIIl0=17'b00000000010100000
 	CAHBLTO0O0=16'b0000000000000000
 	CAHBLTI0O0=16'b0000000000000000
-   Generated name = CAHBLTlOl0_1_0_32_0_0
+   Generated name = CAHBLTlOl0_1_0_160_0_0
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Synthesizing module CoreAHBLite
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":13:0:13:10|Synthesizing module CoreAHBLite
 
 	FAMILY=6'b001111
 	MODE_CFG=1'b1
@@ -182,7 +182,7 @@ Selecting top level module TOPLEVEL
 	M1_AHBSLOT4ENABLE=1'b0
 	M1_AHBSLOT5ENABLE=1'b1
 	M1_AHBSLOT6ENABLE=1'b0
-	M1_AHBSLOT7ENABLE=1'b0
+	M1_AHBSLOT7ENABLE=1'b1
 	M1_AHBSLOT8ENABLE=1'b0
 	M1_AHBSLOT9ENABLE=1'b0
 	M1_AHBSLOT10ENABLE=1'b0
@@ -227,60 +227,410 @@ Selecting top level module TOPLEVEL
 	M1_INITCFG14ENABLE=1'b0
 	M1_INITCFG15ENABLE=1'b0
 	CAHBLTOIl0=17'b00000000000000000
-	CAHBLTIIl0=17'b00000000000100000
+	CAHBLTIIl0=17'b00000000010100000
 	CAHBLTO0O0=16'b0000000000000000
 	CAHBLTI0O0=16'b0000000000000000
    Generated name = CoreAHBLite_Z3
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\inputConditioner.v":19:7:19:22|Synthesizing module inputConditioner
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":8:0:8:10|Synthesizing module CAHBtoAPB3O
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":8:0:8:12|Synthesizing module CAHBtoAPB3IOl
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":8:0:8:12|Synthesizing module CAHBtoAPB3O1I
 
-@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":260:7:260:12|Synthesizing module PLLINT
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v":8:0:8:12|Synthesizing module COREAHBTOAPB3
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
+	FAMILY=32'b00000000000000000000000000001111
+   Generated name = COREAHBTOAPB3_15s
+
+@W: CG775 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":13:0:13:7|Found Component CoreAPB3 in library COREAPB3_LIB
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v":13:0:13:5|Synthesizing module CAPB3O
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":13:0:13:7|Synthesizing module CoreAPB3
+
+	APB_DWIDTH=6'b100000
+	RANGESIZE=21'b000000000000100000000
+	IADDR_ENABLE=1'b0
+	APBSLOT0ENABLE=1'b1
+	APBSLOT1ENABLE=1'b0
+	APBSLOT2ENABLE=1'b0
+	APBSLOT3ENABLE=1'b0
+	APBSLOT4ENABLE=1'b0
+	APBSLOT5ENABLE=1'b0
+	APBSLOT6ENABLE=1'b0
+	APBSLOT7ENABLE=1'b0
+	APBSLOT8ENABLE=1'b0
+	APBSLOT9ENABLE=1'b0
+	APBSLOT10ENABLE=1'b0
+	APBSLOT11ENABLE=1'b0
+	APBSLOT12ENABLE=1'b0
+	APBSLOT13ENABLE=1'b0
+	APBSLOT14ENABLE=1'b0
+	APBSLOT15ENABLE=1'b0
+	CAPB3O1I=32'b00000000000000000000000000001000
+	CAPB3I1I=32'b00000000000000000000000000001000
+	CAPB3l1I=8'b00001100
+	CAPB3OOl=8'b00001000
+	CAPB3IOl=8'b00000100
+	CAPB3lOl=8'b00000000
+	CAPB3OIl=8'b00000100
+	CAPB3IIl=8'b00000000
+	CAPB3lIl=8'b00000000
+	CAPB3Oll=16'b0000000000000001
+	CAPB3Ill=16'b0000000000000000
+	CAPB3lll=16'b0000000000000000
+	CAPB3O0l=16'b0000000000000000
+	CAPB3I0l=16'b0000000000000000
+	CAPB3l0l=16'b0000000000000000
+	CAPB3O1l=16'b0000000000000000
+	CAPB3I1l=16'b0000000000000000
+	CAPB3l1l=16'b0000000000000000
+	CAPB3OO0=16'b0000000000000000
+	CAPB3IO0=16'b0000000000000000
+	CAPB3lO0=16'b0000000000000000
+	CAPB3OI0=16'b0000000000000000
+	CAPB3II0=16'b0000000000000000
+	CAPB3lI0=16'b0000000000000000
+	CAPB3Ol0=16'b0000000000000000
+   Generated name = CoreAPB3_Z4
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":27:7:27:13|Synthesizing module counter
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":81:7:81:22|Synthesizing module fifo_32bit_ioreg
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":26:7:26:21|Synthesizing module fifo_32bit_apb3
+
+@W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":28:58:28:64|No assignment to wire DATAOUT
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":2:7:2:10|Synthesizing module AND2
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1908:7:1908:11|Synthesizing module XNOR2
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":79:7:79:9|Synthesizing module AO1
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1931:7:1931:10|Synthesizing module XOR2
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":909:7:909:12|Synthesizing module DFN1C0
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":957:7:957:14|Synthesizing module DFN1E1C0
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":17:7:17:10|Synthesizing module AND3
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":2092:8:2092:13|Synthesizing module RAM4K9
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1353:7:1353:11|Synthesizing module NAND2
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":7:7:7:11|Synthesizing module AND2A
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":981:7:981:12|Synthesizing module DFN1P0
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":5:7:5:16|Synthesizing module FIFO_PIXEL
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":436:9:436:15|Pruning instance AND2_28 -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":425:9:425:15|Pruning instance AND2_37 -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":419:11:419:25|Pruning instance DFN1C0_WGRY[4] -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":145:7:145:12|Synthesizing module MSSINT
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":418:9:418:15|Pruning instance AND2_21 -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CORE2.v":9:7:9:15|Synthesizing module MSS_CORE2
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":414:11:414:25|Pruning instance DFN1C0_RGRY[0] -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":404:9:404:15|Pruning instance XOR2_28 -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":402:9:402:15|Pruning instance XOR2_17 -- not in use ...
 
-@N: CG179 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":393:9:393:15|Pruning instance XOR2_39 -- not in use ...
 
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":391:11:391:25|Pruning instance DFN1C0_RGRY[3] -- not in use ...
 
-@W: CL132 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":380:51:380:77|Read Address width 3 does not cover RAM depth
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":384:11:384:25|Pruning instance DFN1C0_WGRY[8] -- not in use ...
 
-@A: CL133 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":380:51:380:77|Write Address width 3 does not cover RAM depth
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":377:9:377:14|Pruning instance AND2_4 -- not in use ...
 
-@N: CL134 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Found RAM cachedValue, depth=8, width=8
-@N: CG364 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":370:9:370:15|Pruning instance XOR2_12 -- not in use ...
 
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Register bit counterWait[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Pruning register bit 31 of counterWait[31:0] 
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":359:9:359:15|Pruning instance AND2_17 -- not in use ...
 
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Register bit counterWait[30] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Pruning register bit 30 of counterWait[30:0] 
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":347:11:347:25|Pruning instance DFN1C0_WGRY[1] -- not in use ...
 
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Trying to extract state machine for register substate
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":335:11:335:25|Pruning instance DFN1C0_RGRY[7] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":332:9:332:15|Pruning instance XOR2_37 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":331:9:331:15|Pruning instance AND2_36 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":329:11:329:25|Pruning instance DFN1C0_RGRY[5] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":327:9:327:15|Pruning instance XOR2_40 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":325:9:325:15|Pruning instance XOR2_29 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":322:11:322:25|Pruning instance DFN1C0_WGRY[2] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":315:9:315:15|Pruning instance AND2_27 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":313:11:313:25|Pruning instance DFN1C0_RGRY[6] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":311:11:311:22|Pruning instance DFN1C0_DVLDX -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":310:9:310:15|Pruning instance AND2_39 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":305:9:305:14|Pruning instance AND2_9 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":291:9:291:15|Pruning instance XOR2_11 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":287:9:287:15|Pruning instance XOR2_14 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":284:9:284:14|Pruning instance XOR2_7 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":279:9:279:15|Pruning instance XOR2_27 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":275:11:275:25|Pruning instance DFN1C0_RGRY[4] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":271:9:271:15|Pruning instance XOR2_10 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":256:9:256:15|Pruning instance XOR2_22 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":251:9:251:15|Pruning instance AND2_19 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":249:11:249:25|Pruning instance DFN1C0_RGRY[8] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":215:9:215:15|Pruning instance AND2_26 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":213:11:213:25|Pruning instance DFN1C0_WGRY[0] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":210:8:210:12|Pruning instance AO1_2 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":201:9:201:15|Pruning instance AND2_14 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":192:9:192:15|Pruning instance XOR2_31 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":183:9:183:15|Pruning instance AND2_38 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":180:9:180:15|Pruning instance XOR2_30 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":177:9:177:14|Pruning instance XOR2_8 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":175:11:175:25|Pruning instance DFN1C0_WGRY[3] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":173:11:173:25|Pruning instance DFN1C0_RGRY[1] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":167:9:167:15|Pruning instance XOR2_18 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":166:9:166:15|Pruning instance AND2_31 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":163:9:163:15|Pruning instance AND2_24 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":154:9:154:15|Pruning instance XOR2_49 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":149:11:149:25|Pruning instance DFN1C0_RGRY[2] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":140:9:140:15|Pruning instance AND2_43 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":134:9:134:15|Pruning instance XOR2_24 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":131:11:131:25|Pruning instance DFN1C0_WGRY[7] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":123:11:123:25|Pruning instance DFN1C0_WGRY[5] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":120:9:120:15|Pruning instance XOR2_20 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":117:8:117:12|Pruning instance AO1_8 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":110:9:110:14|Pruning instance AND2_1 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":108:9:108:15|Pruning instance XOR2_45 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":107:9:107:15|Pruning instance AND2_15 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":104:11:104:25|Pruning instance DFN1C0_WGRY[6] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v":100:9:100:15|Pruning instance XOR2_38 -- not in use ...
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":2261:7:2261:15|Synthesizing module RAM512X18
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":5:7:5:23|Synthesizing module FIFO_TEST_COUNTER
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":455:8:455:13|Pruning instance AO1_21 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":451:9:451:15|Pruning instance XOR2_42 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":441:11:441:25|Pruning instance DFN1C0_WGRY[4] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":436:11:436:25|Pruning instance DFN1C0_RGRY[0] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":420:9:420:15|Pruning instance XOR2_28 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":416:9:416:15|Pruning instance XOR2_17 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":410:9:410:14|Pruning instance AND2_8 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":407:11:407:25|Pruning instance DFN1C0_RGRY[3] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":406:8:406:12|Pruning instance AO1_5 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":396:9:396:14|Pruning instance AND2_4 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":364:11:364:25|Pruning instance DFN1C0_WGRY[1] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":362:9:362:15|Pruning instance XOR2_35 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":356:9:356:15|Pruning instance AND2_33 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":352:11:352:25|Pruning instance DFN1C0_RGRY[7] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":350:9:350:15|Pruning instance XOR2_37 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":347:11:347:25|Pruning instance DFN1C0_RGRY[5] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":346:9:346:14|Pruning instance XOR2_2 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":342:9:342:15|Pruning instance XOR2_29 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":339:11:339:25|Pruning instance DFN1C0_WGRY[2] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":338:8:338:13|Pruning instance AO1_20 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":330:9:330:15|Pruning instance AND2_27 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":328:11:328:25|Pruning instance DFN1C0_RGRY[6] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":326:11:326:22|Pruning instance DFN1C0_DVLDX -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":325:8:325:12|Pruning instance AO1_9 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":319:9:319:14|Pruning instance AND2_9 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":297:9:297:15|Pruning instance XOR2_11 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":287:9:287:15|Pruning instance XOR2_27 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":283:11:283:25|Pruning instance DFN1C0_RGRY[4] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":279:9:279:15|Pruning instance XOR2_10 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":278:9:278:15|Pruning instance AND2_13 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":277:9:277:15|Pruning instance AND2_16 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":271:8:271:12|Pruning instance AO1_3 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":268:9:268:15|Pruning instance XOR2_13 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":263:9:263:15|Pruning instance XOR2_22 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":258:9:258:15|Pruning instance AND2_19 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":254:9:254:15|Pruning instance AND2_23 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":248:11:248:25|Pruning instance DFN1C0_WGRY[0] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":243:9:243:15|Pruning instance XOR2_46 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":238:9:238:15|Pruning instance AND2_32 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":237:9:237:15|Pruning instance AND2_14 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":232:9:232:15|Pruning instance AND2_30 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":231:9:231:14|Pruning instance AND2_3 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":209:9:209:15|Pruning instance XOR2_31 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":207:9:207:15|Pruning instance XOR2_34 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":200:9:200:15|Pruning instance AND2_35 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":198:9:198:15|Pruning instance XOR2_30 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":192:9:192:14|Pruning instance XOR2_8 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":190:11:190:25|Pruning instance DFN1C0_WGRY[3] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":188:11:188:25|Pruning instance DFN1C0_RGRY[1] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":182:9:182:15|Pruning instance AND2_31 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":179:9:179:15|Pruning instance AND2_24 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":174:8:174:13|Pruning instance AO1_14 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":169:11:169:25|Pruning instance DFN1C0_RGRY[2] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":159:9:159:15|Pruning instance XOR2_16 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":129:11:129:25|Pruning instance DFN1C0_WGRY[7] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":122:11:122:25|Pruning instance DFN1C0_WGRY[5] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":121:9:121:15|Pruning instance AND2_12 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":119:9:119:15|Pruning instance XOR2_20 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":118:9:118:14|Pruning instance AND2_7 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":107:9:107:15|Pruning instance AND2_15 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":104:11:104:25|Pruning instance DFN1C0_WGRY[6] -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":92:9:92:15|Pruning instance XOR2_23 -- not in use ...
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":79:9:79:15|Pruning instance AND2_20 -- not in use ...
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\inputConditioner.v":19:7:19:22|Synthesizing module inputConditioner
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell.v":1:7:1:13|Synthesizing module MSS_AHB
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
+
+@N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":260:7:260:12|Synthesizing module PLLINT
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":1:7:1:16|Synthesizing module MSS_XTLOSC
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:37|Synthesizing module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":67:7:67:15|Synthesizing module BIBUF_MSS
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":145:7:145:12|Synthesizing module MSSINT
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.v":9:7:9:15|Synthesizing module MSS_CORE2
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":12:7:12:9|Synthesizing module AHB
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
+
+@N: CG179 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
+
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
+
+@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":380:51:380:77|Read Address width 3 does not cover RAM depth
+
+@A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":380:51:380:77|Write Address width 3 does not cover RAM depth
+
+@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Found RAM cachedValue, depth=8, width=8
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
+
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":996:11:996:22|Pruning instance FIFO_PIXEL_0 -- not in use ...
+
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Pruning register bit 31 of counterWait[31:0] 
+
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Register bit counterWait[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Pruning register bit 30 of counterWait[30:0] 
+
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
 State machine has 18 reachable states with original encodings of:
    00000
@@ -301,7 +651,7 @@ State machine has 18 reachable states with original encodings of:
    01111
    10000
    10001
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v":121:0:121:5|Trying to extract state machine for register state
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":121:0:121:5|Trying to extract state machine for register state
 Extracted state machine for register state
 State machine has 13 reachable states with original encodings of:
    0000
@@ -317,134 +667,219 @@ State machine has 13 reachable states with original encodings of:
    1010
    1011
    1100
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":17:15:17:19|Input port bits 31 to 10 of HADDR[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":17:15:17:19|Input port bits 31 to 10 of HADDR[31:0] are unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":20:14:20:19|Input port bit 0 of HTRANS[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":20:14:20:19|Input port bit 0 of HTRANS[1:0] is unused
 
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":16:23:16:31|Input HMASTLOCK is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":18:21:18:26|Input HBURST is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v":19:14:19:18|Input HPROT is unused
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\inputConditioner.v":22:6:22:8|Input rst is unused
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":16:23:16:31|Input HMASTLOCK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":18:21:18:26|Input HBURST is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v":19:14:19:18|Input HPROT is unused
+@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":64:7:64:18|*Output LPXIN_CLKOUT has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":36:7:36:10|Input CLKA is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":37:7:37:14|Input CLKA_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":38:7:38:15|Input CLKA_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":39:7:39:15|Input CLKA_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":40:7:40:10|Input CLKB is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":41:7:41:14|Input CLKB_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":42:7:42:15|Input CLKB_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":43:7:43:15|Input CLKB_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":45:7:45:14|Input CLKC_PAD is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":46:7:46:15|Input CLKC_PADP is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\inputConditioner.v":22:6:22:8|Input rst is unused
+@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":28:58:28:64|*Output DATAOUT has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":40:20:40:25|Input PWDATA is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v":85:13:85:16|Input port bits 31 to 8 of addr[31:0] are unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Register bit counterInternal[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Pruning register bit 31 of counterInternal[31:0] 
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":858:0:858:7|Input port bit 1 of HRESP_S0[1:0] is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Register bit counterInternal[30] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Pruning register bit 30 of counterInternal[30:0] 
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":934:0:934:7|Input port bit 1 of HRESP_S1[1:0] is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Register bit counterInternal[29] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Pruning register bit 29 of counterInternal[29:0] 
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1010:0:1010:7|Input port bit 1 of HRESP_S2[1:0] is unused
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Register bit counterInternal[28] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Pruning register bit 28 of counterInternal[28:0] 
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1086:0:1086:7|Input port bit 1 of HRESP_S3[1:0] is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":217:0:217:4|Input port bits 23 to 12 of PADDR[23:0] are unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1162:0:1162:7|Input port bit 1 of HRESP_S4[1:0] is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":208:0:208:6|Input PRESETN is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":210:0:210:3|Input PCLK is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":356:0:356:7|Input PRDATAS1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":363:0:363:7|Input PRDATAS2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":370:0:370:7|Input PRDATAS3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":377:0:377:7|Input PRDATAS4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":384:0:384:7|Input PRDATAS5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":391:0:391:7|Input PRDATAS6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":398:0:398:7|Input PRDATAS7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":405:0:405:7|Input PRDATAS8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":412:0:412:7|Input PRDATAS9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":419:0:419:8|Input PRDATAS10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":426:0:426:8|Input PRDATAS11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":433:0:433:8|Input PRDATAS12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":440:0:440:8|Input PRDATAS13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":447:0:447:8|Input PRDATAS14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":454:0:454:8|Input PRDATAS15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":458:0:458:7|Input PREADYS1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":460:0:460:7|Input PREADYS2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":462:0:462:7|Input PREADYS3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":464:0:464:7|Input PREADYS4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":466:0:466:7|Input PREADYS5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":468:0:468:7|Input PREADYS6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":470:0:470:7|Input PREADYS7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":472:0:472:7|Input PREADYS8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":474:0:474:7|Input PREADYS9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":476:0:476:8|Input PREADYS10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":478:0:478:8|Input PREADYS11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":480:0:480:8|Input PREADYS12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":482:0:482:8|Input PREADYS13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":484:0:484:8|Input PREADYS14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":486:0:486:8|Input PREADYS15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":490:0:490:8|Input PSLVERRS1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":492:0:492:8|Input PSLVERRS2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":494:0:494:8|Input PSLVERRS3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":496:0:496:8|Input PSLVERRS4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":498:0:498:8|Input PSLVERRS5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":500:0:500:8|Input PSLVERRS6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":502:0:502:8|Input PSLVERRS7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":504:0:504:8|Input PSLVERRS8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":506:0:506:8|Input PSLVERRS9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":508:0:508:9|Input PSLVERRS10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":510:0:510:9|Input PSLVERRS11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":512:0:512:9|Input PSLVERRS12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":514:0:514:9|Input PSLVERRS13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":516:0:516:9|Input PSLVERRS14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":518:0:518:9|Input PSLVERRS15 is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v":40:0:40:5|Input port bit 0 of HTRANS[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1238:0:1238:7|Input port bit 1 of HRESP_S5[1:0] is unused
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":152:0:152:5|Trying to extract state machine for register CAHBtoAPB3OIl
+Extracted state machine for register CAHBtoAPB3OIl
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":646:0:646:5|Trying to extract state machine for register CAHBtoAPB3IOI
+Extracted state machine for register CAHBtoAPB3IOI
+State machine has 5 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":735:0:735:8|Input port bit 0 of HTRANS_M0[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1314:0:1314:7|Input port bit 1 of HRESP_S6[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":800:0:800:8|Input port bit 0 of HTRANS_M1[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1390:0:1390:7|Input port bit 1 of HRESP_S7[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":858:0:858:7|Input port bit 1 of HRESP_S0[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1466:0:1466:7|Input port bit 1 of HRESP_S8[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":934:0:934:7|Input port bit 1 of HRESP_S1[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1542:0:1542:7|Input port bit 1 of HRESP_S9[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1010:0:1010:7|Input port bit 1 of HRESP_S2[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1618:0:1618:8|Input port bit 1 of HRESP_S10[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1086:0:1086:7|Input port bit 1 of HRESP_S3[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1694:0:1694:8|Input port bit 1 of HRESP_S11[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1162:0:1162:7|Input port bit 1 of HRESP_S4[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1770:0:1770:8|Input port bit 1 of HRESP_S12[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1238:0:1238:7|Input port bit 1 of HRESP_S5[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1846:0:1846:8|Input port bit 1 of HRESP_S13[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1314:0:1314:7|Input port bit 1 of HRESP_S6[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1922:0:1922:8|Input port bit 1 of HRESP_S14[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1390:0:1390:7|Input port bit 1 of HRESP_S7[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1998:0:1998:8|Input port bit 1 of HRESP_S15[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1466:0:1466:7|Input port bit 1 of HRESP_S8[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":2074:0:2074:8|Input port bit 1 of HRESP_SHG[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1542:0:1542:7|Input port bit 1 of HRESP_S9[1:0] is unused
 
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":751:0:751:8|Input HBURST_M0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":758:0:758:7|Input HPROT_M0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":816:0:816:8|Input HBURST_M1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":823:0:823:7|Input HPROT_M1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":111:0:111:8|Input HWDATA_M0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":173:0:173:8|Input HRDATA_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":175:0:175:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":177:0:177:7|Input HRESP_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":223:0:223:8|Input HRDATA_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":225:0:225:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":227:0:227:7|Input HRESP_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":273:0:273:8|Input HRDATA_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":275:0:275:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":277:0:277:7|Input HRESP_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":323:0:323:8|Input HRDATA_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":325:0:325:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":327:0:327:7|Input HRESP_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":373:0:373:8|Input HRDATA_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":375:0:375:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":377:0:377:7|Input HRESP_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":473:0:473:8|Input HRDATA_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":475:0:475:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":477:0:477:7|Input HRESP_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":523:0:523:8|Input HRDATA_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":525:0:525:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":527:0:527:7|Input HRESP_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":573:0:573:8|Input HRDATA_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":575:0:575:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":577:0:577:7|Input HRESP_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":623:0:623:8|Input HRDATA_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":625:0:625:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":627:0:627:7|Input HRESP_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":673:0:673:9|Input HRDATA_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":675:0:675:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":677:0:677:8|Input HRESP_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":723:0:723:9|Input HRDATA_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":725:0:725:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":727:0:727:8|Input HRESP_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":773:0:773:9|Input HRDATA_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":775:0:775:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":777:0:777:8|Input HRESP_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":823:0:823:9|Input HRDATA_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":825:0:825:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":827:0:827:8|Input HRESP_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":873:0:873:9|Input HRDATA_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":875:0:875:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":877:0:877:8|Input HRESP_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":923:0:923:9|Input HRDATA_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":925:0:925:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":927:0:927:8|Input HRESP_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":973:0:973:9|Input HRDATA_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":975:0:975:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":977:0:977:8|Input HRESP_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":60:0:60:9|Input CAHBLTl0O0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":67:0:67:9|Input CAHBLTO1O0 is unused
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":37:0:37:9|Input port bits 31 to 12 of CAHBLTI0OI[31:0] are unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1618:0:1618:8|Input port bit 1 of HRESP_S10[1:0] is unused
 
-@W: CL247 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":60:0:60:9|Input port bit 0 of CAHBLTI1OI[1:0] is unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1694:0:1694:8|Input port bit 1 of HRESP_S11[1:0] is unused
 
-@N: CL201 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1770:0:1770:8|Input port bit 1 of HRESP_S12[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1846:0:1846:8|Input port bit 1 of HRESP_S13[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1922:0:1922:8|Input port bit 1 of HRESP_S14[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":1998:0:1998:8|Input port bit 1 of HRESP_S15[1:0] is unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":2074:0:2074:8|Input port bit 1 of HRESP_SHG[1:0] is unused
+
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":751:0:751:8|Input HBURST_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":758:0:758:7|Input HPROT_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":816:0:816:8|Input HBURST_M1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v":823:0:823:7|Input HPROT_M1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":111:0:111:8|Input HWDATA_M0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":173:0:173:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":175:0:175:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":177:0:177:7|Input HRESP_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":223:0:223:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":225:0:225:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":227:0:227:7|Input HRESP_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":273:0:273:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":275:0:275:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":277:0:277:7|Input HRESP_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":323:0:323:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":325:0:325:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":327:0:327:7|Input HRESP_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":373:0:373:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":375:0:375:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":377:0:377:7|Input HRESP_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":473:0:473:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":475:0:475:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":477:0:477:7|Input HRESP_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":573:0:573:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":575:0:575:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":577:0:577:7|Input HRESP_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":623:0:623:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":625:0:625:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":627:0:627:7|Input HRESP_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":673:0:673:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":675:0:675:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":677:0:677:8|Input HRESP_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":723:0:723:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":725:0:725:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":727:0:727:8|Input HRESP_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":773:0:773:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":775:0:775:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":777:0:777:8|Input HRESP_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":823:0:823:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":825:0:825:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":827:0:827:8|Input HRESP_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":873:0:873:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":875:0:875:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":877:0:877:8|Input HRESP_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":923:0:923:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":925:0:925:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":927:0:927:8|Input HRESP_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":973:0:973:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":975:0:975:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v":977:0:977:8|Input HRESP_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":60:0:60:9|Input CAHBLTl0O0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v":67:0:67:9|Input CAHBLTO1O0 is unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":37:0:37:9|Input port bits 31 to 12 of CAHBLTI0OI[31:0] are unused
+
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v":60:0:60:9|Input port bit 0 of CAHBLTI1OI[1:0] is unused
+
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI
 Extracted state machine for register CAHBLTllOI
 State machine has 8 reachable states with original encodings of:
    000
@@ -455,89 +890,91 @@ State machine has 8 reachable states with original encodings of:
    101
    110
    111
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 16 to 6 of CAHBLTIIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 16 to 8 of CAHBLTIIII[16:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 4 to 0 of CAHBLTIIII[16:0] are unused
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bit 6 of CAHBLTIIII[16:0] is unused
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 16 to 6 of CAHBLTlIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input port bits 4 to 0 of CAHBLTIIII[16:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 4 to 0 of CAHBLTlIII[16:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 16 to 8 of CAHBLTlIII[16:0] are unused
 
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input CAHBLTIIII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input CAHBLTlIII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":229:0:229:8|Input HRDATA_S5 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":231:0:231:11|Input HREADYOUT_S5 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\clkgenerator.v":26:6:26:8|Input rst is unused
-@W: CL189 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
+@W: CL247 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bit 6 of CAHBLTlIII[16:0] is unused
+
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input port bits 4 to 0 of CAHBLTlIII[16:0] are unused
+
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":106:0:106:9|Input CAHBLTIIII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":113:0:113:9|Input CAHBLTlIII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":117:0:117:9|Input CAHBLTIlII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":119:0:119:9|Input CAHBLTllII is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":184:0:184:8|Input HRDATA_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":186:0:186:11|Input HREADYOUT_S0 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":193:0:193:8|Input HRDATA_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":195:0:195:11|Input HREADYOUT_S1 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":202:0:202:8|Input HRDATA_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":204:0:204:11|Input HREADYOUT_S2 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":211:0:211:8|Input HRDATA_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":213:0:213:11|Input HREADYOUT_S3 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":220:0:220:8|Input HRDATA_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":222:0:222:11|Input HREADYOUT_S4 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":229:0:229:8|Input HRDATA_S5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":231:0:231:11|Input HREADYOUT_S5 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":238:0:238:8|Input HRDATA_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":240:0:240:11|Input HREADYOUT_S6 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":247:0:247:8|Input HRDATA_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":249:0:249:11|Input HREADYOUT_S7 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":256:0:256:8|Input HRDATA_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":258:0:258:11|Input HREADYOUT_S8 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":265:0:265:8|Input HRDATA_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":267:0:267:11|Input HREADYOUT_S9 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":274:0:274:9|Input HRDATA_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":276:0:276:12|Input HREADYOUT_S10 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":283:0:283:9|Input HRDATA_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":285:0:285:12|Input HREADYOUT_S11 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":292:0:292:9|Input HRDATA_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":294:0:294:12|Input HREADYOUT_S12 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":301:0:301:9|Input HRDATA_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":303:0:303:12|Input HREADYOUT_S13 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":310:0:310:9|Input HRDATA_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":312:0:312:12|Input HREADYOUT_S14 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":319:0:319:9|Input HRDATA_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":321:0:321:12|Input HREADYOUT_S15 is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":328:0:328:9|Input HRDATA_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v":26:6:26:8|Input rst is unused
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitLeading[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitLeading[2:0] 
 

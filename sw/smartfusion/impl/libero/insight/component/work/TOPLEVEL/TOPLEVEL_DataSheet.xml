@@ -11,42 +11,54 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Sat Mar 02 01:32:13 2013 )</state>
-    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\SoftConsole</swide-toolchain>
+    <location>Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL</location>
+    <state>GENERATED ( Wed Mar 06 03:24:13 2013 )</state>
+    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\MSS_CORE2.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\MSS_CORE2\mss_tshell.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\TOPLEVEL\TOPLEVEL.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\adc081s101.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\ahb.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\apb.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\clkgenerator.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\cr_int.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\inputConditioner.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\led.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\psram_cr.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\stonyman.v</file>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\hdl\VersionROM.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\apb.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\fifo_8bit_apb3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\inputConditioner.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\led.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\template_apb3.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\VersionROM.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>psram_data[15]</port-name>
@@ -409,7 +421,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>adcConvComplete</port-name>
+    <port-name>TP_adcConvComplete</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -535,7 +547,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>adcStartCapture</port-name>
+    <port-name>TP_adcStartCapture</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -870,9 +882,9 @@ The CoreAHBLite component implements a multi-master AHB-Lite bus. It provides up
     </core-param>
     <core-param>
       <param-name>Slot 7:</param-name>
-      <param-value>false</param-value>
+      <param-value>true</param-value>
       <param-hdlname>M1_AHBSLOT7ENABLE</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -1059,6 +1071,194 @@ The CoreAHBLite component implements a multi-master AHB-Lite bus. It provides up
     </core-param>
     <core-name>CoreAHBLite_0</core-name>
   </core>
+  <core type="SpiritModule">
+    <core-exttype>IP</core-exttype>
+    <core-type>SpiritModule</core-type>
+    <core-vendor>Actel</core-vendor>
+    <core-lib>DirectCore</core-lib>
+    <core-intname>COREAHBTOAPB3</core-intname>
+    <core-ver>2.0.116</core-ver>
+    <core-desc>
+The CoreAHBtoAPB3 is an AHB slave which provides an interface (bridge) between the high- speed AHB domain and the low-power APB domain.
+        </core-desc>
+    <core-param>
+      <param-name>FPGA Family:</param-name>
+      <param-value>ProASIC3</param-value>
+      <param-hdlname>FAMILY</param-hdlname>
+      <param-hdlvalue>15</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-name>COREAHBTOAPB3_0</core-name>
+  </core>
+  <core type="SpiritModule">
+    <core-exttype>IP</core-exttype>
+    <core-type>SpiritModule</core-type>
+    <core-vendor>Actel</core-vendor>
+    <core-lib>DirectCore</core-lib>
+    <core-intname>CoreAPB3</core-intname>
+    <core-ver>3.0.103</core-ver>
+    <core-desc>
+The CoreAPB3 component implements an APB3 (AMBA3 APB) fabric, which is backwards compatible with APB2 slave peripherals.
+
+There is one APB3 Master interface.
+
+        </core-desc>
+    <core-param>
+      <param-name>APB Master Data Bus Width</param-name>
+      <param-value>32-bit</param-value>
+      <param-hdlname>APB_DWIDTH</param-hdlname>
+      <param-hdlvalue>32</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 0:</param-name>
+      <param-value>true</param-value>
+      <param-hdlname>APBSLOT0ENABLE</param-hdlname>
+      <param-hdlvalue>1</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 1:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT1ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 2:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT2ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 3:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT3ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 4:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT4ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 5:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT5ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 6:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT6ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 7:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT7ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 8:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT8ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 9:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT9ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 10:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT10ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 11:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT11ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 12:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT12ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 13:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT13ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 14:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT14ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Slot 15:</param-name>
+      <param-value>false</param-value>
+      <param-hdlname>APBSLOT15ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>Direct or Indirect Addressing:</param-name>
+      <param-value>Direct Addressing (legacy)</param-value>
+      <param-hdlname>IADDR_ENABLE</param-hdlname>
+      <param-hdlvalue>0</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-param>
+      <param-name>APB Slot Size</param-name>
+      <param-value>256 locations</param-value>
+      <param-hdlname>RANGESIZE</param-hdlname>
+      <param-hdlvalue>256</param-hdlvalue>
+      <param-tag>spirit:hwParameter</param-tag>
+    </core-param>
+    <core-name>CoreAPB3_0</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>counter</core-exttype>
+    <core-location>hdl\counter.v</core-location>
+    <core-name>counter_0</core-name>
+  </core>
+  <core>
+    <core-name>fifo_32bit_apb3_0</core-name>
+  </core>
+  <core type="ComponentModule">
+    <core-type>ComponentModule</core-type>
+    <core-exttype>SmartGen</core-exttype>
+    <core-location>Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen/FIFO_PIXEL</core-location>
+    <core-name>FIFO_PIXEL_0</core-name>
+  </core>
+  <core type="ComponentModule">
+    <core-type>ComponentModule</core-type>
+    <core-exttype>SmartGen</core-exttype>
+    <core-location>Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen/FIFO_TEST_COUNTER</core-location>
+    <core-name>FIFO_TEST_COUNTER_0</core-name>
+  </core>
   <core type="HdlModule">
     <core-type>HdlModule</core-type>
     <core-exttype>inputConditioner</core-exttype>
@@ -1068,7 +1268,7 @@ The CoreAHBLite component implements a multi-master AHB-Lite bus. It provides up
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>HierSpiritDesign</core-exttype>
-    <core-location>Z:/russ/private/research/insight/git/hw/smartfusion/impl/insight/component/work/MSS_CORE2</core-location>
+    <core-location>Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2</core-location>
     <core-name>MSS_CORE2_0</core-name>
   </core>
   <core type="HdlModule">
@@ -3153,6 +3353,14 @@ These files are required by the SmartFusion bare metal peripheral drivers to bui
           <remapAddress>0x40050000</remapAddress>
           <fullAddressSpace>0x40050000 - 0x4005FFFF</fullAddressSpace>
           <range>0x00010000</range>
+        </slave>
+        <slave>
+          <name>fifo_32bit_apb3_0</name>
+          <remapAddress name="NoRemap">0x40070000</remapAddress>
+          <fullAddressSpace name="NoRemap">0x40070000 - 0x400700FF</fullAddressSpace>
+          <remapAddress name="M0_SwapSlots0and1">0x40070000</remapAddress>
+          <fullAddressSpace name="M0_SwapSlots0and1">0x40070000 - 0x400700FF</fullAddressSpace>
+          <range>0x00000100</range>
         </slave>
         <slave>
           <name>FPGA_FABRIC_BACKDOOR</name>

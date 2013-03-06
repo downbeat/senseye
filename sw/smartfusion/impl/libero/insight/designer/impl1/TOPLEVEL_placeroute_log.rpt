@@ -10,7 +10,7 @@ Opened an existing Libero design TOPLEVEL.adb.
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
 'IDE_DESIGNERVIEW_ROOTDIR' set to
-'Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\designer'
+'Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 ***** Layout Variables *********************************************
 
@@ -34,24 +34,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Sat Mar 02 03:42:15 2013
+Timing-driven Placer Started: Wed Mar 06 03:25:37 2013
 
-Placer Finished: Sat Mar 02 03:42:30 2013
-Total Placer CPU Time:     00:00:15
+Placer Finished: Wed Mar 06 03:25:58 2013
+Total Placer CPU Time:     00:00:21
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Sat Mar 02 03:42:35 2013
+Design: TOPLEVEL                        Started: Wed Mar 06 03:26:03 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Sat Mar 02 03:42:55 2013
-Total CPU Time:     00:00:19            Total Elapsed Time: 00:00:20
+Finished: Wed Mar 06 03:26:26 2013
+Total CPU Time:     00:00:22            Total Elapsed Time: 00:00:23
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -59,7 +59,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:47 )
+The Layout command succeeded ( 00:00:57 )
 Wrote status report to file: TOPLEVEL_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -73,8 +73,9 @@ Wrote iobank report to file: TOPLEVEL_iobank_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Design saved to file
-Z:\russ\private\research\insight\git\hw\smartfusion\impl\insight\designer\impl1\TOPLEVEL.adb.
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
+.adb.
 
-The Execute Script command succeeded ( 00:00:51 )
+The Execute Script command succeeded ( 00:01:01 )
 Design closed.
 

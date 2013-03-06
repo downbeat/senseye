@@ -2,7 +2,7 @@
 <device>
   <name>TOPLEVEL</name>
   <version>1.0</version>
-  <description>CMSIS description for TOPLEVEL.  Created by Actel SmartDesign on Sat Mar 02 01:32:10 2013</description>
+  <description>CMSIS description for TOPLEVEL.  Created by Actel SmartDesign on Wed Mar 06 03:24:10 2013</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>
@@ -1853,6 +1853,10 @@
     <peripheral>
       <name>psram_cr_0</name>
       <baseAddress>0x40050000</baseAddress>
+    </peripheral>
+    <peripheral>
+      <name>fifo_32bit_apb3_0</name>
+      <baseAddress>0x40070000</baseAddress>
     </peripheral>
     <peripheral>
       <name>FPGA_FABRIC_BACKDOOR</name>

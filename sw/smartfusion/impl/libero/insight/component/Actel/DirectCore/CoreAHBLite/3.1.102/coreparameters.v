@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Actel SmartDesign Sat Mar 02 01:32:06 2013
+// Created by Actel SmartDesign Wed Mar 06 03:24:00 2013
 // Parameters for CoreAHBLite
 //--------------------------------------------------------------------
 
@@ -47,7 +47,7 @@ parameter M1_AHBSLOT3ENABLE = 0;
 parameter M1_AHBSLOT4ENABLE = 0;
 parameter M1_AHBSLOT5ENABLE = 1;
 parameter M1_AHBSLOT6ENABLE = 0;
-parameter M1_AHBSLOT7ENABLE = 0;
+parameter M1_AHBSLOT7ENABLE = 1;
 parameter M1_AHBSLOT8ENABLE = 0;
 parameter M1_AHBSLOT9ENABLE = 0;
 parameter M1_AHBSLOT10ENABLE = 0;
