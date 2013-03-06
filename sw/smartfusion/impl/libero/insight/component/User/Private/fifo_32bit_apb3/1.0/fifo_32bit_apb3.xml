@@ -102,12 +102,6 @@
         <spirit:left>31</spirit:left>
         <spirit:right>0</spirit:right>
       </spirit:signal>
-      <spirit:signal>
-        <spirit:name>DATAOUT</spirit:name>
-        <spirit:direction>out</spirit:direction>
-        <spirit:left>31</spirit:left>
-        <spirit:right>0</spirit:right>
-      </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>
     </spirit:hwParameters>

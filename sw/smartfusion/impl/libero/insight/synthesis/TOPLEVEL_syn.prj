@@ -21,7 +21,7 @@ add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libe
 add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/ahb.v"
 add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/cr_int.v"
 add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/psram_cr.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"
+add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/stonyman_apb3.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
@@ -33,6 +33,7 @@ add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/
 add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
 add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v"
 add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3.v"
+add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL/TOPLEVEL.v"
 add_file -constraint "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell_syn.sdc"
 

@@ -25,7 +25,7 @@
 // fifo_32bit_apb3
 module fifo_32bit_apb3 ( PCLK, PRESERN, PSEL, PENABLE, PREADY, PSLVERR, PWRITE, PADDR, PWDATA, PRDATA,
                          /* APPLICATION SPECIFIC SIGNALS */
-                         FULL, EMPTY, WREN, RDEN, DATAIN, DATAOUT );
+                         FULL, EMPTY, WREN, RDEN, DATAIN );
 
 /* APB SIGNALS */
 input PCLK;      // clock
@@ -46,7 +46,6 @@ input EMPTY;
 output wire WREN;  // active low
 output wire RDEN;  // active low
 input [31:0] DATAIN;
-output wire [31:0] DATAOUT;
 
 
 wire bus_write_enable;

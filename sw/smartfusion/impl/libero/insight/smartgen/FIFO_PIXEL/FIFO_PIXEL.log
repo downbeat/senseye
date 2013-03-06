@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Tue Mar 05 14:47:02 2013
+ ** Date:   Wed Mar 06 05:39:56 2013
 
 
 ****************
@@ -16,9 +16,9 @@ Read Clock                      : Rising
 Write Clock                     : Rising
 Reset                           : Active Low
 Read Enable                     : Active Low
-Write Depth                     : 256
+Write Depth                     : 4096
 Write Width                     : 8
-Read Depth                      : 256
+Read Depth                      : 4096
 Read Width                      : 8
 Almost Full                     : 65536
 Almost Empty                    : 65536
@@ -65,20 +65,20 @@ Portname Clock                  : CLK
 Cascade Configuration:
      Port A configuration       : 512x8
      Port B configuration       : 512x8
-     Number of blocks depth wise: 1
+     Number of blocks depth wise: 8
      Number of blocks width wise: 1
 
 **************
 Compile Report
 **************
 
-Warning:  CMP503: Remapped 8 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
+Warning:  CMP503: Remapped 14 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
 
 Netlist Resource Report
 =======================
 
     Microcontroller Subsystem  Used:      0  Total:      1   (0.00%)
-    Fabric                     Used:    162  Total:  11520   (1.41%)
+    Fabric                     Used:    406  Total:  11520   (3.52%)
     Fabric IO (W/ clocks)      Used:      0  Total:    128   (0.00%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -90,10 +90,10 @@ Netlist Resource Report
     On-chip RC oscillator      Used:      0  Total:      1   (0.00%)
     Main Crystal oscillator    Used:      0  Total:      1   (0.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      1  Total:     24   (4.17%)
+    RAM/FIFO                   Used:      8  Total:     24   (33.33%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Wrote Verilog netlist to Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL\FIFO_PIXEL.v.
 
- ** Log Ended:   Tue Mar 05 14:47:04 2013
+ ** Log Ended:   Wed Mar 06 05:39:58 2013
 

@@ -34,24 +34,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Wed Mar 06 03:25:37 2013
+Timing-driven Placer Started: Wed Mar 06 06:25:54 2013
 
-Placer Finished: Wed Mar 06 03:25:58 2013
-Total Placer CPU Time:     00:00:21
+Placer Finished: Wed Mar 06 06:26:26 2013
+Total Placer CPU Time:     00:00:32
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Wed Mar 06 03:26:03 2013
+Design: TOPLEVEL                        Started: Wed Mar 06 06:26:32 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Wed Mar 06 03:26:26 2013
-Total CPU Time:     00:00:22            Total Elapsed Time: 00:00:23
+Finished: Wed Mar 06 06:26:56 2013
+Total CPU Time:     00:00:24            Total Elapsed Time: 00:00:24
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -59,7 +59,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:57 )
+The Layout command succeeded ( 00:01:12 )
 Wrote status report to file: TOPLEVEL_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -76,6 +76,6 @@ Design saved to file
 Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
 .adb.
 
-The Execute Script command succeeded ( 00:01:01 )
+The Execute Script command succeeded ( 00:01:16 )
 Design closed.
 

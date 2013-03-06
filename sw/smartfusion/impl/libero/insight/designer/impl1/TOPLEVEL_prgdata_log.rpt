@@ -12,8 +12,8 @@ Warning: Overwriting the existing file:
          Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/designer/impl1\
          /TOPLEVEL.fdb.
 
-The Export-map command succeeded ( 00:00:14 )
-CHECKSUM: 17BC
+The Export-map command succeeded ( 00:00:13 )
+CHECKSUM: 6447
 Wrote to the file:
 Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
 .fdb
@@ -23,6 +23,6 @@ Design saved to file
 Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/designer/impl1/TOPLEVEL\
 .adb.
 
-The Execute Script command succeeded ( 00:00:18 )
+The Execute Script command succeeded ( 00:00:17 )
 Design closed.
 

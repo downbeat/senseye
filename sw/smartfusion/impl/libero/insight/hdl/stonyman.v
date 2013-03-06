@@ -87,7 +87,7 @@
 
 
 module stonyman( clk, reset, startCapture, pixelin, adcConvComplete, resp, incp, resv, incv, inphi,
-                 pixelout, startAdcCapture, tp_stateout, tp_substateout );
+                 writeEnable, pixelout, startAdcCapture, tp_stateout, tp_substateout );
 
 input clk;
 input reset;
@@ -99,6 +99,7 @@ output reg incp;
 output reg resv;
 output reg incv;
 output reg inphi;
+output reg writeEnable;      // active low
 output reg [7:0] pixelout;
 output reg startAdcCapture;  // active low
 
@@ -131,6 +132,7 @@ begin
       resv <= 1'b0;
       incv <= 1'b0;
       inphi <= 1'b0;
+      writeEnable <= 1'b1;
       startAdcCapture <= 1'b1;
    end
    else
@@ -1145,6 +1147,7 @@ begin
                   begin
                      startAdcCapture <= 1'b1;
                      pixelout <= pixelin;
+                     writeEnable <= 1'b0;
                      counterPixelsCaptured <= counterPixelsCaptured+1;
                      // TODO: is this a reasonable value?
                      counterWait <= `TICKS_STARTCAP_WAIT_AFTER;
@@ -1153,6 +1156,10 @@ begin
                end
                `SUB_S_STARTCAP_WAIT_AFTER:
                begin
+                  if(1'b0 == writeEnable)
+                  begin
+                     writeEnable <= 1'b1;
+                  end
                   if(0 < counterWait)
                   begin
                      counterWait <= counterWait-1;

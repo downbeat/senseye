@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362558241"
+TIME="1362568498"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1362558241"
+TIME="1362568498"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -145,13 +145,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362558242"
+TIME="1362568499"
 SIZE="2540"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1362558242"
+TIME="1362568499"
 SIZE="324"
 PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
 IS_READONLY="TRUE"
@@ -231,13 +231,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362558243"
+TIME="1362568500"
 SIZE="2278"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1362558243"
+TIME="1362568500"
 SIZE="882"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
 IS_READONLY="TRUE"
@@ -476,19 +476,19 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1362558244"
+TIME="1362568501"
 SIZE="2148"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362558255"
+TIME="1362568511"
 SIZE="11661"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1362558238"
+TIME="1362568496"
 SIZE="4839"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
@@ -499,8 +499,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1362558244"
-SIZE="46066"
+TIME="1362568501"
+SIZE="48204"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -516,17 +516,17 @@ SIZE="466"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1362556666"
-SIZE="5529600"
+TIME="1362558418"
+SIZE="5639168"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1362556666"
-SIZE="167124"
+TIME="1362558418"
+SIZE="170195"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1362556667"
+TIME="1362558419"
 SIZE="1286"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
@@ -546,37 +546,37 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1362556578"
-SIZE="88668"
+TIME="1362558330"
+SIZE="113828"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362558514"
-SIZE="257024"
+TIME="1362569348"
+SIZE="256512"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1362556692"
-SIZE="253952"
+TIME="1362558444"
+SIZE="257024"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1362556762"
+TIME="1362558514"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1362556640"
+TIME="1362565272"
 SIZE="2442"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1362556667"
+TIME="1362558419"
 SIZE="983"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1362556648"
+TIME="1362565281"
 SIZE="1223"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -616,8 +616,8 @@ SIZE="4483"
 ENDFILE
 VALUE "<project>\hdl\fifo_32bit_apb3.v,hdl"
 STATE="utd"
-TIME="1362556535"
-SIZE="3179"
+TIME="1362564650"
+SIZE="3142"
 ENDFILE
 VALUE "<project>\hdl\fifo_8bit_apb3.v,hdl"
 STATE="utd"
@@ -641,8 +641,13 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1362534017"
-SIZE="52783"
+TIME="1362569099"
+SIZE="53045"
+ENDFILE
+VALUE "<project>\hdl\stonyman_apb3.v,hdl"
+STATE="utd"
+TIME="1362568468"
+SIZE="3158"
 ENDFILE
 VALUE "<project>\hdl\template_apb3.v,hdl"
 STATE="utd"
@@ -716,8 +721,8 @@ SIZE="1975"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1362558244"
-SIZE="667"
+TIME="1362568501"
+SIZE="703"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
@@ -734,27 +739,27 @@ PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 ENDFILE
 VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1362512824"
+TIME="1362566399"
 SIZE="2146"
 ENDFILE
 VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.gen,gen"
 STATE="utd"
-TIME="1362512822"
-SIZE="965"
+TIME="1362566397"
+SIZE="967"
 PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.log,log"
 STATE="utd"
-TIME="1362512824"
-SIZE="4004"
+TIME="1362566398"
+SIZE="4008"
 PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.v,hdl"
 STATE="utd"
-TIME="1362512824"
-SIZE="24627"
+TIME="1362566398"
+SIZE="65557"
 PARENT="<project>\smartgen\FIFO_PIXEL\FIFO_PIXEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -791,12 +796,12 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1362556564"
-SIZE="2028148"
+TIME="1362558315"
+SIZE="2036069"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1362556564"
+TIME="1362558315"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_drc.rpt,log"
@@ -806,12 +811,12 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1362556563"
+TIME="1362558315"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1362556565"
+TIME="1362558318"
 SIZE="6526"
 ENDFILE
 ENDLIST
@@ -838,17 +843,6 @@ VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\user\testbench.v,tb_hdl"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 LIST "MSS_CORE2::work"
@@ -1096,17 +1090,6 @@ BATCH=0
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "COREAHBTOAPB3::work"
-LIST Impl1
-ideSTIMULUS=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 LIST "MSS_CORE2::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -1283,6 +1266,11 @@ LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
 ENDLIST
 LIST "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 ENDLIST
+LIST "stonyman_apb3::work","hdl\stonyman_apb3.v","FALSE","FALSE"
+SUBBLOCK "stonyman_ioreg::work","hdl\stonyman_apb3.v","FALSE","FALSE"
+ENDLIST
+LIST "stonyman_ioreg::work","hdl\stonyman_apb3.v","FALSE","FALSE"
+ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
 SUBBLOCK "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"
 SUBBLOCK "clkgenerator::work","hdl\clkgenerator.v","FALSE","FALSE"
@@ -1294,9 +1282,10 @@ SUBBLOCK "FIFO_TEST_COUNTER::work","smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER
 SUBBLOCK "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
-SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
+SUBBLOCK "stonyman_apb3::work","hdl\stonyman_apb3.v","FALSE","FALSE"
 SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
 SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v","FALSE","FALSE"
+SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Mar 06 03:24:04 2013
+// Created by SmartDesign Wed Mar 06 06:15:00 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -110,18 +110,18 @@ wire   [2:0]  CoreAHBLite_0_AHBmslave5_HSIZE;
 wire   [1:0]  CoreAHBLite_0_AHBmslave5_HTRANS;
 wire   [31:0] CoreAHBLite_0_AHBmslave5_HWDATA;
 wire          CoreAHBLite_0_AHBmslave5_HWRITE;
-wire   [2:0]  CoreAHBLite_0_AHBmslave7_HBURST;
-wire          CoreAHBLite_0_AHBmslave7_HMASTLOCK;
-wire   [3:0]  CoreAHBLite_0_AHBmslave7_HPROT;
-wire   [31:0] CoreAHBLite_0_AHBmslave7_HRDATA;
-wire          CoreAHBLite_0_AHBmslave7_HREADY;
-wire          CoreAHBLite_0_AHBmslave7_HREADYOUT;
-wire   [1:0]  CoreAHBLite_0_AHBmslave7_HRESP;
-wire          CoreAHBLite_0_AHBmslave7_HSELx;
-wire   [2:0]  CoreAHBLite_0_AHBmslave7_HSIZE;
-wire   [1:0]  CoreAHBLite_0_AHBmslave7_HTRANS;
-wire   [31:0] CoreAHBLite_0_AHBmslave7_HWDATA;
-wire          CoreAHBLite_0_AHBmslave7_HWRITE;
+wire   [2:0]  CoreAHBLite_0_AHBmslave6_HBURST;
+wire          CoreAHBLite_0_AHBmslave6_HMASTLOCK;
+wire   [3:0]  CoreAHBLite_0_AHBmslave6_HPROT;
+wire   [31:0] CoreAHBLite_0_AHBmslave6_HRDATA;
+wire          CoreAHBLite_0_AHBmslave6_HREADY;
+wire          CoreAHBLite_0_AHBmslave6_HREADYOUT;
+wire   [1:0]  CoreAHBLite_0_AHBmslave6_HRESP;
+wire          CoreAHBLite_0_AHBmslave6_HSELx;
+wire   [2:0]  CoreAHBLite_0_AHBmslave6_HSIZE;
+wire   [1:0]  CoreAHBLite_0_AHBmslave6_HTRANS;
+wire   [31:0] CoreAHBLite_0_AHBmslave6_HWDATA;
+wire          CoreAHBLite_0_AHBmslave6_HWRITE;
 wire   [23:0] COREAHBTOAPB3_0_APBmaster_PADDR;
 wire          COREAHBTOAPB3_0_APBmaster_PENABLE;
 wire   [31:0] COREAHBTOAPB3_0_APBmaster_PRDATA;
@@ -131,17 +131,22 @@ wire          COREAHBTOAPB3_0_APBmaster_PSLVERR;
 wire   [31:0] COREAHBTOAPB3_0_APBmaster_PWDATA;
 wire          COREAHBTOAPB3_0_APBmaster_PWRITE;
 wire          CoreAPB3_0_APBmslave0_0_PENABLE;
-wire   [31:0] CoreAPB3_0_APBmslave0_0_PRDATA;
 wire          CoreAPB3_0_APBmslave0_0_PREADY;
 wire          CoreAPB3_0_APBmslave0_0_PSELx;
 wire          CoreAPB3_0_APBmslave0_0_PSLVERR;
-wire   [31:0] CoreAPB3_0_APBmslave0_0_PWDATA;
 wire          CoreAPB3_0_APBmslave0_0_PWRITE;
+wire   [31:0] CoreAPB3_0_APBmslave1_PRDATA;
+wire          CoreAPB3_0_APBmslave1_PREADY;
+wire          CoreAPB3_0_APBmslave1_PSELx;
+wire          CoreAPB3_0_APBmslave1_PSLVERR;
 wire   [31:0] counter_0_COUNT;
 wire          counter_0_WRITEEN;
 wire          CS_net_0;
 wire   [15:0] psram_data;
 wire          fifo_32bit_apb3_0_RDEN;
+wire          FIFO_PIXEL_0_EMPTY;
+wire          FIFO_PIXEL_0_FULL;
+wire   [7:0]  FIFO_PIXEL_0_Q;
 wire          FIFO_TEST_COUNTER_0_EMPTY;
 wire          FIFO_TEST_COUNTER_0_FULL;
 wire   [31:0] FIFO_TEST_COUNTER_0_Q;
@@ -149,8 +154,7 @@ wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
 wire          inputConditioner_0_op;
-wire   [3:0]  led_net_0;
-wire   [3:0]  led_2;
+wire   [7:0]  led_net_0;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -180,7 +184,8 @@ wire   [24:0] psram_address_net_0;
 wire          resp_net_0;
 wire          resv_net_0;
 wire          SCLK_net_0;
-wire   [7:0]  stonyman_0_pixelout;
+wire          stonyman_0_writeEnable;
+wire          stonyman_apb3_0_RDEN;
 wire          TP_adcConvComplete_net_0;
 wire          TP_adcStartCapture_net_0;
 wire          UART_0_RXD;
@@ -206,8 +211,7 @@ wire          TP_adcConvComplete_net_1;
 wire   [1:0]  nbyte_en_net_0;
 wire   [24:0] psram_address_net_1;
 wire   [1:0]  MAC_TXD_net_1;
-wire   [3:0]  led_2_net_0;
-wire   [7:4]  led_net_1;
+wire   [7:0]  led_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -231,8 +235,8 @@ wire   [31:0] HRDATA_S3_const_net_0;
 wire   [1:0]  HRESP_S3_const_net_0;
 wire   [31:0] HRDATA_S4_const_net_0;
 wire   [1:0]  HRESP_S4_const_net_0;
-wire   [31:0] HRDATA_S6_const_net_0;
-wire   [1:0]  HRESP_S6_const_net_0;
+wire   [31:0] HRDATA_S7_const_net_0;
+wire   [1:0]  HRESP_S7_const_net_0;
 wire   [31:0] HRDATA_S8_const_net_0;
 wire   [1:0]  HRESP_S8_const_net_0;
 wire   [31:0] HRDATA_S9_const_net_0;
@@ -251,7 +255,6 @@ wire   [31:0] HRDATA_S15_const_net_0;
 wire   [1:0]  HRESP_S15_const_net_0;
 wire   [31:0] HRDATA_SHG_const_net_0;
 wire   [1:0]  HRESP_SHG_const_net_0;
-wire   [31:0] PRDATAS1_const_net_0;
 wire   [31:0] PRDATAS2_const_net_0;
 wire   [31:0] PRDATAS3_const_net_0;
 wire   [31:0] PRDATAS4_const_net_0;
@@ -289,8 +292,8 @@ assign HRDATA_S3_const_net_0  = 32'h00000000;
 assign HRESP_S3_const_net_0   = 2'h0;
 assign HRDATA_S4_const_net_0  = 32'h00000000;
 assign HRESP_S4_const_net_0   = 2'h0;
-assign HRDATA_S6_const_net_0  = 32'h00000000;
-assign HRESP_S6_const_net_0   = 2'h0;
+assign HRDATA_S7_const_net_0  = 32'h00000000;
+assign HRESP_S7_const_net_0   = 2'h0;
 assign HRDATA_S8_const_net_0  = 32'h00000000;
 assign HRESP_S8_const_net_0   = 2'h0;
 assign HRDATA_S9_const_net_0  = 32'h00000000;
@@ -309,7 +312,6 @@ assign HRDATA_S15_const_net_0 = 32'h00000000;
 assign HRESP_S15_const_net_0  = 2'h0;
 assign HRDATA_SHG_const_net_0 = 32'h00000000;
 assign HRESP_SHG_const_net_0  = 2'h0;
-assign PRDATAS1_const_net_0   = 32'h00000000;
 assign PRDATAS2_const_net_0   = 32'h00000000;
 assign PRDATAS3_const_net_0   = 32'h00000000;
 assign PRDATAS4_const_net_0   = 32'h00000000;
@@ -374,26 +376,46 @@ assign psram_address_net_1      = psram_address_net_0;
 assign psram_address[24:0]      = psram_address_net_1;
 assign MAC_TXD_net_1            = MAC_TXD_net_0;
 assign MAC_TXD[1:0]             = MAC_TXD_net_1;
-assign led_2_net_0              = led_2;
-assign led[3:0]                 = led_2_net_0;
 assign led_net_1                = led_net_0;
-assign led[7:4]                 = led_net_1;
+assign led[7:0]                 = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
-wire   [23:0] CoreAHBLite_0_AHBmslave7_HADDR_0_23to0;
-wire   [23:0] CoreAHBLite_0_AHBmslave7_HADDR_0;
-wire   [31:0] CoreAHBLite_0_AHBmslave7_HADDR;
-assign CoreAHBLite_0_AHBmslave7_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave7_HADDR[23:0];
-assign CoreAHBLite_0_AHBmslave7_HADDR_0 = { CoreAHBLite_0_AHBmslave7_HADDR_0_23to0 };
+wire   [31:0] CoreAHBLite_0_AHBmslave6_HADDR;
+wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0_23to0;
+wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0;
+assign CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave6_HADDR[23:0];
+assign CoreAHBLite_0_AHBmslave6_HADDR_0 = { CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 };
 
+wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 wire   [31:24]CoreAPB3_0_APBmslave0_0_PADDR_0_31to24;
 wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR_0_23to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_0_PADDR_0;
-wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_31to24 = 8'h0;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 = CoreAPB3_0_APBmslave0_0_PADDR[23:0];
 assign CoreAPB3_0_APBmslave0_0_PADDR_0 = { CoreAPB3_0_APBmslave0_0_PADDR_0_31to24, CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 };
+
+wire   [31:8] CoreAPB3_0_APBmslave0_0_PRDATA_0_31to8;
+wire   [7:0]  CoreAPB3_0_APBmslave0_0_PRDATA_0_7to0;
+wire   [31:0] CoreAPB3_0_APBmslave0_0_PRDATA_0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_0_PRDATA;
+assign CoreAPB3_0_APBmslave0_0_PRDATA_0_31to8 = 24'h0;
+assign CoreAPB3_0_APBmslave0_0_PRDATA_0_7to0 = CoreAPB3_0_APBmslave0_0_PRDATA[7:0];
+assign CoreAPB3_0_APBmslave0_0_PRDATA_0 = { CoreAPB3_0_APBmslave0_0_PRDATA_0_31to8, CoreAPB3_0_APBmslave0_0_PRDATA_0_7to0 };
+
+wire   [31:0] CoreAPB3_0_APBmslave0_0_PWDATA;
+wire   [7:0]  CoreAPB3_0_APBmslave0_0_PWDATA_0_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_0_PWDATA_0;
+assign CoreAPB3_0_APBmslave0_0_PWDATA_0_7to0 = CoreAPB3_0_APBmslave0_0_PWDATA[7:0];
+assign CoreAPB3_0_APBmslave0_0_PWDATA_0 = { CoreAPB3_0_APBmslave0_0_PWDATA_0_7to0 };
+
+wire   [23:0] CoreAPB3_0_APBmslave1_PADDR;
+wire   [31:24]CoreAPB3_0_APBmslave1_PADDR_0_31to24;
+wire   [23:0] CoreAPB3_0_APBmslave1_PADDR_0_23to0;
+wire   [31:0] CoreAPB3_0_APBmslave1_PADDR_0;
+assign CoreAPB3_0_APBmslave1_PADDR_0_31to24 = 8'h0;
+assign CoreAPB3_0_APBmslave1_PADDR_0_23to0 = CoreAPB3_0_APBmslave1_PADDR[23:0];
+assign CoreAPB3_0_APBmslave1_PADDR_0 = { CoreAPB3_0_APBmslave1_PADDR_0_31to24, CoreAPB3_0_APBmslave1_PADDR_0_23to0 };
 
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
@@ -485,8 +507,8 @@ CoreAHBLite #(
         .M1_AHBSLOT3ENABLE  ( 0 ),
         .M1_AHBSLOT4ENABLE  ( 0 ),
         .M1_AHBSLOT5ENABLE  ( 1 ),
-        .M1_AHBSLOT6ENABLE  ( 0 ),
-        .M1_AHBSLOT7ENABLE  ( 1 ),
+        .M1_AHBSLOT6ENABLE  ( 1 ),
+        .M1_AHBSLOT7ENABLE  ( 0 ),
         .M1_AHBSLOT8ENABLE  ( 0 ),
         .M1_AHBSLOT9ENABLE  ( 0 ),
         .M1_AHBSLOT10ENABLE ( 0 ),
@@ -528,8 +550,8 @@ CoreAHBLite_0(
         .HREADYOUT_S3   ( VCC_net ), // tied to 1'b1 from definition
         .HREADYOUT_S4   ( VCC_net ), // tied to 1'b1 from definition
         .HREADYOUT_S5   ( CoreAHBLite_0_AHBmslave5_HREADYOUT ),
-        .HREADYOUT_S6   ( VCC_net ), // tied to 1'b1 from definition
-        .HREADYOUT_S7   ( CoreAHBLite_0_AHBmslave7_HREADYOUT ),
+        .HREADYOUT_S6   ( CoreAHBLite_0_AHBmslave6_HREADYOUT ),
+        .HREADYOUT_S7   ( VCC_net ), // tied to 1'b1 from definition
         .HREADYOUT_S8   ( VCC_net ), // tied to 1'b1 from definition
         .HREADYOUT_S9   ( VCC_net ), // tied to 1'b1 from definition
         .HREADYOUT_S10  ( VCC_net ), // tied to 1'b1 from definition
@@ -563,10 +585,10 @@ CoreAHBLite_0(
         .HRESP_S4       ( HRESP_S4_const_net_0 ), // tied to 2'h0 from definition
         .HRDATA_S5      ( CoreAHBLite_0_AHBmslave5_HRDATA ),
         .HRESP_S5       ( CoreAHBLite_0_AHBmslave5_HRESP ),
-        .HRDATA_S6      ( HRDATA_S6_const_net_0 ), // tied to 32'h00000000 from definition
-        .HRESP_S6       ( HRESP_S6_const_net_0 ), // tied to 2'h0 from definition
-        .HRDATA_S7      ( CoreAHBLite_0_AHBmslave7_HRDATA ),
-        .HRESP_S7       ( CoreAHBLite_0_AHBmslave7_HRESP ),
+        .HRDATA_S6      ( CoreAHBLite_0_AHBmslave6_HRDATA ),
+        .HRESP_S6       ( CoreAHBLite_0_AHBmslave6_HRESP ),
+        .HRDATA_S7      ( HRDATA_S7_const_net_0 ), // tied to 32'h00000000 from definition
+        .HRESP_S7       ( HRESP_S7_const_net_0 ), // tied to 2'h0 from definition
         .HRDATA_S8      ( HRDATA_S8_const_net_0 ), // tied to 32'h00000000 from definition
         .HRESP_S8       ( HRESP_S8_const_net_0 ), // tied to 2'h0 from definition
         .HRDATA_S9      ( HRDATA_S9_const_net_0 ), // tied to 32'h00000000 from definition
@@ -612,14 +634,14 @@ CoreAHBLite_0(
         .HWRITE_S5      ( CoreAHBLite_0_AHBmslave5_HWRITE ),
         .HREADY_S5      ( CoreAHBLite_0_AHBmslave5_HREADY ),
         .HMASTLOCK_S5   ( CoreAHBLite_0_AHBmslave5_HMASTLOCK ),
-        .HSEL_S6        (  ),
-        .HWRITE_S6      (  ),
-        .HREADY_S6      (  ),
-        .HMASTLOCK_S6   (  ),
-        .HSEL_S7        ( CoreAHBLite_0_AHBmslave7_HSELx ),
-        .HWRITE_S7      ( CoreAHBLite_0_AHBmslave7_HWRITE ),
-        .HREADY_S7      ( CoreAHBLite_0_AHBmslave7_HREADY ),
-        .HMASTLOCK_S7   ( CoreAHBLite_0_AHBmslave7_HMASTLOCK ),
+        .HSEL_S6        ( CoreAHBLite_0_AHBmslave6_HSELx ),
+        .HWRITE_S6      ( CoreAHBLite_0_AHBmslave6_HWRITE ),
+        .HREADY_S6      ( CoreAHBLite_0_AHBmslave6_HREADY ),
+        .HMASTLOCK_S6   ( CoreAHBLite_0_AHBmslave6_HMASTLOCK ),
+        .HSEL_S7        (  ),
+        .HWRITE_S7      (  ),
+        .HREADY_S7      (  ),
+        .HMASTLOCK_S7   (  ),
         .HSEL_S8        (  ),
         .HWRITE_S8      (  ),
         .HREADY_S8      (  ),
@@ -728,18 +750,18 @@ CoreAHBLite_0(
         .HWDATA_S5      ( CoreAHBLite_0_AHBmslave5_HWDATA ),
         .HBURST_S5      ( CoreAHBLite_0_AHBmslave5_HBURST ),
         .HPROT_S5       ( CoreAHBLite_0_AHBmslave5_HPROT ),
-        .HADDR_S6       (  ),
-        .HSIZE_S6       (  ),
-        .HTRANS_S6      (  ),
-        .HWDATA_S6      (  ),
-        .HBURST_S6      (  ),
-        .HPROT_S6       (  ),
-        .HADDR_S7       ( CoreAHBLite_0_AHBmslave7_HADDR ),
-        .HSIZE_S7       ( CoreAHBLite_0_AHBmslave7_HSIZE ),
-        .HTRANS_S7      ( CoreAHBLite_0_AHBmslave7_HTRANS ),
-        .HWDATA_S7      ( CoreAHBLite_0_AHBmslave7_HWDATA ),
-        .HBURST_S7      ( CoreAHBLite_0_AHBmslave7_HBURST ),
-        .HPROT_S7       ( CoreAHBLite_0_AHBmslave7_HPROT ),
+        .HADDR_S6       ( CoreAHBLite_0_AHBmslave6_HADDR ),
+        .HSIZE_S6       ( CoreAHBLite_0_AHBmslave6_HSIZE ),
+        .HTRANS_S6      ( CoreAHBLite_0_AHBmslave6_HTRANS ),
+        .HWDATA_S6      ( CoreAHBLite_0_AHBmslave6_HWDATA ),
+        .HBURST_S6      ( CoreAHBLite_0_AHBmslave6_HBURST ),
+        .HPROT_S6       ( CoreAHBLite_0_AHBmslave6_HPROT ),
+        .HADDR_S7       (  ),
+        .HSIZE_S7       (  ),
+        .HTRANS_S7      (  ),
+        .HWDATA_S7      (  ),
+        .HBURST_S7      (  ),
+        .HPROT_S7       (  ),
         .HADDR_S8       (  ),
         .HSIZE_S8       (  ),
         .HTRANS_S8      (  ),
@@ -835,22 +857,22 @@ COREAHBTOAPB3_0(
         // Inputs
         .HCLK      ( MSS_CORE2_0_FAB_CLK ),
         .HRESETN   ( MSS_CORE2_0_M2F_RESET_N ),
-        .HWRITE    ( CoreAHBLite_0_AHBmslave7_HWRITE ),
-        .HSEL      ( CoreAHBLite_0_AHBmslave7_HSELx ),
-        .HREADY    ( CoreAHBLite_0_AHBmslave7_HREADY ),
+        .HWRITE    ( CoreAHBLite_0_AHBmslave6_HWRITE ),
+        .HSEL      ( CoreAHBLite_0_AHBmslave6_HSELx ),
+        .HREADY    ( CoreAHBLite_0_AHBmslave6_HREADY ),
         .PREADY    ( COREAHBTOAPB3_0_APBmaster_PREADY ),
         .PSLVERR   ( COREAHBTOAPB3_0_APBmaster_PSLVERR ),
-        .HADDR     ( CoreAHBLite_0_AHBmslave7_HADDR_0 ),
-        .HTRANS    ( CoreAHBLite_0_AHBmslave7_HTRANS ),
-        .HWDATA    ( CoreAHBLite_0_AHBmslave7_HWDATA ),
+        .HADDR     ( CoreAHBLite_0_AHBmslave6_HADDR_0 ),
+        .HTRANS    ( CoreAHBLite_0_AHBmslave6_HTRANS ),
+        .HWDATA    ( CoreAHBLite_0_AHBmslave6_HWDATA ),
         .PRDATA    ( COREAHBTOAPB3_0_APBmaster_PRDATA ),
         // Outputs
-        .HREADYOUT ( CoreAHBLite_0_AHBmslave7_HREADYOUT ),
+        .HREADYOUT ( CoreAHBLite_0_AHBmslave6_HREADYOUT ),
         .PENABLE   ( COREAHBTOAPB3_0_APBmaster_PENABLE ),
         .PWRITE    ( COREAHBTOAPB3_0_APBmaster_PWRITE ),
         .PSEL      ( COREAHBTOAPB3_0_APBmaster_PSELx ),
-        .HRDATA    ( CoreAHBLite_0_AHBmslave7_HRDATA ),
-        .HRESP     ( CoreAHBLite_0_AHBmslave7_HRESP ),
+        .HRDATA    ( CoreAHBLite_0_AHBmslave6_HRDATA ),
+        .HRESP     ( CoreAHBLite_0_AHBmslave6_HRESP ),
         .PWDATA    ( COREAHBTOAPB3_0_APBmaster_PWDATA ),
         .PADDR     ( COREAHBTOAPB3_0_APBmaster_PADDR ) 
         );
@@ -859,7 +881,7 @@ COREAHBTOAPB3_0(
 CoreAPB3 #( 
         .APB_DWIDTH      ( 32 ),
         .APBSLOT0ENABLE  ( 1 ),
-        .APBSLOT1ENABLE  ( 0 ),
+        .APBSLOT1ENABLE  ( 1 ),
         .APBSLOT2ENABLE  ( 0 ),
         .APBSLOT3ENABLE  ( 0 ),
         .APBSLOT4ENABLE  ( 0 ),
@@ -885,8 +907,8 @@ CoreAPB3_0(
         .PSEL       ( COREAHBTOAPB3_0_APBmaster_PSELx ),
         .PREADYS0   ( CoreAPB3_0_APBmslave0_0_PREADY ),
         .PSLVERRS0  ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
-        .PREADYS1   ( VCC_net ), // tied to 1'b1 from definition
-        .PSLVERRS1  ( GND_net ), // tied to 1'b0 from definition
+        .PREADYS1   ( CoreAPB3_0_APBmslave1_PREADY ),
+        .PSLVERRS1  ( CoreAPB3_0_APBmslave1_PSLVERR ),
         .PREADYS2   ( VCC_net ), // tied to 1'b1 from definition
         .PSLVERRS2  ( GND_net ), // tied to 1'b0 from definition
         .PREADYS3   ( VCC_net ), // tied to 1'b1 from definition
@@ -917,8 +939,8 @@ CoreAPB3_0(
         .PSLVERRS15 ( GND_net ), // tied to 1'b0 from definition
         .PADDR      ( COREAHBTOAPB3_0_APBmaster_PADDR ),
         .PWDATA     ( COREAHBTOAPB3_0_APBmaster_PWDATA ),
-        .PRDATAS0   ( CoreAPB3_0_APBmslave0_0_PRDATA ),
-        .PRDATAS1   ( PRDATAS1_const_net_0 ), // tied to 32'h00000000 from definition
+        .PRDATAS0   ( CoreAPB3_0_APBmslave0_0_PRDATA_0 ),
+        .PRDATAS1   ( CoreAPB3_0_APBmslave1_PRDATA ),
         .PRDATAS2   ( PRDATAS2_const_net_0 ), // tied to 32'h00000000 from definition
         .PRDATAS3   ( PRDATAS3_const_net_0 ), // tied to 32'h00000000 from definition
         .PRDATAS4   ( PRDATAS4_const_net_0 ), // tied to 32'h00000000 from definition
@@ -939,7 +961,7 @@ CoreAPB3_0(
         .PWRITES    ( CoreAPB3_0_APBmslave0_0_PWRITE ),
         .PENABLES   ( CoreAPB3_0_APBmslave0_0_PENABLE ),
         .PSELS0     ( CoreAPB3_0_APBmslave0_0_PSELx ),
-        .PSELS1     (  ),
+        .PSELS1     ( CoreAPB3_0_APBmslave1_PSELx ),
         .PSELS2     (  ),
         .PSELS3     (  ),
         .PSELS4     (  ),
@@ -955,7 +977,7 @@ CoreAPB3_0(
         .PSELS14    (  ),
         .PSELS15    (  ),
         .PRDATA     ( COREAHBTOAPB3_0_APBmaster_PRDATA ),
-        .PADDRS     (  ),
+        .PADDRS     ( CoreAPB3_0_APBmslave1_PADDR ),
         .PADDRS0    ( CoreAPB3_0_APBmslave0_0_PADDR ),
         .PWDATAS    ( CoreAPB3_0_APBmslave0_0_PWDATA ) 
         );
@@ -975,35 +997,34 @@ fifo_32bit_apb3 fifo_32bit_apb3_0(
         // Inputs
         .PCLK    ( SCLK_net_0 ),
         .PRESERN ( MSS_CORE2_0_M2F_RESET_N ),
-        .PSEL    ( CoreAPB3_0_APBmslave0_0_PSELx ),
+        .PSEL    ( CoreAPB3_0_APBmslave1_PSELx ),
         .PENABLE ( CoreAPB3_0_APBmslave0_0_PENABLE ),
         .PWRITE  ( CoreAPB3_0_APBmslave0_0_PWRITE ),
+        .PADDR   ( CoreAPB3_0_APBmslave1_PADDR_0 ),
+        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         .FULL    ( FIFO_TEST_COUNTER_0_FULL ),
         .EMPTY   ( FIFO_TEST_COUNTER_0_EMPTY ),
-        .PADDR   ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
-        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         .DATAIN  ( FIFO_TEST_COUNTER_0_Q ),
         // Outputs
-        .PREADY  ( CoreAPB3_0_APBmslave0_0_PREADY ),
-        .PSLVERR ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
+        .PREADY  ( CoreAPB3_0_APBmslave1_PREADY ),
+        .PSLVERR ( CoreAPB3_0_APBmslave1_PSLVERR ),
+        .PRDATA  ( CoreAPB3_0_APBmslave1_PRDATA ),
         .WREN    (  ),
-        .RDEN    ( fifo_32bit_apb3_0_RDEN ),
-        .PRDATA  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
-        .DATAOUT (  ) 
+        .RDEN    ( fifo_32bit_apb3_0_RDEN ) 
         );
 
 //--------FIFO_PIXEL
 FIFO_PIXEL FIFO_PIXEL_0(
         // Inputs
-        .WEN   ( VCC_net ),
-        .REN   ( VCC_net ),
+        .WEN   ( stonyman_0_writeEnable ),
+        .REN   ( stonyman_apb3_0_RDEN ),
         .CLK   ( SCLK_net_0 ),
         .RESET ( MSS_CORE2_0_M2F_RESET_N ),
-        .DATA  ( stonyman_0_pixelout ),
+        .DATA  ( led_net_0 ),
         // Outputs
-        .FULL  (  ),
-        .EMPTY (  ),
-        .Q     (  ) 
+        .FULL  ( FIFO_PIXEL_0_FULL ),
+        .EMPTY ( FIFO_PIXEL_0_EMPTY ),
+        .Q     ( FIFO_PIXEL_0_Q ) 
         );
 
 //--------FIFO_TEST_COUNTER
@@ -1100,18 +1121,40 @@ stonyman stonyman_0(
         .clk             ( SCLK_net_0 ),
         .reset           ( MSS_CORE2_0_M2F_RESET_N ),
         .startCapture    ( inputConditioner_0_op ),
-        .adcConvComplete ( TP_adcConvComplete_net_0 ),
         .pixelin         ( adc081s101_0_dataout ),
+        .adcConvComplete ( TP_adcConvComplete_net_0 ),
         // Outputs
         .resp            ( resp_net_0 ),
         .incp            ( incp_net_0 ),
         .resv            ( resv_net_0 ),
         .incv            ( incv_net_0 ),
         .inphi           ( inphi_net_0 ),
+        .writeEnable     ( stonyman_0_writeEnable ),
+        .pixelout        ( led_net_0 ),
         .startAdcCapture ( TP_adcStartCapture_net_0 ),
-        .pixelout        ( stonyman_0_pixelout ),
-        .tp_stateout     ( led_net_0 ),
-        .tp_substateout  ( led_2 ) 
+        .tp_stateout     (  ),
+        .tp_substateout  (  ) 
+        );
+
+//--------stonyman_apb3
+stonyman_apb3 stonyman_apb3_0(
+        // Inputs
+        .PCLK    ( SCLK_net_0 ),
+        .PRESERN ( MSS_CORE2_0_M2F_RESET_N ),
+        .PSEL    ( CoreAPB3_0_APBmslave0_0_PSELx ),
+        .PENABLE ( CoreAPB3_0_APBmslave0_0_PENABLE ),
+        .PWRITE  ( CoreAPB3_0_APBmslave0_0_PWRITE ),
+        .PADDR   ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
+        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA_0 ),
+        .FULL    ( FIFO_PIXEL_0_FULL ),
+        .EMPTY   ( FIFO_PIXEL_0_EMPTY ),
+        .BUSY    ( GND_net ),
+        .DATAIN  ( FIFO_PIXEL_0_Q ),
+        // Outputs
+        .PREADY  ( CoreAPB3_0_APBmslave0_0_PREADY ),
+        .PSLVERR ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
+        .PRDATA  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
+        .RDEN    ( stonyman_apb3_0_RDEN ) 
         );
 
 
