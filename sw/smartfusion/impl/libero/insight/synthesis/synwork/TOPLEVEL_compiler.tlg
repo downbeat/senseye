@@ -836,15 +836,19 @@ Selecting top level module TOPLEVEL
 @A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":382:51:382:77|Write Address width 3 does not cover RAM depth
 
 @N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Found RAM cachedValue, depth=8, width=8
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":81:7:81:20|Synthesizing module stonyman_ioreg
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":83:7:83:20|Synthesizing module stonyman_ioreg
 
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":28:7:28:19|Synthesizing module stonyman_apb3
 
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 
-@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":42:20:42:25|Input PWDATA is unused
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":1045:17:1045:34|Pruning instance inputConditioner_0 -- not in use ...
+
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":53:14:53:20|Input CAPTURE is unused
 @W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":48:6:48:9|Input BUSY is unused
-@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":85:13:85:16|Input port bits 31 to 8 of addr[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":88:13:88:16|Input port bits 31 to 8 of addr[31:0] are unused
+
+@W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":90:12:90:17|Input port bits 7 to 1 of datain[7:0] are unused
 
 @W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[31] is always 0, optimizing ...
 @W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Pruning register bit 31 of counterWait[31:0] 

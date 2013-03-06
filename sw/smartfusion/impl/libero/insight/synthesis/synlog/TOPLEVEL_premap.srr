@@ -31,7 +31,7 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 238 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 233 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:02s; Memory used current: 111MB peak: 113MB)
@@ -42,6 +42,6 @@ Pre-mapping successful!
 At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 49MB peak: 113MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Wed Mar 06 06:25:18 2013
+# Wed Mar 06 07:20:27 2013
 
 ###########################################################]

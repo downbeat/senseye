@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Mar 06 06:15:00 2013
+// Created by SmartDesign Wed Mar 06 07:11:59 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -153,7 +153,6 @@ wire   [31:0] FIFO_TEST_COUNTER_0_Q;
 wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
-wire          inputConditioner_0_op;
 wire   [7:0]  led_net_0;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
@@ -186,6 +185,7 @@ wire          resv_net_0;
 wire          SCLK_net_0;
 wire          stonyman_0_writeEnable;
 wire          stonyman_apb3_0_RDEN;
+wire          stonyman_apb3_0_START_CAPTURE;
 wire          TP_adcConvComplete_net_0;
 wire          TP_adcStartCapture_net_0;
 wire          UART_0_RXD;
@@ -381,9 +381,9 @@ assign led[7:0]                 = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
-wire   [31:0] CoreAHBLite_0_AHBmslave6_HADDR;
 wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0_23to0;
 wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0;
+wire   [31:0] CoreAHBLite_0_AHBmslave6_HADDR;
 assign CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave6_HADDR[23:0];
 assign CoreAHBLite_0_AHBmslave6_HADDR_0 = { CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 };
 
@@ -1000,17 +1000,17 @@ fifo_32bit_apb3 fifo_32bit_apb3_0(
         .PSEL    ( CoreAPB3_0_APBmslave1_PSELx ),
         .PENABLE ( CoreAPB3_0_APBmslave0_0_PENABLE ),
         .PWRITE  ( CoreAPB3_0_APBmslave0_0_PWRITE ),
-        .PADDR   ( CoreAPB3_0_APBmslave1_PADDR_0 ),
-        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         .FULL    ( FIFO_TEST_COUNTER_0_FULL ),
         .EMPTY   ( FIFO_TEST_COUNTER_0_EMPTY ),
+        .PADDR   ( CoreAPB3_0_APBmslave1_PADDR_0 ),
+        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         .DATAIN  ( FIFO_TEST_COUNTER_0_Q ),
         // Outputs
         .PREADY  ( CoreAPB3_0_APBmslave1_PREADY ),
         .PSLVERR ( CoreAPB3_0_APBmslave1_PSLVERR ),
-        .PRDATA  ( CoreAPB3_0_APBmslave1_PRDATA ),
         .WREN    (  ),
-        .RDEN    ( fifo_32bit_apb3_0_RDEN ) 
+        .RDEN    ( fifo_32bit_apb3_0_RDEN ),
+        .PRDATA  ( CoreAPB3_0_APBmslave1_PRDATA ) 
         );
 
 //--------FIFO_PIXEL
@@ -1048,7 +1048,7 @@ inputConditioner inputConditioner_0(
         .rst ( MSS_CORE2_0_M2F_RESET_N ),
         .ip  ( CAPTURE ),
         // Outputs
-        .op  ( inputConditioner_0_op ) 
+        .op  (  ) 
         );
 
 //--------MSS_CORE2
@@ -1120,9 +1120,9 @@ stonyman stonyman_0(
         // Inputs
         .clk             ( SCLK_net_0 ),
         .reset           ( MSS_CORE2_0_M2F_RESET_N ),
-        .startCapture    ( inputConditioner_0_op ),
-        .pixelin         ( adc081s101_0_dataout ),
+        .startCapture    ( stonyman_apb3_0_START_CAPTURE ),
         .adcConvComplete ( TP_adcConvComplete_net_0 ),
+        .pixelin         ( adc081s101_0_dataout ),
         // Outputs
         .resp            ( resp_net_0 ),
         .incp            ( incp_net_0 ),
@@ -1130,8 +1130,8 @@ stonyman stonyman_0(
         .incv            ( incv_net_0 ),
         .inphi           ( inphi_net_0 ),
         .writeEnable     ( stonyman_0_writeEnable ),
-        .pixelout        ( led_net_0 ),
         .startAdcCapture ( TP_adcStartCapture_net_0 ),
+        .pixelout        ( led_net_0 ),
         .tp_stateout     (  ),
         .tp_substateout  (  ) 
         );
@@ -1139,22 +1139,23 @@ stonyman stonyman_0(
 //--------stonyman_apb3
 stonyman_apb3 stonyman_apb3_0(
         // Inputs
-        .PCLK    ( SCLK_net_0 ),
-        .PRESERN ( MSS_CORE2_0_M2F_RESET_N ),
-        .PSEL    ( CoreAPB3_0_APBmslave0_0_PSELx ),
-        .PENABLE ( CoreAPB3_0_APBmslave0_0_PENABLE ),
-        .PWRITE  ( CoreAPB3_0_APBmslave0_0_PWRITE ),
-        .PADDR   ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
-        .PWDATA  ( CoreAPB3_0_APBmslave0_0_PWDATA_0 ),
-        .FULL    ( FIFO_PIXEL_0_FULL ),
-        .EMPTY   ( FIFO_PIXEL_0_EMPTY ),
-        .BUSY    ( GND_net ),
-        .DATAIN  ( FIFO_PIXEL_0_Q ),
+        .PCLK          ( SCLK_net_0 ),
+        .PRESERN       ( MSS_CORE2_0_M2F_RESET_N ),
+        .PSEL          ( CoreAPB3_0_APBmslave0_0_PSELx ),
+        .PENABLE       ( CoreAPB3_0_APBmslave0_0_PENABLE ),
+        .PWRITE        ( CoreAPB3_0_APBmslave0_0_PWRITE ),
+        .PADDR         ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
+        .PWDATA        ( CoreAPB3_0_APBmslave0_0_PWDATA_0 ),
+        .FULL          ( FIFO_PIXEL_0_FULL ),
+        .EMPTY         ( FIFO_PIXEL_0_EMPTY ),
+        .BUSY          ( GND_net ),
+        .PIXELIN       ( FIFO_PIXEL_0_Q ),
         // Outputs
-        .PREADY  ( CoreAPB3_0_APBmslave0_0_PREADY ),
-        .PSLVERR ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
-        .PRDATA  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
-        .RDEN    ( stonyman_apb3_0_RDEN ) 
+        .PREADY        ( CoreAPB3_0_APBmslave0_0_PREADY ),
+        .PSLVERR       ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
+        .PRDATA        ( CoreAPB3_0_APBmslave0_0_PRDATA ),
+        .RDEN          ( stonyman_apb3_0_RDEN ),
+        .START_CAPTURE ( stonyman_apb3_0_START_CAPTURE ) 
         );
 
 

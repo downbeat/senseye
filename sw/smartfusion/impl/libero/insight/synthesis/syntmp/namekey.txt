@@ -44,11 +44,11 @@ counter_0
 fifo_32bit_apb3_0
 FIFO_PIXEL_0
 FIFO_TEST_COUNTER_0
-inputConditioner_0
 MSS_CORE2_0
 psram_cr_0
 stonyman_0
 stonyman_apb3_0
+OR2_2
 DFN1E1C0_QÛ7Ý
 XOR2_47
 XOR2_38

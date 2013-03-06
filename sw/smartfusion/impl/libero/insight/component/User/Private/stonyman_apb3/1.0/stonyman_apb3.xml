@@ -97,10 +97,14 @@
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>DATAIN</spirit:name>
+        <spirit:name>PIXELIN</spirit:name>
         <spirit:direction>in</spirit:direction>
         <spirit:left>7</spirit:left>
         <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>START_CAPTURE</spirit:name>
+        <spirit:direction>out</spirit:direction>
       </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>
