@@ -14,13 +14,17 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-`define WIDTH            = 8;
+`define WIDTH               (8)
 
-`define MASK_REG_RANGE   = 8'hFF;
-// TODO: add support for control register
-//`define OFFSET_REG_CTRL  = 8'h0;
-`define OFFSET_REG_FLAGS = 8'h4;
-`define OFFSET_REG_DATA  = 8'h8;
+`define MASK_REG_RANGE      (8'hFF)
+`define OFFSET_REG_CTRL     (8'h0)
+`define OFFSET_REG_FLAGS    (8'h4)
+`define OFFSET_REG_DATA     (8'h8)
+
+`define FIFO_RDEN_S_IDLE    (2'd0)
+`define FIFO_RDEN_S_RAISE   (2'd1)
+`define FIFO_RDEN_S_WAIT    (2'd2)
+`define FIFO_RDEN_S_READY   (2'd3)
 
 
 //////////////////////////////////////////////////////////////////////
@@ -87,12 +91,13 @@ input wren;
 input rden;
 input [31:0] addr;
 output reg ready;
-input [7:0] datain;
-output reg [7:0] dataout;
+
+input [(`WIDTH-1):0] datain;
+output reg [(`WIDTH-1):0] dataout;
 
 input full;
 input empty;
-input [7:0] appDatain;
+input [(`WIDTH-1):0] appDatain;
 
 output reg startCapture;
 
@@ -107,17 +112,13 @@ begin
    begin
       if(1'b1 == rden)
       begin
-         // FIXME: add symbolic defines
-         //if(`OFFSET_REG_FLAGS == (`MASK_REG_RANGE&addr))
-         if(8'h4 == (addr&8'hFF))
+         if(`OFFSET_REG_FLAGS == (`MASK_REG_RANGE&addr))
          begin
             // TODO: support BUSY
             dataout <= {6'd0,empty,full};
             ready <= 1;
          end
-         // FIXME: add symbolic defines
-         //else if(`OFFSET_REG_DATA == (`MASK_REG_RANGE&addr))
-         else if((8'h8 == (addr&8'hFF)))
+         else if(`OFFSET_REG_DATA == (`MASK_REG_RANGE&addr))
          begin
             dataout <= appDatain;
             ready <= 1;
@@ -130,9 +131,7 @@ begin
       end
       else if(1'b1 == wren)
       begin
-         // FIXME: add symbolic defines
-         //if(`OFFSET_REG_CTRL == (`MASK_REG_RANGE&addr))
-         if(8'h0 == (addr&8'hFF))
+         if(`OFFSET_REG_CTRL == (`MASK_REG_RANGE&addr))
          begin
             if(0 != (1&datain[0]))
             begin
