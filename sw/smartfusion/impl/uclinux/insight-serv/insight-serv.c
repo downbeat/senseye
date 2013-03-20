@@ -28,22 +28,56 @@
 //**************************************************************************************************
 // defines / constants
 //
+typedef  unsigned long   uint32;
+typedef  unsigned short  uint16;
+typedef  unsigned char   uint8;
+
 #define DEFAULT_PORT            (8080)
 #define MAX_CONNS               (1)
 #define REQ_MAX_LEN             (1024)  // Bytes (chosen arbitrarily)
+#define RESOLUTION_ROWS         (112)
+#define RESOLUTION_COLS         (112)
+#define RESOLUTION              (RESOLUTION_ROWS*RESOLUTION_COLS)
+
+#define SYMBOL_SOF              ((uint8)0xFF)
+
+#define OPCODE_START            ((uint8)0x01)
+#define OPCODE_STOP             ((uint8)0x02)
+#define OPCODE_SINGLE_FRAME     ((uint8)0x04)
+#define OPCODE_START_ACK        ((uint8)0x81)
+#define OPCODE_STOP_ACK         ((uint8)0x82)
+#define OPCODE_FRAME            ((uint8)0x84)
+
+#define OPCODE_REQ_NUM_CAMS     ((uint8)0x21)
+#define OPCODE_RESP_NUM_CAMS    ((uint8)0xA1)
+
+#define REG_BASE_ADDR           (0x40060000ul)
+#define REG_OFFSET_STATUS       (0x00000000ul)
+#define REG_OFFSET_DATA         (0x00000004ul)
+
+#define REG_CTRL                (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_STATUS)))
+#define REG_FLAGS               (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_STATUS)))
+#define REG_DATA                (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_DATA)))
+
+#define FLAG_SHIFT_FULL         (0u)
+#define FLAG_SHIFT_EMPTY        (1u)
+
+const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
+const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
+const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
 
 //**************************************************************************************************
 // globals
 //
-const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
-const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
+uint8 *imgbuf;
 
 
 //**************************************************************************************************
 // local function prototypes
 //
 static void request_handler(int sd);
+static void request_send_data(int sd);
 /*static void printusage(char *progname);
 static void printhelp(char *progname);
 static int  parseargs(int argc, char **argv);*/
@@ -57,7 +91,6 @@ int main(int argc, char** argv)
    int sd_listen, sd_client;
    struct sockaddr_in sockaddr_server, sockaddr_client;
    unsigned len;
-   pid_t pid;
 
 
    // start up the server
@@ -90,6 +123,14 @@ int main(int argc, char** argv)
       exit(1);
    }
 
+
+   // malloc the image buffer (this is required for uclinux)
+   imgbuf = (uint8*)malloc(RESOLUTION*sizeof(uint8));
+   if(NULL==imgbuf)
+   {
+      fprintf(stderr,"couldn't malloc %d bytes for the image buffer\n");
+      exit(1);
+   }
 
    // and away we go
    while(1)
@@ -197,18 +238,22 @@ static void request_handler(int sd)
          // return data
          // TODO: remove debug output (maybe)
          fprintf(stderr, "good request!\n");
-         send_len_ret = send(sd, (const void*)(&RESP_SUCCESS_HEADER), sizeof(RESP_SUCCESS_HEADER), 0);
+         /*FIXME put this back in (right?)
+          * send_len_ret = send(sd, (const void*)(&RESP_SUCCESS_HEADER), sizeof(RESP_SUCCESS_HEADER), 0);
          if(sizeof(RESP_SUCCESS_HEADER) != send_len_ret)
          {
             fprintf(stderr, "request_handler: send call returns wrong length");
             fflush(stderr);
             exit(1);
-         }
+         }*/
+
+         // send data!
+         request_send_data(sd);
       }
       else
       {
          // bad request :(
-         // TODO: remove debug output
+         // TODO: remove debug output (maybe)
          flag_bad_request=1; // unnecessary
          fprintf(stderr, "bad request :(\n");
          send_len_ret = send(sd, (const void*)(&RESP_BAD_REQUEST), sizeof(RESP_BAD_REQUEST), 0);
@@ -222,6 +267,54 @@ static void request_handler(int sd)
    }
 }
 
+static void request_send_data(int sd)
+{
+   unsigned ii;
+   uint8 regflags;
+   uint8 regdata;
+   uint16 pixelcount;
+   unsigned send_len_ret;
+
+
+   // send header
+   send_len_ret = send(sd, (const void*)(&RESP_FRAME_HEADER), sizeof(RESP_FRAME_HEADER), 0);
+   fprintf(stderr,"send_len: %d\n",send_len_ret);
+   if(sizeof(RESP_FRAME_HEADER) != send_len_ret)
+   {
+      fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
+      fflush(stderr);
+      exit(1);
+   }
+
+
+   pixelcount=0;
+
+   // TODO: this needs to check a busy flag!
+
+   REG_CTRL = 0x01;
+
+   while(RESOLUTION>pixelcount)
+   {
+      regflags = REG_FLAGS;
+      if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
+      {
+         /*fprintf( stderr,"full: %d empty: %d",
+                  ((1<<FLAG_SHIFT_FULL)&regflags) ? 1:0,
+                  ((1<<FLAG_SHIFT_EMPTY)&regflags) ? 1:0);*/
+         imgbuf[pixelcount++] = REG_DATA;
+      }
+   }
+
+
+   // transmit data
+   send_len_ret = send(sd, (const void*)(&imgbuf), RESOLUTION, 0);
+   if(RESOLUTION != send_len_ret)
+   {
+      fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
+      fflush(stderr);
+      exit(1);
+   }
+}
 /* TODO
 //
 // printusage: prints a usage string for the program

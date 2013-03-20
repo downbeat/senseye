@@ -75,8 +75,8 @@ assign RDEN = !(bus_read_enable && !EMPTY);
 
 stonyman_ioreg stonyman_ioreg_0( .clk(PCLK),.rst(PRESERN),.wren(bus_write_enable),
                                  .rden(bus_read_enable),.addr(PADDR),
-                                 .ready(ioreg_ready),.datain(PWDATA),.dataout(PRDATA),.full(FULL),
-                                 .empty(EMPTY),.appDatain(PIXELIN),.startCapture(START_CAPTURE) );
+                                 .ready(ioreg_ready),.datain(PWDATA),.dataout(PRDATA),.full(~FULL),
+                                 .empty(~EMPTY),.appDatain(PIXELIN),.startCapture(START_CAPTURE) );
 
 
 endmodule
