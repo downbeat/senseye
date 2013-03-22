@@ -32,7 +32,7 @@ typedef  unsigned long   uint32;
 typedef  unsigned short  uint16;
 typedef  unsigned char   uint8;
 
-#define DEFAULT_PORT            (8080)
+#define DEFAULT_PORT            (80)
 #define MAX_CONNS               (1)
 #define REQ_MAX_LEN             (1024)  // Bytes (chosen arbitrarily)
 #define RESOLUTION_ROWS         (112)

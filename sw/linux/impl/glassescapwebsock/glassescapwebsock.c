@@ -35,7 +35,7 @@
 #define KEY_QUIT              ('q')
 
 #define INSIGHT_SERV_ADDR     ("141.212.11.135")
-#define INSIGHT_SERV_PORT     (8080)
+#define INSIGHT_SERV_PORT     (80)
 
 #define dbgPrintOp(msg,opcode) do { \
                                   if(0!=gFlagDbgOutputOn) \
