@@ -307,7 +307,7 @@ static void request_send_data(int sd)
 
 
    // transmit data
-   send_len_ret = send(sd, (const void*)(&imgbuf), RESOLUTION, 0);
+   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION, 0);
    if(RESOLUTION != send_len_ret)
    {
       fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
