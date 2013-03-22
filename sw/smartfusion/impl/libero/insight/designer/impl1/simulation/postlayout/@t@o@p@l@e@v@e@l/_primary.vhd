@@ -17,9 +17,9 @@ entity TOPLEVEL is
         MAC_TXEN        : out    vl_logic;
         Phy_RMII_CLK    : out    vl_logic;
         SCLK            : out    vl_logic;
+        TP_adcConvComplete: out    vl_logic;
+        TP_adcStartCapture: out    vl_logic;
         UART_0_TXD      : out    vl_logic;
-        adcConvComplete : out    vl_logic;
-        adcStartCapture : out    vl_logic;
         incp            : out    vl_logic;
         incv            : out    vl_logic;
         inphi           : out    vl_logic;

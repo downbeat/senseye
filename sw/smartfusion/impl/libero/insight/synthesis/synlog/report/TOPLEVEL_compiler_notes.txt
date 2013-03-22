@@ -65,9 +65,10 @@
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
 @N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Found RAM cachedValue, depth=8, width=8
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":83:7:83:20|Synthesizing module stonyman_ioreg
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":28:7:28:19|Synthesizing module stonyman_apb3
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":90:7:90:20|Synthesizing module stonyman_ioreg
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":33:7:33:19|Synthesizing module stonyman_apb3
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":111:0:111:5|Trying to extract state machine for register fifoRdenState
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register substate
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register state
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Trying to extract state machine for register state

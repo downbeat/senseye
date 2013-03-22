@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Wed Mar 06 05:39:56 2013
+ ** Date:   Tue Mar 12 21:06:14 2013
 
 
 ****************
@@ -95,5 +95,5 @@ Netlist Resource Report
 
 Wrote Verilog netlist to Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL\FIFO_PIXEL.v.
 
- ** Log Ended:   Wed Mar 06 05:39:58 2013
+ ** Log Ended:   Tue Mar 12 21:06:15 2013
 

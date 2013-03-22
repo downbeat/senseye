@@ -75,9 +75,9 @@
 @N: BN362 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[3] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[2] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[1] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1100 
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1094 
 @N: FP130 |Promoting Net SCLK_c on CLKINT  clkgenerator_0.SCLK_inferred_clock 
-@N: FP130 |Promoting Net CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTllIl114 on CLKINT  I_1101 
+@N: FP130 |Promoting Net counter_0.COUNTe on CLKINT  I_1095 
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 @N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.

@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Wed Mar 06 07:12:08 2013 )</state>
+    <state>GENERATED ( Wed Mar 13 00:15:56 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -110,6 +110,12 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>TP_PREADY</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>psram_data[2]</port-name>
     <direction>INOUT</direction>
     <pin-number>-</pin-number>
@@ -129,6 +135,12 @@
   </io>
   <io>
     <port-name>led[3]</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_WREN</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -154,6 +166,12 @@
   <io>
     <port-name>psram_data[3]</port-name>
     <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_PADDR_BIT2</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -232,6 +250,18 @@
   <io>
     <port-name>psram_data[6]</port-name>
     <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_PSEL</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_EMPTY</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -338,6 +368,18 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>TP_RDEN</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_FULL</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>CS</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
@@ -416,6 +458,12 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>TP_PENABLE</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>CLK50</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
@@ -448,6 +496,12 @@
   <io>
     <port-name>psram_data[1]</port-name>
     <direction>INOUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>TP_PWRITE</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>

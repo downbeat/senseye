@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Wed Mar 06 07:11:59 2013
+// Created by Actel SmartDesign Wed Mar 13 00:15:44 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -79,6 +79,15 @@ TOPLEVEL TOPLEVEL_0 (
     .psram_address( ),
     .MAC_TXD( ),
     .led( ),
+    .TP_RDEN( ),
+    .TP_FULL( ),
+    .TP_EMPTY( ),
+    .TP_PREADY( ),
+    .TP_PWRITE( ),
+    .TP_PENABLE( ),
+    .TP_PSEL( ),
+    .TP_PADDR_BIT2( ),
+    .TP_WREN( ),
 
     // Inouts
     .MAC_MDIO( ),
