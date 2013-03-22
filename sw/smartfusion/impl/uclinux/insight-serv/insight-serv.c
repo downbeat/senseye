@@ -23,6 +23,8 @@
 #include <sys/stat.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+// camera calibration mask
+#include "stonymask_nomask.h"
 
 
 //**************************************************************************************************
@@ -299,7 +301,8 @@ static void request_send_data(int sd)
       regflags = REG_FLAGS;
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
-         imgbuf[pixelcount++] = REG_DATA;
+         imgbuf[pixelcount] = REG_DATA-stonymask[pixelcount];
+         ++pixelcount;
       }
    }
 
