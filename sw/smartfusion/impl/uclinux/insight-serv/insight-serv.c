@@ -63,6 +63,7 @@ typedef  unsigned char   uint8;
 #define FLAG_SHIFT_EMPTY        (1u)
 
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
+// a success header is not currently used
 const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
@@ -142,7 +143,7 @@ int main(int argc, char** argv)
          exit(1);
       }
 
-// FIXME: no fork() in uClinux
+// FIXME: no fork() in uClinux TODO: use vfork() instead (requires exec() to be called)?
 //      pid = fork();
 //      if(0 == pid)
 //      {
@@ -298,9 +299,6 @@ static void request_send_data(int sd)
       regflags = REG_FLAGS;
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
-         /*fprintf( stderr,"full: %d empty: %d",
-                  ((1<<FLAG_SHIFT_FULL)&regflags) ? 1:0,
-                  ((1<<FLAG_SHIFT_EMPTY)&regflags) ? 1:0);*/
          imgbuf[pixelcount++] = REG_DATA;
       }
    }
