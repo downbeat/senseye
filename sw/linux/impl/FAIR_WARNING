@@ -13,6 +13,7 @@ PROPOSED CHANGES TO NAMING
 ===============================================================================
 glassescapstream        => glassescapture 
 glassescapsnapshots     => glassescapture (merge functionality into)
+glassescapwebsock       => glassescapture (merge functionality into)
 frontdisplayandsave     => displayandsave
 glassesreplaystream     => replaycapture
 frontgazecoordsoverlay  => replaycapture (merge functionality into)

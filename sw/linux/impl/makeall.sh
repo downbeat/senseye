@@ -12,6 +12,7 @@ prognames=( 'cvEyeTracker'
             'gazesetgroundtruth'
             'glassescapsnapshots'
             'glassescapstream'
+            'glassescapwebsock'
             'glassesreplaystream'
             'glassesreplaystream_color_hack'
             'ml_rawfeatures_knearest' 
@@ -27,6 +28,7 @@ for ii in ${prognames[*]}; do
       cd $ii
       make
       if [ 0 == $? ]; then
+         chmod u+x $ii
          cp -pf $ii ../bin
       fi
       cd ..
