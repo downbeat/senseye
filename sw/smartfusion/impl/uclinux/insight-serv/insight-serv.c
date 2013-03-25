@@ -24,7 +24,8 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 // camera calibration mask
-#include "stonymask_nomask.h"
+//#include "stonymask_nomask.h"
+#include "stonymask_cam12_3v3_sf.h"
 
 
 //**************************************************************************************************
