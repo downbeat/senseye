@@ -17,7 +17,7 @@ Wrote timing report to file: TOPLEVEL_maxdelay_timing_report.txt
 The Report command succeeded ( 00:00:05 )
 Wrote timing report to file: TOPLEVEL_mindelay_timing_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Wrote timing_violations report to file: TOPLEVEL_maxdelay_timingviolations_report.txt
 
 The Report command succeeded ( 00:00:00 )

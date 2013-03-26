@@ -829,13 +829,13 @@ Selecting top level module TOPLEVEL
 @N: CG179 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":89:7:89:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":92:7:92:14|Synthesizing module stonyman
 
-@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":382:51:382:77|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":388:51:388:77|Read Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":382:51:382:77|Write Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":388:51:388:77|Write Address width 3 does not cover RAM depth
 
-@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Found RAM cachedValue, depth=8, width=8
+@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":127:0:127:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":90:7:90:20|Synthesizing module stonyman_ioreg
 
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":33:7:33:19|Synthesizing module stonyman_apb3
@@ -844,16 +844,15 @@ Selecting top level module TOPLEVEL
 
 @W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":207:14:207:32|No assignment to wire TP_PADDR_BIT2_net_0
 
-@W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":243:14:243:28|No assignment to wire PADDRS0_slice_0
+@W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":244:14:244:28|No assignment to wire PADDRS0_slice_0
 
-@W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":244:14:244:28|No assignment to wire PADDRS0_slice_1
+@W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":245:14:245:28|No assignment to wire PADDRS0_slice_1
 
-@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":1093:17:1093:34|Pruning instance inputConditioner_0 -- not in use ...
+@W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":1094:17:1094:34|Pruning instance inputConditioner_0 -- not in use ...
 
-@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":82:14:82:26|*Output TP_PADDR_BIT2 has undriven bits -- simulation mismatch possible.
-@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":62:14:62:20|Input CAPTURE is unused
-@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":53:6:53:9|Input BUSY is unused
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":111:0:111:5|Trying to extract state machine for register fifoRdenState
+@W: CL157 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":81:14:81:26|*Output TP_PADDR_BIT2 has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":61:14:61:20|Input CAPTURE is unused
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":112:0:112:5|Trying to extract state machine for register fifoRdenState
 Extracted state machine for register fifoRdenState
 State machine has 4 reachable states with original encodings of:
    00
@@ -864,13 +863,10 @@ State machine has 4 reachable states with original encodings of:
 
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":98:21:98:26|Input port bits 7 to 1 of datain[7:0] are unused
 
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Pruning register bit 31 of counterWait[31:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":127:0:127:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":127:0:127:5|Pruning register bit 31 of counterWait[31:0] 
 
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Register bit counterWait[30] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Pruning register bit 30 of counterWait[30:0] 
-
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":127:0:127:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
 State machine has 18 reachable states with original encodings of:
    00000
@@ -891,7 +887,7 @@ State machine has 18 reachable states with original encodings of:
    01111
    10000
    10001
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":122:0:122:5|Trying to extract state machine for register state
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":127:0:127:5|Trying to extract state machine for register state
 Extracted state machine for register state
 State machine has 13 reachable states with original encodings of:
    0000

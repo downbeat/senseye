@@ -3,7 +3,7 @@ Timing Report Min Delay Analysis
 SmartTime Version v10.1 SP3
 Actel Corporation - Actel Designer Software Release v10.1 SP3 (Version 10.1.3.1)
 Copyright (c) 1989-2013
-Date: Thu Mar 21 19:55:32 2013
+Date: Mon Mar 25 20:15:18 2013
 
 
 Design: TOPLEVEL
@@ -31,8 +31,8 @@ Required Period (ns):       20.000
 Required Frequency (MHz):   50.000
 External Setup (ns):        N/A
 External Hold (ns):         N/A
-Min Clock-To-Out (ns):      3.001
-Max Clock-To-Out (ns):      7.724
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               mss_aclk
 Period (ns):                N/A
@@ -105,14 +105,14 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               clkgenerator_0/clkCameraSS:Q
-Period (ns):                39.177
-Frequency (MHz):            25.525
+Period (ns):                33.855
+Frequency (MHz):            29.538
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        1.696
-External Hold (ns):         -0.272
-Min Clock-To-Out (ns):      2.870
-Max Clock-To-Out (ns):      11.999
+External Setup (ns):        2.057
+External Hold (ns):         -0.375
+Min Clock-To-Out (ns):      2.976
+Max Clock-To-Out (ns):      15.641
 
 Clock Domain:               MSS_CORE_0/MSS_CCC_0/I_XTLOSC:CLKOUT
 Period (ns):                N/A
@@ -163,67 +163,7 @@ END SET External Hold
 
 SET Clock to Output
 
-Path 1
-  From:                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:CLKC
-  To:                          Phy_RMII_CLK
-  Delay (ns):                  1.898
-  Slack (ns):
-  Arrival (ns):                3.001
-  Required (ns):
-  Clock to Out (ns):           3.001
-
-
-Expanded Path 1
-  From: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:CLKC
-  To: Phy_RMII_CLK
-  data arrival time                              3.001
-  data required time                         -   N/C
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        CLK50
-               +     0.000          Clock source
-  0.000                        CLK50 (r)
-               +     0.000          net: CLK50
-  0.000                        CLK50_pad/U0/U0:PAD (r)
-               +     0.386          cell: ADLIB:IOPAD_IN
-  0.386                        CLK50_pad/U0/U0:Y (r)
-               +     0.000          net: CLK50_pad/U0/NET1
-  0.386                        CLK50_pad/U0/U1:YIN (r)
-               +     0.018          cell: ADLIB:IOIN_IB
-  0.404                        CLK50_pad/U0/U1:Y (r)
-               +     0.490          net: CLK50_c
-  0.894                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE3:PIN3 (r)
-               +     0.209          cell: ADLIB:MSS_CCC_GL_IF
-  1.103                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE3:PIN3INT (r)
-               +     0.000          net: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/CLKC_INT
-  1.103                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:CLKC (r)
-               +     0.237          cell: ADLIB:MSS_CCC_IP
-  1.340                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLC (r)
-               +     0.000          net: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/GLC_INT
-  1.340                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE3:PIN5INT (r)
-               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
-  1.340                        MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE3:PIN5 (r)
-               +     0.327          net: Phy_RMII_CLK_c
-  1.667                        Phy_RMII_CLK_pad/U0/U1:D (r)
-               +     0.265          cell: ADLIB:IOTRI_OB_EB
-  1.932                        Phy_RMII_CLK_pad/U0/U1:DOUT (r)
-               +     0.000          net: Phy_RMII_CLK_pad/U0/NET1
-  1.932                        Phy_RMII_CLK_pad/U0/U0:D (r)
-               +     1.069          cell: ADLIB:IOPAD_TRI
-  3.001                        Phy_RMII_CLK_pad/U0/U0:PAD (r)
-               +     0.000          net: Phy_RMII_CLK
-  3.001                        Phy_RMII_CLK (r)
-                                    
-  3.001                        data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLK50
-               +     0.000          Clock source
-  N/C                          CLK50 (r)
-                                    
-  N/C                          Phy_RMII_CLK (r)
-
+No Path
 
 END SET Clock to Output
 
@@ -610,55 +550,55 @@ Clock Domain clkgenerator_0/clkCameraSS:Q
 SET Register to Register
 
 Path 1
-  From:                        adc081s101_0/dataout[5]:CLK
-  To:                          stonyman_0/pixelout[5]:D
-  Delay (ns):                  0.373
+  From:                        counter_0/COUNT[18]:CLK
+  To:                          FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD2
+  Delay (ns):                  0.473
   Slack (ns):
-  Arrival (ns):                1.203
+  Arrival (ns):                1.752
   Required (ns):
   Hold (ns):                   0.000
 
 Path 2
-  From:                        adc081s101_0/dataout[2]:CLK
-  To:                          stonyman_0/pixelout[2]:D
-  Delay (ns):                  0.373
+  From:                        adc081s101_0/dataout[7]:CLK
+  To:                          stonyman_0/pixelout[7]:D
+  Delay (ns):                  0.372
   Slack (ns):
-  Arrival (ns):                1.210
+  Arrival (ns):                1.656
   Required (ns):
   Hold (ns):                   0.000
 
 Path 3
-  From:                        adc081s101_0/dataout[7]:CLK
-  To:                          stonyman_0/pixelout[7]:D
+  From:                        adc081s101_0/dataout[2]:CLK
+  To:                          stonyman_0/pixelout[2]:D
   Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.203
+  Arrival (ns):                1.643
   Required (ns):
   Hold (ns):                   0.000
 
 Path 4
-  From:                        FIFO_TEST_COUNTER_0/DFN1C0_DVLDI:CLK
-  To:                          FIFO_TEST_COUNTER_0/DFN1E1C0_Q[1]:E
-  Delay (ns):                  0.376
+  From:                        counter_0/COUNT[22]:CLK
+  To:                          FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD6
+  Delay (ns):                  0.503
   Slack (ns):
-  Arrival (ns):                1.220
+  Arrival (ns):                1.782
   Required (ns):
   Hold (ns):                   0.000
 
 Path 5
-  From:                        adc081s101_0/dataout[3]:CLK
-  To:                          adc081s101_0/dataout[4]:D
-  Delay (ns):                  0.398
+  From:                        counter_0/COUNT[24]:CLK
+  To:                          FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD9
+  Delay (ns):                  0.506
   Slack (ns):
-  Arrival (ns):                1.240
+  Arrival (ns):                1.785
   Required (ns):
   Hold (ns):                   0.000
 
 
 Expanded Path 1
-  From: adc081s101_0/dataout[5]:CLK
-  To: stonyman_0/pixelout[5]:D
-  data arrival time                              1.203
+  From: counter_0/COUNT[18]:CLK
+  To: FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD2
+  data arrival time                              1.752
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -666,31 +606,31 @@ Expanded Path 1
   0.000                        clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   0.000                        clkgenerator_0/clkCameraSS:Q (r)
-               +     0.161          net: clkgenerator_0/SCLK_i
-  0.161                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
+               +     0.587          net: clkgenerator_0/SCLK_i
+  0.587                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
-  0.531                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.299          net: SCLK_c
-  0.830                        adc081s101_0/dataout[5]:CLK (r)
+  0.957                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
+               +     0.322          net: SCLK_c
+  1.279                        counter_0/COUNT[18]:CLK (r)
                +     0.236          cell: ADLIB:DFN1E1
-  1.066                        adc081s101_0/dataout[5]:Q (r)
-               +     0.137          net: adc081s101_0_dataout[5]
-  1.203                        stonyman_0/pixelout[5]:D (r)
+  1.515                        counter_0/COUNT[18]:Q (r)
+               +     0.237          net: counter_0_COUNT[18]
+  1.752                        FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD2 (r)
                                     
-  1.203                        data arrival time
+  1.752                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   N/C                          clkgenerator_0/clkCameraSS:Q (r)
-               +     0.161          net: clkgenerator_0/SCLK_i
+               +     0.587          net: clkgenerator_0/SCLK_i
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.329          net: SCLK_c
-  N/C                          stonyman_0/pixelout[5]:CLK (r)
-               +     0.000          Library hold time: ADLIB:DFN1E0
-  N/C                          stonyman_0/pixelout[5]:D
+               +     0.454          net: SCLK_c
+  N/C                          FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WCLK (r)
+               +     0.000          Library hold time: ADLIB:RAM512X18
+  N/C                          FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]:WD2
 
 
 END SET Register to Register
@@ -702,18 +642,18 @@ SET External Hold
 Path 1
   From:                        MISO
   To:                          adc081s101_0/dataout[0]:D
-  Delay (ns):                  1.277
+  Delay (ns):                  1.897
   Slack (ns):
-  Arrival (ns):                1.277
+  Arrival (ns):                1.897
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.272
+  External Hold (ns):          -0.375
 
 
 Expanded Path 1
   From: MISO
   To: adc081s101_0/dataout[0]:D
-  data arrival time                              1.277
+  data arrival time                              1.897
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -727,24 +667,24 @@ Expanded Path 1
   0.265                        MISO_pad/U0/U1:YIN (f)
                +     0.016          cell: ADLIB:IOIN_IB
   0.281                        MISO_pad/U0/U1:Y (f)
-               +     0.138          net: MISO_c
-  0.419                        adc081s101_0/dataout_RNO[0]:A (f)
+               +     1.256          net: MISO_c
+  1.537                        adc081s101_0/dataout_RNO[0]:A (f)
                +     0.219          cell: ADLIB:INV
-  0.638                        adc081s101_0/dataout_RNO[0]:Y (r)
-               +     0.639          net: adc081s101_0/MISO_c_i
-  1.277                        adc081s101_0/dataout[0]:D (r)
+  1.756                        adc081s101_0/dataout_RNO[0]:Y (r)
+               +     0.141          net: adc081s101_0/MISO_c_i
+  1.897                        adc081s101_0/dataout[0]:D (r)
                                     
-  1.277                        data arrival time
+  1.897                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   N/C                          clkgenerator_0/clkCameraSS:Q (r)
-               +     0.193          net: clkgenerator_0/SCLK_i
+               +     0.705          net: clkgenerator_0/SCLK_i
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.445          cell: ADLIB:CLKSRC
   N/C                          clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.367          net: SCLK_c
+               +     0.372          net: SCLK_c
   N/C                          adc081s101_0/dataout[0]:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1E1
   N/C                          adc081s101_0/dataout[0]:D
@@ -757,55 +697,55 @@ END SET External Hold
 SET Clock to Output
 
 Path 1
-  From:                        stonyman_0/resp:CLK
-  To:                          resp
-  Delay (ns):                  2.028
-  Slack (ns):
-  Arrival (ns):                2.870
-  Required (ns):
-  Clock to Out (ns):           2.870
-
-Path 2
-  From:                        stonyman_0/resv:CLK
-  To:                          resv
-  Delay (ns):                  2.157
-  Slack (ns):
-  Arrival (ns):                2.993
-  Required (ns):
-  Clock to Out (ns):           2.993
-
-Path 3
-  From:                        stonyman_0/incp:CLK
-  To:                          incp
-  Delay (ns):                  2.166
-  Slack (ns):
-  Arrival (ns):                3.008
-  Required (ns):
-  Clock to Out (ns):           3.008
-
-Path 4
   From:                        stonyman_0/inphi:CLK
   To:                          inphi
-  Delay (ns):                  2.304
+  Delay (ns):                  1.710
   Slack (ns):
-  Arrival (ns):                3.154
+  Arrival (ns):                2.976
   Required (ns):
-  Clock to Out (ns):           3.154
+  Clock to Out (ns):           2.976
+
+Path 2
+  From:                        FIFO_PIXEL_0/DFN1C0_FULL:CLK
+  To:                          TP_FULL
+  Delay (ns):                  2.260
+  Slack (ns):
+  Arrival (ns):                3.534
+  Required (ns):
+  Clock to Out (ns):           3.534
+
+Path 3
+  From:                        FIFO_PIXEL_0/DFN1P0_EMPTY:CLK
+  To:                          TP_EMPTY
+  Delay (ns):                  2.294
+  Slack (ns):
+  Arrival (ns):                3.568
+  Required (ns):
+  Clock to Out (ns):           3.568
+
+Path 4
+  From:                        stonyman_apb3_0/stonyman_ioreg_0/startCapture:CLK
+  To:                          TP_START_CAPTURE
+  Delay (ns):                  2.314
+  Slack (ns):
+  Arrival (ns):                3.580
+  Required (ns):
+  Clock to Out (ns):           3.580
 
 Path 5
-  From:                        stonyman_0/incv:CLK
-  To:                          incv
-  Delay (ns):                  2.340
+  From:                        stonyman_0/busy:CLK
+  To:                          TP_BUSY
+  Delay (ns):                  2.528
   Slack (ns):
-  Arrival (ns):                3.179
+  Arrival (ns):                3.800
   Required (ns):
-  Clock to Out (ns):           3.179
+  Clock to Out (ns):           3.800
 
 
 Expanded Path 1
-  From: stonyman_0/resp:CLK
-  To: resp
-  data arrival time                              2.870
+  From: stonyman_0/inphi:CLK
+  To: inphi
+  data arrival time                              2.976
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -813,33 +753,33 @@ Expanded Path 1
   0.000                        clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   0.000                        clkgenerator_0/clkCameraSS:Q (r)
-               +     0.161          net: clkgenerator_0/SCLK_i
-  0.161                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
+               +     0.587          net: clkgenerator_0/SCLK_i
+  0.587                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:A (r)
                +     0.370          cell: ADLIB:CLKSRC
-  0.531                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
-               +     0.311          net: SCLK_c
-  0.842                        stonyman_0/resp:CLK (r)
+  0.957                        clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC:Y (r)
+               +     0.309          net: SCLK_c
+  1.266                        stonyman_0/inphi:CLK (r)
                +     0.236          cell: ADLIB:DFN1
-  1.078                        stonyman_0/resp:Q (r)
-               +     0.480          net: resp_c
-  1.558                        resp_pad/U0/U1:D (r)
+  1.502                        stonyman_0/inphi:Q (r)
+               +     0.162          net: inphi_c
+  1.664                        inphi_pad/U0/U1:D (r)
                +     0.243          cell: ADLIB:IOTRI_OB_EB
-  1.801                        resp_pad/U0/U1:DOUT (r)
-               +     0.000          net: resp_pad/U0/NET1
-  1.801                        resp_pad/U0/U0:D (r)
+  1.907                        inphi_pad/U0/U1:DOUT (r)
+               +     0.000          net: inphi_pad/U0/NET1
+  1.907                        inphi_pad/U0/U0:D (r)
                +     1.069          cell: ADLIB:IOPAD_TRI
-  2.870                        resp_pad/U0/U0:PAD (r)
-               +     0.000          net: resp
-  2.870                        resp (r)
+  2.976                        inphi_pad/U0/U0:PAD (r)
+               +     0.000          net: inphi
+  2.976                        inphi (r)
                                     
-  2.870                        data arrival time
+  2.976                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          clkgenerator_0/clkCameraSS:Q
                +     0.000          Clock source
   N/C                          clkgenerator_0/clkCameraSS:Q (r)
                                     
-  N/C                          resp (r)
+  N/C                          inphi (r)
 
 
 END SET Clock to Output

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Mar 13 00:15:44 2013
+// Created by SmartDesign Mon Mar 25 17:06:43 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -22,8 +22,8 @@ module TOPLEVEL(
     MAC_MDC,
     MAC_TXD,
     MAC_TXEN,
-    Phy_RMII_CLK,
     SCLK,
+    TP_BUSY,
     TP_EMPTY,
     TP_FULL,
     TP_PADDR_BIT2,
@@ -32,9 +32,8 @@ module TOPLEVEL(
     TP_PSEL,
     TP_PWRITE,
     TP_RDEN,
+    TP_START_CAPTURE,
     TP_WREN,
-    TP_adcConvComplete,
-    TP_adcStartCapture,
     UART_0_TXD,
     incp,
     incv,
@@ -75,8 +74,8 @@ output        CS;
 output        MAC_MDC;
 output [1:0]  MAC_TXD;
 output        MAC_TXEN;
-output        Phy_RMII_CLK;
 output        SCLK;
+output        TP_BUSY;
 output        TP_EMPTY;
 output        TP_FULL;
 output        TP_PADDR_BIT2;
@@ -85,9 +84,8 @@ output        TP_PREADY;
 output        TP_PSEL;
 output        TP_PWRITE;
 output        TP_RDEN;
+output        TP_START_CAPTURE;
 output        TP_WREN;
-output        TP_adcConvComplete;
-output        TP_adcStartCapture;
 output        UART_0_TXD;
 output        incp;
 output        incv;
@@ -170,6 +168,8 @@ wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
 wire   [7:0]  led_net_0;
+wire   [3:0]  led_0;
+wire   [3:0]  led_1;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -194,22 +194,22 @@ wire          ncs1;
 wire          noe0;
 wire          noe1;
 wire          nwe;
-wire          Phy_RMII_CLK_net_0;
+wire          Phy_RMII_CLK;
 wire   [24:0] psram_address_net_0;
 wire          resp_net_0;
 wire          resv_net_0;
 wire          SCLK_net_0;
-wire          stonyman_apb3_0_START_CAPTURE;
-wire          TP_adcConvComplete_net_0;
-wire          TP_adcStartCapture_net_0;
+wire          TP_adcConvComplete;
+wire          TP_adcStartCapture;
+wire          TP_BUSY_net_0;
 wire          TP_EMPTY_net_0;
 wire          TP_FULL_net_0;
 wire   [2:2]  TP_PADDR_BIT2_net_0;
 wire          TP_RDEN_net_0;
+wire          TP_START_CAPTURE_net_0;
 wire          TP_WREN_net_0;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
-wire          Phy_RMII_CLK_net_1;
 wire          ncs0_net_0;
 wire          nwe_net_0;
 wire          ncs1_net_0;
@@ -225,12 +225,6 @@ wire          resp_net_1;
 wire          resv_net_1;
 wire          CS_net_1;
 wire          SCLK_net_1;
-wire          TP_adcStartCapture_net_1;
-wire          TP_adcConvComplete_net_1;
-wire   [1:0]  nbyte_en_net_0;
-wire   [24:0] psram_address_net_1;
-wire   [1:0]  MAC_TXD_net_1;
-wire   [7:0]  led_net_1;
 wire          TP_RDEN_net_1;
 wire          TP_FULL_net_1;
 wire          TP_EMPTY_net_1;
@@ -240,6 +234,13 @@ wire          CoreAPB3_0_APBmslave0_0_PENABLE_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PSELx_net_0;
 wire          TP_PADDR_BIT2_net_1;
 wire          TP_WREN_net_1;
+wire   [1:0]  nbyte_en_net_0;
+wire   [24:0] psram_address_net_1;
+wire   [1:0]  MAC_TXD_net_1;
+wire   [3:0]  led_1_net_0;
+wire   [7:4]  led_0_net_0;
+wire          TP_BUSY_net_1;
+wire          TP_START_CAPTURE_net_1;
 wire   [0:1]  PADDRS0_slice_0;
 wire   [3:23] PADDRS0_slice_1;
 //--------------------------------------------------------------------
@@ -364,8 +365,6 @@ assign rs485_de                              = 1'b1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign Phy_RMII_CLK_net_1                    = Phy_RMII_CLK_net_0;
-assign Phy_RMII_CLK                          = Phy_RMII_CLK_net_1;
 assign ncs0_net_0                            = ncs0;
 assign psram_ncs0                            = ncs0_net_0;
 assign nwe_net_0                             = nwe;
@@ -396,18 +395,6 @@ assign CS_net_1                              = CS_net_0;
 assign CS                                    = CS_net_1;
 assign SCLK_net_1                            = SCLK_net_0;
 assign SCLK                                  = SCLK_net_1;
-assign TP_adcStartCapture_net_1              = TP_adcStartCapture_net_0;
-assign TP_adcStartCapture                    = TP_adcStartCapture_net_1;
-assign TP_adcConvComplete_net_1              = TP_adcConvComplete_net_0;
-assign TP_adcConvComplete                    = TP_adcConvComplete_net_1;
-assign nbyte_en_net_0                        = nbyte_en;
-assign psram_nbyte_en[1:0]                   = nbyte_en_net_0;
-assign psram_address_net_1                   = psram_address_net_0;
-assign psram_address[24:0]                   = psram_address_net_1;
-assign MAC_TXD_net_1                         = MAC_TXD_net_0;
-assign MAC_TXD[1:0]                          = MAC_TXD_net_1;
-assign led_net_1                             = led_net_0;
-assign led[7:0]                              = led_net_1;
 assign TP_RDEN_net_1                         = TP_RDEN_net_0;
 assign TP_RDEN                               = TP_RDEN_net_1;
 assign TP_FULL_net_1                         = TP_FULL_net_0;
@@ -426,6 +413,20 @@ assign TP_PADDR_BIT2_net_1                   = TP_PADDR_BIT2_net_0[2];
 assign TP_PADDR_BIT2                         = TP_PADDR_BIT2_net_1;
 assign TP_WREN_net_1                         = TP_WREN_net_0;
 assign TP_WREN                               = TP_WREN_net_1;
+assign nbyte_en_net_0                        = nbyte_en;
+assign psram_nbyte_en[1:0]                   = nbyte_en_net_0;
+assign psram_address_net_1                   = psram_address_net_0;
+assign psram_address[24:0]                   = psram_address_net_1;
+assign MAC_TXD_net_1                         = MAC_TXD_net_0;
+assign MAC_TXD[1:0]                          = MAC_TXD_net_1;
+assign led_1_net_0                           = led_1;
+assign led[3:0]                              = led_1_net_0;
+assign led_0_net_0                           = led_0;
+assign led[7:4]                              = led_0_net_0;
+assign TP_BUSY_net_1                         = TP_BUSY_net_0;
+assign TP_BUSY                               = TP_BUSY_net_1;
+assign TP_START_CAPTURE_net_1                = TP_START_CAPTURE_net_0;
+assign TP_START_CAPTURE                      = TP_START_CAPTURE_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
@@ -465,24 +466,24 @@ assign CoreAPB3_0_APBmslave1_PADDR_0_31to24 = 8'h0;
 assign CoreAPB3_0_APBmslave1_PADDR_0_23to0 = CoreAPB3_0_APBmslave1_PADDR[23:0];
 assign CoreAPB3_0_APBmslave1_PADDR_0 = { CoreAPB3_0_APBmslave1_PADDR_0_31to24, CoreAPB3_0_APBmslave1_PADDR_0_23to0 };
 
-wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 wire   [31:20]MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20;
 wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0;
+wire   [19:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20 = 12'h0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR[19:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_31to20, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HADDR_0_19to0 };
 
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 wire   [0:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0;
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP[0:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0_0to0 };
 
-wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 wire   [2:2]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2;
 wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0;
 wire   [2:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0;
+wire   [1:0]  MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2 = 1'b0;
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 = MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE[1:0];
 assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_2to2, MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0_1to0 };
@@ -495,11 +496,11 @@ adc081s101 adc081s101_0(
         // Inputs
         .clk                ( SCLK_net_0 ),
         .reset              ( MSS_CORE2_0_M2F_RESET_N ),
-        .startCapture       ( TP_adcStartCapture_net_0 ),
+        .startCapture       ( TP_adcStartCapture ),
         .miso               ( MISO ),
         // Outputs
         .cs                 ( CS_net_0 ),
-        .conversionComplete ( TP_adcConvComplete_net_0 ),
+        .conversionComplete ( TP_adcConvComplete ),
         .dataout            ( adc081s101_0_dataout ) 
         );
 
@@ -1064,15 +1065,15 @@ fifo_32bit_apb3 fifo_32bit_apb3_0(
 //--------FIFO_PIXEL
 FIFO_PIXEL FIFO_PIXEL_0(
         // Inputs
-        .DATA  ( led_net_0 ),
         .WEN   ( TP_WREN_net_0 ),
         .REN   ( TP_RDEN_net_0 ),
         .CLK   ( SCLK_net_0 ),
         .RESET ( MSS_CORE2_0_M2F_RESET_N ),
+        .DATA  ( led_net_0 ),
         // Outputs
-        .Q     ( FIFO_PIXEL_0_Q ),
         .FULL  ( TP_FULL_net_0 ),
-        .EMPTY ( TP_EMPTY_net_0 ) 
+        .EMPTY ( TP_EMPTY_net_0 ),
+        .Q     ( FIFO_PIXEL_0_Q ) 
         );
 
 //--------FIFO_TEST_COUNTER
@@ -1116,7 +1117,7 @@ MSS_CORE2 MSS_CORE2_0(
         // Outputs
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),
-        .GLC         ( Phy_RMII_CLK_net_0 ),
+        .GLC         ( Phy_RMII_CLK ),
         .FAB_CLK     ( MSS_CORE2_0_FAB_CLK ),
         .M2F_RESET_N ( MSS_CORE2_0_M2F_RESET_N ),
         .UART_0_TXD  ( UART_0_TXD_net_0 ),
@@ -1168,9 +1169,9 @@ stonyman stonyman_0(
         // Inputs
         .clk             ( SCLK_net_0 ),
         .reset           ( MSS_CORE2_0_M2F_RESET_N ),
-        .startCapture    ( stonyman_apb3_0_START_CAPTURE ),
-        .adcConvComplete ( TP_adcConvComplete_net_0 ),
+        .startCapture    ( TP_START_CAPTURE_net_0 ),
         .pixelin         ( adc081s101_0_dataout ),
+        .adcConvComplete ( TP_adcConvComplete ),
         // Outputs
         .resp            ( resp_net_0 ),
         .incp            ( incp_net_0 ),
@@ -1178,10 +1179,11 @@ stonyman stonyman_0(
         .incv            ( incv_net_0 ),
         .inphi           ( inphi_net_0 ),
         .writeEnable     ( TP_WREN_net_0 ),
-        .startAdcCapture ( TP_adcStartCapture_net_0 ),
         .pixelout        ( led_net_0 ),
-        .tp_stateout     (  ),
-        .tp_substateout  (  ) 
+        .startAdcCapture ( TP_adcStartCapture ),
+        .busy            ( TP_BUSY_net_0 ),
+        .tp_stateout     ( led_0 ),
+        .tp_substateout  ( led_1 ) 
         );
 
 //--------stonyman_apb3
@@ -1194,7 +1196,7 @@ stonyman_apb3 stonyman_apb3_0(
         .PWRITE        ( CoreAPB3_0_APBmslave0_0_PWRITE ),
         .FULL          ( TP_FULL_net_0 ),
         .EMPTY         ( TP_EMPTY_net_0 ),
-        .BUSY          ( GND_net ),
+        .BUSY          ( TP_BUSY_net_0 ),
         .PADDR         ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
         .PWDATA        ( CoreAPB3_0_APBmslave0_0_PWDATA_0 ),
         .PIXELIN       ( FIFO_PIXEL_0_Q ),
@@ -1202,7 +1204,7 @@ stonyman_apb3 stonyman_apb3_0(
         .PREADY        ( CoreAPB3_0_APBmslave0_0_PREADY ),
         .PSLVERR       ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
         .RDEN          ( TP_RDEN_net_0 ),
-        .START_CAPTURE ( stonyman_apb3_0_START_CAPTURE ),
+        .START_CAPTURE ( TP_START_CAPTURE_net_0 ),
         .PRDATA        ( CoreAPB3_0_APBmslave0_0_PRDATA ) 
         );
 
