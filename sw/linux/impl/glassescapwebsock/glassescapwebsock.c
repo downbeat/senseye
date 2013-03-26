@@ -81,8 +81,6 @@ int main(int argc, char** argv)
    unsigned recv_len_total;
    unsigned char recv_buf[256*1024];    // huge because I am a lazy man
 
-   struct timespec sleeptime;
-
    struct sockaddr_in sockaddr_server;
 
 
@@ -213,23 +211,13 @@ int main(int argc, char** argv)
       }
 #endif
 
-// russ: this stuff is mostly to debug
-#define FLAG_INDUCED_FPS  (1)
-#if (0==(FLAG_INDUCED_FPS))
+      /* russ: removed this so that it streams video
       cc = getch();
       // look for ESC key
       if(KEY_QUIT == cc)
       {
          break;
-      }
-#else
-#define NS_PER_SEC              (1000*1000*1000)
-#define DESIRED_FPS  (1)
-      sleeptime.tv_sec  = ((unsigned long)((1/DESIRED_FPS)*NS_PER_SEC)) / NS_PER_SEC;
-      sleeptime.tv_nsec = ((unsigned long)((1/DESIRED_FPS)*NS_PER_SEC)) % NS_PER_SEC;
-      // TODO: good practice to check return value
-      (void)nanosleep(&sleeptime, NULL);
-#endif
+      }*/
    }
 
 
