@@ -79,15 +79,15 @@ assign RDEN = !(ioreg_rden && !EMPTY);
 stonyman_ioreg stonyman_ioreg_0( .clk(PCLK),.rst(PRESERN),.wren(bus_write_enable),
                                  .rden(bus_read_enable),.addr(PADDR),.ready(ioreg_ready),
                                  .fifoRden(ioreg_rden),.datain(PWDATA),.dataout(PRDATA),.full(FULL),
-                                 .empty(EMPTY),.appDatain(PIXELIN),.startCapture(START_CAPTURE) );
-
+                                 .empty(EMPTY),.busy(BUSY),.appDatain(PIXELIN),
+                                 .startCapture(START_CAPTURE) );
 
 endmodule
 
 
 //////////////////////////////////////////////////////////////////////
 // stonyman_ioreg
-module stonyman_ioreg(clk, rst, wren, rden, addr, ready, fifoRden, datain, dataout, full, empty, appDatain, startCapture);
+module stonyman_ioreg(clk, rst, wren, rden, addr, ready, fifoRden, datain, dataout, full, empty, busy, appDatain, startCapture);
 input clk;
 input rst;
 input wren;
@@ -100,6 +100,7 @@ output reg [(`WIDTH-1):0] dataout;
 
 input full;
 input empty;
+input busy;
 input [(`WIDTH-1):0] appDatain;
 
 output reg startCapture;
@@ -123,7 +124,7 @@ begin
          if(`OFFSET_REG_STATUS == (`MASK_REG_RANGE&addr))
          begin
             // TODO: support BUSY
-            dataout <= {`REG_FLAGS_RESERVED,empty,full};
+            dataout <= {`REG_FLAGS_RESERVED,busy,empty,full};
             ready <= 1'b1;
          end
          else if(`OFFSET_REG_DATA == (`MASK_REG_RANGE&addr))
@@ -179,7 +180,11 @@ begin
       end
       else
       begin
-         startCapture <= 1'b1;
+         // wait for startCapture to be acknowledged
+         if((1'b0==startCapture) && (1'b1==busy))
+         begin
+            startCapture <= 1'b1;
+         end
          ready <= 1'b0;
       end
    end

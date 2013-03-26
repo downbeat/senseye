@@ -64,6 +64,7 @@ typedef  unsigned char   uint8;
 
 #define FLAG_SHIFT_FULL         (0u)
 #define FLAG_SHIFT_EMPTY        (1u)
+#define FLAG_SHIFT_BUSY         (2u)
 
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
 // a success header is not currently used
@@ -293,9 +294,13 @@ static void request_send_data(int sd)
 
    pixelcount=0;
 
-   // TODO: this needs to check a busy flag!
 
+   // FIXME: best practice dictates that in the even of hardware failure,
+   //        we should NOT go into an infinite loop!
+   // BUSY wait (get it!?)
+   do {/*nothing*/} while(0!=((1<<FLAG_SHIFT_BUSY)&REG_FLAGS));
    REG_CTRL = 0x01;
+
 
    while(RESOLUTION>pixelcount)
    {
@@ -307,10 +312,19 @@ static void request_send_data(int sd)
       }
    }
 
+   // transmit first half of data
+   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION/2, 0);
+   if((RESOLUTION/2) != send_len_ret)
+   {
+      fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
+      fflush(stderr);
+      exit(1);
+   }
 
-   // transmit data
-   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION, 0);
-   if(RESOLUTION != send_len_ret)
+
+   // transmit rest of data
+   send_len_ret = send(sd, (const void*)(imgbuf+(RESOLUTION/2)), RESOLUTION/2, 0);
+   if((RESOLUTION/2) != send_len_ret)
    {
       fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
       fflush(stderr);
