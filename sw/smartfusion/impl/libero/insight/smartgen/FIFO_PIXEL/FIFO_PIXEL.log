@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Tue Mar 12 21:06:14 2013
+ ** Date:   Wed Mar 27 00:40:15 2013
 
 
 ****************
@@ -18,8 +18,8 @@ Reset                           : Active Low
 Read Enable                     : Active Low
 Write Depth                     : 4096
 Write Width                     : 8
-Read Depth                      : 4096
-Read Width                      : 8
+Read Depth                      : 1024
+Read Width                      : 32
 Almost Full                     : 65536
 Almost Empty                    : 65536
 Clocks                          : Single Read/Write Clock
@@ -63,22 +63,22 @@ Portname Memory Read Enable     :
 Portname Clock                  : CLK
 
 Cascade Configuration:
-     Port A configuration       : 512x8
+     Port A configuration       : 2048x2
      Port B configuration       : 512x8
-     Number of blocks depth wise: 8
-     Number of blocks width wise: 1
+     Number of blocks depth wise: 2
+     Number of blocks width wise: 4
 
 **************
 Compile Report
 **************
 
-Warning:  CMP503: Remapped 14 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
+Warning:  CMP503: Remapped 34 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
 
 Netlist Resource Report
 =======================
 
     Microcontroller Subsystem  Used:      0  Total:      1   (0.00%)
-    Fabric                     Used:    406  Total:  11520   (3.52%)
+    Fabric                     Used:    310  Total:  11520   (2.69%)
     Fabric IO (W/ clocks)      Used:      0  Total:    128   (0.00%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -95,5 +95,5 @@ Netlist Resource Report
 
 Wrote Verilog netlist to Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL\FIFO_PIXEL.v.
 
- ** Log Ended:   Tue Mar 12 21:06:15 2013
+ ** Log Ended:   Wed Mar 27 00:40:17 2013
 

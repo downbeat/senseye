@@ -71,13 +71,13 @@
       <spirit:signal>
         <spirit:name>PWDATA</spirit:name>
         <spirit:direction>in</spirit:direction>
-        <spirit:left>7</spirit:left>
+        <spirit:left>31</spirit:left>
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
         <spirit:name>PRDATA</spirit:name>
         <spirit:direction>out</spirit:direction>
-        <spirit:left>7</spirit:left>
+        <spirit:left>31</spirit:left>
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
@@ -97,9 +97,9 @@
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>PIXELIN</spirit:name>
+        <spirit:name>PIXELSIN</spirit:name>
         <spirit:direction>in</spirit:direction>
-        <spirit:left>7</spirit:left>
+        <spirit:left>31</spirit:left>
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
