@@ -24,8 +24,8 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 // camera calibration mask
-//#include "stonymask_nomask.h"
-#include "stonymask_cam12_3v3_sf.h"
+#include "stonymask_nomask.h"
+//#include "stonymask_cam12_3v3_sf.h"
 
 
 //**************************************************************************************************
@@ -275,8 +275,8 @@ static void request_handler(int sd)
 static void request_send_data(int sd)
 {
    unsigned ii;
-   uint8 regflags;
-   uint8 regdata;
+   uint32 regflags;
+   uint32 regdata;
    uint16 pixelcount;
    unsigned send_len_ret;
 
@@ -299,7 +299,7 @@ static void request_send_data(int sd)
    //        we should NOT go into an infinite loop!
    // BUSY wait (get it!?)
    do {/*nothing*/} while(0!=((1<<FLAG_SHIFT_BUSY)&REG_FLAGS));
-   REG_CTRL = 0x01;
+   REG_CTRL = 1ul;
 
 
    while(RESOLUTION>pixelcount)
@@ -307,24 +307,24 @@ static void request_send_data(int sd)
       regflags = REG_FLAGS;
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
-         imgbuf[pixelcount] = REG_DATA-stonymask[pixelcount];
-         ++pixelcount;
+         regdata=REG_DATA;
+/*         fprintf(stderr,"regdata: %d\n",regdata);
+         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",regdata&0xFF,
+                  (regdata>>8)&0xFF,(regdata>>);*/
+         imgbuf[pixelcount]   = (regdata>> 0)&0xFF-stonymask[pixelcount];
+         imgbuf[pixelcount+1] = (regdata>> 8)&0xFF-stonymask[pixelcount+1];
+         imgbuf[pixelcount+2] = (regdata>>16)&0xFF-stonymask[pixelcount+2];
+         imgbuf[pixelcount+3] = (regdata>>24)&0xFF-stonymask[pixelcount+3];
+/*         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",imgbuf[pixelcount],
+                  imgbuf[pixelcount+1],imgbuf[pixelcount+2],imgbuf[pixelcount+3]);*/
+         pixelcount+=4;
       }
    }
 
    // transmit first half of data
-   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION/2, 0);
-   if((RESOLUTION/2) != send_len_ret)
-   {
-      fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
-      fflush(stderr);
-      exit(1);
-   }
-
-
-   // transmit rest of data
-   send_len_ret = send(sd, (const void*)(imgbuf+(RESOLUTION/2)), RESOLUTION/2, 0);
-   if((RESOLUTION/2) != send_len_ret)
+   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION, 0);
+   fprintf(stderr,"send_len: %d\n",send_len_ret);
+   if(RESOLUTION != send_len_ret)
    {
       fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
       fflush(stderr);

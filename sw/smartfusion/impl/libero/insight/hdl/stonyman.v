@@ -17,6 +17,10 @@
 `define CLK_FREQ                   (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
+
+
+// TIMING CONSTANTS
+// Pulse Time:  200-300 ns has worked
 `define TIME_PULSE_WAIT            (200)       // ns  // TODO: could be lower possibly (try 200ns)
 `define TICKS_PULSE_WAIT           (4)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
 `define TIME_PULSE_WAIT_AFTER      (200)       // ns  // TODO: could be lower possibly (try 200ns)
@@ -26,13 +30,12 @@
 `define TIME_PULSE_INPHI_AFTER     (1000)      // ns
 `define TICKS_PULSE_INPHI_AFTER    (20)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ)/1000000000)
 // TODO: is this a reasonable value?
-`define TIME_STARTCAP_WAIT_AFTER   (50)       // ns
+`define TIME_STARTCAP_WAIT_AFTER   (50)        // ns (arbitrarily chosen)
 `define TICKS_STARTCAP_WAIT_AFTER  (1)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ)/1000000000)
-`define TIME_WAIT_BETWEEN_FRAMES   (50)        // ns  // TODO: just chose this value arbitrarily
+`define TIME_WAIT_BETWEEN_FRAMES   (50)        // ns (arbitrarily chosen)
 `define TICKS_WAIT_BETWEEN_FRAMES  (1)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
-`define TIME_WAIT_STARTUP          (500)       // ms
+`define TIME_WAIT_STARTUP          (500)       // ms (arbitrarily chosen)
 `define TICKS_WAIT_STARTUP         (10000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ)/1000)
-
 
 `define REG_COLSEL                 (0)
 `define REG_ROWSEL                 (1)
@@ -44,18 +47,44 @@
 `define REG_AOBIAS                 (7)
 `define REG_CNT                    (8)
 
+
+//`define VIN_3V3
+`define VIN_5V0
+
+`define VAL_VREF_5V0               (30)
+`define VAL_NBIAS_5V0              (55)
+`define VAL_AOBIAS_5V0             (55)
+
 `define VAL_VREF_3V3               (41)
 `define VAL_NBIAS_3V3              (50)
 `define VAL_AOBIAS_3V3             (37)
 
-`define VAL_GAIN                   (2)
-`define VAL_USE_AMP                (1)
-`define VAL_CVDDA                  (16)
+`ifdef VIN_5V0
+ `define VAL_VREF                  (`VAL_VREF_5V0)
+ `define VAL_NBIAS                 (`VAL_NBIAS_5V0)
+ `define VAL_AOBIAS                (`VAL_AOBIAS_5V0)
+`endif // VIN_5V0
+`ifdef VIN_3V3
+ `define VAL_VREF                  (`VAL_VREF_3V3)
+ `define VAL_NBIAS                 (`VAL_NBIAS_3V3)
+ `define VAL_AOBIAS                (`VAL_AOBIAS_3V3)
+`endif // VIN_3V3
+
+// comment USE_AMP out if not using the AMP
+//`define USE_AMP
+`ifdef USE_AMP
+ `define VAL_USE_AMP               (1)
+ `define VAL_GAIN                  (2) // set gain here
+`else
+ `define VAL_USE_AMP               (0)
+ `define VAL_GAIN                  (1) // this value is likely ignored when the amp is disabled
+`endif
+`define VAL_CVDDA                  (16) // constant comes from manual: 10b shifted right 3
 `define VAL_CONFIG                 (`VAL_GAIN + (`VAL_USE_AMP<<3) + `VAL_CVDDA)
 
 `define S_INIT_FRESH               (4'd0)
 `define S_INIT_REG_CLEARALL        (4'd1)
-// !!! order of setting these config registers during init matters!
+// !! --> order of setting these config registers during init matters!
 `define S_INIT_REG_SET_VREF        (4'd2)
 `define S_INIT_REG_SET_NBIAS       (4'd3)
 `define S_INIT_REG_SET_AOBIAS      (4'd4)
@@ -64,7 +93,7 @@
 `define S_CAP_SET_ROW              (4'd7)
 `define S_CAP_SET_COL              (4'd8)
 `define S_CAP_PULSE_INPHI          (4'd9)
-`define S_CAP_AQUIRE_PIXEL         (4'd10)
+`define S_CAP_ACQUIRE_PIXEL        (4'd10)
 `define S_CAP_INC_COL              (4'd11)
 `define S_CAP_INC_ROW              (4'd12)
 
@@ -87,6 +116,15 @@
 `define SUB_S_STARTCAP_LOWER       (5'd15)
 `define SUB_S_STARTCAP_WAIT        (5'd16)
 `define SUB_S_STARTCAP_WAIT_AFTER  (5'd17)
+
+// when we don't use the amp, we can skip the pulse INPHI step
+`ifdef USE_AMP
+ `define S__SPECIAL__INPHI_OR_ACQUIRE      (`S_CAP_PULSE_INPHI)
+ `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_INPHI_RAISE)
+`else
+ `define S__SPECIAL__INPHI_OR_ACQUIRE      (`S_CAP_ACQUIRE_PIXEL)
+ `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_STARTCAP_LOWER)
+`endif
 
 
 module stonyman( clk, reset, startCapture, pixelin, adcConvComplete, resp, incp, resv, incv, inphi,
@@ -1044,8 +1082,8 @@ begin
                   // don't reset the value with RESV if it's not necessary
                   if(0 == cachedValue[cachedPOINTER])
                   begin
-                     state <= `S_CAP_PULSE_INPHI;
-                     substate <= `SUB_S_INPHI_RAISE;
+                     state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
+                     substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
                   end
                   else
                   begin
@@ -1076,8 +1114,8 @@ begin
                   end
                   else
                   begin
-                     state <= `S_CAP_PULSE_INPHI;
-                     substate <= `SUB_S_INPHI_RAISE;
+                     state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
+                     substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
                   end
                end
                default:
@@ -1124,7 +1162,7 @@ begin
                   end
                   else
                   begin
-                     state <= `S_CAP_AQUIRE_PIXEL;
+                     state <= `S_CAP_ACQUIRE_PIXEL;
                      substate <= `SUB_S_STARTCAP_LOWER;
                   end
                end
@@ -1137,7 +1175,7 @@ begin
 // endcase  -  substate
 //////////////////////////////////////////////////////////////////////
 
-         `S_CAP_AQUIRE_PIXEL:
+         `S_CAP_ACQUIRE_PIXEL:
 
 //////////////////////////////////////////////////////////////////////
 // case  -  substate
@@ -1342,8 +1380,8 @@ begin
                   begin
                      // one increment is all we want
                      // we don't need to change the ROW value
-                     state <= `S_CAP_PULSE_INPHI;
-                     substate <= `SUB_S_INPHI_RAISE;
+                     state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
+                     substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
                   end
                end
                default:

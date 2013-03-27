@@ -14,7 +14,8 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-`define WIDTH               8
+`define WIDTH               32
+`define ADDR_WIDTH          32  // no reason to change this ever
 
 `define MASK_REG_RANGE      (8'hFF)
 `define OFFSET_REG_STATUS   (8'h0)
@@ -25,14 +26,14 @@
 `define FIFO_RDEN_S_WAIT    (2'd2)
 `define FIFO_RDEN_S_READY   (2'd3)
 
-`define REG_FLAGS_RESERVED  (6'd0)
+`define REG_FLAGS_RESERVED  (29'd0)
 
 
 //////////////////////////////////////////////////////////////////////
 // stonyman_apb3
 module stonyman_apb3 ( PCLK, PRESERN, PSEL, PENABLE, PREADY, PSLVERR, PWRITE, PADDR, PWDATA, PRDATA,
                        /* APPLICATION SPECIFIC SIGNALS */
-                       FULL, EMPTY, BUSY, RDEN, PIXELIN, START_CAPTURE );
+                       FULL, EMPTY, BUSY, RDEN, PIXELSIN, START_CAPTURE );
 
 /* APB SIGNALS */
 input PCLK;               // clock
@@ -43,7 +44,7 @@ input                        PENABLE;
 output wire                  PREADY;
 output wire                  PSLVERR;
 input                        PWRITE;
-input [31:0]                 PADDR;
+input [(`ADDR_WIDTH-1):0]    PADDR;
 input [(`WIDTH-1):0]         PWDATA;
 output wire [(`WIDTH-1):0]   PRDATA;
 
@@ -52,7 +53,7 @@ input FULL;
 input EMPTY;
 input BUSY;
 output wire RDEN;          // active low
-input [(`WIDTH-1):0] PIXELIN;
+input [(`WIDTH-1):0] PIXELSIN;
 output wire START_CAPTURE; // active low
 
 
@@ -79,7 +80,7 @@ assign RDEN = !(ioreg_rden && !EMPTY);
 stonyman_ioreg stonyman_ioreg_0( .clk(PCLK),.rst(PRESERN),.wren(bus_write_enable),
                                  .rden(bus_read_enable),.addr(PADDR),.ready(ioreg_ready),
                                  .fifoRden(ioreg_rden),.datain(PWDATA),.dataout(PRDATA),.full(FULL),
-                                 .empty(EMPTY),.busy(BUSY),.appDatain(PIXELIN),
+                                 .empty(EMPTY),.busy(BUSY),.appDatain(PIXELSIN),
                                  .startCapture(START_CAPTURE) );
 
 endmodule
@@ -113,7 +114,7 @@ always@ (posedge clk)
 begin
    if(0 == rst)
    begin
-      dataout <= 8'd0;
+      dataout <= `WIDTH'd0;
       fifoRden <= 1'b0;
       fifoRdenState <= `FIFO_RDEN_S_IDLE;
    end
@@ -146,8 +147,7 @@ begin
                end
                `FIFO_RDEN_S_READY:
                begin
-                  // flipping the bits for now (doesn't need to stay here)
-                  dataout <= ~appDatain;
+                  dataout <= appDatain;
                   ready <= 1'b1;
                   fifoRdenState <= `FIFO_RDEN_S_IDLE;
                end
