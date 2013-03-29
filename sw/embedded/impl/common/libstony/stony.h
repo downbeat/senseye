@@ -8,10 +8,10 @@
 // WARNINGS:
 //  - driver uses "arduino" calls to write digital and read analog.
 //  - driver is not reentrant (in fact, everything is written to block).
-//  - 3V3 operation not implemented.
+//  - no default values supplied for 3V3 operation (although, any values can be supplied when
+//    initializing and/or setting the imager's CONFIG register)
 //  - driver is not optimized for low memory consumption (neither ROM nor RAM)
 //  - very few functions check their parameters.  this should be fixed.
-//  - TODO
 //*************************************************************************************************
 
 class Stonyman
