@@ -3,9 +3,9 @@
 #include "Arduino.h"
 
 
+// camera works without delays, and as such, no delays need to be added
+// (if delays were needed, they ought to on the order of 200-300ns)
 /*
-// FIXME russ: for now, I have added microsecond delays, but they might be too long or possibly
-//             completely unnecessary and therefore wasteful.
 #define pulseRESP()  do { digitalWriteFast(pinRESP,1); delayMicroseconds(1); digitalWriteFast(pinRESP,0); } while(0)
 #define pulseINCP()  do { digitalWriteFast(pinINCP,1); delayMicroseconds(1); digitalWriteFast(pinINCP,0); } while(0)
 #define pulseRESV()  do { digitalWriteFast(pinRESV,1); delayMicroseconds(1); digitalWriteFast(pinRESV,0); } while(0)
@@ -50,7 +50,7 @@ void Stonyman::init( char inPinRESP, char inPinINCP, char inPinRESV, char inPinI
   pinMode(pinRESV, OUTPUT);
   pinMode(pinINCV, OUTPUT);
   pinMode(pinINPHI, OUTPUT);
-  // FIXME russ: is this necessary?
+  // russ: is this necessary?
   pinMode(pinANALOG, INPUT);
 
   // set all pins low
@@ -64,7 +64,6 @@ void Stonyman::init( char inPinRESP, char inPinINCP, char inPinRESV, char inPinI
   clearValues();
 
   //set up biases
-  // TODO russ: haven't looked at what this function does
   setBiases(vref,nbias,aobias);
 
   // sanitize this input before use
@@ -281,13 +280,11 @@ void Stonyman::setAmpGain(char gain)
 // Grab entire Stonyman chip when using
 // 8x8 binning. Grab from input 2.
 void Stonyman::getImage( short *img, unsigned char rowstart, unsigned char numrows,
-                       unsigned char rowskip, unsigned char colstart, unsigned char numcols,
-                       unsigned char colskip ) //, char ADCType, char anain )
+                         unsigned char rowskip, unsigned char colstart, unsigned char numcols,
+                         unsigned char colskip )
 {
   short *pimg = img; // pointer to output image array
   short val;
-  //russ: unused
-  //unsigned char chigh,clow;
   unsigned char row,col;
 
   // Go to first row
@@ -302,19 +299,23 @@ void Stonyman::getImage( short *img, unsigned char rowstart, unsigned char numro
     // Loop through all columns
     for (col=0; col<numcols; ++col)
     {
-      // settling delay
-      delayMicroseconds(1);
-
       // pulse amplifier if needed
       if (flagUseAmplifier)
       {
-        pulseInphi(2); // TODO russ: necessary value unclear/unknown
+        // INPHI should be high for "nominally one or several microseconds"
+        pulseInphi(1);
+
+        // must wait "nominally one or several microseconds" after pulsing INPHI
+        delayMicroseconds(1);
+      }
+      else
+      {
+        // TODO: should be shorter if preamp is not in use
+        delayMicroseconds(1);
       }
 
-      // get data value
-      delayMicroseconds(1);
-
-      val = analogRead(pinANALOG); // acquire pixel
+      // acquire pixel
+      val = analogRead(pinANALOG);
 
       *pimg = val; // store pixel
       pimg++; // advance pointer
@@ -333,8 +334,6 @@ void Stonyman::chipToMatlab()
 {
   unsigned char row,col,rows,cols;
   unsigned short val;
-  // russ: unused
-  //unsigned char chigh,clow;
 
   rows=cols=112;
 
@@ -345,17 +344,22 @@ void Stonyman::chipToMatlab()
     setPointerValue(Stonyman::REG_COLSEL,0); // set column = 0
     for (col=0; col<cols; ++col)
     {
-      // settling delay
-      delayMicroseconds(1);
       // pulse amplifier if needed
       if (flagUseAmplifier)
       {
-        pulseInphi(2); // TODO russ: necessary value unclear/unknown
+        // INPHI should be high for "nominally one or several microseconds"
+        pulseInphi(1);
+
+        // must wait "nominally one or several microseconds" after pulsing INPHI
+        delayMicroseconds(1);
+      }
+      else
+      {
+        // TODO: should be shorter if preamp is not in use
+        delayMicroseconds(1);
       }
 
-      // get data value
-      delayMicroseconds(1);
-
+      // acquire pixel
       val = analogRead(pinANALOG);
 
       // increment column
