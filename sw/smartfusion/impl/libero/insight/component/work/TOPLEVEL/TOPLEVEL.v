@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Mar 27 00:52:00 2013
+// Created by SmartDesign Wed Mar 27 13:32:43 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -196,7 +196,6 @@ wire          ncs1;
 wire          noe0;
 wire          noe1;
 wire          nwe;
-wire          Phy_RMII_CLK;
 wire   [24:0] psram_address_net_0;
 wire          resp_net_0;
 wire          resv_net_0;
@@ -1105,7 +1104,7 @@ MSS_CORE2 MSS_CORE2_0(
         // Outputs
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),
-        .GLC         ( Phy_RMII_CLK ),
+        .GLC         (  ),
         .FAB_CLK     ( MSS_CORE2_0_FAB_CLK ),
         .M2F_RESET_N ( MSS_CORE2_0_M2F_RESET_N ),
         .UART_0_TXD  ( UART_0_TXD_net_0 ),

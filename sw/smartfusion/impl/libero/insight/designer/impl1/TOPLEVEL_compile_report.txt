@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Wed Mar 27 01:33:02 2013 ***************************************************************************
+                          Wed Mar 27 13:33:58 2013 ***************************************************************************
 
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
 File Name: Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL.adb
 Design Name: TOPLEVEL  Design State: compile
-Last Saved: Wed Mar 27 00:55:13 2013
+Last Saved: Wed Mar 27 01:34:58 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Wed Mar 27 01:32:55 2013:
+Source File(s) Imported on Wed Mar 27 13:33:48 2013:
         Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.edn
 
 
@@ -77,6 +77,26 @@ report_high_fanout_nets_limit      : 10
 =====================================================================
 Compile starts ...
 
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_8_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_15_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA0 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA1 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA2 drives no load.
@@ -87,6 +107,16 @@ Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA6 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA7 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTA8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_1_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_14_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA0 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA1 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA2 drives no load.
@@ -97,6 +127,16 @@ Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA6 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA7 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTA8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_5_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_12_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA0 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA1 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA2 drives no load.
@@ -107,6 +147,26 @@ Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA6 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA7 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTA8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_6_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_10_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_9_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_4_DOUTA0 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_4_DOUTA1 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_4_DOUTA2 drives no load.
@@ -147,6 +207,16 @@ Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_0_DOUTA6 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_0_DOUTA7 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_0_DOUTA8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_0_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_11_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA0 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA1 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA2 drives no load.
@@ -157,6 +227,16 @@ Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA6 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA7 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTA8 drives no load.
 Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_7_DOUTB8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA0 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA1 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA2 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA3 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA4 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA5 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA6 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA7 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTA8 drives no load.
+Warning: CMP201: Net FIFO_PIXEL_0/RAM4K9_13_DOUTB8 drives no load.
 Warning: CMP201: Net FIFO_TEST_COUNTER_0/RAM512X18_QXI[15]_RD8 drives no load.
 Warning: CMP201: Net FIFO_TEST_COUNTER_0/RAM512X18_QXI[15]_RD17 drives no load.
 Warning: CMP201: Net FIFO_TEST_COUNTER_0/RAM512X18_QXI[31]_RD8 drives no load.
@@ -430,7 +510,7 @@ Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_ACEFLAGS[29] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_ACEFLAGS[30] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_ADLIB_INST_ACEFLAGS[31] drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_GLA drives no load.
-Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/Phy_RMII_CLK drives no load.
+Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_GLC drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_LOCK drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_YB drives no load.
 Warning: CMP201: Net MSS_CORE2_0/MSS_CCC_0/I_MSSCCC_YC drives no load.
@@ -453,25 +533,1304 @@ Optimized macros:
   - Dangling net drivers:   0
   - Buffers:                1
   - Inverters:              0
-  - Tieoff:                 48
-  - Logic combining:        192
+  - Tieoff:                 50
+  - Logic combining:        217
 
-    Total macros optimized  241
+    Total macros optimized  268
 
-There were 0 error(s) and 368 warning(s) in this design.
+There were 0 error(s) and 448 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
 
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI79GT2[9] -fixed no 29 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_a7_0_1 -fixed no 55 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Ytt_m1
+-fixed no 62 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIBULV1[4] -fixed no 55 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I9_Y -fixed
+no 44 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[14] -fixed no 44 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_a1_1
+-fixed no 50 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNINTB5A[2] -fixed no 85 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNITQUIU[1] -fixed no 12 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIK2JU5[2] -fixed no 79 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIA66L9[2] -fixed no 92 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[8] -fixed no 23 43
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNI0KKTH02[4] -fixed no 75 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m9
+-fixed no 61 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I15_Y
+-fixed no 73 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_65 -fixed no 44 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIQLQ0B[10] -fixed no 95 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIRBAF[7] -fixed no 114 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNINBBST[2] -fixed no 9 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_a5_0
+-fixed no 50 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIDKEC_0[1] -fixed no 81 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIGI242[8] -fixed no 22 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIEJV61[2] -fixed no 82 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/op_counter_lb1_RNIJ2UN -fixed no 49 54
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI7O98_0[1] -fixed no 84 33
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIA64G[6] -fixed no 115 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m1\
+_e_1_2 -fixed no 62 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_3[5] -fixed no 87 34
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_3[10] -fixed no 80 34
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[10] -fixed no 39 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_1
+-fixed no 66 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI5I0G1[2] -fixed no 73 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_2[2] -fixed no 80 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_8 -fixed no 88 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_49 -fixed no 21 47
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[1] -fixed no 26 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI2BUP[0] -fixed no 33 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIEDS06[2] -fixed no 79 25
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_a2_6 -fixed no 87 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNICIQBK[2] -fixed no 72 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI7O98_2[1] -fixed no 86 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_1_0 -fixed no 52 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_6[1] -fixed no 76 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNIN7UJ1[0] -fixed no 86 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location FIFO_PIXEL_0/OR2_0
+-fixed no 17 54
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_1_3
+-fixed no 67 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_3
+-fixed no 43 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIS2HN9[10] -fixed no 82 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_a2_0 -fixed no 87 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_59 -fixed no 63 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m4
+-fixed no 60 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a5_1 -fixed no 52 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_2 -fixed no 91 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I17_Y_2_1
+-fixed no 52 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a2_3 -fixed no 68 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10 -fixed no 84 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I11_un1_Y\
+_0 -fixed no 73 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_a2_0 -fixed no 80 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_17 -fixed no 13 57
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+adc081s101_0/cntrWaitTrailing_RNO_0[2] -fixed no 89 46
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_1 -fixed no 52 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_1_1
+-fixed no 44 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_1_m10_0_a4 -fixed no 80 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[15] -fixed no 36 51
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I12_Y_0
+-fixed no 57 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIPFHK_0[5] -fixed no 69 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/resv_RNO_4 -fixed no 72 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/HREADYOUT_RNIGDH061 -fixed no 11 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_1_m10_0_a4_3_RNO -fixed no 81 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIVBM5I3[9] -fixed no 55 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_a2
+-fixed no 45 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/enable_RNI6D2S -fixed no 49 50
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location FIFO_PIXEL_0/AO1_0
+-fixed no 21 48
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I17_Y
+-fixed no 46 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_13_2_tz_RNI9UA6U1[1] -fixed no 89 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location FIFO_PIXEL_0/AO1_5
+-fixed no 11 54
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_3[2] -fixed no 86 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I11_Y_m4_\
+m2 -fixed no 61 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a3 -fixed no 69 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI41711_0[1] -fixed no 80 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I11_Y_m4_\
+i_a4 -fixed no 74 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_a7_1_0 -fixed no 54 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a1_2_m2_0 -fixed no 58 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI4RVD5[4] -fixed no 70 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location d_m1_e -fixed no
+78 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m2\
+_m3 -fixed no 68 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_0
+-fixed no 53 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[14] -fixed no 44 39
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNO_13[0] -fixed no 97 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_2_0_RNO[1] -fixed no 88 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_1_4
+-fixed no 67 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a0
+-fixed no 43 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNI0R87B[0] -fixed no 85 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/ac_counter_RNI1L5I2[0] -fixed no 45 55
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIQ7S742[2] -fixed no 86 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIGTCV_0[1] -fixed no 79 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m13_i_o2_0 -fixed no 82 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_1
+-fixed no 45 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_57 -fixed no 16 34
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0_0
+-fixed no 50 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I9_Y_m3
+-fixed no 66 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI75LJB[4] -fixed no 84 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_1_0
+-fixed no 63 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_5_2 -fixed no 88 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[8] -fixed no 31 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_16 -fixed no 13 46
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_7 -fixed no 19 53
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location FIFO_PIXEL_0/AO1_8
+-fixed no 12 52
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIF0TSA[3] -fixed no 77 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_2[1] -fixed no 28 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_20 -fixed no 14 53
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_1_2 -fixed no 68 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNO_3[5] -fixed no 22 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI7EM8S[3] -fixed no 94 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_8 -fixed no 14 56
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/fsm_RNIR76MG -fixed no 22 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_4[1] -fixed no 81 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_0_1
+-fixed no 50 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_2_3
+-fixed no 42 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[15] -fixed no 32 52
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_3_\
+tz_tz -fixed no 44 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNI94MLK[0] -fixed no 82 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_14 -fixed no 23 50
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I15_Y_1
+-fixed no 53 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I17_Y_2
+-fixed no 52 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+d_m1_0_a2_1_m4_i_a4 -fixed no 59 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a3_3 -fixed no 64 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_2_0_RNO_2[1] -fixed no 88 35
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/OR2A_2 -fixed no 7 47
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a2_1 -fixed no 55 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I17_Y_4_0
+-fixed no 44 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_0
+-fixed no 53 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I1_G0N
+-fixed no 53 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIU5VC[7] -fixed no 19 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_1 -fixed no 92 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AO1_23 -fixed no 22 51
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[7] -fixed no 36 48
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I11_Y_m4_0
+-fixed no 62 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIBET9[10] -fixed no 81 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AO1_30 -fixed no 22 48
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNITP8UA[11] -fixed no 49 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/tp_substateout_1_i_a2_2[0] -fixed no 93 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location d_m1_0_a2_3 -fixed
+no 61 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_50 -fixed no 22 47
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I11_Ytt_m2
+-fixed no 74 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1[12] -fixed no 39 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1[8] -fixed no 23 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI62PMG[5] -fixed no 20 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_3[8] -fixed no 93 33
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a4_1 -fixed no 54 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNINBMNK3[0] -fixed no 85 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a3_1 -fixed no 52 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_1_tz -fixed no 52 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I12_Y
+-fixed no 58 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_m2_0_a2 -fixed no 85 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_a2_0_0 -fixed no 79 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_55 -fixed no 20 52
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un54_sum_ADD_9x9_fast_I11_un1_Y
+-fixed no 43 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_9[4] -fixed no 94 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_1tt\
+_m2 -fixed no 59 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNI8BLTL12[4] -fixed no 70 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_a0_0
+-fixed no 44 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location d_m1_0_a2_0 -fixed
+no 61 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNIDGF2D6[0] -fixed no 84 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l_RNIFF1N[1] -fixed no 20 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNID94JND[0] -fixed no 85 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNIEFKB1_3[0] -fixed no 87 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+adc081s101_0/bitsRead_RNO[0] -fixed no 85 55
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_m8_i_\
+o3_2 -fixed no 64 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_1tt\
+_m5 -fixed no 60 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I12_Y_1
+-fixed no 58 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS7GJI[5] -fixed no 85 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNIEFKB1_1[0] -fixed no 88 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNIUOJMU[1] -fixed no 9 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I12_Y_0
+-fixed no 51 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_5_0 -fixed no 87 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a2\
+_1 -fixed no 41 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIO80F2[4] -fixed no 28 39
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI4QJT[7] -fixed no 98 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I3_G0N
+-fixed no 75 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIJI1GS[1] -fixed no 89 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[7] -fixed no 36 49
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIR3O99[5] -fixed no 86 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I11_Y_m4
+-fixed no 46 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_2_2
+-fixed no 42 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIFULI[13] -fixed no 99 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_a7_0 -fixed no 54 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTl1O0l/CAHBLTIO0l_RNI3NSS1[1] -fixed no 19 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI1QQ8R1[2] -fixed no 83 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_53 -fixed no 46 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a6_1 -fixed no 55 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNIKSUH[27] -fixed no 118 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNID2U47[9] -fixed no 29 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a3
+-fixed no 41 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a0\
+_1 -fixed no 42 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIOTHL1[10] -fixed no 96 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m2_1
+-fixed no 59 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_2
+-fixed no 59 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/tp_substateout_1_i_a2_3_RNO[0] -fixed no 93 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNID77I91[9] -fixed no 56 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNICOJTL[2] -fixed no 75 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[15] -fixed no 35 50
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTlI0l/CAHBLTllOI_RNIQNPI4[0] -fixed no 20 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[8] -fixed no 32 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_state138_3_i_a2_0 -fixed no 94 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_64 -fixed no 75 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a0_1 -fixed no 52 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIP6LTJ1[3] -fixed no 76 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIN1PD7[10] -fixed no 82 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS629G[0] -fixed no 85 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I15_Y
+-fixed no 65 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIV9DHT1[5] -fixed no 76 4
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIPTHL1[10] -fixed no 96 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_a2_1
+-fixed no 47 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIG4CK3[5] -fixed no 19 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNI47N36[19] -fixed no 119 48
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I9_un1_Y_m1
+-fixed no 48 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNICFNQ8[3] -fixed no 78 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_1 -fixed no 82 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_apb3_0/stonyman_ioreg_0/ready_RNIRGGC1 -fixed no 7 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIOJM87I[5] -fixed no 70 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_2_tz
+-fixed no 51 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m1\
+_e_1_1 -fixed no 61 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_12 -fixed no 14 44
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_1
+-fixed no 50 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNID7SR53[0] -fixed no 77 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI008S1_0[2] -fixed no 78 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_1_m10_0_a4_3_RNO_0 -fixed no 82 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNID77I91_0[9] -fixed no 55 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a1\
+_1 -fixed no 41 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_13_2_tz_RNIUNPI84[1] -fixed no 83 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_1
+-fixed no 68 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_3 -fixed no 91 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a4_2 -fixed no 67 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIM8UUA[10] -fixed no 82 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y_2_0
+-fixed no 71 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I17_Y_3_a2
+-fixed no 44 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m1\
+_e_1_0 -fixed no 61 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNI07IE2[14] -fixed no 113 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a1_1 -fixed no 57 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3lII_RNIAMQ5U -fixed no 9 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI7O98[1] -fixed no 92 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+fifo_32bit_apb3_0/fifo_32bit_ioreg_0/ready_RNI719C1 -fixed no 6 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg_RNI74PR6 -fixed no 26 39
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_m2_0_a2 -fixed no 85 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIEJCJL12[6] -fixed no 72 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNO_0[2] -fixed no 132 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I5_un1_Y_0
+-fixed no 73 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIS0NB1[10] -fixed no 81 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIFEA7B[2] -fixed no 97 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI5DOK9[2] -fixed no 75 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNI06KUD[5] -fixed no 85 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI2BFC3[2] -fixed no 82 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m4_0
+-fixed no 60 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[0] -fixed no 32 35
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_a0_1 -fixed no 71 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_2_0[1] -fixed no 88 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_m1_e -fixed no 77 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI8DGP4[4] -fixed no 85 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_o2_8_1 -fixed no 84 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIHO7U[13] -fixed no 116 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I17_Y_4
+-fixed no 45 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_0_0
+-fixed no 48 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_state138_3_i -fixed no 95 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI0PKGA7[2] -fixed no 84 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNI2PQ7M[10] -fixed no 48 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_52 -fixed no 62 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I12_Y_0_0
+-fixed no 51 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[10] -fixed no 39 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_63 -fixed no 54 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIO71T1[4] -fixed no 86 25
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIMHQH1[1] -fixed no 79 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_1[1] -fixed no 87 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a4_0 -fixed no 66 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a1_3 -fixed no 67 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIUHN89[11] -fixed no 91 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIHH8R[5] -fixed no 83 25
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg_RNICL9T -fixed no 27 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_4 -fixed no 88 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIC953[7] -fixed no 123 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIAFRVMP1[5] -fixed no 69 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AO1_12 -fixed no 15 56
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_a0
+-fixed no 66 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a0 -fixed no 53 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hready_reg_RNI31AC1 -fixed no 17 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNINCOK_0[0] -fixed no 101 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNI2CPM26[4] -fixed no 79 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m2_0
+-fixed no 59 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_x2 -fixed no 52 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_7[6] -fixed no 77 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_m8_i
+-fixed no 63 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[14] -fixed no 45 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y
+-fixed no 52 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_3[1] -fixed no 81 33
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIDAVPG[5] -fixed no 27 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIFFHK[0] -fixed no 72 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I15_Y_0
+-fixed no 53 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a3\
+_0 -fixed no 41 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_a1\
+_0 -fixed no 42 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I17_Y_4
+-fixed no 54 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I16_Y_m1_1
+-fixed no 62 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_42 -fixed no 10 53
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_56 -fixed no 16 54
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_1_1 -fixed no 67 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a1_2_1 -fixed no 51 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location d_m1_0_a2_3_1
+-fixed no 60 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/HREADYOUT_RNI810QF -fixed no 17 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_1_0
+-fixed no 66 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[14] -fixed no 43 39
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_0_3
+-fixed no 51 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIITKR2[1] -fixed no 78 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+6_tz -fixed no 51 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI0Il/CAHBLTII1_RNI5OE0G -fixed no 18 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[10] -fixed no 40 43
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_m2_i_a2_0 -fixed no 88 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNIMOT31[20] -fixed no 123 45
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_13[2] -fixed no 82 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_8[6] -fixed no 74 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNIEFKB1_2[0] -fixed no 77 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS1SK4[1] -fixed no 86 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNILUIM[10] -fixed no 54 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_1_0 -fixed no 69 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI56NHT[2] -fixed no 74 29
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3lII_RNI3CQL3 -fixed no 11 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_a0_0 -fixed no 72 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_i_RNI4HNBA[0] -fixed no 83 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIATTD1[2] -fixed no 81 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_2
+-fixed no 67 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_1
+-fixed no 63 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_6[12] -fixed no 86 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I16_Y_m1
+-fixed no 62 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_40 -fixed no 70 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I17_Y
+-fixed no 59 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_a0_0
+-fixed no 49 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNI29T31[19] -fixed no 116 33
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS1SK4_0[4] -fixed no 81 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/HREADYOUT_RNIGDH061_0 -fixed no 13 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/HREADYOUT_RNI7A0GQ -fixed no 12 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I9_un1_Y
+-fixed no 64 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I11_Y_m3_\
+m3 -fixed no 63 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIAE562[10] -fixed no 95 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNISGO22[8] -fixed no 86 38
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNILUR01[14] -fixed no 54 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I11_Y_1
+-fixed no 47 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_29 -fixed no 17 51
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/cr_int_i0/ac_counter_RNO_0[2] -fixed no 52 52
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[15] -fixed no 33 52
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_58 -fixed no 48 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_1tt\
+_m2x -fixed no 64 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/BUFF_1 -fixed no 7 46
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIKOFG8[27] -fixed no 94 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_1_1
+-fixed no 46 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a1_1 -fixed no 66 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_2
+-fixed no 42 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI01AQ2[9] -fixed no 29 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_8[12] -fixed no 88 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_2
+-fixed no 45 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_5_3 -fixed no 87 19
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_1[1] -fixed no 27 43
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIN8V9F[4] -fixed no 80 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIPOPJ_0[1] -fixed no 89 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I11_Y_m4_\
+i_0 -fixed no 75 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[10] -fixed no 39 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a3_3_1 -fixed no 64 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I9_Y_0
+-fixed no 68 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI8O98_1[0] -fixed no 76 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_17 -fixed no 21 49
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[1] -fixed no 26 43
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_o2_5 -fixed no 87 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m10
+-fixed no 62 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I11_Y_m3t\
+t_m1 -fixed no 63 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_0_0_\
+tz -fixed no 43 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location I_1113/U_CLKSRC
+-fixed no 195 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[1] -fixed no 26 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_51 -fixed no 70 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Ill/CAHBtoAPB3OIl_RNO_0[0] -fixed no 6 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[14] -fixed no 43 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNO_37[3] -fixed no 90 34
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTI1Il6 -fixed no 20 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_o2_6 -fixed no 86 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[8] -fixed no 31 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_a0_2 -fixed no 72 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AND2_12 -fixed no 15 55
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNII5TG7[2] -fixed no 75 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNIA52K3[9] -fixed no 30 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI0S2P01[3] -fixed no 76 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIPOPJ[1] -fixed no 87 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNINTHL1[10] -fixed no 96 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I11_Ytt_m\
+2_0 -fixed no 69 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIDVIK[9] -fixed no 89 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_6
+-fixed no 52 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterWait_RNIS5MK61[10] -fixed no 61 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+0_1 -fixed no 53 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m2
+-fixed no 62 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I17_Y_4_0
+-fixed no 54 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I11_Y_1
+-fixed no 62 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg_RNIS5013 -fixed no 27 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a1_2 -fixed no 58 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y_2_0
+-fixed no 41 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[7] -fixed no 37 48
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I17_Y_3_a0
+-fixed no 46 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[10] -fixed no 40 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIV93IH1[3] -fixed no 95 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_0_2
+-fixed no 49 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_a4
+-fixed no 67 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/tp_substateout_1_i_a2[0] -fixed no 94 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_1_m10_0_x2 -fixed no 80 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_2[1] -fixed no 78 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO_0[1] -fixed no 25 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIEDPH[2] -fixed no 85 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg_RNI4MIN3 -fixed no 27 39
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_m8_i_\
+o3 -fixed no 63 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I9_Y_m7
+-fixed no 67 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I9_Y
+-fixed no 63 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNIDSUH[22] -fixed no 123 44
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNO_0[6] -fixed no 126 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTI1O0l/CAHBLTIO0l_RNIRIB9[0] -fixed no 23 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg4_2_RNO -fixed no 43 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_m2_i_a2 -fixed no 83 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNINFHK[4] -fixed no 56 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_a0_2
+-fixed no 49 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/tp_substateout_1_i_a2_3_RNO_0[0] -fixed no 95 26
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNILVFC4[4] -fixed no 83 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIOLIO7[11] -fixed no 47 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/busy_RNIPG2J -fixed no 46 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI3SHM_0[3] -fixed no 28 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIAR6G[8] -fixed no 21 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+a2 -fixed no 54 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[1] -fixed no 26 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_a1_1 -fixed no 70 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+d_m1_0_a2_1_m4_i_a4_0 -fixed no 60 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_o2_8_0 -fixed no 84 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIPLIL2[7] -fixed no 98 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNI2AKU[2] -fixed no 83 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+0_3 -fixed no 53 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[12] -fixed no 31 43
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a0_0 -fixed no 60 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI9O98_2[1] -fixed no 91 25
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[12] -fixed no 39 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_a2_8 -fixed no 89 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNI9L8Q[4] -fixed no 5 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS7GJI[2] -fixed no 87 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNIKQ7F1[2] -fixed no 80 27
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I16_Y_m1_0
+-fixed no 61 9
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNO_0[13] -fixed no 116 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTO10I_RNIRQMQ1[0] -fixed no 24 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI62KT[7] -fixed no 85 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIIDU92[12] -fixed no 56 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIB8CK1[11] -fixed no 57 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNITL605[1] -fixed no 79 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_m8_i_\
+o3_0 -fixed no 62 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO_0[7] -fixed no 35 49
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_8 -fixed no 20 50
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I9_un1_Y_m\
+3_0 -fixed no 49 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNIUQOB3[19] -fixed no 116 32
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNI9CF9U[0] -fixed no 11 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a1_0 -fixed no 51 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI4QR2T1[5] -fixed no 78 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIB4KOC[4] -fixed no 69 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_0 -fixed no 72 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_5 -fixed no 86 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIFTCV[1] -fixed no 77 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/AO1_11 -fixed no 14 55
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I12_un1_Y_\
+a0 -fixed no 50 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a0_1 -fixed no 65 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_un1_Y_\
+0_0 -fixed no 54 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI41711_3[1] -fixed no 77 22
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I11_Y_m6_1
+-fixed no 47 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_a0_1
+-fixed no 65 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_57 -fixed no 65 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a3_1 -fixed no 69 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_a7_1 -fixed no 54 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTl1O0l/un1_CAHBLTI1OI -fixed no 18 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIDIAE9[29] -fixed no 96 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m8_0
+-fixed no 60 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/haddr_reg_RNI3TRG3[9] -fixed no 29 41
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y
+-fixed no 63 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_a2
+-fixed no 68 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_m8_i_\
+a3_0 -fixed no 63 5
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a0_2 -fixed no 60 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_1_0
+-fixed no 45 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIDCID1[9] -fixed no 115 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_60 -fixed no 50 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIIGJG_1[2] -fixed no 86 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNII0GB_0[2] -fixed no 85 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNI5TGGRJ3[5] -fixed no 69 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_a1
+-fixed no 68 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedValue_tile_DIN_REG1_RNIS1SK4[4] -fixed no 87 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_6 -fixed no 85 18
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIOI7E1[3] -fixed no 84 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/COUNT_RNIBUKV1[6] -fixed no 114 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIAAAKS1[5] -fixed no 71 6
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_16_I_55 -fixed no 71 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[12] -fixed no 38 37
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1[0] -fixed no 32 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I12_Y_a1_0
+-fixed no 46 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_0
+-fixed no 49 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIBO98_2[2] -fixed no 78 35
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNI7O98_1[1] -fixed no 93 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a2_1_0 -fixed no 62 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y_\
+a3_3_0 -fixed no 64 8
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIIAGA5[12] -fixed no 55 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNII5VC[1] -fixed no 34 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIV60A3[2] -fixed no 76 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m56_0_o2_0 -fixed no 83 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a2_1 -fixed no 67 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNI8NF61_0[13] -fixed no 98 40
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I9_Y_m11_\
+i_2 -fixed no 53 11
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg4_3 -fixed no 21 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I5_un1_Y
+-fixed no 65 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m1\
+_e_m12_i_x2_1 -fixed no 62 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIH6BRP1[1] -fixed no 86 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNITP8UA_0[11] -fixed no 48 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_a2_6_0 -fixed no 92 23
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_RNO[12] -fixed no 32 42
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIVFHK[9] -fixed no 56 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0_1
+-fixed no 48 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XOR2_58 -fixed no 21 53
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I12_Y_2_tz
+-fixed no 66 14
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_1_m2
+-fixed no 61 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTI1lI_RNIEQR52[18] -fixed no 27 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un82_sum_ADD_9x9_fast_I11_Y_m6_1\
+_0 -fixed no 46 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_m1\
+_e_a0_3 -fixed no 66 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_m2_i_a2_1_0 -fixed no 85 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_1tt\
+_m4 -fixed no 59 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hwrite_reg4_3_RNI4TTIG -fixed no 21 17
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIT5BAGE1[4] -fixed no 70 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv[15] -fixed no 36 50
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNICKEC[0] -fixed no 90 25
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I1_G0N_0
+-fixed no 50 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_RNIVG8R8[1] -fixed no 78 21
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/counterPixelsCaptured_RNIV4EJHE1[0] -fixed no 71 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I17_Y_m8
+-fixed no 60 7
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_10_7 -fixed no 89 12
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/cachedPOINTER_RNI2AKU_0[2] -fixed no 79 28
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m39_0_m2_e_1 -fixed no 77 16
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNIJJ0Q91[0] -fixed no 7 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/substate_ns_i_13_2_tz[1] -fixed no 89 36
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_RNIUPRIE[3] -fixed no 96 30
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+psram_cr_0/ahb0/hrdata_reg_17_iv_1_RNO[7] -fixed no 36 47
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNI2ELD61_0[0] -fixed no 6 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m48_i_o2_0_s_a1_2 -fixed no 71 13
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+adc081s101_0/conversionComplete_RNO_4 -fixed no 92 44
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNI0PIB8[19] -fixed no 116 31
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/state_36_3_0__m27_i_11 -fixed no 85 15
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+counter_0/counterInternal_RNI71PE8[19] -fixed no 117 24
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNI7D8Q[1] -fixed no 7 10
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTOI0I_RNIHL7KC1 -fixed no 26 20
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+FIFO_PIXEL_0/XNOR2_20 -fixed no 18 55
+Warning: PDC15: Macro doesn't exist in the netlist at PDC Line : set_location
+stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_G0N_m1\
+_e_m12_i_x2_0 -fixed no 61 14
 
-There were 0 error(s) and 0 warning(s).
+There were 0 error(s) and 550 warning(s).
 
 =====================================================================
 Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   3300  Total:  11520   (28.65%)
+    Fabric                     Used:   3355  Total:  11520   (29.12%)
     Fabric IO (W/ clocks)      Used:     78  Total:    128   (60.94%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -483,7 +1842,7 @@ Compile report:
     On-chip RC oscillator      Used:      0  Total:      1   (0.00%)
     Main Crystal oscillator    Used:      1  Total:      1   (100.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:     11  Total:     24   (45.83%)
+    RAM/FIFO                   Used:     19  Total:     24   (79.17%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Global Information:
@@ -502,8 +1861,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 2570         | 2570
-    SEQ     | 730          | 730
+    COMB    | 2622         | 2622
+    SEQ     | 733          | 733
 
 I/O Function:
 
@@ -535,65 +1894,65 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    640     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
+    636     INT_NET       Net   : MSS_CORE2_0_M2F_RESET_N
                           Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC
                           Source: NETLIST
-    384     CLK_NET       Net   : SCLK_c
+    403     CLK_NET       Net   : SCLK_c
                           Driver: clkgenerator_0/clkCameraSS_RNIR4A/U_CLKSRC
                           Source: NETLIST
     370     CLK_NET       Net   : FAB_CLK
                           Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    66      INT_NET       Net   : CoreAPB3_0_APBmslave1_PSELx
-                          Driver: I_1113/U_CLKSRC
+    64      INT_NET       Net   : FIFO_PIXEL_0/DFN1E1C0_0_Q
+                          Driver: FIFO_PIXEL_0/DFN1E1C0_0_RNI59O8/U_CLKSRC
                           Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    66      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
     64      INT_NET       Net   : N_76
                           Driver: fifo_32bit_apb3_0/fifo_32bit_ioreg_0/dataout_6_2_0_a2
+    61      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29[10]
     59      INT_NET       Net   : counter_0/COUNTe
-                          Driver: counter_0/counterInternal_RNI71PE8[19]
+                          Driver: counter_0/counterInternal_RNI71PE8[17]
     51      INT_NET       Net   : N_88
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIRGT61[6]
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
     40      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
                           Driver: psram_cr_0/ahb0/haddr_reg[2]
-    38      INT_NET       Net   : stonyman_0/state[3]
+    39      INT_NET       Net   : stonyman_0/state[3]
                           Driver: stonyman_0/state[3]
-    36      INT_NET       Net   : TP_PSEL_c
-                          Driver: CoreAPB3_0/CAPB3O11[0]
-    36      INT_NET       Net   : COREAHBTOAPB3_0/CAHBtoAPB3II
+    37      INT_NET       Net   : COREAHBTOAPB3_0/CAHBtoAPB3II
                           Driver: COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNIH5BC3[3]
-    35      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTllIl113
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01_0[5]
+    35      INT_NET       Net   : CoreAPB3_0_APBmslave1_PSELx
+                          Driver: CoreAPB3_0/CAPB3O11[1]
+    35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIIlI_iv
+                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI5OE0G[5]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    66      INT_NET       Net   : stonyman_0/counterWait8
-                          Driver: stonyman_0/counterWait_RNINVU29[10]
     64      INT_NET       Net   : N_76
                           Driver: fifo_32bit_apb3_0/fifo_32bit_ioreg_0/dataout_6_2_0_a2
+    61      INT_NET       Net   : stonyman_0/counterWait8
+                          Driver: stonyman_0/counterWait_RNINVU29[10]
     59      INT_NET       Net   : counter_0/COUNTe
-                          Driver: counter_0/counterInternal_RNI71PE8[19]
+                          Driver: counter_0/counterInternal_RNI71PE8[17]
     51      INT_NET       Net   : N_88
                           Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIRGT61[6]
     45      INT_NET       Net   : psram_cr_0/cr_int_i0/enable
                           Driver: psram_cr_0/cr_int_i0/enable
     40      INT_NET       Net   : psram_cr_0/ahb0/haddr_reg[2]
                           Driver: psram_cr_0/ahb0/haddr_reg[2]
-    38      INT_NET       Net   : stonyman_0/state[3]
+    39      INT_NET       Net   : stonyman_0/state[3]
                           Driver: stonyman_0/state[3]
-    36      INT_NET       Net   : TP_PSEL_c
-                          Driver: CoreAPB3_0/CAPB3O11[0]
-    36      INT_NET       Net   : COREAHBTOAPB3_0/CAHBtoAPB3II
+    37      INT_NET       Net   : COREAHBTOAPB3_0/CAHBtoAPB3II
                           Driver: COREAHBTOAPB3_0/CAHBtoAPB3Oll/CAHBtoAPB3IOI_RNIH5BC3[3]
-    35      INT_NET       Net   : CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l.CAHBLTllIl113
-                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNIUTD01_0[5]
+    35      INT_NET       Net   : CoreAPB3_0_APBmslave1_PSELx
+                          Driver: CoreAPB3_0/CAPB3O11[1]
+    35      INT_NET       Net   : CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIIlI_iv
+                          Driver: CoreAHBLite_0/CAHBLTO1I0l/CAHBLTIlO0l/CAHBLTl00I_RNI5OE0G[5]
 
 

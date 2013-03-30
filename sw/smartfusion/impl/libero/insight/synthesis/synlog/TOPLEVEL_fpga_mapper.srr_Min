@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Mar 27 01:32:49 2013
+# Timing Report written on Wed Mar 27 13:33:41 2013
 #
 
 
@@ -28,9 +28,9 @@ Worst slack in design: 0.225
                                      Requested     Estimated     Requested     Estimated                 Clock        Clock              
 Starting Clock                       Frequency     Frequency     Period        Period        Slack       Type         Group              
 -----------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                              40.0 MHz      40.1 MHz      25.000        24.927        0.073       declared     clk_group_0        
+FAB_CLK                              40.0 MHz      39.9 MHz      25.000        25.052        -0.052      declared     clk_group_0        
 FCLK                                 40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
-clkgenerator|SCLK_inferred_clock     80.0 MHz      29.4 MHz      12.500        34.023        -21.523     inferred     Inferred_clkgroup_0
+clkgenerator|SCLK_inferred_clock     80.0 MHz      28.0 MHz      12.500        35.686        -23.186     inferred     Inferred_clkgroup_0
 System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
 =========================================================================================================================================
 

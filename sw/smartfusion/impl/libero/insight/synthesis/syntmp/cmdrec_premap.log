@@ -1,14 +1,14 @@
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis  -part A2F500M3G  -package FBGA484  -grade Std   -globalthreshold 50 -maxfan 3000 -opcond COMWC     -report_path 0       -summaryfile Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synlog\report\TOPLEVEL_premap.xml -top_level_module  TOPLEVEL  -oedif  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.edn  -conchk_prepass  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_cck_prepass.rpt  -freq 80.000  -tcl  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_compiler.srs  -flow prepass  -gcc_prepass  -osrd  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd  -qsap  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap  -devicelib  C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v  -ologparam  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\syntmp\TOPLEVEL.plg  -osyn  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd  -prjdir  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\  -prjname  TOPLEVEL_syn  -log  Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synlog\TOPLEVEL_premap.srr 
 rc:1 success:1
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.edn|o|1364359987|2395984
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.edn|o|1364405489|2688474
 Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_cck_prepass.rpt|o|0|0
 Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc|i|1361951614|188
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_compiler.srs|i|1364362349|223808
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd|o|1364362352|298010
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap|o|1364362352|53285
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_compiler.srs|i|1364405604|227251
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd|o|1364405608|303539
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap|o|1364405608|54970
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v|i|1340034016|72817
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\syntmp\TOPLEVEL.plg|o|1364362350|0
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd|o|1364362352|298010
-Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synlog\TOPLEVEL_premap.srr|o|1364362352|3183
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\syntmp\TOPLEVEL.plg|o|1364405606|0
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synwork\TOPLEVEL_premap.srd|o|1364405608|303539
+Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\synlog\TOPLEVEL_premap.srr|o|1364405608|3183
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe|i|1340204862|15745024
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\m_proasic.exe|i|1340204848|13099520

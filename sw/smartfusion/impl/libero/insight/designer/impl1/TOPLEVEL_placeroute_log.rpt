@@ -34,24 +34,24 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Wed Mar 27 01:33:12 2013
+Timing-driven Placer Started: Wed Mar 27 13:34:21 2013
 
-Placer Finished: Wed Mar 27 01:33:49 2013
-Total Placer CPU Time:     00:00:37
+Placer Finished: Wed Mar 27 13:35:06 2013
+Total Placer CPU Time:     00:00:45
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Wed Mar 27 01:33:56 2013
+Design: TOPLEVEL                        Started: Wed Mar 27 13:35:12 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Wed Mar 27 01:34:21 2013
-Total CPU Time:     00:00:25            Total Elapsed Time: 00:00:25
+Finished: Wed Mar 27 13:35:40 2013
+Total CPU Time:     00:00:28            Total Elapsed Time: 00:00:28
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -59,16 +59,16 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:01:19 )
+The Layout command succeeded ( 00:01:29 )
 Wrote status report to file: TOPLEVEL_place_and_route_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote globalnet report to file: TOPLEVEL_globalnet_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Wrote globalusage report to file: TOPLEVEL_globalusage_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Wrote iobank report to file: TOPLEVEL_iobank_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -76,6 +76,6 @@ Design saved to file
 Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
 .adb.
 
-The Execute Script command succeeded ( 00:01:25 )
+The Execute Script command succeeded ( 00:01:35 )
 Design closed.
 
