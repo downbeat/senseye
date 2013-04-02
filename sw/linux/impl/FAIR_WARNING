@@ -30,7 +30,7 @@ Utilities like algo_eyedetect should utilize the pipe idiom like this:
 
 rather than duplicating the display and save functionality in every utility.
 A more flexible / richer protocol for the communcation between these utilities
-and/or the glasses is needed.  There are several proposed changes
+and/or the glasses is needed.
 
 
 ===============================================================================
@@ -42,7 +42,7 @@ NEEDS
    - resolution
    - # of cameras for connect?
    - camera index?
- - Flag to specify if were scanning a "superimage" (an image which is actually
+ - Flag to specify if we're scanning a "superimage" (an image which is actually
    captured from two cameras with the images placed side by side).  This
    feature is how the insight glasses transmit data to the computer.  It
    assumes identical resolution, which can of course be used to split the
