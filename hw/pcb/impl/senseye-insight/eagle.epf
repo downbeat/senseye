@@ -7,6 +7,7 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
+UsedLibrary="/home/russ/eagle/lbr/senseye.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/19inch.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/40xx.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/41xx.lbr"
@@ -340,15 +341,13 @@ UsedLibrary="/opt/eagle-6.4.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/zetex.lbr"
 UsedLibrary="/opt/eagle-6.4.0/lbr/zilog.lbr"
-UsedLibrary="/home/russ/eagle/teensy-shield/glasses.lbr"
 UsedLibrary="/home/russ/eagle/teensy-shield/SparkFun.lbr"
-UsedLibrary="/home/russ/eagle/lbr/senseye.lbr"
 UsedLibrary="/home/russ/private/research/insight/git/hw/pcb/impl/lbr/senseye.lbr"
 UsedLibrary="/home/russ/eagle/lbr/SparkFun-Eagle-Libraries/SparkFun-Connectors.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="57 24 933 787"
+Loc="58 24 934 787"
 State=2
 Number=0
 
