@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="9" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="9" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,16 +53,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -6120,29 +6120,6 @@ type 0309, grid 2.5 mm</description>
 <wire x1="0.75" y1="1.2" x2="1" y2="1.45" width="0.127" layer="21" curve="90"/>
 <wire x1="1" y1="1.45" x2="1.5" y2="1.45" width="0.127" layer="21"/>
 </package>
-<package name="TDFN_8PIN">
-<wire x1="2" y1="-1.5" x2="2" y2="1.5" width="0.127" layer="21"/>
-<wire x1="0" y1="1.5" x2="0" y2="-1.5" width="0.127" layer="21"/>
-<smd name="P3" x="1.25" y="-1.25" dx="0.4" dy="0.25" layer="1" rot="R90"/>
-<smd name="P2" x="0.75" y="-1.25" dx="0.4" dy="0.25" layer="1" rot="R90"/>
-<smd name="P4" x="1.75" y="-1.25" dx="0.4" dy="0.25" layer="1" rot="R90"/>
-<smd name="P1" x="0.25" y="-1.25" dx="0.4" dy="0.25" layer="1" rot="R90"/>
-<smd name="P7" x="0.75" y="1.25" dx="0.4" dy="0.25" layer="1" rot="R270"/>
-<smd name="P6" x="1.25" y="1.25" dx="0.4" dy="0.25" layer="1" rot="R270"/>
-<smd name="P8" x="0.25" y="1.25" dx="0.4" dy="0.25" layer="1" rot="R270"/>
-<smd name="P5" x="1.75" y="1.25" dx="0.4" dy="0.25" layer="1" rot="R270"/>
-<text x="0" y="3.13" size="0.254" layer="25">&gt;NAME</text>
-<text x="2.04" y="-0.23" size="0.254" layer="27" align="top-right">&gt;VALUE</text>
-<wire x1="0" y1="-1.5" x2="2" y2="-1.5" width="0.127" layer="51"/>
-<wire x1="0" y1="1.5" x2="2" y2="1.5" width="0.127" layer="51"/>
-<smd name="EP" x="1" y="0" dx="1.75" dy="1.63" layer="1" rot="R90" cream="no"/>
-<rectangle x1="0.5925" y1="-0.4375" x2="1.4075" y2="0.4375" layer="31"/>
-<polygon width="0" layer="21">
-<vertex x="0.127" y="-1.905"/>
-<vertex x="0.254" y="-1.651"/>
-<vertex x="0.381" y="-1.905"/>
-</polygon>
-</package>
 <package name="JS2020_6PIN_SMT">
 <wire x1="-4.5" y1="-3" x2="4.5" y2="-3" width="0.127" layer="21"/>
 <wire x1="4.5" y1="-3" x2="4.5" y2="0" width="0.127" layer="21"/>
@@ -6194,24 +6171,6 @@ type 0309, grid 2.5 mm</description>
 <wire x1="8.75" y1="-17.6" x2="-8.75" y2="-17.6" width="0.127" layer="51"/>
 <wire x1="8.75" y1="-5.6" x2="-8.75" y2="-5.6" width="0.127" layer="51"/>
 <text x="-6.75" y="-12.7" size="1.27" layer="21" align="top-left">&gt;VALUE</text>
-</package>
-<package name="SM08B_8PIN_SMD">
-<smd name="P1" x="-5.25" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P2" x="-3.75" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P3" x="-2.25" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P4" x="-0.75" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P5" x="0.75" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P6" x="2.25" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P7" x="3.75" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="P8" x="5.25" y="0" dx="0.8" dy="2.9" layer="1"/>
-<smd name="MOUNT1" x="-7.85" y="-4.7" dx="3.9" dy="1.9" layer="1" rot="R90"/>
-<smd name="MOUNT2" x="7.85" y="-4.7" dx="3.9" dy="1.9" layer="1" rot="R90"/>
-<wire x1="-8.55" y1="0" x2="-8.55" y2="-9" width="0.127" layer="51"/>
-<wire x1="-8.55" y1="-9" x2="8.55" y2="-9" width="0.127" layer="51"/>
-<wire x1="8.55" y1="-9" x2="8.55" y2="0" width="0.127" layer="51"/>
-<wire x1="8.55" y1="0" x2="-8.55" y2="0" width="0.127" layer="51"/>
-<text x="0.2" y="-8.8" size="0.4064" layer="25">&gt;NAME</text>
-<text x="16.8" y="-8.8" size="0.4064" layer="25" align="bottom-right">&gt;VALUE</text>
 </package>
 <package name="SOT223">
 <description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
@@ -6290,23 +6249,6 @@ reflow soldering</description>
 <text x="0" y="0.762" size="1.27" layer="95">&gt;NAME</text>
 <text x="17.78" y="-11.176" size="1.27" layer="95" align="top-right">&gt;VALUE</text>
 </symbol>
-<symbol name="MAX17040_8PIN">
-<wire x1="0" y1="0" x2="17.78" y2="0" width="0.254" layer="94"/>
-<wire x1="17.78" y1="0" x2="17.78" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="17.78" y1="-20.32" x2="0" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="0" y1="-20.32" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="SDA" x="-5.08" y="-2.54" length="middle"/>
-<pin name="SCL" x="-5.08" y="-5.08" length="middle"/>
-<pin name="SEO" x="-5.08" y="-15.24" length="middle"/>
-<pin name="EO" x="-5.08" y="-17.78" length="middle"/>
-<pin name="VDD" x="22.86" y="-2.54" length="middle" rot="R180"/>
-<pin name="GND" x="22.86" y="-5.08" length="middle" rot="R180"/>
-<pin name="CTG" x="-5.08" y="-10.16" length="middle"/>
-<pin name="CELL" x="-5.08" y="-12.7" length="middle"/>
-<pin name="EP" x="22.86" y="-10.16" length="middle" rot="R180"/>
-<text x="0" y="1.016" size="1.778" layer="95">&gt;NAME</text>
-<text x="17.78" y="-21.336" size="1.778" layer="96" align="top-right">&gt;VALUE</text>
-</symbol>
 <symbol name="DPDT_6PIN_SWITCH">
 <wire x1="0" y1="0" x2="0" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="0" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
@@ -6345,22 +6287,6 @@ reflow soldering</description>
 <text x="-15.24" y="13.462" size="1.27" layer="96">&gt;VALUE</text>
 <text x="15.24" y="-16.256" size="1.778" layer="95" align="top-right">&gt;NAME</text>
 </symbol>
-<symbol name="JST_8PIN">
-<wire x1="0" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="7.62" y1="0" x2="7.62" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-22.86" x2="0" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="0" y1="-22.86" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="P1" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<pin name="P2" x="12.7" y="-5.08" length="middle" rot="R180"/>
-<pin name="P3" x="12.7" y="-7.62" length="middle" rot="R180"/>
-<pin name="P4" x="12.7" y="-10.16" length="middle" rot="R180"/>
-<pin name="P5" x="12.7" y="-12.7" length="middle" rot="R180"/>
-<pin name="P6" x="12.7" y="-15.24" length="middle" rot="R180"/>
-<pin name="P7" x="12.7" y="-17.78" length="middle" rot="R180"/>
-<pin name="P8" x="12.7" y="-20.32" length="middle" rot="R180"/>
-<text x="0" y="0.508" size="1.016" layer="95">&gt;NAME</text>
-<text x="0" y="-23.622" size="1.016" layer="95" align="top-left">&gt;VALUE</text>
-</symbol>
 <symbol name="78XX">
 <wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.4064" layer="94"/>
 <wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.4064" layer="94"/>
@@ -6397,29 +6323,6 @@ reflow soldering</description>
 <connect gate="G$1" pin="VBAT" pad="P3"/>
 <connect gate="G$1" pin="VDD" pad="P4"/>
 <connect gate="G$1" pin="VSS" pad="P2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MAX17040-TDFN">
-<gates>
-<gate name="G$1" symbol="MAX17040_8PIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TDFN_8PIN">
-<connects>
-<connect gate="G$1" pin="CELL" pad="P2"/>
-<connect gate="G$1" pin="CTG" pad="P1"/>
-<connect gate="G$1" pin="EO" pad="P6"/>
-<connect gate="G$1" pin="EP" pad="EP"/>
-<connect gate="G$1" pin="GND" pad="P4"/>
-<connect gate="G$1" pin="SCL" pad="P7"/>
-<connect gate="G$1" pin="SDA" pad="P8"/>
-<connect gate="G$1" pin="SEO" pad="P5"/>
-<connect gate="G$1" pin="VDD" pad="P3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6470,28 +6373,6 @@ reflow soldering</description>
 <connect gate="G$1" pin="RXD" pad="P13"/>
 <connect gate="G$1" pin="TXD" pad="P14"/>
 <connect gate="G$1" pin="VIN" pad="P8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SM08B-ZESS-TB">
-<gates>
-<gate name="G$1" symbol="JST_8PIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SM08B_8PIN_SMD">
-<connects>
-<connect gate="G$1" pin="P1" pad="P1"/>
-<connect gate="G$1" pin="P2" pad="P2"/>
-<connect gate="G$1" pin="P3" pad="P3"/>
-<connect gate="G$1" pin="P4" pad="P4"/>
-<connect gate="G$1" pin="P5" pad="P5"/>
-<connect gate="G$1" pin="P6" pad="P6"/>
-<connect gate="G$1" pin="P7" pad="P7"/>
-<connect gate="G$1" pin="P8" pad="P8"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9760,10 +9641,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603" value="RED"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0402" value="4.7K"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="U2" library="glasses" deviceset="MAX17040-TDFN" device=""/>
-<part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="resistor" deviceset="C-EU" device="C0402" value="1uF"/>
-<part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun" deviceset="M02" device="-JST-2MM-SMT"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="PTC" library="resistor" deviceset="R-EU_" device="R0402" value="500mA"/>
@@ -9795,22 +9672,13 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="R4" library="resistor" deviceset="R-US_" device="R0402" value="56"/>
 <part name="LED3" library="led" deviceset="LED" device="CHIPLED_0603" value="BLUE"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="Q3" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="2N7002"/>
-<part name="R5" library="resistor" deviceset="R-US_" device="R0402" value="DNI"/>
-<part name="JP6" library="SparkFun" deviceset="M02" device="LOCK_LONGPADS" value="LED"/>
-<part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="C8" library="resistor" deviceset="C-EU" device="C0402" value="0.1uF"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
 <part name="C9" library="resistor" deviceset="C-EU" device="C0402" value="0.1uF"/>
-<part name="JP7" library="glasses" deviceset="SM08B-ZESS-TB" device=""/>
-<part name="JP8" library="glasses" deviceset="SM08B-ZESS-TB" device=""/>
-<part name="VCC2" library="supply1" deviceset="VCCIO" device=""/>
-<part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="VCC3" library="supply1" deviceset="VCCIO" device=""/>
 <part name="VCC4" library="supply1" deviceset="VCCIO" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="RESET" library="glasses" deviceset="EVP-AA202K_BUTTON" device=""/>
 <part name="PROGRAM" library="glasses" deviceset="EVP-AA202K_BUTTON" device=""/>
 <part name="C10" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
@@ -9832,17 +9700,12 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="GND18" gate="1" x="104.14" y="63.5"/>
 <instance part="R4" gate="G$1" x="93.98" y="86.36"/>
 <instance part="LED3" gate="G$1" x="76.2" y="86.36" rot="R90"/>
-<instance part="Q3" gate="G$1" x="185.42" y="58.42"/>
-<instance part="R5" gate="G$1" x="175.26" y="68.58"/>
-<instance part="JP6" gate="G$1" x="157.48" y="68.58"/>
-<instance part="GND20" gate="1" x="185.42" y="45.72"/>
 <instance part="GND21" gate="1" x="53.34" y="5.08"/>
 <instance part="C8" gate="G$1" x="35.56" y="22.86" rot="R90"/>
 <instance part="GND22" gate="1" x="111.76" y="5.08"/>
 <instance part="C9" gate="G$1" x="93.98" y="22.86" rot="R90"/>
 <instance part="VCC3" gate="G$1" x="109.22" y="53.34" rot="R270"/>
 <instance part="VCC4" gate="G$1" x="63.5" y="86.36" rot="R90"/>
-<instance part="+3V2" gate="G$1" x="167.64" y="76.2"/>
 <instance part="RESET" gate="G$1" x="35.56" y="17.78"/>
 <instance part="PROGRAM" gate="G$1" x="93.98" y="17.78"/>
 <instance part="C10" gate="G$1" x="99.06" y="48.26"/>
@@ -9851,15 +9714,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <busses>
 </busses>
 <nets>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="RTS"/>
-<wire x1="45.72" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="CTS"/>
-<wire x1="43.18" y1="58.42" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="55.88" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="UART1_TXD" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="RXD"/>
@@ -9872,34 +9726,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="U3" gate="G$1" pin="TXD"/>
 <wire x1="45.72" y1="60.96" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
 <label x="25.4" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SPI_MISO" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="GPIO1/MISO"/>
-<wire x1="45.72" y1="76.2" x2="25.4" y2="76.2" width="0.1524" layer="91"/>
-<label x="25.4" y="76.2" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SPI_MOSI" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="GPIO2/MOSI"/>
-<wire x1="45.72" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
-<label x="25.4" y="73.66" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SPI_SCK" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="GPIO3/SCLK"/>
-<wire x1="45.72" y1="71.12" x2="25.4" y2="71.12" width="0.1524" layer="91"/>
-<label x="25.4" y="71.12" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SPI_CS" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="GPIO4/SS"/>
-<wire x1="45.72" y1="68.58" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
-<label x="25.4" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -9927,11 +9753,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="GND18" gate="1" pin="GND"/>
 <wire x1="104.14" y1="71.12" x2="104.14" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="Q3" gate="G$1" pin="S"/>
-<pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="185.42" y1="53.34" x2="185.42" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND21" gate="1" pin="GND"/>
@@ -9993,21 +9814,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="104.14" y1="86.36" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="68.58" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="Q3" gate="G$1" pin="D"/>
-<wire x1="180.34" y1="68.58" x2="185.42" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="68.58" x2="185.42" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="BT_RESET" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="G"/>
@@ -10015,13 +9821,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="111.76" y1="50.8" x2="111.76" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="35.56" x2="124.46" y2="35.56" width="0.1524" layer="91"/>
 <label x="111.76" y="33.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IR_LED" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="G"/>
-<wire x1="177.8" y1="58.42" x2="165.1" y2="58.42" width="0.1524" layer="91"/>
-<label x="165.1" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TS_RESET" class="0">
@@ -10068,12 +9867,18 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="VCC4" gate="G$1" pin="VCCIO"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="RTS" class="0">
 <segment>
-<pinref part="JP6" gate="G$1" pin="2"/>
-<wire x1="167.64" y1="73.66" x2="167.64" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="71.12" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<pinref part="U3" gate="G$1" pin="RTS"/>
+<wire x1="45.72" y1="58.42" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<label x="25.4" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CTS" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="CTS"/>
+<wire x1="45.72" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
+<label x="25.4" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -10090,10 +9895,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="GND11" gate="1" x="48.26" y="68.58"/>
 <instance part="P+2" gate="VCC" x="96.52" y="76.2"/>
 <instance part="GND19" gate="1" x="104.14" y="66.04"/>
-<instance part="JP7" gate="G$1" x="124.46" y="91.44"/>
-<instance part="JP8" gate="G$1" x="124.46" y="60.96"/>
-<instance part="VCC2" gate="G$1" x="177.8" y="48.26" rot="R180"/>
-<instance part="GND12" gate="1" x="177.8" y="60.96" rot="R180"/>
 <instance part="+3V1" gate="G$1" x="35.56" y="7.62" rot="R90"/>
 </instances>
 <busses>
@@ -10119,32 +9920,12 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="25.4" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <label x="27.94" y="66.04" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P8"/>
-<wire x1="137.16" y1="40.64" x2="154.94" y2="40.64" width="0.1524" layer="91"/>
-<label x="157.48" y="40.64" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P1"/>
-<wire x1="154.94" y1="40.64" x2="175.26" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="88.9" x2="154.94" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="88.9" x2="154.94" y2="40.64" width="0.1524" layer="91"/>
-<junction x="154.94" y="40.64"/>
-</segment>
 </net>
 <net name="INCP" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="10"/>
 <wire x1="25.4" y1="63.5" x2="40.64" y2="63.5" width="0.1524" layer="91"/>
 <label x="27.94" y="63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P7"/>
-<wire x1="137.16" y1="43.18" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
-<label x="157.48" y="43.18" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P2"/>
-<wire x1="152.4" y1="43.18" x2="175.26" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="86.36" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="86.36" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
-<junction x="152.4" y="43.18"/>
 </segment>
 </net>
 <net name="RESV" class="0">
@@ -10153,16 +9934,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="25.4" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
 <label x="27.94" y="60.96" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P6"/>
-<wire x1="137.16" y1="45.72" x2="149.86" y2="45.72" width="0.1524" layer="91"/>
-<label x="157.48" y="45.72" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P3"/>
-<wire x1="149.86" y1="45.72" x2="175.26" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="83.82" x2="149.86" y2="45.72" width="0.1524" layer="91"/>
-<junction x="149.86" y="45.72"/>
-</segment>
 </net>
 <net name="INCV" class="0">
 <segment>
@@ -10170,32 +9941,12 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="25.4" y1="58.42" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
 <label x="27.94" y="58.42" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P5"/>
-<wire x1="137.16" y1="48.26" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
-<label x="157.48" y="48.26" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P4"/>
-<wire x1="147.32" y1="48.26" x2="175.26" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="81.28" x2="147.32" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="81.28" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
-<junction x="147.32" y="48.26"/>
-</segment>
 </net>
 <net name="INPHI" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="7"/>
 <wire x1="25.4" y1="55.88" x2="40.64" y2="55.88" width="0.1524" layer="91"/>
 <label x="27.94" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P4"/>
-<wire x1="137.16" y1="50.8" x2="144.78" y2="50.8" width="0.1524" layer="91"/>
-<label x="157.48" y="50.8" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P5"/>
-<wire x1="144.78" y1="50.8" x2="175.26" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="78.74" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="78.74" x2="144.78" y2="50.8" width="0.1524" layer="91"/>
-<junction x="144.78" y="50.8"/>
 </segment>
 </net>
 <net name="TS_GP7" class="0">
@@ -10212,28 +9963,28 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="27.94" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="IR_LED" class="0">
+<net name="TS_GP9" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="4"/>
 <wire x1="25.4" y1="48.26" x2="40.64" y2="48.26" width="0.1524" layer="91"/>
 <label x="27.94" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SPI_CS" class="0">
+<net name="TS_GP10" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="3"/>
 <wire x1="25.4" y1="45.72" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
 <label x="27.94" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SPI_MOSI" class="0">
+<net name="TS_GP11" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="2"/>
 <wire x1="25.4" y1="43.18" x2="40.64" y2="43.18" width="0.1524" layer="91"/>
 <label x="27.94" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SPI_MISO" class="0">
+<net name="TS_GP12" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="40.64" x2="40.64" y2="40.64" width="0.1524" layer="91"/>
@@ -10253,22 +10004,12 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="73.66" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
 <label x="76.2" y="66.04" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P1"/>
-<wire x1="137.16" y1="58.42" x2="175.26" y2="58.42" width="0.1524" layer="91"/>
-<label x="157.48" y="58.42" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PIXEL_EYE" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="10"/>
 <wire x1="73.66" y1="63.5" x2="91.44" y2="63.5" width="0.1524" layer="91"/>
 <label x="76.2" y="63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP7" gate="G$1" pin="P8"/>
-<wire x1="137.16" y1="71.12" x2="175.26" y2="71.12" width="0.1524" layer="91"/>
-<label x="157.48" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BT_RESET" class="0">
@@ -10285,20 +10026,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="76.2" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="I2C_SCL" class="0">
-<segment>
-<pinref part="JP3" gate="G$1" pin="7"/>
-<wire x1="73.66" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
-<label x="76.2" y="55.88" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="I2C_SDA" class="0">
-<segment>
-<pinref part="JP3" gate="G$1" pin="6"/>
-<wire x1="73.66" y1="53.34" x2="91.44" y2="53.34" width="0.1524" layer="91"/>
-<label x="76.2" y="53.34" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="TS_GP17" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="5"/>
@@ -10313,7 +10040,7 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="76.2" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SPI_SCK" class="0">
+<net name="TS_GP14" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="73.66" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
@@ -10347,18 +10074,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="76.2" y="71.12" size="1.778" layer="95"/>
 <wire x1="104.14" y1="68.58" x2="104.14" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="JP8" gate="G$1" pin="P2"/>
-<wire x1="137.16" y1="55.88" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="GND12" gate="1" pin="GND"/>
-<wire x1="139.7" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="55.88" x2="177.8" y2="58.42" width="0.1524" layer="91"/>
-<label x="157.48" y="55.88" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P7"/>
-<wire x1="137.16" y1="73.66" x2="139.7" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="73.66" x2="139.7" y2="55.88" width="0.1524" layer="91"/>
-<junction x="139.7" y="55.88"/>
 </segment>
 </net>
 <net name="TS_PROG" class="0">
@@ -10398,20 +10113,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="76.2" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VCCIO" class="0">
-<segment>
-<pinref part="JP8" gate="G$1" pin="P3"/>
-<wire x1="137.16" y1="53.34" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="VCC2" gate="G$1" pin="VCCIO"/>
-<wire x1="142.24" y1="53.34" x2="177.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="53.34" x2="177.8" y2="50.8" width="0.1524" layer="91"/>
-<label x="157.48" y="53.34" size="1.778" layer="95"/>
-<pinref part="JP7" gate="G$1" pin="P6"/>
-<wire x1="137.16" y1="76.2" x2="142.24" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="76.2" x2="142.24" y2="53.34" width="0.1524" layer="91"/>
-<junction x="142.24" y="53.34"/>
-</segment>
-</net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="JP4" gate="G$1" pin="2"/>
@@ -10426,6 +10127,20 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="JP3" gate="G$1" pin="4"/>
 <wire x1="73.66" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
 <label x="76.2" y="48.26" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RTS" class="0">
+<segment>
+<pinref part="JP3" gate="G$1" pin="6"/>
+<wire x1="73.66" y1="53.34" x2="91.44" y2="53.34" width="0.1524" layer="91"/>
+<label x="76.2" y="53.34" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CTS" class="0">
+<segment>
+<pinref part="JP3" gate="G$1" pin="7"/>
+<wire x1="73.66" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
+<label x="76.2" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -10446,10 +10161,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="LED1" gate="G$1" x="22.86" y="99.06" rot="R90"/>
 <instance part="R2" gate="G$1" x="55.88" y="86.36"/>
 <instance part="GND5" gate="1" x="68.58" y="81.28"/>
-<instance part="U2" gate="G$1" x="45.72" y="134.62"/>
-<instance part="GND6" gate="1" x="76.2" y="106.68"/>
-<instance part="C3" gate="G$1" x="83.82" y="116.84" rot="R90"/>
-<instance part="GND7" gate="1" x="35.56" y="111.76"/>
 <instance part="JP1" gate="G$1" x="-10.16" y="50.8"/>
 <instance part="GND8" gate="1" x="5.08" y="33.02"/>
 <instance part="PTC" gate="G$1" x="5.08" y="58.42" rot="R90"/>
@@ -10472,10 +10183,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="U1" gate="G$1" pin="VBAT"/>
 <wire x1="17.78" y1="83.82" x2="5.08" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="83.82" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="CELL"/>
-<wire x1="40.64" y1="121.92" x2="-12.7" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="121.92" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="63.5" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
 <junction x="5.08" y="63.5"/>
 <pinref part="PTC" gate="G$1" pin="2"/>
 <wire x1="5.08" y1="63.5" x2="15.24" y2="63.5" width="0.1524" layer="91"/>
@@ -10510,34 +10217,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="60.96" y1="86.36" x2="68.58" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="86.36" x2="68.58" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="GND"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="68.58" y1="129.54" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="129.54" x2="76.2" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="EP"/>
-<wire x1="76.2" y1="124.46" x2="76.2" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="116.84" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="124.46" x2="76.2" y2="124.46" width="0.1524" layer="91"/>
-<junction x="76.2" y="124.46"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="116.84" x2="76.2" y2="116.84" width="0.1524" layer="91"/>
-<junction x="76.2" y="116.84"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="CTG"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="40.64" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="124.46" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="SEO"/>
-<wire x1="35.56" y1="119.38" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="116.84" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="119.38" x2="35.56" y2="119.38" width="0.1524" layer="91"/>
-<junction x="35.56" y="119.38"/>
-<pinref part="U2" gate="G$1" pin="EO"/>
-<wire x1="40.64" y1="116.84" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
-<junction x="35.56" y="116.84"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
@@ -10589,20 +10268,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="45.72" y1="86.36" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="I2C_SDA" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="SDA"/>
-<wire x1="40.64" y1="132.08" x2="25.4" y2="132.08" width="0.1524" layer="91"/>
-<label x="25.4" y="132.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="I2C_SCL" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="SCL"/>
-<wire x1="40.64" y1="129.54" x2="25.4" y2="129.54" width="0.1524" layer="91"/>
-<label x="25.4" y="129.54" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
@@ -10636,13 +10301,6 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </net>
 <net name="VCCIO" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="VDD"/>
-<wire x1="68.58" y1="132.08" x2="93.98" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="132.08" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="116.84" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="88.9" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
-<junction x="93.98" y="116.84"/>
 <junction x="93.98" y="63.5"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="63.5" x2="68.58" y2="60.96" width="0.1524" layer="91"/>
