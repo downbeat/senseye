@@ -165,10 +165,8 @@
 <text x="16.555009375" y="3.4925" size="0.254" layer="125" rot="R90">U2</text>
 <text x="71.667496875" y="11.024996875" size="1.27" layer="125" rot="R90">U3</text>
 <wire x1="0" y1="19.05" x2="65.405" y2="19.05" width="0" layer="20"/>
-<wire x1="0" y1="19.4691" x2="65.405" y2="19.4691" width="1.0668" layer="29"/>
-<wire x1="0" y1="19.4691" x2="65.405" y2="19.4691" width="1.0668" layer="30"/>
-<text x="11.033125" y="15.71625" size="0.8128" layer="21" font="vector" ratio="16" rot="SR0" align="top-left">SENSEYE-INSIGHT V1.1
-BIELAWSKI, PAUPORE, ROMEO 5/8/2013</text>
+<text x="11.90625" y="15.636875" size="0.8128" layer="21" font="vector" ratio="16" rot="SR0" align="top-left">SENSEYE-INSIGHT V1.1
+BIELAWSKI, PAUPORE, ROMEO 5/8/13</text>
 </plain>
 <libraries>
 <library name="resistor">
