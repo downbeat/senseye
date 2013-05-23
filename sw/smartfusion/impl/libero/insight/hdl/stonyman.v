@@ -437,7 +437,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_VREF_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_VREF == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_NBIAS;
@@ -539,7 +539,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_NBIAS_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_NBIAS == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_AOBIAS;
@@ -641,7 +641,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_AOBIAS_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_AOBIAS == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_CONFIG;
