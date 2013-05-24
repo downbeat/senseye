@@ -192,7 +192,7 @@
 @W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":104:11:104:25|Pruning instance DFN1C0_WGRY[6] -- not in use ...
 @W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":92:9:92:15|Pruning instance XOR2_23 -- not in use ...
 @W: CL168 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v":79:9:79:15|Pruning instance AND2_20 -- not in use ...
-@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":426:51:426:77|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":424:51:424:77|Read Address width 3 does not cover RAM depth
 @W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":208:14:208:32|No assignment to wire TP_PADDR_BIT2_net_0
 @W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":245:14:245:28|No assignment to wire PADDRS0_slice_0
 @W: CG360 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":246:14:246:28|No assignment to wire PADDRS0_slice_1
@@ -201,12 +201,10 @@
 @W: CL159 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":61:14:61:20|Input CAPTURE is unused
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":96:13:96:16|Input port bits 31 to 8 of addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":99:21:99:26|Input port bits 31 to 1 of datain[31:0] are unused
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Register bit counterWait[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register bit 31 of counterWait[31:0] 
-@W: CL190 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Optimizing register bit inphi to a constant 0
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Register bit counterWait[30] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register bit 30 of counterWait[30:0] 
-@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register inphi 
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Pruning register bit 31 of counterWait[31:0] 
+@W: CL190 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Optimizing register bit inphi to a constant 0
+@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Pruning register inphi 
 @W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused

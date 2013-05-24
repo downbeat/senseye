@@ -1,7 +1,7 @@
 
 Starting:    C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\win64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
-Date:        Wed Mar 27 13:33:20 2013
+Date:        Thu May 23 17:27:50 2013
 Version:     F-2012.03M-SP1 
 
 Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log TOPLEVEL_syn.tcl
