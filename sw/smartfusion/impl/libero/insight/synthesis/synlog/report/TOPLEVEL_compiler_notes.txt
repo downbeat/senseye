@@ -58,14 +58,14 @@
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":12:7:12:12|Synthesizing module cr_int
 @N: CG179 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":130:7:130:14|Synthesizing module stonyman
-@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Found RAM cachedValue, depth=8, width=8
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":128:7:128:14|Synthesizing module stonyman
+@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":91:7:91:20|Synthesizing module stonyman_ioreg
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":34:7:34:19|Synthesizing module stonyman_apb3
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":113:0:113:5|Trying to extract state machine for register fifoRdenState
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Trying to extract state machine for register substate
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Trying to extract state machine for register state
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Trying to extract state machine for register state
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\counter.v":38:0:38:5|Trying to extract state machine for register state
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":152:0:152:5|Trying to extract state machine for register CAHBtoAPB3OIl
 @N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":646:0:646:5|Trying to extract state machine for register CAHBtoAPB3IOI

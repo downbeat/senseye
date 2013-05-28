@@ -741,13 +741,13 @@ Selecting top level module TOPLEVEL
 @N: CG179 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":217:43:217:50|Removing redundant assignment
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v":12:7:12:14|Synthesizing module psram_cr
 
-@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":130:7:130:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":128:7:128:14|Synthesizing module stonyman
 
-@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":426:51:426:77|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":424:51:424:77|Read Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":426:51:426:77|Write Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":424:51:424:77|Write Address width 3 does not cover RAM depth
 
-@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Found RAM cachedValue, depth=8, width=8
+@N: CL134 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":91:7:91:20|Synthesizing module stonyman_ioreg
 
 @N: CG364 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":34:7:34:19|Synthesizing module stonyman_apb3
@@ -775,12 +775,12 @@ State machine has 4 reachable states with original encodings of:
 
 @W: CL246 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":99:21:99:26|Input port bits 31 to 1 of datain[31:0] are unused
 
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Register bit counterWait[31] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register bit 31 of counterWait[31:0] 
+@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Register bit counterWait[31] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Pruning register bit 31 of counterWait[31:0] 
 
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
-State machine has 15 reachable states with original encodings of:
+State machine has 16 reachable states with original encodings of:
    00000
    00001
    00010
@@ -793,15 +793,28 @@ State machine has 15 reachable states with original encodings of:
    01011
    01100
    01101
+   01110
    01111
    10000
    10001
-@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Trying to extract state machine for register state
-@W: CL190 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Optimizing register bit inphi to a constant 0
-@W: CL189 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Register bit counterWait[30] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register bit 30 of counterWait[30:0] 
-
-@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":165:0:165:5|Pruning register inphi 
+@N: CL201 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 13 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+   1100
+@W: CL190 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Optimizing register bit inphi to a constant 0
+@W: CL169 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":163:0:163:5|Pruning register inphi 
 
 @W: CL260 :"Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 

@@ -63,22 +63,18 @@
  `define VAL_VREF                  (`VAL_VREF_5V0)
  `define VAL_NBIAS                 (`VAL_NBIAS_5V0)
  `define VAL_AOBIAS                (`VAL_AOBIAS_5V0)
+ `define VAL_USE_AMP               (0)
+ `define VAL_GAIN                  (1) // this value is likely ignored when the amp is disabled
 `endif // VIN_5V0
 `ifdef VIN_3V3
  `define VAL_VREF                  (`VAL_VREF_3V3)
  `define VAL_NBIAS                 (`VAL_NBIAS_3V3)
  `define VAL_AOBIAS                (`VAL_AOBIAS_3V3)
-`endif // VIN_3V3
-
-// comment USE_AMP out if not using the AMP
-//`define USE_AMP
-`ifdef USE_AMP
+ `define USE_AMP
  `define VAL_USE_AMP               (1)
  `define VAL_GAIN                  (2) // set gain here
-`else
- `define VAL_USE_AMP               (0)
- `define VAL_GAIN                  (1) // this value is likely ignored when the amp is disabled
-`endif
+`endif // VIN_3V3
+
 `define VAL_CVDDA                  (16) // constant comes from manual: 10b shifted right 3
 `define VAL_CONFIG                 (`VAL_GAIN + (`VAL_USE_AMP<<3) + `VAL_CVDDA)
 
@@ -121,9 +117,11 @@
 `ifdef USE_AMP
  `define S__SPECIAL__INPHI_OR_ACQUIRE      (`S_CAP_PULSE_INPHI)
  `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_INPHI_RAISE)
+ `define INPHI_OR_ACQUIRE__WAIT_VAL        (0)
 `else
- `define S__SPECIAL__INPHI_OR_ACQUIRE      (`S_CAP_ACQUIRE_PIXEL)
- `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_STARTCAP_LOWER)
+ `define S__SPECIAL__INPHI_OR_ACQUIRE      (`S_CAP_PULSE_INPHI)
+ `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_INPHI_WAIT_AFTER)
+ `define INPHI_OR_ACQUIRE__WAIT_VAL        (`TICKS_PULSE_INPHI_AFTER-1)
 `endif
 
 
@@ -437,7 +435,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_VREF_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_VREF == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_NBIAS;
@@ -539,7 +537,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_NBIAS_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_NBIAS == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_AOBIAS;
@@ -641,7 +639,7 @@ begin
                   else
                   begin
                      // have we incremented the value enough times?
-                     if(`VAL_AOBIAS_3V3 == cachedValue[cachedPOINTER])
+                     if(`VAL_AOBIAS == cachedValue[cachedPOINTER])
                      begin
                         // yes: go on to the next state
                         state <= `S_INIT_REG_SET_CONFIG;
@@ -1084,6 +1082,7 @@ begin
                   begin
                      state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
                      substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
+                     counterWait <= `INPHI_OR_ACQUIRE__WAIT_VAL;
                   end
                   else
                   begin
@@ -1116,6 +1115,7 @@ begin
                   begin
                      state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
                      substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
+                     counterWait <= `INPHI_OR_ACQUIRE__WAIT_VAL;
                   end
                end
                default:
@@ -1382,6 +1382,7 @@ begin
                      // we don't need to change the ROW value
                      state <= `S__SPECIAL__INPHI_OR_ACQUIRE;
                      substate <= `SUB_S__SPECIAL__INPHI_OR_ACQUIRE;
+                     counterWait <= `INPHI_OR_ACQUIRE__WAIT_VAL;
                   end
                end
                default:
