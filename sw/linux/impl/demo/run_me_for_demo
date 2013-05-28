@@ -6,5 +6,5 @@ if [ ! -f ./glassescapstream ]; then
    fi
    cp ../glassescapstream/glassescapstream .
 fi
-./glassescapstream | ./demo
+./glassescapstream -b| ./demo
 
