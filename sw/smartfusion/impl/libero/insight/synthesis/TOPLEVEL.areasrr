@@ -3,144 +3,35 @@ Report for cell TOPLEVEL.verilog
                                           Cell usage:
                                cell       count     area    count*area
                               BIBUF        16       0.0        0.0
-                             CLKINT         1       0.0        0.0
-                  COREAHBTOAPB3_15s         1     123.0      123.0
-                     CoreAHBLite_Z3         1     377.0      377.0
-                        CoreAPB3_Z4         1      69.0       69.0
-                         FIFO_PIXEL         1     364.0      364.0
-                  FIFO_TEST_COUNTER         1     159.0      159.0
+                  COREAHBTOAPB3_15s         1     127.0      127.0
+                     CoreAHBLite_Z3         1     363.0      363.0
+                        CoreAPB3_Z4         1      36.0       36.0
                                 GND         1       0.0        0.0
-                              INBUF         2       0.0        0.0
+                              INBUF         4       0.0        0.0
                           MSS_CORE2         1       0.0        0.0
-                                OR3         1       1.0        1.0
+                              NOR2A         1       1.0        1.0
+                              NOR3C         1       1.0        1.0
+                               OR3B         1       1.0        1.0
                              OUTBUF        59       0.0        0.0
                             TRIBUFF         1       0.0        0.0
                                 VCC         1       0.0        0.0
                               XNOR2         1       1.0        1.0
-                               XOR2         2       1.0        2.0
-                               XOR3         1       1.0        1.0
-                         adc081s101         1      69.0       69.0
                        clkgenerator         1       2.0        2.0
-                            counter         1     224.0      224.0
-                    fifo_32bit_apb3         1     135.0      135.0
-                           psram_cr         1     818.0      818.0
-                           stonyman         1    1018.0     1018.0
-                      stonyman_apb3         1     162.0      162.0
+                            imaging         1    3553.0     3553.0
+                           psram_cr         1     821.0      821.0
                             
-                         TOTAL             99               3525.0
-----------------------------------------------------------------------
-Report for cell stonyman_apb3.netlist
-     Instance path:  stonyman_apb3_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                                GND         1       0.0        0.0
-                              NOR2A         1       1.0        1.0
-                              NOR3C         1       1.0        1.0
-                                VCC         1       0.0        0.0
-                     stonyman_ioreg         1     160.0      160.0
-                            
-                         TOTAL              5                162.0
-----------------------------------------------------------------------
-Report for cell stonyman_ioreg.netlist
-     Instance path:  stonyman_apb3_0.stonyman_ioreg_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AO1C         2       1.0        2.0
-                               AO1D         2       1.0        2.0
-                                AX1         1       1.0        1.0
-                               DFN1        35       1.0       35.0
-                             DFN1E1         2       1.0        2.0
-                                GND         1       0.0        0.0
-                               MX2B        33       1.0       33.0
-                               NOR2         3       1.0        3.0
-                              NOR2A         2       1.0        2.0
-                              NOR2B        37       1.0       37.0
-                               NOR3         1       1.0        1.0
-                              NOR3A         1       1.0        1.0
-                              NOR3C         2       1.0        2.0
-                                OA1         1       1.0        1.0
-                               OA1C         1       1.0        1.0
-                                OR2         1       1.0        1.0
-                               OR2A        32       1.0       32.0
-                               OR2B         1       1.0        1.0
-                                OR3         1       1.0        1.0
-                               OR3A         1       1.0        1.0
-                                VCC         1       0.0        0.0
-                               XA1A         1       1.0        1.0
-                            
-                         TOTAL            162                160.0
-----------------------------------------------------------------------
-Report for cell stonyman.netlist
-     Instance path:  stonyman_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AND2        15       1.0       15.0
-                               AND3         6       1.0        6.0
-                                AO1        32       1.0       32.0
-                               AO13         1       1.0        1.0
-                               AO16         2       1.0        2.0
-                               AO1A        20       1.0       20.0
-                               AO1B        14       1.0       14.0
-                               AO1C         3       1.0        3.0
-                               AO1D         3       1.0        3.0
-                               AOI1         5       1.0        5.0
-                              AOI1B         8       1.0        8.0
-                                AX1         1       1.0        1.0
-                               AX1B         2       1.0        2.0
-                               AX1D         2       1.0        2.0
-                              AXOI4         1       1.0        1.0
-                              AXOI7         2       1.0        2.0
-                               DFN1        67       1.0       67.0
-                             DFN1E0        31       1.0       31.0
-                             DFN1E1         8       1.0        8.0
-                                GND         1       0.0        0.0
-                                INV         1       1.0        1.0
-                                MX2        23       1.0       23.0
-                               MX2A         9       1.0        9.0
-                               MX2C         2       1.0        2.0
-                               NOR2        39       1.0       39.0
-                              NOR2A        72       1.0       72.0
-                              NOR2B       117       1.0      117.0
-                               NOR3        23       1.0       23.0
-                              NOR3A        63       1.0       63.0
-                              NOR3B        57       1.0       57.0
-                              NOR3C        31       1.0       31.0
-                                OA1        17       1.0       17.0
-                               OA1A        12       1.0       12.0
-                               OA1B        13       1.0       13.0
-                               OA1C         8       1.0        8.0
-                               OAI1         5       1.0        5.0
-                                OR2        62       1.0       62.0
-                               OR2A        21       1.0       21.0
-                               OR2B         9       1.0        9.0
-                                OR3        94       1.0       94.0
-                               OR3A         6       1.0        6.0
-                               OR3B         1       1.0        1.0
-                               OR3C         1       1.0        1.0
-                          RAM512X18         1       0.0        0.0
-                                VCC         1       0.0        0.0
-                                XA1         1       1.0        1.0
-                               XA1A         6       1.0        6.0
-                               XA1C         1       1.0        1.0
-                              XNOR2        48       1.0       48.0
-                              XNOR3         2       1.0        2.0
-                               XOR2        44       1.0       44.0
-                               XOR3         4       1.0        4.0
-                               ZOR3         2       1.0        2.0
-                              ZOR3I         1       1.0        1.0
-                            
-                         TOTAL           1021               1018.0
+                         TOTAL             93               4906.0
 ----------------------------------------------------------------------
 Report for cell psram_cr.netlist
      Instance path:  psram_cr_0
                                           Cell usage:
                                cell       count     area    count*area
-                                AHB         1     519.0      519.0
+                                AHB         1     524.0      524.0
                                 GND         1       0.0        0.0
                                 VCC         1       0.0        0.0
-                             cr_int         1     299.0      299.0
+                             cr_int         1     297.0      297.0
                             
-                         TOTAL              4                818.0
+                         TOTAL              4                821.0
 ----------------------------------------------------------------------
 Report for cell cr_int.netlist
      Instance path:  psram_cr_0.cr_int_i0
@@ -150,37 +41,37 @@ Report for cell cr_int.netlist
                                AO1A         1       1.0        1.0
                                AO1C         1       1.0        1.0
                                AX1A         1       1.0        1.0
-                               AX1E         2       1.0        2.0
+                               AX1E         1       1.0        1.0
                                DFN1        72       1.0       72.0
                              DFN1E1         4       1.0        4.0
                                 GND         1       0.0        0.0
                                 MX2        76       1.0       76.0
-                               NOR2         8       1.0        8.0
+                               NOR2         4       1.0        4.0
                               NOR2A         2       1.0        2.0
-                              NOR2B       103       1.0      103.0
-                              NOR3A         2       1.0        2.0
+                              NOR2B       101       1.0      101.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
                               NOR3B         2       1.0        2.0
                                OA1B         1       1.0        1.0
-                               OAI1         1       1.0        1.0
+                               OAI1         2       1.0        2.0
                                 OR2         4       1.0        4.0
-                               OR2A         6       1.0        6.0
-                               OR2B         3       1.0        3.0
-                               OR3A         2       1.0        2.0
-                               OR3B         1       1.0        1.0
-                               OR3C         1       1.0        1.0
+                               OR2A         7       1.0        7.0
+                               OR2B         4       1.0        4.0
+                                OR3         1       1.0        1.0
+                               OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1B         1       1.0        1.0
-                               XA1C         1       1.0        1.0
-                              XNOR2         1       1.0        1.0
+                               XA1B         2       1.0        2.0
+                               XA1C         2       1.0        2.0
                                 XO1         1       1.0        1.0
                             
-                         TOTAL            301                299.0
+                         TOTAL            299                297.0
 ----------------------------------------------------------------------
 Report for cell AHB.netlist
      Instance path:  psram_cr_0.ahb0
                                           Cell usage:
                                cell       count     area    count*area
-                                AO1        41       1.0       41.0
+                               AND2         1       1.0        1.0
+                                AO1        39       1.0       39.0
                                AO1A         2       1.0        2.0
                                AO1B         6       1.0        6.0
                                DFN1       114       1.0      114.0
@@ -188,20 +79,20 @@ Report for cell AHB.netlist
                                 GND         1       0.0        0.0
                                 MX2       107       1.0      107.0
                                NOR2         3       1.0        3.0
-                              NOR2A         6       1.0        6.0
-                              NOR2B       139       1.0      139.0
-                              NOR3A         3       1.0        3.0
-                              NOR3B         6       1.0        6.0
-                              NOR3C        38       1.0       38.0
+                              NOR2A         7       1.0        7.0
+                              NOR2B       174       1.0      174.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         9       1.0        9.0
+                              NOR3C         5       1.0        5.0
                                 OA1         2       1.0        2.0
                                OAI1         1       1.0        1.0
                                OR2A         1       1.0        1.0
                                OR2B         1       1.0        1.0
-                                OR3        16       1.0       16.0
+                                OR3        17       1.0       17.0
                                OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL            521                519.0
+                         TOTAL            526                524.0
 ----------------------------------------------------------------------
 Report for cell MSS_CORE2.netlist
      Instance path:  MSS_CORE2_0
@@ -230,142 +121,378 @@ Report for cell MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.netlist
                             
                          TOTAL              5                  0.0
 ----------------------------------------------------------------------
-Report for cell FIFO_TEST_COUNTER.netlist
-     Instance path:  FIFO_TEST_COUNTER_0
+Report for cell imaging.netlist
+     Instance path:  imaging_0
                                           Cell usage:
                                cell       count     area    count*area
-                               AND2        22       1.0       22.0
-                              AND2A         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                VCC         1       0.0        0.0
+            adc081s101_adc081s101_0         1      71.0       71.0
+          adc081s101_adc081s101_0_1         1      62.0       62.0
+          adc081s101_adc081s101_0_2         1      64.0       64.0
+                            fifo_px         1     473.0      473.0
+                          fifo_px_1         1     472.0      472.0
+                          fifo_px_2         1     472.0      472.0
+                          fifo_px_3         1     472.0      472.0
+                           stonyman         1    1133.0     1133.0
+                      stonyman_apb3         1     334.0      334.0
+                            
+                         TOTAL             11               3553.0
+----------------------------------------------------------------------
+Report for cell stonyman_apb3.netlist
+     Instance path:  imaging_0.stonyman_apb3_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                                GND         1       0.0        0.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                     stonyman_ioreg         1     332.0      332.0
+                            
+                         TOTAL              5                334.0
+----------------------------------------------------------------------
+Report for cell stonyman_ioreg.netlist
+     Instance path:  imaging_0.stonyman_apb3_0.stonyman_ioreg_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AO1        53       1.0       53.0
+                               AO1B         1       1.0        1.0
+                               AOI1         1       1.0        1.0
+                              AOI1B         1       1.0        1.0
+                               AX1C         1       1.0        1.0
+                               DFN1        38       1.0       38.0
+                             DFN1E1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                MX2        43       1.0       43.0
+                               MX2A         3       1.0        3.0
+                               NOR2         6       1.0        6.0
+                              NOR2A         6       1.0        6.0
+                              NOR2B       118       1.0      118.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         6       1.0        6.0
+                              NOR3C         6       1.0        6.0
+                                OA1         1       1.0        1.0
+                                OR2        17       1.0       17.0
+                               OR2A         1       1.0        1.0
+                               OR2B         4       1.0        4.0
+                                OR3        16       1.0       16.0
+                               OR3A         4       1.0        4.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                            
+                         TOTAL            334                332.0
+----------------------------------------------------------------------
+Report for cell stonyman.netlist
+     Instance path:  imaging_0.stonyman_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        17       1.0       17.0
                                AND3         6       1.0        6.0
-                                AO1        16       1.0       16.0
-                             DFN1C0        18       1.0       18.0
+                                AO1        28       1.0       28.0
+                               AO17         1       1.0        1.0
+                               AO1A        17       1.0       17.0
+                               AO1B         3       1.0        3.0
+                               AO1C        18       1.0       18.0
+                               AO1D         6       1.0        6.0
+                               AOI1        10       1.0       10.0
+                              AOI1B         5       1.0        5.0
+                                AX1         2       1.0        2.0
+                               AX1A         2       1.0        2.0
+                               AX1B         7       1.0        7.0
+                               AX1D         4       1.0        4.0
+                               AXO5         1       1.0        1.0
+                              AXOI5         1       1.0        1.0
+                              AXOI7         1       1.0        1.0
+                               DFN1        67       1.0       67.0
+                             DFN1E0        31       1.0       31.0
+                             DFN1E1        24       1.0       24.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               MIN3         1       1.0        1.0
+                                MX2        26       1.0       26.0
+                               MX2A         7       1.0        7.0
+                               MX2B        14       1.0       14.0
+                               MX2C         4       1.0        4.0
+                               NOR2        63       1.0       63.0
+                              NOR2A        97       1.0       97.0
+                              NOR2B       118       1.0      118.0
+                               NOR3        19       1.0       19.0
+                              NOR3A        46       1.0       46.0
+                              NOR3B        68       1.0       68.0
+                              NOR3C        34       1.0       34.0
+                                OA1        18       1.0       18.0
+                               OA1A        13       1.0       13.0
+                               OA1B         7       1.0        7.0
+                               OA1C         7       1.0        7.0
+                               OAI1         3       1.0        3.0
+                                OR2        74       1.0       74.0
+                               OR2A        23       1.0       23.0
+                               OR2B        11       1.0       11.0
+                                OR3        99       1.0       99.0
+                               OR3A        10       1.0       10.0
+                               OR3B         2       1.0        2.0
+                          RAM512X18         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                                XA1         5       1.0        5.0
+                               XA1A         8       1.0        8.0
+                               XA1B         4       1.0        4.0
+                               XA1C         3       1.0        3.0
+                              XNOR2        43       1.0       43.0
+                              XNOR3         4       1.0        4.0
+                               XOR2        47       1.0       47.0
+                               XOR3         2       1.0        2.0
+                              ZOR3I         1       1.0        1.0
+                            
+                         TOTAL           1136               1133.0
+----------------------------------------------------------------------
+Report for cell fifo_px_3.netlist
+  Original Cell name fifo_px
+     Instance path:  imaging_0.fifo_px_3
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        52       1.0       52.0
+                              AND2A         1       1.0        1.0
+                               AND3        12       1.0       12.0
+                                AO1        43       1.0       43.0
+                               AO1C         4       1.0        4.0
+                               AOI1         1       1.0        1.0
+                               BUFF         2       1.0        2.0
+                             CLKINT         1       0.0        0.0
+                             DFN1C0        90       1.0       90.0
                            DFN1E1C0        32       1.0       32.0
                              DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
-                                INV         3       1.0        3.0
+                                INV        15       1.0       15.0
                               NAND2         2       1.0        2.0
-                          RAM512X18         2       0.0        0.0
+                             NAND3A         8       1.0        8.0
+                              NOR2A         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
+                                OR2         1       1.0        1.0
+                               OR2A         8       1.0        8.0
+                                OR3         1       1.0        1.0
+                             RAM4K9         4       0.0        0.0
                                 VCC         1       0.0        0.0
-                              XNOR2        15       1.0       15.0
-                               XOR2        43       1.0       43.0
+                              XNOR2        40       1.0       40.0
+                              XNOR3        32       1.0       32.0
+                               XOR2       114       1.0      114.0
+                               XOR3         8       1.0        8.0
                             
-                         TOTAL            163                159.0
+                         TOTAL            479                472.0
 ----------------------------------------------------------------------
-Report for cell FIFO_PIXEL.netlist
-     Instance path:  FIFO_PIXEL_0
+Report for cell fifo_px_2.netlist
+  Original Cell name fifo_px
+     Instance path:  imaging_0.fifo_px_2
                                           Cell usage:
                                cell       count     area    count*area
-                               AND2        40       1.0       40.0
+                               AND2        52       1.0       52.0
                               AND2A         1       1.0        1.0
-                               AND3        10       1.0       10.0
-                                AO1        34       1.0       34.0
-                             DFN1C0        28       1.0       28.0
-                           DFN1E1C0        34       1.0       34.0
+                               AND3        12       1.0       12.0
+                                AO1        43       1.0       43.0
+                               AO1C         4       1.0        4.0
+                               AOI1         1       1.0        1.0
+                               BUFF         2       1.0        2.0
+                             DFN1C0        90       1.0       90.0
+                           DFN1E1C0        32       1.0       32.0
                              DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
-                                INV         4       1.0        4.0
-                                MX2        96       1.0       96.0
-                              NAND2         4       1.0        4.0
-                                OR2        10       1.0       10.0
-                               OR2A         6       1.0        6.0
-                             RAM4K9        16       0.0        0.0
+                                INV        15       1.0       15.0
+                              NAND2         2       1.0        2.0
+                             NAND3A         8       1.0        8.0
+                              NOR2A         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
+                                OR2         1       1.0        1.0
+                               OR2A         8       1.0        8.0
+                                OR3         1       1.0        1.0
+                             RAM4K9         4       0.0        0.0
                                 VCC         1       0.0        0.0
-                              XNOR2        23       1.0       23.0
-                               XOR2        73       1.0       73.0
+                              XNOR2        40       1.0       40.0
+                              XNOR3        32       1.0       32.0
+                               XOR2       114       1.0      114.0
+                               XOR3         8       1.0        8.0
                             
-                         TOTAL            382                364.0
+                         TOTAL            478                472.0
 ----------------------------------------------------------------------
-Report for cell fifo_32bit_apb3.netlist
-     Instance path:  fifo_32bit_apb3_0
+Report for cell fifo_px_1.netlist
+  Original Cell name fifo_px
+     Instance path:  imaging_0.fifo_px_1
                                           Cell usage:
                                cell       count     area    count*area
-                                GND         1       0.0        0.0
-                              NOR2A         2       1.0        2.0
-                                VCC         1       0.0        0.0
-                   fifo_32bit_ioreg         1     133.0      133.0
-                            
-                         TOTAL              5                135.0
-----------------------------------------------------------------------
-Report for cell fifo_32bit_ioreg.netlist
-     Instance path:  fifo_32bit_apb3_0.fifo_32bit_ioreg_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AO1A         2       1.0        2.0
-                               DFN1        32       1.0       32.0
-                             DFN1E1         1       1.0        1.0
-                                GND         1       0.0        0.0
-                                MX2        32       1.0       32.0
-                              NOR2A        32       1.0       32.0
-                              NOR2B        34       1.0       34.0
-                                VCC         1       0.0        0.0
-                            
-                         TOTAL            135                133.0
-----------------------------------------------------------------------
-Report for cell counter.netlist
-     Instance path:  counter_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AO1A         1       1.0        1.0
-                               AO1D         1       1.0        1.0
+                               AND2        52       1.0       52.0
+                              AND2A         1       1.0        1.0
+                               AND3        12       1.0       12.0
+                                AO1        43       1.0       43.0
+                               AO1C         4       1.0        4.0
                                AOI1         1       1.0        1.0
-                               AX1A         1       1.0        1.0
-                               AX1B         2       1.0        2.0
-                               AX1D         1       1.0        1.0
-                               DFN1        31       1.0       31.0
-                             DFN1E1        32       1.0       32.0
+                               BUFF         2       1.0        2.0
+                             DFN1C0        90       1.0       90.0
+                           DFN1E1C0        32       1.0       32.0
+                             DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
-                                MX2         2       1.0        2.0
-                               MX2B         1       1.0        1.0
-                               NOR2        12       1.0       12.0
-                              NOR2A        16       1.0       16.0
-                              NOR2B         6       1.0        6.0
-                              NOR3A         5       1.0        5.0
-                              NOR3B         6       1.0        6.0
-                              NOR3C         7       1.0        7.0
-                                OA1         1       1.0        1.0
-                               OA1C         4       1.0        4.0
-                                OR2         7       1.0        7.0
-                               OR2A        29       1.0       29.0
-                               OR2B         2       1.0        2.0
-                                OR3         3       1.0        3.0
-                               OR3B         4       1.0        4.0
-                               OR3C         1       1.0        1.0
+                                INV        15       1.0       15.0
+                              NAND2         2       1.0        2.0
+                             NAND3A         8       1.0        8.0
+                              NOR2A         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
+                                OR2         1       1.0        1.0
+                               OR2A         8       1.0        8.0
+                                OR3         1       1.0        1.0
+                             RAM4K9         4       0.0        0.0
                                 VCC         1       0.0        0.0
-                                XA1         2       1.0        2.0
-                               XA1A        26       1.0       26.0
-                               XA1B         7       1.0        7.0
-                               XA1C         4       1.0        4.0
+                              XNOR2        40       1.0       40.0
+                              XNOR3        32       1.0       32.0
+                               XOR2       114       1.0      114.0
+                               XOR3         8       1.0        8.0
+                            
+                         TOTAL            478                472.0
+----------------------------------------------------------------------
+Report for cell fifo_px.netlist
+  Original Cell name fifo_px
+     Instance path:  imaging_0.fifo_px_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        52       1.0       52.0
+                              AND2A         1       1.0        1.0
+                               AND3        12       1.0       12.0
+                                AO1        43       1.0       43.0
+                               AO1C         4       1.0        4.0
+                               AOI1         1       1.0        1.0
+                               BUFF         2       1.0        2.0
+                             DFN1C0        90       1.0       90.0
+                           DFN1E1C0        32       1.0       32.0
+                             DFN1P0         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                INV        16       1.0       16.0
+                              NAND2         2       1.0        2.0
+                             NAND3A         8       1.0        8.0
+                              NOR2A         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
+                                OR2         1       1.0        1.0
+                               OR2A         8       1.0        8.0
+                                OR3         1       1.0        1.0
+                             RAM4K9         4       0.0        0.0
+                                VCC         1       0.0        0.0
+                              XNOR2        40       1.0       40.0
+                              XNOR3        32       1.0       32.0
+                               XOR2       114       1.0      114.0
+                               XOR3         8       1.0        8.0
+                            
+                         TOTAL            479                473.0
+----------------------------------------------------------------------
+Report for cell adc081s101_adc081s101_0_2.netlist
+  Original Cell name adc081s101_adc081s101_0
+     Instance path:  imaging_0.adc081s101_2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                                AO1         3       1.0        3.0
+                               AO1A         2       1.0        2.0
+                               DFN1         3       1.0        3.0
+                             DFN1E1        18       1.0       18.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A         4       1.0        4.0
+                              NOR2B         4       1.0        4.0
+                              NOR3A         3       1.0        3.0
+                              NOR3B         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                                OR2         6       1.0        6.0
+                               OR2A         3       1.0        3.0
+                               OR2B         1       1.0        1.0
+                                OR3         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1C         2       1.0        2.0
+                              XNOR2         1       1.0        1.0
+                               XOR2         4       1.0        4.0
+                            
+                         TOTAL             66                 64.0
+----------------------------------------------------------------------
+Report for cell adc081s101_adc081s101_0_1.netlist
+  Original Cell name adc081s101_adc081s101_0
+     Instance path:  imaging_0.adc081s101_1
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                                AO1         3       1.0        3.0
+                               AO1B         1       1.0        1.0
+                               DFN1         3       1.0        3.0
+                             DFN1E1        18       1.0       18.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         3       1.0        3.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B         4       1.0        4.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         2       1.0        2.0
+                                OR2         8       1.0        8.0
+                               OR2A         1       1.0        1.0
+                               OR2B         2       1.0        2.0
+                                VCC         1       0.0        0.0
+                                XA1         1       1.0        1.0
+                               XA1A         3       1.0        3.0
+                               XA1C         1       1.0        1.0
                               XAI1A         1       1.0        1.0
-                              XNOR2         3       1.0        3.0
-                                XO1         1       1.0        1.0
-                               XO1A         1       1.0        1.0
                                XOR2         3       1.0        3.0
                             
-                         TOTAL            226                224.0
+                         TOTAL             64                 62.0
+----------------------------------------------------------------------
+Report for cell adc081s101_adc081s101_0.netlist
+  Original Cell name adc081s101
+     Instance path:  imaging_0.adc081s101_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                                AO1         4       1.0        4.0
+                               AX1E         1       1.0        1.0
+                               AXO1         1       1.0        1.0
+                               DFN1         4       1.0        4.0
+                             DFN1E1        18       1.0       18.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                MX2         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B         3       1.0        3.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         2       1.0        2.0
+                                OA1         1       1.0        1.0
+                                OR2         8       1.0        8.0
+                               OR2A         4       1.0        4.0
+                                OR3         1       1.0        1.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1A         1       1.0        1.0
+                               XA1C         3       1.0        3.0
+                              XNOR2         1       1.0        1.0
+                               XOR2         3       1.0        3.0
+                            
+                         TOTAL             73                 71.0
 ----------------------------------------------------------------------
 Report for cell CoreAPB3_Z4.netlist
      Instance path:  CoreAPB3_0
                                           Cell usage:
                                cell       count     area    count*area
-                             CAPB3O         1      64.0       64.0
+                             CAPB3O         1      33.0       33.0
                                 GND         1       0.0        0.0
-                              NOR2A         1       1.0        1.0
-                              NOR2B         3       1.0        3.0
-                               NOR3         1       1.0        1.0
+                               NOR2         1       1.0        1.0
+                              NOR2B         1       1.0        1.0
+                              NOR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              8                 69.0
+                         TOTAL              6                 36.0
 ----------------------------------------------------------------------
 Report for cell CAPB3O.netlist
      Instance path:  CoreAPB3_0.CAPB3llOI
                                           Cell usage:
                                cell       count     area    count*area
                                 GND         1       0.0        0.0
-                                MX2        32       1.0       32.0
-                                OA1        32       1.0       32.0
+                              NOR2B        32       1.0       32.0
+                               OR2A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             66                 64.0
+                         TOTAL             35                 33.0
 ----------------------------------------------------------------------
 Report for cell COREAHBTOAPB3_15s.netlist
      Instance path:  COREAHBTOAPB3_0
@@ -373,11 +500,11 @@ Report for cell COREAHBTOAPB3_15s.netlist
                                cell       count     area    count*area
                       CAHBtoAPB3IOl         1       5.0        5.0
                         CAHBtoAPB3O         1      48.0       48.0
-                      CAHBtoAPB3O1I         1      70.0       70.0
+                      CAHBtoAPB3O1I         1      74.0       74.0
                                 GND         1       0.0        0.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              5                123.0
+                         TOTAL              5                127.0
 ----------------------------------------------------------------------
 Report for cell CAHBtoAPB3O1I.netlist
      Instance path:  COREAHBTOAPB3_0.CAHBtoAPB3lll
@@ -387,10 +514,11 @@ Report for cell CAHBtoAPB3O1I.netlist
                            DFN1E0C0        12       1.0       12.0
                            DFN1E1C0        45       1.0       45.0
                                 GND         1       0.0        0.0
+                                INV         4       1.0        4.0
                                 MX2        12       1.0       12.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             72                 70.0
+                         TOTAL             76                 74.0
 ----------------------------------------------------------------------
 Report for cell CAHBtoAPB3IOl.netlist
      Instance path:  COREAHBTOAPB3_0.CAHBtoAPB3Ill
@@ -411,7 +539,6 @@ Report for cell CAHBtoAPB3O.netlist
                                cell       count     area    count*area
                                 AO1         2       1.0        2.0
                                AO1A         6       1.0        6.0
-                               AO1B         1       1.0        1.0
                                AO1D         1       1.0        1.0
                                AOI1         1       1.0        1.0
                              DFN1C0         7       1.0        7.0
@@ -419,15 +546,17 @@ Report for cell CAHBtoAPB3O.netlist
                                 GND         1       0.0        0.0
                                NOR2         3       1.0        3.0
                               NOR2A         3       1.0        3.0
-                              NOR2B         5       1.0        5.0
-                              NOR3A         2       1.0        2.0
+                              NOR2B         7       1.0        7.0
+                              NOR3A         1       1.0        1.0
                               NOR3B         1       1.0        1.0
-                              NOR3C         3       1.0        3.0
+                              NOR3C         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OA1A         1       1.0        1.0
                                OA1C         2       1.0        2.0
-                                OR2         4       1.0        4.0
-                               OR2A         1       1.0        1.0
+                                OR2         2       1.0        2.0
+                               OR2A         2       1.0        2.0
                                OR2B         3       1.0        3.0
-                                OR3         1       1.0        1.0
+                                OR3         2       1.0        2.0
                                 VCC         1       0.0        0.0
                             
                          TOTAL             50                 48.0
@@ -436,38 +565,37 @@ Report for cell CoreAHBLite_Z3.netlist
      Instance path:  CoreAHBLite_0
                                           Cell usage:
                                cell       count     area    count*area
-              CAHBLTlOl0_1_0_96_0_0         1     377.0      377.0
+              CAHBLTlOl0_1_0_96_0_0         1     363.0      363.0
                                 GND         1       0.0        0.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              3                377.0
+                         TOTAL              3                363.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTlOl0_1_0_96_0_0.netlist
      Instance path:  CoreAHBLite_0.CAHBLTO1I0l
                                           Cell usage:
                                cell       count     area    count*area
-          CAHBLTO0OI_1_96_0_0_1_0_0         1     248.0      248.0
-                       CAHBLTl0Il_1         1      79.0       79.0
-                       CAHBLTl0Il_2         1      50.0       50.0
+          CAHBLTO0OI_1_96_0_0_1_0_0         1     244.0      244.0
+                       CAHBLTl0Il_1         1      74.0       74.0
+                       CAHBLTl0Il_2         1      45.0       45.0
                                 GND         1       0.0        0.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              5                377.0
+                         TOTAL              5                363.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTl0Il_2.netlist
   Original Cell name CAHBLTl0Il
      Instance path:  CoreAHBLite_0.CAHBLTO1I0l.CAHBLTl1O0l
                                           Cell usage:
                                cell       count     area    count*area
-          CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_2         1      45.0       45.0
+          CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_2         1      41.0       41.0
                            DFN1E1C0         2       1.0        2.0
                                 GND         1       0.0        0.0
                               NOR2B         1       1.0        1.0
                               NOR3B         1       1.0        1.0
-                               OR2A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              8                 50.0
+                         TOTAL              7                 45.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_2.netlist
   Original Cell name CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l
@@ -481,7 +609,7 @@ Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_2.net
                                 GND         1       0.0        0.0
                                NOR2         2       1.0        2.0
                               NOR2A         4       1.0        4.0
-                              NOR2B        18       1.0       18.0
+                              NOR2B        14       1.0       14.0
                               NOR3B         1       1.0        1.0
                                OA1C         2       1.0        2.0
                                 OR2         1       1.0        1.0
@@ -490,20 +618,23 @@ Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_2.net
                                 OR3         2       1.0        2.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             47                 45.0
+                         TOTAL             43                 41.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTl0Il_1.netlist
   Original Cell name CAHBLTl0Il
      Instance path:  CoreAHBLite_0.CAHBLTO1I0l.CAHBLTI1O0l
                                           Cell usage:
                                cell       count     area    count*area
-          CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_1         1      45.0       45.0
+                              AOI1B         1       1.0        1.0
+          CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_1         1      37.0       37.0
                            DFN1E1C0         2       1.0        2.0
                                 GND         1       0.0        0.0
-                              NOR3B        32       1.0       32.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B        32       1.0       32.0
+                               OR2A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             37                 79.0
+                         TOTAL             40                 74.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_1.netlist
   Original Cell name CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l
@@ -511,13 +642,13 @@ Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_1.net
                                           Cell usage:
                                cell       count     area    count*area
                                AO1A         3       1.0        3.0
-                               AO1B         2       1.0        2.0
+                               AO1B         1       1.0        1.0
                              DFN1C0         6       1.0        6.0
                              DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
                                NOR2         2       1.0        2.0
                               NOR2A         4       1.0        4.0
-                              NOR2B        17       1.0       17.0
+                              NOR2B        10       1.0       10.0
                               NOR3B         1       1.0        1.0
                                OA1C         2       1.0        2.0
                                 OR2         1       1.0        1.0
@@ -526,38 +657,37 @@ Report for cell CAHBLTlI1_CoreAHBLite_0_CAHBLTO1I0l_CAHBLTI1O0l_CAHBLTlI0l_1.net
                                 OR3         2       1.0        2.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             47                 45.0
+                         TOTAL             39                 37.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTO0OI_1_96_0_0_1_0_0.netlist
      Instance path:  CoreAHBLite_0.CAHBLTO1I0l.CAHBLTIlO0l
                                           Cell usage:
                                cell       count     area    count*area
-                                AO1        17       1.0       17.0
-                               AO1A         1       1.0        1.0
-                              AOI1B         1       1.0        1.0
+                                AO1        19       1.0       19.0
                         CAHBLTO10_1         1       4.0        4.0
-                         CAHBLTO_Z2         1      12.0       12.0
+                         CAHBLTO_Z2         1       6.0        6.0
                              DFN1C0         2       1.0        2.0
                            DFN1E0C0        33       1.0       33.0
                            DFN1E1C0        24       1.0       24.0
                                 GND         1       0.0        0.0
-                                MX2        41       1.0       41.0
+                                MX2        38       1.0       38.0
                                NOR2         1       1.0        1.0
-                              NOR2A        20       1.0       20.0
+                              NOR2A        23       1.0       23.0
                               NOR2B         8       1.0        8.0
-                              NOR3A         3       1.0        3.0
-                              NOR3B         5       1.0        5.0
-                              NOR3C        26       1.0       26.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         7       1.0        7.0
+                              NOR3B        11       1.0       11.0
+                              NOR3C        19       1.0       19.0
                                 OA1         1       1.0        1.0
-                               OA1A        16       1.0       16.0
-                                OR2        16       1.0       16.0
-                               OR2A         1       1.0        1.0
+                               OA1A        13       1.0       13.0
+                               OA1B         1       1.0        1.0
+                                OR2        15       1.0       15.0
+                               OR2A         2       1.0        2.0
                                OR2B         1       1.0        1.0
-                                OR3        14       1.0       14.0
-                               OR3B         1       1.0        1.0
+                                OR3        15       1.0       15.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL            236                248.0
+                         TOTAL            238                244.0
 ----------------------------------------------------------------------
 Report for cell CAHBLTO10_1.netlist
   Original Cell name CAHBLTO10
@@ -567,7 +697,7 @@ Report for cell CAHBLTO10_1.netlist
                              DFN1C0         1       1.0        1.0
                                 GND         1       0.0        0.0
                               NOR2A         2       1.0        2.0
-                               OA1B         1       1.0        1.0
+                                OR3         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
                          TOTAL              6                  4.0
@@ -577,14 +707,13 @@ Report for cell CAHBLTO_Z2.netlist
                                           Cell usage:
                                cell       count     area    count*area
                                 GND         1       0.0        0.0
-                               NOR2         2       1.0        2.0
-                              NOR2A         6       1.0        6.0
-                              NOR2B         2       1.0        2.0
+                               NOR2         1       1.0        1.0
+                              NOR2A         3       1.0        3.0
                               NOR3B         1       1.0        1.0
                               NOR3C         1       1.0        1.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             14                 12.0
+                         TOTAL              8                  6.0
 ----------------------------------------------------------------------
 Report for cell clkgenerator.netlist
      Instance path:  clkgenerator_0
@@ -597,33 +726,3 @@ Report for cell clkgenerator.netlist
                                 VCC         1       0.0        0.0
                             
                          TOTAL              5                  2.0
-----------------------------------------------------------------------
-Report for cell adc081s101.netlist
-     Instance path:  adc081s101_0
-                                          Cell usage:
-                               cell       count     area    count*area
-                               AND2         1       1.0        1.0
-                                AO1         3       1.0        3.0
-                               AO1B         1       1.0        1.0
-                               DFN1         4       1.0        4.0
-                             DFN1E1        18       1.0       18.0
-                                GND         1       0.0        0.0
-                                INV         1       1.0        1.0
-                                MX2         1       1.0        1.0
-                               NOR2         3       1.0        3.0
-                              NOR2A         6       1.0        6.0
-                              NOR2B         4       1.0        4.0
-                              NOR3A         1       1.0        1.0
-                              NOR3B         3       1.0        3.0
-                                OR2         8       1.0        8.0
-                               OR2A         3       1.0        3.0
-                               OR2B         2       1.0        2.0
-                                OR3         1       1.0        1.0
-                                VCC         1       0.0        0.0
-                                XA1         1       1.0        1.0
-                               XA1A         3       1.0        3.0
-                               XA1C         1       1.0        1.0
-                              XAI1A         1       1.0        1.0
-                               XOR2         3       1.0        3.0
-                            
-                         TOTAL             71                 69.0

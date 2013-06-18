@@ -15,6 +15,7 @@ glassescapstream        => glassescapture
 glassescapsnapshots     => glassescapture (merge functionality into)
 glassescapwebsock       => glassescapture (merge functionality into)
 frontdisplayandsave     => displayandsave
+tripledisplayandsave    => displayandsave (merge functionality into)
 glassesreplaystream     => replaycapture
 frontgazecoordsoverlay  => replaycapture (merge functionality into)
 fronteyedetect          => algo_eyedetect

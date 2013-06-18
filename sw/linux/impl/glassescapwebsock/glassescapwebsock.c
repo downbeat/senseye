@@ -105,7 +105,7 @@ int main(int argc, char** argv)
 
 
    // TODO hardcoded for now
-   numcams=1;
+   numcams=3;
 
    // print numcams on stdout for pipe interface
    printf("%c",SYMBOL_SOF);
@@ -173,18 +173,27 @@ int main(int argc, char** argv)
       do
       {
          recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])),
-                          FRAME_LEN-recv_len_total, 0 );
+                          FRAME_LEN*numcams-recv_len_total, 0 );
          if((0 > recv_len) && (EAGAIN == errno))
          {
             // do nothing, just try again
+            fprintf(stderr,"EAGAIN\n");
+            fflush(stderr);
+         }
+         else if(0>recv_len)
+         {
+            fprintf(stderr,"Other Error!\n");
+            fflush(stderr);
+            perror(errno);
+            assert(0 < recv_len);
          }
          else
          {
-            assert(0 < recv_len);
-
+            fflush(stderr);
             recv_len_total += recv_len;
          }
-      } while(FRAME_LEN > recv_len_total);
+      } while(FRAME_LEN*numcams > recv_len_total);
+      fprintf(stderr,"(rx'd %d bytes)\n",recv_len_total);
       recv_buf[recv_len_total] = '\0';
 
       ret = close(g_sd_insight);
@@ -192,7 +201,7 @@ int main(int argc, char** argv)
 
 
       // pass data over stdout (and possibly in human readable format over stderr);
-      for(ii=0; ii<FRAME_LEN; ++ii)
+      for(ii=0; ii<numcams*FRAME_LEN; ++ii)
       {
 #if (0!=(DEBUG_VERBOSE))
          if(0!=gFlagDbgOutputOn)

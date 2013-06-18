@@ -143,8 +143,12 @@ presynth = presynth
 
 
 
+
+
+
 syncad_vhdl_lib = C:\Microsemi\Libero_v10.1\Designer/lib/actel/syncad_vhdl_lib
 
+postsynth = postsynth
 [vcom]
 VHDL93 = 1
 

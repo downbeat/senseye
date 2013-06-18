@@ -1,45 +1,42 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
-#--  Project file Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\scratchproject.prs
+#--  Project file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\scratchproject.prs
 
 #project files
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/adc081s101.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/clkgenerator.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/ahbtoapbsm.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/penablescheduler.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/apbaddrdata.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/coreahbtoapb3.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/counter.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/fifo_32bit_apb3.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen/FIFO_PIXEL/FIFO_PIXEL.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen/FIFO_TEST_COUNTER/FIFO_TEST_COUNTER.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/inputConditioner.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_CORE2.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/ahb.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/cr_int.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/psram_cr.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/stonyman_apb3.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
-add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
-add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v"
-add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"
-add_file -verilog "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL/TOPLEVEL.v"
-add_file -constraint "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell_syn.sdc"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/clkgenerator.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/ahbtoapbsm.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/penablescheduler.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/apbaddrdata.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/coreahbtoapb3.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/adc081s101.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/stonyman_apb3.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen/fifo_px/fifo_px.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/imaging/imaging.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_CCC_0/MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_CORE2.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/ahb.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/cr_int.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/psram_cr.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_addrdec.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_defaultslavesm.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_masterstage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavearbiter.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_slavestage.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg_awrap.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_initcfg.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite_matrix2x16.v"
+add_file -verilog -lib COREAHBLITE_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAHBLite/3.1.102/rtl/vlog/core_obfuscated/coreahblite.v"
+add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v"
+add_file -verilog -lib COREAPB3_LIB "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/CoreAPB3/3.0.103/rtl/vlog/core_obfuscated/coreapb3.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL/TOPLEVEL.v"
+add_file -constraint "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell_syn.sdc"
 
 
 #implementation: "synthesis"
-impl -add Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis -type fpga
+impl -add Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis -type fpga
 
 #
 #implementation attributes
@@ -91,5 +88,5 @@ set_option -resource_sharing 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/synthesis/TOPLEVEL.edn"
+project -result_file "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/synthesis/TOPLEVEL.edn"
 impl -active "synthesis"

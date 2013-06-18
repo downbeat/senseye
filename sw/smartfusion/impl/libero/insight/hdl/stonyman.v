@@ -4,10 +4,11 @@
 // File: stonyman.v
 // File history:
 //      0.01: 2013-02-05: created
+//      0.02a:2013-06-13: added support for 4 cameras
 //
 // Description: 
 //
-// Driver for the CentEye Stonyman imager
+// Controller for the CentEye Stonyman imager
 //
 // Targeted device: <Family::SmartFusion> <Die::A2F500M3G> <Package::484 FBGA>
 // Author: Russ Bielawski
@@ -17,6 +18,8 @@
 `define CLK_FREQ                   (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
+
+`define NUM_CHANNELS               4           // number of cameras which can be simultaneously controlled
 
 
 // TIMING CONSTANTS
@@ -124,28 +127,33 @@
  `define INPHI_OR_ACQUIRE__WAIT_VAL        (`TICKS_PULSE_INPHI_AFTER-1)
 `endif
 
+module stonyman
+(
+input wire clk,
+input wire reset,
+input wire startCapture,     // active low
+input wire [7:0] px0_in,
+input wire [7:0] px1_in,
+input wire [7:0] px2_in,
+input wire [7:0] px3_in,
+input wire adcConvComplete,  // active low
+output reg resp,
+output reg incp,
+output reg resv,
+output reg incv,
+output reg inphi,
+output reg writeEnable,      // active low
+output reg [7:0] px0_out,
+output reg [7:0] px1_out,
+output reg [7:0] px2_out,
+output reg [7:0] px3_out,
+output reg startAdcCapture,  // active low
 
-module stonyman( clk, reset, startCapture, pixelin, adcConvComplete, resp, incp, resv, incv, inphi,
-                 writeEnable, pixelout, startAdcCapture, busy, tp_stateout, tp_substateout );
+output reg busy,
 
-input clk;
-input reset;
-input startCapture;          // active low
-input [7:0] pixelin;
-input adcConvComplete;       // active low
-output reg resp;
-output reg incp;
-output reg resv;
-output reg incv;
-output reg inphi;
-output reg writeEnable;      // active low
-output reg [7:0] pixelout;
-output reg startAdcCapture;  // active low
-
-output reg busy;
-
-output wire [3:0] tp_stateout;
-output wire [3:0] tp_substateout;
+output wire [3:0] tp_stateout,
+output wire [3:0] tp_substateout
+);
 
 reg [31:0] counterWait;
 reg [15:0] counterPixelsCaptured;
@@ -1195,7 +1203,10 @@ begin
                   if(0 == adcConvComplete)
                   begin
                      startAdcCapture <= 1'b1;
-                     pixelout <= pixelin;
+                     px0_out <= px0_in;
+                     px1_out <= px1_in;
+                     px2_out <= px2_in;
+                     px3_out <= px3_in;
                      writeEnable <= 1'b0;
                      counterPixelsCaptured <= counterPixelsCaptured+1;
                      // TODO: is this a reasonable value?

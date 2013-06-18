@@ -4,9 +4,9 @@ Product Version F-2012.03M-SP1
 
 Mapper Startup Complete (Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-Reading constraint file: Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
-@L: Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt 
-Printing clock  summary report in "Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt" file 
+Reading constraint file: Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
+@L: Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt 
+Printing clock  summary report in "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
@@ -16,8 +16,8 @@ Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 102MB peak:
 
 Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
-@W: BN132 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
-@N: MF237 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":1227:35:1227:73|Generating a type rem remainder 
+@N: MF237 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":1238:35:1238:73|Generating a type rem remainder 
+@W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
 
 
 Clock Summary
@@ -31,18 +31,18 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 261 sequential elements including adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 256 sequential elements including imaging_0/adc081s101_0/cntrWaitLeading[1:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 113MB)
 
-@W: MO111 :"z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":208:14:208:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
-@N: BN225 |Writing default property annotation file Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":197:14:197:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
+@N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 49MB peak: 113MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 50MB peak: 113MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu May 23 17:27:58 2013
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Tue Jun 18 12:50:24 2013
 
 ###########################################################]

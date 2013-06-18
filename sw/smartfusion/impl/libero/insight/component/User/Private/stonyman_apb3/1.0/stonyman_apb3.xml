@@ -81,23 +81,109 @@
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>FULL</spirit:name>
-        <spirit:direction>in</spirit:direction>
-      </spirit:signal>
-      <spirit:signal>
-        <spirit:name>EMPTY</spirit:name>
-        <spirit:direction>in</spirit:direction>
-      </spirit:signal>
-      <spirit:signal>
         <spirit:name>BUSY</spirit:name>
         <spirit:direction>in</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>RDEN</spirit:name>
+        <spirit:name>CAM0_FIFO_EMPTY</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM1_FIFO_EMPTY</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_FIFO_EMPTY</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_FIFO_EMPTY</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM0_FIFO_FULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM1_FIFO_FULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_FIFO_FULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_FIFO_FULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM0_FIFO_AFULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM1_FIFO_AFULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_FIFO_AFULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_FIFO_AFULL</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM0_FIFO_OVERFLOW</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM1_FIFO_OVERFLOW</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_FIFO_OVERFLOW</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_FIFO_OVERFLOW</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM0_FIFO_RDEN</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>PIXELSIN</spirit:name>
+        <spirit:name>CAM1_FIFO_RDEN</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_FIFO_RDEN</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_FIFO_RDEN</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM0_PIXELSIN</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left>31</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM1_PIXELSIN</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left>31</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM2_PIXELSIN</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left>31</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CAM3_PIXELSIN</spirit:name>
         <spirit:direction>in</spirit:direction>
         <spirit:left>31</spirit:left>
         <spirit:right>0</spirit:right>
@@ -105,6 +191,12 @@
       <spirit:signal>
         <spirit:name>START_CAPTURE</spirit:name>
         <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>TP_REG_OFFSET_UPPER_NIBBLE</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left>3</spirit:left>
+        <spirit:right>0</spirit:right>
       </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>

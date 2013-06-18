@@ -8,7 +8,7 @@
 
 # Family: SmartFusion , Die: A2F500M3G , Package: 484 FBGA , Speed grade: STD 
 
-# Date generated: Mon Mar 25 17:10:01 2013 
+# Date generated: Fri Jun 14 11:19:51 2013 
 
 
 #
@@ -38,14 +38,13 @@ set_io MAC_TXD\[0\] -iostd LVTTL -OUT_DRIVE 8 -SLEW High -RES_PULL None -SKEW Of
 set_io MAC_TXD\[1\] -iostd LVTTL -OUT_DRIVE 8 -SLEW High -RES_PULL None -SKEW Off -REGISTER No -OUT_LOAD 35 -pinname W5 -fixed yes
 set_io MAC_TXEN -iostd LVTTL -OUT_DRIVE 8 -SLEW High -RES_PULL None -SKEW Off -REGISTER No -OUT_LOAD 35 -pinname Y4 -fixed yes
 set_io MAINXIN -pinname AA16
-set_io MISO -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off -pinname H22 -fixed yes
 set_io MSS_RESET_N -iostd LVTTL -RES_PULL None -SCHMITT_TRIGGER Off -REGISTER No -pinname R1 -fixed yes
 set_io SCLK -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname H18 -fixed yes
-set_io TP_BUSY -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M2 -fixed yes
+set_io TP_BUSY -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L22 -fixed no
 set_io TP_EMPTY -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L6 -fixed yes
 set_io TP_FULL -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname K6 -fixed yes
-set_io TP_PADDR_BIT2 -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L5 -fixed yes
-set_io TP_PENABLE -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L2 -fixed yes
+set_io TP_PADDR_BIT2 -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35
+set_io TP_PENABLE -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35
 set_io TP_PREADY -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L1 -fixed yes
 set_io TP_PSEL -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L3 -fixed yes
 set_io TP_PWRITE -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M4 -fixed yes
@@ -113,6 +112,9 @@ set_io psram_ncs1 -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL N
 set_io psram_noe0 -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname D10 -fixed yes
 set_io psram_noe1 -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname C10 -fixed yes
 set_io psram_nwe -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname B6 -fixed yes
+set_io px0_adc_din -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off -pinname M2 -fixed yes
+set_io px1_adc_din -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off -pinname L5 -fixed yes
+set_io px2_adc_din -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off -pinname L2 -fixed yes
 set_io resp -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname N6 -fixed yes
 set_io resv -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname P1 -fixed yes
 set_io rs485_de -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M18 -fixed yes

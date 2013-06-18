@@ -2,9 +2,15 @@
 // insight-serv.c
 //
 // Russ Bielawski
+// University of Michigan
 // 2012-11-14: created
 // 2013-03-01: runs on smartfusion uClinux (no fork()).  discriminates good vs bad requests (good
 //             requests start with the string "GET" and the rest is ignored).
+// 2013-06-18: added support for multiple cameras.  however, only CAM0 is actually being used, and
+//             its data is being transmitted thrice as if to appear to be three distinct cameras.
+//             this is because the APB3 bus cannot keep up with all three cameras and the FIFOs
+//             overflow.  by only using CAM0, all the other FIFOs overflow, but we can keep up with
+//             CAM0
 //**************************************************************************************************
 
 
@@ -37,47 +43,61 @@ typedef  unsigned long   uint32;
 typedef  unsigned short  uint16;
 typedef  unsigned char   uint8;
 
-#define DEFAULT_PORT            (80)
-#define MAX_CONNS               (1)
-#define REQ_MAX_LEN             (1024)  // Bytes (chosen arbitrarily)
-#define RESOLUTION_ROWS         (112)
-#define RESOLUTION_COLS         (112)
-#define RESOLUTION              (RESOLUTION_ROWS*RESOLUTION_COLS)
+#define DEFAULT_PORT              (80)
+#define MAX_CONNS                 (1)
+#define REQ_MAX_LEN               (1024)  // Bytes (chosen arbitrarily)
+#define RESOLUTION_ROWS           (112)
+#define RESOLUTION_COLS           (112)
+#define RESOLUTION                (RESOLUTION_ROWS*RESOLUTION_COLS)
 
-#define SYMBOL_SOF              ((uint8)0xFF)
+#define SYMBOL_SOF                ((uint8)0xFF)
 
-#define OPCODE_START            ((uint8)0x01)
-#define OPCODE_STOP             ((uint8)0x02)
-#define OPCODE_SINGLE_FRAME     ((uint8)0x04)
-#define OPCODE_START_ACK        ((uint8)0x81)
-#define OPCODE_STOP_ACK         ((uint8)0x82)
-#define OPCODE_FRAME            ((uint8)0x84)
+#define OPCODE_START              ((uint8)0x01)
+#define OPCODE_STOP               ((uint8)0x02)
+#define OPCODE_SINGLE_FRAME       ((uint8)0x04)
+#define OPCODE_START_ACK          ((uint8)0x81)
+#define OPCODE_STOP_ACK           ((uint8)0x82)
+#define OPCODE_FRAME              ((uint8)0x84)
 
-#define OPCODE_REQ_NUM_CAMS     ((uint8)0x21)
-#define OPCODE_RESP_NUM_CAMS    ((uint8)0xA1)
+#define OPCODE_REQ_NUM_CAMS       ((uint8)0x21)
+#define OPCODE_RESP_NUM_CAMS      ((uint8)0xA1)
 
-#define REG_BASE_ADDR           (0x40060000ul)
-#define REG_OFFSET_STATUS       (0x00000000ul)
-#define REG_OFFSET_DATA         (0x00000004ul)
+#define REG_BASE_ADDR             (0x40060000ul)
+#define REG_MASK_CAM_IND          (0x00000080ul)
+#define REG_CAM_REG_SPACE_WIDTH   (0x00000020ul)
+#define REG_SET_OFFSET_CAM0       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*0))
+#define REG_SET_OFFSET_CAM1       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*1))
+#define REG_SET_OFFSET_CAM2       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*2))
+#define REG_SET_OFFSET_CAM3       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*3))
+#define REG_OFFSET_GLOB_STARTCAP  (0x00000000ul)
+#define REG_OFFSET_GLOB_STATUS    (0x00000000ul)
+#define REG_OFFSET_CAMX_STATUS    (0x00000000ul)
+#define REG_OFFSET_CAMX_PXDATA    (0x00000004ul)
 
-#define REG_CTRL                (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_STATUS)))
-#define REG_FLAGS               (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_STATUS)))
-#define REG_DATA                (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_DATA)))
+#define REG_CTRL                  (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_GLOB_STARTCAP)))
+#define REG_FLAGS                 (*((volatile uint32*)(REG_BASE_ADDR+REG_OFFSET_GLOB_STATUS)))
+#define REG_CAMX_BASE(xx)         (REG_BASE_ADDR+REG_MASK_CAM_IND+(REG_CAM_REG_SPACE_WIDTH*(xx)))
+#define REG_CAMX_STATUS(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_STATUS)))
+#define REG_CAMX_PXDATA(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_PXDATA)))
 
-#define FLAG_SHIFT_FULL         (0u)
-#define FLAG_SHIFT_EMPTY        (1u)
-#define FLAG_SHIFT_BUSY         (2u)
+#define FLAG_SHIFT_BUSY           (0u)
+#define FLAG_SHIFT_EMPTY          (0u)
+#define FLAG_SHIFT_FULL           (1u)
+#define FLAG_SHIFT_AFULL          (2u)
 
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
 // a success header is not currently used
 const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
+#define NUM_CAMS                  (3)
+#define NUM_BUFS_PER_CAM          (1) // currently not implemented, leave as 1
+
 
 //**************************************************************************************************
 // globals
 //
-uint8 *imgbuf;
+uint8 *imgbuf[NUM_CAMS];
 
 
 //**************************************************************************************************
@@ -95,6 +115,7 @@ static int  parseargs(int argc, char **argv);*/
 //
 int main(int argc, char** argv)
 {
+   unsigned ii;
    int sd_listen, sd_client;
    struct sockaddr_in sockaddr_server, sockaddr_client;
    unsigned len;
@@ -131,12 +152,15 @@ int main(int argc, char** argv)
    }
 
 
-   // malloc the image buffer (this is required for uclinux)
-   imgbuf = (uint8*)malloc(RESOLUTION*sizeof(uint8));
-   if(NULL==imgbuf)
+   // malloc the image buffers (this is required for uclinux)
+   for(ii=0; ii<NUM_CAMS; ++ii)
    {
-      fprintf(stderr,"couldn't malloc %d bytes for the image buffer\n");
-      exit(1);
+      imgbuf[ii] = (uint8*)malloc(NUM_BUFS_PER_CAM*RESOLUTION*sizeof(uint8));
+      if(NULL==imgbuf[ii])
+      {
+         fprintf(stderr,"couldn't malloc %d bytes for the image buffer\n");
+         exit(1);
+      }
    }
 
    // and away we go
@@ -279,7 +303,7 @@ static void request_send_data(int sd)
    unsigned ii;
    uint32 regflags;
    uint32 regdata;
-   uint16 pixelcount;
+   uint16 pixelcount[NUM_CAMS];
    unsigned send_len_ret;
 
 
@@ -294,43 +318,47 @@ static void request_send_data(int sd)
    }
 
 
-   pixelcount=0;
-
-
    // FIXME: best practice dictates that in the even of hardware failure,
    //        we should NOT go into an infinite loop!
    // BUSY wait (get it!?)
    do {/*nothing*/} while(0!=((1<<FLAG_SHIFT_BUSY)&REG_FLAGS));
    REG_CTRL = 1ul;
 
-
-   while(RESOLUTION>pixelcount)
+   // only actually reading data from CAM0
+   pixelcount[0]=0;
+   while(RESOLUTION>pixelcount[0])
    {
-      regflags = REG_FLAGS;
+      regflags = REG_CAMX_STATUS(0);
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
-         regdata=REG_DATA;
+         regdata=REG_CAMX_PXDATA(0);
+/*         fprintf(stderr,"data read           CAM0_PXDATA:=0x%08X\n",regdata);
+         fflush(stderr);*/
 /*         fprintf(stderr,"regdata: %d\n",regdata);
          fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",regdata&0xFF,
                   (regdata>>8)&0xFF,(regdata>>);*/
-         imgbuf[pixelcount]   = (regdata>> 0)&0xFF-stonymask[pixelcount];
-         imgbuf[pixelcount+1] = (regdata>> 8)&0xFF-stonymask[pixelcount+1];
-         imgbuf[pixelcount+2] = (regdata>>16)&0xFF-stonymask[pixelcount+2];
-         imgbuf[pixelcount+3] = (regdata>>24)&0xFF-stonymask[pixelcount+3];
+         imgbuf[0][pixelcount[0]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[0]];
+         imgbuf[0][pixelcount[0]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[0]+1];
+         imgbuf[0][pixelcount[0]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[0]+2];
+         imgbuf[0][pixelcount[0]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[0]+3];
 /*         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",imgbuf[pixelcount],
                   imgbuf[pixelcount+1],imgbuf[pixelcount+2],imgbuf[pixelcount+3]);*/
-         pixelcount+=4;
+         pixelcount[0]+=4;
       }
    }
 
-   // transmit first half of data
-   send_len_ret = send(sd, (const void*)(imgbuf), RESOLUTION, 0);
-   fprintf(stderr,"send_len: %d\n",send_len_ret);
-   if(RESOLUTION != send_len_ret)
+   // transmit data
+   // mimic 3 cameras
+   for(ii=0;ii<NUM_CAMS;++ii)
    {
-      fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
-      fflush(stderr);
-      exit(1);
+      send_len_ret = send(sd, (const void*)(imgbuf[0]), RESOLUTION, 0);
+      fprintf(stderr,"send_len: %d\n",send_len_ret);
+      if(RESOLUTION != send_len_ret)
+      {
+         fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
+         fflush(stderr);
+         exit(1);
+      }
    }
 }
 /* TODO

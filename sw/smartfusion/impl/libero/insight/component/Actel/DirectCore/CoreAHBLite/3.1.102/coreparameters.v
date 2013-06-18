@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Actel SmartDesign Wed Mar 27 13:32:40 2013
+// Created by Actel SmartDesign Tue Jun 18 12:45:07 2013
 // Parameters for CoreAHBLite
 //--------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Thu May 23 17:28:11 2013
+# Timing Report written on Tue Jun 18 12:50:43 2013
 #
 
 
@@ -11,7 +11,7 @@ Requested Frequency:    40.0 MHz
 Wire load mode:         top
 Wire load model:        smartfusion
 Paths requested:        5
-Constraint File(s):    Z:\russ\private\research\insight\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
+Constraint File(s):    Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell_syn.sdc
                        
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 
@@ -25,33 +25,33 @@ Performance Summary
 
 Worst slack in design: 0.225
 
-                                     Requested     Estimated     Requested     Estimated                 Clock        Clock              
-Starting Clock                       Frequency     Frequency     Period        Period        Slack       Type         Group              
------------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                              40.0 MHz      40.6 MHz      25.000        24.632        0.368       declared     clk_group_0        
-FCLK                                 40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
-clkgenerator|SCLK_inferred_clock     80.0 MHz      31.7 MHz      12.500        31.526        -19.026     inferred     Inferred_clkgroup_0
-System                               80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
-=========================================================================================================================================
+                                                           Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                                             Frequency     Frequency     Period        Period        Slack       Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+FAB_CLK                                                    40.0 MHz      42.2 MHz      25.000        23.721        1.279       declared     clk_group_0        
+FCLK                                                       40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
+clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock     80.0 MHz      28.4 MHz      12.500        35.165        -22.665     inferred     Inferred_clkgroup_0
+System                                                     80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
+===============================================================================================================================================================
 
 
 
 Clock Relationships
 *******************
 
-Clocks                                                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                          Ending                            |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-System                            System                            |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
-System                            FAB_CLK                           |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-System                            clkgenerator|SCLK_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                           System                            |  0.000       1.550  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                           FAB_CLK                           |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                           clkgenerator|SCLK_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|SCLK_inferred_clock  FAB_CLK                           |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|SCLK_inferred_clock  clkgenerator|SCLK_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-==========================================================================================================================================================
+Clocks                                                                                                          |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                Ending                                                  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                  System                                                  |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                  FAB_CLK                                                 |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                  clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                                                 System                                                  |  0.000       1.550  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                                                 FAB_CLK                                                 |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                                                 clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  FAB_CLK                                                 |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+======================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -73,41 +73,41 @@ Detailed Report for Clock: FAB_CLK
 Starting Points with Worst Slack
 ********************************
 
-                                   Starting                                                                 Arrival          
-Instance                           Reference     Type       Pin     Net                                     Time        Slack
-                                   Clock                                                                                     
------------------------------------------------------------------------------------------------------------------------------
-psram_cr_0.ahb0.hrdata_reg[0]      FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[0]      0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[1]      FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[1]      0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[2]      FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[2]      0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[5]      FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[5]      0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[6]      FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[6]      0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[11]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[11]     0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[12]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[12]     0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[13]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[13]     0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[17]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[17]     0.580       1.743
-psram_cr_0.ahb0.hrdata_reg[18]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[18]     0.580       1.743
-=============================================================================================================================
+                                  Starting                                                                Arrival          
+Instance                          Reference     Type       Pin     Net                                    Time        Slack
+                                  Clock                                                                                    
+---------------------------------------------------------------------------------------------------------------------------
+psram_cr_0.ahb0.hrdata_reg[0]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[0]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[1]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[1]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[2]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[2]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[3]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[3]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[4]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[4]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[5]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[5]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[6]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[6]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[7]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[7]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[8]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[8]     0.580       1.743
+psram_cr_0.ahb0.hrdata_reg[9]     FAB_CLK       DFN1E1     Q       CoreAHBLite_0_AHBmslave5_HRDATA[9]     0.580       1.743
+===========================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                               Starting                                                                                   Required          
-Instance                       Reference     Type        Pin               Net                                            Time         Slack
-                               Clock                                                                                                        
---------------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[0]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[0]      0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[1]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[1]      0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[2]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[2]      0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[5]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[5]      0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[6]      MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[6]      0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[11]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[11]     0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[12]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[12]     0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[13]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[13]     0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[17]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[17]     0.000        1.550
-MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[18]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[18]     0.000        1.550
-============================================================================================================================================
+                               Starting                                                                                 Required          
+Instance                       Reference     Type        Pin              Net                                           Time         Slack
+                               Clock                                                                                                      
+------------------------------------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[0]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[0]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[1]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[1]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[2]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[2]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[3]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[3]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[4]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[4]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[5]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[5]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[6]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[6]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[7]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[7]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[8]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[8]     0.000        1.550
+MSS_CORE2_0.MSS_ADLIB_INST     FAB_CLK       MSS_AHB     MSSHRDATA[9]     MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA[9]     0.000        1.550
+==========================================================================================================================================
 
 
 

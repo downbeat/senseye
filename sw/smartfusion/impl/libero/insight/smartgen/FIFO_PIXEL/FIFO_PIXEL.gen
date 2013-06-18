@@ -11,7 +11,7 @@ GEN_BHV_VHDL_VAL:F
 GEN_BHV_VERILOG_VAL:F
 MGNTIMER:F
 MGNCMPL:T
-DESDIR:Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL
+DESDIR:Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL
 GEN_BEHV_MODULE:F
 SMARTGEN_DIE:IP6X5M2
 SMARTGEN_PACKAGE:fg484

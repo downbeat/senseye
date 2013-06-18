@@ -2,7 +2,7 @@
 #define TOPLEVEL_HW_PLATFORM_H_
 /*****************************************************************************
 *
-*Created by Actel SmartDesign  Wed Mar 27 13:32:52 2013
+*Created by Actel SmartDesign  Tue Jun 18 12:45:18 2013
 *
 *Memory map specification for peripherals in TOPLEVEL
 */
@@ -13,7 +13,6 @@
 *---------------------------------------------------------------------------*/
 #define PSRAM_CR_0                      0x40050000U
 #define STONYMAN_APB3_0                 0x40060000U
-#define FIFO_32BIT_APB3_0               0x40060100U
 
 
 #endif /* TOPLEVEL_HW_PLATFORM_H_*/

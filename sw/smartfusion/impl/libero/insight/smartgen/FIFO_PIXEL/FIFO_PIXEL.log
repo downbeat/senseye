@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Wed Mar 27 13:32:07 2013
+ ** Date:   Thu Jun 13 12:19:30 2013
 
 
 ****************
@@ -93,7 +93,7 @@ Netlist Resource Report
     RAM/FIFO                   Used:     16  Total:     24   (66.67%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
-Wrote Verilog netlist to Z:/russ/private/research/insight/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL\FIFO_PIXEL.v.
+Wrote Verilog netlist to Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen\FIFO_PIXEL\FIFO_PIXEL.v.
 
- ** Log Ended:   Wed Mar 27 13:32:08 2013
+ ** Log Ended:   Thu Jun 13 12:19:31 2013
 

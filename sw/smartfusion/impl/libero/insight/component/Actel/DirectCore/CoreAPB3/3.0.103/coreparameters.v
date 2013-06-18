@@ -1,12 +1,12 @@
 //--------------------------------------------------------------------
-// Created by Actel SmartDesign Wed Mar 27 13:32:42 2013
+// Created by Actel SmartDesign Tue Jun 18 12:45:10 2013
 // Parameters for CoreAPB3
 //--------------------------------------------------------------------
 
 
 parameter APB_DWIDTH = 32;
 parameter APBSLOT0ENABLE = 1;
-parameter APBSLOT1ENABLE = 1;
+parameter APBSLOT1ENABLE = 0;
 parameter APBSLOT2ENABLE = 0;
 parameter APBSLOT3ENABLE = 0;
 parameter APBSLOT4ENABLE = 0;
