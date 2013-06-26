@@ -1,9 +1,10 @@
 //**************************************************************************************************
-// frontdisplayandsave.c
+// tripledisplayfromwebsock.c
 //
 // Russ Bielawski
 // 2012-10-29: created as captureStreamDual.c
 // 2012-11-12: split out front end display and save functionality
+// 2013-06-26: split out from frontdisplayandsave.c (this is getting sloppy)
 //**************************************************************************************************
 
 
@@ -87,6 +88,11 @@ int main(int argc, char** argv)
    uchar frame3valmin, frame3valmax;
 
    // double wide!
+   IplImage *framedoublenorm, *framedoublescaledup;
+   uchar *framedoublenormloc1, *framedoublenormloc2, *framedoublenormloc3,
+         *framedoublescaleduploc1, *framedoublescaleduploc2, *framedoublescaleduploc3;
+
+   // triple wide!
    IplImage *frametripnorm, *frametripscaledup;
    uchar *frametripnormloc1, *frametripnormloc2, *frametripnormloc3,
          *frametripscaleduploc1, *frametripscaleduploc2, *frametripscaleduploc3;
@@ -199,6 +205,9 @@ int main(int argc, char** argv)
    frame3norm = cvCreateImage(cvSize(FRAME_X_Y,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frame3scaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL,
                                           FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
+   framedoublenorm = cvCreateImage(cvSize(FRAME_X_Y*2,FRAME_X_Y), IPL_DEPTH_8U, 1);
+   framedoublescaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
+                                             FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
    frametripnorm = cvCreateImage(cvSize(FRAME_X_Y*3,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frametripscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*3,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
@@ -207,6 +216,8 @@ int main(int argc, char** argv)
    // appease the compiler
    frame2loc = frame2normloc = frame2scaleduploc = 0;
    frame3loc = frame3normloc = frame3scaleduploc = 0;
+   framedoublenormloc1 = framedoublenormloc2 = framedoublenormloc3 = 0;
+   framedoublescaleduploc1 = framedoublescaleduploc2 = framedoublescaleduploc3 = 0;
    frametripnormloc1 = frametripnormloc2 = frametripnormloc3 = 0;
    frametripscaleduploc1 = frametripscaleduploc2 = frametripscaleduploc3 = 0;
 
@@ -264,24 +275,49 @@ int main(int argc, char** argv)
       // russ: a "frame" for fps calc is from both cameras
       printf("[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
 
-      for(ii=0; ii<FRAME_X_Y; ++ii)
+      if(3==numcams)
       {
-         frametripnormloc1 = (uchar*)(frametripnorm->imageData + (ii*frametripnorm->widthStep));
-         frametripnormloc2 = (uchar*)( frametripnorm->imageData
-                                       + (ii*frametripnorm->widthStep)
-                                       + (frametripnorm->widthStep/3) );
-         frametripnormloc3 = (uchar*)( frametripnorm->imageData
-                                       + (ii*frametripnorm->widthStep)
-                                       + 2*(frametripnorm->widthStep/3) );
-         for(jj=0; jj<FRAME_X_Y; ++jj)
+         for(ii=0; ii<FRAME_X_Y; ++ii)
          {
-            frametripnormloc1[jj]=(unsigned char)indat[0*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
-            frametripnormloc2[jj]=(unsigned char)indat[1*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
-            frametripnormloc3[jj]=(unsigned char)indat[2*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+            frametripnormloc1 = (uchar*)(frametripnorm->imageData + (ii*frametripnorm->widthStep));
+            frametripnormloc2 = (uchar*)( frametripnorm->imageData
+                                          + (ii*frametripnorm->widthStep)
+                                          + (frametripnorm->widthStep/3) );
+            frametripnormloc3 = (uchar*)( frametripnorm->imageData
+                                          + (ii*frametripnorm->widthStep)
+                                          + 2*(frametripnorm->widthStep/3) );
+            for(jj=0; jj<FRAME_X_Y; ++jj)
+            {
+               frametripnormloc1[jj]=(unsigned char)indat[0*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+               frametripnormloc2[jj]=(unsigned char)indat[1*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+               frametripnormloc3[jj]=(unsigned char)indat[2*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+            }
          }
+         // create scaled up image
+         cvResize(frametripnorm,frametripscaledup,CV_INTER_LINEAR);
       }
-      // create scaled up image
-      cvResize(frametripnorm,frametripscaledup,CV_INTER_LINEAR);
+      else if(2==numcams)
+      {
+         for(ii=0; ii<FRAME_X_Y; ++ii)
+         {
+            framedoublenormloc1 = (uchar*)(framedoublenorm->imageData + (ii*framedoublenorm->widthStep));
+            framedoublenormloc2 = (uchar*)( framedoublenorm->imageData
+                                          + (ii*framedoublenorm->widthStep)
+                                          + (framedoublenorm->widthStep/2) );
+            for(jj=0; jj<FRAME_X_Y; ++jj)
+            {
+               framedoublenormloc1[jj]=(unsigned char)indat[0*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+               framedoublenormloc2[jj]=(unsigned char)indat[1*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+            }
+         }
+         // create scaled up image
+         cvResize(framedoublenorm,framedoublescaledup,CV_INTER_LINEAR);
+      }
+      else
+      {
+         assert(1==numcams);
+         // not actually implemented!
+      }
 
 #if 0
       // find max and min pixel values for normalization
@@ -449,10 +485,15 @@ int main(int argc, char** argv)
 #endif // 0
       {
          // display picture on screen
-         if(3 == numcams)
+         if(3==numcams)
          {
             cvShowImage("CamCapTripleWide", frametripscaledup);
             cvShowImage("CamCapTripleWideSmall", frametripnorm);
+         }
+         else if(2==numcams)
+         {
+            cvShowImage("CamCapDoubleWide", framedoublescaledup);
+            cvShowImage("CamCapDoubleWideSmall", framedoublenorm);
          }
          else
          {
@@ -471,9 +512,13 @@ int main(int argc, char** argv)
                    outfilenameprefix,frameidx );
          fprintf(gOutfilefps,"[%06d] fps := % 6.03f\n", frameidx, fpsinstant);
 
-         if(2 == numcams)
+         if(3 == numcams)
          {
             (void)cvSaveImage(outfilenameframe,frametripnorm,0);
+         }
+         if(2 == numcams)
+         {
+            (void)cvSaveImage(outfilenameframe,framedoublenorm,0);
          }
          else
          {
@@ -506,9 +551,16 @@ int main(int argc, char** argv)
    cvReleaseImage(&frame3);
    cvReleaseImage(&frame3norm);
    cvReleaseImage(&frame3scaledup);
+   cvReleaseImage(&framedoublenorm);
+   cvReleaseImage(&framedoublescaledup);
    cvReleaseImage(&frametripnorm);
    cvReleaseImage(&frametripscaledup);
-   if(2 == numcams)
+   if(3 == numcams)
+   {
+      cvDestroyWindow("CamCapTripleWide");
+      cvDestroyWindow("CamCapTripleWideSmall");
+   }
+   else if(2 == numcams)
    {
       cvDestroyWindow("CamCapDoubleWide");
       cvDestroyWindow("CamCapDoubleWideSmall");
