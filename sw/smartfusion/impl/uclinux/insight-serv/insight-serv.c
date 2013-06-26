@@ -415,17 +415,10 @@ static void request_send_data(int sd)
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
          regdata=REG_CAMX_PXDATA(0);
-/*         fprintf(stderr,"data read           CAM0_PXDATA:=0x%08X\n",regdata);
-         fflush(stderr);*/
-/*         fprintf(stderr,"regdata: %d\n",regdata);
-         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",regdata&0xFF,
-                  (regdata>>8)&0xFF,(regdata>>);*/
          img_buf[0][0][pixelcount[0]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[0]];
          img_buf[0][0][pixelcount[0]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[0]+1];
          img_buf[0][0][pixelcount[0]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[0]+2];
          img_buf[0][0][pixelcount[0]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[0]+3];
-/*         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",img_buf[pixelcount][0],
-                  img_buf[pixelcount+1][0],img_buf[pixelcount+2][0],img_buf[pixelcount+3][0]);*/
          pixelcount[0]+=4;
       }
    }
@@ -442,24 +435,20 @@ static void request_send_data(int sd)
          if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
          {
             regdata=REG_CAMX_PXDATA(ii);
-   /*         fprintf(stderr,"data read           CAM%d_PXDATA:=0x%08X\n",ii,regdata);
-            fflush(stderr);*/
-   /*         fprintf(stderr,"regdata: %d\n",regdata);
-            fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",regdata&0xFF,
-                     (regdata>>8)&0xFF,(regdata>>);*/
             img_buf[ii][0][pixelcount[ii]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[ii]];
             img_buf[ii][0][pixelcount[ii]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[ii]+1];
             img_buf[ii][0][pixelcount[ii]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[ii]+2];
             img_buf[ii][0][pixelcount[ii]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[ii]+3];
-   /*         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",img_buf[pixelcount][0],
-                     img_buf[pixelcount+1][0],img_buf[pixelcount+2][0],img_buf[pixelcount+3][0]);*/
             pixelcount[ii]+=4;
          }
       }
    }
 #endif
 
+
    // transmit data
+#define MIMIC_THREE_CAMS_WITH_CAM0  (0)
+#if (0!=(MIMIC_THREE_CAMS_WITH_CAM0)) // code for single camera (CAM0)
    // mimic 3 cameras
    for(ii=0;ii<NUM_CAMS;++ii)
    {
@@ -472,6 +461,19 @@ static void request_send_data(int sd)
          exit(1);
       }
    }
+#else
+   for(ii=0;ii<2;++ii)
+   {
+      send_len_ret = send(sd, (const void*)(img_buf[ii][0]), RESOLUTION, 0);
+      fprintf(stderr,"send_len: %d\n",send_len_ret);
+      if(RESOLUTION != send_len_ret)
+      {
+         fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
+         fflush(stderr);
+         exit(1);
+      }
+   }
+#endif
 }
 
 //
