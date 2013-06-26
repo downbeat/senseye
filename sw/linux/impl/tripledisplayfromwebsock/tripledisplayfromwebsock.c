@@ -77,13 +77,13 @@ int main(int argc, char** argv)
    unsigned numcams;
 
    IplImage *frame, *framescaledup;
-   uchar *frameloc, *framescaleduploc;
+   uchar *frameloc;
    uchar framevalmin, framevalmax;
    IplImage *frame2, *frame2scaledup;
-   uchar *frame2loc, *frame2scaleduploc;
+   uchar *frame2loc;
    uchar frame2valmin, frame2valmax;
    IplImage *frame3, *frame3scaledup;
-   uchar *frame3loc, *frame3scaleduploc;
+   uchar *frame3loc;
    uchar frame3valmin, frame3valmax;
 
    // double wide!
@@ -92,8 +92,7 @@ int main(int argc, char** argv)
 
    // triple wide!
    IplImage *frametrip, *frametripscaledup;
-   uchar *frametriploc1, *frametriploc2, *frametriploc3,
-         *frametripscaleduploc1, *frametripscaleduploc2, *frametripscaleduploc3;
+   uchar *frametriploc1, *frametriploc2, *frametriploc3;
 
    IplImage *gridoverlay;
 
@@ -207,11 +206,10 @@ int main(int argc, char** argv)
    gridoverlay = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
                                        FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 3);
    // appease the compiler
-   frame2loc = frame2scaleduploc = 0;
-   frame3loc = frame3scaleduploc = 0;
+   frame2loc = 0;
+   frame3loc = 0;
    framedoubleloc1 = framedoubleloc2 = 0;
    frametriploc1 = frametriploc2 = frametriploc3 = 0;
-   frametripscaleduploc1 = frametripscaleduploc2 = frametripscaleduploc3 = 0;
 
 
    time.tv_sec = time.tv_nsec = timeprevious.tv_sec = timeprevious.tv_nsec = 0;
