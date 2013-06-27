@@ -135,7 +135,6 @@ int main(int argc, char** argv)
    g_flag_print_help=0;
    g_flag_background_capture_mode=0;
    parse_args(argc,argv);
-   fprintf(stderr,"main after parse_args (backend? %d)\n",(0!=g_flag_background_capture_mode));
    if(0!=g_flag_print_help)
    {
       print_help(argv[0]);
@@ -151,6 +150,7 @@ int main(int argc, char** argv)
    if(0!=g_flag_background_capture_mode)
    {
       // TODO: probably should check to ensure that the backend is started by the frontend
+      // init_shared_data_ptrs is called from parse_args
       do_backend();
    }
    else
@@ -176,8 +176,7 @@ static void init_shared()
 {
    unsigned ii,jj;
    void *shared_data_base_ptr;
-fprintf(stderr,"before init_shared\n");
-fflush(stderr);
+
 
    // allocate shared data
    shared_data_base_ptr = malloc(
@@ -213,8 +212,6 @@ fflush(stderr);
          img_buf_metadata[ii][jj]->len=0;
       }
    }
-fprintf(stderr,"after  init_shared\n");
-fflush(stderr);
 }
 
 //
@@ -234,10 +231,6 @@ static void init_shared_data_ptrs(void *shared_data_base_ptr)
 
 
    assert(NULL!=shared_data_base_ptr);
-   // debugging
-   fprintf(stderr,"before init_shared_data_ptrs\n");
-   fflush(stderr);
-   fprintf(stderr,"shared_data_base_ptr=0x%08X\n",atoi(optarg));
 
 
    img_buf_cur_idx=(uint8*)shared_data_base_ptr;
@@ -261,25 +254,6 @@ static void init_shared_data_ptrs(void *shared_data_base_ptr)
          shared_data_base_ptr+=RESOLUTION*sizeof(uint8);
       }
    }
-
-   // debugging
-   fprintf(stderr,"img_buf_cur_idx        = 0x%08X\n",(unsigned)img_buf_cur_idx);
-   for(ii=0;ii<NUM_CAMS;++ii)
-   {
-   for(jj=0;jj<NUM_BUFS_PER_CAM;++jj)
-   {
-   fprintf(stderr,"img_buf_metadata[%d][%d] = 0x%08X\n",ii,jj,(unsigned)img_buf_metadata[ii][jj]);
-   }
-   }
-   for(ii=0;ii<NUM_CAMS;++ii)
-   {
-   for(jj=0;jj<NUM_BUFS_PER_CAM;++jj)
-   {
-   fprintf(stderr,"img_buf[%d][%d]          = 0x%08X\n",ii,jj,(unsigned)img_buf[ii][jj]);
-   }
-   }
-   fprintf(stderr,"after  init_shared_data_ptrs\n");
-   fflush(stderr);
 }
 
 //
@@ -297,7 +271,7 @@ static void start_backend(char *progname, void* shared_data_base_ptr)
    if(0==vfork())
    {
       // child (reexec self with backend flag)
-      fprintf(stderr,"no forkin way!\n");
+      fprintf(stderr,"forking backend\n");
       fflush(stderr);
       // TODO: probably a good idea to handle any possible error
       //(void)execl(progname,progname,"-b",NULL);
@@ -331,9 +305,6 @@ static void do_backend()
 
 
    fprintf(stderr,"backend starting\n");
-   fprintf(stderr,"backend  (img_buf=0x%08X, img_buf[0][0]=0x%08X)\n",img_buf,img_buf[0][0]);
-   fprintf(stderr,"backend  (&regflags=0x%08X, &regdata=0x%08X)\n",&regflags,&regdata);
-   //fprintf(stderr,"backend  (pixelcount=0x%08X)\n",pixelcount);
    fflush(stderr);
 
 
@@ -399,7 +370,6 @@ static void do_frontend()
 
 
    fprintf(stderr,"frontend starting\n");
-   fprintf(stderr,"frontend (img_buf=0x%08X, img_buf[0][0]=0x%08X)\n",img_buf,img_buf[0][0]);
    fflush(stderr);
 
    // for testing
@@ -667,14 +637,8 @@ static int parse_args(int argc, char **argv)
 {
    char cc;
    extern char *optarg;
-unsigned ii;
-   errno=0;
 
-   for(ii=0;ii<argc;++ii)
-   {
-      fprintf(stderr,"argv[%d]=%s\n",ii,argv[ii]);
-      fflush(stderr);
-   }
+   errno=0;
 
    // for some reason, checking for EOF wasn't working (maybe a uClinux peculiarity)
    // so, check against optind used instead
@@ -691,7 +655,6 @@ unsigned ii;
             break;
          case 'b':
             init_shared_data_ptrs((void*)atoi(optarg));
-            fprintf(stderr,"finishing parsing backend flag\n");
             g_flag_background_capture_mode=1;
             break;
          default:
