@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Jun 18 12:50:43 2013
+# Timing Report written on Tue Jul 09 14:36:57 2013
 #
 
 
@@ -25,33 +25,33 @@ Performance Summary
 
 Worst slack in design: 0.225
 
-                                                           Requested     Estimated     Requested     Estimated                 Clock        Clock              
-Starting Clock                                             Frequency     Frequency     Period        Period        Slack       Type         Group              
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                                                    40.0 MHz      42.2 MHz      25.000        23.721        1.279       declared     clk_group_0        
-FCLK                                                       40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
-clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock     80.0 MHz      28.4 MHz      12.500        35.165        -22.665     inferred     Inferred_clkgroup_0
-System                                                     80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
-===============================================================================================================================================================
+                                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                     Frequency     Frequency     Period        Period        Slack       Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------
+FAB_CLK                            40.0 MHz      39.8 MHz      25.000        25.119        -0.119      declared     clk_group_0        
+FCLK                               40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
+stonyman|clkAdc_inferred_clock     80.0 MHz      27.0 MHz      12.500        37.045        -24.545     inferred     Inferred_clkgroup_0
+System                             80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
+=======================================================================================================================================
 
 
 
 Clock Relationships
 *******************
 
-Clocks                                                                                                          |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                                                Ending                                                  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                  System                                                  |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
-System                                                  FAB_CLK                                                 |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-System                                                  clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                                                 System                                                  |  0.000       1.550  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                                                 FAB_CLK                                                 |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                                                 clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  FAB_CLK                                                 |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  clkgenerator|clkgenerator_0_clkCameraSS_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-======================================================================================================================================================================================================
+Clocks                                                          |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                        Ending                          |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------
+System                          System                          |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
+System                          FAB_CLK                         |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                          stonyman|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                         System                          |  0.000       1.550  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                         FAB_CLK                         |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                         stonyman|clkAdc_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman|clkAdc_inferred_clock  FAB_CLK                         |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman|clkAdc_inferred_clock  stonyman|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+======================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 

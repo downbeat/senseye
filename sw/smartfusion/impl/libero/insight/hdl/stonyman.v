@@ -15,7 +15,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ                   (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
+`define CLK_FREQ                   (40000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
 
@@ -25,20 +25,20 @@
 // TIMING CONSTANTS
 // Pulse Time:  200-300 ns has worked
 `define TIME_PULSE_WAIT            (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT           (4)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_WAIT           (8)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
 `define TIME_PULSE_WAIT_AFTER      (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT_AFTER     (4)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_WAIT_AFTER     (8)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ)/1000000000)
 `define TIME_PULSE_INPHI           (1000)      // ns
-`define TICKS_PULSE_INPHI          (20)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_INPHI          (40)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ)/1000000000)
 `define TIME_PULSE_INPHI_AFTER     (1000)      // ns
-`define TICKS_PULSE_INPHI_AFTER    (20)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_INPHI_AFTER    (40)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ)/1000000000)
 // TODO: is this a reasonable value?
 `define TIME_STARTCAP_WAIT_AFTER   (50)        // ns (arbitrarily chosen)
-`define TICKS_STARTCAP_WAIT_AFTER  (1)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ)/1000000000)
+`define TICKS_STARTCAP_WAIT_AFTER  (2)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ)/1000000000)
 `define TIME_WAIT_BETWEEN_FRAMES   (50)        // ns (arbitrarily chosen)
-`define TICKS_WAIT_BETWEEN_FRAMES  (1)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
+`define TICKS_WAIT_BETWEEN_FRAMES  (2)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
 `define TIME_WAIT_STARTUP          (500)       // ms (arbitrarily chosen)
-`define TICKS_WAIT_STARTUP         (10000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ)/1000)
+`define TICKS_WAIT_STARTUP         (20000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ)/1000)
 
 `define REG_COLSEL                 (0)
 `define REG_ROWSEL                 (1)
@@ -147,12 +147,15 @@ output reg [7:0] px0_out,
 output reg [7:0] px1_out,
 output reg [7:0] px2_out,
 output reg [7:0] px3_out,
+output reg clkAdc,
 output reg startAdcCapture,  // active low
 
 output reg busy,
 
 output wire [3:0] tp_stateout,
-output wire [3:0] tp_substateout
+output wire [3:0] tp_substateout,
+
+output wire tp_writePending
 );
 
 reg [31:0] counterWait;
@@ -163,12 +166,40 @@ reg [7:0] cachedValue [0:`REG_CNT];
 reg [3:0] state;
 reg [4:0] substate;
 
+reg writePending;
 
 assign tp_stateout = ~state;
 assign tp_substateout = ~substate;
+assign tp_writePending = writePending;
 
 
-always@ (posedge clk) // or negedge reset)
+always@ (posedge clk or negedge reset)
+begin
+   if(0 == reset)
+   begin
+      clkAdc <= 0;
+      writeEnable <= 1'b1;
+   end
+   else
+   begin
+      // generate ADC clk (1/2 of 40MHz -> 20MHz)
+      clkAdc <= clkAdc^1;
+
+
+      // writeEnable must be operated on the 40MHz clock
+      if(1'b1 == writePending)
+      begin
+         writeEnable <= 1'b0;
+      end
+      if(1'b0 == writeEnable)
+      begin
+         writeEnable <= 1'b1;
+      end
+   end
+end
+
+
+always@ (posedge clkAdc or negedge reset)
 begin
    if(0 == reset)
    begin
@@ -182,8 +213,8 @@ begin
       resv <= 1'b0;
       incv <= 1'b0;
       inphi <= 1'b0;
-      writeEnable <= 1'b1;
       startAdcCapture <= 1'b1;
+      writePending <= 1'b0;
    end
    else
    begin
@@ -1207,7 +1238,7 @@ begin
                      px1_out <= px1_in;
                      px2_out <= px2_in;
                      px3_out <= px3_in;
-                     writeEnable <= 1'b0;
+                     writePending <= 1'b1;
                      counterPixelsCaptured <= counterPixelsCaptured+1;
                      // TODO: is this a reasonable value?
                      counterWait <= `TICKS_STARTCAP_WAIT_AFTER;
@@ -1216,15 +1247,14 @@ begin
                end
                `SUB_S_STARTCAP_WAIT_AFTER:
                begin
-                  if(1'b0 == writeEnable)
-                  begin
-                     writeEnable <= 1'b1;
-                  end
+                  // immediately lower the pending line (it's only held high
+                  // for one ADC clock period)
+                  writePending <= 1'b0;
                   if(0 < counterWait)
                   begin
                      counterWait <= counterWait-1;
                   end
-                  else
+                  else if(1'b0 == writePending)
                   begin
                      if((`RESOLUTION_ROWS*`RESOLUTION_COLS) == counterPixelsCaptured)
                      begin
@@ -1248,6 +1278,10 @@ begin
                         state <= `S_CAP_INC_COL;
                         substate <= `SUB_S_RESP_RAISE;
                      end
+                  end
+                  else
+                  begin
+                     // do nothing (writePending still active)
                   end
                end
                default:

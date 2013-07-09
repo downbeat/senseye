@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>imaging</header>
+  <drc>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected top level output port imaging:tp_substateout[3:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/imaging:tp_substateout</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin adc081s101_2:dataout</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/adc081s101_2:dataout</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin adc081s101_3:dataout</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/adc081s101_3:dataout</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin stonyman_0:tp_substateout</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/stonyman_0:tp_substateout</crossprobe>
+  </drc>
+</drcreport>

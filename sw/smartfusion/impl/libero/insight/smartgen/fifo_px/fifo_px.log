@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Fri Jun 14 13:45:22 2013
+ ** Date:   Thu Jun 20 15:14:06 2013
 
 
 ****************
@@ -16,17 +16,17 @@ Read Clock                      : Rising
 Write Clock                     : Rising
 Reset                           : Active Low
 Read Enable                     : Active Low
-Write Depth                     : 2048
+Write Depth                     : 4096
 Write Width                     : 8
-Read Depth                      : 512
+Read Depth                      : 1024
 Read Width                      : 32
 Almost Full                     : 512
 Almost Empty                    : 65536
-Clocks                          : Independent Read and Write Clocks
+Clocks                          : Single Read/Write Clock
 AEFlag                          : None
 AFFlag                          : Static
 Read Pipe Mode1                 : No Pipe
-Optimized for                   : Power
+Optimized for                   : Speed
 Prevent Read When Empty         : Yes
 Prevent Write When Full         : Yes
 Write Acknowledge               : No
@@ -43,8 +43,8 @@ Portname AE Port                : AEVAL
 Portname AF Port                : AFVAL
 Portname Write En               : WE
 Portname Read En                : RE
-Portname WClock                 : WCLOCK
-Portname RClock                 : RCLOCK
+Portname WClock                 :
+Portname RClock                 :
 Portname AE Flag                : AEMPTY
 Portname AF Flag                : AFULL
 Portname Full Flag              : FULL
@@ -60,13 +60,13 @@ Portname Memory Write Address   :
 Portname Memory Read Address    :
 Portname Memory Write Enable    :
 Portname Memory Read Enable     :
-Portname Clock                  :
+Portname Clock                  : CLK
 
 Cascade Configuration:
-     Port A configuration       : 2048x2
-     Port B configuration       : 512x8
+     Port A configuration       : 4096x1
+     Port B configuration       : 1024x4
      Number of blocks depth wise: 1
-     Number of blocks width wise: 4
+     Number of blocks width wise: 8
 
 **************
 Compile Report
@@ -78,7 +78,7 @@ Netlist Resource Report
 =======================
 
     Microcontroller Subsystem  Used:      0  Total:      1   (0.00%)
-    Fabric                     Used:    431  Total:  11520   (3.74%)
+    Fabric                     Used:    350  Total:  11520   (3.04%)
     Fabric IO (W/ clocks)      Used:      0  Total:    128   (0.00%)
     Fabric Differential IO     Used:      0  Total:     64   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     43   (0.00%)
@@ -90,10 +90,10 @@ Netlist Resource Report
     On-chip RC oscillator      Used:      0  Total:      1   (0.00%)
     Main Crystal oscillator    Used:      0  Total:      1   (0.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      4  Total:     24   (16.67%)
+    RAM/FIFO                   Used:      8  Total:     24   (33.33%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Wrote Verilog netlist to Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen\fifo_px\fifo_px.v.
 
- ** Log Ended:   Fri Jun 14 13:45:24 2013
+ ** Log Ended:   Thu Jun 20 15:14:07 2013
 

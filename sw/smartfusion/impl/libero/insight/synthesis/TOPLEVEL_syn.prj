@@ -3,15 +3,14 @@
 #--  Project file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_syn.prj
 
 #project files
-add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/clkgenerator.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/ahbtoapbsm.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/penablescheduler.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/apbaddrdata.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/coreahbtoapb3.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/adc081s101.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen/fifo_px/fifo_px.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/stonyman_apb3.v"
-add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen/fifo_px/fifo_px.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/imaging/imaging.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"

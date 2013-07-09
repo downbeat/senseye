@@ -69,10 +69,11 @@
 `define REG_SET_OFFSET_CAM2         ('hC0)
 `define REG_SET_OFFSET_CAM3         ('hE0)
 
-`define FIFO_RDEN_S_IDLE            (2'd0)
-`define FIFO_RDEN_S_RAISE           (2'd1)
-`define FIFO_RDEN_S_WAIT            (2'd2)
-`define FIFO_RDEN_S_READY           (2'd3)
+`define FIFO_RDEN_S_IDLE            ('d0)
+`define FIFO_RDEN_S_RAISE           ('d1)
+`define FIFO_RDEN_S_WAIT            ('d2)
+`define FIFO_RDEN_S_READY           ('d3)
+`define FIFO_RDEN_S_WAIT_AFTER      ('d4)
 
 `define REG_GLOB_STATUS_RESERVED    (31'd0)
 `define REG_CAMX_STATUS_RESERVED    (27'd0)
@@ -237,8 +238,13 @@ output reg startCapture,
 output wire [3:0] tp_regOffsetUpperNibble
 );
 
-reg [1:0] fifoRdenState;
-wire [1:0] currentCam;
+reg [2:0] fifoRdenState [0:3];
+wire       camRegInd;
+wire [1:0] camIdx;
+wire [4:0] camReg;
+
+// counter
+reg [2:0] ii;
 
 // this code allows generic handling of CAMX_... registers
 // ideally we wouldn't need this, but verilog does not allow arrays to be
@@ -276,7 +282,9 @@ assign pxDatain[3]=cam3pxDatain;
 
 
 assign tp_regOffsetUpperNibble=~addr[7:4];
-assign currentCam=addr[6:5];
+assign camRegInd=addr[7];
+assign camIdx=addr[6:5];
+assign camReg=addr[4:0];
 
 
 always@ (posedge clk)
@@ -288,8 +296,10 @@ begin
       fifoRden[1] <= 1'b0;
       fifoRden[2] <= 1'b0;
       fifoRden[3] <= 1'b0;
-      //currentCam <= 2'b0; // does not really matter
-      fifoRdenState <= `FIFO_RDEN_S_IDLE;
+      for(ii=0; ii<4; ii=ii+1)
+      begin
+         fifoRdenState[ii] <= `FIFO_RDEN_S_IDLE;
+      end
    end
    else
    begin
@@ -303,41 +313,38 @@ begin
             ready <= 1'b1;
          end
          // some camera register
-         else if(0 != (`MASK_REG_RANGE_CAM_IND&addr)) 
+         else if(0 != camRegInd) 
          begin
-            // extract the current camera number
-            //currentCam <= `SHIFT_REG_RANGE_CAM_SEL>>(`MASK_REG_RANGE_CAM_SEL&addr);
-
             // CAMX_STATUS
-            if(`REG_OFFSET_CAMX_STATUS==(`MASK_REG_RANGE_CAM_REG_SEL&addr))
+            if(`REG_OFFSET_CAMX_STATUS == camReg)
             begin
-               dataout <= { `REG_CAMX_STATUS_RESERVED,overflow[currentCam],afull[currentCam],
-                            full[currentCam],empty[currentCam] };
+               dataout <= { `REG_CAMX_STATUS_RESERVED,overflow[camIdx],afull[camIdx],
+                            full[camIdx],empty[camIdx] };
                ready <= 1'b1;
             end
             // CAMX_PXDATA
-            else if(`REG_OFFSET_CAMX_PXDATA==(`MASK_REG_RANGE_CAM_REG_SEL&addr))
+            else if(`REG_OFFSET_CAMX_PXDATA == camReg)
             begin
-               case(fifoRdenState)
+               case(fifoRdenState[camIdx])
                   `FIFO_RDEN_S_IDLE:
                   begin
-                     fifoRden[currentCam] <= 1'b1;
-                     fifoRdenState <= `FIFO_RDEN_S_RAISE;
+                     fifoRden[camIdx] <= 1'b1;
+                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_RAISE;
                   end
                   `FIFO_RDEN_S_RAISE:
                   begin
-                     fifoRden[currentCam] <= 1'b0;
-                     fifoRdenState <= `FIFO_RDEN_S_WAIT;
+                     fifoRden[camIdx] <= 1'b0;
+                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_WAIT;
                   end
                   `FIFO_RDEN_S_WAIT:
                   begin
-                     fifoRdenState <= `FIFO_RDEN_S_READY;
+                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_READY;
                   end
                   `FIFO_RDEN_S_READY:
                   begin
-                     dataout <= pxDatain[currentCam];
+                     dataout <= pxDatain[camIdx];
                      ready <= 1'b1;
-                     fifoRdenState <= `FIFO_RDEN_S_IDLE;
+                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_WAIT_AFTER;
                   end
                   default:
                   begin
@@ -345,6 +352,7 @@ begin
                   end
                endcase
             end
+            // BAD: CAM register unknown
             else
             begin
                dataout <= `WIDTH'd0;
@@ -382,6 +390,14 @@ begin
             startCapture <= 1'b1;
          end
          ready <= 1'b0;
+      end
+   end
+   // return any FIFO's RDEN state to idle if necessary
+   for(ii=0; ii<4; ii=ii+1)
+   begin
+      if(`FIFO_RDEN_S_WAIT_AFTER==fifoRdenState[ii])
+      begin
+         fifoRdenState[ii]<=`FIFO_RDEN_S_IDLE;
       end
    end
 end

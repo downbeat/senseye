@@ -14,7 +14,7 @@ Opened an existing Libero design TOPLEVEL.adb.
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 Wrote timing report to file: TOPLEVEL_maxdelay_timing_report.txt
 
-The Report command succeeded ( 00:00:06 )
+The Report command succeeded ( 00:00:04 )
 Wrote timing report to file: TOPLEVEL_mindelay_timing_report.txt
 
 The Report command succeeded ( 00:00:01 )
@@ -28,6 +28,6 @@ Design saved to file
 Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
 .adb.
 
-The Execute Script command succeeded ( 00:00:10 )
+The Execute Script command succeeded ( 00:00:08 )
 Design closed.
 

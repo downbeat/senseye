@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jun 18 12:45:11 2013
+// Created by SmartDesign Tue Jul 09 14:34:43 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -24,6 +24,8 @@ module TOPLEVEL(
     MAC_TXD,
     MAC_TXEN,
     SCLK,
+    TP_ADCCONVCOMPLETE,
+    TP_ADCSTARTCAP,
     TP_BUSY,
     TP_EMPTY,
     TP_FULL,
@@ -35,6 +37,7 @@ module TOPLEVEL(
     TP_RDEN,
     TP_START_CAPTURE,
     TP_WREN,
+    TP_WRITEPENDING,
     UART_0_TXD,
     incp,
     incv,
@@ -77,6 +80,8 @@ output        MAC_MDC;
 output [1:0]  MAC_TXD;
 output        MAC_TXEN;
 output        SCLK;
+output        TP_ADCCONVCOMPLETE;
+output        TP_ADCSTARTCAP;
 output        TP_BUSY;
 output        TP_EMPTY;
 output        TP_FULL;
@@ -88,6 +93,7 @@ output        TP_PWRITE;
 output        TP_RDEN;
 output        TP_START_CAPTURE;
 output        TP_WREN;
+output        TP_WRITEPENDING;
 output        UART_0_TXD;
 output        incp;
 output        incv;
@@ -113,7 +119,6 @@ inout  [15:0] psram_data;
 // Nets
 //--------------------------------------------------------------------
 wire          CLK50;
-wire          clkgenerator_0_clkCameraSS;
 wire   [31:0] CoreAHBLite_0_AHBmslave5_HADDR;
 wire   [2:0]  CoreAHBLite_0_AHBmslave5_HBURST;
 wire          CoreAHBLite_0_AHBmslave5_HMASTLOCK;
@@ -160,7 +165,7 @@ wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
 wire   [3:0]  led_net_0;
-wire   [3:0]  led_0;
+wire   [3:0]  led_2;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -169,7 +174,6 @@ wire          MAC_RXER;
 wire   [1:0]  MAC_TXD_net_0;
 wire          MAC_TXEN_net_0;
 wire          MAINXIN;
-wire          MSS_CORE2_0_FAB_CLK;
 wire          MSS_CORE2_0_M2F_RESET_N;
 wire          MSS_CORE2_0_MSS_MASTER_AHB_LITE_HLOCK;
 wire   [31:0] MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA;
@@ -181,6 +185,7 @@ wire          MSS_RESET_N;
 wire   [1:0]  nbyte_en;
 wire          ncs0;
 wire          ncs1;
+wire          net_30;
 wire          noe0;
 wire          noe1;
 wire          nwe;
@@ -191,6 +196,8 @@ wire          px2_adc_din;
 wire          resp_net_0;
 wire          resv_net_0;
 wire          SCLK_0;
+wire          tp_adcConvComplete;
+wire          TP_ADCSTARTCAP_net_0;
 wire          TP_BUSY_net_0;
 wire          TP_EMPTY_net_0;
 wire          TP_FULL_net_0;
@@ -198,6 +205,7 @@ wire   [2:2]  TP_PADDR_BIT2_net_0;
 wire          TP_RDEN_net_0;
 wire          TP_START_CAPTURE_net_0;
 wire          TP_WREN_net_0;
+wire          TP_WRITEPENDING_net_0;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          ncs0_net_0;
@@ -218,6 +226,7 @@ wire          SCLK_0_net_0;
 wire          TP_RDEN_net_1;
 wire          TP_FULL_net_1;
 wire          TP_EMPTY_net_1;
+wire          CoreAPB3_0_APBmslave0_0_PREADY_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PWRITE_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PENABLE_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PSELx_net_0;
@@ -225,10 +234,13 @@ wire          TP_PADDR_BIT2_net_1;
 wire          TP_WREN_net_1;
 wire          TP_BUSY_net_1;
 wire          TP_START_CAPTURE_net_1;
+wire          TP_WRITEPENDING_net_1;
+wire          tp_adcConvComplete_net_0;
+wire          TP_ADCSTARTCAP_net_1;
 wire   [1:0]  nbyte_en_net_0;
 wire   [24:0] psram_address_net_1;
 wire   [1:0]  MAC_TXD_net_1;
-wire   [3:0]  led_0_net_0;
+wire   [3:0]  led_2_net_0;
 wire   [7:4]  led_net_1;
 wire   [0:1]  PADDRS0_slice_0;
 wire   [3:23] PADDRS0_slice_1;
@@ -353,7 +365,6 @@ assign PRDATAS15_const_net_0  = 32'h00000000;
 //--------------------------------------------------------------------
 assign rs485_nre                             = 1'b0;
 assign rs485_de                              = 1'b1;
-assign TP_PREADY                             = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -393,6 +404,8 @@ assign TP_FULL_net_1                         = TP_FULL_net_0;
 assign TP_FULL                               = TP_FULL_net_1;
 assign TP_EMPTY_net_1                        = TP_EMPTY_net_0;
 assign TP_EMPTY                              = TP_EMPTY_net_1;
+assign CoreAPB3_0_APBmslave0_0_PREADY_net_0  = CoreAPB3_0_APBmslave0_0_PREADY;
+assign TP_PREADY                             = CoreAPB3_0_APBmslave0_0_PREADY_net_0;
 assign CoreAPB3_0_APBmslave0_0_PWRITE_net_0  = CoreAPB3_0_APBmslave0_0_PWRITE;
 assign TP_PWRITE                             = CoreAPB3_0_APBmslave0_0_PWRITE_net_0;
 assign CoreAPB3_0_APBmslave0_0_PENABLE_net_0 = CoreAPB3_0_APBmslave0_0_PENABLE;
@@ -407,14 +420,20 @@ assign TP_BUSY_net_1                         = TP_BUSY_net_0;
 assign TP_BUSY                               = TP_BUSY_net_1;
 assign TP_START_CAPTURE_net_1                = TP_START_CAPTURE_net_0;
 assign TP_START_CAPTURE                      = TP_START_CAPTURE_net_1;
+assign TP_WRITEPENDING_net_1                 = TP_WRITEPENDING_net_0;
+assign TP_WRITEPENDING                       = TP_WRITEPENDING_net_1;
+assign tp_adcConvComplete_net_0              = tp_adcConvComplete;
+assign TP_ADCCONVCOMPLETE                    = tp_adcConvComplete_net_0;
+assign TP_ADCSTARTCAP_net_1                  = TP_ADCSTARTCAP_net_0;
+assign TP_ADCSTARTCAP                        = TP_ADCSTARTCAP_net_1;
 assign nbyte_en_net_0                        = nbyte_en;
 assign psram_nbyte_en[1:0]                   = nbyte_en_net_0;
 assign psram_address_net_1                   = psram_address_net_0;
 assign psram_address[24:0]                   = psram_address_net_1;
 assign MAC_TXD_net_1                         = MAC_TXD_net_0;
 assign MAC_TXD[1:0]                          = MAC_TXD_net_1;
-assign led_0_net_0                           = led_0;
-assign led[3:0]                              = led_0_net_0;
+assign led_2_net_0                           = led_2;
+assign led[3:0]                              = led_2_net_0;
 assign led_net_1                             = led_net_0;
 assign led[7:4]                              = led_net_1;
 //--------------------------------------------------------------------
@@ -459,15 +478,6 @@ assign MSS_CORE2_0_MSS_MASTER_AHB_LITE_HSIZE_0 = { MSS_CORE2_0_MSS_MASTER_AHB_LI
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------clkgenerator
-clkgenerator clkgenerator_0(
-        // Inputs
-        .clk         ( MSS_CORE2_0_FAB_CLK ),
-        .rst         ( MSS_CORE2_0_M2F_RESET_N ),
-        // Outputs
-        .clkCameraSS ( clkgenerator_0_clkCameraSS ) 
-        );
-
 //--------CoreAHBLite   -   Actel:DirectCore:CoreAHBLite:3.1.102
 CoreAHBLite #( 
         .FAMILY             ( 15 ),
@@ -541,7 +551,7 @@ CoreAHBLite #(
         .MODE_CFG           ( 1 ) )
 CoreAHBLite_0(
         // Inputs
-        .HCLK           ( MSS_CORE2_0_FAB_CLK ),
+        .HCLK           ( net_30 ),
         .HRESETN        ( MSS_CORE2_0_M2F_RESET_N ),
         .REMAP_M0       ( GND_net ), // tied to 1'b0 from definition
         .HMASTLOCK_M0   ( GND_net ), // tied to 1'b0 from definition
@@ -859,7 +869,7 @@ COREAHBTOAPB3 #(
         .FAMILY ( 15 ) )
 COREAHBTOAPB3_0(
         // Inputs
-        .HCLK      ( MSS_CORE2_0_FAB_CLK ),
+        .HCLK      ( net_30 ),
         .HRESETN   ( MSS_CORE2_0_M2F_RESET_N ),
         .HWRITE    ( CoreAHBLite_0_AHBmslave6_HWRITE ),
         .HSEL      ( CoreAHBLite_0_AHBmslave6_HSELx ),
@@ -990,7 +1000,7 @@ CoreAPB3_0(
 imaging imaging_0(
         // Inputs
         .reset                      ( MSS_CORE2_0_M2F_RESET_N ),
-        .clk                        ( clkgenerator_0_clkCameraSS ),
+        .clk                        ( net_30 ),
         .px3_adc_din                ( GND_net ),
         .px0_adc_din                ( px0_adc_din ),
         .px1_adc_din                ( px1_adc_din ),
@@ -998,7 +1008,6 @@ imaging imaging_0(
         .PENABLE                    ( CoreAPB3_0_APBmslave0_0_PENABLE ),
         .PWRITE                     ( CoreAPB3_0_APBmslave0_0_PWRITE ),
         .PSEL                       ( CoreAPB3_0_APBmslave0_0_PSELx ),
-        .clk_px_read                ( clkgenerator_0_clkCameraSS ),
         .PADDR                      ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
         .PWDATA                     ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         // Outputs
@@ -1018,10 +1027,13 @@ imaging imaging_0(
         .tp_cam0_rden               ( TP_RDEN_net_0 ),
         .tp_wren                    ( TP_WREN_net_0 ),
         .tp_cam0_afull              (  ),
+        .tp_writePending            ( TP_WRITEPENDING_net_0 ),
+        .tp_startAdcCapture         ( TP_ADCSTARTCAP_net_0 ),
+        .tp_adcConvComplete         ( tp_adcConvComplete ),
         .PRDATA                     ( CoreAPB3_0_APBmslave0_0_PRDATA ),
         .tp_stateout                ( led_net_0 ),
-        .tp_substateout             (  ),
-        .TP_REG_OFFSET_UPPER_NIBBLE ( led_0 ) 
+        .tp_substateout             ( led_2 ),
+        .TP_REG_OFFSET_UPPER_NIBBLE (  ) 
         );
 
 //--------MSS_CORE2
@@ -1042,7 +1054,7 @@ MSS_CORE2 MSS_CORE2_0(
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),
         .GLC         (  ),
-        .FAB_CLK     ( MSS_CORE2_0_FAB_CLK ),
+        .FAB_CLK     ( net_30 ),
         .M2F_RESET_N ( MSS_CORE2_0_M2F_RESET_N ),
         .UART_0_TXD  ( UART_0_TXD_net_0 ),
         .MSSHWRITE   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HWRITE ),
@@ -1066,7 +1078,7 @@ psram_cr psram_cr_0(
         .HMASTLOCK ( CoreAHBLite_0_AHBmslave5_HMASTLOCK ),
         .HREADY    ( CoreAHBLite_0_AHBmslave5_HREADY ),
         .HRESETn   ( MSS_CORE2_0_M2F_RESET_N ),
-        .HCLK      ( MSS_CORE2_0_FAB_CLK ),
+        .HCLK      ( net_30 ),
         .HADDR     ( CoreAHBLite_0_AHBmslave5_HADDR ),
         .HWDATA    ( CoreAHBLite_0_AHBmslave5_HWDATA ),
         .HSIZE     ( CoreAHBLite_0_AHBmslave5_HSIZE ),
