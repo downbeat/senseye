@@ -38,13 +38,15 @@ reg [2:0] cntrWaitQuiet;
 reg [3:0] bitsRead;
 
 
-always@ (posedge clk)
+always@ (posedge clk or negedge reset)
 begin
    if(0 == reset)
    begin
       cs <= 1;
-      cntrWaitQuiet <= 16; // just a guess
+      cntrWaitQuiet <= 7; // just a guess
       conversionComplete <= 1;
+      // idle state expected bitsRead to be all, not 0
+      bitsRead <= `ADC_RES;
    end
    else
    begin
