@@ -12,6 +12,8 @@
 //                                  from the FIFO in the interrupt (although data is merely
 //                                  discarded).  there is some code for multiple cameras, but the
 //                                  functional code supports a single camera only.
+// 0.02   2013-07-25  russ          implemented stonyman_read.  a user-space program can now read
+//                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
 //
 // Stonyman linux device driver.
 ///////////////////////////////////////////////////////////////////////////////////////////////////

@@ -3,6 +3,7 @@
 //
 // Russ Bielawski
 // 2013-03-06: created to grab data from insight-serv
+// 2013-06-26: I've been adding contortions to get 2 and 3 cameras supported
 //**************************************************************************************************
 
 
@@ -72,12 +73,12 @@ static void terminate(int xx);
 int main(int argc, char** argv)
 {
    unsigned ii;
-   char cc;
+   //char cc;
    unsigned numcams;
 
    int ret;
    int send_len_ret;
-   unsigned recv_len;
+   int recv_len;
    unsigned recv_len_total;
    unsigned char recv_buf[256*1024];    // huge because I am a lazy man
 
@@ -105,7 +106,7 @@ int main(int argc, char** argv)
 
 
    // TODO hardcoded for now
-   numcams=3;
+   numcams=2;
 
    // print numcams on stdout for pipe interface
    printf("%c",SYMBOL_SOF);
@@ -124,47 +125,57 @@ int main(int argc, char** argv)
    // broken pipe
    signal(SIGPIPE, terminate);
 
+   // setup connection to server
+   g_sd_insight = socket(AF_INET, SOCK_STREAM, 0);
+   assert(0 <= g_sd_insight);
+
+   memset(&sockaddr_server,0,sizeof(sockaddr_server));
+   sockaddr_server.sin_family = AF_INET;
+   sockaddr_server.sin_port = htons(INSIGHT_SERV_PORT);
+   inet_aton(INSIGHT_SERV_ADDR, &sockaddr_server.sin_addr);
+
+   ret = connect(g_sd_insight, (struct sockaddr*)(&sockaddr_server), sizeof(sockaddr_server));
+   assert(0 <= ret);
+
+
+   // send a simple GET request to the server
+   send_len_ret = send(g_sd_insight, (const void*)(&REQUEST), sizeof(REQUEST), 0);
+   assert(sizeof(REQUEST) == send_len_ret);
+
+
 
    while(1)
    {
-      // setup connection to server
-      g_sd_insight = socket(AF_INET, SOCK_STREAM, 0);
-      assert(0 <= g_sd_insight);
-
-      memset(&sockaddr_server,0,sizeof(sockaddr_server));
-      sockaddr_server.sin_family = AF_INET;
-      sockaddr_server.sin_port = htons(INSIGHT_SERV_PORT);
-      inet_aton(INSIGHT_SERV_ADDR, &sockaddr_server.sin_addr);
-
-      ret = connect(g_sd_insight, (struct sockaddr*)(&sockaddr_server), sizeof(sockaddr_server));
-      assert(0 <= ret);
-
-      // send a simple GET request to the server
-      send_len_ret = send(g_sd_insight, (const void*)(&REQUEST), sizeof(REQUEST), 0);
-      assert(sizeof(REQUEST) == send_len_ret);
-
       recv_len_total = 0;
       recv_buf[0] = '\0';
       do
       {
          recv_len = recv(g_sd_insight, (void*)(&(recv_buf[recv_len_total])), 2-recv_len_total, 0);
-         if((0 > recv_len) && (EAGAIN == errno))
+         if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
          {
             // do nothing, just try again
+            fprintf(stderr,"EAGAIN\n");
+            fflush(stderr);
+         }
+         else if(0 > recv_len)
+         {
+            // error
+            fprintf(stderr,"Other Error (errno=%d)!\n",errno);
+            fprintf(stderr,"%s\n",strerror(errno));
+            fflush(stderr);
+            assert(0 < recv_len);
          }
          else
          {
-            assert(0 < recv_len);
-
             recv_len_total += recv_len;
          }
       } while(2 > recv_len_total);
 
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
-      assert((char)SYMBOL_SOF == (char)recv_buf[0]);
+      //assert((char)SYMBOL_SOF == (char)recv_buf[0]);
       printf("%c",SYMBOL_SOF);
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[1]);
-      assert((char)OPCODE_FRAME == (char)recv_buf[1]);
+      //assert((char)OPCODE_FRAME == (char)recv_buf[1]);
       printf("%c",OPCODE_FRAME);
 
 
@@ -174,30 +185,27 @@ int main(int argc, char** argv)
       {
          recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])),
                           FRAME_LEN*numcams-recv_len_total, 0 );
-         if((0 > recv_len) && (EAGAIN == errno))
+         if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
          {
             // do nothing, just try again
             fprintf(stderr,"EAGAIN\n");
             fflush(stderr);
          }
-         else if(0>recv_len)
+         else if(0 > recv_len)
          {
-            fprintf(stderr,"Other Error!\n");
+            // error
+            fprintf(stderr,"Other Error (errno=%d)!\n",errno);
+            fprintf(stderr,"%s\n",strerror(errno));
             fflush(stderr);
-            perror(errno);
             assert(0 < recv_len);
          }
          else
          {
-            fflush(stderr);
             recv_len_total += recv_len;
          }
       } while(FRAME_LEN*numcams > recv_len_total);
       fprintf(stderr,"(rx'd %d bytes)\n",recv_len_total);
       recv_buf[recv_len_total] = '\0';
-
-      ret = close(g_sd_insight);
-      assert(0 <= ret);
 
 
       // pass data over stdout (and possibly in human readable format over stderr);
@@ -228,6 +236,9 @@ int main(int argc, char** argv)
          break;
       }*/
    }
+
+   ret = close(g_sd_insight);
+   assert(0 <= ret);
 
 
    // tell listening program that we're done here
