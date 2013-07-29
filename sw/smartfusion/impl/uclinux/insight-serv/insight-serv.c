@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // insight-serv.c
 //
 // Russ Bielawski
@@ -10,12 +10,11 @@
 //             its data is being transmitted thrice as if to appear to be three distinct cameras.
 //             this is because the APB3 bus cannot keep up with all three cameras and the FIFOs
 //             overflow.  by only using CAM0, all the other FIFOs overflow, but we can keep up with
-//             CAM0.
-// 2013-06-25: adding in vfork functionality
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//             CAM0
+//**************************************************************************************************
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // includes
 //
 #include <stdlib.h>
@@ -37,7 +36,7 @@
 //#include "stonymask_cam12_3v3_sf.h"
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // defines / constants
 //
 typedef  unsigned long   uint32;
@@ -86,299 +85,41 @@ typedef  unsigned char   uint8;
 #define FLAG_SHIFT_FULL           (1u)
 #define FLAG_SHIFT_AFULL          (2u)
 
-#define NUM_CAMS                  (3)
-#define NUM_BUFS_PER_CAM          (1) // currently not implemented, leave as 1
-
-typedef struct
-{
-   uint16 len;
-} img_buf_metadata_t;
-
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
 // a success header is not currently used
 const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
+#define NUM_CAMS                  (3)
+#define NUM_BUFS_PER_CAM          (1) // currently not implemented, leave as 1
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//**************************************************************************************************
 // globals
 //
-          unsigned             g_flag_print_help;
-          unsigned             g_flag_background_capture_mode;
-volatile  uint8*               img_buf_cur_idx;  // all cameras share current buffer index
-volatile  img_buf_metadata_t*  img_buf_metadata  [NUM_CAMS]  [NUM_BUFS_PER_CAM];
-          uint8*               img_buf           [NUM_CAMS]  [NUM_BUFS_PER_CAM];
+uint8 *imgbuf[NUM_CAMS];
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // local function prototypes
 //
-static void init_shared();
-static void *get_shared_data_base_ptr();
-static void init_shared_data_ptrs(void *shared_data_base_ptr);
-static void start_backend(char *progname, void* shared_data_base_ptr);
-static void do_backend();
-static void do_frontend();
 static void request_handler(int sd);
 static void request_send_data(int sd);
-static void print_usage(char *progname);
-static void print_help(char *progname);
-static int  parse_args(int argc, char **argv);
+/*static void printusage(char *progname);
+static void printhelp(char *progname);
+static int  parseargs(int argc, char **argv);*/
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // main
 //
 int main(int argc, char** argv)
 {
-   // parse cli
-   g_flag_print_help=0;
-   g_flag_background_capture_mode=0;
-   parse_args(argc,argv);
-   if(0!=g_flag_print_help)
-   {
-      print_help(argv[0]);
-      exit(0);
-   }
-
-
-   // the backend and frontend run a seperate processes in the same address space
-   // the frontend initializes the globals before starting the backend
-   // for that reason, globals are not initialized here!
-
-
-   if(0!=g_flag_background_capture_mode)
-   {
-      // TODO: probably should check to ensure that the backend is started by the frontend
-      // init_shared_data_ptrs is called from parse_args
-      do_backend();
-   }
-   else
-   {
-      init_shared();
-      start_backend(argv[0],get_shared_data_base_ptr());
-      do_frontend();
-   }
-   
-   // unreachable
-   return -1;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// local function definitions
-//
-
-//
-// init_shared: initialize global variables
-//
-static void init_shared()
-{
-   unsigned ii,jj;
-   void *shared_data_base_ptr;
-
-
-   // allocate shared data
-   shared_data_base_ptr = malloc(
-      // img_buf_cur_idx
-      sizeof(uint8)+
-      // for alignment
-      (sizeof(int)-(sizeof(uint8)%sizeof(int)))+
-      NUM_CAMS*NUM_BUFS_PER_CAM*(
-      // img_buf_metadata
-      sizeof(img_buf_metadata_t)+
-      // for alignment
-      (sizeof(int)-(sizeof(img_buf_metadata_t)%sizeof(int)))+
-      // img_buf
-      (RESOLUTION*sizeof(uint8)) ));
-
-   if(NULL==shared_data_base_ptr)
-   {
-      fprintf(stderr,"ERROR: couldn't malloc shared data\n");
-      fflush(stderr);
-      exit(1);
-   }
-   
-   
-   init_shared_data_ptrs(shared_data_base_ptr);
-
-
-   // initialize globals
-   *img_buf_cur_idx=0;
-   for(ii=0; ii<NUM_CAMS; ++ii)
-   {
-      for(jj=0; jj<NUM_BUFS_PER_CAM; ++jj)
-      {
-         img_buf_metadata[ii][jj]->len=0;
-      }
-   }
-}
-
-//
-// get_shared_data_base_ptr
-//
-static void *get_shared_data_base_ptr()
-{
-   return (void*)(img_buf_cur_idx);
-}
-
-//
-// init_shared_data_ptrs
-//
-static void init_shared_data_ptrs(void *shared_data_base_ptr)
-{
-   unsigned ii,jj;
-
-
-   assert(NULL!=shared_data_base_ptr);
-
-
-   img_buf_cur_idx=(uint8*)shared_data_base_ptr;
-                                         // for alignment
-   shared_data_base_ptr+=sizeof(uint8) + (sizeof(int)-(sizeof(uint8)%sizeof(int)));
-   for(ii=0; ii<NUM_CAMS; ++ii)
-   {
-      for(jj=0; jj<NUM_BUFS_PER_CAM; ++jj)
-      {
-         img_buf_metadata[ii][jj]=(img_buf_metadata_t*)shared_data_base_ptr;
-         shared_data_base_ptr+=sizeof(img_buf_metadata_t)+
-            // for alignment
-            (sizeof(int)-(sizeof(img_buf_metadata_t)%sizeof(int)));
-      }
-   }
-   for(ii=0; ii<NUM_CAMS; ++ii)
-   {
-      for(jj=0; jj<NUM_BUFS_PER_CAM; ++jj)
-      {
-         img_buf[ii][jj]=(uint8*)shared_data_base_ptr;
-         shared_data_base_ptr+=RESOLUTION*sizeof(uint8);
-      }
-   }
-}
-
-//
-// start_backend: fork and exec this binary with the backend flag
-//
-static void start_backend(char *progname, void* shared_data_base_ptr)
-{
    unsigned ii;
-   char base_ptr_string[11]={'\0'}; // 10 digits for a 32 bit integer + 1 null char
-
-   snprintf(base_ptr_string,11,"%d",(uint32)shared_data_base_ptr);
-
-
-   // start the backend
-   if(0==vfork())
-   {
-      // child (reexec self with backend flag)
-      fprintf(stderr,"forking backend\n");
-      fflush(stderr);
-      // TODO: probably a good idea to handle any possible error
-      //(void)execl(progname,progname,"-b",NULL);
-      //(void)execl(progname,progname,"-b","-h",NULL);
-      (void)execl(progname,progname,"-b",base_ptr_string,NULL);
-
-      // the below output should never happen!
-      fprintf(stderr,"execl returned!  error!\n");
-      fflush(stderr);
-      // commented-out because the compiler warning was bothering me
-      //perror(errno);
-      fflush(stderr);
-      // only reachable if there is an error
-      exit(-1);
-   }
-   //else if(0>pid)
-   //{
-   //   // TODO: handle error
-   //}
-}
-
-//
-// do_backend: the backend interfaces with the FPGA
-//
-static void do_backend()
-{
-   unsigned ii,jj;
-   uint32 regflags,regdata;
-   uint16 pixelcount[NUM_CAMS];
-   uint8 dummy;
-
-
-   fprintf(stderr,"backend starting\n");
-   fflush(stderr);
-
-
-   // for testing
-   while(1)
-   {
-      fprintf(stderr,"backend--checking in   (regflags: 0x%02X)\n",(REG_FLAGS&0xFF));
-      fflush(stderr);
-      sleep(1);
-   }
-#if 0
-   while(1)
-   {
-      // FIXME: best practice dictates that in the even of hardware failure,
-      //        we should NOT go into an infinite loop!
-      // BUSY wait (get it!?)
-      do {/*nothing*/} while(0!=((1<<FLAG_SHIFT_BUSY)&REG_FLAGS));
-      REG_CTRL = 1ul;
-
-      for(ii=0; ii<2; ++ii)
-      {
-         pixelcount[ii]=0;
-      }
-      //fprintf(stderr,"before pixelcount[0]=%d, pixelcount[1]=%d\n",pixelcount[0],pixelcount[1]);
-      //fflush(stderr);
-      while((RESOLUTION>pixelcount[0])||(RESOLUTION>pixelcount[1]))
-      {
-         for(ii=0; ii<2; ++ii)
-         {
-            regflags = REG_CAMX_STATUS(ii);
-            if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
-            {
-               regdata=REG_CAMX_PXDATA(ii);
-               dummy = (regdata>> 0)&0xFF-stonymask[pixelcount[ii]];
-               dummy = (regdata>> 8)&0xFF-stonymask[pixelcount[ii]+1];
-               dummy = (regdata>>16)&0xFF-stonymask[pixelcount[ii]+2];
-               dummy = (regdata>>24)&0xFF-stonymask[pixelcount[ii]+3];
-               //dummy = (regdata>> 0)&0xFF-stonymask[pixelcount[ii]];
-               //dummy = (regdata>> 8)&0xFF-stonymask[pixelcount[ii]+1];
-               //dummy = (regdata>>16)&0xFF-stonymask[pixelcount[ii]+2];
-               //dummy = (regdata>>24)&0xFF-stonymask[pixelcount[ii]+3];
-               pixelcount[ii]+=4;
-            }
-            else
-            {
-            //   fprintf(stderr,"oops\n");
-            //   fflush(stderr);
-            }
-         }
-      }
-   }
-#endif
-}
-
-//
-// do_frontend: the frontend serves the HTTP interface
-//
-static void do_frontend()
-{
    int sd_listen, sd_client;
    struct sockaddr_in sockaddr_server, sockaddr_client;
    unsigned len;
 
-
-   fprintf(stderr,"frontend starting\n");
-   fflush(stderr);
-
-   // for testing
-   /*while(1)
-   {
-      fprintf(stderr,"frontend--checking in  (regflags: 0x%02X)\n",(REG_FLAGS&0xFF));
-      fflush(stderr);
-      sleep(1);
-   }*/
 
    // start up the server
    sd_listen = socket(AF_INET, SOCK_STREAM, 0);
@@ -410,6 +151,18 @@ static void do_frontend()
       exit(1);
    }
 
+
+   // malloc the image buffers (this is required for uclinux)
+   for(ii=0; ii<NUM_CAMS; ++ii)
+   {
+      imgbuf[ii] = (uint8*)malloc(NUM_BUFS_PER_CAM*RESOLUTION*sizeof(uint8));
+      if(NULL==imgbuf[ii])
+      {
+         fprintf(stderr,"couldn't malloc %d bytes for the image buffer\n");
+         exit(1);
+      }
+   }
+
    // and away we go
    while(1)
    {
@@ -420,16 +173,44 @@ static void do_frontend()
          exit(1);
       }
 
-      request_handler(sd_client);
-      if(0 > close(sd_client))
-      {
-         fprintf(stderr,"ERROR: close call failed\n");
-         fflush(stderr);
-         exit(1);
-      }
+// FIXME: no fork() in uClinux TODO: use vfork() instead (requires exec() to be called)?
+//      pid = fork();
+//      if(0 == pid)
+//      {
+//         // child
+         request_handler(sd_client);
+         if(0 > close(sd_client))
+         {
+            fprintf(stderr,"ERROR: close call failed\n");
+            fflush(stderr);
+            exit(1);
+         }
+//         exit(0);
+//      }
+//      else
+//      {
+//         // parent
+//
+//         // just close socket
+//         if(0 > close(sd_client))
+//         {
+//            fprintf(stderr,"ERROR: close call failed\n");
+//            fflush(stderr);
+//            exit(1);
+//         }
+//
+//         // TODO russ: should I wait on the child?  (I don't think so)
+//      }
    }
+
+   // unreachable
+   return -1;
 }
 
+
+//**************************************************************************************************
+// local function definitions
+//
 static void request_handler(int sd)
 {
    unsigned ii;
@@ -525,6 +306,7 @@ static void request_send_data(int sd)
    uint16 pixelcount[NUM_CAMS];
    unsigned send_len_ret;
 
+
    // send header
    send_len_ret = send(sd, (const void*)(&RESP_FRAME_HEADER), sizeof(RESP_FRAME_HEADER), 0);
    fprintf(stderr,"send_len: %d\n",send_len_ret);
@@ -542,8 +324,6 @@ static void request_send_data(int sd)
    do {/*nothing*/} while(0!=((1<<FLAG_SHIFT_BUSY)&REG_FLAGS));
    REG_CTRL = 1ul;
 
-#define FORCE_SINGLE_CAM_READ  (0)
-#if (0!=(FORCE_SINGLE_CAM_READ)) // code for single camera (CAM0)
    // only actually reading data from CAM0
    pixelcount[0]=0;
    while(RESOLUTION>pixelcount[0])
@@ -552,44 +332,26 @@ static void request_send_data(int sd)
       if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
       {
          regdata=REG_CAMX_PXDATA(0);
-         img_buf[0][0][pixelcount[0]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[0]];
-         img_buf[0][0][pixelcount[0]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[0]+1];
-         img_buf[0][0][pixelcount[0]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[0]+2];
-         img_buf[0][0][pixelcount[0]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[0]+3];
+/*         fprintf(stderr,"data read           CAM0_PXDATA:=0x%08X\n",regdata);
+         fflush(stderr);*/
+/*         fprintf(stderr,"regdata: %d\n",regdata);
+         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",regdata&0xFF,
+                  (regdata>>8)&0xFF,(regdata>>);*/
+         imgbuf[0][pixelcount[0]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[0]];
+         imgbuf[0][pixelcount[0]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[0]+1];
+         imgbuf[0][pixelcount[0]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[0]+2];
+         imgbuf[0][pixelcount[0]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[0]+3];
+/*         fprintf( stderr,"0x%02X 0x%02X 0x%02X 0x%02X \n",imgbuf[pixelcount],
+                  imgbuf[pixelcount+1],imgbuf[pixelcount+2],imgbuf[pixelcount+3]);*/
          pixelcount[0]+=4;
       }
    }
-#else
-   for(ii=0; ii<2; ++ii)
-   {
-      pixelcount[ii]=0;
-   }
-   while((RESOLUTION>pixelcount[0])||(RESOLUTION>pixelcount[1]))
-   {
-      for(ii=0; ii<2; ++ii)
-      {
-         regflags = REG_CAMX_STATUS(ii);
-         if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
-         {
-            regdata=REG_CAMX_PXDATA(ii);
-            img_buf[ii][0][pixelcount[ii]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[ii]];
-            img_buf[ii][0][pixelcount[ii]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[ii]+1];
-            img_buf[ii][0][pixelcount[ii]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[ii]+2];
-            img_buf[ii][0][pixelcount[ii]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[ii]+3];
-            pixelcount[ii]+=4;
-         }
-      }
-   }
-#endif
-
 
    // transmit data
-#define MIMIC_THREE_CAMS_WITH_CAM0  (0)
-#if (0!=(MIMIC_THREE_CAMS_WITH_CAM0)) // code for single camera (CAM0)
    // mimic 3 cameras
    for(ii=0;ii<NUM_CAMS;++ii)
    {
-      send_len_ret = send(sd, (const void*)(img_buf[0][0]), RESOLUTION, 0);
+      send_len_ret = send(sd, (const void*)(imgbuf[0]), RESOLUTION, 0);
       fprintf(stderr,"send_len: %d\n",send_len_ret);
       if(RESOLUTION != send_len_ret)
       {
@@ -598,64 +360,43 @@ static void request_send_data(int sd)
          exit(1);
       }
    }
-#else
-   for(ii=0;ii<2;++ii)
-   {
-      send_len_ret = send(sd, (const void*)(img_buf[ii][0]), RESOLUTION, 0);
-      fprintf(stderr,"send_len: %d\n",send_len_ret);
-      if(RESOLUTION != send_len_ret)
-      {
-         fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
-         fflush(stderr);
-         exit(1);
-      }
-   }
-#endif
 }
-
+/* TODO
 //
-// print_usage: prints a usage string for the program
+// printusage: prints a usage string for the program
 //
-static void print_usage(char *progname)
+static void printusage(char *progname)
 {
-   fprintf(stderr, "Usage: %s\n", progname);
+   fprintf(stderr, "Usage: %s [-p port]\n", progname);
 }
 
 //
-// print_help: prints the help for the program
+// printhelp: prints the help for the program
 //
-static void print_help(char *progname)
+static void printhelp(char *progname)
 {
-   print_usage(progname);
-   fprintf(stderr, "No flags need to be supplied to this program.\n");
+   printusage(progname);
+   fprintf(stderr,"TODO: NO HELP WRITTEN\n");
 }
 
 //
-// parse_args: parse cli
+// parseargs: parse cli
 //
-static int parse_args(int argc, char **argv)
+static int parseargs(int argc, char **argv)
 {
    char cc;
    extern char *optarg;
 
    errno=0;
 
-   // for some reason, checking for EOF wasn't working (maybe a uClinux peculiarity)
-   // so, check against optind used instead
-   while(argc>optind)
+   while ((cc = getopt(argc, argv, "ho:qr")) != EOF)
    {
-      // (still safest to check against EOF here)
-      if((cc = getopt(argc, argv, "hb:")) == EOF)
-      {
-         break;
-      }
       switch (cc) {
          case 'h':
             g_flag_print_help=1;
             break;
-         case 'b':
-            init_shared_data_ptrs((void*)atoi(optarg));
-            g_flag_background_capture_mode=1;
+         case 'p':
+            g_port=atoi(optarg);
             break;
          default:
             errno=EINVAL;
@@ -665,3 +406,4 @@ static int parse_args(int argc, char **argv)
 
    return(errno);
 }
+*/
