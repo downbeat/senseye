@@ -14,8 +14,10 @@
 //                                  functional code supports a single camera only.
 // 0.02   2013-07-25  russ          implemented stonyman_read.  a user-space program can now read
 //                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
+// 0.03   2013-07-29  russ          added spinlocks to address the glaring race condition between
+//                                  stonyman_read and stonyman_interrupt.
 //
-// Stonyman linux device driver.
+// Stonyman linux device driver (LKM).
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 

@@ -354,8 +354,6 @@ static void request_send_data(int sd)
    // read from stonyman device file
    tmp_px_read=0;
    pixelcount[0]=0;
-   fprintf(stderr,"hoping to read\n");
-   fflush(stderr);
    while(RESOLUTION>pixelcount[0])
    {
       tmp_px_read = read(stony_fd, img_buf[0], RESOLUTION-pixelcount[0]);
@@ -376,8 +374,6 @@ static void request_send_data(int sd)
          pixelcount[0] += tmp_px_read;
       }
    }
-   fprintf(stderr,"done reading\n");
-   fflush(stderr);
 
 #if 0
 #define FORCE_SINGLE_CAM_READ  (1)
