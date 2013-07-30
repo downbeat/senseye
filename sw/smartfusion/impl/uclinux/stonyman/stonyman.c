@@ -11,9 +11,11 @@
 //                                  functional code supports a single camera only.
 // 0.02   2013-07-25  russ          implemented stonyman_read.  a user-space program can now read
 //                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
+// 0.03   2013-07-29  russ          added spinlocks to address the glaring race condition between
+//                                  stonyman_read and stonyman_interrupt.
 //
-// Stonyman linux device driver.
-///////////////////////////////////////////////////////////////////////////////////////////////////
+// Stonyman linux device driver (LKM).
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,6 +28,7 @@
 #include <linux/cdev.h>
 #include <linux/device.h>
 #include <linux/interrupt.h>
+#include <linux/spinlock.h>
 #include <linux/slab.h>
 #include <asm/uaccess.h>
 
@@ -131,10 +134,10 @@ static const struct file_operations  stonyman_fops =
 static dev_t                         stonyman_dev_num;
 static struct cdev                   stonyman_cdev;
 static struct class                 *stonyman_class;
-static struct device                *stonyman_device  [NUM_CAMS];
-
-// FIXME: below here is data which ought to be camera specific (and only 1 camera is implemented)
+static struct device                *stonyman_device           [NUM_CAMS];
+static spinlock_t                   *stonyman_spinlock         [NUM_CAMS];
 static unsigned                      g_flag_capture_running;
+// FIXME: below here is data which ought to be camera specific (and only 1 camera is implemented)
 static unsigned                      g_img_buf_head_idx        [NUM_CAMS];
 static unsigned                      g_img_buf_tail_idx        [NUM_CAMS];
 static unsigned                      g_img_buf_tail_readcount  [NUM_CAMS];
@@ -236,6 +239,11 @@ static int stonyman_init(void)
       g_img_buf_head_idx       [ii]=0;
       g_img_buf_tail_idx       [ii]=0;
       g_img_buf_tail_readcount [ii]=0;
+   }
+
+   for(ii=0; ii<NUM_CAMS; ++ii)
+   {
+      spin_lock_init(stonyman_spinlock[ii]);
    }
 
    // install interrupt handler(s)
@@ -387,23 +395,38 @@ static int stonyman_ioctl( struct inode *inode, struct file *filp,
 }
 
 //
-// stonyman_interrupt
+// stonyman_read
 //
 static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count, loff_t *offp)
 {
-   // TODO: this function does not perform the most robust error handling
    // FIXME: only supports one camera
+
+   unsigned long tmp_irq_flags;
+
+
+   // TODO: this function does not perform the most robust error handling
+   // FIXME: the locking in this function is terrible!
+
+   tmp_irq_flags=0;
+   spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
    if(g_img_buf_head_idx[0] == g_img_buf_tail_idx[0])
    {
+      spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
       if(0 == g_flag_capture_running)
       {
          // no data
+         // TODO: should be KERN_DEBUG
+         printk(KERN_INFO "stonyman_read: capture not running!\n");
       }
       else
       {
          // no data yet
          return -EAGAIN;
       }
+   }
+   else
+   {
+      spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
    }
 
    if(RESOLUTION < count)
@@ -418,7 +441,9 @@ static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count,
       return -EFAULT;
    }
 
+   spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
    g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
+   spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
 
    // FIXME: don't know what to do with these!
    //*offp += count;
@@ -432,10 +457,20 @@ static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count,
 //
 irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
 {
-   unsigned int tmpdata;
-
-   // FIXME: this has no concurrency safety
    // FIXME: only supports one camera
+
+   unsigned int tmpdata;
+   unsigned long tmp_irq_flags;
+   //unsigned tmp_readcount;
+
+
+   // TODO: r/w spinlocks are semantically better (although in this usecase are probably no better)
+   // TODO: should be reader lock
+   tmp_irq_flags = 0;
+   spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
+   // TODO: make me better!
+   //tmp_readcount = g_img_buf_tail_readcount
+   spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
 
    // clear the camera FIFO
    while(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CAMX_STATUS(0)))
@@ -452,7 +487,7 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
 
    REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM(0));
 
-   if(112*112 == g_img_buf_tail_readcount[0])
+   if(RESOLUTION == g_img_buf_tail_readcount[0])
    {
       printk(KERN_DEBUG "stonyman: read whole frame\n");
       g_img_buf_tail_idx[0]=(g_img_buf_tail_idx[0]+1)%IMG_BUF_QUEUE_LEN;
@@ -469,6 +504,7 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
          REG_CTRL=1u;
       }
    }
+   spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
 
    return IRQ_HANDLED;
 }
