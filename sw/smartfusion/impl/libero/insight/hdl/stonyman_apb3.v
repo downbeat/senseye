@@ -4,9 +4,9 @@
 // File: stonyman_apb3.v
 // File history:
 //      0.01: 2013-03-05: created
-//      0.02a:2013-06-13: added support for 4 cameras
+//      0.02: 2013-06-13: added support for 4 cameras
 //
-// Description: 
+// Description:
 //
 // APB interface for the Stonyman controller
 //
@@ -122,8 +122,7 @@ input wire  [(`WIDTH-1):0]       CAM0_PIXELSIN,
 input wire  [(`WIDTH-1):0]       CAM1_PIXELSIN,
 input wire  [(`WIDTH-1):0]       CAM2_PIXELSIN,
 input wire  [(`WIDTH-1):0]       CAM3_PIXELSIN,
-output wire                      START_CAPTURE,        // active low
-output wire [3:0]                TP_REG_OFFSET_UPPER_NIBBLE
+output wire                      START_CAPTURE         // active low
 );
 
 wire bus_write_enable;
@@ -187,8 +186,7 @@ stonyman_ioreg stonyman_ioreg_0(
    .cam1pxDatain(CAM1_PIXELSIN),
    .cam2pxDatain(CAM2_PIXELSIN),
    .cam3pxDatain(CAM3_PIXELSIN),
-   .startCapture(START_CAPTURE),
-   .tp_regOffsetUpperNibble(TP_REG_OFFSET_UPPER_NIBBLE)
+   .startCapture(START_CAPTURE)
 );
 
 endmodule
@@ -233,9 +231,7 @@ input wire [(`WIDTH-1):0] cam1pxDatain,
 input wire [(`WIDTH-1):0] cam2pxDatain,
 input wire [(`WIDTH-1):0] cam3pxDatain,
 
-output reg startCapture,
-
-output wire [3:0] tp_regOffsetUpperNibble
+output reg startCapture
 );
 
 reg [2:0] fifoRdenState [0:3];
@@ -280,8 +276,6 @@ assign pxDatain[1]=cam1pxDatain;
 assign pxDatain[2]=cam2pxDatain;
 assign pxDatain[3]=cam3pxDatain;
 
-
-assign tp_regOffsetUpperNibble=~addr[7:4];
 assign camRegInd=addr[7];
 assign camIdx=addr[6:5];
 assign camReg=addr[4:0];

@@ -20,7 +20,4 @@ entity F2DSS_ACE_PPE_FIFO is
         FULL            : out    vl_logic;
         AFULL           : out    vl_logic
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of WIDTH : constant is 1;
-    attribute mti_svvh_generic_type of DEPTH : constant is 1;
 end F2DSS_ACE_PPE_FIFO;

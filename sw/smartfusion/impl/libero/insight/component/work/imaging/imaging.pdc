@@ -1,0 +1,60 @@
+# Actel Physical design constraints file
+# Generated file
+
+# Version: 10.1 SP3 10.1.3.1
+# Family: SmartFusion , Die: A2F500M3G , Package: 484 FBGA
+# Date generated: Wed Jul 31 11:27:51 2013 
+
+
+# 
+# IO banks setting
+# 
+
+
+# 
+# User Groups
+# 
+
+define_group -name afull
+
+
+# 
+# I/O constraints
+# 
+
+# User Group afull
+
+set_io afull_cam0      \
+    -GROUP_NAME afull  \
+    -DIRECTION Output
+
+
+set_io afull_cam1      \
+    -GROUP_NAME afull  \
+    -DIRECTION Output
+
+
+set_io afull_cam2      \
+    -GROUP_NAME afull  \
+    -DIRECTION Output
+
+
+set_io afull_cam3      \
+    -GROUP_NAME afull  \
+    -DIRECTION Output
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io afull_cam0 -GROUP_NAME afull -DIRECTION Output 
+# set_io afull_cam1 -GROUP_NAME afull -DIRECTION Output 
+# set_io afull_cam2 -GROUP_NAME afull -DIRECTION Output 
+# set_io afull_cam3 -GROUP_NAME afull -DIRECTION Output 

@@ -13,6 +13,8 @@
 //                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
 // 0.03   2013-07-29  russ          added spinlocks to address the glaring race condition between
 //                                  stonyman_read and stonyman_interrupt.
+// 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
+//                                  both of which map to stonyman_interrupt.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,8 +100,12 @@ typedef  unsigned char   uint8;
 #define MINOR_START               (0)
 
 #define NUM_CAMS                  (1)  // TODO: only supports one camera for now
-#define GPIO_NUM(cam)             (0+(cam)) 
+#define GPIO_NUM(cam)             (1+(cam)) 
 #define GPIO_IRQ_NUM(cam)         (GPIO_NUM(cam)+32)
+
+// FIXME: there will be one capture done line per "control group"
+#define GPIO_NUM_CAPTURE_DONE     (0)
+#define GPIO_IRQ_NUM_CAPTURE_DONE (GPIO_NUM_CAPTURE_DONE+32)
 
 // TODO: hardcoded for now
 #define RESOLUTION_ROWS           (112)
@@ -247,6 +253,27 @@ static int stonyman_init(void)
    }
 
    // install interrupt handler(s)
+   // FIXME: SA_INTERRUPT undeclared?
+   //rc = request_irq(GPIO_IRQ_NUM_CAPTURE_DONE, (irq_handler_t)stonyman_interrupt, SA_INTERRUPT, DEVICE_NAME, NULL);
+   rc = request_irq( GPIO_IRQ_NUM_CAPTURE_DONE, (irq_handler_t)stonyman_interrupt, 0,
+                     DEVICE_NAME, NULL );
+   if(0 > rc)
+   {
+      printk(KERN_ALERT "stonyman: could not install interrupt handler for capture finish");
+      for(ii=0; ii<NUM_CAMS; ++ii)
+      {
+         device_destroy( stonyman_class,
+                         MKDEV(MAJOR(stonyman_dev_num),MINOR(stonyman_dev_num)+ii) );
+         for(jj=0; jj<IMG_BUF_QUEUE_LEN; ++jj)
+         {
+            kfree(g_img_buf[ii][jj]);
+         }
+      }
+      // FIXME: this seems like a bad idea without knowing what else shares the class!
+      class_destroy(stonyman_class);
+      unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
+   }
+   // install camera interrupt handlers
    for(ii=0; ii<NUM_CAMS; ++ii)
    {
       // FIXME: SA_INTERRUPT undeclared?
@@ -268,6 +295,7 @@ static int stonyman_init(void)
                free_irq(GPIO_IRQ_NUM(ii), NULL);
             }
          }
+         free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
          // FIXME: this seems like a bad idea without knowing what else shares the class!
          class_destroy(stonyman_class);
          unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
@@ -275,15 +303,25 @@ static int stonyman_init(void)
       }
    }
 
-   // enable interrupt (FIXME: should go through API)
-   tmpreg=REG_GPIO_X_CFG(0);
+   // enable capture finished interrupt
+   tmpreg=REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE);
+   // clear INT_TYPE
+   tmpreg &= (uint32)(~(MASK_INT_TYPE<<FLAG_SHIFT_INT_TYPE));
+   // set INT_TYPE to negative edge
+   tmpreg |= (uint32)(GPIO_INT_TYPE_NEG_EDGE<<FLAG_SHIFT_INT_TYPE);
+   // enable interrupt
+   tmpreg |= (uint32)(1ul<<FLAG_SHIFT_INTEN);
+   REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE)=tmpreg;
+
+   // enable cam0's AFULL interrupt (FIXME: should go through API)
+   tmpreg=REG_GPIO_X_CFG(GPIO_NUM(0));
    // clear INT_TYPE
    tmpreg &= (uint32)(~(MASK_INT_TYPE<<FLAG_SHIFT_INT_TYPE));
    // set INT_TYPE to positive edge
    tmpreg |= (uint32)(GPIO_INT_TYPE_POS_EDGE<<FLAG_SHIFT_INT_TYPE);
    // enable interrupt
    tmpreg |= (uint32)(1ul<<FLAG_SHIFT_INTEN);
-   REG_GPIO_X_CFG(0)=tmpreg;
+   REG_GPIO_X_CFG(GPIO_NUM(0))=tmpreg;
 
    // register device
    cdev_init(&stonyman_cdev, &stonyman_fops);
@@ -303,6 +341,7 @@ static int stonyman_init(void)
             kfree(g_img_buf[ii][jj]);
          }
       }
+      free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
       // FIXME: this seems like a bad idea without knowing what else shares the class!
       class_destroy(stonyman_class);
       unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
@@ -338,6 +377,7 @@ static void stonyman_teardown(void)
          kfree(g_img_buf[ii][jj]);
       }
    }
+   free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
    // FIXME: this seems like a bad idea without knowing what else shares the class!
    class_destroy(stonyman_class);
    unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);

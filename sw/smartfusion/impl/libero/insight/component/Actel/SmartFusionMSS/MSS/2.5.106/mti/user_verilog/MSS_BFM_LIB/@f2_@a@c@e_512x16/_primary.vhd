@@ -12,7 +12,4 @@ entity F2_ACE_512x16 is
         WDATA           : in     vl_logic_vector;
         RDATA           : out    vl_logic_vector
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of FIFODEPTH : constant is 1;
-    attribute mti_svvh_generic_type of DATAWIDTH : constant is 1;
 end F2_ACE_512x16;

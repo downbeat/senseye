@@ -21,6 +21,4 @@ entity analog_mux is
         DAC_VECTOR      : in     vl_logic_vector(63 downto 0);
         MUXOUT          : out    vl_logic_vector(63 downto 0)
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of WARNING_MSGS_ON : constant is 1;
 end analog_mux;

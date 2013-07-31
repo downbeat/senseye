@@ -9,8 +9,7 @@ entity MSS_APBSLAVES is
         ID              : integer := 0;
         TPD             : integer := 0;
         ENFUNC          : integer := 0;
-        DEBUG           : integer := 1;
-        TPDns           : vl_notype
+        DEBUG           : integer := 1
     );
     port(
         PCLK            : in     vl_logic;
@@ -29,14 +28,4 @@ entity MSS_APBSLAVES is
         GPIO_INT        : out    vl_logic_vector(31 downto 0);
         SOFTRESETS      : in     vl_logic_vector(10 downto 0)
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of AWIDTH : constant is 1;
-    attribute mti_svvh_generic_type of DEPTH : constant is 1;
-    attribute mti_svvh_generic_type of DWIDTH : constant is 1;
-    attribute mti_svvh_generic_type of INITFILE : constant is 1;
-    attribute mti_svvh_generic_type of ID : constant is 1;
-    attribute mti_svvh_generic_type of TPD : constant is 1;
-    attribute mti_svvh_generic_type of ENFUNC : constant is 1;
-    attribute mti_svvh_generic_type of DEBUG : constant is 1;
-    attribute mti_svvh_generic_type of TPDns : constant is 3;
 end MSS_APBSLAVES;

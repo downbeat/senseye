@@ -16,6 +16,8 @@
 //                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
 // 0.03   2013-07-29  russ          added spinlocks to address the glaring race condition between
 //                                  stonyman_read and stonyman_interrupt.
+// 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
+//                                  both of which map to stonyman_interrupt.
 //
 // Stonyman linux device driver (LKM).
 ///////////////////////////////////////////////////////////////////////////////////////////////////

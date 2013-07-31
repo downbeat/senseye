@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Tue Jul 09 14:34:56 2013 )</state>
+    <state>GENERATED ( Wed Jul 31 11:28:55 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -58,10 +58,11 @@
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\fifo_px\fifo_px.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\MUX2\MUX2.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>TP_PENABLE</port-name>

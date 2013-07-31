@@ -1,5 +1,5 @@
 #===========================================================
-# Created by Actel SmartDesign Wed Feb 27 01:53:28 2013
+# Created by Actel SmartDesign Tue Jul 30 16:14:04 2013
 # 
 # 
 # Warning:  Do not modify this file, it may lead to unexpected 
@@ -92,9 +92,9 @@ procedure init;
   write w SYSREG 0x94 0x0;
   write w SYSREG 0x98 0x0;
   write w SYSREG 0x9c 0x7;
-  write w GPIO 0x0 0x5;
-  write w GPIO 0x4 0x5;
-  write w GPIO 0x8 0x0;
+  write w GPIO 0x0 0x2;
+  write w GPIO 0x4 0x2;
+  write w GPIO 0x8 0x2;
   write w GPIO 0xc 0x0;
   write w GPIO 0x10 0x0;
   write w GPIO 0x14 0x0;

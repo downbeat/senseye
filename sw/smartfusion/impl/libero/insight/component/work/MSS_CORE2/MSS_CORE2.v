@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Feb 27 01:53:45 2013
+// Created by SmartDesign Tue Jul 30 16:14:25 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -9,7 +9,9 @@
 module MSS_CORE2(
     // Inputs
     CLKC,
-    FABINT,
+    F2M_GPI_0,
+    F2M_GPI_1,
+    F2M_GPI_2,
     MAC_CRSDV,
     MAC_RXD,
     MAC_RXER,
@@ -22,8 +24,6 @@ module MSS_CORE2(
     // Outputs
     FAB_CLK,
     GLC,
-    M2F_GPO_0,
-    M2F_GPO_1,
     M2F_RESET_N,
     MAC_MDC,
     MAC_TXD,
@@ -43,7 +43,9 @@ module MSS_CORE2(
 // Input
 //--------------------------------------------------------------------
 input         CLKC;
-input         FABINT;
+input         F2M_GPI_0;
+input         F2M_GPI_1;
+input         F2M_GPI_2;
 input         MAC_CRSDV;
 input  [1:0]  MAC_RXD;
 input         MAC_RXER;
@@ -58,8 +60,6 @@ input         UART_0_RXD;
 //--------------------------------------------------------------------
 output        FAB_CLK;
 output        GLC;
-output        M2F_GPO_0;
-output        M2F_GPO_1;
 output        M2F_RESET_N;
 output        MAC_MDC;
 output [1:0]  MAC_TXD;
@@ -83,7 +83,9 @@ wire   [0:0]  MAC_RXD_slice_0;
 wire   [1:1]  MAC_RXD_slice_1;
 wire          DSSGEN_MAC_TXD_0;
 wire          DSSGEN_MAC_TXD_1;
-wire          FABINT;
+wire          F2M_GPI_0;
+wire          F2M_GPI_1;
+wire          F2M_GPI_2;
 wire          GLC_net_0;
 wire          MAC_CRSDV;
 wire          MAC_RXER;
@@ -109,20 +111,19 @@ wire          MSS_RESET_0_MSS_RESET_N_Y;
 wire          MSS_RESET_N;
 wire          MSS_UART_0_RXD_Y;
 wire          MSS_UART_0_TXD_D;
-wire   [0:0]  MSSINT_GPO_0_A;
-wire   [1:1]  MSSINT_GPO_1_A;
+wire          MSSINT_GPI_0_Y;
+wire          MSSINT_GPI_1_Y;
+wire          MSSINT_GPI_2_Y;
 wire          net_71;
-wire          net_72;
-wire          net_73;
-wire   [19:0] net_74_HADDR;
-wire          net_74_HLOCK;
+wire   [19:0] net_72_HADDR;
+wire          net_72_HLOCK;
 wire   [31:0] MSSHRDATA;
 wire          MSSHREADY;
 wire          MSSHRESP;
-wire   [1:0]  net_74_HSIZE;
-wire   [1:0]  net_74_HTRANS;
-wire   [31:0] net_74_HWDATA;
-wire          net_74_HWRITE;
+wire   [1:0]  net_72_HSIZE;
+wire   [1:0]  net_72_HTRANS;
+wire   [31:0] net_72_HWDATA;
+wire          net_72_HWRITE;
 wire          MAC_MDIO;
 wire          PAD_0;
 wire          PAD_1;
@@ -130,23 +131,21 @@ wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          GLC_net_1;
 wire          MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
-wire          net_73_net_0;
-wire          net_74_HWRITE_net_0;
-wire          net_74_HLOCK_net_0;
-wire          net_72_net_0;
 wire          net_71_net_0;
-wire   [19:0] net_74_HADDR_net_0;
-wire   [1:0]  net_74_HTRANS_net_0;
-wire   [1:0]  net_74_HSIZE_net_0;
-wire   [31:0] net_74_HWDATA_net_0;
+wire          net_72_HWRITE_net_0;
+wire          net_72_HLOCK_net_0;
+wire   [19:0] net_72_HADDR_net_0;
+wire   [1:0]  net_72_HTRANS_net_0;
+wire   [1:0]  net_72_HSIZE_net_0;
+wire   [31:0] net_72_HWDATA_net_0;
 wire          UART_0_TXD_net_1;
 wire   [0:0]  DSSGEN_MAC_TXD_0_net_0;
 wire   [1:1]  DSSGEN_MAC_TXD_1_net_0;
 wire          PAD_0_net_0;
 wire          PAD_1_net_0;
+wire   [31:0] GPI_net_0;
 wire   [1:0]  MACRXD_net_0;
 wire   [1:0]  MAC_RXD;
-wire   [31:0] GPO_net_0;
 wire   [1:0]  MACTXD_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -154,7 +153,6 @@ wire   [1:0]  MACTXD_net_0;
 wire          GND_net;
 wire          VCC_net;
 wire   [1:0]  DMAREADY_const_net_0;
-wire   [31:0] GPI_const_net_0;
 wire   [1:0]  MACF2MRXD_const_net_0;
 wire   [15:0] EMCRDB_const_net_0;
 wire   [31:0] FABHADDR_const_net_0;
@@ -167,7 +165,6 @@ wire   [1:0]  FABHSIZE_const_net_0;
 assign GND_net               = 1'b0;
 assign VCC_net               = 1'b1;
 assign DMAREADY_const_net_0  = 2'h0;
-assign GPI_const_net_0       = 32'h00000000;
 assign MACF2MRXD_const_net_0 = 2'h0;
 assign EMCRDB_const_net_0    = 16'h0000;
 assign FABHADDR_const_net_0  = 32'h00000000;
@@ -181,24 +178,20 @@ assign GLC_net_1                        = GLC_net_0;
 assign GLC                              = GLC_net_1;
 assign MSS_ADLIB_INST_SYNCCLKFDBK_net_0 = MSS_ADLIB_INST_SYNCCLKFDBK;
 assign FAB_CLK                          = MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
-assign net_73_net_0                     = net_73;
-assign M2F_RESET_N                      = net_73_net_0;
-assign net_74_HWRITE_net_0              = net_74_HWRITE;
-assign MSSHWRITE                        = net_74_HWRITE_net_0;
-assign net_74_HLOCK_net_0               = net_74_HLOCK;
-assign MSSHLOCK                         = net_74_HLOCK_net_0;
-assign net_72_net_0                     = net_72;
-assign M2F_GPO_1                        = net_72_net_0;
 assign net_71_net_0                     = net_71;
-assign M2F_GPO_0                        = net_71_net_0;
-assign net_74_HADDR_net_0               = net_74_HADDR;
-assign MSSHADDR[19:0]                   = net_74_HADDR_net_0;
-assign net_74_HTRANS_net_0              = net_74_HTRANS;
-assign MSSHTRANS[1:0]                   = net_74_HTRANS_net_0;
-assign net_74_HSIZE_net_0               = net_74_HSIZE;
-assign MSSHSIZE[1:0]                    = net_74_HSIZE_net_0;
-assign net_74_HWDATA_net_0              = net_74_HWDATA;
-assign MSSHWDATA[31:0]                  = net_74_HWDATA_net_0;
+assign M2F_RESET_N                      = net_71_net_0;
+assign net_72_HWRITE_net_0              = net_72_HWRITE;
+assign MSSHWRITE                        = net_72_HWRITE_net_0;
+assign net_72_HLOCK_net_0               = net_72_HLOCK;
+assign MSSHLOCK                         = net_72_HLOCK_net_0;
+assign net_72_HADDR_net_0               = net_72_HADDR;
+assign MSSHADDR[19:0]                   = net_72_HADDR_net_0;
+assign net_72_HTRANS_net_0              = net_72_HTRANS;
+assign MSSHTRANS[1:0]                   = net_72_HTRANS_net_0;
+assign net_72_HSIZE_net_0               = net_72_HSIZE;
+assign MSSHSIZE[1:0]                    = net_72_HSIZE_net_0;
+assign net_72_HWDATA_net_0              = net_72_HWDATA;
+assign MSSHWDATA[31:0]                  = net_72_HWDATA_net_0;
 assign UART_0_TXD_net_1                 = UART_0_TXD_net_0;
 assign UART_0_TXD                       = UART_0_TXD_net_1;
 assign DSSGEN_MAC_TXD_0_net_0[0]        = DSSGEN_MAC_TXD_0;
@@ -216,11 +209,10 @@ assign MAC_RXD_slice_0[0]   = MAC_RXD[0:0];
 assign MAC_RXD_slice_1[1]   = MAC_RXD[1:1];
 assign MSS_MAC_0_TXD_0_D[0] = MACTXD_net_0[0:0];
 assign MSS_MAC_0_TXD_1_D[1] = MACTXD_net_0[1:1];
-assign MSSINT_GPO_0_A[0]    = GPO_net_0[0:0];
-assign MSSINT_GPO_1_A[1]    = GPO_net_0[1:1];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
+assign GPI_net_0    = { 29'h00000000 , MSSINT_GPI_2_Y , MSSINT_GPI_1_Y , MSSINT_GPI_0_Y };
 assign MACRXD_net_0 = { MSS_MAC_0_RXD_1_Y , MSS_MAC_0_RXD_0_Y };
 //--------------------------------------------------------------------
 // Component instances
@@ -246,12 +238,12 @@ MSS_ADLIB_INST(
         .FABHREADY      ( VCC_net ), // tied to 1'b1 from definition
         .SYNCCLKFDBK    ( MSS_ADLIB_INST_SYNCCLKFDBK ),
         .CALIBIN        ( GND_net ), // tied to 1'b0 from definition
-        .FABINT         ( FABINT ),
+        .FABINT         ( GND_net ), // tied to 1'b0 from definition
         .F2MRESETn      ( VCC_net ), // tied to 1'b1 from definition
         .DMAREADY       ( DMAREADY_const_net_0 ), // tied to 2'h0 from definition
         .RXEV           ( GND_net ), // tied to 1'b0 from definition
         .VRON           ( GND_net ), // tied to 1'b0 from definition
-        .GPI            ( GPI_const_net_0 ), // tied to 32'h00000000 from definition
+        .GPI            ( GPI_net_0 ),
         .UART0CTSn      ( GND_net ), // tied to 1'b0 from definition
         .UART0DSRn      ( GND_net ), // tied to 1'b0 from definition
         .UART0RIn       ( GND_net ), // tied to 1'b0 from definition
@@ -358,23 +350,23 @@ MSS_ADLIB_INST(
         .GNDVAREF       ( GND_net ), // tied to 1'b0 from definition
         .PUn            ( GND_net ), // tied to 1'b0 from definition
         // Outputs
-        .MSSHADDR       ( net_74_HADDR ),
-        .MSSHWDATA      ( net_74_HWDATA ),
-        .MSSHTRANS      ( net_74_HTRANS ),
-        .MSSHSIZE       ( net_74_HSIZE ),
-        .MSSHLOCK       ( net_74_HLOCK ),
-        .MSSHWRITE      ( net_74_HWRITE ),
+        .MSSHADDR       ( net_72_HADDR ),
+        .MSSHWDATA      ( net_72_HWDATA ),
+        .MSSHTRANS      ( net_72_HTRANS ),
+        .MSSHSIZE       ( net_72_HSIZE ),
+        .MSSHLOCK       ( net_72_HLOCK ),
+        .MSSHWRITE      ( net_72_HWRITE ),
         .FABHRDATA      (  ),
         .FABHREADYOUT   (  ),
         .FABHRESP       (  ),
         .CALIBOUT       (  ),
         .MSSINT         (  ),
         .WDINT          (  ),
-        .M2FRESETn      ( net_73 ),
+        .M2FRESETn      ( net_71 ),
         .DEEPSLEEP      (  ),
         .SLEEP          (  ),
         .TXEV           (  ),
-        .GPO            ( GPO_net_0 ),
+        .GPO            (  ),
         .UART0RTSn      (  ),
         .UART0DTRn      (  ),
         .UART1RTSn      (  ),
@@ -625,19 +617,27 @@ MSS_UART_0_TXD(
         );
 
 //--------MSSINT
-MSSINT MSSINT_GPO_0(
+MSSINT MSSINT_GPI_0(
         // Inputs
-        .A ( MSSINT_GPO_0_A ),
+        .A ( F2M_GPI_0 ),
         // Outputs
-        .Y ( net_71 ) 
+        .Y ( MSSINT_GPI_0_Y ) 
         );
 
 //--------MSSINT
-MSSINT MSSINT_GPO_1(
+MSSINT MSSINT_GPI_1(
         // Inputs
-        .A ( MSSINT_GPO_1_A ),
+        .A ( F2M_GPI_1 ),
         // Outputs
-        .Y ( net_72 ) 
+        .Y ( MSSINT_GPI_1_Y ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPI_2(
+        // Inputs
+        .A ( F2M_GPI_2 ),
+        // Outputs
+        .Y ( MSSINT_GPI_2_Y ) 
         );
 
 

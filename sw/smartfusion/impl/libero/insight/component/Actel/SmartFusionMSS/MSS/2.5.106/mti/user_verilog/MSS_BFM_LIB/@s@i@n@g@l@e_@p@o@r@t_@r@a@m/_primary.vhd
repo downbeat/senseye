@@ -12,7 +12,4 @@ entity SINGLE_PORT_RAM is
         WD              : in     vl_logic_vector;
         RD              : out    vl_logic_vector
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of DEPTH : constant is 1;
-    attribute mti_svvh_generic_type of WIDTH : constant is 1;
 end SINGLE_PORT_RAM;

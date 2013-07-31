@@ -16,7 +16,7 @@ Design Input Complete (Time elapsed 0h:00m:00s; Memory used current: 102MB peak:
 
 Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
 
-@N: MF237 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":1268:35:1268:73|Generating a type rem remainder 
+@N: MF237 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":1270:35:1270:73|Generating a type rem remainder 
 @W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v":170:0:170:5|Removing sequential instance ncs0,  because it is equivalent to instance nbyte_en_1[0]
 
 
@@ -31,18 +31,18 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 171 sequential elements including imaging_0/adc081s101_0/cntrWaitTrailing[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 215 sequential elements including imaging_0/adc081s101_0/cntrWaitTrailing[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
 Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 113MB)
 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":204:14:204:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":205:14:205:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 49MB peak: 113MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 50MB peak: 113MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Tue Jul 09 14:36:36 2013
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Wed Jul 31 11:30:13 2013
 
 ###########################################################]

@@ -16,6 +16,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 `define CLK_FREQ                   (40000000)  // FIXME (shouldn't be) hardcoded to 20MHz
+`define CLK_FREQ_ADC               (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
 
@@ -25,20 +26,21 @@
 // TIMING CONSTANTS
 // Pulse Time:  200-300 ns has worked
 `define TIME_PULSE_WAIT            (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT           (8)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_WAIT           (4)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ_ADC)/1000000000)
 `define TIME_PULSE_WAIT_AFTER      (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT_AFTER     (8)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_WAIT_AFTER     (4)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ_ADC)/1000000000)
 `define TIME_PULSE_INPHI           (1000)      // ns
-`define TICKS_PULSE_INPHI          (40)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_INPHI          (20)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ_ADC)/1000000000)
 `define TIME_PULSE_INPHI_AFTER     (1000)      // ns
-`define TICKS_PULSE_INPHI_AFTER    (40)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ)/1000000000)
+`define TICKS_PULSE_INPHI_AFTER    (20)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ_ADC)/1000000000)
 // TODO: is this a reasonable value?
-`define TIME_STARTCAP_WAIT_AFTER   (50)        // ns (arbitrarily chosen)
-`define TICKS_STARTCAP_WAIT_AFTER  (2)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ)/1000000000)
+`define TIME_STARTCAP_WAIT_AFTER   (100)       // ns (arbitrarily chosen)
+// TICKS_STARTCAP_WAIT_AFTER must be at least 2
+`define TICKS_STARTCAP_WAIT_AFTER  (2)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ_ADC)/1000000000)
 `define TIME_WAIT_BETWEEN_FRAMES   (50)        // ns (arbitrarily chosen)
-`define TICKS_WAIT_BETWEEN_FRAMES  (2)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ)/1000000000)
+`define TICKS_WAIT_BETWEEN_FRAMES  (1)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ_ADC)/1000000000)
 `define TIME_WAIT_STARTUP          (500)       // ms (arbitrarily chosen)
-`define TICKS_WAIT_STARTUP         (20000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ)/1000)
+`define TICKS_WAIT_STARTUP         (10000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ_ADC)/1000)
 
 `define REG_COLSEL                 (0)
 `define REG_ROWSEL                 (1)

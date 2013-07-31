@@ -192,12 +192,6 @@
         <spirit:name>START_CAPTURE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
-      <spirit:signal>
-        <spirit:name>TP_REG_OFFSET_UPPER_NIBBLE</spirit:name>
-        <spirit:direction>out</spirit:direction>
-        <spirit:left>3</spirit:left>
-        <spirit:right>0</spirit:right>
-      </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>
     </spirit:hwParameters>

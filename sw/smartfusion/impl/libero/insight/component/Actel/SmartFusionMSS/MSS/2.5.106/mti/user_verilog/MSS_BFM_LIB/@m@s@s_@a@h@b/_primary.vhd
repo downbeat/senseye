@@ -228,10 +228,4 @@ entity MSS_AHB is
         GNDVAREF        : in     vl_logic;
         PUn             : in     vl_logic
     );
-    attribute mti_svvh_generic_type : integer;
-    attribute mti_svvh_generic_type of ACT_CONFIG : constant is 1;
-    attribute mti_svvh_generic_type of ACT_FCLK : constant is 1;
-    attribute mti_svvh_generic_type of ACT_DIE : constant is 1;
-    attribute mti_svvh_generic_type of ACT_PKG : constant is 1;
-    attribute mti_svvh_generic_type of VECTFILE : constant is 1;
 end MSS_AHB;
