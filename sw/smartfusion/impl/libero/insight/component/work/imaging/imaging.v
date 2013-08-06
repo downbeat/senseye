@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jul 31 11:27:51 2013
+// Created by SmartDesign Fri Aug 02 18:02:39 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -97,8 +97,6 @@ wire   [7:0]  adc081s101_1_dataout;
 wire   [7:0]  adc081s101_2_dataout;
 wire   [7:0]  adc081s101_3_dataout;
 wire          afull_cam0_net_0;
-wire          afull_cam1_net_0;
-wire          afull_cam2_net_0;
 wire          afull_cam3_net_0;
 wire   [31:0] PADDR;
 wire          PENABLE;
@@ -116,14 +114,6 @@ wire          fifo_px_1_EMPTY;
 wire          fifo_px_1_FULL;
 wire          fifo_px_1_OVERFLOW;
 wire   [31:0] fifo_px_1_Q;
-wire          fifo_px_2_EMPTY;
-wire          fifo_px_2_FULL;
-wire          fifo_px_2_OVERFLOW;
-wire   [31:0] fifo_px_2_Q;
-wire          fifo_px_3_EMPTY;
-wire          fifo_px_3_FULL;
-wire          fifo_px_3_OVERFLOW;
-wire   [31:0] fifo_px_3_Q;
 wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
@@ -139,11 +129,7 @@ wire          resv_net_0;
 wire          stonyman_0_clkAdc;
 wire   [7:0]  stonyman_0_px0_out;
 wire   [7:0]  stonyman_0_px1_out;
-wire   [7:0]  stonyman_0_px2_out;
-wire   [7:0]  stonyman_0_px3_out;
 wire          stonyman_apb3_0_CAM1_FIFO_RDEN;
-wire          stonyman_apb3_0_CAM2_FIFO_RDEN;
-wire          stonyman_apb3_0_CAM3_FIFO_RDEN;
 wire          tp_adcConvComplete_net_0;
 wire          tp_cam0_empty_net_0;
 wire          tp_cam0_full_net_0;
@@ -173,8 +159,6 @@ wire          afull_cam0_net_1;
 wire          tp_writePending_0_net_0;
 wire          tp_startAdcCapture_net_1;
 wire          tp_adcConvComplete_net_1;
-wire          afull_cam1_net_1;
-wire          afull_cam2_net_1;
 wire          afull_cam3_net_1;
 wire   [31:0] BIF_1_PRDATA_net_0;
 wire   [3:0]  tp_stateout_net_1;
@@ -182,11 +166,22 @@ wire   [3:0]  tp_substateout_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
+wire          GND_net;
 wire          VCC_net;
+wire   [31:0] CAM2_PIXELSIN_const_net_0;
+wire   [31:0] CAM3_PIXELSIN_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign VCC_net = 1'b1;
+assign GND_net                   = 1'b0;
+assign VCC_net                   = 1'b1;
+assign CAM2_PIXELSIN_const_net_0 = 32'h00000000;
+assign CAM3_PIXELSIN_const_net_0 = 32'h00000000;
+//--------------------------------------------------------------------
+// TieOff assignments
+//--------------------------------------------------------------------
+assign afull_cam1               = 1'b0;
+assign afull_cam2               = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -228,10 +223,6 @@ assign tp_startAdcCapture_net_1 = tp_startAdcCapture_net_0;
 assign tp_startAdcCapture       = tp_startAdcCapture_net_1;
 assign tp_adcConvComplete_net_1 = tp_adcConvComplete_net_0;
 assign tp_adcConvComplete       = tp_adcConvComplete_net_1;
-assign afull_cam1_net_1         = afull_cam1_net_0;
-assign afull_cam1               = afull_cam1_net_1;
-assign afull_cam2_net_1         = afull_cam2_net_0;
-assign afull_cam2               = afull_cam2_net_1;
 assign afull_cam3_net_1         = afull_cam3_net_0;
 assign afull_cam3               = afull_cam3_net_1;
 assign BIF_1_PRDATA_net_0       = BIF_1_PRDATA;
@@ -329,40 +320,6 @@ fifo_px fifo_px_1(
         .Q         ( fifo_px_1_Q ) 
         );
 
-//--------fifo_px
-fifo_px fifo_px_2(
-        // Inputs
-        .WE        ( tp_wren_net_0 ),
-        .RE        ( stonyman_apb3_0_CAM2_FIFO_RDEN ),
-        .CLK       ( clk ),
-        .RESET     ( reset ),
-        .DATA      ( stonyman_0_px2_out ),
-        // Outputs
-        .FULL      ( fifo_px_2_FULL ),
-        .EMPTY     ( fifo_px_2_EMPTY ),
-        .AFULL     ( afull_cam1_net_0 ),
-        .OVERFLOW  ( fifo_px_2_OVERFLOW ),
-        .UNDERFLOW (  ),
-        .Q         ( fifo_px_2_Q ) 
-        );
-
-//--------fifo_px
-fifo_px fifo_px_3(
-        // Inputs
-        .WE        ( tp_wren_net_0 ),
-        .RE        ( stonyman_apb3_0_CAM3_FIFO_RDEN ),
-        .CLK       ( clk ),
-        .RESET     ( reset ),
-        .DATA      ( stonyman_0_px3_out ),
-        // Outputs
-        .FULL      ( fifo_px_3_FULL ),
-        .EMPTY     ( fifo_px_3_EMPTY ),
-        .AFULL     ( afull_cam2_net_0 ),
-        .OVERFLOW  ( fifo_px_3_OVERFLOW ),
-        .UNDERFLOW (  ),
-        .Q         ( fifo_px_3_Q ) 
-        );
-
 //--------MUX2
 MUX2 MUX2_0(
         // Inputs
@@ -397,8 +354,8 @@ stonyman stonyman_0(
         .tp_writePending ( tp_writePending_0 ),
         .px0_out         ( stonyman_0_px0_out ),
         .px1_out         ( stonyman_0_px1_out ),
-        .px2_out         ( stonyman_0_px2_out ),
-        .px3_out         ( stonyman_0_px3_out ),
+        .px2_out         (  ),
+        .px3_out         (  ),
         .tp_stateout     ( tp_stateout_net_0 ),
         .tp_substateout  ( tp_substateout_net_0 ) 
         );
@@ -414,33 +371,33 @@ stonyman_apb3 stonyman_apb3_0(
         .BUSY               ( busy_net_0 ),
         .CAM0_FIFO_EMPTY    ( tp_cam0_empty_net_0 ),
         .CAM1_FIFO_EMPTY    ( fifo_px_1_EMPTY ),
-        .CAM2_FIFO_EMPTY    ( fifo_px_2_EMPTY ),
-        .CAM3_FIFO_EMPTY    ( fifo_px_3_EMPTY ),
+        .CAM2_FIFO_EMPTY    ( VCC_net ),
+        .CAM3_FIFO_EMPTY    ( VCC_net ),
         .CAM0_FIFO_FULL     ( tp_cam0_full_net_0 ),
         .CAM1_FIFO_FULL     ( fifo_px_1_FULL ),
-        .CAM2_FIFO_FULL     ( fifo_px_2_FULL ),
-        .CAM3_FIFO_FULL     ( fifo_px_3_FULL ),
+        .CAM2_FIFO_FULL     ( GND_net ),
+        .CAM3_FIFO_FULL     ( GND_net ),
         .CAM0_FIFO_AFULL    ( afull_cam0_net_0 ),
         .CAM1_FIFO_AFULL    ( afull_cam3_net_0 ),
-        .CAM2_FIFO_AFULL    ( afull_cam1_net_0 ),
-        .CAM3_FIFO_AFULL    ( afull_cam2_net_0 ),
+        .CAM2_FIFO_AFULL    ( GND_net ),
+        .CAM3_FIFO_AFULL    ( GND_net ),
         .CAM0_FIFO_OVERFLOW ( fifo_px_0_OVERFLOW ),
         .CAM1_FIFO_OVERFLOW ( fifo_px_1_OVERFLOW ),
-        .CAM2_FIFO_OVERFLOW ( fifo_px_2_OVERFLOW ),
-        .CAM3_FIFO_OVERFLOW ( fifo_px_3_OVERFLOW ),
+        .CAM2_FIFO_OVERFLOW ( GND_net ),
+        .CAM3_FIFO_OVERFLOW ( GND_net ),
         .PADDR              ( PADDR ),
         .PWDATA             ( PWDATA ),
         .CAM0_PIXELSIN      ( fifo_px_0_Q ),
         .CAM1_PIXELSIN      ( fifo_px_1_Q ),
-        .CAM2_PIXELSIN      ( fifo_px_2_Q ),
-        .CAM3_PIXELSIN      ( fifo_px_3_Q ),
+        .CAM2_PIXELSIN      ( CAM2_PIXELSIN_const_net_0 ),
+        .CAM3_PIXELSIN      ( CAM3_PIXELSIN_const_net_0 ),
         // Outputs
         .PREADY             ( BIF_1_PREADY ),
         .PSLVERR            ( BIF_1_PSLVERR ),
         .CAM0_FIFO_RDEN     ( tp_cam0_rden_net_0 ),
         .CAM1_FIFO_RDEN     ( stonyman_apb3_0_CAM1_FIFO_RDEN ),
-        .CAM2_FIFO_RDEN     ( stonyman_apb3_0_CAM2_FIFO_RDEN ),
-        .CAM3_FIFO_RDEN     ( stonyman_apb3_0_CAM3_FIFO_RDEN ),
+        .CAM2_FIFO_RDEN     (  ),
+        .CAM3_FIFO_RDEN     (  ),
         .START_CAPTURE      ( tp_startcap_net_0 ),
         .PRDATA             ( BIF_1_PRDATA ) 
         );

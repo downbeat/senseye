@@ -3,7 +3,7 @@ Timing Report Max Delay Analysis
 SmartTime Version v10.1 SP3
 Actel Corporation - Actel Designer Software Release v10.1 SP3 (Version 10.1.3.1)
 Copyright (c) 1989-2013
-Date: Wed Jul 31 11:32:52 2013
+Date: Fri Aug 02 18:05:53 2013
 
 
 Design: TOPLEVEL
@@ -105,14 +105,14 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               imaging_0/stonyman_0/clkAdc:Q
-Period (ns):                48.558
-Frequency (MHz):            20.594
+Period (ns):                41.317
+Frequency (MHz):            24.203
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        3.693
-External Hold (ns):         -0.409
-Min Clock-To-Out (ns):      3.000
-Max Clock-To-Out (ns):      16.298
+External Setup (ns):        2.953
+External Hold (ns):         -0.077
+Min Clock-To-Out (ns):      3.679
+Max Clock-To-Out (ns):      15.939
 
 Clock Domain:               MSS_CORE_0/MSS_CCC_0/I_XTLOSC:CLKOUT
 Period (ns):                N/A
@@ -550,171 +550,179 @@ Clock Domain imaging_0/stonyman_0/clkAdc:Q
 SET Register to Register
 
 Path 1
-  From:                        imaging_0/stonyman_0/counterPixelsCaptured[13]:CLK
-  To:                          imaging_0/stonyman_0/state[12]:D
-  Delay (ns):                  48.076
-  Slack (ns):
-  Arrival (ns):                49.843
-  Required (ns):
-  Setup (ns):                  0.498
-  Minimum Period (ns):         48.558
-
-Path 2
-  From:                        imaging_0/stonyman_0/counterPixelsCaptured[13]:CLK
-  To:                          imaging_0/stonyman_0/substate[1]:D
-  Delay (ns):                  47.951
-  Slack (ns):
-  Arrival (ns):                49.718
-  Required (ns):
-  Setup (ns):                  0.498
-  Minimum Period (ns):         48.456
-
-Path 3
-  From:                        imaging_0/stonyman_0/counterPixelsCaptured[12]:CLK
-  To:                          imaging_0/stonyman_0/state[12]:D
-  Delay (ns):                  47.642
-  Slack (ns):
-  Arrival (ns):                49.385
-  Required (ns):
-  Setup (ns):                  0.498
-  Minimum Period (ns):         48.100
-
-Path 4
-  From:                        imaging_0/stonyman_0/counterPixelsCaptured[12]:CLK
-  To:                          imaging_0/stonyman_0/substate[1]:D
-  Delay (ns):                  47.517
-  Slack (ns):
-  Arrival (ns):                49.260
-  Required (ns):
-  Setup (ns):                  0.498
-  Minimum Period (ns):         47.998
-
-Path 5
   From:                        imaging_0/stonyman_0/counterPixelsCaptured[14]:CLK
   To:                          imaging_0/stonyman_0/state[12]:D
-  Delay (ns):                  45.970
+  Delay (ns):                  40.800
   Slack (ns):
-  Arrival (ns):                47.707
+  Arrival (ns):                43.634
+  Required (ns):
+  Setup (ns):                  0.530
+  Minimum Period (ns):         41.317
+
+Path 2
+  From:                        imaging_0/stonyman_0/counterPixelsCaptured[14]:CLK
+  To:                          imaging_0/stonyman_0/substate[1]:D
+  Delay (ns):                  40.488
+  Slack (ns):
+  Arrival (ns):                43.322
+  Required (ns):
+  Setup (ns):                  0.530
+  Minimum Period (ns):         41.005
+
+Path 3
+  From:                        imaging_0/stonyman_0/counterPixelsCaptured[14]:CLK
+  To:                          imaging_0/stonyman_0/substate[0]:D
+  Delay (ns):                  40.022
+  Slack (ns):
+  Arrival (ns):                42.856
   Required (ns):
   Setup (ns):                  0.498
-  Minimum Period (ns):         46.422
+  Minimum Period (ns):         40.529
+
+Path 4
+  From:                        imaging_0/stonyman_0/counterPixelsCaptured[15]:CLK
+  To:                          imaging_0/stonyman_0/state[12]:D
+  Delay (ns):                  39.874
+  Slack (ns):
+  Arrival (ns):                42.699
+  Required (ns):
+  Setup (ns):                  0.530
+  Minimum Period (ns):         40.382
+
+Path 5
+  From:                        imaging_0/stonyman_0/counterPixelsCaptured[13]:CLK
+  To:                          imaging_0/stonyman_0/state[12]:D
+  Delay (ns):                  39.573
+  Slack (ns):
+  Arrival (ns):                42.405
+  Required (ns):
+  Setup (ns):                  0.530
+  Minimum Period (ns):         40.088
 
 
 Expanded Path 1
-  From: imaging_0/stonyman_0/counterPixelsCaptured[13]:CLK
+  From: imaging_0/stonyman_0/counterPixelsCaptured[14]:CLK
   To: imaging_0/stonyman_0/state[12]:D
   data required time                             N/C
-  data arrival time                          -   49.843
+  data arrival time                          -   43.634
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
   0.000                        imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   0.000                        imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.376          net: imaging_0/stonyman_0/clkAdc_i
-  0.376                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
+               +     1.440          net: imaging_0/stonyman_0/clkAdc_i
+  1.440                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.710          cell: ADLIB:CLKSRC
-  1.086                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.681          net: imaging_0/stonyman_0_clkAdc
-  1.767                        imaging_0/stonyman_0/counterPixelsCaptured[13]:CLK (r)
+  2.150                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
+               +     0.684          net: imaging_0/stonyman_0_clkAdc
+  2.834                        imaging_0/stonyman_0/counterPixelsCaptured[14]:CLK (r)
                +     0.681          cell: ADLIB:DFN1
-  2.448                        imaging_0/stonyman_0/counterPixelsCaptured[13]:Q (f)
-               +     4.998          net: imaging_0/stonyman_0/counterPixelsCaptured[13]
-  7.446                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I9_Y_a0_1:A (f)
+  3.515                        imaging_0/stonyman_0/counterPixelsCaptured[14]:Q (f)
+               +     3.402          net: imaging_0/stonyman_0/counterPixelsCaptured[14]
+  6.917                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0_0:A (f)
                +     0.583          cell: ADLIB:NOR2A
-  8.029                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I9_Y_a0_1:Y (f)
-               +     0.366          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_Y_a0_1
-  8.395                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_a0:A (f)
-               +     0.357          cell: ADLIB:NOR2B
-  8.752                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_a0:Y (f)
-               +     0.390          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_Y_a0_2
-  9.142                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_1_0:C (f)
-               +     0.652          cell: ADLIB:AO1
-  9.794                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_1_0:Y (f)
-               +     0.319          net: imaging_0/stonyman_0/ADD_9x9_fast_I11_Y_1_0
-  10.113                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_1:B (f)
-               +     0.598          cell: ADLIB:OR2
-  10.711                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I11_Y_1:Y (f)
-               +     2.476          net: imaging_0/stonyman_0/N146_1
-  13.187                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I12_Y_m5:S (f)
-               +     0.480          cell: ADLIB:MX2A
-  13.667                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I12_Y_m5:Y (f)
-               +     1.745          net: imaging_0_stonyman_0_un1_counterPixelsCaptured_13_if_generate_plus_mult1_un75_sum_N148
-  15.412                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y:B (f)
-               +     0.912          cell: ADLIB:XOR2
-  16.324                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un75_sum_ADD_9x9_fast_I17_Y:Y (f)
-               +     4.398          net: imaging_0_stonyman_0_un1_counterPixelsCaptured_13_if_generate_plus_mult1_un75_sum[7]
-  20.722                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_un1_Y_a3:A (f)
-               +     0.593          cell: ADLIB:NOR3B
-  21.315                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_un1_Y_a3:Y (f)
-               +     0.307          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_un1_Y_a3
-  21.622                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_un1_Y_0_m2_e_3:C (f)
-               +     0.451          cell: ADLIB:NOR3B
-  22.073                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_un1_Y_0_m2_e_3:Y (r)
-               +     0.390          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_un1_Y_0_m2_e_3
-  22.463                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I11_Y_m3_0tt_m2_0_a2:A (r)
-               +     0.614          cell: ADLIB:NOR3A
-  23.077                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I11_Y_m3_0tt_m2_0_a2:Y (r)
-               +     1.462          net: imaging_0/stonyman_0/ADD_9x9_fast_I11_Y_m3_0tt_m2_0_a2
-  24.539                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I11_Y_m3_0_m3_0_m2:S (r)
-               +     0.344          cell: ADLIB:MX2C
-  24.883                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I11_Y_m3_0_m3_0_m2:Y (f)
-               +     6.914          net: ADD_9x9_fast_I11_Y_m3_0_m3_0_m2
-  31.797                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m2_e_m13_i_a8_2:C (f)
-               +     0.485          cell: ADLIB:NOR3B
-  32.282                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m2_e_m13_i_a8_2:Y (r)
-               +     0.309          net: imaging_0/stonyman_0/ADD_9x9_fast_I17_Y_0_m2_e_N_20
-  32.591                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m2_e_m13_i:A (r)
-               +     0.332          cell: ADLIB:OR3
-  32.923                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m2_e_m13_i:Y (r)
-               +     0.302          net: imaging_0/stonyman_0/ADD_9x9_fast_I17_Y_0_m2_e_m13_i
-  33.225                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m6:A (r)
-               +     0.615          cell: ADLIB:MX2
-  33.840                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y_0_m6:Y (r)
-               +     1.880          net: imaging_0/stonyman_0/ADD_9x9_fast_I17_Y_0_N_7
-  35.720                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y:A (r)
-               +     0.368          cell: ADLIB:XNOR3
-  36.088                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un110_sum_ADD_9x9_fast_I17_Y:Y (f)
-               +     2.564          net: imaging_0/stonyman_0/mult1_un110_sum_i[7]
-  38.652                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y_2:C (f)
-               +     0.798          cell: ADLIB:XOR3
-  39.450                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y_2:Y (f)
-               +     0.288          net: imaging_0/stonyman_0/ADD_9x9_fast_I16_Y_2
-  39.738                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y:C (f)
-               +     0.451          cell: ADLIB:AX1D
-  40.189                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y:Y (r)
-               +     1.418          net: imaging_0/stonyman_0/N_679
-  41.607                       imaging_0/stonyman_0/counterPixelsCaptured_RNIAKDAJP1[3]:B (r)
-               +     0.475          cell: ADLIB:NOR2A
-  42.082                       imaging_0/stonyman_0/counterPixelsCaptured_RNIAKDAJP1[3]:Y (f)
-               +     3.824          net: imaging_0/stonyman_0/un1_counterPixelsCaptured_15_3
-  45.906                       imaging_0/stonyman_0/counterPixelsCaptured_RNITARD3M2[5]:B (f)
+  7.500                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0_0:Y (f)
+               +     0.446          net: imaging_0/stonyman_0/ADD_9x9_fast_I11_Y_a0_0
+  7.946                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0:B (f)
                +     0.583          cell: ADLIB:NOR2B
-  46.489                       imaging_0/stonyman_0/counterPixelsCaptured_RNITARD3M2[5]:Y (f)
-               +     0.312          net: imaging_0/stonyman_0/substate_ns_0_o4_1_a1_3[0]
-  46.801                       imaging_0/stonyman_0/counterPixelsCaptured_RNIENB91D1[5]:B (f)
-               +     0.572          cell: ADLIB:MX2C
-  47.373                       imaging_0/stonyman_0/counterPixelsCaptured_RNIENB91D1[5]:Y (r)
-               +     1.450          net: imaging_0/stonyman_0/N_1439
-  48.823                       imaging_0/stonyman_0/state_RNO[12]:C (r)
-               +     0.708          cell: ADLIB:AO1B
-  49.531                       imaging_0/stonyman_0/state_RNO[12]:Y (f)
-               +     0.312          net: imaging_0/stonyman_0/state_ns[12]
-  49.843                       imaging_0/stonyman_0/state[12]:D (f)
+  8.529                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_a0:Y (f)
+               +     0.446          net: imaging_0/stonyman_0/ADD_9x9_fast_I11_Y_a0
+  8.975                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_0:B (f)
+               +     0.601          cell: ADLIB:NOR2
+  9.576                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un61_sum_ADD_9x9_fast_I11_Y_0:Y (r)
+               +     0.312          net: imaging_0/stonyman_0/mult1_un61_sum_i_0_i[8]
+  9.888                        imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I15_Y:C (r)
+               +     0.911          cell: ADLIB:XNOR3
+  10.799                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un68_sum_ADD_9x9_fast_I15_Y:Y (f)
+               +     5.668          net: imaging_0/stonyman_0/mult1_un68_sum[5]
+  16.467                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_a0_1:B (f)
+               +     0.451          cell: ADLIB:NOR2A
+  16.918                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_a0_1:Y (r)
+               +     0.302          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_un1_Y_a0_1
+  17.220                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_a0:A (r)
+               +     0.694          cell: ADLIB:NOR3A
+  17.914                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_a0:Y (r)
+               +     0.312          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_un1_Y_a0
+  18.226                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_0_2:C (r)
+               +     0.593          cell: ADLIB:NOR3A
+  18.819                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_0_2:Y (f)
+               +     0.291          net: imaging_0/stonyman_0/ADD_9x9_fast_I9_un1_Y_0_2
+  19.110                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_0:A (f)
+               +     0.429          cell: ADLIB:NOR3C
+  19.539                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_un1_Y_0:Y (f)
+               +     0.311          net: imaging_0/stonyman_0/I9_un1_Y_0
+  19.850                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_Y:C (f)
+               +     0.694          cell: ADLIB:OR3
+  20.544                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I9_Y:Y (f)
+               +     2.526          net: imaging_0/stonyman_0/N150_0
+  23.070                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I11_Y_m3_0:B (f)
+               +     0.588          cell: ADLIB:AO16
+  23.658                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un89_sum_ADD_9x9_fast_I11_Y_m3_0:Y (r)
+               +     0.391          net: ADD_9x9_fast_I11_Y_m3_0
+  24.049                       r_m1:A (r)
+               +     0.485          cell: ADLIB:XNOR2
+  24.534                       r_m1:Y (r)
+               +     0.302          net: r_m1
+  24.836                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_0:B (r)
+               +     0.626          cell: ADLIB:MX2
+  25.462                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un96_sum_ADD_9x9_fast_I9_Y_0:Y (r)
+               +     0.312          net: imaging_0/stonyman_0/N150_2
+  25.774                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I17_Y_1:C (r)
+               +     0.911          cell: ADLIB:XOR3
+  26.685                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un103_sum_ADD_9x9_fast_I17_Y_1:Y (f)
+               +     4.166          net: imaging_0/stonyman_0/ADD_9x9_fast_I17_Y_1_i
+  30.851                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_a0_1:C (f)
+               +     0.662          cell: ADLIB:NOR3A
+  31.513                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_a0_1:Y (r)
+               +     0.312          net: imaging_0/stonyman_0/ADD_9x9_fast_I1_P0N_a0_1
+  31.825                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_0_2_1:A (r)
+               +     0.832          cell: ADLIB:OA1B
+  32.657                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_0_2_1:Y (r)
+               +     1.408          net: imaging_0/stonyman_0/ADD_9x9_fast_I1_P0N_0_2_1
+  34.065                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_0:B (r)
+               +     0.475          cell: ADLIB:OR2
+  34.540                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I1_P0N_0:Y (r)
+               +     0.355          net: imaging_0/stonyman_0/N126
+  34.895                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y_1:C (r)
+               +     1.081          cell: ADLIB:XOR3
+  35.976                       imaging_0/stonyman_0/un1_counterPixelsCaptured_13_if_generate_plus.mult1_un117_sum_ADD_9x9_fast_I16_Y_1:Y (r)
+               +     1.384          net: imaging_0/stonyman_0/ADD_9x9_fast_I16_Y_1
+  37.360                       imaging_0/stonyman_0/counterPixelsCaptured_RNICDFTPN1[0]:B (r)
+               +     0.591          cell: ADLIB:XA1A
+  37.951                       imaging_0/stonyman_0/counterPixelsCaptured_RNICDFTPN1[0]:Y (r)
+               +     1.221          net: imaging_0/stonyman_0/un1_counterPixelsCaptured_15_3
+  39.172                       imaging_0/stonyman_0/counterPixelsCaptured_RNI632R4O2[4]:A (r)
+               +     0.694          cell: ADLIB:NOR3B
+  39.866                       imaging_0/stonyman_0/counterPixelsCaptured_RNI632R4O2[4]:Y (r)
+               +     0.312          net: imaging_0/stonyman_0/state_1_sqmuxa_4_0_a2_m5_1
+  40.178                       imaging_0/stonyman_0/counterPixelsCaptured_RNI5GLRF01[4]:C (r)
+               +     0.596          cell: ADLIB:XA1
+  40.774                       imaging_0/stonyman_0/counterPixelsCaptured_RNI5GLRF01[4]:Y (r)
+               +     0.339          net: imaging_0/stonyman_0/state_1_sqmuxa_4
+  41.113                       imaging_0/stonyman_0/substate_RNI6TVDG01[15]:A (r)
+               +     0.469          cell: ADLIB:OR2A
+  41.582                       imaging_0/stonyman_0/substate_RNI6TVDG01[15]:Y (f)
+               +     1.098          net: imaging_0/stonyman_0/N_1439
+  42.680                       imaging_0/stonyman_0/state_RNO[12]:C (f)
+               +     0.652          cell: ADLIB:AO1B
+  43.332                       imaging_0/stonyman_0/state_RNO[12]:Y (r)
+               +     0.302          net: imaging_0/stonyman_0/state_ns[12]
+  43.634                       imaging_0/stonyman_0/state[12]:D (r)
                                     
-  49.843                       data arrival time
+  43.634                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   N/C                          imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.376          net: imaging_0/stonyman_0/clkAdc_i
+               +     1.440          net: imaging_0/stonyman_0/clkAdc_i
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.710          cell: ADLIB:CLKSRC
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
                +     0.697          net: imaging_0/stonyman_0_clkAdc
   N/C                          imaging_0/stonyman_0/state[12]:CLK (r)
-               -     0.498          Library setup time: ADLIB:DFN1C0
+               -     0.530          Library setup time: ADLIB:DFN1C0
   N/C                          imaging_0/stonyman_0/state[12]:D
 
 
@@ -727,39 +735,29 @@ SET External Setup
 Path 1
   From:                        px0_adc_din
   To:                          imaging_0/adc081s101_0/dataout[0]:D
-  Delay (ns):                  4.955
+  Delay (ns):                  5.266
   Slack (ns):
-  Arrival (ns):                4.955
+  Arrival (ns):                5.266
   Required (ns):
   Setup (ns):                  0.530
-  External Setup (ns):         3.693
+  External Setup (ns):         2.953
 
 Path 2
   From:                        px1_adc_din
   To:                          imaging_0/adc081s101_1/dataout[0]:D
-  Delay (ns):                  4.036
+  Delay (ns):                  3.773
   Slack (ns):
-  Arrival (ns):                4.036
+  Arrival (ns):                3.773
   Required (ns):
   Setup (ns):                  0.530
-  External Setup (ns):         2.798
-
-Path 3
-  From:                        px2_adc_din
-  To:                          imaging_0/adc081s101_2/dataout[0]:D
-  Delay (ns):                  3.230
-  Slack (ns):
-  Arrival (ns):                3.230
-  Required (ns):
-  Setup (ns):                  0.530
-  External Setup (ns):         2.008
+  External Setup (ns):         1.456
 
 
 Expanded Path 1
   From: px0_adc_din
   To: imaging_0/adc081s101_0/dataout[0]:D
   data required time                             N/C
-  data arrival time                          -   4.955
+  data arrival time                          -   5.266
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -772,24 +770,24 @@ Expanded Path 1
   0.960                        px0_adc_din_pad/U0/U1:YIN (r)
                +     0.040          cell: ADLIB:IOIN_IB
   1.000                        px0_adc_din_pad/U0/U1:Y (r)
-               +     3.223          net: px0_adc_din_c
-  4.223                        imaging_0/adc081s101_0/dataout_RNO[0]:A (r)
+               +     1.694          net: px0_adc_din_c
+  2.694                        imaging_0/adc081s101_0/dataout_RNO[0]:A (r)
                +     0.430          cell: ADLIB:INV
-  4.653                        imaging_0/adc081s101_0/dataout_RNO[0]:Y (f)
-               +     0.302          net: imaging_0/adc081s101_0/px0_adc_din_c_i
-  4.955                        imaging_0/adc081s101_0/dataout[0]:D (f)
+  3.124                        imaging_0/adc081s101_0/dataout_RNO[0]:Y (f)
+               +     2.142          net: imaging_0/adc081s101_0/px0_adc_din_c_i
+  5.266                        imaging_0/adc081s101_0/dataout[0]:D (f)
                                     
-  4.955                        data arrival time
+  5.266                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   N/C                          imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.376          net: imaging_0/stonyman_0/clkAdc_i
+               +     1.440          net: imaging_0/stonyman_0/clkAdc_i
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.710          cell: ADLIB:CLKSRC
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.706          net: imaging_0/stonyman_0_clkAdc
+               +     0.693          net: imaging_0/stonyman_0_clkAdc
   N/C                          imaging_0/adc081s101_0/dataout[0]:CLK (r)
                -     0.530          Library setup time: ADLIB:DFN1E1
   N/C                          imaging_0/adc081s101_0/dataout[0]:D
@@ -802,101 +800,101 @@ END SET External Setup
 SET Clock to Output
 
 Path 1
-  From:                        imaging_0/stonyman_0/substate[10]:CLK
-  To:                          led[3]
-  Delay (ns):                  14.524
+  From:                        imaging_0/stonyman_0/substate[1]:CLK
+  To:                          led[0]
+  Delay (ns):                  13.092
   Slack (ns):
-  Arrival (ns):                16.298
+  Arrival (ns):                15.939
   Required (ns):
-  Clock to Out (ns):           16.298
+  Clock to Out (ns):           15.939
 
 Path 2
-  From:                        imaging_0/stonyman_0/substate[10]:CLK
-  To:                          led[2]
-  Delay (ns):                  14.523
+  From:                        imaging_0/stonyman_0/substate[9]:CLK
+  To:                          led[1]
+  Delay (ns):                  12.542
   Slack (ns):
-  Arrival (ns):                16.297
+  Arrival (ns):                15.406
   Required (ns):
-  Clock to Out (ns):           16.297
+  Clock to Out (ns):           15.406
 
 Path 3
-  From:                        imaging_0/stonyman_0/substate[6]:CLK
-  To:                          led[0]
-  Delay (ns):                  14.030
+  From:                        imaging_0/stonyman_0/state[7]:CLK
+  To:                          led[5]
+  Delay (ns):                  12.562
   Slack (ns):
-  Arrival (ns):                15.808
+  Arrival (ns):                15.393
   Required (ns):
-  Clock to Out (ns):           15.808
+  Clock to Out (ns):           15.393
 
 Path 4
-  From:                        imaging_0/stonyman_0/substate[6]:CLK
-  To:                          led[2]
-  Delay (ns):                  13.220
+  From:                        imaging_0/stonyman_0/substate[3]:CLK
+  To:                          led[1]
+  Delay (ns):                  12.519
   Slack (ns):
-  Arrival (ns):                14.998
+  Arrival (ns):                15.357
   Required (ns):
-  Clock to Out (ns):           14.998
+  Clock to Out (ns):           15.357
 
 Path 5
   From:                        imaging_0/stonyman_0/state[7]:CLK
-  To:                          led[4]
-  Delay (ns):                  12.971
+  To:                          led[6]
+  Delay (ns):                  12.428
   Slack (ns):
-  Arrival (ns):                14.754
+  Arrival (ns):                15.259
   Required (ns):
-  Clock to Out (ns):           14.754
+  Clock to Out (ns):           15.259
 
 
 Expanded Path 1
-  From: imaging_0/stonyman_0/substate[10]:CLK
-  To: led[3]
+  From: imaging_0/stonyman_0/substate[1]:CLK
+  To: led[0]
   data required time                             N/C
-  data arrival time                          -   16.298
+  data arrival time                          -   15.939
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
   0.000                        imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   0.000                        imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.376          net: imaging_0/stonyman_0/clkAdc_i
-  0.376                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
+               +     1.440          net: imaging_0/stonyman_0/clkAdc_i
+  1.440                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.710          cell: ADLIB:CLKSRC
-  1.086                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.688          net: imaging_0/stonyman_0_clkAdc
-  1.774                        imaging_0/stonyman_0/substate[10]:CLK (r)
+  2.150                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
+               +     0.697          net: imaging_0/stonyman_0_clkAdc
+  2.847                        imaging_0/stonyman_0/substate[1]:CLK (r)
                +     0.536          cell: ADLIB:DFN1C0
-  2.310                        imaging_0/stonyman_0/substate[10]:Q (r)
-               +     6.033          net: imaging_0/stonyman_0/substate[10]
-  8.343                        imaging_0/stonyman_0/substate_RNIVVLQ[10]:A (r)
-               +     0.336          cell: ADLIB:NOR2
-  8.679                        imaging_0/stonyman_0/substate_RNIVVLQ[10]:Y (f)
-               +     0.429          net: imaging_0/stonyman_0/N_155_1
-  9.108                        imaging_0/stonyman_0/substate_RNI3UDR1[7]:B (f)
-               +     0.561          cell: ADLIB:NOR3B
-  9.669                        imaging_0/stonyman_0/substate_RNI3UDR1[7]:Y (f)
-               +     0.318          net: imaging_0/stonyman_0/un42_i_a2_0_a2_3[3]
-  9.987                        imaging_0/stonyman_0/substate_RNI86I72[7]:A (f)
-               +     0.580          cell: ADLIB:NOR2A
-  10.567                       imaging_0/stonyman_0/substate_RNI86I72[7]:Y (f)
-               +     1.855          net: led_0_c[3]
-  12.422                       led_pad[3]/U0/U1:D (f)
-               +     0.538          cell: ADLIB:IOTRI_OB_EB
-  12.960                       led_pad[3]/U0/U1:DOUT (f)
-               +     0.000          net: led_pad[3]/U0/NET1
-  12.960                       led_pad[3]/U0/U0:D (f)
+  3.383                        imaging_0/stonyman_0/substate[1]:Q (r)
+               +     3.406          net: imaging_0/stonyman_0/substate[1]
+  6.789                        imaging_0/stonyman_0/substate_RNIOJ2C[3]:B (r)
+               +     0.475          cell: ADLIB:NOR2
+  7.264                        imaging_0/stonyman_0/substate_RNIOJ2C[3]:Y (f)
+               +     0.903          net: imaging_0/stonyman_0/N_1233
+  8.167                        imaging_0/stonyman_0/substate_RNISVRI1[15]:B (f)
+               +     0.561          cell: ADLIB:NOR3C
+  8.728                        imaging_0/stonyman_0/substate_RNISVRI1[15]:Y (f)
+               +     0.302          net: imaging_0/stonyman_0/un42_i_a2_0_a2_3[0]
+  9.030                        imaging_0/stonyman_0/substate_RNIV5962[9]:A (f)
+               +     0.593          cell: ADLIB:NOR3A
+  9.623                        imaging_0/stonyman_0/substate_RNIV5962[9]:Y (f)
+               +     2.369          net: led_0_c[0]
+  11.992                       led_pad[0]/U0/U1:D (f)
+               +     0.609          cell: ADLIB:IOTRI_OB_EB
+  12.601                       led_pad[0]/U0/U1:DOUT (f)
+               +     0.000          net: led_pad[0]/U0/NET1
+  12.601                       led_pad[0]/U0/U0:D (f)
                +     3.338          cell: ADLIB:IOPAD_TRI
-  16.298                       led_pad[3]/U0/U0:PAD (f)
-               +     0.000          net: led[3]
-  16.298                       led[3] (f)
+  15.939                       led_pad[0]/U0/U0:PAD (f)
+               +     0.000          net: led[0]
+  15.939                       led[0] (f)
                                     
-  16.298                       data arrival time
+  15.939                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   N/C                          imaging_0/stonyman_0/clkAdc:Q (r)
                                     
-  N/C                          led[3] (f)
+  N/C                          led[0] (f)
 
 
 END SET Clock to Output

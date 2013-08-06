@@ -3,7 +3,7 @@ Timing Report Min Delay Analysis
 SmartTime Version v10.1 SP3
 Actel Corporation - Actel Designer Software Release v10.1 SP3 (Version 10.1.3.1)
 Copyright (c) 1989-2013
-Date: Wed Jul 31 11:32:52 2013
+Date: Fri Aug 02 18:05:54 2013
 
 
 Design: TOPLEVEL
@@ -105,14 +105,14 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               imaging_0/stonyman_0/clkAdc:Q
-Period (ns):                48.558
-Frequency (MHz):            20.594
+Period (ns):                41.317
+Frequency (MHz):            24.203
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        3.693
-External Hold (ns):         -0.409
-Min Clock-To-Out (ns):      3.000
-Max Clock-To-Out (ns):      16.298
+External Setup (ns):        2.953
+External Hold (ns):         -0.077
+Min Clock-To-Out (ns):      3.679
+Max Clock-To-Out (ns):      15.939
 
 Clock Domain:               MSS_CORE_0/MSS_CCC_0/I_XTLOSC:CLKOUT
 Period (ns):                N/A
@@ -550,55 +550,55 @@ Clock Domain imaging_0/stonyman_0/clkAdc:Q
 SET Register to Register
 
 Path 1
-  From:                        imaging_0/adc081s101_2/dataout[1]:CLK
-  To:                          imaging_0/stonyman_0/px2_out[1]:D
-  Delay (ns):                  0.372
+  From:                        imaging_0/adc081s101_1/dataout[3]:CLK
+  To:                          imaging_0/stonyman_0/px1_out[3]:D
+  Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.155
+  Arrival (ns):                1.658
   Required (ns):
   Hold (ns):                   0.000
 
 Path 2
-  From:                        imaging_0/adc081s101_2/dataout[5]:CLK
-  To:                          imaging_0/stonyman_0/px2_out[5]:D
-  Delay (ns):                  0.372
+  From:                        imaging_0/adc081s101_1/dataout[5]:CLK
+  To:                          imaging_0/stonyman_0/px1_out[5]:D
+  Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.155
+  Arrival (ns):                1.647
   Required (ns):
   Hold (ns):                   0.000
 
 Path 3
-  From:                        imaging_0/adc081s101_1/dataout[7]:CLK
-  To:                          imaging_0/stonyman_0/px1_out[7]:D
-  Delay (ns):                  0.372
+  From:                        imaging_0/adc081s101_1/dataout[1]:CLK
+  To:                          imaging_0/adc081s101_1/dataout[2]:D
+  Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.152
+  Arrival (ns):                1.651
   Required (ns):
   Hold (ns):                   0.000
 
 Path 4
-  From:                        imaging_0/adc081s101_2/dataout[7]:CLK
-  To:                          imaging_0/stonyman_0/px2_out[7]:D
-  Delay (ns):                  0.372
+  From:                        imaging_0/adc081s101_1/dataout[7]:CLK
+  To:                          imaging_0/stonyman_0/px1_out[7]:D
+  Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.158
+  Arrival (ns):                1.635
   Required (ns):
   Hold (ns):                   0.000
 
 Path 5
-  From:                        imaging_0/adc081s101_2/dataout[3]:CLK
-  To:                          imaging_0/stonyman_0/px2_out[3]:D
-  Delay (ns):                  0.372
+  From:                        imaging_0/adc081s101_1/dataout[6]:CLK
+  To:                          imaging_0/adc081s101_1/dataout[7]:D
+  Delay (ns):                  0.373
   Slack (ns):
-  Arrival (ns):                1.158
+  Arrival (ns):                1.635
   Required (ns):
   Hold (ns):                   0.000
 
 
 Expanded Path 1
-  From: imaging_0/adc081s101_2/dataout[1]:CLK
-  To: imaging_0/stonyman_0/px2_out[1]:D
-  data arrival time                              1.155
+  From: imaging_0/adc081s101_1/dataout[3]:CLK
+  To: imaging_0/stonyman_0/px1_out[3]:D
+  data arrival time                              1.658
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -606,31 +606,31 @@ Expanded Path 1
   0.000                        imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   0.000                        imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.170          net: imaging_0/stonyman_0/clkAdc_i
-  0.170                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
+               +     0.651          net: imaging_0/stonyman_0/clkAdc_i
+  0.651                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.312          cell: ADLIB:CLKSRC
-  0.482                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.301          net: imaging_0/stonyman_0_clkAdc
-  0.783                        imaging_0/adc081s101_2/dataout[1]:CLK (r)
+  0.963                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
+               +     0.322          net: imaging_0/stonyman_0_clkAdc
+  1.285                        imaging_0/adc081s101_1/dataout[3]:CLK (r)
                +     0.236          cell: ADLIB:DFN1E1
-  1.019                        imaging_0/adc081s101_2/dataout[1]:Q (r)
-               +     0.136          net: imaging_0/adc081s101_2_dataout[1]
-  1.155                        imaging_0/stonyman_0/px2_out[1]:D (r)
+  1.521                        imaging_0/adc081s101_1/dataout[3]:Q (r)
+               +     0.137          net: imaging_0/adc081s101_1_dataout[3]
+  1.658                        imaging_0/stonyman_0/px1_out[3]:D (r)
                                     
-  1.155                        data arrival time
+  1.658                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   N/C                          imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.170          net: imaging_0/stonyman_0/clkAdc_i
+               +     0.651          net: imaging_0/stonyman_0/clkAdc_i
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.312          cell: ADLIB:CLKSRC
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.322          net: imaging_0/stonyman_0_clkAdc
-  N/C                          imaging_0/stonyman_0/px2_out[1]:CLK (r)
+               +     0.340          net: imaging_0/stonyman_0_clkAdc
+  N/C                          imaging_0/stonyman_0/px1_out[3]:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1E1
-  N/C                          imaging_0/stonyman_0/px2_out[1]:D
+  N/C                          imaging_0/stonyman_0/px1_out[3]:D
 
 
 END SET Register to Register
@@ -640,74 +640,64 @@ END SET Register to Register
 SET External Hold
 
 Path 1
-  From:                        px2_adc_din
-  To:                          imaging_0/adc081s101_2/dataout[0]:D
-  Delay (ns):                  1.350
-  Slack (ns):
-  Arrival (ns):                1.350
-  Required (ns):
-  Hold (ns):                   0.000
-  External Hold (ns):          -0.409
-
-Path 2
   From:                        px1_adc_din
   To:                          imaging_0/adc081s101_1/dataout[0]:D
-  Delay (ns):                  1.758
+  Delay (ns):                  1.612
   Slack (ns):
-  Arrival (ns):                1.758
+  Arrival (ns):                1.612
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.809
+  External Hold (ns):          -0.077
 
-Path 3
+Path 2
   From:                        px0_adc_din
   To:                          imaging_0/adc081s101_0/dataout[0]:D
-  Delay (ns):                  2.181
+  Delay (ns):                  2.298
   Slack (ns):
-  Arrival (ns):                2.181
+  Arrival (ns):                2.298
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -1.218
+  External Hold (ns):          -0.765
 
 
 Expanded Path 1
-  From: px2_adc_din
-  To: imaging_0/adc081s101_2/dataout[0]:D
-  data arrival time                              1.350
+  From: px1_adc_din
+  To: imaging_0/adc081s101_1/dataout[0]:D
+  data arrival time                              1.612
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
-  0.000                        px2_adc_din (f)
-               +     0.000          net: px2_adc_din
-  0.000                        px2_adc_din_pad/U0/U0:PAD (f)
+  0.000                        px1_adc_din (f)
+               +     0.000          net: px1_adc_din
+  0.000                        px1_adc_din_pad/U0/U0:PAD (f)
                +     0.280          cell: ADLIB:IOPAD_IN
-  0.280                        px2_adc_din_pad/U0/U0:Y (f)
-               +     0.000          net: px2_adc_din_pad/U0/NET1
-  0.280                        px2_adc_din_pad/U0/U1:YIN (f)
+  0.280                        px1_adc_din_pad/U0/U0:Y (f)
+               +     0.000          net: px1_adc_din_pad/U0/NET1
+  0.280                        px1_adc_din_pad/U0/U1:YIN (f)
                +     0.016          cell: ADLIB:IOIN_IB
-  0.296                        px2_adc_din_pad/U0/U1:Y (f)
-               +     0.694          net: px2_adc_din_c
-  0.990                        imaging_0/adc081s101_2/dataout_RNO[0]:A (f)
+  0.296                        px1_adc_din_pad/U0/U1:Y (f)
+               +     0.137          net: px1_adc_din_c
+  0.433                        imaging_0/adc081s101_1/dataout_RNO[0]:A (f)
                +     0.219          cell: ADLIB:INV
-  1.209                        imaging_0/adc081s101_2/dataout_RNO[0]:Y (r)
-               +     0.141          net: imaging_0/adc081s101_2/px2_adc_din_c_i
-  1.350                        imaging_0/adc081s101_2/dataout[0]:D (r)
+  0.652                        imaging_0/adc081s101_1/dataout_RNO[0]:Y (r)
+               +     0.960          net: imaging_0/adc081s101_1/px1_adc_din_c_i
+  1.612                        imaging_0/adc081s101_1/dataout[0]:D (r)
                                     
-  1.350                        data arrival time
+  1.612                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   N/C                          imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.204          net: imaging_0/stonyman_0/clkAdc_i
+               +     0.782          net: imaging_0/stonyman_0/clkAdc_i
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.375          cell: ADLIB:CLKSRC
   N/C                          imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.362          net: imaging_0/stonyman_0_clkAdc
-  N/C                          imaging_0/adc081s101_2/dataout[0]:CLK (r)
+               +     0.378          net: imaging_0/stonyman_0_clkAdc
+  N/C                          imaging_0/adc081s101_1/dataout[0]:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1E1
-  N/C                          imaging_0/adc081s101_2/dataout[0]:D
+  N/C                          imaging_0/adc081s101_1/dataout[0]:D
 
 
 END SET External Hold
@@ -719,53 +709,53 @@ SET Clock to Output
 Path 1
   From:                        imaging_0/adc081s101_0/conversionComplete:CLK
   To:                          TP_ADCCONVCOMPLETE
-  Delay (ns):                  2.225
+  Delay (ns):                  2.403
   Slack (ns):
-  Arrival (ns):                3.000
+  Arrival (ns):                3.679
   Required (ns):
-  Clock to Out (ns):           3.000
+  Clock to Out (ns):           3.679
 
 Path 2
-  From:                        imaging_0/adc081s101_0/cs:CLK
-  To:                          CS
-  Delay (ns):                  2.421
-  Slack (ns):
-  Arrival (ns):                3.202
-  Required (ns):
-  Clock to Out (ns):           3.202
-
-Path 3
-  From:                        imaging_0/stonyman_0/startAdcCapture:CLK
-  To:                          TP_ADCSTARTCAP
-  Delay (ns):                  2.651
-  Slack (ns):
-  Arrival (ns):                3.443
-  Required (ns):
-  Clock to Out (ns):           3.443
-
-Path 4
-  From:                        imaging_0/adc081s101_0/cs:CLK
-  To:                          SCLK
-  Delay (ns):                  2.776
-  Slack (ns):
-  Arrival (ns):                3.557
-  Required (ns):
-  Clock to Out (ns):           3.557
-
-Path 5
   From:                        imaging_0/stonyman_0/busy:CLK
   To:                          TP_BUSY
-  Delay (ns):                  2.807
+  Delay (ns):                  2.472
   Slack (ns):
-  Arrival (ns):                3.594
+  Arrival (ns):                3.744
   Required (ns):
-  Clock to Out (ns):           3.594
+  Clock to Out (ns):           3.744
+
+Path 3
+  From:                        imaging_0/stonyman_0/writePending:CLK
+  To:                          TP_WRITEPENDING
+  Delay (ns):                  2.630
+  Slack (ns):
+  Arrival (ns):                3.905
+  Required (ns):
+  Clock to Out (ns):           3.905
+
+Path 4
+  From:                        imaging_0/stonyman_0/resp:CLK
+  To:                          resp
+  Delay (ns):                  2.935
+  Slack (ns):
+  Arrival (ns):                4.209
+  Required (ns):
+  Clock to Out (ns):           4.209
+
+Path 5
+  From:                        imaging_0/stonyman_0/startAdcCapture:CLK
+  To:                          TP_ADCSTARTCAP
+  Delay (ns):                  2.931
+  Slack (ns):
+  Arrival (ns):                4.209
+  Required (ns):
+  Clock to Out (ns):           4.209
 
 
 Expanded Path 1
   From: imaging_0/adc081s101_0/conversionComplete:CLK
   To: TP_ADCCONVCOMPLETE
-  data arrival time                              3.000
+  data arrival time                              3.679
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -773,26 +763,26 @@ Expanded Path 1
   0.000                        imaging_0/stonyman_0/clkAdc:Q
                +     0.000          Clock source
   0.000                        imaging_0/stonyman_0/clkAdc:Q (r)
-               +     0.170          net: imaging_0/stonyman_0/clkAdc_i
-  0.170                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
+               +     0.651          net: imaging_0/stonyman_0/clkAdc_i
+  0.651                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:A (r)
                +     0.312          cell: ADLIB:CLKSRC
-  0.482                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
-               +     0.293          net: imaging_0/stonyman_0_clkAdc
-  0.775                        imaging_0/adc081s101_0/conversionComplete:CLK (r)
+  0.963                        imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC:Y (r)
+               +     0.313          net: imaging_0/stonyman_0_clkAdc
+  1.276                        imaging_0/adc081s101_0/conversionComplete:CLK (r)
                +     0.236          cell: ADLIB:DFN1E1P0
-  1.011                        imaging_0/adc081s101_0/conversionComplete:Q (r)
-               +     0.677          net: TP_ADCCONVCOMPLETE_c
-  1.688                        TP_ADCCONVCOMPLETE_pad/U0/U1:D (r)
+  1.512                        imaging_0/adc081s101_0/conversionComplete:Q (r)
+               +     0.855          net: TP_ADCCONVCOMPLETE_c
+  2.367                        TP_ADCCONVCOMPLETE_pad/U0/U1:D (r)
                +     0.243          cell: ADLIB:IOTRI_OB_EB
-  1.931                        TP_ADCCONVCOMPLETE_pad/U0/U1:DOUT (r)
+  2.610                        TP_ADCCONVCOMPLETE_pad/U0/U1:DOUT (r)
                +     0.000          net: TP_ADCCONVCOMPLETE_pad/U0/NET1
-  1.931                        TP_ADCCONVCOMPLETE_pad/U0/U0:D (r)
+  2.610                        TP_ADCCONVCOMPLETE_pad/U0/U0:D (r)
                +     1.069          cell: ADLIB:IOPAD_TRI
-  3.000                        TP_ADCCONVCOMPLETE_pad/U0/U0:PAD (r)
+  3.679                        TP_ADCCONVCOMPLETE_pad/U0/U0:PAD (r)
                +     0.000          net: TP_ADCCONVCOMPLETE
-  3.000                        TP_ADCCONVCOMPLETE (r)
+  3.679                        TP_ADCCONVCOMPLETE (r)
                                     
-  3.000                        data arrival time
+  3.679                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          imaging_0/stonyman_0/clkAdc:Q

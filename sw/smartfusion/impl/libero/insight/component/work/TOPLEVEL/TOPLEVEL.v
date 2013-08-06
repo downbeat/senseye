@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jul 31 11:28:42 2013
+// Created by SmartDesign Fri Aug 02 18:02:51 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -440,16 +440,16 @@ assign led[7:4]                              = led_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets - Unequal Pin Widths
 //--------------------------------------------------------------------
+wire   [31:0] CoreAHBLite_0_AHBmslave6_HADDR;
 wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0_23to0;
 wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0;
-wire   [31:0] CoreAHBLite_0_AHBmslave6_HADDR;
 assign CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave6_HADDR[23:0];
 assign CoreAHBLite_0_AHBmslave6_HADDR_0 = { CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 };
 
-wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 wire   [31:24]CoreAPB3_0_APBmslave0_0_PADDR_0_31to24;
 wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR_0_23to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_0_PADDR_0;
+wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_31to24 = 8'h0;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 = CoreAPB3_0_APBmslave0_0_PADDR[23:0];
 assign CoreAPB3_0_APBmslave0_0_PADDR_0 = { CoreAPB3_0_APBmslave0_0_PADDR_0_31to24, CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 };
@@ -1050,11 +1050,11 @@ MSS_CORE2 MSS_CORE2_0(
         .UART_0_RXD  ( UART_0_RXD ),
         .MSSHREADY   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY ),
         .MSSHRESP    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 ),
-        .MAC_RXD     ( MAC_RXD ),
-        .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
         .F2M_GPI_2   ( GND_net ),
         .F2M_GPI_1   ( imaging_0_afull_cam0 ),
         .F2M_GPI_0   ( TP_BUSY_net_0 ),
+        .MAC_RXD     ( MAC_RXD ),
+        .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
         // Outputs
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),

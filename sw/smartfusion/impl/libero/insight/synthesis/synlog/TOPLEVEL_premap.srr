@@ -40,9 +40,9 @@ Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 111MB
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 50MB peak: 113MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 49MB peak: 113MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Wed Jul 31 11:30:13 2013
+Process took 0h:00m:01s realtime, 0h:00m:02s cputime
+# Fri Aug 02 18:03:25 2013
 
 ###########################################################]
