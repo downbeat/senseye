@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -36,8 +36,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -51,8 +51,8 @@
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -140,18 +140,20 @@
 <wire x1="0" y1="10.2108" x2="1.664878125" y2="10.2108" width="0" layer="20"/>
 <wire x1="1.664878125" y1="10.2108" x2="2.0066" y2="9.869078125" width="0" layer="20" curve="-90"/>
 <wire x1="2.0066" y1="9.869078125" x2="2.0066" y2="0" width="0" layer="20"/>
-<text x="3.5814" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">GND</text>
-<text x="4.8514" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">VCC</text>
-<text x="6.1214" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">VADC</text>
-<text x="7.3914" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">SCLK</text>
-<text x="8.6614" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">SDAT</text>
-<text x="9.9314" y="3.7338" size="0.762" layer="21" font="vector" ratio="12" rot="R270" align="bottom-right">CS</text>
-<text x="5.6388" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">RV</text>
-<text x="6.9088" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">IP</text>
-<text x="8.1788" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">RP</text>
-<text x="9.4488" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">OE</text>
-<text x="10.7188" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">PH</text>
-<text x="11.9888" y="0.6096" size="0.762" layer="21" font="vector" ratio="12" rot="SR135">IV</text>
+<text x="2.6924" y="2.413" size="0.762" layer="22" font="vector" ratio="12" rot="SR90" align="top-left">GND</text>
+<text x="5.2832" y="5.842" size="0.762" layer="22" font="vector" ratio="12" rot="R270" align="bottom-right">VCC</text>
+<text x="6.096" y="5.842" size="0.762" layer="22" font="vector" ratio="12" rot="R270" align="bottom-right">VADC</text>
+<text x="7.1628" y="4.3688" size="0.762" layer="22" font="vector" ratio="12" rot="SR180" align="bottom-right">CS</text>
+<text x="11.176" y="2.413" size="0.762" layer="22" font="vector" ratio="12" rot="R270" align="bottom-right">SCK</text>
+<text x="5.6388" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">RV</text>
+<text x="6.9088" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">IP</text>
+<text x="8.1788" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">RP</text>
+<text x="9.4488" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">OE</text>
+<text x="10.7188" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">PH</text>
+<text x="11.9888" y="0.6096" size="0.762" layer="22" font="vector" ratio="12" rot="SR135">IV</text>
+<text x="8.6614" y="4.3688" size="0.762" layer="22" font="vector" ratio="12" rot="SR180" align="bottom-right">MI</text>
+<hole x="13.551053125" y="11.5306" drill="1.2446"/>
+<hole x="1.051053125" y="11.5306" drill="1.2446"/>
 </plain>
 <libraries>
 <library name="senseye">
@@ -1491,25 +1493,27 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 </pass>
 </autorouter>
 <elements>
-<element name="U2" library="senseye" package="SOT23-6" value="TI_ADCXX1S101" x="9.3472" y="5.461" rot="MR270"/>
+<element name="U2" library="senseye" package="SOT23-6" value="TI_ADCXX1S101" x="9.3472" y="5.461" smashed="yes" rot="MR270">
+<attribute name="VALUE" x="11.8872" y="6.985" size="0.4064" layer="28" rot="MR270"/>
+</element>
 <element name="C1" library="rcl" package="C0603" value="1nF" x="3.5052" y="10.414" smashed="yes" rot="MR90">
-<attribute name="NAME" x="4.4704" y="9.6774" size="0.762" layer="26" rot="SMR180"/>
+<attribute name="NAME" x="5.2832" y="10.16" size="0.762" layer="26" rot="SMR270"/>
 <attribute name="VALUE" x="1.6002" y="9.779" size="1.27" layer="28" rot="MR90"/>
 </element>
 <element name="C2" library="rcl" package="C0603" value="0.1uF" x="3.5052" y="7.366" smashed="yes" rot="MR270">
-<attribute name="NAME" x="4.4704" y="8.8646" size="0.762" layer="26" rot="SMR180"/>
+<attribute name="NAME" x="5.2832" y="8.8392" size="0.762" layer="26" rot="SMR270"/>
 <attribute name="VALUE" x="5.4102" y="8.001" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="C3" library="rcl" package="C0603" value="0.1uF" x="10.1092" y="11.938" smashed="yes" rot="MR180">
-<attribute name="NAME" x="7.4422" y="11.7094" size="0.762" layer="26" rot="SMR180"/>
+<attribute name="NAME" x="8.6106" y="12.446" size="0.762" layer="26" rot="SMR270"/>
 <attribute name="VALUE" x="9.4742" y="13.843" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="C4" library="rcl" package="C0603" value="1uF" x="10.1092" y="9.906" smashed="yes" rot="MR180">
-<attribute name="NAME" x="7.4422" y="10.8966" size="0.762" layer="26" rot="SMR180"/>
+<attribute name="NAME" x="8.6106" y="10.414" size="0.762" layer="26" rot="SMR270"/>
 <attribute name="VALUE" x="9.4742" y="11.811" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="R1" library="rcl" package="R0603" value="0 or UNPOP" x="5.6642" y="4.826" smashed="yes" rot="MR0">
-<attribute name="NAME" x="5.9436" y="6.5532" size="0.762" layer="26" rot="SMR180"/>
+<attribute name="NAME" x="4.1402" y="5.3594" size="0.762" layer="26" rot="SMR270"/>
 <attribute name="VALUE" x="6.2992" y="2.921" size="1.27" layer="28" rot="MR0"/>
 </element>
 <element name="U1" library="senseye" package="STONYMAN_DEFAULT_LENS" value="STONYMANDEFAULT_LENS_MOUNT" x="7.3152" y="10.922" smashed="yes">
