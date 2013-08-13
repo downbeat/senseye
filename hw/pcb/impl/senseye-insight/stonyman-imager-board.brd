@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -128,7 +128,6 @@
 <wire x1="12.6238" y1="10.2108" x2="14.6304" y2="10.2108" width="0" layer="20"/>
 <wire x1="14.6304" y1="10.2108" x2="14.6304" y2="12.8524" width="0" layer="20"/>
 <wire x1="14.6304" y1="12.8524" x2="12.6238" y2="12.8524" width="0" layer="20"/>
-<wire x1="12.6238" y1="12.8524" x2="12.6238" y2="16.2306" width="0" layer="20"/>
 <wire x1="12.6238" y1="16.2306" x2="2.0066" y2="16.2306" width="0" layer="20"/>
 <wire x1="2.0066" y1="16.2306" x2="2.0066" y2="12.8524" width="0" layer="20"/>
 <wire x1="2.0066" y1="12.8524" x2="0" y2="12.8524" width="0" layer="20"/>
@@ -1479,8 +1478,8 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <element name="U$1" library="senseye" package="SOT23-6" value="TI_ADCXX1S101" x="9.3472" y="5.461" rot="MR270"/>
 <element name="C1" library="rcl" package="C0603" value="1nF" x="3.5052" y="10.414" rot="MR90"/>
 <element name="C2" library="rcl" package="C0603" value="0.1uF" x="3.5052" y="7.366" rot="MR270"/>
-<element name="C3" library="rcl" package="C0603" value="0.1uF" x="10.3632" y="11.938" rot="MR180"/>
-<element name="C4" library="rcl" package="C0603" value="1uF" x="10.3632" y="9.906" rot="MR180"/>
+<element name="C3" library="rcl" package="C0603" value="0.1uF" x="10.1092" y="11.938" rot="MR180"/>
+<element name="C4" library="rcl" package="C0603" value="1uF" x="10.1092" y="9.906" rot="MR180"/>
 <element name="R1" library="rcl" package="R0603" value="0 or UNPOP" x="5.6642" y="4.826" rot="MR0"/>
 <element name="U$2" library="senseye" package="STONYMAN_DEFAULT_LENS" value="STONYMANDEFAULT_LENS_MOUNT" x="7.3152" y="10.922"/>
 <element name="U$3" library="senseye" package="HEADER2X6/0.05IN" value="HEADER_12PIN2X6" x="7.3152" y="2.413"/>
@@ -1655,8 +1654,9 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="7.0222" y1="5.334" x2="6.5142" y2="4.826" width="0.4064" layer="16"/>
 <wire x1="10.2972" y1="6.761" x2="10.7742" y2="6.761" width="0.4064" layer="16"/>
 <wire x1="10.7742" y1="6.761" x2="11.2132" y2="7.2" width="0.4064" layer="16"/>
-<wire x1="11.2132" y1="7.2" x2="11.2132" y2="11.938" width="0.4064" layer="16"/>
-<wire x1="11.2132" y1="11.938" x2="11.2132" y2="9.906" width="0" layer="19" extent="16-16"/>
+<wire x1="11.2132" y1="7.2" x2="11.2132" y2="9.652" width="0.4064" layer="16"/>
+<wire x1="11.2132" y1="9.652" x2="10.9592" y2="9.906" width="0.4064" layer="16"/>
+<wire x1="10.9592" y1="11.938" x2="10.9592" y2="9.906" width="0.4064" layer="16"/>
 </signal>
 <signal name="ANALOG">
 <contactref element="U$1" pad="1"/>
@@ -1666,14 +1666,12 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="8.6768" y1="6.5124" x2="8.8392" y2="6.35" width="0.2032" layer="1"/>
 <wire x1="8.8392" y1="6.35" x2="9.3472" y2="6.35" width="0.2032" layer="1"/>
 <wire x1="9.3472" y1="6.35" x2="9.4996" y2="6.5024" width="0.2032" layer="1"/>
-<wire x1="9.4996" y1="6.5024" x2="9.4996" y2="6.9088" width="0.2032" layer="1"/>
-<wire x1="9.4996" y1="6.9088" x2="9.7536" y2="7.1628" width="0.2032" layer="1"/>
-<wire x1="9.7536" y1="7.1628" x2="10.1854" y2="7.1628" width="0.2032" layer="1"/>
-<wire x1="10.1854" y1="7.1628" x2="10.4648" y2="7.4422" width="0.2032" layer="1"/>
-<wire x1="10.4648" y1="7.4422" x2="10.4648" y2="7.7216" width="0.2032" layer="1"/>
+<wire x1="9.4996" y1="6.5024" x2="9.4996" y2="7.0866" width="0.2032" layer="1"/>
 <wire x1="8.3972" y1="6.761" x2="8.3972" y2="7.3304" width="0.4064" layer="16"/>
 <wire x1="8.7884" y1="7.7216" x2="10.4648" y2="7.7216" width="0.4064" layer="16"/>
 <wire x1="8.3972" y1="7.3304" x2="8.7884" y2="7.7216" width="0.4064" layer="16"/>
+<wire x1="9.4996" y1="7.0866" x2="10.1346" y2="7.7216" width="0.2032" layer="1"/>
+<wire x1="10.1346" y1="7.7216" x2="10.4648" y2="7.7216" width="0.2032" layer="1"/>
 </signal>
 <signal name="ADC-MISO">
 <contactref element="U$3" pad="9"/>
