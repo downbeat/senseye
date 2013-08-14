@@ -219,6 +219,34 @@
 <pad name="12" x="3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
 <pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016" first="yes"/>
 </package>
+<package name="HEADER2X6/0.05IN_NO_SILK">
+<text x="-4.191" y="-1.397" size="0.762" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.207" y="-1.397" size="0.762" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="1" x="-3.175" y="0.635" drill="0.7112" diameter="1.016" shape="square"/>
+<rectangle x1="-3.3909" y1="0.4191" x2="-2.9591" y2="0.8509" layer="51"/>
+<pad name="4" x="-1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="3" x="-1.905" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="6" x="-0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="5" x="-0.635" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="8" x="0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="7" x="0.635" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="10" x="1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="9" x="1.905" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="12" x="3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="11" x="3.175" y="0.635" drill="0.7112" diameter="1.016"/>
+<rectangle x1="-3.3909" y1="-0.8509" x2="-2.9591" y2="-0.4191" layer="51"/>
+<rectangle x1="-2.1209" y1="-0.8509" x2="-1.6891" y2="-0.4191" layer="51"/>
+<rectangle x1="-2.1209" y1="0.4191" x2="-1.6891" y2="0.8509" layer="51"/>
+<rectangle x1="-0.8509" y1="0.4191" x2="-0.4191" y2="0.8509" layer="51"/>
+<rectangle x1="-0.8509" y1="-0.8509" x2="-0.4191" y2="-0.4191" layer="51"/>
+<rectangle x1="0.4191" y1="0.4191" x2="0.8509" y2="0.8509" layer="51" rot="R90"/>
+<rectangle x1="1.6891" y1="0.4191" x2="2.1209" y2="0.8509" layer="51" rot="R90"/>
+<rectangle x1="0.4191" y1="-0.8509" x2="0.8509" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="1.6891" y1="-0.8509" x2="2.1209" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="2.9591" y1="-0.8509" x2="3.3909" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="2.9591" y1="0.4191" x2="3.3909" y2="0.8509" layer="51" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TI_ADCXX1SXX1">
@@ -380,6 +408,25 @@
 <connect gate="G$1" pin="7" pad="4"/>
 <connect gate="G$1" pin="8" pad="10"/>
 <connect gate="G$1" pin="9" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="2X6_NOSILK" package="HEADER2X6/0.05IN_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6106,7 +6153,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="0 or UNPOP"/>
 <part name="U1" library="senseye" deviceset="STONYMAN" device="DEFAULT_LENS_MOUNT"/>
-<part name="J1" library="senseye" deviceset="HEADER_12PIN" device="2X6" value="HEADER_12PIN2X6"/>
+<part name="J1" library="senseye" deviceset="HEADER_12PIN" device="2X6_NOSILK" value="HEADER_12PIN2X6_NOSILK"/>
 </parts>
 <sheets>
 <sheet>

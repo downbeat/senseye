@@ -211,25 +211,33 @@
 <text x="-4.9982" y="5.222" size="1.016" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.0355" y="-8.5044" size="1.016" layer="27" font="vector">&gt;VALUE</text>
 </package>
-<package name="HEADER2X6/0.05IN">
-<wire x1="-3.937" y1="1.397" x2="-3.937" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="-3.937" y1="-1.397" x2="3.937" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="3.937" y1="-1.397" x2="3.937" y2="1.397" width="0.127" layer="21"/>
-<wire x1="3.937" y1="1.397" x2="-3.937" y2="1.397" width="0.127" layer="21"/>
-<pad name="1" x="-3.175" y="0.635" drill="0.7112" diameter="1.016" shape="square" first="yes"/>
-<pad name="3" x="-1.905" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="5" x="-0.635" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="7" x="0.635" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="9" x="1.905" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="11" x="3.175" y="0.635" drill="0.7112" diameter="1.016"/>
-<text x="-4.191" y="-1.397" size="1.016" layer="25" font="vector" ratio="12" rot="R90">&gt;NAME</text>
-<text x="5.207" y="-1.397" size="1.016" layer="27" font="vector" ratio="12" rot="R90">&gt;VALUE</text>
+<package name="HEADER2X6/0.05IN_NO_SILK">
+<text x="-4.191" y="-1.397" size="0.762" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.207" y="-1.397" size="0.762" layer="27" font="vector" rot="R90">&gt;VALUE</text>
+<pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="1" x="-3.175" y="0.635" drill="0.7112" diameter="1.016" shape="square"/>
+<rectangle x1="-3.3909" y1="0.4191" x2="-2.9591" y2="0.8509" layer="51"/>
 <pad name="4" x="-1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="3" x="-1.905" y="0.635" drill="0.7112" diameter="1.016"/>
 <pad name="6" x="-0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="5" x="-0.635" y="0.635" drill="0.7112" diameter="1.016"/>
 <pad name="8" x="0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="7" x="0.635" y="0.635" drill="0.7112" diameter="1.016"/>
 <pad name="10" x="1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="9" x="1.905" y="0.635" drill="0.7112" diameter="1.016"/>
 <pad name="12" x="3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016" first="yes"/>
+<pad name="11" x="3.175" y="0.635" drill="0.7112" diameter="1.016"/>
+<rectangle x1="-3.3909" y1="-0.8509" x2="-2.9591" y2="-0.4191" layer="51"/>
+<rectangle x1="-2.1209" y1="-0.8509" x2="-1.6891" y2="-0.4191" layer="51"/>
+<rectangle x1="-2.1209" y1="0.4191" x2="-1.6891" y2="0.8509" layer="51"/>
+<rectangle x1="-0.8509" y1="0.4191" x2="-0.4191" y2="0.8509" layer="51"/>
+<rectangle x1="-0.8509" y1="-0.8509" x2="-0.4191" y2="-0.4191" layer="51"/>
+<rectangle x1="0.4191" y1="0.4191" x2="0.8509" y2="0.8509" layer="51" rot="R90"/>
+<rectangle x1="1.6891" y1="0.4191" x2="2.1209" y2="0.8509" layer="51" rot="R90"/>
+<rectangle x1="0.4191" y1="-0.8509" x2="0.8509" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="1.6891" y1="-0.8509" x2="2.1209" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="2.9591" y1="-0.8509" x2="3.3909" y2="-0.4191" layer="51" rot="R90"/>
+<rectangle x1="2.9591" y1="0.4191" x2="3.3909" y2="0.8509" layer="51" rot="R90"/>
 </package>
 </packages>
 </library>
@@ -1520,7 +1528,7 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <element name="U1" library="senseye" package="STONYMAN_DEFAULT_LENS" value="STONYMANDEFAULT_LENS_MOUNT" x="7.3152" y="10.922" smashed="yes">
 <attribute name="VALUE" x="2.2797" y="2.4176" size="1.016" layer="27" font="vector"/>
 </element>
-<element name="J1" library="senseye" package="HEADER2X6/0.05IN" value="HEADER_12PIN2X6" x="7.3152" y="2.413" smashed="yes">
+<element name="J1" library="senseye" package="HEADER2X6/0.05IN_NO_SILK" value="HEADER_12PIN2X6_NOSILK" x="7.3152" y="2.413" smashed="yes">
 <attribute name="VALUE" x="12.5222" y="1.016" size="1.016" layer="27" font="vector" ratio="12" rot="R90"/>
 </element>
 </elements>
