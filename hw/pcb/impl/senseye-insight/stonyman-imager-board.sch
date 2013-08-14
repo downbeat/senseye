@@ -131,15 +131,15 @@
 <wire x1="0.95" y1="1.55" x2="-0.95" y2="1.55" width="0.127" layer="51"/>
 <wire x1="-0.95" y1="1.55" x2="-0.95" y2="-1.55" width="0.127" layer="51"/>
 <wire x1="-0.95" y1="-1.55" x2="0.95" y2="-1.55" width="0.127" layer="51"/>
-<wire x1="1" y1="1.3" x2="1" y2="1.6" width="0.2032" layer="21"/>
+<wire x1="1" y1="1.427" x2="1" y2="1.6" width="0.2032" layer="21"/>
 <wire x1="1" y1="1.6" x2="0.7" y2="1.6" width="0.2032" layer="21"/>
-<wire x1="1" y1="-1.3" x2="1" y2="-1.6" width="0.2032" layer="21"/>
+<wire x1="1" y1="-1.427" x2="1" y2="-1.6" width="0.2032" layer="21"/>
 <wire x1="1" y1="-1.6" x2="0.7" y2="-1.6" width="0.2032" layer="21"/>
 <wire x1="-0.7" y1="-1.6" x2="-1" y2="-1.6" width="0.2032" layer="21"/>
-<wire x1="-1" y1="-1.6" x2="-1" y2="-1.3" width="0.2032" layer="21"/>
+<wire x1="-1" y1="-1.6" x2="-1" y2="-1.427" width="0.2032" layer="21"/>
 <wire x1="-0.7" y1="1.6" x2="-1" y2="1.6" width="0.2032" layer="21"/>
-<wire x1="-1" y1="1.6" x2="-1" y2="1.3" width="0.2032" layer="21"/>
-<circle x="-0.5" y="1" radius="0.2236" width="0.2032" layer="21"/>
+<wire x1="-1" y1="1.6" x2="-1" y2="1.427" width="0.2032" layer="21"/>
+<circle x="-0.373" y="1.127" radius="0.2236" width="0.2032" layer="21"/>
 <smd name="4" x="1.3" y="-0.95" dx="0.8" dy="0.51" layer="1"/>
 <smd name="5" x="1.3" y="0" dx="0.8" dy="0.51" layer="1"/>
 <smd name="6" x="1.3" y="0.95" dx="0.8" dy="0.51" layer="1"/>
@@ -148,6 +148,7 @@
 <smd name="3" x="-1.3" y="-0.95" dx="0.8" dy="0.51" layer="1"/>
 <text x="-1.524" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.524" y="-2.54" size="0.4064" layer="27">&gt;VALUE</text>
+<wire x1="-1" y1="1.935003125" x2="-1" y2="1.935" width="0.2032" layer="21"/>
 </package>
 <package name="STONYMAN_DEFAULT_LENS">
 <smd name="P$10" x="0" y="0" dx="4.63" dy="3.73" layer="1" rot="R90"/>
