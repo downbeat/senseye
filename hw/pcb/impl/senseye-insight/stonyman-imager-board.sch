@@ -6151,9 +6151,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="0 or UNPOP"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="0 / UNPOP"/>
 <part name="U1" library="senseye" deviceset="STONYMAN" device="DEFAULT_LENS_MOUNT"/>
 <part name="J1" library="senseye" deviceset="HEADER_12PIN" device="2X6_NOSILK" value="HEADER_12PIN2X6_NOSILK"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="OPTIONAL: 10pF-1nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -6168,6 +6169,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="R1" gate="G$1" x="40.64" y="43.18"/>
 <instance part="U1" gate="G$1" x="104.14" y="35.56"/>
 <instance part="J1" gate="G$1" x="106.68" y="6.35"/>
+<instance part="C5" gate="G$1" x="66.04" y="30.48" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -6198,6 +6200,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="81.28" y1="12.7" x2="99.06" y2="12.7" width="0.1524" layer="91"/>
 <label x="83.82" y="12.7" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="30.48" x2="71.12" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V_STONY" class="0">
@@ -6316,7 +6320,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="33.02" y="5.08" size="1.778" layer="95"/>
 <wire x1="33.02" y1="5.08" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="ANALOG"/>
-<wire x1="33.02" y1="35.56" x2="86.36" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="35.56" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="35.56" x2="86.36" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="30.48" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
+<junction x="63.5" y="35.56"/>
 </segment>
 </net>
 <net name="ADC-MISO" class="0">
