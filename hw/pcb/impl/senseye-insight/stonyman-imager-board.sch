@@ -178,6 +178,7 @@
 <wire x1="0" y1="2.5" x2="0" y2="3.9" width="0.127" layer="21"/>
 <text x="-4.9982" y="5.222" size="1.016" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.0355" y="-8.5044" size="1.016" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-1.7526" y1="-4.318" x2="1.9812" y2="-3.0226" layer="29"/>
 </package>
 <package name="HEADER1X12/0.05IN">
 <wire x1="-8.382" y1="0.762" x2="-8.382" y2="-0.762" width="0.127" layer="21"/>
