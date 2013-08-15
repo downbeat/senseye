@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Aug 02 18:02:51 2013
+// Created by SmartDesign Thu Aug 15 08:57:09 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -446,10 +446,10 @@ wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0;
 assign CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave6_HADDR[23:0];
 assign CoreAHBLite_0_AHBmslave6_HADDR_0 = { CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 };
 
+wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 wire   [31:24]CoreAPB3_0_APBmslave0_0_PADDR_0_31to24;
 wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR_0_23to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_0_PADDR_0;
-wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_31to24 = 8'h0;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 = CoreAPB3_0_APBmslave0_0_PADDR[23:0];
 assign CoreAPB3_0_APBmslave0_0_PADDR_0 = { CoreAPB3_0_APBmslave0_0_PADDR_0_31to24, CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 };

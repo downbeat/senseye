@@ -42,13 +42,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf,actgen_cxf"
 STATE="utd"
-TIME="1375480968"
+TIME="1376571426"
 SIZE="3714"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1375480968"
+TIME="1376571426"
 SIZE="2645"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 IS_READONLY="TRUE"
@@ -145,13 +145,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1375480969"
+TIME="1376571427"
 SIZE="2540"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1375480969"
+TIME="1376571427"
 SIZE="324"
 PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
 IS_READONLY="TRUE"
@@ -231,13 +231,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1375480970"
+TIME="1376571429"
 SIZE="2278"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1375480970"
+TIME="1376571429"
 SIZE="882"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
 IS_READONLY="TRUE"
@@ -402,12 +402,12 @@ SIZE="413"
 ENDFILE
 VALUE "<project>\component\work\imaging\imaging.cxf,actgen_cxf"
 STATE="utd"
-TIME="1375480959"
+TIME="1376571394"
 SIZE="9291"
 ENDFILE
 VALUE "<project>\component\work\imaging\imaging.pdc,pdc"
 STATE="utd"
-TIME="1375480959"
+TIME="1376571394"
 SIZE="980"
 PARENT="<project>\component\work\imaging\imaging.cxf"
 BEGIN_USE_CONSTRAINT
@@ -418,14 +418,14 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\imaging\imaging.v,hdl"
 STATE="utd"
-TIME="1375480959"
+TIME="1376571394"
 SIZE="14178"
 PARENT="<project>\component\work\imaging\imaging.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\imaging\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1375480959"
+TIME="1376571394"
 SIZE="2200"
 PARENT="<project>\component\work\imaging\imaging.cxf"
 IS_READONLY="TRUE"
@@ -506,20 +506,20 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1375480971"
+TIME="1376571430"
 SIZE="2409"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.cxf,actgen_cxf"
 STATE="utd"
-TIME="1375480987"
+TIME="1376571445"
 SIZE="12965"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1375480966"
-SIZE="4180"
+TIME="1376571424"
+SIZE="4867"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
@@ -529,7 +529,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\TOPLEVEL.v,hdl"
 STATE="utd"
-TIME="1375480971"
+TIME="1376571430"
 SIZE="47486"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 IS_READONLY="TRUE"
@@ -541,8 +541,8 @@ SIZE="8624"
 ENDFILE
 VALUE "<project>\constraint\TOPLEVEL.pdc,pdc"
 STATE="utd"
-TIME="1375122180"
-SIZE="13077"
+TIME="1375918970"
+SIZE="13028"
 ENDFILE
 VALUE "<project>\designer\impl1\MSS_CORE2.ide_des,ide_des"
 STATE="utd"
@@ -551,17 +551,17 @@ SIZE="481"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1375481176"
-SIZE="11297280"
+TIME="1375977911"
+SIZE="11607040"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1375481175"
-SIZE="171789"
+TIME="1375977910"
+SIZE="169213"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1375481177"
+TIME="1375977911"
 SIZE="1287"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
@@ -581,37 +581,37 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1375481043"
-SIZE="241166"
+TIME="1375977786"
+SIZE="137896"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1375481288"
-SIZE="259072"
+TIME="1376571835"
+SIZE="259584"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1375481208"
-SIZE="259072"
+TIME="1375978266"
+SIZE="256512"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1375481288"
+TIME="1375978329"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1375481146"
+TIME="1375977882"
 SIZE="2442"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1375481177"
+TIME="1375977912"
 SIZE="983"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1375481156"
+TIME="1375977891"
 SIZE="1223"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -621,8 +621,8 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adc081s101.v,hdl"
 STATE="utd"
-TIME="1372867667"
-SIZE="3625"
+TIME="1376571323"
+SIZE="3557"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -676,8 +676,8 @@ SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1374586207"
-SIZE="56302"
+TIME="1376571382"
+SIZE="57391"
 ENDFILE
 VALUE "<project>\hdl\stonyman_apb3.v,hdl"
 STATE="utd"
@@ -756,7 +756,7 @@ SIZE="1672"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1375480971"
+TIME="1376571430"
 SIZE="665"
 PARENT="<project>\component\work\TOPLEVEL\TOPLEVEL.cxf"
 ENDFILE
@@ -878,17 +878,17 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\synthesis\synwork\TOPLEVEL_compiler.so,so"
 STATE="utd"
-TIME="1373394918"
+TIME="1375817743"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1375481024"
-SIZE="2440466"
+TIME="1375977768"
+SIZE="2355601"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1375481024"
+TIME="1375977768"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.v,syn_hdl"
@@ -903,12 +903,12 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1375481024"
+TIME="1375977768"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1375481026"
+TIME="1375977770"
 SIZE="6283"
 ENDFILE
 ENDLIST
@@ -1217,8 +1217,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -1338,8 +1338,10 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-StartPage;StartPage
-ACTIVEVIEW;StartPage
+SmartDesign;TOPLEVEL
+Reports;Reports
+SmartDesign;imaging
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "adc081s101::work","hdl\adc081s101.v","FALSE","FALSE"

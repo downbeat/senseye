@@ -32,9 +32,9 @@ output reg cs;
 output reg [(`ADC_RES-1):0] dataout;
 output reg conversionComplete;        // active low
 
-reg [2:0] cntrWaitLeading;
-reg [2:0] cntrWaitTrailing;
-reg [2:0] cntrWaitQuiet;
+reg [3:0] cntrWaitLeading;
+reg [3:0] cntrWaitTrailing;
+reg [3:0] cntrWaitQuiet;
 reg [3:0] bitsRead;
 
 
@@ -45,8 +45,7 @@ begin
       cs <= 1;
       cntrWaitQuiet <= 7; // just a guess
       conversionComplete <= 1;
-      // idle state expected bitsRead to be all, not 0
-      bitsRead <= `ADC_RES;
+      bitsRead <= 0;
    end
    else
    begin
@@ -79,6 +78,14 @@ begin
          bitsRead <= bitsRead + 1;
       end
 
+      // conversion is complete after the data is clocked out of the ADC
+      // (but the line won't be released until CS rises, preventing another
+      // conversion from starting)
+      if((`ADC_RES == bitsRead) && (0 == startCapture))
+      begin
+         conversionComplete <= 0;
+      end
+
       // state: waiting (trailing)
       if((0 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitTrailing))
       begin
@@ -89,19 +96,12 @@ begin
       if((0 == cs) && (`ADC_RES == bitsRead) && (0 == cntrWaitTrailing))
       begin
          cs <= 1;
-      end
-
-      // conversion is complete after the chip select rises (we'll wait one
-      // clock)
-      if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet) && (0 == startCapture))
-      begin
-         conversionComplete <= 0;
+         bitsRead <= 0;
       end
 
       // need to raise the conversion complete when the start capture line rises
       // (like an ACK)
-      if( (1 == cs) && (`ADC_RES == bitsRead) && (0 == conversionComplete)
-           && (0 < cntrWaitQuiet) && (1 == startCapture) )
+      if( (1 == cs) && (0 == conversionComplete) && (1 == startCapture) )
       begin
          conversionComplete <= 1;
       end
@@ -109,7 +109,7 @@ begin
       // state: quiet time
       // (counting while the conversion acknowledgement stuff goes on
       // simultaneously)
-      if((1 == cs) && (`ADC_RES == bitsRead) && (0 < cntrWaitQuiet))
+      if((1 == cs) && (0 < cntrWaitQuiet))
       begin
          cntrWaitQuiet <= cntrWaitQuiet - 1;
       end

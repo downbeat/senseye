@@ -45,8 +45,8 @@
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\fifo_px\fifo_px.v":5:7:5:13|Synthesizing module fifo_px
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1329:7:1329:9|Synthesizing module MX2
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\MUX2\MUX2.v":5:7:5:10|Synthesizing module MUX2
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":132:7:132:14|Synthesizing module stonyman
-@N: CL134 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":204:0:204:5|Found RAM cachedValue, depth=8, width=8
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":137:7:137:14|Synthesizing module stonyman
+@N: CL134 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Found RAM cachedValue, depth=8, width=8
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":197:7:197:20|Synthesizing module stonyman_ioreg
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":84:7:84:19|Synthesizing module stonyman_apb3
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\imaging\imaging.v":9:7:9:13|Synthesizing module imaging
@@ -69,8 +69,8 @@
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":284:0:284:5|Trying to extract state machine for register fifoRdenState_2_
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":284:0:284:5|Trying to extract state machine for register fifoRdenState_1_
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":284:0:284:5|Trying to extract state machine for register fifoRdenState_0_
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":204:0:204:5|Trying to extract state machine for register substate
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":204:0:204:5|Trying to extract state machine for register state
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Trying to extract state machine for register state
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":152:0:152:5|Trying to extract state machine for register CAHBtoAPB3OIl
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":646:0:646:5|Trying to extract state machine for register CAHBtoAPB3IOI
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v":494:0:494:5|Trying to extract state machine for register CAHBLTllOI

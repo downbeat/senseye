@@ -20,6 +20,11 @@
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
 
+`define ADC_RES_IN                 (8)
+`define PX_WIDTH_OUT               (8)
+
+`define PX_SUBTRACT_VAL            (8'h000)
+
 `define NUM_CHANNELS               4           // number of cameras which can be simultaneously controlled
 
 
@@ -134,10 +139,10 @@ module stonyman
 input wire clk,
 input wire reset,
 input wire startCapture,     // active low
-input wire [7:0] px0_in,
-input wire [7:0] px1_in,
-input wire [7:0] px2_in,
-input wire [7:0] px3_in,
+input wire [(`ADC_RES_IN-1):0] px0_in,
+input wire [(`ADC_RES_IN-1):0] px1_in,
+input wire [(`ADC_RES_IN-1):0] px2_in,
+input wire [(`ADC_RES_IN-1):0] px3_in,
 input wire adcConvComplete,  // active low
 output reg resp,
 output reg incp,
@@ -145,10 +150,10 @@ output reg resv,
 output reg incv,
 output reg inphi,
 output reg writeEnable,      // active low
-output reg [7:0] px0_out,
-output reg [7:0] px1_out,
-output reg [7:0] px2_out,
-output reg [7:0] px3_out,
+output reg [(`PX_WIDTH_OUT-1):0] px0_out,
+output reg [(`PX_WIDTH_OUT-1):0] px1_out,
+output reg [(`PX_WIDTH_OUT-1):0] px2_out,
+output reg [(`PX_WIDTH_OUT-1):0] px3_out,
 output reg clkAdc,
 output reg startAdcCapture,  // active low
 
@@ -169,6 +174,24 @@ reg [3:0] state;
 reg [4:0] substate;
 
 reg writePending;
+
+wire [(`PX_WIDTH_OUT-1):0] px0_subtracted;
+wire [(`PX_WIDTH_OUT-1):0] px1_subtracted;
+wire [(`PX_WIDTH_OUT-1):0] px2_subtracted;
+wire [(`PX_WIDTH_OUT-1):0] px3_subtracted;
+wire [(`PX_WIDTH_OUT-1):0] px0_processed;
+wire [(`PX_WIDTH_OUT-1):0] px1_processed;
+wire [(`PX_WIDTH_OUT-1):0] px2_processed;
+wire [(`PX_WIDTH_OUT-1):0] px3_processed;
+
+assign px0_subtracted = px0_in - (`PX_SUBTRACT_VAL);
+assign px1_subtracted = px1_in - (`PX_SUBTRACT_VAL);
+assign px2_subtracted = px2_in - (`PX_SUBTRACT_VAL);
+assign px3_subtracted = px3_in - (`PX_SUBTRACT_VAL);
+assign px0_processed = px0_subtracted[(`PX_WIDTH_OUT-1):0];
+assign px1_processed = px1_subtracted[(`PX_WIDTH_OUT-1):0];
+assign px2_processed = px2_subtracted[(`PX_WIDTH_OUT-1):0];
+assign px3_processed = px3_subtracted[(`PX_WIDTH_OUT-1):0];
 
 assign tp_stateout = ~state;
 assign tp_substateout = ~substate;
@@ -1236,10 +1259,10 @@ begin
                   if(0 == adcConvComplete)
                   begin
                      startAdcCapture <= 1'b1;
-                     px0_out <= px0_in;
-                     px1_out <= px1_in;
-                     px2_out <= px2_in;
-                     px3_out <= px3_in;
+                     px0_out <= px0_processed;
+                     px1_out <= px1_processed;
+                     px2_out <= px2_processed;
+                     px3_out <= px3_processed;
                      writePending <= 1'b1;
                      counterPixelsCaptured <= counterPixelsCaptured+1;
                      // TODO: is this a reasonable value?

@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Aug 02 18:03:44 2013
+# Timing Report written on Thu Aug 15 08:58:05 2013
 #
 
 
@@ -30,7 +30,7 @@ Starting Clock                     Frequency     Frequency     Period        Per
 ---------------------------------------------------------------------------------------------------------------------------------------
 FAB_CLK                            40.0 MHz      39.8 MHz      25.000        25.119        -0.119      declared     clk_group_0        
 FCLK                               40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
-stonyman|clkAdc_inferred_clock     80.0 MHz      28.4 MHz      12.500        35.236        -22.736     inferred     Inferred_clkgroup_0
+stonyman|clkAdc_inferred_clock     80.0 MHz      26.9 MHz      12.500        37.131        -24.631     inferred     Inferred_clkgroup_0
 System                             80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
 =======================================================================================================================================
 
