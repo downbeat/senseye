@@ -15,6 +15,7 @@
 //                                  stonyman_read and stonyman_interrupt.
 // 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
 //                                  both of which map to stonyman_interrupt.
+// 0.05   2013-08-15  russ          added support for reading partial images in stonyman_read.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -146,7 +147,8 @@ static unsigned                      g_flag_capture_running;
 // FIXME: below here is data which ought to be camera specific (and only 1 camera is implemented)
 static unsigned                      g_img_buf_head_idx        [NUM_CAMS];
 static unsigned                      g_img_buf_tail_idx        [NUM_CAMS];
-static unsigned                      g_img_buf_tail_readcount  [NUM_CAMS];
+static unsigned                      g_img_buf_head_bufpos     [NUM_CAMS];
+static unsigned                      g_img_buf_tail_bufpos     [NUM_CAMS];
 static uint8                        *g_img_buf                 [NUM_CAMS]  [IMG_BUF_QUEUE_LEN];
 
 
@@ -244,7 +246,8 @@ static int stonyman_init(void)
    {
       g_img_buf_head_idx       [ii]=0;
       g_img_buf_tail_idx       [ii]=0;
-      g_img_buf_tail_readcount [ii]=0;
+      g_img_buf_head_bufpos    [ii]=0;
+      g_img_buf_tail_bufpos    [ii]=0;
    }
 
    for(ii=0; ii<NUM_CAMS; ++ii)
@@ -446,43 +449,67 @@ static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count,
 
    // TODO: this function does not perform the most robust error handling
    // FIXME: the locking in this function is terrible!
+   // FIXME: each buffer should have it's own spinlock!
 
    tmp_irq_flags=0;
    spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
    if(g_img_buf_head_idx[0] == g_img_buf_tail_idx[0])
    {
-      spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
-      if(0 == g_flag_capture_running)
+      // check if we have data
+      // TODO: should I assert that g_img_buf_head_bufpos[camidx] <= g_img_buf_tail_bufpos[camidx]?
+      if(g_img_buf_head_bufpos[0] >= g_img_buf_tail_bufpos[0])
       {
-         // no data
-         // TODO: should be KERN_DEBUG
-         printk(KERN_INFO "stonyman_read: capture not running!\n");
+         if(0 == g_flag_capture_running)
+         {
+            // no data
+            // TODO: should be KERN_DEBUG
+            printk(KERN_INFO "stonyman_read: capture not running!\n");
+            // FIXME: is this the right return?
+            return -ENODATA;
+         }
+         else
+         {
+            // no data yet
+            return -EAGAIN;
+         }
       }
+      // don't read more data than available
       else
       {
-         // no data yet
-         return -EAGAIN;
+         count = g_img_buf_tail_bufpos[0] - g_img_buf_head_bufpos[0];
       }
    }
    else
    {
-      spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
+      // don't read past image boundaries (if there's more data, a repeat call to read will get it)
+      if((RESOLUTION-g_img_buf_head_bufpos[0]) < count)
+      {
+         count = RESOLUTION - g_img_buf_head_bufpos[0];
+      }
    }
 
-   if(RESOLUTION < count)
-   {
-      count = RESOLUTION;
-   }
+   spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
+
 
    // FIXME: cannot handle an error in the middle of a copy_to_user
    // FIXME: this routine assumes that the application never requests more than one frame at a time
-   if(0 != copy_to_user(buff, g_img_buf[0][g_img_buf_head_idx[0]], count))
+   // perform actual read from buffer
+   if(0 != copy_to_user( buff,
+              (const void*)(&g_img_buf[0][g_img_buf_head_idx[0]][g_img_buf_head_bufpos[0]]),
+              count ))
    {
       return -EFAULT;
    }
 
+
    spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
-   g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
+   g_img_buf_head_bufpos[0] += count;
+   // TODO: add assertion that g_img_buf_head_pos[camidx] never exceeds RESOLUTION
+   if((RESOLUTION-1) <= g_img_buf_head_bufpos[0])
+   {
+      g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
+      g_img_buf_head_bufpos[0] = 0;
+   }
    spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
 
    // FIXME: don't know what to do with these!
@@ -504,12 +531,13 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
    //unsigned tmp_readcount;
 
 
+   // FIXME: each buffer should have it's own spinlock!
    // TODO: r/w spinlocks are semantically better (although in this usecase are probably no better)
    // TODO: should be reader lock
    tmp_irq_flags = 0;
    spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
    // TODO: make me better!
-   //tmp_readcount = g_img_buf_tail_readcount
+   //tmp_readcount = g_img_buf_tail_bufpos
    spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
 
    // clear the camera FIFO
@@ -518,16 +546,16 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
       tmpdata=REG_CAMX_PXDATA(0);
       // store data
       // TODO: add mask functionality
-      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_readcount[0]+0] = (tmpdata>> 0)&0xFF;
-      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_readcount[0]+1] = (tmpdata>> 8)&0xFF;
-      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_readcount[0]+2] = (tmpdata>>16)&0xFF;
-      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_readcount[0]+3] = (tmpdata>>24)&0xFF;
-      g_img_buf_tail_readcount[0] += 4;
+      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_bufpos[0]+0] = (tmpdata>> 0)&0xFF;
+      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_bufpos[0]+1] = (tmpdata>> 8)&0xFF;
+      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_bufpos[0]+2] = (tmpdata>>16)&0xFF;
+      g_img_buf[0][g_img_buf_tail_idx[0]][g_img_buf_tail_bufpos[0]+3] = (tmpdata>>24)&0xFF;
+      g_img_buf_tail_bufpos[0] += 4;
    }
 
    REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM(0));
 
-   if(RESOLUTION == g_img_buf_tail_readcount[0])
+   if(RESOLUTION == g_img_buf_tail_bufpos[0])
    {
       printk(KERN_DEBUG "stonyman: read whole frame\n");
       g_img_buf_tail_idx[0]=(g_img_buf_tail_idx[0]+1)%IMG_BUF_QUEUE_LEN;
@@ -537,7 +565,7 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
       {
          g_img_buf_head_idx[0]=(g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
       }
-      g_img_buf_tail_readcount[0]=0;
+      g_img_buf_tail_bufpos[0]=0;
       // start another caputre
       if(0 != g_flag_capture_running)
       {

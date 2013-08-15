@@ -18,6 +18,7 @@
 //                                  stonyman_read and stonyman_interrupt.
 // 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
 //                                  both of which map to stonyman_interrupt.
+// 0.05   2013-08-15  russ          added support for reading partial images in stonyman_read.
 //
 // Stonyman linux device driver (LKM).
 ///////////////////////////////////////////////////////////////////////////////////////////////////
