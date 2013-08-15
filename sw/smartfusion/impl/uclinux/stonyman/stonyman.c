@@ -16,6 +16,8 @@
 // 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
 //                                  both of which map to stonyman_interrupt.
 // 0.05   2013-08-15  russ          added support for reading partial images in stonyman_read.
+// 0.06a  2013-08-15  russ          added auto-delay mode (TODO: there is currently no way to use it
+//                                  without recompilation; use ioctl)
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,6 +117,9 @@ typedef  unsigned char   uint8;
 
 #define IMG_BUF_QUEUE_LEN         (3)
 
+// TODO: auto-delay mode will be configurable via ioctl (currently requires recomilation to enable)
+#define FLAG_DEFAULT_AUTO_DELAY   (0)
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // local function prototypes
@@ -144,6 +149,7 @@ static struct class                 *stonyman_class;
 static struct device                *stonyman_device           [NUM_CAMS];
 static spinlock_t                   *stonyman_spinlock         [NUM_CAMS];
 static unsigned                      g_flag_capture_running;
+static unsigned                      g_flag_auto_delay_mode;
 // FIXME: below here is data which ought to be camera specific (and only 1 camera is implemented)
 static unsigned                      g_img_buf_head_idx        [NUM_CAMS];
 static unsigned                      g_img_buf_tail_idx        [NUM_CAMS];
@@ -242,6 +248,7 @@ static int stonyman_init(void)
 
    // initalize data
    g_flag_capture_running=0;
+   g_flag_auto_delay_mode=FLAG_DEFAULT_AUTO_DELAY;
    for(ii=0; ii<NUM_CAMS; ++ii)
    {
       g_img_buf_head_idx       [ii]=0;
@@ -504,10 +511,29 @@ static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count,
 
    spin_lock_irqsave(stonyman_spinlock[0], tmp_irq_flags);
    g_img_buf_head_bufpos[0] += count;
+
    // TODO: add assertion that g_img_buf_head_pos[camidx] never exceeds RESOLUTION
-   if((RESOLUTION-1) <= g_img_buf_head_bufpos[0])
+   if(RESOLUTION <= g_img_buf_head_bufpos[0])
    {
-      g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
+      // frame consumed
+
+      // in auto-delay mode, the capture is started when the space is cleared (here)
+      if( (0 != g_flag_auto_delay_mode) &&
+          (((g_img_buf_tail_idx[0]+1) % IMG_BUF_QUEUE_LEN) == g_img_buf_head_idx[0]) &&
+          (RESOLUTION == g_img_buf_tail_bufpos[0]) )
+      {
+         g_img_buf_tail_idx[0] = (g_img_buf_tail_idx[0]+1) % IMG_BUF_QUEUE_LEN;
+         g_img_buf_tail_bufpos[0] = 0;
+
+         // can't overrun
+         // FIXME: add assertion?
+
+         // start a new capture
+         REG_CTRL = 1u;
+      }
+
+      // move head bookkeeping
+      g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1) % IMG_BUF_QUEUE_LEN;
       g_img_buf_head_bufpos[0] = 0;
    }
    spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
@@ -558,18 +584,28 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
    if(RESOLUTION == g_img_buf_tail_bufpos[0])
    {
       printk(KERN_DEBUG "stonyman: read whole frame\n");
-      g_img_buf_tail_idx[0]=(g_img_buf_tail_idx[0]+1)%IMG_BUF_QUEUE_LEN;
-      // overrun
-      // TODO: this is an error (kinda).  how shall we report this to the application?
-      if(g_img_buf_tail_idx[0]==g_img_buf_head_idx[0])
+      if( (0 == g_flag_auto_delay_mode) ||
+          (((g_img_buf_tail_idx[0]+1) % IMG_BUF_QUEUE_LEN) != g_img_buf_head_idx[0]) )
       {
-         g_img_buf_head_idx[0]=(g_img_buf_head_idx[0]+1)%IMG_BUF_QUEUE_LEN;
+         g_img_buf_tail_idx[0] = (g_img_buf_tail_idx[0]+1) % IMG_BUF_QUEUE_LEN;
+         g_img_buf_tail_bufpos[0] = 0;
+
+         // overrun
+         // TODO: this is an error (kinda).  how shall we report this to the application?
+         if(g_img_buf_tail_idx[0] == g_img_buf_head_idx[0])
+         {
+            // FIXME: should I assert 0==g_flag_auto_delay_mode?
+            // if auto-delay mode is disabled, overrun the unread buffer
+            g_img_buf_head_idx[0] = (g_img_buf_head_idx[0]+1) % IMG_BUF_QUEUE_LEN;
+         }
+
+         // start a new capture
+         REG_CTRL = 1u;
       }
-      g_img_buf_tail_bufpos[0]=0;
-      // start another caputre
-      if(0 != g_flag_capture_running)
+      else
       {
-         REG_CTRL=1u;
+         // auto-delay mode and no free frame buffer
+         // do nothing: stonyman_read will perform the bookkeeping when a frame is consumed
       }
    }
    spin_unlock_irqrestore(stonyman_spinlock[0], tmp_irq_flags);
