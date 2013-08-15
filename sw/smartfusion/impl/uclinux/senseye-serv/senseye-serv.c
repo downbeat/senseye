@@ -364,7 +364,7 @@ static void request_send_data(int sd)
       else if(0 > tmp_px_read)
       {
          // error
-         fprintf(stderr,"read error from /dev/stonyman0 (errno=%d)!\n",errno);
+         fprintf(stderr,"read error from %s (errno=%d)!\n",STONY_DEVICE_FILENAME,errno);
          fprintf(stderr,"%s\n",strerror(errno));
          fflush(stderr);
          assert(0 < tmp_px_read);
