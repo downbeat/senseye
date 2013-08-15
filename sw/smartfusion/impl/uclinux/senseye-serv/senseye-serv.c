@@ -339,7 +339,7 @@ static void request_send_data(int sd)
 
    // send header
    send_len_ret = send(sd, (const void*)(&RESP_FRAME_HEADER), sizeof(RESP_FRAME_HEADER), 0);
-   fprintf(stderr,"send_len: %d\n",send_len_ret);
+   //fprintf(stderr,"send_len: %d\n",send_len_ret);
    if(sizeof(RESP_FRAME_HEADER) != send_len_ret)
    {
       fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
@@ -428,7 +428,7 @@ static void request_send_data(int sd)
    for(ii=0;ii<2;++ii)
    {
       send_len_ret = send(sd, (const void*)(img_buf[0]), RESOLUTION, 0);
-      fprintf(stderr,"send_len: %d\n",send_len_ret);
+      //fprintf(stderr,"send_len: %d\n",send_len_ret);
       if(RESOLUTION != send_len_ret)
       {
          fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
@@ -442,7 +442,7 @@ static void request_send_data(int sd)
    for(ii=0;ii<1;++ii)
    {
       send_len_ret = send(sd, (const void*)(img_buf[ii]), RESOLUTION, 0);
-      fprintf(stderr,"send_len: %d\n",send_len_ret);
+      //fprintf(stderr,"send_len: %d\n",send_len_ret);
       if(RESOLUTION != send_len_ret)
       {
          fprintf(stderr, "request_send_data: send call returns wrong length (%d)\n",send_len_ret);
@@ -451,6 +451,8 @@ static void request_send_data(int sd)
       }
    }
 #endif
+
+   fprintf(stderr,"frame complete\n");
 }
 
 //
