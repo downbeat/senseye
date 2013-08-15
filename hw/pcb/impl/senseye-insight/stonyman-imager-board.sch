@@ -6335,7 +6335,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="C2" gate="G$1" x="76.2" y="17.78" rot="R90"/>
 <instance part="C3" gate="G$1" x="27.94" y="0"/>
 <instance part="C4" gate="G$1" x="35.56" y="0"/>
-<instance part="R1" gate="G$1" x="40.64" y="43.18"/>
+<instance part="R1" gate="G$1" x="43.18" y="40.64"/>
 <instance part="U1" gate="G$1" x="104.14" y="35.56"/>
 <instance part="J1" gate="G$1" x="106.68" y="6.35"/>
 <instance part="C5" gate="G$1" x="66.04" y="30.48" rot="R90"/>
@@ -6393,8 +6393,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<label x="45.72" y="43.18" size="1.778" layer="95"/>
-<wire x1="45.72" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
+<label x="48.26" y="40.64" size="1.778" layer="95"/>
+<wire x1="48.26" y1="40.64" x2="58.42" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RESP" class="0">
@@ -6479,8 +6479,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="43.18" x2="27.94" y2="43.18" width="0.1524" layer="91"/>
-<label x="27.94" y="43.18" size="1.778" layer="95"/>
+<wire x1="38.1" y1="40.64" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
+<label x="30.48" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ANALOG" class="0">
