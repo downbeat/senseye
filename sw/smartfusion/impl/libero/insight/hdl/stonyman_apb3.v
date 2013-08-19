@@ -5,6 +5,7 @@
 // File history:
 //      0.01: 2013-03-05: created
 //      0.02: 2013-06-13: added support for 4 cameras
+//      0.03a:2013-08-15: IN PROGRESS: added support for 16 cameras (4 control sets of 4 cameras each)
 //
 // Description:
 //
@@ -20,63 +21,81 @@
 /////////////////////////////////////////////////
 // offset       behavior  name           fields (msb...lsb)
 // -----------  --------  -------------  ----------------------------
-// 0x0000_0000  w         GLOB_STARTCAP  xxxxxxxx _ xxxxxxxx _ xxxxxxxx _ xxxxxxx startcap
-// 0x0000_0000  r         GLOB_STATUS    00000000 _ 00000000 _ 00000000 _ 0000000 busy
+// 0x0000_0000  w         GLOB_START       xxxxxxxx _ xxxxxxxx _
+//                                         xxxxxxxx _ xxxx cg3_start cg2_start cg1_start cg0_start
+// 0x0000_0000  r         GLOB_STATUS      00000000 _ 00000000 _
+//                                         00000000 _ 0000 cg3_busy cg2_busy cg1_busy cg0_busy
 // 0x0000_0004  n/a       RESERVED
 // ...          n/a       RESERVED
 // 0x0000_007C  n/a       RESERVED
-// 0x0000_0080  r         CAM0_STATUS    00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
-// 0x0000_0084  r         CAM0_PXDATA    data[32]
-// 0x0000_0088  n/a       RESERVED
-// ...          n/a       RESERVED
-// 0x0000_009C  n/a       RESERVED
-// 0x0000_00A0  r         CAM1_STATUS    00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
-// 0x0000_00A4  r         CAM1_PXDATA    data[32]
-// 0x0000_0088  n/a       RESERVED
-// ...          n/a       RESERVED
-// 0x0000_009C  n/a       RESERVED
-// 0x0000_00C0  r         CAM2_STATUS    00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
-// 0x0000_00C4  r         CAM2_PXDATA    data[32]
-// 0x0000_0088  n/a       RESERVED
-// ...          n/a       RESERVED
-// 0x0000_009C  n/a       RESERVED
-// 0x0000_00E0  r         CAM3_STATUS    00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
-// 0x0000_00E4  r         CAM3_PXDATA    data[32]
-// 0x0000_0088  n/a       RESERVED
-// ...          n/a       RESERVED
-// 0x0000_009C  n/a       RESERVED
+// 0x0000_0080  r         CG0_CAM0_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_0084  r         CG0_CAM0_PXDATA  data[32]
+// 0x0000_0088  r         CG0_CAM1_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_008C  r         CG0_CAM1_PXDATA  data[32]
+// 0x0000_0090  r         CG0_CAM2_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_0094  r         CG0_CAM2_PXDATA  data[32]
+// 0x0000_0098  r         CG0_CAM3_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_009C  r         CG0_CAM3_PXDATA  data[32]
+// 0x0000_00A0  r         CG1_CAM0_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00A4  r         CG1_CAM0_PXDATA  data[32]
+// 0x0000_00A8  r         CG1_CAM1_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00AC  r         CG1_CAM1_PXDATA  data[32]
+// 0x0000_00B0  r         CG1_CAM2_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00B4  r         CG1_CAM2_PXDATA  data[32]
+// 0x0000_00B8  r         CG1_CAM3_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00BC  r         CG1_CAM3_PXDATA  data[32]
+// 0x0000_00C0  r         CG2_CAM0_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00C4  r         CG2_CAM0_PXDATA  data[32]
+// 0x0000_00C8  r         CG2_CAM1_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00CC  r         CG2_CAM1_PXDATA  data[32]
+// 0x0000_00D0  r         CG2_CAM2_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00D4  r         CG2_CAM2_PXDATA  data[32]
+// 0x0000_00D8  r         CG2_CAM3_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00DC  r         CG2_CAM3_PXDATA  data[32]
+// 0x0000_00E0  r         CG3_CAM0_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00E4  r         CG3_CAM0_PXDATA  data[32]
+// 0x0000_00E8  r         CG3_CAM1_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00EC  r         CG3_CAM1_PXDATA  data[32]
+// 0x0000_00F0  r         CG3_CAM2_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00F4  r         CG3_CAM2_PXDATA  data[32]
+// 0x0000_00F8  r         CG3_CAM3_STATUS  00000000 _ 00000000 _ 00000000 _ 0000 overflow afull full empty
+// 0x0000_00FC  r         CG3_CAM3_PXDATA  data[32]
 ///////////////////////////////////////////////////////////////////////////////
 
 
-`define WIDTH                       32
-`define ADDR_WIDTH                  32  // no reason to change this ever
+`define WIDTH                        (32)
+`define WIDTH_ALL_ZEROES             (32'd0)
+`define ADDR_WIDTH                   (32)  // no reason to change this ever
 
-`define NUM_CHANNELS                4   // number of cameras which can be simultaneously controlled
+`define NUM_CONTROL_GROUPS           (4)   // number of "control groups" of cameras
+`define NUM_CHANNELS_PER_CG          (4)   // num of cams simultaneously controlled within a control set
 
-`define MASK_REG_RANGE              ('hFF)
-// decode the CAMX_... address:
-// 8 bits (msb...lsb): cam-reg-ind cam-sel[2] cam-reg-sel[5]
-`define MASK_REG_RANGE_CAM_IND      ('h80)
-`define MASK_REG_RANGE_CAM_SEL      ('h60)
-`define MASK_REG_RANGE_CAM_REG_SEL  ('h1F)
-`define SHIFT_REG_RANGE_CAM_SEL     (5)
-`define REG_OFFSET_GLOB_STARTCAP    ('h00)
-`define REG_OFFSET_GLOB_STATUS      ('h00)
-`define REG_OFFSET_CAMX_STATUS      ('h00)
-`define REG_OFFSET_CAMX_PXDATA      ('h04)
-`define REG_SET_OFFSET_CAM0         ('h80)
-`define REG_SET_OFFSET_CAM1         ('hA0)
-`define REG_SET_OFFSET_CAM2         ('hC0)
-`define REG_SET_OFFSET_CAM3         ('hE0)
+`define MASK_REG_RANGE               ('hFF)
+// decode the CGX_CAMY_... address:
+// 8 bits (msb...lsb): cam-reg-ind cq-sel[2] cam-sel[2] cam-reg-sel[1] x x
+`define REG_RANGE_CAM_REG_IND_SHIFT  ('d7)
+`define REG_RANGE_CAM_REG_IND_WIDTH  ('d1)
+`define REG_RANGE_CG_SEL_SHIFT       ('d5)
+`define REG_RANGE_CG_SEL_WIDTH       ('d2)
+`define REG_RANGE_CAM_SEL_SHIFT      ('d3)
+`define REG_RANGE_CAM_SEL_WIDTH      ('d2)
+`define REG_RANGE_CAM_REG_SEL_SHIFT  ('d2)
+`define REG_RANGE_CAM_REG_SEL_WIDTH  ('d1)
+`define REG_OFFSET_GLOB_START        ('h00)
+`define REG_OFFSET_GLOB_STATUS       ('h00)
+`define REG_OFFSET_CAMX_STATUS       ('h00)
+`define REG_OFFSET_CAMX_PXDATA       ('h04)
 
-`define FIFO_RDEN_S_IDLE            ('d0)
-`define FIFO_RDEN_S_RAISE           ('d1)
-`define FIFO_RDEN_S_WAIT            ('d2)
-`define FIFO_RDEN_S_READY           ('d3)
-`define FIFO_RDEN_S_WAIT_AFTER      ('d4)
+//`define REG_GLOB_STATUS_RESERVED     (28'd0)
+`define REG_GLOB_STATUS_RESERVED     (31'd0)
+`define REG_CAMX_STATUS_RESERVED     (28'd0)
 
-`define REG_GLOB_STATUS_RESERVED    (31'd0)
-`define REG_CAMX_STATUS_RESERVED    (27'd0)
+`define FIFO_RDEN_S_VAR_BIT_WIDTH    ('d3)
+`define FIFO_RDEN_S_IDLE             ('d0)
+`define FIFO_RDEN_S_RAISE            ('d1)
+`define FIFO_RDEN_S_WAIT             ('d2)
+`define FIFO_RDEN_S_READY            ('d3)
+`define FIFO_RDEN_S_WAIT_AFTER       ('d4)
 
 
 //////////////////////////////////////////////////////////////////////
@@ -97,32 +116,110 @@ input wire  [(`WIDTH-1):0]       PWDATA,
 output wire [(`WIDTH-1):0]       PRDATA,
 
 /* APPLICATION SPECIFIC SIGNALS */
-input wire                       BUSY,
-input wire                       CAM0_FIFO_EMPTY,
-input wire                       CAM1_FIFO_EMPTY,
-input wire                       CAM2_FIFO_EMPTY,
-input wire                       CAM3_FIFO_EMPTY,
-input wire                       CAM0_FIFO_FULL,
-input wire                       CAM1_FIFO_FULL,
-input wire                       CAM2_FIFO_FULL,
-input wire                       CAM3_FIFO_FULL,
-input wire                       CAM0_FIFO_AFULL,
-input wire                       CAM1_FIFO_AFULL,
-input wire                       CAM2_FIFO_AFULL,
-input wire                       CAM3_FIFO_AFULL,
-input wire                       CAM0_FIFO_OVERFLOW,
-input wire                       CAM1_FIFO_OVERFLOW,
-input wire                       CAM2_FIFO_OVERFLOW,
-input wire                       CAM3_FIFO_OVERFLOW,
-output wire                      CAM0_FIFO_RDEN,       // active low
-output wire                      CAM1_FIFO_RDEN,       // active low
-output wire                      CAM2_FIFO_RDEN,       // active low
-output wire                      CAM3_FIFO_RDEN,       // active low
-input wire  [(`WIDTH-1):0]       CAM0_PIXELSIN,
-input wire  [(`WIDTH-1):0]       CAM1_PIXELSIN,
-input wire  [(`WIDTH-1):0]       CAM2_PIXELSIN,
-input wire  [(`WIDTH-1):0]       CAM3_PIXELSIN,
-output wire                      START_CAPTURE         // active low
+input wire                       CG0_BUSY,
+input wire                       CG0_CAM0_FIFO_EMPTY,
+input wire                       CG0_CAM0_FIFO_FULL,
+input wire                       CG0_CAM0_FIFO_AFULL,
+input wire                       CG0_CAM0_FIFO_OVERFLOW,
+output wire                      CG0_CAM0_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG0_CAM0_PIXELSIN,
+input wire                       CG0_CAM1_FIFO_EMPTY,
+input wire                       CG0_CAM1_FIFO_FULL,
+input wire                       CG0_CAM1_FIFO_AFULL,
+input wire                       CG0_CAM1_FIFO_OVERFLOW,
+output wire                      CG0_CAM1_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG0_CAM1_PIXELSIN,
+input wire                       CG0_CAM2_FIFO_EMPTY,
+input wire                       CG0_CAM2_FIFO_FULL,
+input wire                       CG0_CAM2_FIFO_AFULL,
+input wire                       CG0_CAM2_FIFO_OVERFLOW,
+output wire                      CG0_CAM2_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG0_CAM2_PIXELSIN,
+input wire                       CG0_CAM3_FIFO_EMPTY,
+input wire                       CG0_CAM3_FIFO_FULL,
+input wire                       CG0_CAM3_FIFO_AFULL,
+input wire                       CG0_CAM3_FIFO_OVERFLOW,
+output wire                      CG0_CAM3_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG0_CAM3_PIXELSIN,
+output wire                      CG0_START_CAPTURE,         // active low
+input wire                       CG1_BUSY,
+input wire                       CG1_CAM0_FIFO_EMPTY,
+input wire                       CG1_CAM0_FIFO_FULL,
+input wire                       CG1_CAM0_FIFO_AFULL,
+input wire                       CG1_CAM0_FIFO_OVERFLOW,
+output wire                      CG1_CAM0_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG1_CAM0_PIXELSIN,
+input wire                       CG1_CAM1_FIFO_EMPTY,
+input wire                       CG1_CAM1_FIFO_FULL,
+input wire                       CG1_CAM1_FIFO_AFULL,
+input wire                       CG1_CAM1_FIFO_OVERFLOW,
+output wire                      CG1_CAM1_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG1_CAM1_PIXELSIN,
+input wire                       CG1_CAM2_FIFO_EMPTY,
+input wire                       CG1_CAM2_FIFO_FULL,
+input wire                       CG1_CAM2_FIFO_AFULL,
+input wire                       CG1_CAM2_FIFO_OVERFLOW,
+output wire                      CG1_CAM2_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG1_CAM2_PIXELSIN,
+input wire                       CG1_CAM3_FIFO_EMPTY,
+input wire                       CG1_CAM3_FIFO_FULL,
+input wire                       CG1_CAM3_FIFO_AFULL,
+input wire                       CG1_CAM3_FIFO_OVERFLOW,
+output wire                      CG1_CAM3_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG1_CAM3_PIXELSIN,
+output wire                      CG1_START_CAPTURE,         // active low
+input wire                       CG2_BUSY,
+input wire                       CG2_CAM0_FIFO_EMPTY,
+input wire                       CG2_CAM0_FIFO_FULL,
+input wire                       CG2_CAM0_FIFO_AFULL,
+input wire                       CG2_CAM0_FIFO_OVERFLOW,
+output wire                      CG2_CAM0_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG2_CAM0_PIXELSIN,
+input wire                       CG2_CAM1_FIFO_EMPTY,
+input wire                       CG2_CAM1_FIFO_FULL,
+input wire                       CG2_CAM1_FIFO_AFULL,
+input wire                       CG2_CAM1_FIFO_OVERFLOW,
+output wire                      CG2_CAM1_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG2_CAM1_PIXELSIN,
+input wire                       CG2_CAM2_FIFO_EMPTY,
+input wire                       CG2_CAM2_FIFO_FULL,
+input wire                       CG2_CAM2_FIFO_AFULL,
+input wire                       CG2_CAM2_FIFO_OVERFLOW,
+output wire                      CG2_CAM2_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG2_CAM2_PIXELSIN,
+input wire                       CG2_CAM3_FIFO_EMPTY,
+input wire                       CG2_CAM3_FIFO_FULL,
+input wire                       CG2_CAM3_FIFO_AFULL,
+input wire                       CG2_CAM3_FIFO_OVERFLOW,
+output wire                      CG2_CAM3_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG2_CAM3_PIXELSIN,
+output wire                      CG2_START_CAPTURE,         // active low
+input wire                       CG3_BUSY,
+input wire                       CG3_CAM0_FIFO_EMPTY,
+input wire                       CG3_CAM0_FIFO_FULL,
+input wire                       CG3_CAM0_FIFO_AFULL,
+input wire                       CG3_CAM0_FIFO_OVERFLOW,
+output wire                      CG3_CAM0_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG3_CAM0_PIXELSIN,
+input wire                       CG3_CAM1_FIFO_EMPTY,
+input wire                       CG3_CAM1_FIFO_FULL,
+input wire                       CG3_CAM1_FIFO_AFULL,
+input wire                       CG3_CAM1_FIFO_OVERFLOW,
+output wire                      CG3_CAM1_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG3_CAM1_PIXELSIN,
+input wire                       CG3_CAM2_FIFO_EMPTY,
+input wire                       CG3_CAM2_FIFO_FULL,
+input wire                       CG3_CAM2_FIFO_AFULL,
+input wire                       CG3_CAM2_FIFO_OVERFLOW,
+output wire                      CG3_CAM2_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG3_CAM2_PIXELSIN,
+input wire                       CG3_CAM3_FIFO_EMPTY,
+input wire                       CG3_CAM3_FIFO_FULL,
+input wire                       CG3_CAM3_FIFO_AFULL,
+input wire                       CG3_CAM3_FIFO_OVERFLOW,
+output wire                      CG3_CAM3_FIFO_RDEN,       // active low
+input wire  [(`WIDTH-1):0]       CG3_CAM3_PIXELSIN,
+output wire                      CG3_START_CAPTURE          // active low
 );
 
 wire bus_write_enable;
@@ -146,10 +243,10 @@ assign bus_read_enable = (!PWRITE && PSEL);
 
 
 // don't actually read the Fifo if it's empty
-assign CAM0_FIFO_RDEN = !(ioreg_cam0_fifo_rden && !CAM0_FIFO_EMPTY);
-assign CAM1_FIFO_RDEN = !(ioreg_cam1_fifo_rden && !CAM1_FIFO_EMPTY);
-assign CAM2_FIFO_RDEN = !(ioreg_cam2_fifo_rden && !CAM2_FIFO_EMPTY);
-assign CAM3_FIFO_RDEN = !(ioreg_cam3_fifo_rden && !CAM3_FIFO_EMPTY);
+assign CG0_CAM0_FIFO_RDEN = !(ioreg_cam0_fifo_rden && !CG0_CAM0_FIFO_EMPTY);
+assign CG0_CAM1_FIFO_RDEN = !(ioreg_cam1_fifo_rden && !CG0_CAM1_FIFO_EMPTY);
+assign CG0_CAM2_FIFO_RDEN = !(ioreg_cam2_fifo_rden && !CG0_CAM2_FIFO_EMPTY);
+assign CG0_CAM3_FIFO_RDEN = !(ioreg_cam3_fifo_rden && !CG0_CAM3_FIFO_EMPTY);
 
 
 stonyman_ioreg stonyman_ioreg_0( 
@@ -165,28 +262,28 @@ stonyman_ioreg stonyman_ioreg_0(
    .cam3fifoRden(ioreg_cam3_fifo_rden),
    .datain(PWDATA),
    .dataout(PRDATA),
-   .busy(BUSY),
-   .cam0empty(CAM0_FIFO_EMPTY),
-   .cam1empty(CAM1_FIFO_EMPTY),
-   .cam2empty(CAM2_FIFO_EMPTY),
-   .cam3empty(CAM3_FIFO_EMPTY),
-   .cam0full(CAM0_FIFO_FULL),
-   .cam1full(CAM1_FIFO_AFULL),
-   .cam2full(CAM2_FIFO_AFULL),
-   .cam3full(CAM3_FIFO_AFULL),
-   .cam0afull(CAM0_FIFO_AFULL),
-   .cam1afull(CAM1_FIFO_AFULL),
-   .cam2afull(CAM0_FIFO_AFULL),
-   .cam3afull(CAM0_FIFO_AFULL),
-   .cam0overflow(CAM0_FIFO_OVERFLOW),
-   .cam1overflow(CAM1_FIFO_OVERFLOW),
-   .cam2overflow(CAM2_FIFO_OVERFLOW),
-   .cam3overflow(CAM3_FIFO_OVERFLOW),
-   .cam0pxDatain(CAM0_PIXELSIN),
-   .cam1pxDatain(CAM1_PIXELSIN),
-   .cam2pxDatain(CAM2_PIXELSIN),
-   .cam3pxDatain(CAM3_PIXELSIN),
-   .startCapture(START_CAPTURE)
+   .busy(CG0_BUSY),
+   .cam0empty(CG0_CAM0_FIFO_EMPTY),
+   .cam1empty(CG0_CAM1_FIFO_EMPTY),
+   .cam2empty(CG0_CAM2_FIFO_EMPTY),
+   .cam3empty(CG0_CAM3_FIFO_EMPTY),
+   .cam0full(CG0_CAM0_FIFO_FULL),
+   .cam1full(CG0_CAM1_FIFO_AFULL),
+   .cam2full(CG0_CAM2_FIFO_AFULL),
+   .cam3full(CG0_CAM3_FIFO_AFULL),
+   .cam0afull(CG0_CAM0_FIFO_AFULL),
+   .cam1afull(CG0_CAM1_FIFO_AFULL),
+   .cam2afull(CG0_CAM0_FIFO_AFULL),
+   .cam3afull(CG0_CAM0_FIFO_AFULL),
+   .cam0overflow(CG0_CAM0_FIFO_OVERFLOW),
+   .cam1overflow(CG0_CAM1_FIFO_OVERFLOW),
+   .cam2overflow(CG0_CAM2_FIFO_OVERFLOW),
+   .cam3overflow(CG0_CAM3_FIFO_OVERFLOW),
+   .cam0pxDatain(CG0_CAM0_PIXELSIN),
+   .cam1pxDatain(CG0_CAM1_PIXELSIN),
+   .cam2pxDatain(CG0_CAM2_PIXELSIN),
+   .cam3pxDatain(CG0_CAM3_PIXELSIN),
+   .startCapture(CG0_START_CAPTURE)
 );
 
 endmodule
@@ -285,7 +382,7 @@ always@ (posedge clk)
 begin
    if(0 == rst)
    begin
-      dataout <= `WIDTH'd0;
+      dataout <= `WIDTH_ALL_ZEROES;
       fifoRden[0] <= 1'b0;
       fifoRden[1] <= 1'b0;
       fifoRden[2] <= 1'b0;
@@ -349,21 +446,21 @@ begin
             // BAD: CAM register unknown
             else
             begin
-               dataout <= `WIDTH'd0;
+               dataout <= `WIDTH_ALL_ZEROES;
                ready <= 1'b1;
             end
          end
          else
          begin
-            dataout <= `WIDTH'd0;
+            dataout <= `WIDTH_ALL_ZEROES;
             ready <= 1'b1;
          end
       end
       // WRITE REGISTER
       else if(1'b1 == wren)
       begin
-         // GLOB_STARTCAP
-         if(`REG_OFFSET_GLOB_STARTCAP == (`MASK_REG_RANGE&addr))
+         // GLOB_START
+         if(`REG_OFFSET_GLOB_START == (`MASK_REG_RANGE&addr))
          begin
             if(0 != (1&datain[0]))
             begin

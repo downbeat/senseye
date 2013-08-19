@@ -5,7 +5,7 @@
 Product: Designer
 Release: v10.1 SP3
 Version: 10.1.3.1
-Date: Thu Aug 15 09:00:02 2013
+Date: Mon Aug 19 12:30:51 2013
 Design Name: TOPLEVEL  Family: SmartFusion  Die: A2F500M3G  Package: 484 FBGA
 Design State: Post-Layout
 
@@ -15,12 +15,10 @@ The following nets have been routed to a chip global resource:
     ----------------------
     581               Net   : FAB_CLK
                       Driver: MSS_CORE2_0/MSS_CCC_0/I_MSSCCC/U_TILE2
-    635               Net   : MSS_CORE2_0_M2F_RESET_N
+    646               Net   : MSS_CORE2_0_M2F_RESET_N
                       Driver: MSS_CORE2_0/MSS_ADLIB_INST_RNI7863/U_CLKSRC/U_GL
-    213               Net   : imaging_0/stonyman_0_clkAdc
+    209               Net   : imaging_0/stonyman_0_clkAdc
                       Driver: imaging_0/stonyman_0/clkAdc_RNI3VR2/U_CLKSRC/U_GL
-    53                Net   : imaging_0/stonyman_0/counterWait8
-                      Driver: imaging_0/stonyman_0/counterWait_RNIC6GU1_0[20]/U_CLKSRC/U_GL
 
 
 

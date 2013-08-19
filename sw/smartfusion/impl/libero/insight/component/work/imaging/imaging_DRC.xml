@@ -3,31 +3,17 @@
 <drcreport>
   <header>imaging</header>
   <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin stonyman_apb3_0:CAM2_FIFO_OVERFLOW</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/stonyman_apb3_0:CAM2_FIFO_OVERFLOW</crossprobe>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin imaging:px3_adc_din</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/imaging:px3_adc_din</crossprobe>
   </drc>
   <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin stonyman_apb3_0:CAM3_FIFO_OVERFLOW</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/stonyman_apb3_0:CAM3_FIFO_OVERFLOW</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin CAM2_PIXELSIN</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/stonyman_apb3_0:CAM2_PIXELSIN</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin CAM3_PIXELSIN</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/stonyman_apb3_0:CAM3_PIXELSIN</crossprobe>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin imaging:px2_adc_din</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/imaging/pins/imaging:px2_adc_din</crossprobe>
   </drc>
 </drcreport>

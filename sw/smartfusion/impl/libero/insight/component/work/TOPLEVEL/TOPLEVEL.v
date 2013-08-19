@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Aug 15 08:57:09 2013
+// Created by SmartDesign Mon Aug 19 12:27:58 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,6 @@ module TOPLEVEL(
     UART_0_RXD,
     px0_adc_din,
     px1_adc_din,
-    px2_adc_din,
     // Outputs
     CS,
     MAC_MDC,
@@ -71,7 +70,6 @@ input         MSS_RESET_N;
 input         UART_0_RXD;
 input         px0_adc_din;
 input         px1_adc_din;
-input         px2_adc_din;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -193,7 +191,6 @@ wire          nwe;
 wire   [24:0] psram_address_net_0;
 wire          px0_adc_din;
 wire          px1_adc_din;
-wire          px2_adc_din;
 wire          resp_net_0;
 wire          resv_net_0;
 wire          SCLK_net_0;
@@ -1002,10 +999,8 @@ imaging imaging_0(
         // Inputs
         .reset              ( MSS_CORE2_0_M2F_RESET_N ),
         .clk                ( net_30 ),
-        .px3_adc_din        ( GND_net ),
         .px0_adc_din        ( px0_adc_din ),
         .px1_adc_din        ( px1_adc_din ),
-        .px2_adc_din        ( px2_adc_din ),
         .PENABLE            ( CoreAPB3_0_APBmslave0_0_PENABLE ),
         .PWRITE             ( CoreAPB3_0_APBmslave0_0_PWRITE ),
         .PSEL               ( CoreAPB3_0_APBmslave0_0_PSELx ),
@@ -1018,8 +1013,6 @@ imaging imaging_0(
         .resp               ( resp_net_0 ),
         .resv               ( resv_net_0 ),
         .incp               ( incp_net_0 ),
-        .PREADY             ( CoreAPB3_0_APBmslave0_0_PREADY ),
-        .PSLVERR            ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
         .px_adc_sclk        ( SCLK_net_0 ),
         .tp_startcap        ( TP_START_CAPTURE_net_0 ),
         .busy               ( TP_BUSY_net_0 ),
@@ -1034,9 +1027,11 @@ imaging imaging_0(
         .afull_cam1         (  ),
         .afull_cam2         (  ),
         .afull_cam3         (  ),
-        .PRDATA             ( CoreAPB3_0_APBmslave0_0_PRDATA ),
+        .PREADY             ( CoreAPB3_0_APBmslave0_0_PREADY ),
+        .PSLVERR            ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
         .tp_stateout        ( led_net_0 ),
-        .tp_substateout     ( led_0 ) 
+        .tp_substateout     ( led_0 ),
+        .PRDATA             ( CoreAPB3_0_APBmslave0_0_PRDATA ) 
         );
 
 //--------MSS_CORE2

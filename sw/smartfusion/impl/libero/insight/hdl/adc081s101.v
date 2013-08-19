@@ -32,9 +32,9 @@ output reg cs;
 output reg [(`ADC_RES-1):0] dataout;
 output reg conversionComplete;        // active low
 
-reg [3:0] cntrWaitLeading;
-reg [3:0] cntrWaitTrailing;
-reg [3:0] cntrWaitQuiet;
+reg [2:0] cntrWaitLeading;
+reg [2:0] cntrWaitTrailing;
+reg [2:0] cntrWaitQuiet;
 reg [3:0] bitsRead;
 
 

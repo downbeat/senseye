@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Thu Aug 15 08:57:09 2013
+// Created by Actel SmartDesign Mon Aug 19 12:27:58 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -52,7 +52,6 @@ TOPLEVEL TOPLEVEL_0 (
     .MAINXIN({1{1'b0}}),
     .px1_adc_din({1{1'b0}}),
     .px0_adc_din({1{1'b0}}),
-    .px2_adc_din({1{1'b0}}),
     .MAC_RXD({2{1'b0}}),
 
     // Outputs

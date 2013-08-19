@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Thu Aug 15 08:56:34 2013
+// Created by Actel SmartDesign Mon Aug 19 12:26:50 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -46,10 +46,8 @@ imaging imaging_0 (
     // Inputs
     .reset(NSYSRESET),
     .clk(SYSCLK),
-    .px3_adc_din({1{1'b0}}),
     .px0_adc_din({1{1'b0}}),
     .px1_adc_din({1{1'b0}}),
-    .px2_adc_din({1{1'b0}}),
     .PENABLE({1{1'b0}}),
     .PWRITE({1{1'b0}}),
     .PSEL({1{1'b0}}),
@@ -63,8 +61,6 @@ imaging imaging_0 (
     .resp( ),
     .resv( ),
     .incp( ),
-    .PREADY( ),
-    .PSLVERR( ),
     .px_adc_sclk( ),
     .tp_startcap( ),
     .busy( ),
@@ -79,9 +75,11 @@ imaging imaging_0 (
     .afull_cam1( ),
     .afull_cam2( ),
     .afull_cam3( ),
-    .PRDATA( ),
+    .PREADY( ),
+    .PSLVERR( ),
     .tp_stateout( ),
-    .tp_substateout( )
+    .tp_substateout( ),
+    .PRDATA( )
 
     // Inouts
 
