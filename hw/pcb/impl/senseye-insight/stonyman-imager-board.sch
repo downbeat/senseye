@@ -200,26 +200,6 @@
 <pad name="11" x="5.08" y="0" drill="0.7112" diameter="1.016"/>
 <pad name="12" x="6.35" y="0" drill="0.7112" diameter="1.016"/>
 </package>
-<package name="HEADER2X6/0.05IN">
-<wire x1="-3.937" y1="1.397" x2="-3.937" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="-3.937" y1="-1.397" x2="3.937" y2="-1.397" width="0.127" layer="21"/>
-<wire x1="3.937" y1="-1.397" x2="3.937" y2="1.397" width="0.127" layer="21"/>
-<wire x1="3.937" y1="1.397" x2="-3.937" y2="1.397" width="0.127" layer="21"/>
-<pad name="1" x="-3.175" y="0.635" drill="0.7112" diameter="1.016" shape="square" first="yes"/>
-<pad name="3" x="-1.905" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="5" x="-0.635" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="7" x="0.635" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="9" x="1.905" y="0.635" drill="0.7112" diameter="1.016"/>
-<pad name="11" x="3.175" y="0.635" drill="0.7112" diameter="1.016"/>
-<text x="-4.191" y="-1.397" size="1.016" layer="25" font="vector" ratio="12" rot="R90">&gt;NAME</text>
-<text x="5.207" y="-1.397" size="1.016" layer="27" font="vector" ratio="12" rot="R90">&gt;VALUE</text>
-<pad name="4" x="-1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="6" x="-0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="8" x="0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="10" x="1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="12" x="3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
-<pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016" first="yes"/>
-</package>
 <package name="HEADER2X6/0.05IN_NO_SILK">
 <text x="-4.191" y="-1.397" size="0.762" layer="25" rot="R90">&gt;NAME</text>
 <text x="5.207" y="-1.397" size="0.762" layer="27" font="vector" rot="R90">&gt;VALUE</text>
@@ -247,6 +227,31 @@
 <rectangle x1="1.6891" y1="-0.8509" x2="2.1209" y2="-0.4191" layer="51" rot="R90"/>
 <rectangle x1="2.9591" y1="-0.8509" x2="3.3909" y2="-0.4191" layer="51" rot="R90"/>
 <rectangle x1="2.9591" y1="0.4191" x2="3.3909" y2="0.8509" layer="51" rot="R90"/>
+<wire x1="-3.937" y1="1.397" x2="-3.937" y2="-1.397" width="0.127" layer="51"/>
+<wire x1="-3.937" y1="-1.397" x2="3.937" y2="-1.397" width="0.127" layer="51"/>
+<wire x1="3.937" y1="-1.397" x2="3.937" y2="1.397" width="0.127" layer="51"/>
+<wire x1="3.937" y1="1.397" x2="-3.937" y2="1.397" width="0.127" layer="51"/>
+</package>
+<package name="HEADER2X6/0.05IN">
+<wire x1="-3.937" y1="1.397" x2="-3.937" y2="-1.397" width="0.127" layer="21"/>
+<wire x1="-3.937" y1="-1.397" x2="3.937" y2="-1.397" width="0.127" layer="21"/>
+<wire x1="3.937" y1="-1.397" x2="3.937" y2="1.397" width="0.127" layer="21"/>
+<wire x1="3.937" y1="1.397" x2="-3.937" y2="1.397" width="0.127" layer="21"/>
+<pad name="1" x="-3.175" y="0.635" drill="0.7112" diameter="1.016" shape="square" first="yes"/>
+<pad name="3" x="-1.905" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="5" x="-0.635" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="7" x="0.635" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="9" x="1.905" y="0.635" drill="0.7112" diameter="1.016"/>
+<pad name="11" x="3.175" y="0.635" drill="0.7112" diameter="1.016"/>
+<text x="-4.191" y="-1.397" size="1.016" layer="25" font="vector" ratio="12" rot="R90">&gt;NAME</text>
+<text x="5.207" y="-1.397" size="1.016" layer="27" font="vector" ratio="12" rot="R90">&gt;VALUE</text>
+<pad name="4" x="-1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="6" x="-0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="8" x="0.635" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="10" x="1.905" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="12" x="3.175" y="-0.635" drill="0.7112" diameter="1.016"/>
+<pad name="2" x="-3.175" y="-0.635" drill="0.7112" diameter="1.016" first="yes"/>
+<wire x1="3.937" y1="1.397" x2="-3.937" y2="1.397" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
