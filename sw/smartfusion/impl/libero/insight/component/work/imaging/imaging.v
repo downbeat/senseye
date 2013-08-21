@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Aug 19 12:26:50 2013
+// Created by SmartDesign Wed Aug 21 18:21:13 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -254,8 +254,8 @@ assign PRDATA[31:0]             = BIF_1_PRDATA_net_0;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------adc081s101
-adc081s101 adc081s101_0(
+//--------adcxx1s101
+adcxx1s101 adcxx1s101_0(
         // Inputs
         .clk                ( stonyman_0_clkAdc ),
         .reset              ( reset ),
@@ -263,12 +263,12 @@ adc081s101 adc081s101_0(
         .miso               ( px0_adc_din ),
         // Outputs
         .cs                 ( px_adc_Cs ),
-        .conversionComplete ( tp_adcConvComplete_net_0 ),
-        .dataout            ( adc081s101_0_dataout ) 
+        .dataout            ( adc081s101_0_dataout ),
+        .conversionComplete ( tp_adcConvComplete_net_0 ) 
         );
 
-//--------adc081s101
-adc081s101 adc081s101_1(
+//--------adcxx1s101
+adcxx1s101 adcxx1s101_1(
         // Inputs
         .clk                ( stonyman_0_clkAdc ),
         .reset              ( reset ),
@@ -276,8 +276,8 @@ adc081s101 adc081s101_1(
         .miso               ( px1_adc_din ),
         // Outputs
         .cs                 (  ),
-        .conversionComplete (  ),
-        .dataout            ( adc081s101_1_dataout ) 
+        .dataout            ( adc081s101_1_dataout ),
+        .conversionComplete (  ) 
         );
 
 //--------fifo_px

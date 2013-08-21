@@ -7,7 +7,7 @@ add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libe
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/penablescheduler.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/apbaddrdata.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/Actel/DirectCore/COREAHBTOAPB3/2.0.116/rtl/vlog/core_obfuscated/coreahbtoapb3.v"
-add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/adc081s101.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/adcxx1s101.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen/fifo_px/fifo_px.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/smartgen/MUX2/MUX2.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/hdl/stonyman.v"

@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Mon Aug 19 12:28:21 2013
+#Wed Aug 21 18:27:46 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -21,7 +21,7 @@ Copyright (C) 1994-2012 Synopsys, Inc. This software the associated documentatio
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v"
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v"
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v"
-@I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v"
+@I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v"
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\fifo_px\fifo_px.v"
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\MUX2\MUX2.v"
 @I::"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v"
@@ -337,11 +337,11 @@ Selecting top level module TOPLEVEL
 	CAPB3Ol0=16'b0000000000000000
    Generated name = CoreAPB3_Z4
 
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":25:7:25:16|Synthesizing module adc081s101
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":25:7:25:16|Synthesizing module adcxx1s101
 
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":957:7:957:14|Synthesizing module DFN1E1C0
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
@@ -602,41 +602,41 @@ Selecting top level module TOPLEVEL
 @A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px1_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px0_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal counterPixelsCaptured[15:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":292:7:292:20|Synthesizing module stonyman_ioreg
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":294:7:294:20|Synthesizing module stonyman_ioreg
 
-@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Pruning register ii[2:0] 
+@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Pruning register ii[2:0] 
 
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":101:7:101:19|Synthesizing module stonyman_apb3
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":103:7:103:19|Synthesizing module stonyman_apb3
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":148:33:148:50|No assignment to wire CG1_CAM0_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":150:33:150:50|No assignment to wire CG1_CAM0_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":154:33:154:50|No assignment to wire CG1_CAM1_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":156:33:156:50|No assignment to wire CG1_CAM1_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":160:33:160:50|No assignment to wire CG1_CAM2_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":162:33:162:50|No assignment to wire CG1_CAM2_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":166:33:166:50|No assignment to wire CG1_CAM3_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:50|No assignment to wire CG1_CAM3_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:49|No assignment to wire CG1_START_CAPTURE
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":170:33:170:49|No assignment to wire CG1_START_CAPTURE
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":174:33:174:50|No assignment to wire CG2_CAM0_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":176:33:176:50|No assignment to wire CG2_CAM0_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":180:33:180:50|No assignment to wire CG2_CAM1_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":182:33:182:50|No assignment to wire CG2_CAM1_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":186:33:186:50|No assignment to wire CG2_CAM2_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":188:33:188:50|No assignment to wire CG2_CAM2_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":192:33:192:50|No assignment to wire CG2_CAM3_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:50|No assignment to wire CG2_CAM3_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:49|No assignment to wire CG2_START_CAPTURE
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":196:33:196:49|No assignment to wire CG2_START_CAPTURE
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":200:33:200:50|No assignment to wire CG3_CAM0_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":202:33:202:50|No assignment to wire CG3_CAM0_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":206:33:206:50|No assignment to wire CG3_CAM1_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":208:33:208:50|No assignment to wire CG3_CAM1_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":212:33:212:50|No assignment to wire CG3_CAM2_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":214:33:214:50|No assignment to wire CG3_CAM2_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":218:33:218:50|No assignment to wire CG3_CAM3_FIFO_RDEN
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:50|No assignment to wire CG3_CAM3_FIFO_RDEN
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:49|No assignment to wire CG3_START_CAPTURE
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":222:33:222:49|No assignment to wire CG3_START_CAPTURE
 
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\imaging\imaging.v":9:7:9:13|Synthesizing module imaging
 
@@ -705,88 +705,88 @@ Selecting top level module TOPLEVEL
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":47:7:47:15|Input CLKC_PADN is unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":49:7:49:11|Input LPXIN is unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v":50:7:50:13|Input MAC_CLK is unused
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":148:33:148:50|*Output CG1_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":154:33:154:50|*Output CG1_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":160:33:160:50|*Output CG1_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":166:33:166:50|*Output CG1_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:49|*Output CG1_START_CAPTURE has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":174:33:174:50|*Output CG2_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":180:33:180:50|*Output CG2_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":186:33:186:50|*Output CG2_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":192:33:192:50|*Output CG2_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:49|*Output CG2_START_CAPTURE has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":200:33:200:50|*Output CG3_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":206:33:206:50|*Output CG3_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":212:33:212:50|*Output CG3_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":218:33:218:50|*Output CG3_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:49|*Output CG3_START_CAPTURE has undriven bits -- simulation mismatch possible.
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":125:33:125:50|Input CG0_CAM1_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":131:33:131:50|Input CG0_CAM2_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":137:33:137:50|Input CG0_CAM3_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":143:33:143:40|Input CG1_BUSY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":144:33:144:51|Input CG1_CAM0_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":145:33:145:50|Input CG1_CAM0_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":146:33:146:51|Input CG1_CAM0_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":147:33:147:54|Input CG1_CAM0_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":149:33:149:49|Input CG1_CAM0_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":150:33:150:51|Input CG1_CAM1_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":151:33:151:50|Input CG1_CAM1_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":152:33:152:51|Input CG1_CAM1_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":153:33:153:54|Input CG1_CAM1_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":155:33:155:49|Input CG1_CAM1_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":156:33:156:51|Input CG1_CAM2_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":157:33:157:50|Input CG1_CAM2_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":158:33:158:51|Input CG1_CAM2_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":159:33:159:54|Input CG1_CAM2_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":161:33:161:49|Input CG1_CAM2_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":162:33:162:51|Input CG1_CAM3_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":163:33:163:50|Input CG1_CAM3_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":164:33:164:51|Input CG1_CAM3_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":165:33:165:54|Input CG1_CAM3_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":167:33:167:49|Input CG1_CAM3_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":169:33:169:40|Input CG2_BUSY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":170:33:170:51|Input CG2_CAM0_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":171:33:171:50|Input CG2_CAM0_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":172:33:172:51|Input CG2_CAM0_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":173:33:173:54|Input CG2_CAM0_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":175:33:175:49|Input CG2_CAM0_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":176:33:176:51|Input CG2_CAM1_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":177:33:177:50|Input CG2_CAM1_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":178:33:178:51|Input CG2_CAM1_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":179:33:179:54|Input CG2_CAM1_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":181:33:181:49|Input CG2_CAM1_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":182:33:182:51|Input CG2_CAM2_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":183:33:183:50|Input CG2_CAM2_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":184:33:184:51|Input CG2_CAM2_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":185:33:185:54|Input CG2_CAM2_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":187:33:187:49|Input CG2_CAM2_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":188:33:188:51|Input CG2_CAM3_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":189:33:189:50|Input CG2_CAM3_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":190:33:190:51|Input CG2_CAM3_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":191:33:191:54|Input CG2_CAM3_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":193:33:193:49|Input CG2_CAM3_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":195:33:195:40|Input CG3_BUSY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":196:33:196:51|Input CG3_CAM0_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":197:33:197:50|Input CG3_CAM0_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":198:33:198:51|Input CG3_CAM0_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":199:33:199:54|Input CG3_CAM0_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":201:33:201:49|Input CG3_CAM0_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":202:33:202:51|Input CG3_CAM1_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":203:33:203:50|Input CG3_CAM1_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":204:33:204:51|Input CG3_CAM1_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":205:33:205:54|Input CG3_CAM1_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":207:33:207:49|Input CG3_CAM1_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":208:33:208:51|Input CG3_CAM2_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":209:33:209:50|Input CG3_CAM2_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":210:33:210:51|Input CG3_CAM2_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":211:33:211:54|Input CG3_CAM2_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":213:33:213:49|Input CG3_CAM2_PIXELSIN is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":214:33:214:51|Input CG3_CAM3_FIFO_EMPTY is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":215:33:215:50|Input CG3_CAM3_FIFO_FULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":216:33:216:51|Input CG3_CAM3_FIFO_AFULL is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":217:33:217:54|Input CG3_CAM3_FIFO_OVERFLOW is unused
-@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":219:33:219:49|Input CG3_CAM3_PIXELSIN is unused
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Trying to extract state machine for register fifoRdenState_3_
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":150:33:150:50|*Output CG1_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":156:33:156:50|*Output CG1_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":162:33:162:50|*Output CG1_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:50|*Output CG1_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":170:33:170:49|*Output CG1_START_CAPTURE has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":176:33:176:50|*Output CG2_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":182:33:182:50|*Output CG2_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":188:33:188:50|*Output CG2_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:50|*Output CG2_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":196:33:196:49|*Output CG2_START_CAPTURE has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":202:33:202:50|*Output CG3_CAM0_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":208:33:208:50|*Output CG3_CAM1_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":214:33:214:50|*Output CG3_CAM2_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:50|*Output CG3_CAM3_FIFO_RDEN has undriven bits -- simulation mismatch possible.
+@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":222:33:222:49|*Output CG3_START_CAPTURE has undriven bits -- simulation mismatch possible.
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":127:33:127:50|Input CG0_CAM1_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":133:33:133:50|Input CG0_CAM2_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":139:33:139:50|Input CG0_CAM3_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":145:33:145:40|Input CG1_BUSY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":146:33:146:51|Input CG1_CAM0_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":147:33:147:50|Input CG1_CAM0_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":148:33:148:51|Input CG1_CAM0_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":149:33:149:54|Input CG1_CAM0_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":151:33:151:49|Input CG1_CAM0_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":152:33:152:51|Input CG1_CAM1_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":153:33:153:50|Input CG1_CAM1_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":154:33:154:51|Input CG1_CAM1_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":155:33:155:54|Input CG1_CAM1_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":157:33:157:49|Input CG1_CAM1_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":158:33:158:51|Input CG1_CAM2_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":159:33:159:50|Input CG1_CAM2_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":160:33:160:51|Input CG1_CAM2_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":161:33:161:54|Input CG1_CAM2_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":163:33:163:49|Input CG1_CAM2_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":164:33:164:51|Input CG1_CAM3_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":165:33:165:50|Input CG1_CAM3_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":166:33:166:51|Input CG1_CAM3_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":167:33:167:54|Input CG1_CAM3_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":169:33:169:49|Input CG1_CAM3_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":171:33:171:40|Input CG2_BUSY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":172:33:172:51|Input CG2_CAM0_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":173:33:173:50|Input CG2_CAM0_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":174:33:174:51|Input CG2_CAM0_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":175:33:175:54|Input CG2_CAM0_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":177:33:177:49|Input CG2_CAM0_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":178:33:178:51|Input CG2_CAM1_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":179:33:179:50|Input CG2_CAM1_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":180:33:180:51|Input CG2_CAM1_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":181:33:181:54|Input CG2_CAM1_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":183:33:183:49|Input CG2_CAM1_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":184:33:184:51|Input CG2_CAM2_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":185:33:185:50|Input CG2_CAM2_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":186:33:186:51|Input CG2_CAM2_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":187:33:187:54|Input CG2_CAM2_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":189:33:189:49|Input CG2_CAM2_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":190:33:190:51|Input CG2_CAM3_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":191:33:191:50|Input CG2_CAM3_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":192:33:192:51|Input CG2_CAM3_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":193:33:193:54|Input CG2_CAM3_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":195:33:195:49|Input CG2_CAM3_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":197:33:197:40|Input CG3_BUSY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":198:33:198:51|Input CG3_CAM0_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":199:33:199:50|Input CG3_CAM0_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":200:33:200:51|Input CG3_CAM0_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":201:33:201:54|Input CG3_CAM0_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":203:33:203:49|Input CG3_CAM0_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":204:33:204:51|Input CG3_CAM1_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":205:33:205:50|Input CG3_CAM1_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":206:33:206:51|Input CG3_CAM1_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":207:33:207:54|Input CG3_CAM1_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":209:33:209:49|Input CG3_CAM1_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":210:33:210:51|Input CG3_CAM2_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":211:33:211:50|Input CG3_CAM2_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":212:33:212:51|Input CG3_CAM2_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":213:33:213:54|Input CG3_CAM2_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":215:33:215:49|Input CG3_CAM2_PIXELSIN is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":216:33:216:51|Input CG3_CAM3_FIFO_EMPTY is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":217:33:217:50|Input CG3_CAM3_FIFO_FULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":218:33:218:51|Input CG3_CAM3_FIFO_AFULL is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":219:33:219:54|Input CG3_CAM3_FIFO_OVERFLOW is unused
+@W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":221:33:221:49|Input CG3_CAM3_PIXELSIN is unused
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Trying to extract state machine for register fifoRdenState_3_
 Extracted state machine for register fifoRdenState_3_
 State machine has 5 reachable states with original encodings of:
    000
@@ -794,7 +794,7 @@ State machine has 5 reachable states with original encodings of:
    010
    011
    100
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Trying to extract state machine for register fifoRdenState_2_
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Trying to extract state machine for register fifoRdenState_2_
 Extracted state machine for register fifoRdenState_2_
 State machine has 5 reachable states with original encodings of:
    000
@@ -802,7 +802,7 @@ State machine has 5 reachable states with original encodings of:
    010
    011
    100
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Trying to extract state machine for register fifoRdenState_1_
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Trying to extract state machine for register fifoRdenState_1_
 Extracted state machine for register fifoRdenState_1_
 State machine has 5 reachable states with original encodings of:
    000
@@ -810,7 +810,7 @@ State machine has 5 reachable states with original encodings of:
    010
    011
    100
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Trying to extract state machine for register fifoRdenState_0_
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Trying to extract state machine for register fifoRdenState_0_
 Extracted state machine for register fifoRdenState_0_
 State machine has 5 reachable states with original encodings of:
    000
@@ -818,9 +818,9 @@ State machine has 5 reachable states with original encodings of:
    010
    011
    100
-@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":298:18:298:21|Input port bits 31 to 8 of addr[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":300:18:300:21|Input port bits 31 to 8 of addr[31:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":304:26:304:31|Input port bits 31 to 1 of datain[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":306:26:306:31|Input port bits 31 to 1 of datain[31:0] are unused
 
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
@@ -860,11 +860,11 @@ State machine has 13 reachable states with original encodings of:
 @W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":217:0:217:4|Input port bits 23 to 12 of PADDR[23:0] are unused
 
@@ -1118,7 +1118,7 @@ State machine has 8 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
 @END
 Process took 0h:00m:04s realtime, 0h:00m:03s cputime
-# Mon Aug 19 12:28:25 2013
+# Wed Aug 21 18:27:51 2013
 
 ###########################################################]
 Premap Report
@@ -1156,19 +1156,19 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found signal identified as System clock which controls 169 sequential elements including imaging_0/adc081s101_0/cntrWaitLeading[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found signal identified as System clock which controls 169 sequential elements including imaging_0/adcxx1s101_0/cntrWaitLeading[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:02s; Memory used current: 111MB peak: 113MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 113MB)
 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":202:14:202:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 49MB peak: 113MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 49MB peak: 113MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Mon Aug 19 12:28:30 2013
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Aug 21 18:27:54 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -1192,21 +1192,21 @@ Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91
 
 Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 110MB)
 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:49|Tristate driver CG3_START_CAPTURE on net CG3_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":218:33:218:50|Tristate driver CG3_CAM3_FIFO_RDEN on net CG3_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":212:33:212:50|Tristate driver CG3_CAM2_FIFO_RDEN on net CG3_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":206:33:206:50|Tristate driver CG3_CAM1_FIFO_RDEN on net CG3_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":200:33:200:50|Tristate driver CG3_CAM0_FIFO_RDEN on net CG3_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:49|Tristate driver CG2_START_CAPTURE on net CG2_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":192:33:192:50|Tristate driver CG2_CAM3_FIFO_RDEN on net CG2_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":186:33:186:50|Tristate driver CG2_CAM2_FIFO_RDEN on net CG2_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":180:33:180:50|Tristate driver CG2_CAM1_FIFO_RDEN on net CG2_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":174:33:174:50|Tristate driver CG2_CAM0_FIFO_RDEN on net CG2_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:49|Tristate driver CG1_START_CAPTURE on net CG1_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":166:33:166:50|Tristate driver CG1_CAM3_FIFO_RDEN on net CG1_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":160:33:160:50|Tristate driver CG1_CAM2_FIFO_RDEN on net CG1_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":154:33:154:50|Tristate driver CG1_CAM1_FIFO_RDEN on net CG1_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":148:33:148:50|Tristate driver CG1_CAM0_FIFO_RDEN on net CG1_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":222:33:222:49|Tristate driver CG3_START_CAPTURE on net CG3_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:50|Tristate driver CG3_CAM3_FIFO_RDEN on net CG3_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":214:33:214:50|Tristate driver CG3_CAM2_FIFO_RDEN on net CG3_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":208:33:208:50|Tristate driver CG3_CAM1_FIFO_RDEN on net CG3_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":202:33:202:50|Tristate driver CG3_CAM0_FIFO_RDEN on net CG3_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":196:33:196:49|Tristate driver CG2_START_CAPTURE on net CG2_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:50|Tristate driver CG2_CAM3_FIFO_RDEN on net CG2_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":188:33:188:50|Tristate driver CG2_CAM2_FIFO_RDEN on net CG2_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":182:33:182:50|Tristate driver CG2_CAM1_FIFO_RDEN on net CG2_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":176:33:176:50|Tristate driver CG2_CAM0_FIFO_RDEN on net CG2_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":170:33:170:49|Tristate driver CG1_START_CAPTURE on net CG1_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:50|Tristate driver CG1_CAM3_FIFO_RDEN on net CG1_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":162:33:162:50|Tristate driver CG1_CAM2_FIFO_RDEN on net CG1_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":156:33:156:50|Tristate driver CG1_CAM1_FIFO_RDEN on net CG1_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":150:33:150:50|Tristate driver CG1_CAM0_FIFO_RDEN on net CG1_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|Tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
@@ -1310,10 +1310,10 @@ original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_0(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_0(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_1(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_1(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst bitsRead[3:0]
 @N: MF135 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Found RAM 'cachedValue[7:0]', 8 words by 8 bits 
 Encoding state machine substate[15:0] (netlist:statemachine)
 original code -> new code
@@ -1395,7 +1395,7 @@ original code -> new code
 @W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":646:0:646:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3Oll.PWRITE,  because it is equivalent to instance COREAHBTOAPB3_0.CAHBtoAPB3Oll.CAHBtoAPB3IOI[2]
 @W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":152:0:152:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3Ill.PENABLE,  because it is equivalent to instance COREAHBTOAPB3_0.CAHBtoAPB3Ill.CAHBtoAPB3OIl[1]
 
-Finished factoring (Time elapsed 0h:00m:08s; Memory used current: 134MB peak: 167MB)
+Finished factoring (Time elapsed 0h:00m:09s; Memory used current: 134MB peak: 167MB)
 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[31] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[30] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -1428,11 +1428,11 @@ Finished factoring (Time elapsed 0h:00m:08s; Memory used current: 134MB peak: 16
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[3] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[2] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[1] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_3_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_2_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance imaging_0.adc081s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_3_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_2_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Removing sequential instance imaging_0.adcxx1s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:08s; Memory used current: 131MB peak: 167MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:09s; Memory used current: 131MB peak: 167MB)
 
 
 Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:09s; Memory used current: 128MB peak: 167MB)
@@ -1441,21 +1441,21 @@ Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:09s; Memory 
 Starting Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 129MB peak: 167MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:15s; Memory used current: 167MB peak: 168MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:16s; Memory used current: 167MB peak: 168MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:15s; Memory used current: 166MB peak: 168MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:15s; Memory used current: 166MB peak: 168MB)
+Finished preparing to map (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
 
 @N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1063 
 @N: FP130 |Promoting Net imaging_0.stonyman_0_clkAdc on CLKINT  imaging_0.stonyman_0.clkAdc_inferred_clock 
 
-Finished technology mapping (Time elapsed 0h:00m:16s; Memory used current: 188MB peak: 191MB)
+Finished technology mapping (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:16s; Memory used current: 188MB peak: 191MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
 
 
 Added 0 Buffers
@@ -1463,16 +1463,16 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:16s; Memory used current: 189MB peak: 191MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:17s; Memory used current: 189MB peak: 191MB)
 
 Writing Analyst data base Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:16s; Memory used current: 185MB peak: 191MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:17s; Memory used current: 185MB peak: 191MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:17s; Memory used current: 189MB peak: 191MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:18s; Memory used current: 189MB peak: 191MB)
 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_core2.v":636:7:636:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
@@ -1483,7 +1483,7 @@ Found clock FCLK with period 25.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Mon Aug 19 12:28:48 2013
+# Timing Report written on Wed Aug 21 18:28:13 2013
 #
 
 
@@ -2569,8 +2569,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -2633,8 +2633,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -2694,8 +2694,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -2755,8 +2755,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -2816,8 +2816,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -2956,9 +2956,9 @@ Block Rams : 16 of 24 (66%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:17s; Memory used current: 48MB peak: 191MB)
+At Mapper Exit (Time elapsed 0h:00m:18s; Memory used current: 48MB peak: 191MB)
 
-Process took 0h:00m:18s realtime, 0h:00m:17s cputime
-# Mon Aug 19 12:28:48 2013
+Process took 0h:00m:18s realtime, 0h:00m:18s cputime
+# Wed Aug 21 18:28:13 2013
 
 ###########################################################]

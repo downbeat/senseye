@@ -31,8 +31,8 @@ CAHBtoAPB3Ill
 CAHBtoAPB3lll
 CAPB3llOI
 stonyman_ioreg_0
-adc081s101_0
-adc081s101_1
+adcxx1s101_0
+adcxx1s101_1
 fifo_px_0
 fifo_px_1
 MUX2_0

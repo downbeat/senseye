@@ -17,21 +17,21 @@ Mapper Initialization Complete (Time elapsed 0h:00m:00s; Memory used current: 91
 
 Starting Optimization and Mapping (Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 110MB)
 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:49|Tristate driver CG3_START_CAPTURE on net CG3_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":218:33:218:50|Tristate driver CG3_CAM3_FIFO_RDEN on net CG3_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":212:33:212:50|Tristate driver CG3_CAM2_FIFO_RDEN on net CG3_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":206:33:206:50|Tristate driver CG3_CAM1_FIFO_RDEN on net CG3_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":200:33:200:50|Tristate driver CG3_CAM0_FIFO_RDEN on net CG3_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:49|Tristate driver CG2_START_CAPTURE on net CG2_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":192:33:192:50|Tristate driver CG2_CAM3_FIFO_RDEN on net CG2_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":186:33:186:50|Tristate driver CG2_CAM2_FIFO_RDEN on net CG2_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":180:33:180:50|Tristate driver CG2_CAM1_FIFO_RDEN on net CG2_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":174:33:174:50|Tristate driver CG2_CAM0_FIFO_RDEN on net CG2_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:49|Tristate driver CG1_START_CAPTURE on net CG1_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":166:33:166:50|Tristate driver CG1_CAM3_FIFO_RDEN on net CG1_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":160:33:160:50|Tristate driver CG1_CAM2_FIFO_RDEN on net CG1_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":154:33:154:50|Tristate driver CG1_CAM1_FIFO_RDEN on net CG1_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":148:33:148:50|Tristate driver CG1_CAM0_FIFO_RDEN on net CG1_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":222:33:222:49|Tristate driver CG3_START_CAPTURE on net CG3_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":220:33:220:50|Tristate driver CG3_CAM3_FIFO_RDEN on net CG3_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":214:33:214:50|Tristate driver CG3_CAM2_FIFO_RDEN on net CG3_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":208:33:208:50|Tristate driver CG3_CAM1_FIFO_RDEN on net CG3_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":202:33:202:50|Tristate driver CG3_CAM0_FIFO_RDEN on net CG3_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":196:33:196:49|Tristate driver CG2_START_CAPTURE on net CG2_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":194:33:194:50|Tristate driver CG2_CAM3_FIFO_RDEN on net CG2_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":188:33:188:50|Tristate driver CG2_CAM2_FIFO_RDEN on net CG2_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":182:33:182:50|Tristate driver CG2_CAM1_FIFO_RDEN on net CG2_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":176:33:176:50|Tristate driver CG2_CAM0_FIFO_RDEN on net CG2_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":170:33:170:49|Tristate driver CG1_START_CAPTURE on net CG1_START_CAPTURE has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":168:33:168:50|Tristate driver CG1_CAM3_FIFO_RDEN on net CG1_CAM3_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":162:33:162:50|Tristate driver CG1_CAM2_FIFO_RDEN on net CG1_CAM2_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":156:33:156:50|Tristate driver CG1_CAM1_FIFO_RDEN on net CG1_CAM1_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
+@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":150:33:150:50|Tristate driver CG1_CAM0_FIFO_RDEN on net CG1_CAM0_FIFO_RDEN has its enable tied to GND (module stonyman_apb3) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":64:7:64:18|Tristate driver LPXIN_CLKOUT on net LPXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":63:7:63:20|Tristate driver MAINXIN_CLKOUT on net MAINXIN_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":62:7:62:18|Tristate driver RCOSC_CLKOUT on net RCOSC_CLKOUT has its enable tied to GND (module MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC) 
@@ -135,10 +135,10 @@ original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_0(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_0(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_1(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Found counter in view:work.adc081s101_adc081s101_1(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst bitsRead[3:0]
 @N: MF135 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Found RAM 'cachedValue[7:0]', 8 words by 8 bits 
 Encoding state machine substate[15:0] (netlist:statemachine)
 original code -> new code
@@ -220,7 +220,7 @@ original code -> new code
 @W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v":646:0:646:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3Oll.PWRITE,  because it is equivalent to instance COREAHBTOAPB3_0.CAHBtoAPB3Oll.CAHBtoAPB3IOI[2]
 @W: BN132 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v":152:0:152:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3Ill.PENABLE,  because it is equivalent to instance COREAHBTOAPB3_0.CAHBtoAPB3Ill.CAHBtoAPB3OIl[1]
 
-Finished factoring (Time elapsed 0h:00m:08s; Memory used current: 134MB peak: 167MB)
+Finished factoring (Time elapsed 0h:00m:09s; Memory used current: 134MB peak: 167MB)
 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[31] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[30] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -253,11 +253,11 @@ Finished factoring (Time elapsed 0h:00m:08s; Memory used current: 134MB peak: 16
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[3] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[2] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[1] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_3_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":379:0:379:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_2_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":41:0:41:5|Removing sequential instance imaging_0.adc081s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_3_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_2_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Removing sequential instance imaging_0.adcxx1s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
-Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:08s; Memory used current: 131MB peak: 167MB)
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:09s; Memory used current: 131MB peak: 167MB)
 
 
 Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:09s; Memory used current: 128MB peak: 167MB)
@@ -266,21 +266,21 @@ Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:09s; Memory 
 Starting Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 129MB peak: 167MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:15s; Memory used current: 167MB peak: 168MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:16s; Memory used current: 167MB peak: 168MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:15s; Memory used current: 166MB peak: 168MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:15s; Memory used current: 166MB peak: 168MB)
+Finished preparing to map (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
 
 @N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1063 
 @N: FP130 |Promoting Net imaging_0.stonyman_0_clkAdc on CLKINT  imaging_0.stonyman_0.clkAdc_inferred_clock 
 
-Finished technology mapping (Time elapsed 0h:00m:16s; Memory used current: 188MB peak: 191MB)
+Finished technology mapping (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:16s; Memory used current: 188MB peak: 191MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
 
 
 Added 0 Buffers
@@ -288,16 +288,16 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:16s; Memory used current: 189MB peak: 191MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:17s; Memory used current: 189MB peak: 191MB)
 
 Writing Analyst data base Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:16s; Memory used current: 185MB peak: 191MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:17s; Memory used current: 185MB peak: 191MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:17s; Memory used current: 189MB peak: 191MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:18s; Memory used current: 189MB peak: 191MB)
 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_core2.v":636:7:636:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
@@ -308,7 +308,7 @@ Found clock FCLK with period 25.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Mon Aug 19 12:28:48 2013
+# Timing Report written on Wed Aug 21 18:28:13 2013
 #
 
 
@@ -1394,8 +1394,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -1458,8 +1458,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -1519,8 +1519,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -1580,8 +1580,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -1641,8 +1641,8 @@ MSS_CORE2_0_M2F_RESET_N                                    Net         -        
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       A             In      -         2.096       -         
 imaging_0.stonyman_0.px0_out_0_sqmuxa_0                    NOR2A       Y             Out     0.627     2.723       -         
 px0_out_0_sqmuxa_0                                         Net         -             -       0.322     -           1         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       C             In      -         3.045       -         
-imaging_0.stonyman_0.substate_RNI6OGU[14]                  NOR3C       Y             Out     0.641     3.686       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       C             In      -         3.045       -         
+imaging_0.stonyman_0.substate_RNIE0M21[14]                 NOR3C       Y             Out     0.641     3.686       -         
 px0_out_0_sqmuxa                                           Net         -             -       2.263     -           18        
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        B             In      -         5.949       -         
 imaging_0.stonyman_0.un1_counterPixelsCaptured_16.I_1      AND2        Y             Out     0.627     6.577       -         
@@ -1781,9 +1781,9 @@ Block Rams : 16 of 24 (66%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:17s; Memory used current: 48MB peak: 191MB)
+At Mapper Exit (Time elapsed 0h:00m:18s; Memory used current: 48MB peak: 191MB)
 
-Process took 0h:00m:18s realtime, 0h:00m:17s cputime
-# Mon Aug 19 12:28:48 2013
+Process took 0h:00m:18s realtime, 0h:00m:18s cputime
+# Wed Aug 21 18:28:13 2013
 
 ###########################################################]

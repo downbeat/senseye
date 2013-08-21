@@ -1,3 +1,2 @@
-@E: CG285 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":85:56:85:56|Expecting statement
-@E: CS187 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v":120:0:120:8|Expecting endmodule
+@E: CG389 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\imaging\imaging.v":258:11:258:22|Reference to undefined module adc081s101
 

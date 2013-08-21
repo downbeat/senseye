@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Mon Aug 19 12:28:08 2013 )</state>
+    <state>GENERATED ( Wed Aug 21 18:27:25 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -40,20 +40,18 @@
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adc081s101.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\apb.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\counter.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\fifo_8bit_apb3.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\inputConditioner.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\led.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\template_apb3.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\VersionROM.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\fifo_px\fifo_px.v</file>
@@ -62,7 +60,7 @@
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>TP_PENABLE</port-name>

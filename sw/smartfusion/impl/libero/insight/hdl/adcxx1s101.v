@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Company: University of Michigan
 //
-// File: adc081s101.v
+// File: adcxx1s101.v
 // File history:
 //      0.01: 2013-02-05: created
-//      1.00: 2013-02-10: driver for TI ADC081S101 complete and working
+//      1.00: 2013-02-10: controller for TI ADC081S101 complete and working
 //
 // Description: 
 //
@@ -17,12 +17,12 @@
 
 `define CLK_FREQ             (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
 `define ADC_RES              (8)         // bits
-`define TICKS_WAIT_LEADING   (3)         // bits / clock ticks
-`define TICKS_WAIT_TRAILING  (5)         // bits / clock ticks
+`define TICKS_WAIT_LEADING   (7)         // bits / clock ticks
+`define TICKS_WAIT_TRAILING  (1)         // bits / clock ticks
 `define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
 
 
-module adc081s101( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
+module adcxx1s101( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
 
 input clk;
 input reset;

@@ -125,8 +125,8 @@ Report for cell imaging.netlist
                                 GND         1       0.0        0.0
                                MUX2         1       1.0        1.0
                                 VCC         1       0.0        0.0
-            adc081s101_adc081s101_0         1      67.0       67.0
-          adc081s101_adc081s101_0_1         1      59.0       59.0
+            adcxx1s101_adcxx1s101_0         1      67.0       67.0
+          adcxx1s101_adcxx1s101_0_1         1      59.0       59.0
                             fifo_px         1     365.0      365.0
                           fifo_px_1         1     364.0      364.0
                            stonyman         1    1095.0     1095.0
@@ -317,9 +317,9 @@ Report for cell fifo_px.netlist
                             
                          TOTAL            375                365.0
 ----------------------------------------------------------------------
-Report for cell adc081s101_adc081s101_0_1.netlist
-  Original Cell name adc081s101_adc081s101_0
-     Instance path:  imaging_0.adc081s101_1
+Report for cell adcxx1s101_adcxx1s101_0_1.netlist
+  Original Cell name adcxx1s101_adcxx1s101_0
+     Instance path:  imaging_0.adcxx1s101_1
                                           Cell usage:
                                cell       count     area    count*area
                                AND2         2       1.0        2.0
@@ -354,9 +354,9 @@ Report for cell adc081s101_adc081s101_0_1.netlist
                             
                          TOTAL             61                 59.0
 ----------------------------------------------------------------------
-Report for cell adc081s101_adc081s101_0.netlist
-  Original Cell name adc081s101
-     Instance path:  imaging_0.adc081s101_0
+Report for cell adcxx1s101_adcxx1s101_0.netlist
+  Original Cell name adcxx1s101
+     Instance path:  imaging_0.adcxx1s101_0
                                           Cell usage:
                                cell       count     area    count*area
                                AND2         2       1.0        2.0
