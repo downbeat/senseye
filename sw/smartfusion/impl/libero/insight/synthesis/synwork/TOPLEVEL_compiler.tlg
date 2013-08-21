@@ -288,11 +288,11 @@ Selecting top level module TOPLEVEL
 	CAPB3Ol0=16'b0000000000000000
    Generated name = CoreAPB3_Z4
 
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":25:7:25:16|Synthesizing module adcxx1s101
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":42:7:42:16|Synthesizing module adcxx1s101
 
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":957:7:957:14|Synthesizing module DFN1E1C0
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
@@ -811,11 +811,11 @@ State machine has 13 reachable states with original encodings of:
 @W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":217:0:217:4|Input port bits 23 to 12 of PADDR[23:0] are unused
 

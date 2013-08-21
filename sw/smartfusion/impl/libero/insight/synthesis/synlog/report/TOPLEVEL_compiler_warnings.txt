@@ -233,10 +233,10 @@
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":306:26:306:31|Input port bits 31 to 1 of datain[31:0] are unused
 @W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":217:0:217:4|Input port bits 23 to 12 of PADDR[23:0] are unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":208:0:208:6|Input PRESETN is unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":210:0:210:3|Input PCLK is unused

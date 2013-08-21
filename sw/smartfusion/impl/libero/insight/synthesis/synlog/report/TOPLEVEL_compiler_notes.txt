@@ -18,7 +18,7 @@
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v":8:0:8:12|Synthesizing module COREAHBTOAPB3
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v":13:0:13:5|Synthesizing module CAPB3O
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":13:0:13:7|Synthesizing module CoreAPB3
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":25:7:25:16|Synthesizing module adcxx1s101
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":42:7:42:16|Synthesizing module adcxx1s101
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":957:7:957:14|Synthesizing module DFN1E1C0
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":79:7:79:9|Synthesizing module AO1

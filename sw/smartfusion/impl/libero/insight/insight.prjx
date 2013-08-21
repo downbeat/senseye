@@ -546,22 +546,22 @@ SIZE="13028"
 ENDFILE
 VALUE "<project>\designer\impl1\MSS_CORE2.ide_des,ide_des"
 STATE="utd"
-TIME="1377123715"
-SIZE="357"
+TIME="1377123995"
+SIZE="481"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1377123320"
-SIZE="11858944"
+TIME="1377125114"
+SIZE="11868160"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1377124239"
-SIZE="169739"
+TIME="1377125113"
+SIZE="170752"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1377123321"
+TIME="1377125114"
 SIZE="1287"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
@@ -581,22 +581,22 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1377123193"
-SIZE="149551"
+TIME="1377124111"
+SIZE="133174"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1377125221"
+TIME="1377126780"
 SIZE="258048"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1377123352"
-SIZE="258560"
+TIME="1377125146"
+SIZE="258048"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1377123424"
+TIME="1377125221"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
@@ -606,8 +606,8 @@ SIZE="2442"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1377124241"
-SIZE="819"
+TIME="1377125114"
+SIZE="983"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
@@ -621,67 +621,67 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adcxx1s101.v,hdl"
 STATE="utd"
-TIME="1377123085"
-SIZE="3561"
+TIME="1377126351"
+SIZE="4356"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="5676"
 ENDFILE
 VALUE "<project>\hdl\apb.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="6659"
 ENDFILE
 VALUE "<project>\hdl\clkgenerator.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1362534100"
 SIZE="1306"
 ENDFILE
 VALUE "<project>\hdl\counter.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1362552921"
 SIZE="1828"
 ENDFILE
 VALUE "<project>\hdl\cr_int.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="4483"
 ENDFILE
 VALUE "<project>\hdl\fifo_32bit_apb3.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1362564650"
 SIZE="3142"
 ENDFILE
 VALUE "<project>\hdl\inputConditioner.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1362534039"
 SIZE="1195"
 ENDFILE
 VALUE "<project>\hdl\led.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="386"
 ENDFILE
 VALUE "<project>\hdl\psram_cr.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="2343"
 ENDFILE
 VALUE "<project>\hdl\stonyman.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1376571382"
 SIZE="57391"
 ENDFILE
 VALUE "<project>\hdl\stonyman_apb3.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1376930586"
 SIZE="19834"
 ENDFILE
 VALUE "<project>\hdl\VersionROM.v,hdl"
 STATE="utd"
-TIME="1377120656"
+TIME="1360612688"
 SIZE="1231"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.log,log"
@@ -873,12 +873,12 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1377123572"
+TIME="1377124093"
 SIZE="2436804"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1377123572"
+TIME="1377124093"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.v,syn_hdl"
@@ -893,12 +893,12 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1377123572"
+TIME="1377124093"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1377123574"
+TIME="1377124095"
 SIZE="6283"
 ENDFILE
 ENDLIST
@@ -1330,8 +1330,6 @@ ENDLIST
 LIST OpenedFileList
 SmartDesign;TOPLEVEL
 SmartDesign;imaging
-HDL;hdl\adcxx1s101.v
-SmartDesign;MSS_CORE2
 Reports;Reports
 ACTIVEVIEW;Reports
 ENDLIST

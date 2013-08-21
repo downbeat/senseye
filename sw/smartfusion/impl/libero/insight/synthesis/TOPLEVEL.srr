@@ -6,7 +6,7 @@
 #Implementation: synthesis
 
 $ Start of Compile
-#Wed Aug 21 18:27:46 2013
+#Wed Aug 21 19:07:20 2013
 
 Synopsys Verilog Compiler, version comp201203rcp1, Build 084R, built Jun 15 2012
 @N|Running in 64-bit mode
@@ -337,11 +337,11 @@ Selecting top level module TOPLEVEL
 	CAPB3Ol0=16'b0000000000000000
    Generated name = CoreAPB3_Z4
 
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":25:7:25:16|Synthesizing module adcxx1s101
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":42:7:42:16|Synthesizing module adcxx1s101
 
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal dataout[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal cntrWaitTrailing[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Feedback mux created for signal cntrWaitLeading[2:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":957:7:957:14|Synthesizing module DFN1E1C0
 
 @N: CG364 :"C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
@@ -860,11 +860,11 @@ State machine has 13 reachable states with original encodings of:
 @W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
-@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
+@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...
+@W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Pruning register bit 1 of cntrWaitTrailing[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v":217:0:217:4|Input port bits 23 to 12 of PADDR[23:0] are unused
 
@@ -1117,8 +1117,8 @@ State machine has 8 reachable states with original encodings of:
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":330:0:330:12|Input HREADYOUT_SHG is unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v":332:0:332:9|Input CAHBLTlIlI is unused
 @END
-Process took 0h:00m:04s realtime, 0h:00m:03s cputime
-# Wed Aug 21 18:27:51 2013
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Wed Aug 21 19:07:25 2013
 
 ###########################################################]
 Premap Report
@@ -1156,19 +1156,19 @@ FAB_CLK     40.0 MHz      25.000        declared     clk_group_0
 FCLK        40.0 MHz      25.000        declared     clk_group_0    
 ====================================================================
 
-@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found signal identified as System clock which controls 169 sequential elements including imaging_0/adcxx1s101_0/cntrWaitLeading[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Found signal identified as System clock which controls 169 sequential elements including imaging_0/adcxx1s101_0/cntrWaitLeading[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 113MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:02s; Memory used current: 111MB peak: 113MB)
 
 @W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\toplevel\toplevel.v":202:14:202:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 49MB peak: 113MB)
+At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 49MB peak: 113MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Aug 21 18:27:54 2013
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Wed Aug 21 19:07:28 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -1310,10 +1310,10 @@ original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst bitsRead[3:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst cntrWaitLeading[2:0]
-@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Found counter in view:work.adcxx1s101_adcxx1s101_0(verilog) inst bitsRead[3:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst cntrWaitLeading[2:0]
+@N:"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Found counter in view:work.adcxx1s101_adcxx1s101_1(verilog) inst bitsRead[3:0]
 @N: MF135 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v":227:0:227:5|Found RAM 'cachedValue[7:0]', 8 words by 8 bits 
 Encoding state machine substate[15:0] (netlist:statemachine)
 original code -> new code
@@ -1430,24 +1430,24 @@ Finished factoring (Time elapsed 0h:00m:09s; Memory used current: 134MB peak: 16
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[1] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_3_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden_2_ of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":41:0:41:5|Removing sequential instance imaging_0.adcxx1s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
+@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v":58:0:58:5|Removing sequential instance imaging_0.adcxx1s101_1.conversionComplete of view:PrimLib.dffs(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 
 Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:09s; Memory used current: 131MB peak: 167MB)
 
 
-Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:09s; Memory used current: 128MB peak: 167MB)
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:10s; Memory used current: 128MB peak: 167MB)
 
 
-Starting Early Timing Optimization (Time elapsed 0h:00m:09s; Memory used current: 129MB peak: 167MB)
+Starting Early Timing Optimization (Time elapsed 0h:00m:10s; Memory used current: 129MB peak: 167MB)
 
 
-Finished Early Timing Optimization (Time elapsed 0h:00m:16s; Memory used current: 167MB peak: 168MB)
+Finished Early Timing Optimization (Time elapsed 0h:00m:17s; Memory used current: 167MB peak: 168MB)
 
 
-Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:17s; Memory used current: 166MB peak: 168MB)
 
 
-Finished preparing to map (Time elapsed 0h:00m:16s; Memory used current: 166MB peak: 168MB)
+Finished preparing to map (Time elapsed 0h:00m:17s; Memory used current: 166MB peak: 168MB)
 
 @N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1063 
 @N: FP130 |Promoting Net imaging_0.stonyman_0_clkAdc on CLKINT  imaging_0.stonyman_0.clkAdc_inferred_clock 
@@ -1455,7 +1455,7 @@ Finished preparing to map (Time elapsed 0h:00m:16s; Memory used current: 166MB p
 Finished technology mapping (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:17s; Memory used current: 188MB peak: 191MB)
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:18s; Memory used current: 188MB peak: 191MB)
 
 
 Added 0 Buffers
@@ -1463,16 +1463,16 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished restoring hierarchy (Time elapsed 0h:00m:17s; Memory used current: 189MB peak: 191MB)
+Finished restoring hierarchy (Time elapsed 0h:00m:18s; Memory used current: 189MB peak: 191MB)
 
 Writing Analyst data base Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.srm
 
-Finished Writing Netlist Databases (Time elapsed 0h:00m:17s; Memory used current: 185MB peak: 191MB)
+Finished Writing Netlist Databases (Time elapsed 0h:00m:18s; Memory used current: 185MB peak: 191MB)
 
 Writing EDIF Netlist and constraint files
 F-2012.03M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:18s; Memory used current: 189MB peak: 191MB)
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:19s; Memory used current: 189MB peak: 191MB)
 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_core2.v":636:7:636:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\mss_core2\mss_ccc_0\mss_core2_tmp_mss_ccc_0_mss_ccc.v":96:15:96:22|Blackbox MSS_XTLOSC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
@@ -1483,7 +1483,7 @@ Found clock FCLK with period 25.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Aug 21 18:28:13 2013
+# Timing Report written on Wed Aug 21 19:07:49 2013
 #
 
 
@@ -2956,9 +2956,9 @@ Block Rams : 16 of 24 (66%)
 
 Mapper successful!
 
-At Mapper Exit (Time elapsed 0h:00m:18s; Memory used current: 48MB peak: 191MB)
+At Mapper Exit (Time elapsed 0h:00m:19s; Memory used current: 48MB peak: 191MB)
 
-Process took 0h:00m:18s realtime, 0h:00m:18s cputime
-# Wed Aug 21 18:28:13 2013
+Process took 0h:00m:19s realtime, 0h:00m:19s cputime
+# Wed Aug 21 19:07:49 2013
 
 ###########################################################]

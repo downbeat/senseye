@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
 #--  Project file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\run_options.txt
-#--  Written on Wed Aug 21 18:27:46 2013
+#--  Written on Wed Aug 21 19:07:20 2013
 
 
 #project files
