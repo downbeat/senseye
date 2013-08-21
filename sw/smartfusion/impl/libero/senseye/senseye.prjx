@@ -13,7 +13,7 @@ KEY VendorTechnology_IO_DEFT_STD ""
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_TEMPR ""
 KEY VendorTechnology_VOLTR ""
-KEY ProjectLocation "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight"
+KEY ProjectLocation "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -1328,10 +1328,8 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-SmartDesign;TOPLEVEL
-SmartDesign;imaging
-Reports;Reports
-ACTIVEVIEW;Reports
+StartPage;StartPage
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "adcxx1s101::work","hdl\adcxx1s101.v","FALSE","FALSE"
