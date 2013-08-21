@@ -551,17 +551,17 @@ SIZE="481"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.adb,adb"
 STATE="utd"
-TIME="1377125114"
-SIZE="11868160"
+TIME="1377126622"
+SIZE="11867648"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.fdb,fdb"
 STATE="utd"
-TIME="1377125113"
-SIZE="170752"
+TIME="1377126621"
+SIZE="170751"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL.ide_des,ide_des"
 STATE="utd"
-TIME="1377125114"
+TIME="1377126623"
 SIZE="1287"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_ba.sdf,ba_sdf"
@@ -581,8 +581,8 @@ SIZE="850"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_compile_log.rpt,log"
 STATE="utd"
-TIME="1377124111"
-SIZE="133174"
+TIME="1377126487"
+SIZE="47935"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\projectData\TOPLEVEL.pdb,pdb"
 STATE="utd"
@@ -591,27 +591,27 @@ SIZE="258048"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pdb,pdb"
 STATE="utd"
-TIME="1377125146"
+TIME="1377126705"
 SIZE="258048"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1377125221"
+TIME="1377126780"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1377125083"
+TIME="1377126592"
 SIZE="2442"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1377125114"
+TIME="1377126623"
 SIZE="983"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1377125094"
+TIME="1377126601"
 SIZE="1223"
 ENDFILE
 VALUE "<project>\designer\impl1\VersionROM.ide_des,ide_des"
@@ -621,8 +621,8 @@ SIZE="232"
 ENDFILE
 VALUE "<project>\hdl\adcxx1s101.v,hdl"
 STATE="utd"
-TIME="1377126351"
-SIZE="4356"
+TIME="1377127413"
+SIZE="4320"
 ENDFILE
 VALUE "<project>\hdl\ahb.v,hdl"
 STATE="utd"
@@ -873,12 +873,12 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.edn,syn_edn"
 STATE="utd"
-TIME="1377124093"
-SIZE="2436804"
+TIME="1377126469"
+SIZE="2436803"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.so,so"
 STATE="utd"
-TIME="1377124093"
+TIME="1377126469"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL.v,syn_hdl"
@@ -893,12 +893,12 @@ SIZE="25309"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1377124093"
+TIME="1377126469"
 SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1377124095"
+TIME="1377126471"
 SIZE="6283"
 ENDFILE
 ENDLIST
@@ -1207,8 +1207,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
