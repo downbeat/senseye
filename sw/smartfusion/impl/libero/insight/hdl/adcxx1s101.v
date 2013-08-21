@@ -4,22 +4,38 @@
 // File: adcxx1s101.v
 // File history:
 //      0.01: 2013-02-05: created
-//      1.00: 2013-02-10: controller for TI ADC081S101 complete and working
+//      1.00: 2013-02-10: driver for TI ADC081S101 complete and working
+//      1.01: 2013-08-19: controller supports 8, 10 or 12 bits with only the
+//                        change of the ADC_RES define value.
 //
 // Description: 
 //
-// Driver for the TI ADC081S101, low-power 1Msps 8-bit ADC
+// Controller for the TI ADCXX1S101 family of low-power 1Msps serial ADCs.
 //
 // Targeted device: <Family::SmartFusion> <Die::A2F500M3G> <Package::484 FBGA>
 // Author: Russ Bielawski
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ             (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
+
+`define CLK_FREQ             (20000000)  // 20MHz -> 1Msps operation
+// alter this to choose the ADC resolution
 `define ADC_RES              (8)         // bits
-`define TICKS_WAIT_LEADING   (7)         // bits / clock ticks
-`define TICKS_WAIT_TRAILING  (1)         // bits / clock ticks
-`define TICKS_WAIT_QUIET     (4)         // bits / clock ticks
+
+// The entire TI ADCXXS101 family requires 16 cycles to perform a conversion,
+// plus 4 cycles of "quiet time" before a new conversion can be initiated.
+// The maximum clock speed is 20MHz, at which the ADC achieves its maximum
+// rate of 1Msps.
+`define CONVERSION_CYCLES    (16)
+`define HOLD_TIME_CYCLES     (3)
+`define QUIET_TIME_CYCLES    (4)
+
+// FIXME: currently using last 8 bits of 12-bit ADC, so this code is wonky
+`define TICKS_WAIT_LEADING   (7) // FIXME: currently ignoring first 4 bits of 12-bit ADC
+                                 // to emulate an 8-bit ADC
+//`define TICKS_WAIT_LEADING   (`HOLD_TIME_CYCLES)
+`define TICKS_WAIT_TRAILING  (`CONVERSION_CYCLES-`TICKS_WAIT_LEADING-`ADC_RES)
+`define TICKS_WAIT_QUIET     (`QUIET_TIME_CYCLES)
 
 
 module adcxx1s101( clk, reset, startCapture, miso, cs, dataout, conversionComplete );
