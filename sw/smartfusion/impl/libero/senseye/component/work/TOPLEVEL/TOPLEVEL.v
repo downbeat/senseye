@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 21 22:13:05 2013
+// Created by SmartDesign Wed Aug 21 23:58:47 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -159,12 +159,12 @@ wire   [31:0] CoreAPB3_0_APBmslave0_0_PWDATA;
 wire          CoreAPB3_0_APBmslave0_0_PWRITE;
 wire          CS_net_0;
 wire   [15:0] psram_data;
-wire          imaging_0_afull_cam0;
+wire          imaging_0_cam0_afull;
 wire          incp_net_0;
 wire          incv_net_0;
 wire          inphi_net_0;
 wire   [3:0]  led_net_0;
-wire   [3:0]  led_0;
+wire   [3:0]  led_2;
 wire          MAC_CRSDV;
 wire          MAC_MDC_net_0;
 wire          MAC_MDIO;
@@ -238,7 +238,7 @@ wire          TP_ADCSTARTCAP_net_1;
 wire   [1:0]  nbyte_en_net_0;
 wire   [24:0] psram_address_net_1;
 wire   [1:0]  MAC_TXD_net_1;
-wire   [3:0]  led_0_net_0;
+wire   [3:0]  led_2_net_0;
 wire   [7:4]  led_net_1;
 wire   [0:1]  PADDRS0_slice_0;
 wire   [3:23] PADDRS0_slice_1;
@@ -430,8 +430,8 @@ assign psram_address_net_1                   = psram_address_net_0;
 assign psram_address[24:0]                   = psram_address_net_1;
 assign MAC_TXD_net_1                         = MAC_TXD_net_0;
 assign MAC_TXD[1:0]                          = MAC_TXD_net_1;
-assign led_0_net_0                           = led_0;
-assign led[3:0]                              = led_0_net_0;
+assign led_2_net_0                           = led_2;
+assign led[3:0]                              = led_2_net_0;
 assign led_net_1                             = led_net_0;
 assign led[7:4]                              = led_net_1;
 //--------------------------------------------------------------------
@@ -443,10 +443,10 @@ wire   [23:0] CoreAHBLite_0_AHBmslave6_HADDR_0;
 assign CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 = CoreAHBLite_0_AHBmslave6_HADDR[23:0];
 assign CoreAHBLite_0_AHBmslave6_HADDR_0 = { CoreAHBLite_0_AHBmslave6_HADDR_0_23to0 };
 
+wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 wire   [31:24]CoreAPB3_0_APBmslave0_0_PADDR_0_31to24;
 wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR_0_23to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_0_PADDR_0;
-wire   [23:0] CoreAPB3_0_APBmslave0_0_PADDR;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_31to24 = 8'h0;
 assign CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 = CoreAPB3_0_APBmslave0_0_PADDR[23:0];
 assign CoreAPB3_0_APBmslave0_0_PADDR_0 = { CoreAPB3_0_APBmslave0_0_PADDR_0_31to24, CoreAPB3_0_APBmslave0_0_PADDR_0_23to0 };
@@ -997,41 +997,47 @@ CoreAPB3_0(
 //--------imaging
 imaging imaging_0(
         // Inputs
-        .reset              ( MSS_CORE2_0_M2F_RESET_N ),
-        .clk                ( net_30 ),
-        .px0_adc_din        ( px0_adc_din ),
-        .px1_adc_din        ( px1_adc_din ),
-        .PENABLE            ( CoreAPB3_0_APBmslave0_0_PENABLE ),
-        .PWRITE             ( CoreAPB3_0_APBmslave0_0_PWRITE ),
-        .PSEL               ( CoreAPB3_0_APBmslave0_0_PSELx ),
-        .PADDR              ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
-        .PWDATA             ( CoreAPB3_0_APBmslave0_0_PWDATA ),
+        .reset                   ( MSS_CORE2_0_M2F_RESET_N ),
+        .clk                     ( net_30 ),
+        .cam0_px_adc_din         ( px0_adc_din ),
+        .cam1_px_adc_din         ( px1_adc_din ),
+        .PENABLE                 ( CoreAPB3_0_APBmslave0_0_PENABLE ),
+        .PWRITE                  ( CoreAPB3_0_APBmslave0_0_PWRITE ),
+        .PSEL                    ( CoreAPB3_0_APBmslave0_0_PSELx ),
+        .PADDR                   ( CoreAPB3_0_APBmslave0_0_PADDR_0 ),
+        .PWDATA                  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         // Outputs
-        .px_adc_cs          ( CS_net_0 ),
-        .inphi              ( inphi_net_0 ),
-        .incv               ( incv_net_0 ),
-        .resp               ( resp_net_0 ),
-        .resv               ( resv_net_0 ),
-        .incp               ( incp_net_0 ),
-        .px_adc_sclk        ( SCLK_net_0 ),
-        .tp_startcap        ( TP_START_CAPTURE_net_0 ),
-        .busy               ( TP_BUSY_net_0 ),
-        .tp_cam0_full       ( TP_FULL_net_0 ),
-        .tp_cam0_empty      ( TP_EMPTY_net_0 ),
-        .tp_cam0_rden       ( TP_RDEN_net_0 ),
-        .tp_wren            ( TP_WREN_net_0 ),
-        .afull_cam0         ( imaging_0_afull_cam0 ),
-        .tp_writePending    ( TP_WRITEPENDING_net_0 ),
-        .tp_startAdcCapture ( TP_ADCSTARTCAP_net_0 ),
-        .tp_adcConvComplete ( tp_adcConvComplete ),
-        .afull_cam1         (  ),
-        .afull_cam2         (  ),
-        .afull_cam3         (  ),
-        .PREADY             ( CoreAPB3_0_APBmslave0_0_PREADY ),
-        .PSLVERR            ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
-        .tp_stateout        ( led_net_0 ),
-        .tp_substateout     ( led_0 ),
-        .PRDATA             ( CoreAPB3_0_APBmslave0_0_PRDATA ) 
+        .cam0_px_adc_cs          ( CS_net_0 ),
+        .cam0_inphi              ( inphi_net_0 ),
+        .cam0_incv               ( incv_net_0 ),
+        .cam0_resp               ( resp_net_0 ),
+        .cam0_resv               ( resv_net_0 ),
+        .cam0_incp               ( incp_net_0 ),
+        .cam0_px_adc_sclk        ( SCLK_net_0 ),
+        .tp_cam0_startcap        ( TP_START_CAPTURE_net_0 ),
+        .cam0_busy               ( TP_BUSY_net_0 ),
+        .tp_cam0_full            ( TP_FULL_net_0 ),
+        .tp_cam0_empty           ( TP_EMPTY_net_0 ),
+        .tp_cam0_rden            ( TP_RDEN_net_0 ),
+        .tp_cam0_wren            ( TP_WREN_net_0 ),
+        .cam0_afull              ( imaging_0_cam0_afull ),
+        .tp_cam0_writePending    ( TP_WRITEPENDING_net_0 ),
+        .tp_cam0_startAdcCapture ( TP_ADCSTARTCAP_net_0 ),
+        .tp_cam0_adcConvComplete ( tp_adcConvComplete ),
+        .PREADY                  ( CoreAPB3_0_APBmslave0_0_PREADY ),
+        .PSLVERR                 ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
+        .tp_cam0_stateout        ( led_net_0 ),
+        .tp_cam0_substateout     ( led_2 ),
+        .PRDATA                  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
+        .cam1_resp               (  ),
+        .cam1_incv               (  ),
+        .cam1_resv               (  ),
+        .cam1_inphi              (  ),
+        .cam1_incp               (  ),
+        .cam1_afull              (  ),
+        .cam1_busy               (  ),
+        .cam1_px_adc_cs          (  ),
+        .cam1_px_adc_sclk        (  ) 
         );
 
 //--------MSS_CORE2
@@ -1046,7 +1052,7 @@ MSS_CORE2 MSS_CORE2_0(
         .MSSHREADY   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY ),
         .MSSHRESP    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 ),
         .F2M_GPI_2   ( GND_net ),
-        .F2M_GPI_1   ( imaging_0_afull_cam0 ),
+        .F2M_GPI_1   ( imaging_0_cam0_afull ),
         .F2M_GPI_0   ( TP_BUSY_net_0 ),
         .MAC_RXD     ( MAC_RXD ),
         .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),

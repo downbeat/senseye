@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Wed Aug 21 22:12:49 2013
+// Created by Actel SmartDesign Wed Aug 21 23:50:52 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -46,8 +46,8 @@ imaging imaging_0 (
     // Inputs
     .reset(NSYSRESET),
     .clk(SYSCLK),
-    .px0_adc_din({1{1'b0}}),
-    .px1_adc_din({1{1'b0}}),
+    .cam0_px_adc_din({1{1'b0}}),
+    .cam1_px_adc_din({1{1'b0}}),
     .PENABLE({1{1'b0}}),
     .PWRITE({1{1'b0}}),
     .PSEL({1{1'b0}}),
@@ -55,31 +55,37 @@ imaging imaging_0 (
     .PWDATA({32{1'b0}}),
 
     // Outputs
-    .px_adc_cs( ),
-    .inphi( ),
-    .incv( ),
-    .resp( ),
-    .resv( ),
-    .incp( ),
-    .px_adc_sclk( ),
-    .tp_startcap( ),
-    .busy( ),
+    .cam0_px_adc_cs( ),
+    .cam0_inphi( ),
+    .cam0_incv( ),
+    .cam0_resp( ),
+    .cam0_resv( ),
+    .cam0_incp( ),
+    .cam0_px_adc_sclk( ),
+    .tp_cam0_startcap( ),
+    .cam0_busy( ),
     .tp_cam0_full( ),
     .tp_cam0_empty( ),
     .tp_cam0_rden( ),
-    .tp_wren( ),
-    .afull_cam0( ),
-    .tp_writePending( ),
-    .tp_startAdcCapture( ),
-    .tp_adcConvComplete( ),
-    .afull_cam1( ),
-    .afull_cam2( ),
-    .afull_cam3( ),
+    .tp_cam0_wren( ),
+    .cam0_afull( ),
+    .tp_cam0_writePending( ),
+    .tp_cam0_startAdcCapture( ),
+    .tp_cam0_adcConvComplete( ),
     .PREADY( ),
     .PSLVERR( ),
-    .tp_stateout( ),
-    .tp_substateout( ),
-    .PRDATA( )
+    .tp_cam0_stateout( ),
+    .tp_cam0_substateout( ),
+    .PRDATA( ),
+    .cam1_resp( ),
+    .cam1_incv( ),
+    .cam1_resv( ),
+    .cam1_inphi( ),
+    .cam1_incp( ),
+    .cam1_afull( ),
+    .cam1_busy( ),
+    .cam1_px_adc_cs( ),
+    .cam1_px_adc_sclk( )
 
     // Inouts
 

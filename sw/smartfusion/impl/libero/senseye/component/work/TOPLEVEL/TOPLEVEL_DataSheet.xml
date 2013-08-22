@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Wed Aug 21 22:13:17 2013 )</state>
+    <state>GENERATED ( Wed Aug 21 23:58:58 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -62,7 +62,7 @@
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>TP_PENABLE</port-name>

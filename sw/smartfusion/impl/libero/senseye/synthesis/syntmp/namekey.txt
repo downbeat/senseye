@@ -36,7 +36,9 @@ adcxx1s101_1
 fifo_px_0
 fifo_px_1
 MUX2_0
+MUX2_1
 stonyman_0
+stonyman_1
 stonyman_apb3_0
 MSS_CCC_0
 ahb0
@@ -47,8 +49,6 @@ CoreAPB3_0
 imaging_0
 MSS_CORE2_0
 psram_cr_0
-XOR2_1
-XOR2_23
 DFN1E1C0_QÛ1Ý
 DFN1E1C0_QÛ4Ý
 INV_1

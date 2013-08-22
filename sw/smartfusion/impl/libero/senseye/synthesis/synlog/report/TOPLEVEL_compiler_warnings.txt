@@ -103,7 +103,7 @@
 @W: CL168 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\fifo_px\fifo_px.v":155:11:155:25|Pruning instance DFN1C0_RGRY[9] -- not in use ...
 @W: CL168 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\fifo_px\fifo_px.v":154:9:154:15|Pruning instance AND2_22 -- not in use ...
 @W: CL168 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\fifo_px\fifo_px.v":145:9:145:15|Pruning instance XOR2_82 -- not in use ...
-@W: CL132 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":488:51:488:77|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":495:51:495:77|Read Address width 3 does not cover RAM depth
 @W: CG133 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":527:4:527:15|No assignment to startCapture_4_
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register ii[2:0] 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register jj[2:0] 
@@ -166,8 +166,8 @@
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":217:33:217:51|Input CG3_CAM3_FIFO_AFULL is unused
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":401:18:401:21|Input port bits 31 to 8 of addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 1 of datain[31:0] are unused
-@W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
-@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
+@W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Optimizing register bit inphi to a constant 0
+@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Pruning register inphi 
 @W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
 @W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 
 @W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Register bit cntrWaitTrailing[1] is always 0, optimizing ...

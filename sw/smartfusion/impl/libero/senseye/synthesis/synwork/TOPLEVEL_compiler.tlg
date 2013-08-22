@@ -541,18 +541,18 @@ Selecting top level module TOPLEVEL
 
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\MUX2\MUX2.v":5:7:5:10|Synthesizing module MUX2
 
-@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":137:7:137:14|Synthesizing module stonyman
+@N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":144:7:144:14|Synthesizing module stonyman
 
-@W: CL132 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":488:51:488:77|Read Address width 3 does not cover RAM depth
+@W: CL132 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":495:51:495:77|Read Address width 3 does not cover RAM depth
 
-@A: CL133 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":488:51:488:77|Write Address width 3 does not cover RAM depth
+@A: CL133 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":495:51:495:77|Write Address width 3 does not cover RAM depth
 
-@N: CL134 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Found RAM cachedValue, depth=8, width=8
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px3_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px2_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px1_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal px0_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
-@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Feedback mux created for signal counterPixelsCaptured[15:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N: CL134 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Found RAM cachedValue, depth=8, width=8
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Feedback mux created for signal px3_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Feedback mux created for signal px2_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Feedback mux created for signal px1_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Feedback mux created for signal px0_out[7:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Feedback mux created for signal counterPixelsCaptured[15:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":395:7:395:20|Synthesizing module stonyman_ioreg
 
 @W: CG133 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":527:4:527:15|No assignment to startCapture_4_
@@ -808,7 +808,7 @@ State machine has 5 reachable states with original encodings of:
 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 1 of datain[31:0] are unused
 
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Trying to extract state machine for register substate
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
 State machine has 16 reachable states with original encodings of:
    00000
@@ -827,7 +827,7 @@ State machine has 16 reachable states with original encodings of:
    01111
    10000
    10001
-@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Trying to extract state machine for register state
+@N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Trying to extract state machine for register state
 Extracted state machine for register state
 State machine has 13 reachable states with original encodings of:
    0000
@@ -843,8 +843,8 @@ State machine has 13 reachable states with original encodings of:
    1010
    1011
    1100
-@W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Optimizing register bit inphi to a constant 0
-@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":227:0:227:5|Pruning register inphi 
+@W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Optimizing register bit inphi to a constant 0
+@W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Pruning register inphi 
 
 @W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...
 @W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Pruning register bit 2 of cntrWaitTrailing[2:0] 

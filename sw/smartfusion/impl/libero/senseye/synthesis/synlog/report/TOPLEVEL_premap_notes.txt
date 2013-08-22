@@ -1,5 +1,5 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF258 |Gated clock conversion disabled 
 @N: MF547 |Generated clock conversion disabled 
-@N: MF237 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":1293:35:1293:73|Generating a type rem remainder 
+@N: MF237 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":1299:35:1299:73|Generating a type rem remainder 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap.
