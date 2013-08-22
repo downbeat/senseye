@@ -4,19 +4,25 @@
 // File: stonyman.v
 // File history:
 //      0.01: 2013-02-05: created
-//      0.02a:2013-06-13: added support for 4 cameras
+//      0.02: 2013-06-13: added support for 4 cameras
+//      0.03a:2013-08-17: IN PROGRESS: support for different input and output
+//                        pixel width
+//                        IN PROGRESS: support for subtracting a constant
+//                        value from each input pixel
 //
 // Description: 
 //
-// Controller for the CentEye Stonyman imager
+// Controller for the CentEye Stonyman imager.
 //
 // Targeted device: <Family::SmartFusion> <Die::A2F500M3G> <Package::484 FBGA>
 // Author: Russ Bielawski
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-`define CLK_FREQ                   (40000000)  // FIXME (shouldn't be) hardcoded to 20MHz
-`define CLK_FREQ_ADC               (20000000)  // FIXME (shouldn't be) hardcoded to 20MHz
+`define CLK_FREQ                   (40_000_000)  // FIXME (shouldn't be) hardcoded to 20MHz
+`define CLK_FREQ_ADC               (20_000_000)  // FIXME (shouldn't be) hardcoded to 20MHz
+`define MS_PER_SECOND              (1000)
+`define NS_PER_SECOND              (1_000_000_000)
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
 
@@ -30,22 +36,22 @@
 
 // TIMING CONSTANTS
 // Pulse Time:  200-300 ns has worked
-`define TIME_PULSE_WAIT            (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT           (4)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ_ADC)/1000000000)
-`define TIME_PULSE_WAIT_AFTER      (200)       // ns  // TODO: could be lower possibly (try 200ns)
-`define TICKS_PULSE_WAIT_AFTER     (4)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ_ADC)/1000000000)
+`define TIME_PULSE_WAIT            (200)       // ns
+`define TICKS_PULSE_WAIT           (4)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ_ADC)/`NS_PER_SECOND)
+`define TIME_PULSE_WAIT_AFTER      (200)       // ns
+`define TICKS_PULSE_WAIT_AFTER     (4)         // FIXME: should be: ((`TIME_PULSE_WAIT_AFTER*`CLK_FREQ_ADC)/`NS_PER_SECOND)
 `define TIME_PULSE_INPHI           (1000)      // ns
-`define TICKS_PULSE_INPHI          (20)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ_ADC)/1000000000)
+`define TICKS_PULSE_INPHI          (20)        // FIXME: should be: ((`TIME_PULSE_INPHI*`CLK_FREQ_ADC)/`NS_PER_SECOND)
 `define TIME_PULSE_INPHI_AFTER     (1000)      // ns
-`define TICKS_PULSE_INPHI_AFTER    (20)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ_ADC)/1000000000)
+`define TICKS_PULSE_INPHI_AFTER    (20)        // FIXME: should be: ((`TIME_PULSE_INPHI_AFTER*`CLK_FREQ_ADC)/`NS_PER_SECOND)
 // TODO: is this a reasonable value?
 `define TIME_STARTCAP_WAIT_AFTER   (100)       // ns (arbitrarily chosen)
 // TICKS_STARTCAP_WAIT_AFTER must be at least 2
-`define TICKS_STARTCAP_WAIT_AFTER  (2)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ_ADC)/1000000000)
+`define TICKS_STARTCAP_WAIT_AFTER  (2)         // FIXME: should be: ((`TIME_STARTCAP_WAIT_AFTER*`CLK_FREQ_ADC)/`NS_PER_SECOND)
 `define TIME_WAIT_BETWEEN_FRAMES   (50)        // ns (arbitrarily chosen)
-`define TICKS_WAIT_BETWEEN_FRAMES  (1)         // FIXME: should be: ((`TIME_PULSE_WAIT*`CLK_FREQ_ADC)/1000000000)
+`define TICKS_WAIT_BETWEEN_FRAMES  (1)         // FIXME: should be: ((`TIME_WAIT_BETWEEN_FRAMES*`CLK_FREQ_ADC)/`NS_PER_SECOND)
 `define TIME_WAIT_STARTUP          (500)       // ms (arbitrarily chosen)
-`define TICKS_WAIT_STARTUP         (10000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ_ADC)/1000)
+`define TICKS_WAIT_STARTUP         (10000000)  // FIXME: should be: ((`TIME_WAIT_START*`CLK_FREQ_ADC)/`MS_PER_SECOND)
 
 `define REG_COLSEL                 (0)
 `define REG_ROWSEL                 (1)
@@ -133,6 +139,7 @@
  `define SUB_S__SPECIAL__INPHI_OR_ACQUIRE  (`SUB_S_INPHI_WAIT_AFTER)
  `define INPHI_OR_ACQUIRE__WAIT_VAL        (`TICKS_PULSE_INPHI_AFTER-1)
 `endif
+
 
 module stonyman
 (
@@ -989,7 +996,6 @@ begin
                `SUB_S_RESV_RAISE:
                begin
                   // don't reset the value with RESV if it's not necessary
-                  // TODO: this is dumb right!?
                   if(0 == cachedValue[cachedPOINTER])
                   begin
                      state <= `S_CAP_SET_COL;
