@@ -276,120 +276,6 @@ MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
 ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123993"
-SIZE="945"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v,hdl"
-STATE="utd"
-TIME="1357940463"
-SIZE="11243"
-PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
-BEGIN_USE_CONSTRAINT
-TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
-TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
-END_USE_CONSTRAINT
-USE_FOR_ANY_TOOL="FALSE"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CCC\2.0.106\MSS_CCC.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123963"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123963"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_COM\1.0.200\MSS_COM.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123963"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_DMA\1.0.101\MSS_DMA.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123963"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ENVM\2.3.102\MSS_ENVM.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123969"
-SIZE="253"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIC\1.0.101\MSS_FIC.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123969"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIO\1.0.203\MSS_FIO.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123969"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_GPIO\1.0.101\MSS_GPIO.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123969"
-SIZE="253"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_INTR\1.0.101\MSS_INTR.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="253"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_MAC\2.1.101\MSS_MAC.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RESET\1.0.101\MSS_RESET.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="254"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RTC\1.0.100\MSS_RTC.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="252"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_TIMER\1.0.100\MSS_TIMER.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="254"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UART\1.0.101\MSS_UART.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="253"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UFROM\1.0.100\MSS_UFROM.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="254"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\Actel\SmartFusionMSS\MSS_WATCHDOG\1.0.101\MSS_WATCHDOG.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123970"
-SIZE="257"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
 VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
 STATE="utd"
 TIME="1377120656"
@@ -430,23 +316,10 @@ SIZE="2140"
 PARENT="<project>\component\work\imaging\imaging.cxf"
 IS_READONLY="TRUE"
 ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
-STATE="utd"
-TIME="1377123963"
-SIZE="485"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v,hdl"
-STATE="utd"
-TIME="1377123963"
-SIZE="2907"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.cxf"
-IS_READONLY="TRUE"
-ENDFILE
 VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.cxf,actgen_cxf"
 STATE="utd"
-TIME="1377123993"
-SIZE="16312"
+TIME="1377129985"
+SIZE="13241"
 ENDFILE
 VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
 STATE="utd"
@@ -457,51 +330,6 @@ BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
 END_USE_CONSTRAINT
 USE_FOR_ANY_TOOL="FALSE"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.v,hdl"
-STATE="utd"
-TIME="1377123993"
-SIZE="24832"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
-STATE="utd"
-TIME="1377123969"
-SIZE="249287"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\mss_tshell.v,hdl"
-STATE="utd"
-TIME="1377123970"
-SIZE="12560"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-BEGIN_USE_CONSTRAINT
-TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
-TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
-END_USE_CONSTRAINT
-USE_FOR_ANY_TOOL="FALSE"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\mss_tshell_syn.sdc,sdc"
-STATE="utd"
-TIME="1377123970"
-SIZE="188"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
-BEGIN_USE_CONSTRAINT
-TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
-TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
-END_USE_CONSTRAINT
-USE_FOR_ANY_TOOL="FALSE"
-IS_READONLY="TRUE"
-ENDFILE
-VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
-STATE="utd"
-TIME="1377123993"
-SIZE="2028"
-PARENT="<project>\component\work\MSS_CORE2\MSS_CORE2.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\TOPLEVEL\testbench.v,tb_hdl"
@@ -596,7 +424,7 @@ SIZE="258048"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_fp\TOPLEVEL.pro,pro"
 STATE="utd"
-TIME="1377126780"
+TIME="1377127907"
 SIZE="2086"
 ENDFILE
 VALUE "<project>\designer\impl1\TOPLEVEL_placeroute_log.rpt,log"
@@ -696,12 +524,6 @@ SIZE="1237"
 PARENT="<project>\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\COREAHBTOAPB3.cxf"
 PARENT="<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\CoreAHBLite.cxf"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\3.0.103\CoreAPB3.cxf"
-ENDFILE
-VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
-STATE="utd"
-TIME="1357940456"
-SIZE="41"
-PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\coreahblite_usertb_ahb_master0.bfm,sim"
 STATE="utd"
@@ -898,7 +720,7 @@ SIZE="538"
 ENDFILE
 VALUE "<project>\synthesis\TOPLEVEL_syn.prj,prj"
 STATE="utd"
-TIME="1377126471"
+TIME="1377127907"
 SIZE="6283"
 ENDFILE
 ENDLIST
@@ -960,19 +782,7 @@ ENDLIST
 ENDLIST
 ENDLIST
 LIST "MSS_CORE2::work"
-FILE "<project>\component\work\MSS_CORE2\MSS_CORE2.v,hdl"
-LIST Other_Association
-VALUE "<project>\component\work\MSS_CORE2\mss_tshell_syn.sdc,sdc"
-VALUE "<project>\simulation\user.bfm,sim"
-VALUE "<project>\simulation\test.bfm,sim"
-VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
-VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
-VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
-VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
-ENDLIST
-LIST AssociatedStimulus
-VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
-ENDLIST
+FILE "<project>\component\work\MSS_CORE2\MSS_CORE2.cxf,actgen_cxf"
 LIST ProjectState5.1
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -1096,9 +906,6 @@ ENDLIST
 LIST imaging
 VALUE "<project>\component\work\imaging\testbench.v,tb_hdl"
 ENDLIST
-LIST MSS_CORE2
-VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
-ENDLIST
 LIST CoreAHBLite
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\coreparameters.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\test\user\testbench.v,tb_hdl"
@@ -1128,15 +935,6 @@ ENDLIST
 LIST imaging
 VALUE "<project>\component\work\imaging\testbench.v,tb_hdl"
 VALUE "<project>\component\work\imaging\imaging.pdc,pdc"
-ENDLIST
-LIST MSS_CORE2
-VALUE "<project>\component\work\MSS_CORE2\mss_tshell_syn.sdc,sdc"
-VALUE "<project>\simulation\user.bfm,sim"
-VALUE "<project>\simulation\test.bfm,sim"
-VALUE "<project>\component\work\MSS_CORE2\testbench.v,tb_hdl"
-VALUE "<project>\component\work\MSS_CORE2\MSS_CORE2.pdc,pdc"
-VALUE "<project>\component\work\MSS_CORE2\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
-VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 ENDLIST
 LIST CoreAHBLite
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
@@ -1328,8 +1126,9 @@ ENDLIST
 LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
-StartPage;StartPage
-ACTIVEVIEW;StartPage
+SmartDesign;TOPLEVEL
+SmartDesign;MSS_CORE2
+ACTIVEVIEW;MSS_CORE2
 ENDLIST
 LIST ModuleSubBlockList
 LIST "adcxx1s101::work","hdl\adcxx1s101.v","FALSE","FALSE"
@@ -1337,10 +1136,6 @@ ENDLIST
 LIST "AHB::work","hdl\ahb.v","FALSE","FALSE"
 ENDLIST
 LIST "apb::work","hdl\apb.v","FALSE","FALSE"
-ENDLIST
-LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
-LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "CAHBtoAPB3IOl::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v","FALSE","FALSE"
 ENDLIST
@@ -1394,63 +1189,91 @@ SUBBLOCK "MUX2::work","smartgen\MUX2\MUX2.v","TRUE","FALSE"
 SUBBLOCK "stonyman::work","hdl\stonyman.v","FALSE","FALSE"
 SUBBLOCK "stonyman_apb3::work","hdl\stonyman_apb3.v","FALSE","FALSE"
 ENDLIST
-LIST "INBUF_LVDS_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
-LIST "INBUF_LVPECL_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
-LIST "INBUF_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
-LIST "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
 LIST "inputConditioner::work","hdl\inputConditioner.v","FALSE","FALSE"
 ENDLIST
 LIST "led_test::work","hdl\led.v","FALSE","FALSE"
 ENDLIST
-LIST "MSS_AHB::work","component\work\MSS_CORE2\mss_tshell.v","FALSE","FALSE"
+LIST "MSS_ACE::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_ALL::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+LIST "MSS_CCC::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+LIST "MSS_CM3::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
-SUBBLOCK "MSS_AHB::work","component\work\MSS_CORE2\mss_tshell.v","FALSE","FALSE"
-SUBBLOCK "MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC::work","component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v","FALSE","FALSE"
-SUBBLOCK "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-SUBBLOCK "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-SUBBLOCK "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-SUBBLOCK "MSSINT::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+LIST "MSS_COM::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC::work","component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v","FALSE","FALSE"
-SUBBLOCK "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-SUBBLOCK "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+LIST "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.cxf","TRUE","FALSE"
+SUBBLOCK "MSS_ACE::work","","FALSE","FALSE"
+SUBBLOCK "MSS_CCC::work","","FALSE","FALSE"
+SUBBLOCK "MSS_CM3::work","","FALSE","FALSE"
+SUBBLOCK "MSS_COM::work","","FALSE","FALSE"
+SUBBLOCK "MSS_DMA::work","","FALSE","FALSE"
+SUBBLOCK "MSS_EMI::work","","FALSE","FALSE"
+SUBBLOCK "MSS_ENVM::work","","FALSE","FALSE"
+SUBBLOCK "MSS_FIC::work","","FALSE","FALSE"
+SUBBLOCK "MSS_FIO::work","","FALSE","FALSE"
+SUBBLOCK "MSS_GPIO::work","","FALSE","FALSE"
+SUBBLOCK "MSS_I2C::work","","FALSE","FALSE"
+SUBBLOCK "MSS_INTR::work","","FALSE","FALSE"
+SUBBLOCK "MSS_MAC::work","","FALSE","FALSE"
+SUBBLOCK "MSS_RESET::work","","FALSE","FALSE"
+SUBBLOCK "MSS_RTC::work","","FALSE","FALSE"
+SUBBLOCK "MSS_SPI::work","","FALSE","FALSE"
+SUBBLOCK "MSS_TIMER::work","","FALSE","FALSE"
+SUBBLOCK "MSS_UART::work","","FALSE","FALSE"
+SUBBLOCK "MSS_UFROM::work","","FALSE","FALSE"
+SUBBLOCK "MSS_WATCHDOG::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_DMA::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_EMI::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_ENVM::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_Ethernet_MAC_Driver::work","","FALSE","FALSE"
 ENDLIST
+LIST "MSS_FIC::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_FIO::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_GPIO::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_GPIO_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_I2C::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_IAP_Driver::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_LPXTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+LIST "MSS_INTR::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_MAC::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_NVM_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_PDMA_Driver::work","","FALSE","FALSE"
 ENDLIST
+LIST "MSS_RESET::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_RTC::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_RTC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_SPI::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_TIMER::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_Timer_Driver::work","","FALSE","FALSE"
 ENDLIST
+LIST "MSS_UART::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_UART_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_UFROM::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_WATCHDOG::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_Watchdog_Driver::work","","FALSE","FALSE"
 ENDLIST
-LIST "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
-LIST "MSSINT::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
-ENDLIST
 LIST "MUX2::work","smartgen\MUX2\MUX2.v","TRUE","FALSE"
-ENDLIST
-LIST "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
 SUBBLOCK "AHB::work","hdl\ahb.v","FALSE","FALSE"
@@ -1468,12 +1291,10 @@ ENDLIST
 LIST "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"
 SUBBLOCK "COREAHBTOAPB3::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v","FALSE","FALSE"
 SUBBLOCK "imaging::work","component\work\imaging\imaging.v","TRUE","FALSE"
-SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 SUBBLOCK "psram_cr::work","hdl\psram_cr.v","FALSE","FALSE"
 SUBBLOCK "CoreAHBLite::COREAHBLITE_LIB","component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v","FALSE","FALSE"
 SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v","FALSE","FALSE"
-ENDLIST
-LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.cxf","TRUE","FALSE"
 ENDLIST
 LIST "VersionROM::work","hdl\VersionROM.v","FALSE","FALSE"
 ENDLIST
@@ -1491,9 +1312,6 @@ LIST "testbench::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlo
 SUBBLOCK "COREAHBTOAPB3::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v","FALSE","FALSE"
 SUBBLOCK "BFM_AHBL::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_ahbl.v","FALSE","TRUE"
 SUBBLOCK "BFM_APBSLAVE::work","component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\test\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
-ENDLIST
-LIST "testbench::work","component\work\MSS_CORE2\testbench.v","FALSE","TRUE"
-SUBBLOCK "MSS_CORE2::work","component\work\MSS_CORE2\MSS_CORE2.v","TRUE","FALSE"
 ENDLIST
 LIST "testbench::work","component\work\TOPLEVEL\testbench.v","FALSE","TRUE"
 SUBBLOCK "TOPLEVEL::work","component\work\TOPLEVEL\TOPLEVEL.v","TRUE","FALSE"

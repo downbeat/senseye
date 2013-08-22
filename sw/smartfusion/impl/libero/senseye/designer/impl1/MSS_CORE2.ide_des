@@ -1,10 +1,9 @@
 KEY IDE_DES_TOOL "Ide"
-KEY IDE_DES_ADB_PATH "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\designer\impl1\MSS_CORE2.adb"
+KEY IDE_DES_ADB_PATH "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\designer\impl1\MSS_CORE2.adb"
 LIST SOURCE_FILES
-VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.pdc;pdc"
 ENDLIST
 LIST OPTIONAL_FILES
-VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.pdc;Used"
+VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\MSS_CORE2.pdc;Used"
 ENDLIST
 LIST VCD_FILES
 ENDLIST
