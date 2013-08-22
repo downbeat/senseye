@@ -227,10 +227,22 @@ wire bus_read_enable;
 
 wire ioreg_ready;
 
-wire ioreg_cam0_fifo_rden;
-wire ioreg_cam1_fifo_rden;
-wire ioreg_cam2_fifo_rden;
-wire ioreg_cam3_fifo_rden;
+wire ioreg_cg0_cam0_fifo_rden;
+wire ioreg_cg0_cam1_fifo_rden;
+wire ioreg_cg0_cam2_fifo_rden;
+wire ioreg_cg0_cam3_fifo_rden;
+wire ioreg_cg1_cam0_fifo_rden;
+wire ioreg_cg1_cam1_fifo_rden;
+wire ioreg_cg1_cam2_fifo_rden;
+wire ioreg_cg1_cam3_fifo_rden;
+wire ioreg_cg2_cam0_fifo_rden;
+wire ioreg_cg2_cam1_fifo_rden;
+wire ioreg_cg2_cam2_fifo_rden;
+wire ioreg_cg2_cam3_fifo_rden;
+wire ioreg_cg3_cam0_fifo_rden;
+wire ioreg_cg3_cam1_fifo_rden;
+wire ioreg_cg3_cam2_fifo_rden;
+wire ioreg_cg3_cam3_fifo_rden;
 
 
 // no errors, always ready
@@ -243,10 +255,22 @@ assign bus_read_enable = (!PWRITE && PSEL);
 
 
 // don't actually read the Fifo if it's empty
-assign CG0_CAM0_FIFO_RDEN = !(ioreg_cam0_fifo_rden && !CG0_CAM0_FIFO_EMPTY);
-assign CG0_CAM1_FIFO_RDEN = !(ioreg_cam1_fifo_rden && !CG0_CAM1_FIFO_EMPTY);
-assign CG0_CAM2_FIFO_RDEN = !(ioreg_cam2_fifo_rden && !CG0_CAM2_FIFO_EMPTY);
-assign CG0_CAM3_FIFO_RDEN = !(ioreg_cam3_fifo_rden && !CG0_CAM3_FIFO_EMPTY);
+assign CG0_CAM0_FIFO_RDEN = !(ioreg_cg0_cam0_fifo_rden && !CG0_CAM0_FIFO_EMPTY);
+assign CG0_CAM1_FIFO_RDEN = !(ioreg_cg0_cam1_fifo_rden && !CG0_CAM1_FIFO_EMPTY);
+assign CG0_CAM2_FIFO_RDEN = !(ioreg_cg0_cam2_fifo_rden && !CG0_CAM2_FIFO_EMPTY);
+assign CG0_CAM3_FIFO_RDEN = !(ioreg_cg0_cam3_fifo_rden && !CG0_CAM3_FIFO_EMPTY);
+assign CG1_CAM0_FIFO_RDEN = !(ioreg_cg1_cam0_fifo_rden && !CG1_CAM0_FIFO_EMPTY);
+assign CG1_CAM1_FIFO_RDEN = !(ioreg_cg1_cam1_fifo_rden && !CG1_CAM1_FIFO_EMPTY);
+assign CG1_CAM2_FIFO_RDEN = !(ioreg_cg1_cam2_fifo_rden && !CG1_CAM2_FIFO_EMPTY);
+assign CG1_CAM3_FIFO_RDEN = !(ioreg_cg1_cam3_fifo_rden && !CG1_CAM3_FIFO_EMPTY);
+assign CG2_CAM0_FIFO_RDEN = !(ioreg_cg2_cam0_fifo_rden && !CG2_CAM0_FIFO_EMPTY);
+assign CG2_CAM1_FIFO_RDEN = !(ioreg_cg2_cam1_fifo_rden && !CG2_CAM1_FIFO_EMPTY);
+assign CG2_CAM2_FIFO_RDEN = !(ioreg_cg2_cam2_fifo_rden && !CG2_CAM2_FIFO_EMPTY);
+assign CG2_CAM3_FIFO_RDEN = !(ioreg_cg2_cam3_fifo_rden && !CG2_CAM3_FIFO_EMPTY);
+assign CG3_CAM0_FIFO_RDEN = !(ioreg_cg3_cam0_fifo_rden && !CG3_CAM0_FIFO_EMPTY);
+assign CG3_CAM1_FIFO_RDEN = !(ioreg_cg3_cam1_fifo_rden && !CG3_CAM1_FIFO_EMPTY);
+assign CG3_CAM2_FIFO_RDEN = !(ioreg_cg3_cam2_fifo_rden && !CG3_CAM2_FIFO_EMPTY);
+assign CG3_CAM3_FIFO_RDEN = !(ioreg_cg3_cam3_fifo_rden && !CG3_CAM3_FIFO_EMPTY);
 
 
 stonyman_ioreg stonyman_ioreg_0( 
@@ -256,34 +280,112 @@ stonyman_ioreg stonyman_ioreg_0(
    .rden(bus_read_enable),
    .addr(PADDR),
    .ready(ioreg_ready),
-   .cam0fifoRden(ioreg_cam0_fifo_rden),
-   .cam1fifoRden(ioreg_cam1_fifo_rden),
-   .cam2fifoRden(ioreg_cam2_fifo_rden),
-   .cam3fifoRden(ioreg_cam3_fifo_rden),
+   .cg0cam0fifoRden(ioreg_cg0_cam0_fifo_rden),
+   .cg0cam1fifoRden(ioreg_cg0_cam1_fifo_rden),
+   .cg0cam2fifoRden(ioreg_cg0_cam2_fifo_rden),
+   .cg0cam3fifoRden(ioreg_cg0_cam3_fifo_rden),
+   .cg1cam0fifoRden(ioreg_cg1_cam0_fifo_rden),
+   .cg1cam1fifoRden(ioreg_cg1_cam1_fifo_rden),
+   .cg1cam2fifoRden(ioreg_cg1_cam2_fifo_rden),
+   .cg1cam3fifoRden(ioreg_cg1_cam3_fifo_rden),
+   .cg2cam0fifoRden(ioreg_cg2_cam0_fifo_rden),
+   .cg2cam1fifoRden(ioreg_cg2_cam1_fifo_rden),
+   .cg2cam2fifoRden(ioreg_cg2_cam2_fifo_rden),
+   .cg2cam3fifoRden(ioreg_cg2_cam3_fifo_rden),
+   .cg3cam0fifoRden(ioreg_cg3_cam0_fifo_rden),
+   .cg3cam1fifoRden(ioreg_cg3_cam1_fifo_rden),
+   .cg3cam2fifoRden(ioreg_cg3_cam2_fifo_rden),
+   .cg3cam3fifoRden(ioreg_cg3_cam3_fifo_rden),
    .datain(PWDATA),
    .dataout(PRDATA),
-   .busy(CG0_BUSY),
-   .cam0empty(CG0_CAM0_FIFO_EMPTY),
-   .cam1empty(CG0_CAM1_FIFO_EMPTY),
-   .cam2empty(CG0_CAM2_FIFO_EMPTY),
-   .cam3empty(CG0_CAM3_FIFO_EMPTY),
-   .cam0full(CG0_CAM0_FIFO_FULL),
-   .cam1full(CG0_CAM1_FIFO_AFULL),
-   .cam2full(CG0_CAM2_FIFO_AFULL),
-   .cam3full(CG0_CAM3_FIFO_AFULL),
-   .cam0afull(CG0_CAM0_FIFO_AFULL),
-   .cam1afull(CG0_CAM1_FIFO_AFULL),
-   .cam2afull(CG0_CAM0_FIFO_AFULL),
-   .cam3afull(CG0_CAM0_FIFO_AFULL),
-   .cam0overflow(CG0_CAM0_FIFO_OVERFLOW),
-   .cam1overflow(CG0_CAM1_FIFO_OVERFLOW),
-   .cam2overflow(CG0_CAM2_FIFO_OVERFLOW),
-   .cam3overflow(CG0_CAM3_FIFO_OVERFLOW),
-   .cam0pxDatain(CG0_CAM0_PIXELSIN),
-   .cam1pxDatain(CG0_CAM1_PIXELSIN),
-   .cam2pxDatain(CG0_CAM2_PIXELSIN),
-   .cam3pxDatain(CG0_CAM3_PIXELSIN),
-   .startCapture(CG0_START_CAPTURE)
+   .cg0busy(CG0_BUSY),
+   .cg1busy(CG1_BUSY),
+   .cg2busy(CG2_BUSY),
+   .cg3busy(CG3_BUSY),
+   .cg0cam0empty(CG0_CAM0_FIFO_EMPTY),
+   .cg0cam1empty(CG0_CAM1_FIFO_EMPTY),
+   .cg0cam2empty(CG0_CAM2_FIFO_EMPTY),
+   .cg0cam3empty(CG0_CAM3_FIFO_EMPTY),
+   .cg1cam0empty(CG1_CAM0_FIFO_EMPTY),
+   .cg1cam1empty(CG1_CAM1_FIFO_EMPTY),
+   .cg1cam2empty(CG1_CAM2_FIFO_EMPTY),
+   .cg1cam3empty(CG1_CAM3_FIFO_EMPTY),
+   .cg2cam0empty(CG2_CAM0_FIFO_EMPTY),
+   .cg2cam1empty(CG2_CAM1_FIFO_EMPTY),
+   .cg2cam2empty(CG2_CAM2_FIFO_EMPTY),
+   .cg2cam3empty(CG2_CAM3_FIFO_EMPTY),
+   .cg3cam0empty(CG3_CAM0_FIFO_EMPTY),
+   .cg3cam1empty(CG3_CAM1_FIFO_EMPTY),
+   .cg3cam2empty(CG3_CAM2_FIFO_EMPTY),
+   .cg3cam3empty(CG3_CAM3_FIFO_EMPTY),
+   .cg0cam0full(CG0_CAM0_FIFO_FULL),
+   .cg0cam1full(CG0_CAM1_FIFO_FULL),
+   .cg0cam2full(CG0_CAM2_FIFO_FULL),
+   .cg0cam3full(CG0_CAM3_FIFO_FULL),
+   .cg1cam0full(CG1_CAM0_FIFO_FULL),
+   .cg1cam1full(CG1_CAM1_FIFO_FULL),
+   .cg1cam2full(CG1_CAM2_FIFO_FULL),
+   .cg1cam3full(CG1_CAM3_FIFO_FULL),
+   .cg2cam0full(CG2_CAM0_FIFO_FULL),
+   .cg2cam1full(CG2_CAM1_FIFO_FULL),
+   .cg2cam2full(CG2_CAM2_FIFO_FULL),
+   .cg2cam3full(CG2_CAM3_FIFO_FULL),
+   .cg3cam0full(CG3_CAM0_FIFO_FULL),
+   .cg3cam1full(CG3_CAM1_FIFO_FULL),
+   .cg3cam2full(CG3_CAM2_FIFO_FULL),
+   .cg3cam3full(CG3_CAM3_FIFO_FULL),
+   .cg0cam0afull(CG0_CAM0_FIFO_AFULL),
+   .cg0cam1afull(CG0_CAM1_FIFO_AFULL),
+   .cg0cam2afull(CG0_CAM0_FIFO_AFULL),
+   .cg0cam3afull(CG0_CAM0_FIFO_AFULL),
+   .cg1cam0afull(CG1_CAM0_FIFO_AFULL),
+   .cg1cam1afull(CG1_CAM1_FIFO_AFULL),
+   .cg1cam2afull(CG1_CAM0_FIFO_AFULL),
+   .cg1cam3afull(CG1_CAM0_FIFO_AFULL),
+   .cg2cam0afull(CG2_CAM0_FIFO_AFULL),
+   .cg2cam1afull(CG2_CAM1_FIFO_AFULL),
+   .cg2cam2afull(CG2_CAM0_FIFO_AFULL),
+   .cg2cam3afull(CG2_CAM0_FIFO_AFULL),
+   .cg3cam0afull(CG3_CAM0_FIFO_AFULL),
+   .cg3cam1afull(CG3_CAM1_FIFO_AFULL),
+   .cg3cam2afull(CG3_CAM0_FIFO_AFULL),
+   .cg3cam3afull(CG3_CAM0_FIFO_AFULL),
+   .cg0cam0overflow(CG0_CAM0_FIFO_OVERFLOW),
+   .cg0cam1overflow(CG0_CAM1_FIFO_OVERFLOW),
+   .cg0cam2overflow(CG0_CAM2_FIFO_OVERFLOW),
+   .cg0cam3overflow(CG0_CAM3_FIFO_OVERFLOW),
+   .cg1cam0overflow(CG1_CAM0_FIFO_OVERFLOW),
+   .cg1cam1overflow(CG1_CAM1_FIFO_OVERFLOW),
+   .cg1cam2overflow(CG1_CAM2_FIFO_OVERFLOW),
+   .cg1cam3overflow(CG1_CAM3_FIFO_OVERFLOW),
+   .cg2cam0overflow(CG2_CAM0_FIFO_OVERFLOW),
+   .cg2cam1overflow(CG2_CAM1_FIFO_OVERFLOW),
+   .cg2cam2overflow(CG2_CAM2_FIFO_OVERFLOW),
+   .cg2cam3overflow(CG2_CAM3_FIFO_OVERFLOW),
+   .cg3cam0overflow(CG3_CAM0_FIFO_OVERFLOW),
+   .cg3cam1overflow(CG3_CAM1_FIFO_OVERFLOW),
+   .cg3cam2overflow(CG3_CAM2_FIFO_OVERFLOW),
+   .cg3cam3overflow(CG3_CAM3_FIFO_OVERFLOW),
+   .cg0cam0pxDatain(CG0_CAM0_PIXELSIN),
+   .cg0cam1pxDatain(CG0_CAM1_PIXELSIN),
+   .cg0cam2pxDatain(CG0_CAM2_PIXELSIN),
+   .cg0cam3pxDatain(CG0_CAM3_PIXELSIN),
+   .cg1cam0pxDatain(CG1_CAM0_PIXELSIN),
+   .cg1cam1pxDatain(CG1_CAM1_PIXELSIN),
+   .cg1cam2pxDatain(CG1_CAM2_PIXELSIN),
+   .cg1cam3pxDatain(CG1_CAM3_PIXELSIN),
+   .cg2cam0pxDatain(CG2_CAM0_PIXELSIN),
+   .cg2cam1pxDatain(CG2_CAM1_PIXELSIN),
+   .cg2cam2pxDatain(CG2_CAM2_PIXELSIN),
+   .cg2cam3pxDatain(CG2_CAM3_PIXELSIN),
+   .cg3cam0pxDatain(CG3_CAM0_PIXELSIN),
+   .cg3cam1pxDatain(CG3_CAM1_PIXELSIN),
+   .cg3cam2pxDatain(CG3_CAM2_PIXELSIN),
+   .cg3cam3pxDatain(CG3_CAM3_PIXELSIN),
+   .cg0startCapture(CG0_START_CAPTURE),
+   .cg1startCapture(CG1_START_CAPTURE),
+   .cg2startCapture(CG2_START_CAPTURE),
+   .cg3startCapture(CG3_START_CAPTURE)
 );
 
 endmodule
@@ -299,36 +401,114 @@ input wire wren,
 input wire rden,
 input wire [31:0] addr,
 output reg ready,
-output wire cam0fifoRden,  // active high
-output wire cam1fifoRden,  // active high
-output wire cam2fifoRden,  // active high
-output wire cam3fifoRden,  // active high
+output wire cg0cam0fifoRden,  // active high
+output wire cg0cam1fifoRden,  // active high
+output wire cg0cam2fifoRden,  // active high
+output wire cg0cam3fifoRden,  // active high
+output wire cg1cam0fifoRden,  // active high
+output wire cg1cam1fifoRden,  // active high
+output wire cg1cam2fifoRden,  // active high
+output wire cg1cam3fifoRden,  // active high
+output wire cg2cam0fifoRden,  // active high
+output wire cg2cam1fifoRden,  // active high
+output wire cg2cam2fifoRden,  // active high
+output wire cg2cam3fifoRden,  // active high
+output wire cg3cam0fifoRden,  // active high
+output wire cg3cam1fifoRden,  // active high
+output wire cg3cam2fifoRden,  // active high
+output wire cg3cam3fifoRden,  // active high
 input wire [(`WIDTH-1):0] datain,
 output reg [(`WIDTH-1):0] dataout,
 
-input wire busy,
-input wire cam0empty,
-input wire cam1empty,
-input wire cam2empty,
-input wire cam3empty,
-input wire cam0full,
-input wire cam1full,
-input wire cam2full,
-input wire cam3full,
-input wire cam0afull,
-input wire cam1afull,
-input wire cam2afull,
-input wire cam3afull,
-input wire cam0overflow,
-input wire cam1overflow,
-input wire cam2overflow,
-input wire cam3overflow,
-input wire [(`WIDTH-1):0] cam0pxDatain,
-input wire [(`WIDTH-1):0] cam1pxDatain,
-input wire [(`WIDTH-1):0] cam2pxDatain,
-input wire [(`WIDTH-1):0] cam3pxDatain,
+input wire cg0busy,
+input wire cg1busy,
+input wire cg2busy,
+input wire cg3busy,
+input wire cg0cam0empty,
+input wire cg0cam1empty,
+input wire cg0cam2empty,
+input wire cg0cam3empty,
+input wire cg1cam0empty,
+input wire cg1cam1empty,
+input wire cg1cam2empty,
+input wire cg1cam3empty,
+input wire cg2cam0empty,
+input wire cg2cam1empty,
+input wire cg2cam2empty,
+input wire cg2cam3empty,
+input wire cg3cam0empty,
+input wire cg3cam1empty,
+input wire cg3cam2empty,
+input wire cg3cam3empty,
+input wire cg0cam0full,
+input wire cg0cam1full,
+input wire cg0cam2full,
+input wire cg0cam3full,
+input wire cg1cam0full,
+input wire cg1cam1full,
+input wire cg1cam2full,
+input wire cg1cam3full,
+input wire cg2cam0full,
+input wire cg2cam1full,
+input wire cg2cam2full,
+input wire cg2cam3full,
+input wire cg3cam0full,
+input wire cg3cam1full,
+input wire cg3cam2full,
+input wire cg3cam3full,
+input wire cg0cam0afull,
+input wire cg0cam1afull,
+input wire cg0cam2afull,
+input wire cg0cam3afull,
+input wire cg1cam0afull,
+input wire cg1cam1afull,
+input wire cg1cam2afull,
+input wire cg1cam3afull,
+input wire cg2cam0afull,
+input wire cg2cam1afull,
+input wire cg2cam2afull,
+input wire cg2cam3afull,
+input wire cg3cam0afull,
+input wire cg3cam1afull,
+input wire cg3cam2afull,
+input wire cg3cam3afull,
+input wire cg0cam0overflow,
+input wire cg0cam1overflow,
+input wire cg0cam2overflow,
+input wire cg0cam3overflow,
+input wire cg1cam0overflow,
+input wire cg1cam1overflow,
+input wire cg1cam2overflow,
+input wire cg1cam3overflow,
+input wire cg2cam0overflow,
+input wire cg2cam1overflow,
+input wire cg2cam2overflow,
+input wire cg2cam3overflow,
+input wire cg3cam0overflow,
+input wire cg3cam1overflow,
+input wire cg3cam2overflow,
+input wire cg3cam3overflow,
+input wire [(`WIDTH-1):0] cg0cam0pxDatain,
+input wire [(`WIDTH-1):0] cg0cam1pxDatain,
+input wire [(`WIDTH-1):0] cg0cam2pxDatain,
+input wire [(`WIDTH-1):0] cg0cam3pxDatain,
+input wire [(`WIDTH-1):0] cg1cam0pxDatain,
+input wire [(`WIDTH-1):0] cg1cam1pxDatain,
+input wire [(`WIDTH-1):0] cg1cam2pxDatain,
+input wire [(`WIDTH-1):0] cg1cam3pxDatain,
+input wire [(`WIDTH-1):0] cg2cam0pxDatain,
+input wire [(`WIDTH-1):0] cg2cam1pxDatain,
+input wire [(`WIDTH-1):0] cg2cam2pxDatain,
+input wire [(`WIDTH-1):0] cg2cam3pxDatain,
+input wire [(`WIDTH-1):0] cg3cam0pxDatain,
+input wire [(`WIDTH-1):0] cg3cam1pxDatain,
+input wire [(`WIDTH-1):0] cg3cam2pxDatain,
+input wire [(`WIDTH-1):0] cg3cam3pxDatain,
 
-output reg startCapture
+output reg cg0startCapture,  // active low
+output reg cg1startCapture,  // active low
+output reg cg2startCapture,  // active low
+output reg cg3startCapture   // active low
 );
 
 reg [2:0] fifoRdenState [0:3];
@@ -348,30 +528,30 @@ wire full [0:3];
 wire afull [0:3];
 wire overflow [0:3];
 wire [(`WIDTH-1):0] pxDatain [0:3];
-assign cam0fifoRden=fifoRden[0];
-assign cam1fifoRden=fifoRden[1];
-assign cam2fifoRden=fifoRden[2];
-assign cam3fifoRden=fifoRden[3];
-assign empty[0]=cam0empty;
-assign empty[1]=cam1empty;
-assign empty[2]=cam2empty;
-assign empty[3]=cam3empty;
-assign full[0]=cam0full;
-assign full[1]=cam1full;
-assign full[2]=cam2full;
-assign full[3]=cam3full;
-assign afull[0]=cam0afull;
-assign afull[1]=cam1afull;
-assign afull[2]=cam2afull;
-assign afull[3]=cam3afull;
-assign overflow[0]=cam0overflow;
-assign overflow[1]=cam1overflow;
-assign overflow[2]=cam2overflow;
-assign overflow[3]=cam3overflow;
-assign pxDatain[0]=cam0pxDatain;
-assign pxDatain[1]=cam1pxDatain;
-assign pxDatain[2]=cam2pxDatain;
-assign pxDatain[3]=cam3pxDatain;
+assign cg0cam0fifoRden=fifoRden[0];
+assign cg0cam1fifoRden=fifoRden[1];
+assign cg0cam2fifoRden=fifoRden[2];
+assign cg0cam3fifoRden=fifoRden[3];
+assign empty[0]=cg0cam0empty;
+assign empty[1]=cg0cam1empty;
+assign empty[2]=cg0cam2empty;
+assign empty[3]=cg0cam3empty;
+assign full[0]=cg0cam0full;
+assign full[1]=cg0cam1full;
+assign full[2]=cg0cam2full;
+assign full[3]=cg0cam3full;
+assign afull[0]=cg0cam0afull;
+assign afull[1]=cg0cam1afull;
+assign afull[2]=cg0cam2afull;
+assign afull[3]=cg0cam3afull;
+assign overflow[0]=cg0cam0overflow;
+assign overflow[1]=cg0cam1overflow;
+assign overflow[2]=cg0cam2overflow;
+assign overflow[3]=cg0cam3overflow;
+assign pxDatain[0]=cg0cam0pxDatain;
+assign pxDatain[1]=cg0cam1pxDatain;
+assign pxDatain[2]=cg0cam2pxDatain;
+assign pxDatain[3]=cg0cam3pxDatain;
 
 assign camRegInd=addr[7];
 assign camIdx=addr[6:5];
@@ -400,7 +580,7 @@ begin
          // GLOB_STATUS
          if(`REG_OFFSET_GLOB_STATUS == (`MASK_REG_RANGE&addr))
          begin
-            dataout <= {`REG_GLOB_STATUS_RESERVED,busy};
+            dataout <= {`REG_GLOB_STATUS_RESERVED,cg0busy};
             ready <= 1'b1;
          end
          // some camera register
@@ -464,7 +644,7 @@ begin
          begin
             if(0 != (1&datain[0]))
             begin
-               startCapture <= 1'b0;
+               cg0startCapture <= 1'b0;
                ready <= 1'b1;
             end
          end
@@ -476,9 +656,9 @@ begin
       else
       begin
          // wait for startCapture to be acknowledged (with busy signal)
-         if((1'b0==startCapture) && (1'b1==busy))
+         if((1'b0==cg0startCapture) && (1'b1==cg0busy))
          begin
-            startCapture <= 1'b1;
+            cg0startCapture <= 1'b1;
          end
          ready <= 1'b0;
       end
