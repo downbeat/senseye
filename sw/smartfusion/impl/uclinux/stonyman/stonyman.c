@@ -4,19 +4,20 @@
 //
 // stonyman.c
 //
-// VER    DATE        AUTHOR        DESC
-// 0.01   2013-07-23  russ          created.  supports starting and stopping capture, and reading
-//                                  from the FIFO in the interrupt (although data is merely
-//                                  discarded).  there is some code for multiple cameras, but the
-//                                  functional code supports a single camera only.
-// 0.02   2013-07-25  russ          implemented stonyman_read.  a user-space program can now read
-//                                  from the device file.  THERE IS NO CONCURRENCY PROTECTION.
-// 0.03   2013-07-29  russ          added spinlocks to address the glaring race condition between
-//                                  stonyman_read and stonyman_interrupt.
-// 0.04   2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
-//                                  both of which map to stonyman_interrupt.
-// 0.05   2013-08-15  russ          added support for reading partial images in stonyman_read.
-// 0.06   2013-08-15  russ          added auto-delay mode (enabling requires recompilation)
+// VER   DATE        AUTHOR        DESC
+// 0.01  2013-07-23  russ          created.  supports starting and stopping capture, and reading
+//                                 from the FIFO in the interrupt (although data is merely
+//                                 discarded).  there is some code for multiple cameras, but the
+//                                 functional code supports a single camera only.
+// 0.02  2013-07-25  russ          implemented stonyman_read.  a user-space program can now read
+//                                 from the device file.  THERE IS NO CONCURRENCY PROTECTION.
+// 0.03  2013-07-29  russ          added spinlocks to address the glaring race condition between
+//                                 stonyman_read and stonyman_interrupt.
+// 0.04  2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
+//                                 both of which map to stonyman_interrupt.
+// 0.05  2013-08-15  russ          added support for reading partial images in stonyman_read.
+// 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation)
+// 1.00a 2013-08-21  russ          multi-camera support
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -44,80 +45,98 @@ typedef  unsigned        uint32;
 typedef  unsigned short  uint16;
 typedef  unsigned char   uint8;
 
-#define REG_BASE_ADDR_CAM         (0x40060000ul)
-#define REG_MASK_CAM_IND          (0x00000080ul)
-#define REG_CAM_REG_SPACE_WIDTH   (0x00000020ul)
-#define REG_SET_OFFSET_CAM0       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*0))
-#define REG_SET_OFFSET_CAM1       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*1))
-#define REG_SET_OFFSET_CAM2       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*2))
-#define REG_SET_OFFSET_CAM3       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*3))
-#define REG_OFFSET_GLOB_STARTCAP  (0x00000000ul)
-#define REG_OFFSET_GLOB_STATUS    (0x00000000ul)
-#define REG_OFFSET_CAMX_STATUS    (0x00000000ul)
-#define REG_OFFSET_CAMX_PXDATA    (0x00000004ul)
+#define REG_BASE_ADDR_CAM               (0x40060000ul)
+#define REG_MASK_CAM_IND                (0x00000080ul)
+#define REG_CAM_REG_SPACE_WIDTH         (0x00000008ul)
+#define REG_SET_OFFSET_CAM0             (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*0))
+#define REG_SET_OFFSET_CAM1             (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*1))
+#define REG_SET_OFFSET_CAM2             (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*2))
+#define REG_SET_OFFSET_CAM3             (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*3))
+#define REG_OFFSET_GLOB_STARTCAP        (0x00000000ul)
+#define REG_OFFSET_GLOB_STATUS          (0x00000000ul)
+#define REG_OFFSET_CAMX_STATUS          (0x00000000ul)
+#define REG_OFFSET_CAMX_PXDATA          (0x00000004ul)
 
-#define REG_CTRL                  (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STARTCAP)))
-#define REG_FLAGS                 (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STATUS)))
-#define REG_CAMX_BASE(xx)         (REG_BASE_ADDR_CAM+REG_MASK_CAM_IND+(REG_CAM_REG_SPACE_WIDTH*(xx)))
-#define REG_CAMX_STATUS(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_STATUS)))
-#define REG_CAMX_PXDATA(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_PXDATA)))
+#define REG_CTRL                        \
+   (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STARTCAP)))
+#define REG_FLAGS                       \
+   (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STATUS)))
+#define REG_CAMX_BASE(xx)               \
+   (REG_BASE_ADDR_CAM+REG_MASK_CAM_IND+(REG_CAM_REG_SPACE_WIDTH*(xx)))
+#define REG_CAMX_STATUS(xx)             \
+   (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_STATUS)))
+#define REG_CAMX_PXDATA(xx)             \
+   (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_PXDATA)))
 
-#define FLAG_SHIFT_BUSY           (0u)
-#define FLAG_SHIFT_EMPTY          (0u)
-#define FLAG_SHIFT_FULL           (1u)
-#define FLAG_SHIFT_AFULL          (2u)
+#define FLAG_SHIFT_BUSY                 (0u)
+#define FLAG_SHIFT_EMPTY                (0u)
+#define FLAG_SHIFT_FULL                 (1u)
+#define FLAG_SHIFT_AFULL                (2u)
 
-#define REG_BASE_ADDR_GPIO        (0x40013000ul)
-#define REG_OFFSET_IRQ            (0x80)
-#define REG_OFFSET_IN             (0x84)
-#define REG_OFFSET_OUT            (0x88)
+#define GPIO_REG_BASE_ADDR              (0x40013000ul)
+#define GPIO_REG_OFFSET_IRQ             (0x80)
+#define GPIO_REG_OFFSET_IN              (0x84)
+#define GPIO_REG_OFFSET_OUT             (0x88)
 
-#define REG_GPIO_X_CFG(xx)        (*((volatile uint32*)(REG_BASE_ADDR_GPIO+(xx)*sizeof(uint32))))
-#define REG_GPIO_IRQ              (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_IRQ)))
-#define REG_GPIO_IN               (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_IN)))
-#define REG_GPIO_OUT              (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_OUT)))
+#define REG_GPIO_X_CFG(xx)              \
+   (*((volatile uint32*)(GPIO_REG_BASE_ADDR+(xx)*sizeof(uint32))))
+#define REG_GPIO_IRQ                    \
+   (*((volatile uint32*)(GPIO_REG_BASE_ADDR+GPIO_REG_OFFSET_IRQ)))
+#define REG_GPIO_IN                     \
+   (*((volatile uint32*)(GPIO_REG_BASE_ADDR+GPIO_REG_OFFSET_IN)))
+#define REG_GPIO_OUT                    \
+   (*((volatile uint32*)(GPIO_REG_BASE_ADDR+GPIO_REG_OFFSET_OUT)))
 
-#define FLAG_SHIFT_GPOUTEN        (0u)
-#define FLAG_SHIFT_GPINEN         (1u)
-#define FLAG_SHIFT_OUTBUFEN       (2u)
-#define FLAG_SHIFT_INTEN          (3u)
-#define FLAG_SHIFT_INT_TYPE       (5u)
+#define GPIO_CFG_SHIFT_GPOUTEN          (0)
+#define GPIO_CFG_MASK_GPOUTEN           (0x1ul)
+#define GPIO_CFG_SHIFT_GPINEN           (1)
+#define GPIO_CFG_MASK_GPINEN            (0x1ul)
+#define GPIO_CFG_SHIFT_GPOUTBUFEN       (2)
+#define GPIO_CFG_MASK_GPOUTBUFEN        (0x1ul)
+#define GPIO_CFG_SHIFT_GPINTEN          (3)
+#define GPIO_CFG_MASK_GPINTEN           (0x1ul)
+#define GPIO_CFG_SHIFT_GPIOINT_TYPE     (5)
+#define GPIO_CFG_MASK_GPIOINT_TYPE      (0x7ul)
+#define GPIO_CFG_VAL(outen,inen,outbufen,inten,ioint_type) \
+   (   (((outen)&GPIO_CFG_MASK_GPOUTEN)<<GPIO_CFG_SHIFT_GPOUTEN) \
+     | (((inen)&GPIO_CFG_MASK_GPINEN)<<GPIO_CFG_SHIFT_GPINEN) \
+     | (((outbufen)&GPIO_CFG_MASK_GPOUTBUFEN)<<GPIO_CFG_SHIFT_GPOUTBUFEN) \
+     | (((inten)&GPIO_CFG_MASK_GPINTEN)<<GPIO_CFG_SHIFT_GPINTEN) \
+     | (((ioint_type)&GPIO_CFG_MASK_GPIOINT_TYPE)<<GPIO_CFG_SHIFT_GPIOINT_TYPE) )
 
-#define MASK_GPOUTEN              (0x00000001ul)
-#define MASK_GPINEN               (0x00000001ul)
-#define MASK_OUTBUFEN             (0x00000001ul)
-#define MASK_INTEN                (0x00000001ul)
-#define MASK_INT_TYPE             (0x00000007ul)
+#define GPIO_CFG_INT_TYPE_LEVEL_HIGH    (0u)
+#define GPIO_CFG_INT_TYPE_LEVEL_LOW     (1u)
+#define GPIO_CFG_INT_TYPE_POS_EDGE      (2u)
+#define GPIO_CFG_INT_TYPE_NEG_EDGE      (3u)
+#define GPIO_CFG_INT_TYPE_EITHER_EDGE   (4u)
 
-#define GPIO_INT_TYPE_LEVEL_HIGH  (0u)
-#define GPIO_INT_TYPE_LEVEL_LOW   (1u)
-#define GPIO_INT_TYPE_POS_EDGE    (2u)
-#define GPIO_INT_TYPE_NEG_EDGE    (3u)
-#define GPIO_INT_TYPE_EITHER_EDGE (4u)
+#define GPIO_IRQ_NUM(gpio)              ((gpio)+32u)
 
-#define DEVICE_NAME               ("stonyman")
-#define DEVICE_NAME_IDX           ("stonyman%d")
-#define DEVICE_CLASS_NAME         ("imaging")
+#define DEVICE_NAME                     ("stonyman")
+#define DEVICE_NAME_IDX                 ("stonyman%d")
+#define DEVICE_CLASS_NAME               ("imaging")
 
-#define MINOR_START               (0)
+#define MINOR_START                     (0)
 
-#define NUM_CAMS                  (1)  // TODO: only supports one camera for now
-#define GPIO_NUM(cam)             (1+(cam)) 
-#define GPIO_IRQ_NUM(cam)         (GPIO_NUM(cam)+32)
+#define NUM_CAMS                        (1)
 
-// FIXME: there will be one capture done line per "control group"
-#define GPIO_NUM_CAPTURE_DONE     (0)
-#define GPIO_IRQ_NUM_CAPTURE_DONE (GPIO_NUM_CAPTURE_DONE+32)
+// TODO: simultaneous control of multiple cameras is not currently supported
+//       (each camera needs its own control group)
+#define GPIO_NUM_CAPTURE_DONE(cam)      (2*(cam))
+#define GPIO_NUM_HIGH_WATER(cam)        (2*(cam)+1)
+#define GPIO_IRQ_NUM_CAPTURE_DONE(cam)  GPIO_IRQ_NUM(GPIO_NUM_CAPTURE_DONE(cam))
+#define GPIO_IRQ_NUM_HIGH_WATER(cam)    GPIO_IRQ_NUM(GPIO_NUM_HIGH_WATER(cam))
 
 // TODO: hardcoded for now
-#define RESOLUTION_ROWS           (112)
-#define RESOLUTION_COLS           (112)
-#define RESOLUTION                (RESOLUTION_ROWS*RESOLUTION_COLS)
+#define RESOLUTION_ROWS               (112)
+#define RESOLUTION_COLS               (112)
+#define RESOLUTION                    (RESOLUTION_ROWS*RESOLUTION_COLS)
 
-#define IMG_BUF_QUEUE_LEN         (3)
+#define IMG_BUF_QUEUE_LEN             (3)
 
-// TODO: auto-delay mode will be configurable via ioctl (currently requires recomilation to enable)
-#define FLAG_DEFAULT_AUTO_DELAY   (0)
+// TODO: auto-delay mode will be configurable via ioctl
+//       (currently requires recompilation to enable)
+#define FLAG_DEFAULT_AUTO_DELAY       (0)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -168,7 +187,6 @@ static int stonyman_init(void)
 {
    int rc;
    unsigned ii, jj, kk, ll;
-   unsigned int tmpreg;
    char tmp_dev_filename[10];
 
 
@@ -261,36 +279,17 @@ static int stonyman_init(void)
       spin_lock_init(stonyman_spinlock[ii]);
    }
 
-   // install interrupt handler(s)
-   // FIXME: SA_INTERRUPT undeclared?
-   //rc = request_irq(GPIO_IRQ_NUM_CAPTURE_DONE, (irq_handler_t)stonyman_interrupt, SA_INTERRUPT, DEVICE_NAME, NULL);
-   rc = request_irq( GPIO_IRQ_NUM_CAPTURE_DONE, (irq_handler_t)stonyman_interrupt, 0,
-                     DEVICE_NAME, NULL );
-   if(0 > rc)
-   {
-      printk(KERN_ALERT "stonyman: could not install interrupt handler for capture finish");
-      for(ii=0; ii<NUM_CAMS; ++ii)
-      {
-         device_destroy( stonyman_class,
-                         MKDEV(MAJOR(stonyman_dev_num),MINOR(stonyman_dev_num)+ii) );
-         for(jj=0; jj<IMG_BUF_QUEUE_LEN; ++jj)
-         {
-            kfree(g_img_buf[ii][jj]);
-         }
-      }
-      // FIXME: this seems like a bad idea without knowing what else shares the class!
-      class_destroy(stonyman_class);
-      unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
-   }
-   // install camera interrupt handlers
+   // install interrupt handlers
    for(ii=0; ii<NUM_CAMS; ++ii)
    {
+      // install capture done interrupt handler
       // FIXME: SA_INTERRUPT undeclared?
-      //rc = request_irq(GPIO_IRQ_NUM(ii), stonyman_interrupt, SA_INTERRUPT, DEVICE_NAME, NULL);
-      rc = request_irq(GPIO_IRQ_NUM(ii), (irq_handler_t)stonyman_interrupt, 0, DEVICE_NAME, NULL);
+      //rc = request_irq(GPIO_IRQ_NUM_CAPTURE_DONE(ii), (irq_handler_t)stonyman_interrupt, SA_INTERRUPT, DEVICE_NAME, NULL);
+      rc = request_irq( GPIO_IRQ_NUM_CAPTURE_DONE(ii), (irq_handler_t)stonyman_interrupt,
+                        0, DEVICE_NAME, NULL );
       if(0 > rc)
       {
-         printk(KERN_ALERT "stonyman: could not install interrupt handler camera \"%d\"\n", ii);
+         printk(KERN_ALERT "stonyman: could not install capture done interrupt handler for camera %d\n", ii);
          for(jj=0; jj<NUM_CAMS; ++jj)
          {
             device_destroy( stonyman_class,
@@ -301,10 +300,41 @@ static int stonyman_init(void)
             }
             if(jj < ii)
             {
-               free_irq(GPIO_IRQ_NUM(ii), NULL);
+               free_irq(GPIO_IRQ_NUM_CAPTURE_DONE(ii), NULL);
+               free_irq(GPIO_IRQ_NUM_HIGH_WATER(ii), NULL);
             }
          }
-         free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
+         // FIXME: this seems like a bad idea without knowing what else shares the class!
+         class_destroy(stonyman_class);
+         unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
+         return rc;
+      }
+
+      // install high water interrupt handler
+      // FIXME: SA_INTERRUPT undeclared?
+      //rc = request_irq(GPIO_IRQ_NUM_HIGH_WATER(ii), (irq_handler_t)stonyman_interrupt, SA_INTERRUPT, DEVICE_NAME, NULL);
+      rc = request_irq( GPIO_IRQ_NUM_HIGH_WATER(ii), (irq_handler_t)stonyman_interrupt,
+                        0, DEVICE_NAME, NULL );
+      if(0 > rc)
+      {
+         printk(KERN_ALERT "stonyman: could not install high water interrupt handler for camera %d\n", ii);
+         for(jj=0; jj<NUM_CAMS; ++jj)
+         {
+            device_destroy( stonyman_class,
+                            MKDEV(MAJOR(stonyman_dev_num),MINOR(stonyman_dev_num)+jj) );
+            for(kk=0; kk<IMG_BUF_QUEUE_LEN; ++kk)
+            {
+               kfree(g_img_buf[jj][kk]);
+            }
+            if(jj <= ii)
+            {
+               free_irq(GPIO_IRQ_NUM_CAPTURE_DONE(ii), NULL);
+               if(jj < ii)
+               {
+                  free_irq(GPIO_IRQ_NUM_HIGH_WATER(ii), NULL);
+               }
+            }
+         }
          // FIXME: this seems like a bad idea without knowing what else shares the class!
          class_destroy(stonyman_class);
          unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
@@ -312,25 +342,15 @@ static int stonyman_init(void)
       }
    }
 
-   // enable capture finished interrupt
-   tmpreg=REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE);
-   // clear INT_TYPE
-   tmpreg &= (uint32)(~(MASK_INT_TYPE<<FLAG_SHIFT_INT_TYPE));
-   // set INT_TYPE to negative edge
-   tmpreg |= (uint32)(GPIO_INT_TYPE_NEG_EDGE<<FLAG_SHIFT_INT_TYPE);
-   // enable interrupt
-   tmpreg |= (uint32)(1ul<<FLAG_SHIFT_INTEN);
-   REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE)=tmpreg;
-
-   // enable cam0's AFULL interrupt (FIXME: should go through API)
-   tmpreg=REG_GPIO_X_CFG(GPIO_NUM(0));
-   // clear INT_TYPE
-   tmpreg &= (uint32)(~(MASK_INT_TYPE<<FLAG_SHIFT_INT_TYPE));
-   // set INT_TYPE to positive edge
-   tmpreg |= (uint32)(GPIO_INT_TYPE_POS_EDGE<<FLAG_SHIFT_INT_TYPE);
-   // enable interrupt
-   tmpreg |= (uint32)(1ul<<FLAG_SHIFT_INTEN);
-   REG_GPIO_X_CFG(GPIO_NUM(0))=tmpreg;
+   // enable interrupts
+   // FIXME: should go through some GPIO driver?
+   for(ii=0; ii<NUM_CAMS; ++ii)
+   {
+      // enable capture finished interrupt
+      REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE(ii)) = GPIO_CFG_VAL(0,1,0,1,GPIO_CFG_INT_TYPE_NEG_EDGE);
+      // enable high water interrupt
+      REG_GPIO_X_CFG(GPIO_NUM_HIGH_WATER(ii))   = GPIO_CFG_VAL(0,1,0,1,GPIO_CFG_INT_TYPE_POS_EDGE);
+   }
 
    // register device
    cdev_init(&stonyman_cdev, &stonyman_fops);
@@ -344,13 +364,15 @@ static int stonyman_init(void)
       {
          device_destroy( stonyman_class,
                          MKDEV(MAJOR(stonyman_dev_num),MINOR(stonyman_dev_num)+ii) );
-         free_irq(GPIO_IRQ_NUM(ii), NULL);
+         REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE(ii)) &= (uint32)(~(1ul<<GPIO_CFG_SHIFT_GPINTEN));
+         REG_GPIO_X_CFG(GPIO_NUM_HIGH_WATER(ii))   &= (uint32)(~(1ul<<GPIO_CFG_SHIFT_GPINTEN));
+         free_irq(GPIO_IRQ_NUM_CAPTURE_DONE(ii), NULL);
+         free_irq(GPIO_IRQ_NUM_HIGH_WATER(ii), NULL);
          for(jj=0; jj<IMG_BUF_QUEUE_LEN; ++jj)
          {
             kfree(g_img_buf[ii][jj]);
          }
       }
-      free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
       // FIXME: this seems like a bad idea without knowing what else shares the class!
       class_destroy(stonyman_class);
       unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
@@ -380,13 +402,15 @@ static void stonyman_teardown(void)
    {
       device_destroy( stonyman_class,
                       MKDEV(MAJOR(stonyman_dev_num),MINOR(stonyman_dev_num)+ii) );
-      free_irq(GPIO_IRQ_NUM(ii), NULL);
+      REG_GPIO_X_CFG(GPIO_NUM_CAPTURE_DONE(ii)) &= (uint32)(~(1ul<<GPIO_CFG_SHIFT_GPINTEN));
+      REG_GPIO_X_CFG(GPIO_NUM_HIGH_WATER(ii))   &= (uint32)(~(1ul<<GPIO_CFG_SHIFT_GPINTEN));
+      free_irq(GPIO_IRQ_NUM_CAPTURE_DONE(ii), NULL);
+      free_irq(GPIO_IRQ_NUM_HIGH_WATER(ii), NULL);
       for(jj=0; jj<IMG_BUF_QUEUE_LEN; ++jj)
       {
          kfree(g_img_buf[ii][jj]);
       }
    }
-   free_irq(GPIO_IRQ_NUM_CAPTURE_DONE, NULL);
    // FIXME: this seems like a bad idea without knowing what else shares the class!
    class_destroy(stonyman_class);
    unregister_chrdev_region(stonyman_dev_num, NUM_CAMS);
@@ -578,7 +602,9 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
       g_img_buf_tail_bufpos[0] += 4;
    }
 
-   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM(0));
+   // clear interrupt requests (doesn't really matter which; if any are pending, clear them)
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_CAPTURE_DONE(0));
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_HIGH_WATER(0));
 
    if(RESOLUTION == g_img_buf_tail_bufpos[0])
    {
