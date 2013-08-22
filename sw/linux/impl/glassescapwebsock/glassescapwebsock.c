@@ -35,7 +35,7 @@
 #define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
 #define KEY_QUIT              ('q')
 
-#define INSIGHT_SERV_ADDR     ("141.212.11.167")
+#define INSIGHT_SERV_ADDR     ("141.212.106.252")
 #define INSIGHT_SERV_PORT     (80)
 
 #define dbgPrintOp(msg,opcode) do { \
