@@ -5,7 +5,7 @@
 // File history:
 //      0.01: 2013-03-05: created
 //      0.02: 2013-06-13: added support for 4 cameras
-//      0.03a:2013-08-15: IN PROGRESS: added support for 16 cameras (4 control sets of 4 cameras each)
+//      0.03: 2013-08-15: added support for 16 cameras (4 control sets of 4 cameras each)
 //
 // Description:
 //
@@ -86,8 +86,7 @@
 `define REG_OFFSET_CAMX_STATUS       ('h00)
 `define REG_OFFSET_CAMX_PXDATA       ('h04)
 
-//`define REG_GLOB_STATUS_RESERVED     (28'd0)
-`define REG_GLOB_STATUS_RESERVED     (31'd0)
+`define REG_GLOB_STATUS_RESERVED     (28'd0)
 `define REG_CAMX_STATUS_RESERVED     (28'd0)
 
 `define VAR_WIDTH_FIFO_RDEN_S        ('d3)
@@ -505,13 +504,13 @@ input wire [(`WIDTH-1):0] cg3cam1pxDatain,
 input wire [(`WIDTH-1):0] cg3cam2pxDatain,
 input wire [(`WIDTH-1):0] cg3cam3pxDatain,
 
-output reg cg0startCapture,  // active low
-output reg cg1startCapture,  // active low
-output reg cg2startCapture,  // active low
-output reg cg3startCapture   // active low
+output wire cg0startCapture,  // active low
+output wire cg1startCapture,  // active low
+output wire cg2startCapture,  // active low
+output wire cg3startCapture   // active low
 );
 
-reg [(`VAR_WIDTH_FIFO_RDEN_S-1):0] fifoRdenState [0:3];
+reg [(`VAR_WIDTH_FIFO_RDEN_S-1):0] fifoRdenState [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
 
 wire [(`REG_RANGE_CAM_REG_IND_WIDTH-1):0] camRegInd;
 wire [(`REG_RANGE_CG_SEL_WIDTH-1):0]      cgIdx;
@@ -520,47 +519,131 @@ wire [(`REG_RANGE_CAM_REG_SEL_WIDTH-1):0] camReg;
 
 // counter
 reg [2:0] ii;
+reg [2:0] jj;
 
-// this code allows generic handling of CAMX_... registers
-// ideally we wouldn't need this, but verilog does not allow arrays to be
-// inputs or outputs!
-reg fifoRden [0:3];
-wire empty [0:3];
-wire full [0:3];
-wire afull [0:3];
-wire overflow [0:3];
-wire [(`WIDTH-1):0] pxDatain [0:3];
+// this code allows generic handling of CSX_CAMY_... registers
+// ideally we wouldn't need all this extra code,
+// but verilog does not allow arrays to be used as inputs or outputs!
+reg startCapture [0:`NUM_CONTROL_GROUPS];
+wire busy        [0:`NUM_CONTROL_GROUPS];
 
+reg fifoRden  [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
+wire empty    [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
+wire full     [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
+wire afull    [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
+wire overflow [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
+wire [(`WIDTH-1):0] pxDatain [0:`NUM_CONTROL_GROUPS] [0:`NUM_CHANNELS_PER_CG];
 
 assign camRegInd = addr[(`REG_RANGE_CAM_REG_IND_SHIFT + `REG_RANGE_CAM_REG_IND_WIDTH - 1):`REG_RANGE_CAM_REG_IND_SHIFT];
 assign cgIdx     = addr[(`REG_RANGE_CG_SEL_SHIFT      + `REG_RANGE_CG_SEL_WIDTH      - 1):`REG_RANGE_CG_SEL_SHIFT];
 assign camIdx    = addr[(`REG_RANGE_CAM_SEL_SHIFT     + `REG_RANGE_CAM_SEL_WIDTH     - 1):`REG_RANGE_CAM_SEL_SHIFT];
 assign camReg    = addr[(`REG_RANGE_CAM_REG_SEL_SHIFT + `REG_RANGE_CAM_REG_SEL_WIDTH - 1):`REG_RANGE_CAM_REG_SEL_SHIFT];
 
-assign cg0cam0fifoRden=fifoRden[0];
-assign cg0cam1fifoRden=fifoRden[1];
-assign cg0cam2fifoRden=fifoRden[2];
-assign cg0cam3fifoRden=fifoRden[3];
-assign empty[0]=cg0cam0empty;
-assign empty[1]=cg0cam1empty;
-assign empty[2]=cg0cam2empty;
-assign empty[3]=cg0cam3empty;
-assign full[0]=cg0cam0full;
-assign full[1]=cg0cam1full;
-assign full[2]=cg0cam2full;
-assign full[3]=cg0cam3full;
-assign afull[0]=cg0cam0afull;
-assign afull[1]=cg0cam1afull;
-assign afull[2]=cg0cam2afull;
-assign afull[3]=cg0cam3afull;
-assign overflow[0]=cg0cam0overflow;
-assign overflow[1]=cg0cam1overflow;
-assign overflow[2]=cg0cam2overflow;
-assign overflow[3]=cg0cam3overflow;
-assign pxDatain[0]=cg0cam0pxDatain;
-assign pxDatain[1]=cg0cam1pxDatain;
-assign pxDatain[2]=cg0cam2pxDatain;
-assign pxDatain[3]=cg0cam3pxDatain;
+assign cg0cam0fifoRden=fifoRden[0][0];
+assign cg0cam1fifoRden=fifoRden[0][1];
+assign cg0cam2fifoRden=fifoRden[0][2];
+assign cg0cam3fifoRden=fifoRden[0][3];
+assign cg1cam0fifoRden=fifoRden[1][0];
+assign cg1cam1fifoRden=fifoRden[1][1];
+assign cg1cam2fifoRden=fifoRden[1][2];
+assign cg1cam3fifoRden=fifoRden[1][3];
+assign cg2cam0fifoRden=fifoRden[2][0];
+assign cg2cam1fifoRden=fifoRden[2][1];
+assign cg2cam2fifoRden=fifoRden[2][2];
+assign cg2cam3fifoRden=fifoRden[2][3];
+assign cg3cam0fifoRden=fifoRden[3][0];
+assign cg3cam1fifoRden=fifoRden[3][1];
+assign cg3cam2fifoRden=fifoRden[3][2];
+assign cg3cam3fifoRden=fifoRden[3][3];
+assign empty[0][0]=cg0cam0empty;
+assign empty[0][1]=cg0cam1empty;
+assign empty[0][2]=cg0cam2empty;
+assign empty[0][3]=cg0cam3empty;
+assign empty[1][0]=cg1cam0empty;
+assign empty[1][1]=cg1cam1empty;
+assign empty[1][2]=cg1cam2empty;
+assign empty[1][3]=cg1cam3empty;
+assign empty[2][0]=cg2cam0empty;
+assign empty[2][1]=cg2cam1empty;
+assign empty[2][2]=cg2cam2empty;
+assign empty[2][3]=cg2cam3empty;
+assign empty[3][0]=cg3cam0empty;
+assign empty[3][1]=cg3cam1empty;
+assign empty[3][2]=cg3cam2empty;
+assign empty[3][3]=cg3cam3empty;
+assign full[0][0]=cg0cam0full;
+assign full[0][1]=cg0cam1full;
+assign full[0][2]=cg0cam2full;
+assign full[0][3]=cg0cam3full;
+assign full[1][0]=cg1cam0full;
+assign full[1][1]=cg1cam1full;
+assign full[1][2]=cg1cam2full;
+assign full[1][3]=cg1cam3full;
+assign full[2][0]=cg2cam0full;
+assign full[2][1]=cg2cam1full;
+assign full[2][2]=cg2cam2full;
+assign full[2][3]=cg2cam3full;
+assign full[3][0]=cg3cam0full;
+assign full[3][1]=cg3cam1full;
+assign full[3][2]=cg3cam2full;
+assign full[3][3]=cg3cam3full;
+assign afull[0][0]=cg0cam0afull;
+assign afull[0][1]=cg0cam1afull;
+assign afull[0][2]=cg0cam2afull;
+assign afull[0][3]=cg0cam3afull;
+assign afull[1][0]=cg1cam0afull;
+assign afull[1][1]=cg1cam1afull;
+assign afull[1][2]=cg1cam2afull;
+assign afull[1][3]=cg1cam3afull;
+assign afull[2][0]=cg2cam0afull;
+assign afull[2][1]=cg2cam1afull;
+assign afull[2][2]=cg2cam2afull;
+assign afull[2][3]=cg2cam3afull;
+assign afull[3][0]=cg3cam0afull;
+assign afull[3][1]=cg3cam1afull;
+assign afull[3][2]=cg3cam2afull;
+assign afull[3][3]=cg3cam3afull;
+assign overflow[0][0]=cg0cam0overflow;
+assign overflow[0][1]=cg0cam1overflow;
+assign overflow[0][2]=cg0cam2overflow;
+assign overflow[0][3]=cg0cam3overflow;
+assign overflow[1][0]=cg1cam0overflow;
+assign overflow[1][1]=cg1cam1overflow;
+assign overflow[1][2]=cg1cam2overflow;
+assign overflow[1][3]=cg1cam3overflow;
+assign overflow[2][0]=cg2cam0overflow;
+assign overflow[2][1]=cg2cam1overflow;
+assign overflow[2][2]=cg2cam2overflow;
+assign overflow[2][3]=cg2cam3overflow;
+assign overflow[3][0]=cg3cam0overflow;
+assign overflow[3][1]=cg3cam1overflow;
+assign overflow[3][2]=cg3cam2overflow;
+assign overflow[3][3]=cg3cam3overflow;
+assign pxDatain[0][0]=cg0cam0pxDatain;
+assign pxDatain[0][1]=cg0cam1pxDatain;
+assign pxDatain[0][2]=cg0cam2pxDatain;
+assign pxDatain[0][3]=cg0cam3pxDatain;
+assign pxDatain[1][0]=cg1cam0pxDatain;
+assign pxDatain[1][1]=cg1cam1pxDatain;
+assign pxDatain[1][2]=cg1cam2pxDatain;
+assign pxDatain[1][3]=cg1cam3pxDatain;
+assign pxDatain[2][0]=cg2cam0pxDatain;
+assign pxDatain[2][1]=cg2cam1pxDatain;
+assign pxDatain[2][2]=cg2cam2pxDatain;
+assign pxDatain[2][3]=cg2cam3pxDatain;
+assign pxDatain[3][0]=cg3cam0pxDatain;
+assign pxDatain[3][1]=cg3cam1pxDatain;
+assign pxDatain[3][2]=cg3cam2pxDatain;
+assign pxDatain[3][3]=cg3cam3pxDatain;
+
+assign cg0startCapture=startCapture[0];
+assign cg1startCapture=startCapture[1];
+assign cg2startCapture=startCapture[2];
+assign cg3startCapture=startCapture[3];
+assign busy[0]=cg0busy;
+assign busy[1]=cg1busy;
+assign busy[2]=cg2busy;
+assign busy[3]=cg3busy;
 
 
 always@ (posedge clk)
@@ -568,13 +651,13 @@ begin
    if(0 == rst)
    begin
       dataout <= `WIDTH_ALL_ZEROES;
-      fifoRden[0] <= 1'b0;
-      fifoRden[1] <= 1'b0;
-      fifoRden[2] <= 1'b0;
-      fifoRden[3] <= 1'b0;
-      for(ii=0; ii<4; ii=ii+1)
+      for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
       begin
-         fifoRdenState[ii] <= `FIFO_RDEN_S_IDLE;
+         for(jj=0; jj<`NUM_CHANNELS_PER_CG; jj=jj+1)
+         begin
+            fifoRden[ii][jj] <= 1'b0;
+            fifoRdenState[ii][jj] <= `FIFO_RDEN_S_IDLE;
+         end
       end
    end
    else
@@ -585,7 +668,7 @@ begin
          // GLOB_STATUS
          if(`REG_OFFSET_GLOB_STATUS == (`MASK_REG_RANGE&addr))
          begin
-            dataout <= {`REG_GLOB_STATUS_RESERVED,cg0busy};
+            dataout <= {`REG_GLOB_STATUS_RESERVED,cg3busy,cg2busy,cg1busy,cg0busy};
             ready <= 1'b1;
          end
          // some camera register
@@ -594,33 +677,33 @@ begin
             // CAMX_STATUS
             if(`REG_OFFSET_CAMX_STATUS == camReg)
             begin
-               dataout <= { `REG_CAMX_STATUS_RESERVED,overflow[camIdx],afull[camIdx],
-                            full[camIdx],empty[camIdx] };
+               dataout <= { `REG_CAMX_STATUS_RESERVED,overflow[cgIdx][camIdx],afull[cgIdx][camIdx],
+                            full[cgIdx][camIdx],empty[cgIdx][camIdx] };
                ready <= 1'b1;
             end
             // CAMX_PXDATA
             else if(`REG_OFFSET_CAMX_PXDATA == camReg)
             begin
-               case(fifoRdenState[camIdx])
+               case(fifoRdenState[cgIdx][camIdx])
                   `FIFO_RDEN_S_IDLE:
                   begin
-                     fifoRden[camIdx] <= 1'b1;
-                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_RAISE;
+                     fifoRden[cgIdx][camIdx] <= 1'b1;
+                     fifoRdenState[cgIdx][camIdx] <= `FIFO_RDEN_S_RAISE;
                   end
                   `FIFO_RDEN_S_RAISE:
                   begin
-                     fifoRden[camIdx] <= 1'b0;
-                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_WAIT;
+                     fifoRden[cgIdx][camIdx] <= 1'b0;
+                     fifoRdenState[cgIdx][camIdx] <= `FIFO_RDEN_S_WAIT;
                   end
                   `FIFO_RDEN_S_WAIT:
                   begin
-                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_READY;
+                     fifoRdenState[cgIdx][camIdx] <= `FIFO_RDEN_S_READY;
                   end
                   `FIFO_RDEN_S_READY:
                   begin
-                     dataout <= pxDatain[camIdx];
+                     dataout <= pxDatain[cgIdx][camIdx];
                      ready <= 1'b1;
-                     fifoRdenState[camIdx] <= `FIFO_RDEN_S_WAIT_AFTER;
+                     fifoRdenState[cgIdx][camIdx] <= `FIFO_RDEN_S_WAIT_AFTER;
                   end
                   default:
                   begin
@@ -631,6 +714,7 @@ begin
             // BAD: CAM register unknown
             else
             begin
+               // actually impossible!
                dataout <= `WIDTH_ALL_ZEROES;
                ready <= 1'b1;
             end
@@ -647,11 +731,14 @@ begin
          // GLOB_START
          if(`REG_OFFSET_GLOB_START == (`MASK_REG_RANGE&addr))
          begin
-            if(0 != (1&datain[0]))
+            for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
             begin
-               cg0startCapture <= 1'b0;
-               ready <= 1'b1;
+               if(0 != ((1<<ii) & datain[ii]))
+               begin
+                  startCapture[ii] <= 1'b0;
+               end
             end
+            ready <= 1'b1;
          end
          else
          begin
@@ -661,19 +748,25 @@ begin
       else
       begin
          // wait for startCapture to be acknowledged (with busy signal)
-         if((1'b0==cg0startCapture) && (1'b1==cg0busy))
+         for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
          begin
-            cg0startCapture <= 1'b1;
+            if((1'b0==startCapture[ii]) && (1'b1==busy[ii]))
+            begin
+               startCapture[ii] <= 1'b1;
+            end
          end
          ready <= 1'b0;
       end
    end
    // return any FIFO's RDEN state to idle if necessary
-   for(ii=0; ii<4; ii=ii+1)
+   for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
    begin
-      if(`FIFO_RDEN_S_WAIT_AFTER==fifoRdenState[ii])
+      for(jj=0; jj<`NUM_CHANNELS_PER_CG; jj=jj+1)
       begin
-         fifoRdenState[ii]<=`FIFO_RDEN_S_IDLE;
+         if(`FIFO_RDEN_S_WAIT_AFTER==fifoRdenState[ii][jj])
+         begin
+            fifoRdenState[ii][jj] <= `FIFO_RDEN_S_IDLE;
+         end
       end
    end
 end
