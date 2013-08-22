@@ -11,56 +11,58 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Wed Aug 21 18:27:25 2013 )</state>
-    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\SoftConsole</swide-toolchain>
+    <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/TOPLEVEL</location>
+    <state>GENERATED ( Wed Aug 21 22:13:17 2013 )</state>
+    <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\imaging\imaging.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\MSS_CORE2.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\MSS_CORE2\mss_tshell.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\adcxx1s101.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\ahb.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\apb.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\clkgenerator.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\counter.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\cr_int.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\fifo_32bit_apb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\inputConditioner.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\led.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\psram_cr.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\VersionROM.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_PIXEL\FIFO_PIXEL.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\fifo_px\fifo_px.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\smartgen\MUX2\MUX2.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_addrdec.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_defaultslavesm.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_initcfg_awrap.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_masterstage.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_matrix2x16.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavearbiter.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAHBLite\3.1.102\rtl\vlog\core_obfuscated\coreahblite_slavestage.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\ahbtoapbsm.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\coreahbtoapb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\COREAHBTOAPB3\2.0.116\rtl\vlog\core_obfuscated\penablescheduler.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\DirectCore\CoreAPB3\3.0.103\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\imaging\imaging.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\MSS_CCC_0\MSS_CORE2_tmp_MSS_CCC_0_MSS_CCC.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\MSS_CORE2.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\ahb.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\apb.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\clkgenerator.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\counter.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\fifo_32bit_apb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\fifo_8bit_apb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\inputConditioner.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\led.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\psram_cr.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\template_apb3.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\VersionROM.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\FIFO_PIXEL\FIFO_PIXEL.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\fifo_px\fifo_px.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\FIFO_TEST_COUNTER\FIFO_TEST_COUNTER.v</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\smartgen\MUX2\MUX2.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/MSS_CORE2/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>TP_PENABLE</port-name>
@@ -1297,13 +1299,13 @@ There is one APB3 Master interface.
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>SmartDesign</core-exttype>
-    <core-location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/imaging</core-location>
+    <core-location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/imaging</core-location>
     <core-name>imaging_0</core-name>
   </core>
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>HierSpiritDesign</core-exttype>
-    <core-location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/insight/component/work/MSS_CORE2</core-location>
+    <core-location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/MSS_CORE2</core-location>
     <core-name>MSS_CORE2_0</core-name>
   </core>
   <core type="HdlModule">

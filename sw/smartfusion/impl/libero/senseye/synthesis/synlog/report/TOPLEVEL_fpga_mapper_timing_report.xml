@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\synlog\TOPLEVEL_fpga_mapper.srr</data>
+<data>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_fpga_mapper.srr</data>
 <title>##### START OF TIMING REPORT #####[</title>
 </report_link>
 <row>
@@ -29,8 +29,8 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>stonyman|clkAdc_inferred_clock</data>
 <data>80.0 MHz</data>
-<data>32.9 MHz</data>
-<data>-17.858</data>
+<data>29.4 MHz</data>
+<data>-21.499</data>
 </row>
 <row>
 <data>System</data>

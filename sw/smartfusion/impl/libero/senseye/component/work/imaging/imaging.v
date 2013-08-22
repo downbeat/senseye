@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 21 18:21:13 2013
+// Created by SmartDesign Wed Aug 21 22:12:49 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -263,8 +263,8 @@ adcxx1s101 adcxx1s101_0(
         .miso               ( px0_adc_din ),
         // Outputs
         .cs                 ( px_adc_Cs ),
-        .dataout            ( adc081s101_0_dataout ),
-        .conversionComplete ( tp_adcConvComplete_net_0 ) 
+        .conversionComplete ( tp_adcConvComplete_net_0 ),
+        .dataout            ( adc081s101_0_dataout ) 
         );
 
 //--------adcxx1s101
@@ -276,8 +276,8 @@ adcxx1s101 adcxx1s101_1(
         .miso               ( px1_adc_din ),
         // Outputs
         .cs                 (  ),
-        .dataout            ( adc081s101_1_dataout ),
-        .conversionComplete (  ) 
+        .conversionComplete (  ),
+        .dataout            ( adc081s101_1_dataout ) 
         );
 
 //--------fifo_px

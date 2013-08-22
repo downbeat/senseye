@@ -5,13 +5,13 @@ Release: v10.1 SP3
 Info: The design TOPLEVEL.adb was last modified by software version 10.1.3.1.
 Opened an existing Libero design TOPLEVEL.adb.
 
-The Execute Script command succeeded ( 00:00:29 )
+The Execute Script command succeeded ( 00:00:26 )
 Design saved to file
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL\
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\designer\impl1\TOPLEVEL\
 .adb.
 Wrote to the file:
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\constraint\TOPLEVEL.pdc
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\constraint\TOPLEVEL.pdc
 
-The Export command succeeded ( 00:00:01 )
+The Export command succeeded ( 00:00:02 )
 Design closed.
 

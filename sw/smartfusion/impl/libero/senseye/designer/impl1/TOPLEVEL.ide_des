@@ -20,13 +20,13 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\designer\impl1\TOPLEVEL.adb"
+KEY IDE_DES_ADB_PATH "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\designer\impl1\TOPLEVEL.adb"
 LIST SOURCE_FILES
-VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL.edn;edn"
+VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn;edn"
 ENDLIST
 LIST OPTIONAL_FILES
-VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\component\work\TOPLEVEL\TOPLEVEL.pdc;Skipped"
-VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\synthesis\TOPLEVEL_sdc.sdc;Skipped"
+VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.pdc;Skipped"
+VALUE "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL_sdc.sdc;Skipped"
 ENDLIST
 LIST VCD_FILES
 ENDLIST
