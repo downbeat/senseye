@@ -72,15 +72,15 @@
 
 `define MASK_REG_RANGE               ('hFF)
 // decode the CGX_CAMY_... address:
-// 8 bits (msb...lsb): cam-reg-ind cq-sel[2] cam-sel[2] cam-reg-sel[1] x x
+// 8 bits (msb...lsb): cam-reg-ind cq-sel[2] cam-sel[2] cam-reg-sel[3]
 `define REG_RANGE_CAM_REG_IND_SHIFT  ('d7)
 `define REG_RANGE_CAM_REG_IND_WIDTH  ('d1)
 `define REG_RANGE_CG_SEL_SHIFT       ('d5)
 `define REG_RANGE_CG_SEL_WIDTH       ('d2)
 `define REG_RANGE_CAM_SEL_SHIFT      ('d3)
 `define REG_RANGE_CAM_SEL_WIDTH      ('d2)
-`define REG_RANGE_CAM_REG_SEL_SHIFT  ('d2)
-`define REG_RANGE_CAM_REG_SEL_WIDTH  ('d1)
+`define REG_RANGE_CAM_REG_SEL_SHIFT  ('d0)
+`define REG_RANGE_CAM_REG_SEL_WIDTH  ('d3)
 `define REG_OFFSET_GLOB_START        ('h00)
 `define REG_OFFSET_GLOB_STATUS       ('h00)
 `define REG_OFFSET_CAMX_STATUS       ('h00)
@@ -90,7 +90,7 @@
 `define REG_GLOB_STATUS_RESERVED     (31'd0)
 `define REG_CAMX_STATUS_RESERVED     (28'd0)
 
-`define FIFO_RDEN_S_VAR_BIT_WIDTH    ('d3)
+`define VAR_WIDTH_FIFO_RDEN_S        ('d3)
 `define FIFO_RDEN_S_IDLE             ('d0)
 `define FIFO_RDEN_S_RAISE            ('d1)
 `define FIFO_RDEN_S_WAIT             ('d2)
@@ -511,10 +511,12 @@ output reg cg2startCapture,  // active low
 output reg cg3startCapture   // active low
 );
 
-reg [2:0] fifoRdenState [0:3];
-wire       camRegInd;
-wire [1:0] camIdx;
-wire [4:0] camReg;
+reg [(`VAR_WIDTH_FIFO_RDEN_S-1):0] fifoRdenState [0:3];
+
+wire [(`REG_RANGE_CAM_REG_IND_WIDTH-1):0] camRegInd;
+wire [(`REG_RANGE_CG_SEL_WIDTH-1):0]      cgIdx;
+wire [(`REG_RANGE_CAM_SEL_WIDTH-1):0]     camIdx;
+wire [(`REG_RANGE_CAM_REG_SEL_WIDTH-1):0] camReg;
 
 // counter
 reg [2:0] ii;
@@ -528,6 +530,13 @@ wire full [0:3];
 wire afull [0:3];
 wire overflow [0:3];
 wire [(`WIDTH-1):0] pxDatain [0:3];
+
+
+assign camRegInd = addr[(`REG_RANGE_CAM_REG_IND_SHIFT + `REG_RANGE_CAM_REG_IND_WIDTH - 1):`REG_RANGE_CAM_REG_IND_SHIFT];
+assign cgIdx     = addr[(`REG_RANGE_CG_SEL_SHIFT      + `REG_RANGE_CG_SEL_WIDTH      - 1):`REG_RANGE_CG_SEL_SHIFT];
+assign camIdx    = addr[(`REG_RANGE_CAM_SEL_SHIFT     + `REG_RANGE_CAM_SEL_WIDTH     - 1):`REG_RANGE_CAM_SEL_SHIFT];
+assign camReg    = addr[(`REG_RANGE_CAM_REG_SEL_SHIFT + `REG_RANGE_CAM_REG_SEL_WIDTH - 1):`REG_RANGE_CAM_REG_SEL_SHIFT];
+
 assign cg0cam0fifoRden=fifoRden[0];
 assign cg0cam1fifoRden=fifoRden[1];
 assign cg0cam2fifoRden=fifoRden[2];
@@ -552,10 +561,6 @@ assign pxDatain[0]=cg0cam0pxDatain;
 assign pxDatain[1]=cg0cam1pxDatain;
 assign pxDatain[2]=cg0cam2pxDatain;
 assign pxDatain[3]=cg0cam3pxDatain;
-
-assign camRegInd=addr[7];
-assign camIdx=addr[6:5];
-assign camReg=addr[4:0];
 
 
 always@ (posedge clk)
