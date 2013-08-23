@@ -20,7 +20,7 @@
 //                                 both of which map to stonyman_interrupt.
 // 0.05  2013-08-15  russ          added support for reading partial images in stonyman_read.
 // 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation)
-// 1.00a 2013-08-21  russ          multi-camera support
+// 1.00  2013-08-21  russ          multi-camera support
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
