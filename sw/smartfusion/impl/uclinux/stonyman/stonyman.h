@@ -19,8 +19,10 @@
 // 0.04  2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
 //                                 both of which map to stonyman_interrupt.
 // 0.05  2013-08-15  russ          added support for reading partial images in stonyman_read.
-// 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation)
-// 1.00  2013-08-21  russ          multi-camera support
+// 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation).
+// 1.00  2013-08-21  russ          multi-camera support.
+// 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
+//                                 which gives a slight improvement in framerate.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////

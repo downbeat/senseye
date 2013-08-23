@@ -16,8 +16,10 @@
 // 0.04  2013-07-30  russ          added support for seperate AFULL and 'capture done' interrupts,
 //                                 both of which map to stonyman_interrupt.
 // 0.05  2013-08-15  russ          added support for reading partial images in stonyman_read.
-// 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation)
-// 1.00  2013-08-21  russ          multi-camera support
+// 0.06  2013-08-15  russ          added auto-delay mode (enabling requires recompilation).
+// 1.00  2013-08-21  russ          multi-camera support.
+// 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
+//                                 which gives a slight improvement in framerate.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -608,79 +610,74 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
    // FIXME: checking each camera each time the interrupt fires is hurting the framerate
    //        perhaps seperate interrupt handlers would be best.
 
-   //printk(KERN_DEBUG "stonyman: interrupt fired\n");
-   //for(camidx=0; camidx<NUM_CAMS; ++camidx)
-   //{
-   //   if(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CGX_CAMY_STATUS(camidx,0)))
-   //   {
-   //      printk(KERN_DEBUG "stonyman: data pending for camera %d\n", camidx);
-   //   }
-   //}
-
-   // indiscriminately grab all data from all cameras (which are currently capturing)
    for(camidx=0; camidx<NUM_CAMS; ++camidx)
    {
-      if(0 == (REG_GPIO_IRQ & (unsigned int)( (1u<<GPIO_NUM_CAPTURE_DONE(camidx)) | 
-                                              (1u<<GPIO_NUM_HIGH_WATER(camidx)) )))
+      if((GPIO_IRQ_NUM_CAPTURE_DONE(camidx) == irq) || (GPIO_IRQ_NUM_HIGH_WATER(camidx) == irq))
       {
-         continue;
+         break;
       }
-      tmp_irq_flags = 0;
-      spin_lock_irqsave(stonyman_spinlock[camidx], tmp_irq_flags);
-
-      // clear the camera FIFO
-      while(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CGX_CAMY_STATUS(camidx,0)))
-      {
-         tmpdata=REG_CGX_CAMY_PXDATA(camidx,0);
-         // store data
-         // TODO: add mask functionality
-         g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+0]
-            = (tmpdata>> 0)&0xFF;
-         g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+1]
-            = (tmpdata>> 8)&0xFF;
-         g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+2]
-            = (tmpdata>>16)&0xFF;
-         g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+3]
-            = (tmpdata>>24)&0xFF;
-         g_img_buf_tail_bufpos[camidx] += 4;
-      }
-
-      // clear interrupt requests (doesn't really matter which; if any are pending, clear them)
-      REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_CAPTURE_DONE(camidx));
-      REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_HIGH_WATER(camidx));
-
-      if(RESOLUTION == g_img_buf_tail_bufpos[camidx])
-      {
-         //printk(KERN_DEBUG "stonyman: read whole frame\n");
-         if( (0 == g_flag_auto_delay_mode[camidx]) ||
-             (((g_img_buf_tail_idx[camidx]+1) % IMG_BUF_QUEUE_LEN) != g_img_buf_head_idx[camidx]) )
-         {
-            g_img_buf_tail_idx[camidx] = (g_img_buf_tail_idx[camidx]+1) % IMG_BUF_QUEUE_LEN;
-            g_img_buf_tail_bufpos[camidx] = 0;
-
-            // overrun
-            // TODO: this is an error (kinda).  how shall we report this to the application?
-            if(g_img_buf_tail_idx[camidx] == g_img_buf_head_idx[camidx])
-            {
-               // FIXME: should I assert 0==g_flag_auto_delay_mode[camidx]?
-               // if auto-delay mode is disabled, overrun the unread buffer
-               g_img_buf_head_idx[camidx] = (g_img_buf_head_idx[camidx]+1) % IMG_BUF_QUEUE_LEN;
-            }
-
-            // start a new capture
-            if(0 != g_flag_capture_running[camidx])
-            {
-               REG_CTRL |= (uint32)(1u<<camidx);
-			}
-         }
-         else
-         {
-            // auto-delay mode and no free frame buffer
-            // do nothing: stonyman_read will perform the bookkeeping when a frame is consumed
-         }
-      }
-      spin_unlock_irqrestore(stonyman_spinlock[camidx], tmp_irq_flags);
    }
+   if(NUM_CAMS == camidx)
+   {
+      return IRQ_NONE;
+   }
+
+
+   tmp_irq_flags = 0;
+   spin_lock_irqsave(stonyman_spinlock[camidx], tmp_irq_flags);
+
+   // clear the camera FIFO
+   while(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CGX_CAMY_STATUS(camidx,0)))
+   {
+      tmpdata=REG_CGX_CAMY_PXDATA(camidx,0);
+      // store data
+      // TODO: add mask functionality
+      g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+0]
+         = (tmpdata>> 0)&0xFF;
+      g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+1]
+         = (tmpdata>> 8)&0xFF;
+      g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+2]
+         = (tmpdata>>16)&0xFF;
+      g_img_buf[camidx][g_img_buf_tail_idx[camidx]][g_img_buf_tail_bufpos[camidx]+3]
+         = (tmpdata>>24)&0xFF;
+      g_img_buf_tail_bufpos[camidx] += 4;
+   }
+
+   // clear interrupt requests (doesn't really matter which; if any are pending, clear them)
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_CAPTURE_DONE(camidx));
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_HIGH_WATER(camidx));
+
+   if(RESOLUTION == g_img_buf_tail_bufpos[camidx])
+   {
+      //printk(KERN_DEBUG "stonyman: read whole frame\n");
+      if( (0 == g_flag_auto_delay_mode[camidx]) ||
+          (((g_img_buf_tail_idx[camidx]+1) % IMG_BUF_QUEUE_LEN) != g_img_buf_head_idx[camidx]) )
+      {
+         g_img_buf_tail_idx[camidx] = (g_img_buf_tail_idx[camidx]+1) % IMG_BUF_QUEUE_LEN;
+         g_img_buf_tail_bufpos[camidx] = 0;
+
+         // overrun
+         // TODO: this is an error (kinda).  how shall we report this to the application?
+         if(g_img_buf_tail_idx[camidx] == g_img_buf_head_idx[camidx])
+         {
+            // FIXME: should I assert 0==g_flag_auto_delay_mode[camidx]?
+            // if auto-delay mode is disabled, overrun the unread buffer
+            g_img_buf_head_idx[camidx] = (g_img_buf_head_idx[camidx]+1) % IMG_BUF_QUEUE_LEN;
+         }
+
+         // start a new capture
+         if(0 != g_flag_capture_running[camidx])
+         {
+            REG_CTRL |= (uint32)(1u<<camidx);
+                     }
+      }
+      else
+      {
+         // auto-delay mode and no free frame buffer
+         // do nothing: stonyman_read will perform the bookkeeping when a frame is consumed
+      }
+   }
+   spin_unlock_irqrestore(stonyman_spinlock[camidx], tmp_irq_flags);
 
    return IRQ_HANDLED;
 }
