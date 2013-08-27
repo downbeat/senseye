@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 21 23:58:47 2013
+// Created by SmartDesign Tue Aug 27 14:55:24 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -1026,9 +1026,6 @@ imaging imaging_0(
         .tp_cam0_adcConvComplete ( tp_adcConvComplete ),
         .PREADY                  ( CoreAPB3_0_APBmslave0_0_PREADY ),
         .PSLVERR                 ( CoreAPB3_0_APBmslave0_0_PSLVERR ),
-        .tp_cam0_stateout        ( led_net_0 ),
-        .tp_cam0_substateout     ( led_2 ),
-        .PRDATA                  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
         .cam1_resp               (  ),
         .cam1_incv               (  ),
         .cam1_resv               (  ),
@@ -1037,7 +1034,17 @@ imaging imaging_0(
         .cam1_afull              (  ),
         .cam1_busy               (  ),
         .cam1_px_adc_cs          (  ),
-        .cam1_px_adc_sclk        (  ) 
+        .cam1_px_adc_sclk        (  ),
+        .tp_cam0_stateout        ( led_net_0 ),
+        .tp_cam0_substateout     ( led_2 ),
+        .PRDATA                  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
+        .tp_cam1_wren            (  ),
+        .tp_cam1_full            (  ),
+        .tp_cam1_startcap        (  ),
+        .tp_cam1_rden            (  ),
+        .tp_cam1_empty           (  ),
+        .tp_cam1_substateout     (  ),
+        .tp_cam1_stateout        (  ) 
         );
 
 //--------MSS_CORE2

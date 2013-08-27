@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/TOPLEVEL</location>
-    <state>GENERATED ( Wed Aug 21 23:58:58 2013 )</state>
+    <state>GENERATED ( Tue Aug 27 14:55:35 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -47,7 +47,6 @@
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\counter.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\fifo_32bit_apb3.v</file>
-    <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\fifo_8bit_apb3.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\inputConditioner.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\led.v</file>
     <file>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\psram_cr.v</file>

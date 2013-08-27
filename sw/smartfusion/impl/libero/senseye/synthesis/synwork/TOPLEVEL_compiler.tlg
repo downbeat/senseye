@@ -596,9 +596,6 @@ Selecting top level module TOPLEVEL
 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][4][2:0] 
 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_1_ is always 1, optimizing ...
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_2_ is always 1, optimizing ...
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_3_ is always 1, optimizing ...
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":102:7:102:19|Synthesizing module stonyman_apb3
 
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\imaging\imaging.v":9:7:9:13|Synthesizing module imaging
@@ -806,7 +803,7 @@ State machine has 5 reachable states with original encodings of:
    100
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":401:18:401:21|Input port bits 31 to 8 of addr[31:0] are unused
 
-@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 1 of datain[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 4 of datain[31:0] are unused
 
 @N: CL201 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Trying to extract state machine for register substate
 Extracted state machine for register substate
