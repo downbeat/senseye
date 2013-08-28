@@ -23,6 +23,7 @@
 // 1.00  2013-08-21  russ          multi-camera support.
 // 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
 //                                 which gives a slight improvement in framerate.
+// 1.02  2013-08-28  russ          determine camidx in stonyman_interrupt more intelligently.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -20,6 +20,7 @@
 // 1.00  2013-08-21  russ          multi-camera support.
 // 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
 //                                 which gives a slight improvement in framerate.
+// 1.02  2013-08-28  russ          determine camidx in stonyman_interrupt more intelligently.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -129,16 +130,22 @@ typedef  unsigned char   uint8;
 #define GPIO_IRQ_NUM_CAPTURE_DONE(cam)  GPIO_IRQ_NUM(GPIO_NUM_CAPTURE_DONE(cam))
 #define GPIO_IRQ_NUM_HIGH_WATER(cam)    GPIO_IRQ_NUM(GPIO_NUM_HIGH_WATER(cam))
 
-// TODO: hardcoded for now
-#define RESOLUTION_ROWS               (112)
-#define RESOLUTION_COLS               (112)
-#define RESOLUTION                    (RESOLUTION_ROWS*RESOLUTION_COLS)
+#define GPIO_NUM_START                  (0)
+#define GPIO_IRQ_PER_CAM                (2)
+#define GPIO_IRQ_PER_CAM_POWTWO         (1) // lg(GPIO_IRQ_PER_CAM) : used to calc. camidx from irq
+#define GPIO_IRQ_NUM_START              GPIO_IRQ_NUM(GPIO_NUM_START)
+#define GPIO_IRQ_NUM_CNT                GPIO_IRQ_NUM(GPIO_NUM_START+(GPIO_IRQ_PER_CAM*NUM_CAMS))
 
-#define IMG_BUF_QUEUE_LEN             (3)
+// TODO: hardcoded for now
+#define RESOLUTION_ROWS                 (112)
+#define RESOLUTION_COLS                 (112)
+#define RESOLUTION                      (RESOLUTION_ROWS*RESOLUTION_COLS)
+
+#define IMG_BUF_QUEUE_LEN               (3)
 
 // TODO: auto-delay mode will be configurable via ioctl
 //       (currently requires recompilation to enable)
-#define FLAG_DEFAULT_AUTO_DELAY       (0)
+#define FLAG_DEFAULT_AUTO_DELAY         (0)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -610,17 +617,13 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
    // FIXME: checking each camera each time the interrupt fires is hurting the framerate
    //        perhaps seperate interrupt handlers would be best.
 
-   for(camidx=0; camidx<NUM_CAMS; ++camidx)
-   {
-      if((GPIO_IRQ_NUM_CAPTURE_DONE(camidx) == irq) || (GPIO_IRQ_NUM_HIGH_WATER(camidx) == irq))
-      {
-         break;
-      }
-   }
-   if(NUM_CAMS == camidx)
+
+   if((GPIO_IRQ_NUM_START > irq) || ((GPIO_IRQ_NUM_CNT-1) < irq))
    {
       return IRQ_NONE;
    }
+
+   camidx = (irq-GPIO_IRQ_NUM_START)>>GPIO_IRQ_PER_CAM_POWTWO;
 
 
    tmp_irq_flags = 0;
