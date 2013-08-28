@@ -25,7 +25,7 @@ Info: Adding FPGA Array data from file
 PDB file
 'Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\designer\impl1\TOPLEVE\
 L_fp\TOPLEVEL.pdb' has been loaded successfully.
-DESIGN : TOPLEVEL;  CHECKSUM : E8C0;  PDB_VERSION : 1.7
+DESIGN : TOPLEVEL;  CHECKSUM : 356D;  PDB_VERSION : 1.7
 Warning: One or more programming or configuration files have changed since generation.
          To view details and update a PDB, you may click on Modify PDB button for the target
          device.
@@ -64,7 +64,7 @@ programmer '51638' : Program System Init and Boot Clients...
 programmer '51638' : Program Embedded Flash Memory Module ALL....
 programmer '51638' : Verify System Init and Boot Clients...
 programmer '51638' : Verify Embedded Flash Memory Module ALL...
-programmer '51638' : Finished: Tue Aug 27 15:07:51 2013 (Elapsed time 00:01:09)
+programmer '51638' : Finished: Wed Aug 28 18:50:30 2013 (Elapsed time 00:01:11)
 programmer '51638' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

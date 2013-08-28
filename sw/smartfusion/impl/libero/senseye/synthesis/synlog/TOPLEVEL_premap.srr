@@ -34,15 +34,14 @@ FCLK        40.0 MHz      25.000        declared     clk_group_0
 @W: MT532 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Found signal identified as System clock which controls 296 sequential elements including imaging_0/adcxx1s101_0/cntrWaitLeading[2:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
 
 
-Finished Pre Mapping Phase. (Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 114MB)
+Finished Pre Mapping Phase. (Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 114MB)
 
-@W: MO111 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\toplevel\toplevel.v":202:14:202:32|Tristate driver TP_PADDR_BIT2 on net TP_PADDR_BIT2 has its enable tied to GND (module TOPLEVEL) 
 @N: BN225 |Writing default property annotation file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Time elapsed 0h:00m:02s; Memory used current: 51MB peak: 114MB)
+At Mapper Exit (Time elapsed 0h:00m:01s; Memory used current: 51MB peak: 114MB)
 
-Process took 0h:00m:03s realtime, 0h:00m:02s cputime
-# Tue Aug 27 14:56:07 2013
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Wed Aug 28 18:43:32 2013
 
 ###########################################################]

@@ -629,13 +629,12 @@ Selecting top level module TOPLEVEL
 
 @N: CG364 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":9:7:9:14|Synthesizing module TOPLEVEL
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":202:14:202:32|No assignment to wire TP_PADDR_BIT2_net_0
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":200:14:200:26|No assignment to wire TP_PADDR_BIT2
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":243:14:243:28|No assignment to wire PADDRS0_slice_0
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":240:14:240:28|No assignment to wire PADDRS0_slice_0
 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":244:14:244:28|No assignment to wire PADDRS0_slice_1
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":241:14:241:28|No assignment to wire PADDRS0_slice_1
 
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":86:14:86:26|*Output TP_PADDR_BIT2 has undriven bits -- simulation mismatch possible.
 @W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused

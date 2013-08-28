@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug 27 14:54:18 2013
+// Created by SmartDesign Wed Aug 28 18:05:01 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -201,14 +201,14 @@ wire          cam1_afull_net_1;
 wire          cam1_busy_net_1;
 wire          cam1_px_adc_cs_net_1;
 wire          cam1_px_adc_sclk_net_1;
-wire   [3:0]  tp_cam0_stateout_net_1;
-wire   [3:0]  tp_cam0_substateout_net_1;
-wire   [31:0] BIF_1_PRDATA_net_0;
 wire          tp_cam1_wren_net_1;
 wire          tp_cam1_full_net_1;
 wire          tp_cam1_startcap_net_1;
 wire          tp_cam1_rden_net_1;
 wire          tp_cam1_empty_net_1;
+wire   [3:0]  tp_cam0_stateout_net_1;
+wire   [3:0]  tp_cam0_substateout_net_1;
+wire   [31:0] BIF_1_PRDATA_net_0;
 wire   [3:0]  tp_cam1_substateout_net_1;
 wire   [3:0]  tp_cam1_stateout_net_1;
 //--------------------------------------------------------------------
@@ -320,12 +320,6 @@ assign cam1_px_adc_cs_net_1          = cam1_px_adc_cs_net_0;
 assign cam1_px_adc_cs                = cam1_px_adc_cs_net_1;
 assign cam1_px_adc_sclk_net_1        = cam1_px_adc_sclk_net_0;
 assign cam1_px_adc_sclk              = cam1_px_adc_sclk_net_1;
-assign tp_cam0_stateout_net_1        = tp_cam0_stateout_net_0;
-assign tp_cam0_stateout[3:0]         = tp_cam0_stateout_net_1;
-assign tp_cam0_substateout_net_1     = tp_cam0_substateout_net_0;
-assign tp_cam0_substateout[3:0]      = tp_cam0_substateout_net_1;
-assign BIF_1_PRDATA_net_0            = BIF_1_PRDATA;
-assign PRDATA[31:0]                  = BIF_1_PRDATA_net_0;
 assign tp_cam1_wren_net_1            = tp_cam1_wren_net_0;
 assign tp_cam1_wren                  = tp_cam1_wren_net_1;
 assign tp_cam1_full_net_1            = tp_cam1_full_net_0;
@@ -336,6 +330,12 @@ assign tp_cam1_rden_net_1            = tp_cam1_rden_net_0;
 assign tp_cam1_rden                  = tp_cam1_rden_net_1;
 assign tp_cam1_empty_net_1           = tp_cam1_empty_net_0;
 assign tp_cam1_empty                 = tp_cam1_empty_net_1;
+assign tp_cam0_stateout_net_1        = tp_cam0_stateout_net_0;
+assign tp_cam0_stateout[3:0]         = tp_cam0_stateout_net_1;
+assign tp_cam0_substateout_net_1     = tp_cam0_substateout_net_0;
+assign tp_cam0_substateout[3:0]      = tp_cam0_substateout_net_1;
+assign BIF_1_PRDATA_net_0            = BIF_1_PRDATA;
+assign PRDATA[31:0]                  = BIF_1_PRDATA_net_0;
 assign tp_cam1_substateout_net_1     = tp_cam1_substateout_net_0;
 assign tp_cam1_substateout[3:0]      = tp_cam1_substateout_net_1;
 assign tp_cam1_stateout_net_1        = tp_cam1_stateout_net_0;

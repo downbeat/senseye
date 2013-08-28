@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug 27 14:55:24 2013
+// Created by SmartDesign Wed Aug 28 18:42:26 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -28,7 +28,6 @@ module TOPLEVEL(
     TP_BUSY,
     TP_EMPTY,
     TP_FULL,
-    TP_PADDR_BIT2,
     TP_PENABLE,
     TP_PREADY,
     TP_PSEL,
@@ -83,7 +82,6 @@ output        TP_ADCSTARTCAP;
 output        TP_BUSY;
 output        TP_EMPTY;
 output        TP_FULL;
-output        TP_PADDR_BIT2;
 output        TP_PENABLE;
 output        TP_PREADY;
 output        TP_PSEL;
@@ -199,7 +197,7 @@ wire          TP_ADCSTARTCAP_net_0;
 wire          TP_BUSY_net_0;
 wire          TP_EMPTY_net_0;
 wire          TP_FULL_net_0;
-wire   [2:2]  TP_PADDR_BIT2_net_0;
+wire   [2:2]  TP_PADDR_BIT2;
 wire          TP_RDEN_net_0;
 wire          TP_START_CAPTURE_net_0;
 wire          TP_WREN_net_0;
@@ -228,7 +226,6 @@ wire          CoreAPB3_0_APBmslave0_0_PREADY_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PWRITE_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PENABLE_net_0;
 wire          CoreAPB3_0_APBmslave0_0_PSELx_net_0;
-wire          TP_PADDR_BIT2_net_1;
 wire          TP_WREN_net_1;
 wire          TP_BUSY_net_1;
 wire          TP_START_CAPTURE_net_1;
@@ -410,8 +407,6 @@ assign CoreAPB3_0_APBmslave0_0_PENABLE_net_0 = CoreAPB3_0_APBmslave0_0_PENABLE;
 assign TP_PENABLE                            = CoreAPB3_0_APBmslave0_0_PENABLE_net_0;
 assign CoreAPB3_0_APBmslave0_0_PSELx_net_0   = CoreAPB3_0_APBmslave0_0_PSELx;
 assign TP_PSEL                               = CoreAPB3_0_APBmslave0_0_PSELx_net_0;
-assign TP_PADDR_BIT2_net_1                   = TP_PADDR_BIT2_net_0[2];
-assign TP_PADDR_BIT2                         = TP_PADDR_BIT2_net_1;
 assign TP_WREN_net_1                         = TP_WREN_net_0;
 assign TP_WREN                               = TP_WREN_net_1;
 assign TP_BUSY_net_1                         = TP_BUSY_net_0;
@@ -1035,14 +1030,14 @@ imaging imaging_0(
         .cam1_busy               (  ),
         .cam1_px_adc_cs          (  ),
         .cam1_px_adc_sclk        (  ),
-        .tp_cam0_stateout        ( led_net_0 ),
-        .tp_cam0_substateout     ( led_2 ),
-        .PRDATA                  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
         .tp_cam1_wren            (  ),
         .tp_cam1_full            (  ),
         .tp_cam1_startcap        (  ),
         .tp_cam1_rden            (  ),
         .tp_cam1_empty           (  ),
+        .tp_cam0_stateout        ( led_net_0 ),
+        .tp_cam0_substateout     ( led_2 ),
+        .PRDATA                  ( CoreAPB3_0_APBmslave0_0_PRDATA ),
         .tp_cam1_substateout     (  ),
         .tp_cam1_stateout        (  ) 
         );
