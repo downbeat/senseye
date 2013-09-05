@@ -885,7 +885,6 @@ begin
                   counterPixelsCaptured <= 0;
                   state <= `S_CAP_SET_ROW;
                   substate <= `SUB_S_RESP_RAISE;
-                  busy <= 1'b1;
                end
             end
          end
@@ -902,6 +901,7 @@ begin
         // RESP - reset pointer
                `SUB_S_RESP_RAISE:
                begin
+                  busy <= 1'b1;
                   // don't reset the pointer with RESP if it's not necessary
                   if(`REG_ROWSEL >= cachedPOINTER)
                   begin
