@@ -17,8 +17,8 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>FAB_CLK</data>
 <data>40.0 MHz</data>
-<data>39.8 MHz</data>
-<data>-0.119</data>
+<data>40.0 MHz</data>
+<data>-0.024</data>
 </row>
 <row>
 <data>FCLK</data>
@@ -29,8 +29,8 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>stonyman_stonyman_0|clkAdc_inferred_clock</data>
 <data>80.0 MHz</data>
-<data>32.1 MHz</data>
-<data>-18.625</data>
+<data>28.6 MHz</data>
+<data>-22.448</data>
 </row>
 <row>
 <data>System</data>

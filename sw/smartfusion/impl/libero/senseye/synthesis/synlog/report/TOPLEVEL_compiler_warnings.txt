@@ -125,9 +125,9 @@
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][2][2:0] 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][3][2:0] 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][4][2:0] 
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":200:14:200:26|No assignment to wire TP_PADDR_BIT2
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":240:14:240:28|No assignment to wire PADDRS0_slice_0
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":241:14:241:28|No assignment to wire PADDRS0_slice_1
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":199:14:199:26|No assignment to wire TP_PADDR_BIT2
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":231:14:231:28|No assignment to wire PADDRS0_slice_0
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":232:14:232:28|No assignment to wire PADDRS0_slice_1
 @W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused

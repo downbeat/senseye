@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version F-2012.03M-SP1 
 #--  Project file Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\run_options.txt
-#--  Written on Wed Aug 28 18:43:23 2013
+#--  Written on Wed Sep 04 23:08:06 2013
 
 
 #project files
@@ -12,8 +12,8 @@ add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libe
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/hdl/adcxx1s101.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/smartgen/fifo_px/fifo_px.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/smartgen/MUX2/MUX2.v"
-add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/hdl/stonyman_apb3.v"
+add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/hdl/stonyman.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/imaging/imaging.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/work/MSS_CORE2/mss_tshell.v"
 add_file -verilog "Z:/russ/private/research/senseye/git/sw/smartfusion/impl/libero/senseye/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 21 20:13:06 2013
+// Created by SmartDesign Wed Sep 04 22:28:56 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -12,6 +12,7 @@ module MSS_CORE2(
     F2M_GPI_0,
     F2M_GPI_1,
     F2M_GPI_2,
+    F2M_GPI_3,
     MAC_CRSDV,
     MAC_RXD,
     MAC_RXER,
@@ -46,6 +47,7 @@ input         CLKC;
 input         F2M_GPI_0;
 input         F2M_GPI_1;
 input         F2M_GPI_2;
+input         F2M_GPI_3;
 input         MAC_CRSDV;
 input  [1:0]  MAC_RXD;
 input         MAC_RXER;
@@ -86,6 +88,7 @@ wire          DSSGEN_MAC_TXD_1;
 wire          F2M_GPI_0;
 wire          F2M_GPI_1;
 wire          F2M_GPI_2;
+wire          F2M_GPI_3;
 wire          GLC_net_0;
 wire          MAC_CRSDV;
 wire          MAC_RXER;
@@ -114,6 +117,7 @@ wire          MSS_UART_0_TXD_D;
 wire          MSSINT_GPI_0_Y;
 wire          MSSINT_GPI_1_Y;
 wire          MSSINT_GPI_2_Y;
+wire          MSSINT_GPI_3_Y;
 wire          net_71;
 wire   [19:0] net_72_HADDR;
 wire          net_72_HLOCK;
@@ -212,7 +216,7 @@ assign MSS_MAC_0_TXD_1_D[1] = MACTXD_net_0[1:1];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
-assign GPI_net_0    = { 29'h00000000 , MSSINT_GPI_2_Y , MSSINT_GPI_1_Y , MSSINT_GPI_0_Y };
+assign GPI_net_0    = { 28'h0000000 , MSSINT_GPI_3_Y , MSSINT_GPI_2_Y , MSSINT_GPI_1_Y , MSSINT_GPI_0_Y };
 assign MACRXD_net_0 = { MSS_MAC_0_RXD_1_Y , MSS_MAC_0_RXD_0_Y };
 //--------------------------------------------------------------------
 // Component instances
@@ -638,6 +642,14 @@ MSSINT MSSINT_GPI_2(
         .A ( F2M_GPI_2 ),
         // Outputs
         .Y ( MSSINT_GPI_2_Y ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPI_3(
+        // Inputs
+        .A ( F2M_GPI_3 ),
+        // Outputs
+        .Y ( MSSINT_GPI_3_Y ) 
         );
 
 
