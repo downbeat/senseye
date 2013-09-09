@@ -179,10 +179,10 @@ int main(int argc, char** argv)
       } while(2 > recv_len_total);
 
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
-      //assert((char)SYMBOL_SOF == (char)recv_buf[0]);
+      assert((char)SYMBOL_SOF == (char)recv_buf[0]);
       printf("%c",SYMBOL_SOF);
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[1]);
-      //assert((char)OPCODE_FRAME == (char)recv_buf[1]);
+      assert((char)OPCODE_FRAME == (char)recv_buf[1]);
       printf("%c",OPCODE_FRAME);
 
 
