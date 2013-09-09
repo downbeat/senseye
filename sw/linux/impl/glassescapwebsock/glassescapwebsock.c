@@ -31,7 +31,7 @@
 // defines / constants
 //
 #define DEBUG_VERBOSE         (0)
-#define MAX_CAMS              (2)
+#define MAX_CAMS              (3)
 #define FRAME_X_Y             (112)
 #define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
 #define KEY_QUIT              ('q')
