@@ -17,6 +17,7 @@
 // 2013-09-05: multiple cameras supported (2 currently)
 // 2013-09-09: send NUM_CAMS as response to GET request, supporting this part of the glasses
 //             protocol (finally)
+// 2013-09-09: added real support for the DEBUG_MIMIC_MULTICAMS option
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -95,7 +96,10 @@ typedef  unsigned char   uint8;
 
 #define NUM_CAMS                  (2)
 
-const char STONY_DEVICE_FILENAME [NUM_CAMS] [15] = {"/dev/stonyman0", "/dev/stonyman1"};
+#define DEBUG_MIMIC_MULTICAM      (0)
+#define DEBUG_MIMIC_NUM_CAMS      (3)
+
+const char STONY_DEVICE_FILENAME [NUM_CAMS] [15] = {"/dev/stonyman0","/dev/stonyman1"};
 
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
 // TODO: a success header is not currently used
@@ -240,7 +244,13 @@ static void request_handler(int sd)
    unsigned send_len_ret;
    uint8 send_buf_numcams[1];
 
-   send_buf_numcams[0]=(uint8)(NUM_CAMS);
+
+#if(0 == DEBUG_MIMIC_MULTICAM)
+   send_buf_numcams[0]=((uint8)NUM_CAMS);
+#else
+   send_buf_numcams[0]=((uint8)DEBUG_MIMIC_NUM_CAMS);
+#endif
+
 
    flag_bad_request=0;
 
@@ -424,12 +434,10 @@ static void request_send_data(int sd)
 
 
    // transmit data
-#define MIMIC_MULTIPLE_CAMS_WITH_CAM0  (0)
-#if (0!=(MIMIC_MULTIPLE_CAMS_WITH_CAM0)) // code for single camera (CAM0)
-   // FOR DEBUGGING: mimic multiple cameras with only CAM0
-   for(ii=0;ii<NUM_CAMS;++ii)
+#if (0 == DEBUG_MIMIC_MULTICAM)
+   for(ii=0; ii<NUM_CAMS; ++ii)
    {
-      send_len_ret = send(sd, (const void*)(img_buf[0]), RESOLUTION, 0);
+      send_len_ret = send(sd, (const void*)(img_buf[ii]), RESOLUTION, 0);
       //fprintf(stderr,"send_len: %d\n",send_len_ret);
       if(RESOLUTION != send_len_ret)
       {
@@ -439,10 +447,10 @@ static void request_send_data(int sd)
       }
    }
 #else
-
-   for(ii=0; ii<NUM_CAMS; ++ii)
+   // FOR DEBUGGING: mimic multiple cameras with only CAM0
+   for(ii=0; ii<DEBUG_MIMIC_NUM_CAMS; ++ii)
    {
-      send_len_ret = send(sd, (const void*)(img_buf[ii]), RESOLUTION, 0);
+      send_len_ret = send(sd, (const void*)(img_buf[0]), RESOLUTION, 0);
       //fprintf(stderr,"send_len: %d\n",send_len_ret);
       if(RESOLUTION != send_len_ret)
       {
