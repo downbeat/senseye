@@ -14,6 +14,7 @@
 // 2013-07-25: code reads from device file (/dev/stonymanX for camera X).  it now requires the
 //             stonyman driver loadable kernel module to be loaded.  also added command-line parsing
 //             (although, only the -h help flag is supported).
+// 2013-09-05: multiple cameras supported (2 currently)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -90,26 +91,22 @@ typedef  unsigned char   uint8;
 #define FLAG_SHIFT_FULL           (1u)
 #define FLAG_SHIFT_AFULL          (2u)
 
-#define NUM_CAMS                  (3)
-#define NUM_BUFS_PER_CAM          (1) // currently not implemented, leave as 1
+#define NUM_CAMS                  (2)
+
+const char STONY_DEVICE_FILENAME [NUM_CAMS] [15] = {"/dev/stonyman0", "/dev/stonyman1"};
 
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
-// a success header is not currently used
+// TODO: a success header is not currently used
 const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
-
-#define NUM_CAMS                  (3)
-#define NUM_BUFS_PER_CAM          (1) // currently not implemented, leave as 1
-
-#define STONY_DEVICE_FILENAME     ("/dev/stonyman0")
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // globals
 //
 unsigned  g_flag_print_help;
-int       stony_fd;
-uint8    *img_buf  [NUM_CAMS];
+int       stony_fd  [NUM_CAMS];
+uint8    *img_buf   [NUM_CAMS];
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -175,7 +172,7 @@ int main(int argc, char** argv)
    // malloc the image buffers (this is required for uclinux)
    for(ii=0; ii<NUM_CAMS; ++ii)
    {
-      img_buf[ii] = (uint8*)malloc(NUM_BUFS_PER_CAM*RESOLUTION*sizeof(uint8));
+      img_buf[ii] = (uint8*)malloc(RESOLUTION*sizeof(uint8));
       if(NULL==img_buf[ii])
       {
          fprintf(stderr,"couldn't malloc %d bytes for the image buffer\n");
@@ -238,6 +235,9 @@ static void request_handler(int sd)
    unsigned recvLen, recvLenTotal;
    unsigned flag_bad_request;
    unsigned send_len_ret;
+   uint8 send_buf_numcams[1];
+
+   send_buf_numcams[0]=(uint8)(NUM_CAMS);
 
    flag_bad_request=0;
 
@@ -297,11 +297,26 @@ static void request_handler(int sd)
             fflush(stderr);
             exit(1);
          }*/
-         stony_fd=open(STONY_DEVICE_FILENAME, O_RDONLY, NULL);
-         if(0>stony_fd)
+         for(ii=0; ii<NUM_CAMS; ++ii)
          {
-            fprintf(stderr,"ERROR: opening file %s failed\n",STONY_DEVICE_FILENAME);
-            exit(1);
+            stony_fd[ii]=open(STONY_DEVICE_FILENAME[ii], O_RDONLY, NULL);
+            if(0>stony_fd[ii])
+            {
+               fprintf( stderr,"ERROR: opening file %s failed (errno=%d)\n",
+                        STONY_DEVICE_FILENAME[ii],errno );
+               fprintf(stderr,"%s\n",strerror(errno));
+               exit(1);
+            }
+            //fprintf(stderr,"DEBUG: opened dev file %s with descriptor %d\n",STONY_DEVICE_FILENAME[ii],stony_fd[ii]);
+            //fflush(stderr);
+         }
+
+         // stonyman driver: start capture
+         for(ii=0; ii<NUM_CAMS; ++ii)
+         {
+            //fprintf(stderr,"DEBUG: starting capture on cam %d (descriptor %d)\n",ii,stony_fd[ii]);
+            //fflush(stderr);
+            ioctl(stony_fd[ii],STONYMAN_IOC_START_CAPTURE);
          }
 
          // send data!
@@ -348,84 +363,51 @@ static void request_send_data(int sd)
    }
 
 
-   // stonyman driver
-   ioctl(stony_fd,STONYMAN_IOC_START_CAPTURE);
-
    // read from stonyman device file
-   tmp_px_read=0;
-   pixelcount[0]=0;
-   while(RESOLUTION>pixelcount[0])
-   {
-      tmp_px_read = read(stony_fd, img_buf[0], RESOLUTION-pixelcount[0]);
-      if((0 > tmp_px_read) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
-      {
-         // do nothing, just try again
-      }
-      else if(0 > tmp_px_read)
-      {
-         // error
-         fprintf(stderr,"read error from %s (errno=%d)!\n",STONY_DEVICE_FILENAME,errno);
-         fprintf(stderr,"%s\n",strerror(errno));
-         fflush(stderr);
-         assert(0 < tmp_px_read);
-      }
-      else
-      {
-         pixelcount[0] += tmp_px_read;
-      }
-   }
-
-#if 0
-#define FORCE_SINGLE_CAM_READ  (1)
-#if (0!=(FORCE_SINGLE_CAM_READ)) // code for single camera (CAM0)
-   // only actually reading data from CAM0
-   pixelcount[0]=0;
-   while(RESOLUTION>pixelcount[0])
-   {
-      regflags = REG_CAMX_STATUS(0);
-      if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
-      {
-         regdata=REG_CAMX_PXDATA(0);
-         img_buf[0][pixelcount[0]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[0]];
-         img_buf[0][pixelcount[0]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[0]+1];
-         img_buf[0][pixelcount[0]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[0]+2];
-         img_buf[0][pixelcount[0]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[0]+3];
-         pixelcount[0]+=4;
-      }
-   }
-#else
-   // FIXME: do not use (old code!)
-   // FIXME: only captures from 2 cameras, not three
-   for(ii=0; ii<2; ++ii)
+   for(ii=0; ii<NUM_CAMS; ++ii)
    {
       pixelcount[ii]=0;
    }
-   while((RESOLUTION>pixelcount[0])||(RESOLUTION>pixelcount[1]))
+   // FIXME: this shouldn't be hardcoded (it should be parameterized to NUM_CAMS)
+   while((RESOLUTION>pixelcount[0]) || (RESOLUTION>pixelcount[1]))
    {
-      for(ii=0; ii<2; ++ii)
+      for(ii=0; ii<NUM_CAMS; ++ii)
       {
-         regflags = REG_CAMX_STATUS(ii);
-         if(0 == ((1<<FLAG_SHIFT_EMPTY)&regflags))
+         if(RESOLUTION>pixelcount[ii])
          {
-            regdata=REG_CAMX_PXDATA(ii);
-            img_buf[ii][pixelcount[ii]]   = (regdata>> 0)&0xFF-stonymask[pixelcount[ii]];
-            img_buf[ii][pixelcount[ii]+1] = (regdata>> 8)&0xFF-stonymask[pixelcount[ii]+1];
-            img_buf[ii][pixelcount[ii]+2] = (regdata>>16)&0xFF-stonymask[pixelcount[ii]+2];
-            img_buf[ii][pixelcount[ii]+3] = (regdata>>24)&0xFF-stonymask[pixelcount[ii]+3];
-            pixelcount[ii]+=4;
+            tmp_px_read=0;
+            // FIXME: shouln't it be (uint8*)(&(img_buf[ii][pixelcount[ii]]))?
+            tmp_px_read = read(stony_fd[ii], img_buf[ii], RESOLUTION-pixelcount[ii]);
+            if((0 > tmp_px_read) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
+            {
+               // do nothing, just try again
+               //fprintf(stderr,"EAGAIN while attempting to read from %s\n",STONY_DEVICE_FILENAME[ii]);
+               //fflush(stderr);
+            }
+            else if(0 > tmp_px_read)
+            {
+               // error
+               fprintf(stderr,"read error from %s (errno=%d)!\n",STONY_DEVICE_FILENAME[ii],errno);
+               fprintf(stderr,"%s\n",strerror(errno));
+               fflush(stderr);
+               assert(0 < tmp_px_read);
+            }
+            else
+            {
+               pixelcount[ii] += tmp_px_read;
+               //fprintf(stderr,"DEBUG: read %d pixels from cam %d (total read=%d)\n",tmp_px_read,ii,pixelcount[ii]);
+               //fflush(stderr);
+            }
          }
       }
    }
-#endif
-#endif
+
 
    // transmit data
-#define MIMIC_MULTIPLE_CAMS_WITH_CAM0  (1)
+#define MIMIC_MULTIPLE_CAMS_WITH_CAM0  (0)
 #if (0!=(MIMIC_MULTIPLE_CAMS_WITH_CAM0)) // code for single camera (CAM0)
-   // mimic 3 cameras
-   //for(ii=0;ii<NUM_CAMS;++ii)
-   // FIXME: only captures from 2 cameras, not three
-   for(ii=0;ii<2;++ii)
+   // FOR DEBUGGING: mimic multiple cameras with only CAM0
+   for(ii=0;ii<NUM_CAMS;++ii)
    {
       send_len_ret = send(sd, (const void*)(img_buf[0]), RESOLUTION, 0);
       //fprintf(stderr,"send_len: %d\n",send_len_ret);
@@ -437,9 +419,8 @@ static void request_send_data(int sd)
       }
    }
 #else
-   // FIXME: do not use (old code!)
-   // FIXME: only captures from 2 cameras, not three
-   for(ii=0;ii<1;++ii)
+
+   for(ii=0; ii<NUM_CAMS; ++ii)
    {
       send_len_ret = send(sd, (const void*)(img_buf[ii]), RESOLUTION, 0);
       //fprintf(stderr,"send_len: %d\n",send_len_ret);
@@ -452,7 +433,7 @@ static void request_send_data(int sd)
    }
 #endif
 
-   fprintf(stderr,"frame complete\n");
+   //fprintf(stderr,"frame complete\n");
 }
 
 //
