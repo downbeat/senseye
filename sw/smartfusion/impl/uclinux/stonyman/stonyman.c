@@ -21,6 +21,8 @@
 // 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
 //                                 which gives a slight improvement in framerate.
 // 1.02  2013-08-28  russ          determine camidx in stonyman_interrupt more intelligently.
+// 1.03  2013-09-09  russ          changed stonyman REG_CTRL assignments from "or equal" assignments
+//                                 to "equal" assignments.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -71,7 +73,6 @@ typedef  unsigned char   uint8;
 #define REG_CGX_CAMY_PXDATA(xx,yy)      \
    (*((volatile uint32*)(REG_CGX_CAMY_BASE(xx,yy)+REG_OFFSET_CAM_PXDATA)))
 
-#define FLAG_SHIFT_BUSY                 (0u)
 #define FLAG_SHIFT_EMPTY                (0u)
 #define FLAG_SHIFT_FULL                 (1u)
 #define FLAG_SHIFT_AFULL                (2u)
@@ -145,7 +146,7 @@ typedef  unsigned char   uint8;
 
 // TODO: auto-delay mode will be configurable via ioctl
 //       (currently requires recompilation to enable)
-#define FLAG_DEFAULT_AUTO_DELAY         (0)
+#define FLAG_DEFAULT_AUTO_DELAY         (1)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -438,6 +439,7 @@ static int stonyman_open(struct inode *inodp, struct file *filp)
    // FIXME: this feels like a hack
 
    filp->private_data = (void*)(&g_minor[iminor(inodp)]);
+   printk(KERN_DEBUG "stonyman: opening camera %d\n", *(unsigned*)(filp->private_data));
 
    return 0;
 }
@@ -466,7 +468,10 @@ static int stonyman_ioctl( struct inode *inodp, struct file *filp,
       return -EFAULT;
    }
 
-   camidx = iminor(inodp);
+   // FIXME: unsure why this didn't work!
+   //camidx = iminor(inodp);
+   camidx = *(unsigned*)(filp->private_data);
+   printk(KERN_DEBUG "stonyman: ioctl received for camera %d (cmd=0x%08X)\n", camidx, cmd);
    switch(cmd)
    {
       case STONYMAN_IOC_START_CAPTURE:
@@ -476,10 +481,10 @@ static int stonyman_ioctl( struct inode *inodp, struct file *filp,
          }
          // TODO: there is no synchronization!
          g_flag_capture_running[camidx] = 1;
-         if(0 == ((1<<FLAG_SHIFT_BUSY)&REG_FLAGS))
+         if(0 == (((uint32)(1u<<camidx)) & REG_FLAGS))
          {
             printk(KERN_DEBUG "stonyman: starting capture on camera %d\n", camidx);
-            REG_CTRL |= (uint32)(1u<<camidx);
+            REG_CTRL = (uint32)(1u<<camidx);
          }
          break;
       case STONYMAN_IOC_STOP_CAPTURE:
@@ -586,7 +591,7 @@ static ssize_t stonyman_read(struct file *filp, char __user *buff, size_t count,
          // start a new capture
          if(0 != g_flag_capture_running[camidx])
          {
-            REG_CTRL |= (uint32)(1u<<camidx);
+            REG_CTRL = (uint32)(1u<<camidx);
          }
       }
 
@@ -629,6 +634,10 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
    tmp_irq_flags = 0;
    spin_lock_irqsave(stonyman_spinlock[camidx], tmp_irq_flags);
 
+   // clear interrupt requests (doesn't really matter which; if any are pending, clear them)
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_CAPTURE_DONE(camidx));
+   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_HIGH_WATER(camidx));
+
    // clear the camera FIFO
    while(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CGX_CAMY_STATUS(camidx,0)))
    {
@@ -645,10 +654,6 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
          = (tmpdata>>24)&0xFF;
       g_img_buf_tail_bufpos[camidx] += 4;
    }
-
-   // clear interrupt requests (doesn't really matter which; if any are pending, clear them)
-   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_CAPTURE_DONE(camidx));
-   REG_GPIO_IRQ |= (unsigned int)(1u << GPIO_NUM_HIGH_WATER(camidx));
 
    if(RESOLUTION == g_img_buf_tail_bufpos[camidx])
    {
@@ -671,8 +676,8 @@ irqreturn_t stonyman_interrupt(int irq, void *dev_id, struct pt_regs *regs)
          // start a new capture
          if(0 != g_flag_capture_running[camidx])
          {
-            REG_CTRL |= (uint32)(1u<<camidx);
-                     }
+            REG_CTRL = (uint32)(1u<<camidx);
+         }
       }
       else
       {

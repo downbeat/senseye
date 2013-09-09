@@ -24,6 +24,8 @@
 // 1.01  2013-08-22  russ          using irq argument in stonyman_interrupt to determine camidx
 //                                 which gives a slight improvement in framerate.
 // 1.02  2013-08-28  russ          determine camidx in stonyman_interrupt more intelligently.
+// 1.03  2013-09-09  russ          changed stonyman REG_CTRL assignments from "or equal" assignments
+//                                 to "equal" assignments.
 //
 // Stonyman linux device driver (LKM).
 ////////////////////////////////////////////////////////////////////////////////////////////////////
