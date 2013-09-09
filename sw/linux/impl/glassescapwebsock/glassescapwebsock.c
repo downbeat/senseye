@@ -4,6 +4,7 @@
 // Russ Bielawski
 // 2013-03-06: created to grab data from insight-serv
 // 2013-06-26: I've been adding contortions to get 2 and 3 cameras supported
+// 2013-09-09: read numcams response from server (finally added support for this protocol message)
 //**************************************************************************************************
 
 
@@ -34,6 +35,9 @@
 #define FRAME_X_Y             (112)
 #define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
 #define KEY_QUIT              ('q')
+
+#define RX_LEN_RESP_NUM_CAMS  (3)
+#define RX_LEN_FRAME_HEADER   (2)
 
 #define IPADDR_MAX_LEN        (15)
 #define DEFAULT_SERV_ADDR     ("141.212.106.225")
@@ -111,16 +115,6 @@ int main(int argc, char** argv)
       exit(0);
    }
 
-
-   // TODO hardcoded for now
-   numcams=2;
-
-   // print numcams on stdout for pipe interface
-   printf("%c",SYMBOL_SOF);
-   printf("%c",OPCODE_RESP_NUM_CAMS);
-   printf("%c",(unsigned char)numcams);
-   fflush(stdout);
-
    g_sd_insight = -1;
 
    // we want to gracefully close the remove connection
@@ -150,6 +144,47 @@ int main(int argc, char** argv)
    assert(sizeof(REQUEST) == send_len_ret);
 
 
+   // read numcams
+   recv_len_total = 0;
+   recv_buf[0] = '\0';
+   do
+   {
+      recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])),
+                       RX_LEN_RESP_NUM_CAMS-recv_len_total, 0 );
+      if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
+      {
+         // do nothing, just try again
+         fprintf(stderr,"EAGAIN\n");
+         fflush(stderr);
+      }
+      else if(0 > recv_len)
+      {
+         // error
+         fprintf(stderr,"Other Error (errno=%d)!\n",errno);
+         fprintf(stderr,"%s\n",strerror(errno));
+         fflush(stderr);
+         assert(0 < recv_len);
+      }
+      else
+      {
+         recv_len_total += recv_len;
+      }
+   } while(RX_LEN_RESP_NUM_CAMS > recv_len_total);
+
+   // print numcams on stdout for pipe interface
+   numcams=(unsigned)recv_buf[2];
+
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
+   assert((char)SYMBOL_SOF == (char)recv_buf[0]);
+   printf("%c",SYMBOL_SOF);
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[1]);
+   assert((char)OPCODE_RESP_NUM_CAMS == (char)recv_buf[1]);
+   printf("%c",OPCODE_RESP_NUM_CAMS);
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)numcams);
+   assert((0 < numcams) && (MAX_CAMS >= numcams));
+   printf("%c",(unsigned char)numcams);
+   fflush(stdout);
+
 
    while(1)
    {
@@ -157,7 +192,8 @@ int main(int argc, char** argv)
       recv_buf[0] = '\0';
       do
       {
-         recv_len = recv(g_sd_insight, (void*)(&(recv_buf[recv_len_total])), 2-recv_len_total, 0);
+         recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])), 
+                          RX_LEN_FRAME_HEADER-recv_len_total, 0 );
          if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
          {
             // do nothing, just try again
@@ -176,7 +212,7 @@ int main(int argc, char** argv)
          {
             recv_len_total += recv_len;
          }
-      } while(2 > recv_len_total);
+      } while(RX_LEN_FRAME_HEADER > recv_len_total);
 
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
       assert((char)SYMBOL_SOF == (char)recv_buf[0]);

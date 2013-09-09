@@ -15,6 +15,8 @@
 //             stonyman driver loadable kernel module to be loaded.  also added command-line parsing
 //             (although, only the -h help flag is supported).
 // 2013-09-05: multiple cameras supported (2 currently)
+// 2013-09-09: send NUM_CAMS as response to GET request, supporting this part of the glasses
+//             protocol (finally)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -98,6 +100,7 @@ const char STONY_DEVICE_FILENAME [NUM_CAMS] [15] = {"/dev/stonyman0", "/dev/ston
 const char RESP_BAD_REQUEST[] = "HTTP/1.0 400 Bad Request\n";
 // TODO: a success header is not currently used
 const char RESP_SUCCESS_HEADER[] = "HTTP/1.0 200 OK\n";
+const char RESP_NUMCAMS_HEADER[] = {SYMBOL_SOF,OPCODE_RESP_NUM_CAMS};
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
 
@@ -309,6 +312,23 @@ static void request_handler(int sd)
             }
             //fprintf(stderr,"DEBUG: opened dev file %s with descriptor %d\n",STONY_DEVICE_FILENAME[ii],stony_fd[ii]);
             //fflush(stderr);
+         }
+
+         // send numcams message
+         send_len_ret=send(sd, (const void*)(&RESP_NUMCAMS_HEADER), sizeof(RESP_NUMCAMS_HEADER), 0);
+         if(sizeof(RESP_NUMCAMS_HEADER) != send_len_ret)
+         {
+            fprintf(stderr, "request_handler: send call returns wrong length (%d)\n",send_len_ret);
+            fflush(stderr);
+            exit(1);
+         }
+         send_len_ret = send( sd, (const void*)(&send_buf_numcams),
+                              sizeof(send_buf_numcams), 0 );
+         if(sizeof(send_buf_numcams) != send_len_ret)
+         {
+            fprintf(stderr, "request_handler: send call returns wrong length (%d)\n",send_len_ret);
+            fflush(stderr);
+            exit(1);
          }
 
          // stonyman driver: start capture
