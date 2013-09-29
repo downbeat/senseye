@@ -125,13 +125,9 @@
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][2][2:0] 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][3][2:0] 
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Pruning register fifoRdenState[4][4][2:0] 
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_1_ is always 1, optimizing ...
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_2_ is always 1, optimizing ...
-@W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Register bit startCapture_3_ is always 1, optimizing ...
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":202:14:202:32|No assignment to wire TP_PADDR_BIT2_net_0
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":243:14:243:28|No assignment to wire PADDRS0_slice_0
-@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":244:14:244:28|No assignment to wire PADDRS0_slice_1
-@W: CL157 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":86:14:86:26|*Output TP_PADDR_BIT2 has undriven bits -- simulation mismatch possible.
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":199:14:199:26|No assignment to wire TP_PADDR_BIT2
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":231:14:231:28|No assignment to wire PADDRS0_slice_0
+@W: CG360 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\TOPLEVEL\TOPLEVEL.v":232:14:232:28|No assignment to wire PADDRS0_slice_1
 @W: CL260 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":170:0:170:5|Pruning register bit 1 of nbyte_en[1:0] 
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":24:13:24:20|Input port bits 31 to 25 of max_addr[31:0] are unused
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\cr_int.v":25:13:25:20|Input port bits 31 to 16 of reg_addr[31:0] are unused
@@ -165,7 +161,7 @@
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":211:33:211:51|Input CG3_CAM2_FIFO_AFULL is unused
 @W: CL159 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":217:33:217:51|Input CG3_CAM3_FIFO_AFULL is unused
 @W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":401:18:401:21|Input port bits 31 to 8 of addr[31:0] are unused
-@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 1 of datain[31:0] are unused
+@W: CL246 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":419:26:419:31|Input port bits 31 to 4 of datain[31:0] are unused
 @W: CL190 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Optimizing register bit inphi to a constant 0
 @W: CL169 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Pruning register inphi 
 @W: CL189 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\adcxx1s101.v":57:0:57:5|Register bit cntrWaitTrailing[2] is always 0, optimizing ...

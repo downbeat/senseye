@@ -2,84 +2,86 @@ Target Part: A2F500M3G_FBGA484_Std
 Report for cell TOPLEVEL.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2   160      1.0      160.0
+              AND2   153      1.0      153.0
              AND2A     2      1.0        2.0
               AND3    34      1.0       34.0
-               AO1   209      1.0      209.0
-              AO14     1      1.0        1.0
-              AO18     2      1.0        2.0
-              AO1A    51      1.0       51.0
-              AO1B    17      1.0       17.0
-              AO1C    30      1.0       30.0
-              AO1D    16      1.0       16.0
-              AOI1    16      1.0       16.0
-             AOI1B    44      1.0       44.0
-               AX1     5      1.0        5.0
-              AX1A     4      1.0        4.0
-              AX1B     4      1.0        4.0
-              AX1D     6      1.0        6.0
-              AX1E     1      1.0        1.0
-              AXO3     1      1.0        1.0
-              AXO7     1      1.0        1.0
-             AXOI5     3      1.0        3.0
+               AO1   230      1.0      230.0
+              AO13     2      1.0        2.0
+              AO16     4      1.0        4.0
+              AO18     1      1.0        1.0
+              AO1A    69      1.0       69.0
+              AO1B    18      1.0       18.0
+              AO1C    28      1.0       28.0
+              AO1D    19      1.0       19.0
+              AOI1    21      1.0       21.0
+             AOI1B    42      1.0       42.0
+              AOI5     1      1.0        1.0
+              AX1A     1      1.0        1.0
+              AX1B     3      1.0        3.0
+              AX1D     5      1.0        5.0
+              AX1E     2      1.0        2.0
+              AXO1     1      1.0        1.0
+             AXOI5     2      1.0        2.0
+             AXOI7     3      1.0        3.0
             CLKINT     3      0.0        0.0
-               GND    31      0.0        0.0
-               INV    38      1.0       38.0
-            MSSINT     3      0.0        0.0
+               GND    32      0.0        0.0
+               INV    36      1.0       36.0
+            MSSINT     4      0.0        0.0
            MSS_AHB     1      0.0        0.0
            MSS_CCC     1      0.0        0.0
-               MX2   406      1.0      406.0
-              MX2A     3      1.0        3.0
-              MX2B    36      1.0       36.0
-              MX2C     9      1.0        9.0
+               MX2   424      1.0      424.0
+              MX2A    10      1.0       10.0
+              MX2B    21      1.0       21.0
+              MX2C    32      1.0       32.0
              NAND2     4      1.0        4.0
             NAND3A    12      1.0       12.0
-              NOR2   173      1.0      173.0
-             NOR2A   307      1.0      307.0
-             NOR2B   578      1.0      578.0
-              NOR3    46      1.0       46.0
-             NOR3A   163      1.0      163.0
-             NOR3B   154      1.0      154.0
-             NOR3C   153      1.0      153.0
-               OA1    72      1.0       72.0
-              OA1A    58      1.0       58.0
-              OA1B    19      1.0       19.0
-              OA1C    32      1.0       32.0
-              OAI1     6      1.0        6.0
-               OR2   179      1.0      179.0
-              OR2A   117      1.0      117.0
-              OR2B    38      1.0       38.0
-               OR3   227      1.0      227.0
-              OR3A    28      1.0       28.0
-              OR3B     7      1.0        7.0
+              NOR2   123      1.0      123.0
+             NOR2A   304      1.0      304.0
+             NOR2B   552      1.0      552.0
+              NOR3    41      1.0       41.0
+             NOR3A   102      1.0      102.0
+             NOR3B   197      1.0      197.0
+             NOR3C   188      1.0      188.0
+               OA1    55      1.0       55.0
+              OA1A    28      1.0       28.0
+              OA1B    12      1.0       12.0
+              OA1C    23      1.0       23.0
+              OAI1     7      1.0        7.0
+               OR2   160      1.0      160.0
+              OR2A    73      1.0       73.0
+              OR2B    35      1.0       35.0
+               OR3   242      1.0      242.0
+              OR3A    23      1.0       23.0
+              OR3B    16      1.0       16.0
+              OR3C     5      1.0        5.0
             PLLINT     1      0.0        0.0
-               VCC    31      0.0        0.0
-               XA1     7      1.0        7.0
-              XA1A     3      1.0        3.0
-              XA1B     1      1.0        1.0
+               VCC    32      0.0        0.0
+               XA1     6      1.0        6.0
+              XA1A     1      1.0        1.0
+              XA1B     3      1.0        3.0
               XA1C     5      1.0        5.0
-              XAI1     4      1.0        4.0
-             XAI1A     3      1.0        3.0
-             XNOR2   152      1.0      152.0
-             XNOR3    12      1.0       12.0
-               XO1     1      1.0        1.0
+              XAI1     1      1.0        1.0
+             XAI1A     1      1.0        1.0
+             XNOR2   151      1.0      151.0
+             XNOR3     9      1.0        9.0
+               XO1     3      1.0        3.0
               XO1A     2      1.0        2.0
-              XOR2   288      1.0      288.0
+              XOR2   282      1.0      282.0
               XOR3    11      1.0       11.0
 
 
               DFN1   334      1.0      334.0
-            DFN1C0   139      1.0      139.0
+            DFN1C0   138      1.0      138.0
             DFN1E0     6      1.0        6.0
-          DFN1E0C0    96      1.0       96.0
+          DFN1E0C0   101      1.0      101.0
           DFN1E0P0    16      1.0       16.0
-            DFN1E1   198      1.0      198.0
+            DFN1E1   199      1.0      199.0
           DFN1E1C0   148      1.0      148.0
-          DFN1E1P0     6      1.0        6.0
+          DFN1E1P0     8      1.0        8.0
             DFN1P0    22      1.0       22.0
             RAM4K9    16      0.0        0.0
                    -----          ----------
-             TOTAL  5013              4926.0
+             TOTAL  4903              4813.0
 
 
   IO Cell usage:
@@ -89,15 +91,14 @@ Report for cell TOPLEVEL.verilog
              INBUF     3
          INBUF_MSS     6
         MSS_XTLOSC     1
-            OUTBUF    62
+            OUTBUF    58
         OUTBUF_MSS     5
-           TRIBUFF     1
                    -----
-             TOTAL    95
+             TOTAL    90
 
 
-Core Cells         : 4926 of 11520 (43%)
-IO Cells           : 95
+Core Cells         : 4813 of 11520 (42%)
+IO Cells           : 90
 
   RAM/ROM Usage Summary
 Block Rams : 16 of 24 (66%)

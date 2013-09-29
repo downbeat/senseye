@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Wed Aug 21 20:13:06 2013
+// Created by Actel SmartDesign Wed Sep 04 22:28:57 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -48,6 +48,7 @@ MSS_CORE2 MSS_CORE2_0 (
     .MAINXIN({1{1'b0}}),
     .MSSHREADY({1{1'b0}}),
     .MSSHRESP({1{1'b0}}),
+    .F2M_GPI_3({1{1'b0}}),
     .F2M_GPI_2({1{1'b0}}),
     .F2M_GPI_1({1{1'b0}}),
     .F2M_GPI_0({1{1'b0}}),

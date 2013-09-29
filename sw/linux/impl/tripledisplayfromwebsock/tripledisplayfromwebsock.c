@@ -269,18 +269,20 @@ int main(int argc, char** argv)
       {
          for(ii=0; ii<FRAME_X_Y; ++ii)
          {
-            frametriploc1 = (uchar*)(frametrip->imageData + (ii*frametrip->widthStep));
+            frametriploc1 = (uchar*)(frametrip->imageData
+                                          + (ii*frametrip->widthStep)
+                                          + 0*(frametrip->widthStep/3) );
             frametriploc2 = (uchar*)( frametrip->imageData
                                           + (ii*frametrip->widthStep)
-                                          + (frametrip->widthStep/3) );
+                                          + 1*(frametrip->widthStep/3) );
             frametriploc3 = (uchar*)( frametrip->imageData
                                           + (ii*frametrip->widthStep)
                                           + 2*(frametrip->widthStep/3) );
             for(jj=0; jj<FRAME_X_Y; ++jj)
             {
-               frametriploc1[jj]=(unsigned char)indat[0*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
-               frametriploc2[jj]=(unsigned char)indat[1*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
-               frametriploc3[jj]=(unsigned char)indat[2*FRAME_X_Y*2 + ii*FRAME_X_Y+jj];
+               frametriploc1[jj]=(unsigned char)indat[0*FRAME_LEN + ii*FRAME_X_Y+jj];
+               frametriploc2[jj]=(unsigned char)indat[1*FRAME_LEN + ii*FRAME_X_Y+jj];
+               frametriploc3[jj]=(unsigned char)indat[2*FRAME_LEN + ii*FRAME_X_Y+jj];
             }
          }
          // create scaled up image
@@ -290,14 +292,16 @@ int main(int argc, char** argv)
       {
          for(ii=0; ii<FRAME_X_Y; ++ii)
          {
-            framedoubleloc1 = (uchar*)(framedouble->imageData + (ii*framedouble->widthStep));
+            framedoubleloc1 = (uchar*)( framedouble->imageData
+                                          + (ii*framedouble->widthStep)
+                                          + 0*(framedouble->widthStep/2) );
             framedoubleloc2 = (uchar*)( framedouble->imageData
                                           + (ii*framedouble->widthStep)
-                                          + (framedouble->widthStep/2) );
+                                          + 1*(framedouble->widthStep/2) );
             for(jj=0; jj<FRAME_X_Y; ++jj)
             {
-               framedoubleloc1[jj]=(unsigned char)indat[0*FRAME_X_Y + ii*FRAME_X_Y+jj];
-               framedoubleloc2[jj]=(unsigned char)indat[1*FRAME_X_Y + ii*FRAME_X_Y+jj];
+               framedoubleloc1[jj]=(unsigned char)indat[0*FRAME_LEN + ii*FRAME_X_Y+jj];
+               framedoubleloc2[jj]=(unsigned char)indat[1*FRAME_LEN + ii*FRAME_X_Y+jj];
             }
          }
          // create scaled up image

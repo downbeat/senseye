@@ -4,6 +4,7 @@
 // Russ Bielawski
 // 2013-03-06: created to grab data from insight-serv
 // 2013-06-26: I've been adding contortions to get 2 and 3 cameras supported
+// 2013-09-09: read numcams response from server (finally added support for this protocol message)
 //**************************************************************************************************
 
 
@@ -30,13 +31,17 @@
 // defines / constants
 //
 #define DEBUG_VERBOSE         (0)
-#define MAX_CAMS              (2)
+#define MAX_CAMS              (3)
 #define FRAME_X_Y             (112)
 #define FRAME_LEN             (FRAME_X_Y*FRAME_X_Y)
 #define KEY_QUIT              ('q')
 
-#define INSIGHT_SERV_ADDR     ("141.212.106.252")
-#define INSIGHT_SERV_PORT     (80)
+#define RX_LEN_RESP_NUM_CAMS  (3)
+#define RX_LEN_FRAME_HEADER   (2)
+
+#define IPADDR_MAX_LEN        (15)
+#define DEFAULT_SERV_ADDR     ("141.212.106.225")
+#define DEFAULT_SERV_PORT     (80)
 
 #define dbgPrintOp(msg,opcode) do { \
                                   if(0!=gFlagDbgOutputOn) \
@@ -52,10 +57,12 @@ const char REQUEST[] = "GET\r\n";
 //**************************************************************************************************
 // globals
 //
-int g_sd_insight;
-unsigned gFlagUserCliValid;
-unsigned gFlagUserCliHelp;
-unsigned gFlagDbgOutputOn;
+static int g_sd_insight;
+static char g_serv_addr [IPADDR_MAX_LEN+1];
+static unsigned g_serv_port;
+static unsigned gFlagUserCliValid;
+static unsigned gFlagUserCliHelp;
+static unsigned gFlagDbgOutputOn;
 
 
 //**************************************************************************************************
@@ -88,6 +95,10 @@ int main(int argc, char** argv)
    // process user cli
    gFlagUserCliValid=0;
    gFlagUserCliHelp=0;
+   g_serv_addr[0]='\0';
+   strncpy(g_serv_addr, DEFAULT_SERV_ADDR, IPADDR_MAX_LEN);
+   g_serv_addr[IPADDR_MAX_LEN]='\0';
+   g_serv_port=DEFAULT_SERV_PORT;
    if(0 != parseargs(argc,argv))
    {
       printusage(argv[0]);
@@ -103,16 +114,6 @@ int main(int argc, char** argv)
       printhelp(argv[0]);
       exit(0);
    }
-
-
-   // TODO hardcoded for now
-   numcams=2;
-
-   // print numcams on stdout for pipe interface
-   printf("%c",SYMBOL_SOF);
-   printf("%c",OPCODE_RESP_NUM_CAMS);
-   printf("%c",(unsigned char)numcams);
-   fflush(stdout);
 
    g_sd_insight = -1;
 
@@ -131,8 +132,8 @@ int main(int argc, char** argv)
 
    memset(&sockaddr_server,0,sizeof(sockaddr_server));
    sockaddr_server.sin_family = AF_INET;
-   sockaddr_server.sin_port = htons(INSIGHT_SERV_PORT);
-   inet_aton(INSIGHT_SERV_ADDR, &sockaddr_server.sin_addr);
+   sockaddr_server.sin_port = htons(g_serv_port);
+   inet_aton(g_serv_addr, &sockaddr_server.sin_addr);
 
    ret = connect(g_sd_insight, (struct sockaddr*)(&sockaddr_server), sizeof(sockaddr_server));
    assert(0 <= ret);
@@ -143,6 +144,47 @@ int main(int argc, char** argv)
    assert(sizeof(REQUEST) == send_len_ret);
 
 
+   // read numcams
+   recv_len_total = 0;
+   recv_buf[0] = '\0';
+   do
+   {
+      recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])),
+                       RX_LEN_RESP_NUM_CAMS-recv_len_total, 0 );
+      if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
+      {
+         // do nothing, just try again
+         fprintf(stderr,"EAGAIN\n");
+         fflush(stderr);
+      }
+      else if(0 > recv_len)
+      {
+         // error
+         fprintf(stderr,"Other Error (errno=%d)!\n",errno);
+         fprintf(stderr,"%s\n",strerror(errno));
+         fflush(stderr);
+         assert(0 < recv_len);
+      }
+      else
+      {
+         recv_len_total += recv_len;
+      }
+   } while(RX_LEN_RESP_NUM_CAMS > recv_len_total);
+
+   // print numcams on stdout for pipe interface
+   numcams=(unsigned)recv_buf[2];
+
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
+   assert((char)SYMBOL_SOF == (char)recv_buf[0]);
+   printf("%c",SYMBOL_SOF);
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[1]);
+   assert((char)OPCODE_RESP_NUM_CAMS == (char)recv_buf[1]);
+   printf("%c",OPCODE_RESP_NUM_CAMS);
+   dbgPrintOp("rx: 0x%02X\n", (unsigned char)numcams);
+   assert((0 < numcams) && (MAX_CAMS >= numcams));
+   printf("%c",(unsigned char)numcams);
+   fflush(stdout);
+
 
    while(1)
    {
@@ -150,7 +192,8 @@ int main(int argc, char** argv)
       recv_buf[0] = '\0';
       do
       {
-         recv_len = recv(g_sd_insight, (void*)(&(recv_buf[recv_len_total])), 2-recv_len_total, 0);
+         recv_len = recv( g_sd_insight, (void*)(&(recv_buf[recv_len_total])), 
+                          RX_LEN_FRAME_HEADER-recv_len_total, 0 );
          if((0 > recv_len) && ((EAGAIN == errno) || (EWOULDBLOCK == errno)))
          {
             // do nothing, just try again
@@ -169,13 +212,13 @@ int main(int argc, char** argv)
          {
             recv_len_total += recv_len;
          }
-      } while(2 > recv_len_total);
+      } while(RX_LEN_FRAME_HEADER > recv_len_total);
 
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[0]);
-      //assert((char)SYMBOL_SOF == (char)recv_buf[0]);
+      assert((char)SYMBOL_SOF == (char)recv_buf[0]);
       printf("%c",SYMBOL_SOF);
       dbgPrintOp("rx: 0x%02X\n", (unsigned char)recv_buf[1]);
-      //assert((char)OPCODE_FRAME == (char)recv_buf[1]);
+      assert((char)OPCODE_FRAME == (char)recv_buf[1]);
       printf("%c",OPCODE_FRAME);
 
 
@@ -273,8 +316,10 @@ static void printhelp(char *progname)
    fprintf(stderr,"press 'q' to end the program (user must have context of the video window!).\n");
    fprintf(stderr,"\n");
    fprintf(stderr,"quick and dirty argument descriptions:\n");
-   fprintf(stderr,"  -d         enable debug output (shows communication between glasses and this program\n");
-   fprintf(stderr,"  -h         show help and exit\n");
+   fprintf(stderr,"  -a <addr>   specify IP address of capture device server as <addr>\n");
+   fprintf(stderr,"  -d          enable debug output (shows communication between glasses and this program\n");
+   fprintf(stderr,"  -h          show help and exit\n");
+   fprintf(stderr,"  -p <port>   specify port of capture device server as <port>\n");
 }
 
 //
@@ -288,14 +333,22 @@ static int parseargs(int argc, char **argv)
    errno=0;
 
    gFlagUserCliValid = 1;
-   while ((cc = getopt(argc, argv, "dh")) != EOF)
+   while ((cc = getopt(argc, argv, "a:dhp:")) != EOF)
    {
       switch (cc) {
+         case 'a':
+            g_serv_addr[0]='\0';
+            strncpy(g_serv_addr, optarg, IPADDR_MAX_LEN);
+            g_serv_addr[IPADDR_MAX_LEN]='\0';
+            break;
          case 'd':
             gFlagDbgOutputOn = 1;
             break;
          case 'h':
             gFlagUserCliHelp = 1;
+            break;
+         case 'p':
+            g_serv_port = atoi(optarg);
             break;
          default:
             errno=EINVAL;

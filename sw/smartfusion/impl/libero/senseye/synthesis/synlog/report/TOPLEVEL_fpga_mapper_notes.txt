@@ -45,19 +45,6 @@
 @N: MF176 |Default generator successful 
 @N: MF238 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":495:51:495:79|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
 @N: MF239 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":262:30:262:43|Found 32-bit decrementor, 'un3_counterWait_1[31:0]'
-@N: MF135 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Found RAM 'cachedValue[7:0]', 8 words by 8 bits 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF176 |Default generator successful 
-@N: MF238 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":495:51:495:79|Found 8-bit incrementor, 'un2_cachedValue_1[7:0]'
-@N: MF239 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":262:30:262:43|Found 32-bit decrementor, 'un3_counterWait_1[31:0]'
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[31] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[30] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[29] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -88,7 +75,6 @@
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[4] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[3] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[2] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\actel\directcore\coreahbtoapb3\2.0.116\rtl\vlog\core_obfuscated\apbaddrdata.v":220:0:220:5|Removing sequential instance COREAHBTOAPB3_0.CAHBtoAPB3lll.PWDATA[1] of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[3\]\[3\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[3\]\[2\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[3\]\[1\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
@@ -103,11 +89,7 @@
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[0\]\[3\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[0\]\[2\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
 @N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":649:0:649:5|Removing sequential instance imaging_0.stonyman_apb3_0.stonyman_ioreg_0.fifoRden\[0\]\[1\] of view:PrimLib.dff(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Removing sequential instance imaging_0.stonyman_1.incv of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Removing sequential instance imaging_0.stonyman_1.resp of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Removing sequential instance imaging_0.stonyman_1.resv of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: BN362 :"z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman.v":234:0:234:5|Removing sequential instance imaging_0.stonyman_1.incp of view:PrimLib.dffr(prim) in hierarchy view:work.TOPLEVEL(verilog) because there are no references to its outputs 
-@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1179 
+@N: FP130 |Promoting Net MSS_CORE2_0_M2F_RESET_N on CLKINT  I_1142 
 @N: FP130 |Promoting Net imaging_0.stonyman_0_clkAdc on CLKINT  imaging_0.stonyman_0.clkAdc_inferred_clock 
 @N: FP130 |Promoting Net imaging_0.stonyman_1_clkAdc on CLKINT  imaging_0.stonyman_1.clkAdc_inferred_clock 
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.

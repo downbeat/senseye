@@ -733,7 +733,7 @@ begin
          begin
             for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
             begin
-               if(0 != ((1<<ii) & datain[ii]))
+               if(0 != datain[ii])
                begin
                   startCapture[ii] <= 1'b0;
                end

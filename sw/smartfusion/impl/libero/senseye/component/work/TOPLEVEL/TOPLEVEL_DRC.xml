@@ -3,81 +3,25 @@
 <drcreport>
   <header>TOPLEVEL</header>
   <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:incp</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:incp</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:incv</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:incv</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:resp</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:resp</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:resv</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:resv</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:SCLK</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:SCLK</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\error.png</status>
-    <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected top level output port TOPLEVEL:TP_WREN</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/TOPLEVEL:TP_WREN</crossprobe>
+    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin imaging_0:tp_cam0_full</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:tp_cam0_full</crossprobe>
   </drc>
   <drc>
     <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
     <StatusMessage>Warning</StatusMessage>
     <message>Floating Driver</message>
-    <detail>Floating output pin imaging_0:cam0_incv</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:cam0_incv</crossprobe>
+    <detail>Floating output pin imaging_0:tp_cam0_empty</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:tp_cam0_empty</crossprobe>
   </drc>
   <drc>
     <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
     <StatusMessage>Warning</StatusMessage>
     <message>Floating Driver</message>
-    <detail>Floating output pin imaging_0:cam0_resp</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:cam0_resp</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
-    <StatusMessage>Warning</StatusMessage>
-    <message>Floating Driver</message>
-    <detail>Floating output pin imaging_0:cam0_resv</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:cam0_resv</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
-    <StatusMessage>Warning</StatusMessage>
-    <message>Floating Driver</message>
-    <detail>Floating output pin imaging_0:cam0_incp</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:cam0_incp</crossprobe>
-  </drc>
-  <drc>
-    <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>
-    <StatusMessage>Warning</StatusMessage>
-    <message>Floating Driver</message>
-    <detail>Floating output pin imaging_0:cam0_px_adc_sclk</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:cam0_px_adc_sclk</crossprobe>
+    <detail>Floating output pin imaging_0:tp_cam0_rden</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/TOPLEVEL/pins/imaging_0:tp_cam0_rden</crossprobe>
   </drc>
   <drc>
     <status>C:\Microsemi\Libero_v10.1\Designer/data/drcreport\warn.png</status>

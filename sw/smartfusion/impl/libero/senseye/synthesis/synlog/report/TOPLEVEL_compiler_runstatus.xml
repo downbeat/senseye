@@ -18,7 +18,7 @@ The file contains the job information from compiler to be displayed as part of t
   <report_link name="more"><data>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\report\TOPLEVEL_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>372</data>
+  <data>368</data>
   <report_link name="more"><data>Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\report\TOPLEVEL_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
@@ -35,7 +35,7 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1377144006</data>
+  <data type="timestamp">1378350492</data>
   </info>
 			</job_info>
 </job_run_status>

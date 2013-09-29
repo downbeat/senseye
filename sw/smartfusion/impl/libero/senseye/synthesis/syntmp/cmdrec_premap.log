@@ -1,14 +1,14 @@
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis  -part A2F500M3G  -package FBGA484  -grade Std   -globalthreshold 50 -maxfan 3000 -opcond COMWC     -report_path 0       -summaryfile Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\report\TOPLEVEL_premap.xml -top_level_module  TOPLEVEL  -oedif  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn  -conchk_prepass  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL_cck_prepass.rpt  -freq 80.000  -tcl  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell_syn.sdc  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_compiler.srs  -flow prepass  -gcc_prepass  -osrd  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd  -qsap  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap  -devicelib  C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v  -ologparam  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg  -osyn  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd  -prjdir  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\  -prjname  TOPLEVEL_syn  -log  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_premap.srr 
 rc:1 success:1
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn|o|1377140770|2594572
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn|o|1378348361|3054353
 Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL_cck_prepass.rpt|o|0|0
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell_syn.sdc|i|1377130370|188
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_compiler.srs|i|1377144006|247973
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|o|1377144010|319475
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1377144010|69162
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell_syn.sdc|i|1378348120|188
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_compiler.srs|i|1378350492|249273
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|o|1378350496|321617
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1378350496|69744
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v|i|1340034016|72817
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg|o|1377144009|0
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|o|1377144010|319475
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_premap.srr|o|1377144011|3193
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg|o|1378350494|0
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|o|1378350496|321617
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_premap.srr|o|1378350496|2961
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe|i|1340204862|15745024
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\m_proasic.exe|i|1340204848|13099520

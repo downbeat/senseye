@@ -1,6 +1,6 @@
 #!/bin/sh
 
-numcams=1
+numcams=2
 
 module="stonyman"
 device="stonyman"
