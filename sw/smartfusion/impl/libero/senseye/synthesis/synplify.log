@@ -1,0 +1,65 @@
+
+Starting:    C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\win64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1
+Date:        Thu Aug 22 00:00:01 2013
+Version:     F-2012.03M-SP1 
+
+Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log TOPLEVEL_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Feature: actel_oem
+
+Running in Vendor Mode
+
+
+
+log file: "Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.srr"
+
+
+Running TOPLEVEL_syn|synthesis
+
+Running Compile on TOPLEVEL_syn|synthesis
+
+Running Compile Process on TOPLEVEL_syn|synthesis
+
+Running Compile Input on TOPLEVEL_syn|synthesis
+
+Copied Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_compiler.srs to Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.srs
+
+compiler Completed with warnings
+Return Code: 1
+Run Time:0h:00m:07s
+
+
+Job Compile Process completed on TOPLEVEL_syn|synthesis
+
+Running Premap on TOPLEVEL_syn|synthesis
+
+premap Completed with warnings
+Return Code: 1
+Run Time:0h:00m:03s
+
+
+Job Compile completed on TOPLEVEL_syn|synthesis
+
+Running Map on TOPLEVEL_syn|synthesis
+
+Running Map & Optimize on TOPLEVEL_syn|synthesis
+
+fpga_mapper Completed with warnings
+Return Code: 1
+Run Time:0h:00m:51s
+
+
+Job Map completed on TOPLEVEL_syn|synthesis
+
+Job Logic Synthesis completed on TOPLEVEL_syn|synthesis
+
+TCL script complete: "TOPLEVEL_syn.tcl"
+
+exit status=0
+
+

@@ -1,3 +1,0 @@
-@E: CS231 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":300:26:300:44|Unknown macro SHIFT_REG_CAM_SEL
-@E: CS187 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\insight\hdl\stonyman_apb3.v":381:0:381:8|Expecting endmodule
-

@@ -1,0 +1,3 @@
+@E: CG342 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":647:15:647:26|Expecting target variable, found startCapture -- possible misspelling
+@E: CS187 :"Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\hdl\stonyman_apb3.v":677:0:677:8|Expecting endmodule
+
