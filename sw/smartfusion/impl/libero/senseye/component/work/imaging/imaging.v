@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 28 18:05:01 2013
+// Created by SmartDesign Wed Sep 11 15:59:51 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -114,9 +114,9 @@ output        tp_cam1_wren;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   [7:0]  adc081s101_0_dataout;
+wire   [11:0] adcxx1s101_0_dataout;
 wire          adcxx1s101_1_conversionComplete;
-wire   [7:0]  adcxx1s101_1_dataout;
+wire   [11:0] adcxx1s101_1_dataout_0;
 wire   [31:0] PADDR;
 wire          PENABLE;
 wire   [31:0] BIF_1_PRDATA;
@@ -215,12 +215,20 @@ wire   [3:0]  tp_cam1_stateout_net_1;
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          VCC_net;
-wire   [7:0]  px1_in_const_net_0;
-wire   [7:0]  px2_in_const_net_0;
-wire   [7:0]  px3_in_const_net_0;
-wire   [7:0]  px1_in_const_net_1;
-wire   [7:0]  px2_in_const_net_1;
-wire   [7:0]  px3_in_const_net_1;
+wire   [11:0] px1_in_const_net_0;
+wire   [11:0] px2_in_const_net_0;
+wire   [11:0] px3_in_const_net_0;
+wire   [11:0] px0_min_val_const_net_0;
+wire   [11:0] px1_min_val_const_net_0;
+wire   [11:0] px2_min_val_const_net_0;
+wire   [11:0] px3_min_val_const_net_0;
+wire   [11:0] px1_in_const_net_1;
+wire   [11:0] px2_in_const_net_1;
+wire   [11:0] px3_in_const_net_1;
+wire   [11:0] px0_min_val_const_net_1;
+wire   [11:0] px1_min_val_const_net_1;
+wire   [11:0] px2_min_val_const_net_1;
+wire   [11:0] px3_min_val_const_net_1;
 wire          GND_net;
 wire   [31:0] CG0_CAM1_PIXELSIN_const_net_0;
 wire   [31:0] CG0_CAM2_PIXELSIN_const_net_0;
@@ -240,12 +248,20 @@ wire   [31:0] CG3_CAM3_PIXELSIN_const_net_0;
 // Constant assignments
 //--------------------------------------------------------------------
 assign VCC_net                       = 1'b1;
-assign px1_in_const_net_0            = 8'h00;
-assign px2_in_const_net_0            = 8'h00;
-assign px3_in_const_net_0            = 8'h00;
-assign px1_in_const_net_1            = 8'h00;
-assign px2_in_const_net_1            = 8'h00;
-assign px3_in_const_net_1            = 8'h00;
+assign px1_in_const_net_0            = 12'h000;
+assign px2_in_const_net_0            = 12'h000;
+assign px3_in_const_net_0            = 12'h000;
+assign px0_min_val_const_net_0       = 12'h540;
+assign px1_min_val_const_net_0       = 12'h000;
+assign px2_min_val_const_net_0       = 12'h000;
+assign px3_min_val_const_net_0       = 12'h000;
+assign px1_in_const_net_1            = 12'h000;
+assign px2_in_const_net_1            = 12'h000;
+assign px3_in_const_net_1            = 12'h000;
+assign px0_min_val_const_net_1       = 12'h500;
+assign px1_min_val_const_net_1       = 12'h000;
+assign px2_min_val_const_net_1       = 12'h000;
+assign px3_min_val_const_net_1       = 12'h000;
 assign GND_net                       = 1'b0;
 assign CG0_CAM1_PIXELSIN_const_net_0 = 32'h00000000;
 assign CG0_CAM2_PIXELSIN_const_net_0 = 32'h00000000;
@@ -352,8 +368,8 @@ adcxx1s101 adcxx1s101_0(
         .miso               ( cam0_px_adc_din ),
         // Outputs
         .cs                 ( cam0_px_adc_cs_net_0 ),
-        .conversionComplete ( tp_cam0_adcConvComplete_net_0 ),
-        .dataout            ( adc081s101_0_dataout ) 
+        .dataout            ( adcxx1s101_0_dataout ),
+        .conversionComplete ( tp_cam0_adcConvComplete_net_0 ) 
         );
 
 //--------adcxx1s101
@@ -365,8 +381,8 @@ adcxx1s101 adcxx1s101_1(
         .miso               ( cam1_px_adc_din ),
         // Outputs
         .cs                 ( cam1_px_adc_cs_net_0 ),
-        .conversionComplete ( adcxx1s101_1_conversionComplete ),
-        .dataout            ( adcxx1s101_1_dataout ) 
+        .dataout            ( adcxx1s101_1_dataout_0 ),
+        .conversionComplete ( adcxx1s101_1_conversionComplete ) 
         );
 
 //--------fifo_px
@@ -429,11 +445,15 @@ stonyman stonyman_0(
         .clk             ( clk ),
         .reset           ( reset ),
         .startCapture    ( tp_cam0_startcap_net_0 ),
-        .adcConvComplete ( tp_cam0_adcConvComplete_net_0 ),
-        .px0_in          ( adc081s101_0_dataout ),
+        .px0_in          ( adcxx1s101_0_dataout ),
         .px1_in          ( px1_in_const_net_0 ),
         .px2_in          ( px2_in_const_net_0 ),
         .px3_in          ( px3_in_const_net_0 ),
+        .px0_min_val     ( px0_min_val_const_net_0 ),
+        .px1_min_val     ( px1_min_val_const_net_0 ),
+        .px2_min_val     ( px2_min_val_const_net_0 ),
+        .px3_min_val     ( px3_min_val_const_net_0 ),
+        .adcConvComplete ( tp_cam0_adcConvComplete_net_0 ),
         // Outputs
         .resp            ( cam0_resp_net_0 ),
         .incp            ( cam0_incp_net_0 ),
@@ -441,16 +461,16 @@ stonyman stonyman_0(
         .incv            ( cam0_incv_net_0 ),
         .inphi           ( cam0_inphi_net_0 ),
         .writeEnable     ( tp_cam0_wren_net_0 ),
-        .clkAdc          ( stonyman_0_clkAdc ),
-        .startAdcCapture ( tp_cam0_startAdcCapture_net_0 ),
-        .busy            ( cam0_busy_net_0 ),
-        .tp_writePending ( tp_cam0_writePending_net_0 ),
         .px0_out         ( stonyman_0_px0_out ),
         .px1_out         (  ),
         .px2_out         (  ),
         .px3_out         (  ),
+        .clkAdc          ( stonyman_0_clkAdc ),
+        .startAdcCapture ( tp_cam0_startAdcCapture_net_0 ),
+        .busy            ( cam0_busy_net_0 ),
         .tp_stateout     ( tp_cam0_stateout_net_0 ),
-        .tp_substateout  ( tp_cam0_substateout_net_0 ) 
+        .tp_substateout  ( tp_cam0_substateout_net_0 ),
+        .tp_writePending ( tp_cam0_writePending_net_0 ) 
         );
 
 //--------stonyman
@@ -459,11 +479,15 @@ stonyman stonyman_1(
         .clk             ( clk ),
         .reset           ( reset ),
         .startCapture    ( tp_cam1_startcap_net_0 ),
-        .adcConvComplete ( adcxx1s101_1_conversionComplete ),
-        .px0_in          ( adcxx1s101_1_dataout ),
+        .px0_in          ( adcxx1s101_1_dataout_0 ),
         .px1_in          ( px1_in_const_net_1 ),
         .px2_in          ( px2_in_const_net_1 ),
         .px3_in          ( px3_in_const_net_1 ),
+        .px0_min_val     ( px0_min_val_const_net_1 ),
+        .px1_min_val     ( px1_min_val_const_net_1 ),
+        .px2_min_val     ( px2_min_val_const_net_1 ),
+        .px3_min_val     ( px3_min_val_const_net_1 ),
+        .adcConvComplete ( adcxx1s101_1_conversionComplete ),
         // Outputs
         .resp            ( cam1_resp_net_0 ),
         .incp            ( cam1_incp_net_0 ),
@@ -471,16 +495,16 @@ stonyman stonyman_1(
         .incv            ( cam1_incv_net_0 ),
         .inphi           ( cam1_inphi_net_0 ),
         .writeEnable     ( tp_cam1_wren_net_0 ),
-        .clkAdc          ( stonyman_1_clkAdc ),
-        .startAdcCapture ( stonyman_1_startAdcCapture ),
-        .busy            ( cam1_busy_net_0 ),
-        .tp_writePending (  ),
         .px0_out         ( stonyman_1_px0_out ),
         .px1_out         (  ),
         .px2_out         (  ),
         .px3_out         (  ),
+        .clkAdc          ( stonyman_1_clkAdc ),
+        .startAdcCapture ( stonyman_1_startAdcCapture ),
+        .busy            ( cam1_busy_net_0 ),
         .tp_stateout     ( tp_cam1_stateout_net_0 ),
-        .tp_substateout  ( tp_cam1_substateout_net_0 ) 
+        .tp_substateout  ( tp_cam1_substateout_net_0 ),
+        .tp_writePending (  ) 
         );
 
 //--------stonyman_apb3

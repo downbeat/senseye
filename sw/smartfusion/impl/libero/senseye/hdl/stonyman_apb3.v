@@ -521,6 +521,8 @@ wire [(`REG_RANGE_CAM_REG_SEL_WIDTH-1):0] camReg;
 reg [2:0] ii;
 reg [2:0] jj;
 
+wire cgx_start [0:`NUM_CONTROL_GROUPS];
+
 // this code allows generic handling of CSX_CAMY_... registers
 // ideally we wouldn't need all this extra code,
 // but verilog does not allow arrays to be used as inputs or outputs!
@@ -538,6 +540,12 @@ assign camRegInd = addr[(`REG_RANGE_CAM_REG_IND_SHIFT + `REG_RANGE_CAM_REG_IND_W
 assign cgIdx     = addr[(`REG_RANGE_CG_SEL_SHIFT      + `REG_RANGE_CG_SEL_WIDTH      - 1):`REG_RANGE_CG_SEL_SHIFT];
 assign camIdx    = addr[(`REG_RANGE_CAM_SEL_SHIFT     + `REG_RANGE_CAM_SEL_WIDTH     - 1):`REG_RANGE_CAM_SEL_SHIFT];
 assign camReg    = addr[(`REG_RANGE_CAM_REG_SEL_SHIFT + `REG_RANGE_CAM_REG_SEL_WIDTH - 1):`REG_RANGE_CAM_REG_SEL_SHIFT];
+
+// TODO: index in datain should not be hardcoded (use symbolic defines)
+assign cgx_start[0] = datain[0];
+assign cgx_start[1] = datain[1];
+assign cgx_start[2] = datain[2];
+assign cgx_start[3] = datain[3];
 
 assign cg0cam0fifoRden=fifoRden[0][0];
 assign cg0cam1fifoRden=fifoRden[0][1];
@@ -733,7 +741,7 @@ begin
          begin
             for(ii=0; ii<`NUM_CONTROL_GROUPS; ii=ii+1)
             begin
-               if(0 != datain[ii])
+               if(0 != cgx_start[ii])
                begin
                   startCapture[ii] <= 1'b0;
                end

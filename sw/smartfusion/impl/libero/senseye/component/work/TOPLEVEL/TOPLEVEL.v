@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Sep 04 23:07:42 2013
+// Created by SmartDesign Tue Oct 22 17:53:07 2013
 // Version: 10.1 SP3 10.1.3.1
 //////////////////////////////////////////////////////////////////////
 
@@ -24,7 +24,6 @@ module TOPLEVEL(
     UART_0_TXD,
     cam0_incp,
     cam0_incv,
-    cam0_inphi,
     cam0_px_adc_cs,
     cam0_px_adc_sclk,
     cam0_resp,
@@ -46,7 +45,6 @@ module TOPLEVEL(
     psram_nwe,
     rs485_de,
     rs485_nre,
-    tp_cam0_startcap,
     tp_cam1_startcap,
     // Inouts
     MAC_MDIO,
@@ -74,7 +72,6 @@ output        MAC_TXEN;
 output        UART_0_TXD;
 output        cam0_incp;
 output        cam0_incv;
-output        cam0_inphi;
 output        cam0_px_adc_cs;
 output        cam0_px_adc_sclk;
 output        cam0_resp;
@@ -96,7 +93,6 @@ output        psram_noe1;
 output        psram_nwe;
 output        rs485_de;
 output        rs485_nre;
-output        tp_cam0_startcap;
 output        tp_cam1_startcap;
 //--------------------------------------------------------------------
 // Inout
@@ -108,7 +104,6 @@ inout  [15:0] psram_data;
 //--------------------------------------------------------------------
 wire          cam0_incp_net_0;
 wire          cam0_incv_net_0;
-wire          cam0_inphi_net_0;
 wire          cam0_px_adc_cs_net_0;
 wire          cam0_px_adc_sclk_net_0;
 wire          cam0_resp_net_0;
@@ -194,7 +189,6 @@ wire   [24:0] psram_address_net_0;
 wire          px0_adc_din;
 wire          px1_adc_din;
 wire          TP_BUSY;
-wire          tp_cam0_startcap_net_0;
 wire          tp_cam1_startcap_net_0;
 wire   [2:2]  TP_PADDR_BIT2;
 wire          UART_0_RXD;
@@ -209,24 +203,22 @@ wire          MAC_MDC_net_1;
 wire          MAC_TXEN_net_1;
 wire          cam0_incp_net_1;
 wire          cam0_incv_net_1;
-wire          cam0_inphi_net_1;
 wire          cam0_resp_net_1;
 wire          cam0_resv_net_1;
 wire          cam0_px_adc_cs_net_1;
 wire          cam0_px_adc_sclk_net_1;
-wire          tp_cam0_startcap_net_1;
-wire   [1:0]  nbyte_en_net_0;
-wire   [24:0] psram_address_net_1;
-wire   [1:0]  MAC_TXD_net_1;
-wire   [3:0]  led_2_net_0;
-wire   [7:4]  led_net_1;
 wire          cam1_resp_net_1;
 wire          cam1_px_adc_sclk_net_1;
 wire          cam1_px_adc_cs_net_1;
 wire          cam1_incp_net_1;
 wire          cam1_incv_net_1;
-wire          cam1_inphi_net_1;
 wire          cam1_resv_net_1;
+wire   [1:0]  nbyte_en_net_0;
+wire   [24:0] psram_address_net_1;
+wire   [1:0]  MAC_TXD_net_1;
+wire   [3:0]  led_2_net_0;
+wire   [7:4]  led_net_1;
+wire          cam1_inphi_net_1;
 wire          tp_cam1_startcap_net_1;
 wire   [0:1]  PADDRS0_slice_0;
 wire   [3:23] PADDRS0_slice_1;
@@ -374,8 +366,6 @@ assign cam0_incp_net_1        = cam0_incp_net_0;
 assign cam0_incp              = cam0_incp_net_1;
 assign cam0_incv_net_1        = cam0_incv_net_0;
 assign cam0_incv              = cam0_incv_net_1;
-assign cam0_inphi_net_1       = cam0_inphi_net_0;
-assign cam0_inphi             = cam0_inphi_net_1;
 assign cam0_resp_net_1        = cam0_resp_net_0;
 assign cam0_resp              = cam0_resp_net_1;
 assign cam0_resv_net_1        = cam0_resv_net_0;
@@ -384,18 +374,6 @@ assign cam0_px_adc_cs_net_1   = cam0_px_adc_cs_net_0;
 assign cam0_px_adc_cs         = cam0_px_adc_cs_net_1;
 assign cam0_px_adc_sclk_net_1 = cam0_px_adc_sclk_net_0;
 assign cam0_px_adc_sclk       = cam0_px_adc_sclk_net_1;
-assign tp_cam0_startcap_net_1 = tp_cam0_startcap_net_0;
-assign tp_cam0_startcap       = tp_cam0_startcap_net_1;
-assign nbyte_en_net_0         = nbyte_en;
-assign psram_nbyte_en[1:0]    = nbyte_en_net_0;
-assign psram_address_net_1    = psram_address_net_0;
-assign psram_address[24:0]    = psram_address_net_1;
-assign MAC_TXD_net_1          = MAC_TXD_net_0;
-assign MAC_TXD[1:0]           = MAC_TXD_net_1;
-assign led_2_net_0            = led_2;
-assign led[3:0]               = led_2_net_0;
-assign led_net_1              = led_net_0;
-assign led[7:4]               = led_net_1;
 assign cam1_resp_net_1        = cam1_resp_net_0;
 assign cam1_resp              = cam1_resp_net_1;
 assign cam1_px_adc_sclk_net_1 = cam1_px_adc_sclk_net_0;
@@ -406,10 +384,20 @@ assign cam1_incp_net_1        = cam1_incp_net_0;
 assign cam1_incp              = cam1_incp_net_1;
 assign cam1_incv_net_1        = cam1_incv_net_0;
 assign cam1_incv              = cam1_incv_net_1;
-assign cam1_inphi_net_1       = cam1_inphi_net_0;
-assign cam1_inphi             = cam1_inphi_net_1;
 assign cam1_resv_net_1        = cam1_resv_net_0;
 assign cam1_resv              = cam1_resv_net_1;
+assign nbyte_en_net_0         = nbyte_en;
+assign psram_nbyte_en[1:0]    = nbyte_en_net_0;
+assign psram_address_net_1    = psram_address_net_0;
+assign psram_address[24:0]    = psram_address_net_1;
+assign MAC_TXD_net_1          = MAC_TXD_net_0;
+assign MAC_TXD[1:0]           = MAC_TXD_net_1;
+assign led_2_net_0            = led_2;
+assign led[3:0]               = led_2_net_0;
+assign led_net_1              = led_net_0;
+assign led[7:4]               = led_net_1;
+assign cam1_inphi_net_1       = cam1_inphi_net_0;
+assign cam1_inphi             = cam1_inphi_net_1;
 assign tp_cam1_startcap_net_1 = tp_cam1_startcap_net_0;
 assign tp_cam1_startcap       = tp_cam1_startcap_net_1;
 //--------------------------------------------------------------------
@@ -986,13 +974,13 @@ imaging imaging_0(
         .PWDATA                  ( CoreAPB3_0_APBmslave0_0_PWDATA ),
         // Outputs
         .cam0_px_adc_cs          ( cam0_px_adc_cs_net_0 ),
-        .cam0_inphi              ( cam0_inphi_net_0 ),
+        .cam0_inphi              (  ),
         .cam0_incv               ( cam0_incv_net_0 ),
         .cam0_resp               ( cam0_resp_net_0 ),
         .cam0_resv               ( cam0_resv_net_0 ),
         .cam0_incp               ( cam0_incp_net_0 ),
         .cam0_px_adc_sclk        ( cam0_px_adc_sclk_net_0 ),
-        .tp_cam0_startcap        ( tp_cam0_startcap_net_0 ),
+        .tp_cam0_startcap        (  ),
         .cam0_busy               ( TP_BUSY ),
         .tp_cam0_full            (  ),
         .tp_cam0_empty           (  ),
@@ -1036,12 +1024,12 @@ MSS_CORE2 MSS_CORE2_0(
         .UART_0_RXD  ( UART_0_RXD ),
         .MSSHREADY   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HREADY ),
         .MSSHRESP    ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRESP_0 ),
-        .MAC_RXD     ( MAC_RXD ),
-        .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
         .F2M_GPI_3   ( imaging_0_cam1_afull ),
         .F2M_GPI_2   ( imaging_0_cam1_busy ),
         .F2M_GPI_1   ( imaging_0_cam0_afull ),
         .F2M_GPI_0   ( TP_BUSY ),
+        .MAC_RXD     ( MAC_RXD ),
+        .MSSHRDATA   ( MSS_CORE2_0_MSS_MASTER_AHB_LITE_HRDATA ),
         // Outputs
         .MAC_TXEN    ( MAC_TXEN_net_0 ),
         .MAC_MDC     ( MAC_MDC_net_0 ),

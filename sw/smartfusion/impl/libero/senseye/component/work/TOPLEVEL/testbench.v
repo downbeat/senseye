@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Wed Sep 04 23:07:42 2013
+// Created by Actel SmartDesign Tue Oct 22 17:53:07 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -67,23 +67,21 @@ TOPLEVEL TOPLEVEL_0 (
     .MAC_TXEN( ),
     .cam0_incp( ),
     .cam0_incv( ),
-    .cam0_inphi( ),
     .cam0_resp( ),
     .cam0_resv( ),
     .cam0_px_adc_cs( ),
     .cam0_px_adc_sclk( ),
-    .tp_cam0_startcap( ),
-    .psram_nbyte_en( ),
-    .psram_address( ),
-    .MAC_TXD( ),
-    .led( ),
     .cam1_resp( ),
     .cam1_px_adc_sclk( ),
     .cam1_px_adc_cs( ),
     .cam1_incp( ),
     .cam1_incv( ),
-    .cam1_inphi( ),
     .cam1_resv( ),
+    .psram_nbyte_en( ),
+    .psram_address( ),
+    .MAC_TXD( ),
+    .led( ),
+    .cam1_inphi( ),
     .tp_cam1_startcap( ),
 
     // Inouts
