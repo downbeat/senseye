@@ -696,9 +696,9 @@ reflow soldering</description>
 <wire x1="10.16" y1="5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
 <text x="-9.398" y="5.588" size="1.778" layer="95">&gt;NAME</text>
 <text x="-9.906" y="-7.366" size="1.778" layer="95">&gt;VALUE</text>
-<pin name="VA" x="-15.24" y="2.54" length="middle"/>
+<pin name="V+" x="-15.24" y="2.54" length="middle"/>
 <pin name="GND" x="-15.24" y="0" length="middle"/>
-<pin name="VIN" x="-15.24" y="-2.54" length="middle"/>
+<pin name="V_ANA" x="-15.24" y="-2.54" length="middle"/>
 <pin name="SCLK" x="15.24" y="-2.54" length="middle" rot="R180"/>
 <pin name="SDATA" x="15.24" y="0" length="middle" rot="R180"/>
 <pin name="CS" x="15.24" y="2.54" length="middle" function="dot" rot="R180"/>
@@ -1034,8 +1034,8 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <connect gate="G$1" pin="GND" pad="2"/>
 <connect gate="G$1" pin="SCLK" pad="4"/>
 <connect gate="G$1" pin="SDATA" pad="5"/>
-<connect gate="G$1" pin="VA" pad="1"/>
-<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="V+" pad="1"/>
+<connect gate="G$1" pin="V_ANA" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
