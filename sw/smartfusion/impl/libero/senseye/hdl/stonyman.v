@@ -5,10 +5,8 @@
 // File history:
 //      0.01: 2013-02-05: created
 //      0.02: 2013-06-13: added support for 4 cameras
-//      0.03a:2013-08-17: IN PROGRESS: support for different input and output
-//                        pixel width
-//                        IN PROGRESS: support for subtracting a constant
-//                        value from each input pixel
+//      0.03: 2013-10-21: support for different input and output pixel width
+//                        support for subtracting a constant value from each input pixel
 //
 // Description: 
 //
@@ -26,12 +24,12 @@
 `define RESOLUTION_ROWS            (112)
 `define RESOLUTION_COLS            (112)
 
-`define ADC_RES_IN                 (8)
-`define PX_WIDTH_OUT               (8)
+`define ADC_IN_RES                 (12)
+`define PX_OUT_WIDTH               (8)
+`define PX_OUT_MAX_VAL             (8'hFF)
 
-`define PX_SUBTRACT_VAL            (8'h000)
-
-`define NUM_CHANNELS               4           // number of cameras which can be simultaneously controlled
+// NUM_CHANNELS is unused!
+`define NUM_CHANNELS               (4)         // number of cameras which can be simultaneously controlled
 
 
 // TIMING CONSTANTS
@@ -146,10 +144,14 @@ module stonyman
 input wire clk,
 input wire reset,
 input wire startCapture,     // active low
-input wire [(`ADC_RES_IN-1):0] px0_in,
-input wire [(`ADC_RES_IN-1):0] px1_in,
-input wire [(`ADC_RES_IN-1):0] px2_in,
-input wire [(`ADC_RES_IN-1):0] px3_in,
+input wire [(`ADC_IN_RES-1):0] px0_in,
+input wire [(`ADC_IN_RES-1):0] px1_in,
+input wire [(`ADC_IN_RES-1):0] px2_in,
+input wire [(`ADC_IN_RES-1):0] px3_in,
+input wire [(`ADC_IN_RES-1):0] px0_min_val,
+input wire [(`ADC_IN_RES-1):0] px1_min_val,
+input wire [(`ADC_IN_RES-1):0] px2_min_val,
+input wire [(`ADC_IN_RES-1):0] px3_min_val,
 input wire adcConvComplete,  // active low
 output reg resp,
 output reg incp,
@@ -157,10 +159,10 @@ output reg resv,
 output reg incv,
 output reg inphi,
 output reg writeEnable,      // active low
-output reg [(`PX_WIDTH_OUT-1):0] px0_out,
-output reg [(`PX_WIDTH_OUT-1):0] px1_out,
-output reg [(`PX_WIDTH_OUT-1):0] px2_out,
-output reg [(`PX_WIDTH_OUT-1):0] px3_out,
+output reg [(`PX_OUT_WIDTH-1):0] px0_out,
+output reg [(`PX_OUT_WIDTH-1):0] px1_out,
+output reg [(`PX_OUT_WIDTH-1):0] px2_out,
+output reg [(`PX_OUT_WIDTH-1):0] px3_out,
 output reg clkAdc,
 output reg startAdcCapture,  // active low
 
@@ -182,23 +184,28 @@ reg [4:0] substate;
 
 reg writePending;
 
-wire [(`PX_WIDTH_OUT-1):0] px0_subtracted;
-wire [(`PX_WIDTH_OUT-1):0] px1_subtracted;
-wire [(`PX_WIDTH_OUT-1):0] px2_subtracted;
-wire [(`PX_WIDTH_OUT-1):0] px3_subtracted;
-wire [(`PX_WIDTH_OUT-1):0] px0_processed;
-wire [(`PX_WIDTH_OUT-1):0] px1_processed;
-wire [(`PX_WIDTH_OUT-1):0] px2_processed;
-wire [(`PX_WIDTH_OUT-1):0] px3_processed;
+wire [(`ADC_IN_RES-1):0] px0_intermediate;
+wire [(`ADC_IN_RES-1):0] px1_intermediate;
+wire [(`ADC_IN_RES-1):0] px2_intermediate;
+wire [(`ADC_IN_RES-1):0] px3_intermediate;
+wire [(`PX_OUT_WIDTH-1):0] px0_processed;
+wire [(`PX_OUT_WIDTH-1):0] px1_processed;
+wire [(`PX_OUT_WIDTH-1):0] px2_processed;
+wire [(`PX_OUT_WIDTH-1):0] px3_processed;
 
-assign px0_subtracted = px0_in - (`PX_SUBTRACT_VAL);
-assign px1_subtracted = px1_in - (`PX_SUBTRACT_VAL);
-assign px2_subtracted = px2_in - (`PX_SUBTRACT_VAL);
-assign px3_subtracted = px3_in - (`PX_SUBTRACT_VAL);
-assign px0_processed = px0_subtracted[(`PX_WIDTH_OUT-1):0];
-assign px1_processed = px1_subtracted[(`PX_WIDTH_OUT-1):0];
-assign px2_processed = px2_subtracted[(`PX_WIDTH_OUT-1):0];
-assign px3_processed = px3_subtracted[(`PX_WIDTH_OUT-1):0];
+assign px0_intermediate = (px0_in < px0_min_val) ? 0:(px0_in - px0_min_val);
+assign px1_intermediate = (px1_in < px1_min_val) ? 0:(px1_in - px1_min_val);
+assign px2_intermediate = (px2_in < px2_min_val) ? 0:(px2_in - px2_min_val);
+assign px3_intermediate = (px3_in < px3_min_val) ? 0:(px3_in - px3_min_val);
+//assign px0_processed = (px0_intermediate > `PX_MAX_VAL) ? `PX_MAX_VAL:px0_intermediate[(`PX_OUT_WIDTH-1):0];
+//assign px1_processed = (px1_intermediate > `PX_MAX_VAL) ? `PX_MAX_VAL:px1_intermediate[(`PX_OUT_WIDTH-1):0];
+//assign px2_processed = (px2_intermediate > `PX_MAX_VAL) ? `PX_MAX_VAL:px2_intermediate[(`PX_OUT_WIDTH-1):0];
+//assign px3_processed = (px3_intermediate > `PX_MAX_VAL) ? `PX_MAX_VAL:px3_intermediate[(`PX_OUT_WIDTH-1):0];
+//FIXME: wrap-past 0xFF can still occur!
+assign px0_processed = px0_intermediate[(`PX_OUT_WIDTH-1):0];
+assign px1_processed = px1_intermediate[(`PX_OUT_WIDTH-1):0];
+assign px2_processed = px2_intermediate[(`PX_OUT_WIDTH-1):0];
+assign px3_processed = px3_intermediate[(`PX_OUT_WIDTH-1):0];
 
 assign tp_stateout = ~state;
 assign tp_substateout = ~substate;

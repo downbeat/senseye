@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Sep 04 23:08:39 2013
+# Timing Report written on Tue Oct 22 18:03:08 2013
 #
 
 
@@ -28,9 +28,10 @@ Worst slack in design: 0.225
                                               Requested     Estimated     Requested     Estimated                 Clock        Clock              
 Starting Clock                                Frequency     Frequency     Period        Period        Slack       Type         Group              
 --------------------------------------------------------------------------------------------------------------------------------------------------
-FAB_CLK                                       40.0 MHz      40.0 MHz      25.000        25.024        -0.024      declared     clk_group_0        
+FAB_CLK                                       40.0 MHz      38.8 MHz      25.000        25.795        -0.795      declared     clk_group_0        
 FCLK                                          40.0 MHz      NA            25.000        NA            NA          declared     clk_group_0        
-stonyman_stonyman_0|clkAdc_inferred_clock     80.0 MHz      28.6 MHz      12.500        34.948        -22.448     inferred     Inferred_clkgroup_1
+stonyman_stonyman_1|clkAdc_inferred_clock     80.0 MHz      28.9 MHz      12.500        34.558        -22.058     inferred     Inferred_clkgroup_0
+stonyman|clkAdc_inferred_clock                80.0 MHz      32.5 MHz      12.500        30.799        -18.299     inferred     Inferred_clkgroup_1
 System                                        80.0 MHz      171.5 MHz     12.500        5.831         6.669       system       system_clkgroup    
 ==================================================================================================================================================
 
@@ -45,13 +46,18 @@ Starting                                   Ending                               
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System                                     System                                     |  0.000       0.225  |  No paths    -      |  No paths    -      |  No paths    -    
 System                                     FAB_CLK                                    |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-System                                     stonyman_stonyman_0|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                     stonyman_stonyman_1|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                     stonyman|clkAdc_inferred_clock             |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
 FAB_CLK                                    System                                     |  0.000       0.851  |  No paths    -      |  No paths    -      |  No paths    -    
 FAB_CLK                                    FAB_CLK                                    |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK                                    stonyman_stonyman_0|clkAdc_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-stonyman_stonyman_0|clkAdc_inferred_clock  System                                     |  0.000       1.409  |  No paths    -      |  No paths    -      |  No paths    -    
-stonyman_stonyman_0|clkAdc_inferred_clock  FAB_CLK                                    |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-stonyman_stonyman_0|clkAdc_inferred_clock  stonyman_stonyman_0|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                                    stonyman_stonyman_1|clkAdc_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK                                    stonyman|clkAdc_inferred_clock             |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman_stonyman_1|clkAdc_inferred_clock  System                                     |  0.000       1.409  |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman_stonyman_1|clkAdc_inferred_clock  FAB_CLK                                    |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman_stonyman_1|clkAdc_inferred_clock  stonyman_stonyman_1|clkAdc_inferred_clock  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman|clkAdc_inferred_clock             System                                     |  0.000       1.409  |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman|clkAdc_inferred_clock             FAB_CLK                                    |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+stonyman|clkAdc_inferred_clock             stonyman|clkAdc_inferred_clock             |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
 ============================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -143,7 +149,7 @@ MSS_CORE2_0.MSSINT_GPI_1             MSSINT     A        In      -         0.851
 
 
 ====================================
-Detailed Report for Clock: stonyman_stonyman_0|clkAdc_inferred_clock
+Detailed Report for Clock: stonyman_stonyman_1|clkAdc_inferred_clock
 ====================================
 
 
@@ -155,8 +161,7 @@ Starting Points with Worst Slack
 Instance                      Reference                                     Type         Pin     Net                     Time        Slack
                               Clock                                                                                                       
 ------------------------------------------------------------------------------------------------------------------------------------------
-imaging_0.stonyman_1.busy     stonyman_stonyman_0|clkAdc_inferred_clock     DFN1E1P0     Q       imaging_0_cam1_busy     0.580       1.764
-imaging_0.stonyman_0.busy     stonyman_stonyman_0|clkAdc_inferred_clock     DFN1E1P0     Q       TP_BUSY                 0.580       1.764
+imaging_0.stonyman_1.busy     stonyman_stonyman_1|clkAdc_inferred_clock     DFN1E1P0     Q       imaging_0_cam1_busy     0.580       1.764
 ==========================================================================================================================================
 
 
@@ -167,8 +172,7 @@ Ending Points with Worst Slack
 Instance                     Reference                                     Type       Pin     Net                     Time         Slack
                              Clock                                                                                                      
 ----------------------------------------------------------------------------------------------------------------------------------------
-MSS_CORE2_0.MSSINT_GPI_0     stonyman_stonyman_0|clkAdc_inferred_clock     MSSINT     A       TP_BUSY                 0.000        1.409
-MSS_CORE2_0.MSSINT_GPI_2     stonyman_stonyman_0|clkAdc_inferred_clock     MSSINT     A       imaging_0_cam1_busy     0.000        1.409
+MSS_CORE2_0.MSSINT_GPI_2     stonyman_stonyman_1|clkAdc_inferred_clock     MSSINT     A       imaging_0_cam1_busy     0.000        1.409
 ========================================================================================================================================
 
 
@@ -189,7 +193,7 @@ Path information for path number 1:
     Number of logic level(s):                0
     Starting point:                          imaging_0.stonyman_1.busy / Q
     Ending point:                            MSS_CORE2_0.MSSINT_GPI_2 / A
-    The start point is clocked by            stonyman_stonyman_0|clkAdc_inferred_clock [rising] on pin CLK
+    The start point is clocked by            stonyman_stonyman_1|clkAdc_inferred_clock [rising] on pin CLK
     The end   point is clocked by            System [rising]
 
 Instance / Net                             Pin      Pin               Arrival     No. of    
@@ -198,6 +202,65 @@ Name                          Type         Name     Dir     Delay     Time      
 imaging_0.stonyman_1.busy     DFN1E1P0     Q        Out     0.580     0.580       -         
 imaging_0_cam1_busy           Net          -        -       0.829     -           4         
 MSS_CORE2_0.MSSINT_GPI_2      MSSINT       A        In      -         1.409       -         
+============================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: stonyman|clkAdc_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                              Starting                                                            Arrival          
+Instance                      Reference                          Type         Pin     Net         Time        Slack
+                              Clock                                                                                
+-------------------------------------------------------------------------------------------------------------------
+imaging_0.stonyman_0.busy     stonyman|clkAdc_inferred_clock     DFN1E1P0     Q       TP_BUSY     0.580       1.764
+===================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                             Starting                                                          Required          
+Instance                     Reference                          Type       Pin     Net         Time         Slack
+                             Clock                                                                               
+-----------------------------------------------------------------------------------------------------------------
+MSS_CORE2_0.MSSINT_GPI_0     stonyman|clkAdc_inferred_clock     MSSINT     A       TP_BUSY     0.000        1.409
+=================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.409
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 1.409
+
+    Number of logic level(s):                0
+    Starting point:                          imaging_0.stonyman_0.busy / Q
+    Ending point:                            MSS_CORE2_0.MSSINT_GPI_0 / A
+    The start point is clocked by            stonyman|clkAdc_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            System [rising]
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+imaging_0.stonyman_0.busy     DFN1E1P0     Q        Out     0.580     0.580       -         
+TP_BUSY                       Net          -        -       0.829     -           4         
+MSS_CORE2_0.MSSINT_GPI_0      MSSINT       A        In      -         1.409       -         
 ============================================================================================
 
 

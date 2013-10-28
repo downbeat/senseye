@@ -67,7 +67,7 @@ static void terminate(int xx);
 //
 int main(int argc, char** argv)
 {
-   int ii,jj,xx,yy;
+   int ii,jj;
    char cc;
    char indat[256*1024];    // huge because I am a lazy man
    char *indatloc;
@@ -78,13 +78,8 @@ int main(int argc, char** argv)
 
    IplImage *frame, *framescaledup;
    uchar *frameloc;
-   uchar framevalmin, framevalmax;
    IplImage *frame2, *frame2scaledup;
-   uchar *frame2loc;
-   uchar frame2valmin, frame2valmax;
    IplImage *frame3, *frame3scaledup;
-   uchar *frame3loc;
-   uchar frame3valmin, frame3valmax;
 
    // double wide!
    IplImage *framedouble, *framedoublescaledup;
@@ -93,8 +88,6 @@ int main(int argc, char** argv)
    // triple wide!
    IplImage *frametrip, *frametripscaledup;
    uchar *frametriploc1, *frametriploc2, *frametriploc3;
-
-   IplImage *gridoverlay;
 
    struct timespec time, timeprevious;
    double fpsinstant;
@@ -203,11 +196,7 @@ int main(int argc, char** argv)
    frametrip = cvCreateImage(cvSize(FRAME_X_Y*3,FRAME_X_Y), IPL_DEPTH_8U, 1);
    frametripscaledup = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*3,
                                              FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 1);
-   gridoverlay = cvCreateImage(cvSize( FRAME_X_Y*SCALINGVAL*2,
-                                       FRAME_X_Y*SCALINGVAL ), IPL_DEPTH_8U, 3);
    // appease the compiler
-   frame2loc = 0;
-   frame3loc = 0;
    framedoubleloc1 = framedoubleloc2 = 0;
    frametriploc1 = frametriploc2 = frametriploc3 = 0;
 
@@ -310,7 +299,16 @@ int main(int argc, char** argv)
       else
       {
          assert(1==numcams);
-         // not actually implemented!
+         for(ii=0; ii<FRAME_X_Y; ++ii)
+         {
+            frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
+            for(jj=0; jj<FRAME_X_Y; ++jj)
+            {
+               frameloc[jj]=(unsigned char)indat[ii*FRAME_X_Y+jj];
+            }
+         }
+         // create scaled up image
+         cvResize(frame,framescaledup,CV_INTER_LINEAR);
       }
 
       // display picture on screen

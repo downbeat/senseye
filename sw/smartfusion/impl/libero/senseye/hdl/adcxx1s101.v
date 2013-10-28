@@ -20,7 +20,7 @@
 
 `define CLK_FREQ             (20000000)  // 20MHz -> 1Msps operation
 // alter this to choose the ADC resolution
-`define ADC_RES              (8)         // bits
+`define ADC_RES              (12)        // bits
 
 // The entire TI ADCXXS101 family requires 16 cycles to perform a conversion,
 // plus 4 cycles of "quiet time" before a new conversion can be initiated.
@@ -30,10 +30,7 @@
 `define HOLD_TIME_CYCLES     (3)
 `define QUIET_TIME_CYCLES    (4)
 
-// FIXME: currently using last 8 bits of 12-bit ADC, so this code is wonky
-`define TICKS_WAIT_LEADING   (7) // FIXME: currently ignoring first 4 bits of 12-bit ADC
-                                 // to emulate an 8-bit ADC
-//`define TICKS_WAIT_LEADING   (`HOLD_TIME_CYCLES)
+`define TICKS_WAIT_LEADING   (`HOLD_TIME_CYCLES)
 `define TICKS_WAIT_TRAILING  (`CONVERSION_CYCLES-`TICKS_WAIT_LEADING-`ADC_RES)
 `define TICKS_WAIT_QUIET     (`QUIET_TIME_CYCLES)
 

@@ -34,23 +34,23 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Wed Sep 04 23:13:17 2013
+Timing-driven Placer Started: Tue Oct 22 18:03:40 2013
 
-Placer Finished: Wed Sep 04 23:14:23 2013
-Total Placer CPU Time:     00:01:06
+Placer Finished: Tue Oct 22 18:04:50 2013
+Total Placer CPU Time:     00:01:10
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: TOPLEVEL                        Started: Wed Sep 04 23:14:31 2013
+Design: TOPLEVEL                        Started: Tue Oct 22 18:05:00 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: TOPLEVEL                        
-Finished: Wed Sep 04 23:15:05 2013
+Finished: Tue Oct 22 18:05:34 2013
 Total CPU Time:     00:00:34            Total Elapsed Time: 00:00:34
                         o - o - o - o - o - o
 
@@ -59,7 +59,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:02:01 )
+The Layout command succeeded ( 00:02:05 )
 Wrote status report to file: TOPLEVEL_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -68,14 +68,14 @@ Wrote globalnet report to file: TOPLEVEL_globalnet_report.txt
 The Report command succeeded ( 00:00:00 )
 Wrote globalusage report to file: TOPLEVEL_globalusage_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote iobank report to file: TOPLEVEL_iobank_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Design saved to file
 Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\designer\impl1\TOPLEVEL\
 .adb.
 
-The Execute Script command succeeded ( 00:02:07 )
+The Execute Script command succeeded ( 00:02:14 )
 Design closed.
 

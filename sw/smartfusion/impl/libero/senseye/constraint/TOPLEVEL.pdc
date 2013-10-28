@@ -8,7 +8,7 @@
 
 # Family: SmartFusion , Die: A2F500M3G , Package: 484 FBGA , Speed grade: STD 
 
-# Date generated: Wed Sep 04 23:12:58 2013 
+# Date generated: Tue Oct 22 17:57:10 2013 
 
 
 #
@@ -42,14 +42,13 @@ set_io UART_0_RXD -iostd LVTTL -RES_PULL None -SCHMITT_TRIGGER Off -REGISTER No 
 set_io UART_0_TXD -iostd LVTTL -OUT_DRIVE 8 -SLEW High -RES_PULL None -SKEW Off -REGISTER No -OUT_LOAD 35 -pinname Y22 -fixed yes
 set_io cam0_incp -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M6 -fixed yes
 set_io cam0_incv -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname P2 -fixed yes
-set_io cam0_inphi -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35
 set_io cam0_px_adc_cs -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M2 -fixed yes
 set_io cam0_px_adc_sclk -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname N2 -fixed yes
 set_io cam0_resp -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname N6 -fixed yes
 set_io cam0_resv -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname P1 -fixed yes
 set_io cam1_incp -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L3 -fixed yes
 set_io cam1_incv -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L1 -fixed yes
-set_io cam1_inphi -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35
+set_io cam1_inphi -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L5 -fixed yes
 set_io cam1_px_adc_cs -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L6 -fixed yes
 set_io cam1_px_adc_sclk -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname K4 -fixed yes
 set_io cam1_resp -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M4 -fixed yes
@@ -114,5 +113,4 @@ set_io px0_adc_din -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off
 set_io px1_adc_din -iostd LVTTL -REGISTER No -RES_PULL None -SCHMITT_TRIGGER Off -pinname K6 -fixed yes
 set_io rs485_de -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname M18 -fixed yes
 set_io rs485_nre -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L18 -fixed yes
-set_io tp_cam0_startcap -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname N3 -fixed yes
-set_io tp_cam1_startcap -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname L5 -fixed yes
+set_io tp_cam1_startcap -iostd LVTTL -REGISTER No -OUT_DRIVE 12 -SLEW High -RES_PULL None -SKEW Off -OUT_LOAD 35 -pinname N3 -fixed yes

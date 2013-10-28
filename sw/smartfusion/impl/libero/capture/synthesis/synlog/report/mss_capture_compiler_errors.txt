@@ -1,2 +1,0 @@
-@E: CS153 :"Z:\russ\private\research\insight\git\hw\impl\smartfusion\capture\hdl\stonyman.v":669:27:669:27|Can't mix blocking and non-blocking assignments to a variable
-

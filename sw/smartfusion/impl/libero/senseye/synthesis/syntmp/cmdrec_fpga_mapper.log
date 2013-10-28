@@ -1,16 +1,16 @@
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis  -part A2F500M3G  -package FBGA484  -grade Std   -globalthreshold 50 -maxfan 3000 -opcond COMWC     -report_path 0       -summaryfile Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\report\TOPLEVEL_fpga_mapper.xml -top_level_module  TOPLEVEL  -flow mapping  -mp 1 -prjfile  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\scratchproject.prs  -implementation synthesis -licensetype  synplifypro_actel  -oedif  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn  -freq 80.000  -tcl  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell_syn.sdc  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd  -sap  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap  -otap  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.tap  -omap  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.map  -devicelib  C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v  -sap  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap  -ologparam  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg  -osyn  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.srm  -prjdir  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\  -prjname  TOPLEVEL_syn  -log  Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_fpga_mapper.srr 
 rc:1 success:1
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\scratchproject.prs|o|1378343989|6437
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn|o|1378350519|3041952
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\scratchproject.prs|o|1382479339|6437
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.edn|o|1382479388|3016793
 Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\component\work\MSS_CORE2\mss_tshell_syn.sdc|i|1378348120|188
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|i|1378350496|321617
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1378350496|69744
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synwork\TOPLEVEL_premap.srd|i|1382479348|323560
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1382479348|69742
 Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.tap|o|0|0
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.map|o|1378350519|28
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.map|o|1382479389|28
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\lib\proasic\smartfusion.v|i|1340034016|72817
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1378350496|69744
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg|o|1378350519|3125
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.srm|o|1378350518|2388545
-Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_fpga_mapper.srr|o|1378350519|207962
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.sap|o|1382479348|69742
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\syntmp\TOPLEVEL.plg|o|1382479389|3845
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\TOPLEVEL.srm|o|1382479388|2381504
+Z:\russ\private\research\senseye\git\sw\smartfusion\impl\libero\senseye\synthesis\synlog\TOPLEVEL_fpga_mapper.srr|o|1382479389|288767
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin64\m_proasic.exe|i|1340204862|15745024
 C:\Microsemi\Libero_v10.1\Synopsys\synplify_F201203MSP1\bin\m_proasic.exe|i|1340204848|13099520
