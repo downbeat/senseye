@@ -173,8 +173,8 @@
 <wire x1="-7" y1="-0.4" x2="-7" y2="1.6" width="0.127" layer="51"/>
 <wire x1="-7" y1="1.6" x2="-5" y2="1.6" width="0.127" layer="51"/>
 <wire x1="-5" y1="1.6" x2="-5" y2="5" width="0.127" layer="51"/>
-<wire x1="2.05" y1="0" x2="3.45" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.45" y1="0" x2="-2.05" y2="0" width="0.127" layer="21"/>
+<wire x1="2.05" y1="0.4572" x2="3.45" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="-3.45" y1="0.4572" x2="-2.05" y2="0.4572" width="0.127" layer="21"/>
 <wire x1="0" y1="2.5" x2="0" y2="3.9" width="0.127" layer="21"/>
 <text x="-4.9982" y="5.222" size="1.016" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.0355" y="-8.5044" size="1.016" layer="27" font="vector">&gt;VALUE</text>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -385,9 +385,9 @@ reflow soldering</description>
 <smd name="1" x="-1.3" y="0.95" dx="0.8" dy="0.51" layer="1"/>
 <smd name="2" x="-1.3" y="0" dx="0.8" dy="0.51" layer="1"/>
 <smd name="3" x="-1.3" y="-0.95" dx="0.8" dy="0.51" layer="1"/>
-<text x="-1.524" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.524" y="2.413" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.524" y="-2.54" size="0.4064" layer="27">&gt;VALUE</text>
-<wire x1="-1" y1="1.935003125" x2="-1" y2="1.935" width="0.2032" layer="21"/>
+<circle x="-0.881" y="2.016" radius="0.2236" width="0.2032" layer="21"/>
 </package>
 <package name="STONYMAN_DEFAULT_LENS">
 <smd name="P$10" x="0" y="0" dx="4.63" dy="3.73" layer="1" rot="R90"/>
@@ -412,8 +412,8 @@ reflow soldering</description>
 <wire x1="-7" y1="-0.4" x2="-7" y2="1.6" width="0.127" layer="51"/>
 <wire x1="-7" y1="1.6" x2="-5" y2="1.6" width="0.127" layer="51"/>
 <wire x1="-5" y1="1.6" x2="-5" y2="5" width="0.127" layer="51"/>
-<wire x1="2.05" y1="0" x2="3.45" y2="0" width="0.127" layer="21"/>
-<wire x1="-3.45" y1="0" x2="-2.05" y2="0" width="0.127" layer="21"/>
+<wire x1="2.05" y1="0.4572" x2="3.45" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="-3.45" y1="0.4572" x2="-2.05" y2="0.4572" width="0.127" layer="21"/>
 <wire x1="0" y1="2.5" x2="0" y2="3.9" width="0.127" layer="21"/>
 <text x="-4.9982" y="5.222" size="1.016" layer="25" font="vector">&gt;NAME</text>
 <text x="-5.0355" y="-8.5044" size="1.016" layer="27" font="vector">&gt;VALUE</text>
