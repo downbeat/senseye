@@ -146,9 +146,9 @@
 <smd name="1" x="-1.3" y="0.95" dx="0.8" dy="0.51" layer="1"/>
 <smd name="2" x="-1.3" y="0" dx="0.8" dy="0.51" layer="1"/>
 <smd name="3" x="-1.3" y="-0.95" dx="0.8" dy="0.51" layer="1"/>
-<text x="-1.524" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.524" y="2.413" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.524" y="-2.54" size="0.4064" layer="27">&gt;VALUE</text>
-<wire x1="-1" y1="1.935003125" x2="-1" y2="1.935" width="0.2032" layer="21"/>
+<circle x="-0.881" y="2.016" radius="0.2236" width="0.2032" layer="21"/>
 </package>
 <package name="STONYMAN_DEFAULT_LENS">
 <smd name="P$10" x="0" y="0" dx="4.63" dy="3.73" layer="1" rot="R90"/>
@@ -6536,6 +6536,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,86.36,45.72,U1,VCC,V_STONY,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
