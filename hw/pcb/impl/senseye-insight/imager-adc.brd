@@ -29,15 +29,15 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -47,9 +47,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="14" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -1599,14 +1599,10 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <vertex x="15.0876" y="13.6398"/>
 <vertex x="15.0876" y="10.0584"/>
 <vertex x="12.9032" y="10.0584"/>
-<vertex x="12.9032" y="6.2484"/>
-<vertex x="11.3538" y="6.2484"/>
-<vertex x="11.3538" y="5.334"/>
-<vertex x="7.2644" y="5.334"/>
-<vertex x="7.2644" y="1.8034"/>
-<vertex x="11.4808" y="1.8034"/>
-<vertex x="11.4808" y="6.1214"/>
-<vertex x="12.9032" y="6.1214"/>
+<vertex x="12.9032" y="5.7404"/>
+<vertex x="8.4836" y="5.7404"/>
+<vertex x="8.4836" y="5.3086"/>
+<vertex x="12.9032" y="5.3086"/>
 <vertex x="12.9032" y="-0.1778"/>
 <vertex x="1.9558" y="-0.1778"/>
 <vertex x="1.9558" y="10.16"/>
@@ -1622,14 +1618,10 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <vertex x="15.0876" y="13.6398"/>
 <vertex x="15.0876" y="10.0584"/>
 <vertex x="12.9032" y="10.0584"/>
-<vertex x="12.9032" y="6.2484"/>
-<vertex x="11.3538" y="6.2484"/>
-<vertex x="11.3538" y="5.334"/>
-<vertex x="7.2898" y="5.334"/>
-<vertex x="7.2898" y="1.8034"/>
-<vertex x="11.4808" y="1.8034"/>
-<vertex x="11.4808" y="6.1214"/>
-<vertex x="12.9032" y="6.1214"/>
+<vertex x="12.9286" y="5.7404"/>
+<vertex x="8.4836" y="5.7404"/>
+<vertex x="8.4836" y="5.3086"/>
+<vertex x="12.9032" y="5.3086"/>
 <vertex x="12.9032" y="-0.1778"/>
 <vertex x="1.9558" y="-0.1778"/>
 <vertex x="1.9558" y="10.16"/>
@@ -1637,15 +1629,21 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <vertex x="-0.1524" y="13.5636"/>
 <vertex x="1.9812" y="13.5636"/>
 </polygon>
-<via x="11.7856" y="5.969" extent="1-16" drill="0.3556" diameter="0.254"/>
 <contactref element="C5" pad="2"/>
 <wire x1="3.0734" y1="5.715" x2="2.7432" y2="6.0452" width="0.2032" layer="16"/>
 <wire x1="2.7432" y1="6.0452" x2="2.7432" y2="10.668" width="0.2032" layer="16"/>
 <contactref element="U2" pad="2"/>
 <contactref element="C3" pad="2"/>
 <contactref element="C4" pad="2"/>
-<wire x1="11.7856" y1="5.969" x2="12.1412" y2="6.3246" width="0.2032" layer="1"/>
-<wire x1="12.1412" y1="6.3246" x2="12.1412" y2="9.144" width="0.2032" layer="1"/>
+<wire x1="12.1412" y1="6.9342" x2="12.1412" y2="9.144" width="0.2032" layer="1"/>
+<via x="11.5062" y="6.5532" extent="1-16" drill="0.3556"/>
+<via x="11.8618" y="5.0292" extent="1-16" drill="0.3556"/>
+<wire x1="9.4234" y1="5.6642" x2="9.4234" y2="5.2324" width="0.508" layer="1"/>
+<wire x1="9.4234" y1="5.6642" x2="9.4234" y2="5.3848" width="0.508" layer="16"/>
+<wire x1="9.4234" y1="5.715" x2="9.4234" y2="5.6642" width="0.254" layer="16"/>
+<wire x1="11.5062" y1="6.5532" x2="10.7188" y2="5.7658" width="0.254" layer="16"/>
+<wire x1="10.7188" y1="5.7658" x2="9.4234" y2="5.7658" width="0.254" layer="16"/>
+<wire x1="9.4234" y1="5.7658" x2="9.4234" y2="5.715" width="0.254" layer="16"/>
 </signal>
 <signal name="V_STONY">
 <contactref element="U1" pad="P$2"/>
