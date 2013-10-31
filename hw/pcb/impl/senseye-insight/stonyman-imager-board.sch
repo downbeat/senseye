@@ -6319,15 +6319,32 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </class>
 </classes>
 <parts>
-<part name="U2" library="senseye" deviceset="TI_ADCXX1S101" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="1nF"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF"/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="0 / UNPOP"/>
+<part name="U2" library="senseye" deviceset="TI_ADCXX1S101" device="">
+<attribute name="DIGIKEY" value="ADC121S101CIMF/NOPBDKR-ND"/>
+</part>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="1nF">
+<attribute name="DIGIKEY" value="1276-1916-2-ND"/>
+</part>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF">
+<attribute name="DIGIKEY" value="1276-1012-2-ND"/>
+</part>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="0.1uF">
+<attribute name="DIGIKEY" value="1276-1012-2-ND"/>
+</part>
+<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="1uF">
+<attribute name="DIGIKEY" value="1276-1243-2-ND"/>
+</part>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="0 / UNPOP">
+<attribute name="DIGIKEY" value="1276-3510-6-ND"/>
+</part>
 <part name="U1" library="senseye" deviceset="STONYMAN" device="DEFAULT_LENS_MOUNT"/>
-<part name="J1" library="senseye" deviceset="HEADER_12PIN" device="2X6_NOSILK" value="HEADER_12PIN2X6_NOSILK"/>
-<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="OPTIONAL: 10pF-1nF"/>
+<part name="J1" library="senseye" deviceset="HEADER_12PIN" device="2X6_NOSILK" value="HEADER_12PIN2X6_NOSILK">
+<attribute name="DIGIKEY" value="S9015E-06-ND"/>
+<attribute name="DIGIKEY-ALT" value="609-3713-ND"/>
+</part>
+<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="OPTIONAL: 10pF-1nF">
+<attribute name="DIGIKEY" value="1276-1187-6-ND"/>
+</part>
 <part name="U$1" library="logos" deviceset="UMICH_SOLID" device="_SMALL"/>
 </parts>
 <sheets>
@@ -6335,15 +6352,32 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <plain>
 </plain>
 <instances>
-<instance part="U2" gate="G$1" x="58.42" y="0"/>
-<instance part="C1" gate="G$1" x="66.04" y="17.78" rot="R90"/>
-<instance part="C2" gate="G$1" x="76.2" y="17.78" rot="R90"/>
-<instance part="C3" gate="G$1" x="43.18" y="17.78" rot="R90"/>
-<instance part="C4" gate="G$1" x="53.34" y="17.78" rot="R90"/>
-<instance part="R1" gate="G$1" x="43.18" y="40.64"/>
+<instance part="U2" gate="G$1" x="58.42" y="0">
+<attribute name="DIGIKEY" x="58.42" y="0" size="1.016" layer="96" align="bottom-center" display="off"/>
+</instance>
+<instance part="C1" gate="G$1" x="66.04" y="17.78" rot="R90">
+<attribute name="DIGIKEY" x="66.04" y="17.78" size="1.016" layer="96" rot="R90" align="bottom-center" display="off"/>
+</instance>
+<instance part="C2" gate="G$1" x="76.2" y="17.78" rot="R90">
+<attribute name="DIGIKEY" x="76.2" y="17.78" size="1.016" layer="96" rot="R90" align="bottom-center" display="off"/>
+</instance>
+<instance part="C3" gate="G$1" x="43.18" y="17.78" rot="R90">
+<attribute name="DIGIKEY" x="43.18" y="17.78" size="1.016" layer="96" rot="R90" align="bottom-center" display="off"/>
+</instance>
+<instance part="C4" gate="G$1" x="53.34" y="17.78" rot="R90">
+<attribute name="DIGIKEY" x="53.34" y="17.78" size="1.016" layer="96" rot="R90" align="bottom-center" display="off"/>
+</instance>
+<instance part="R1" gate="G$1" x="43.18" y="40.64">
+<attribute name="DIGIKEY" x="43.18" y="40.64" size="1.016" layer="96" align="bottom-center" display="off"/>
+</instance>
 <instance part="U1" gate="G$1" x="104.14" y="35.56"/>
-<instance part="J1" gate="G$1" x="106.68" y="6.35"/>
-<instance part="C5" gate="G$1" x="66.04" y="30.48" rot="R90"/>
+<instance part="J1" gate="G$1" x="106.68" y="6.35">
+<attribute name="DIGIKEY" x="106.68" y="6.35" size="1.016" layer="96" align="bottom-center" display="off"/>
+<attribute name="DIGIKEY-ALT" x="106.68" y="6.35" size="1.016" layer="96" align="bottom-center" display="off"/>
+</instance>
+<instance part="C5" gate="G$1" x="66.04" y="30.48" rot="R90">
+<attribute name="DIGIKEY" x="66.04" y="30.48" size="1.016" layer="96" rot="R90" align="bottom-center" display="off"/>
+</instance>
 <instance part="U$1" gate="G$1" x="25.4" y="48.26"/>
 </instances>
 <busses>
@@ -6533,6 +6567,16 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="76.2" y1="2.54" x2="73.66" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
+</nets>
+</sheet>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
 </nets>
 </sheet>
 </sheets>
