@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROJNAME=stonyman-imager-board
+PROJNAME=imager-adc
 
 for ii in `ls -1 *.ps`; do ps2pdf $ii; done
 pdfjoin ${PROJNAME}_schematic.pdf \
