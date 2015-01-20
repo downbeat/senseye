@@ -1,7 +1,7 @@
 # Russ Bielawski
 # 2012-11-15
 
-NAME=glassescapstream
+NAME=glassescapture
 
 CC=gcc
 CFLAGS=-O2 -Wall -g
