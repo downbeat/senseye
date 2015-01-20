@@ -1,4 +1,0 @@
-*.ko
-*.mod.c
-*.gdb
-.*.cmd
