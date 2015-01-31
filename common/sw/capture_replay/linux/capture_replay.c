@@ -1,8 +1,9 @@
 //**************************************************************************************************
-// glassesreplaystream.c
+// capture_replay.c
 //
 // Russ Bielawski
-// 2012-11-12: created
+// 2012-11-12: Created.
+// 2015-01-28: Renamed to capture_replay.
 //**************************************************************************************************
 
 
@@ -17,8 +18,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
-// opencv sources
+ 
+// OpenCV sources
 #include "cv.h"
 #include "highgui.h"
 
@@ -231,7 +232,6 @@ int main(int argc, char** argv)
 //
 static void printusage(char *progname)
 {
-
    fprintf(stderr, "Usage: %s [-i PATH]\n", progname);
 }
 
