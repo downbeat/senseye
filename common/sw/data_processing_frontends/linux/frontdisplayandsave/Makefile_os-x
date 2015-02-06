@@ -3,7 +3,7 @@
 # 2012-11-15: Creation.
 # 2015-01-31: Modified for OS X.
 
-NAME=capture_replay
+NAME=frontdisplayandsave
 
 CC=gcc
 CFLAGS=-O2 -Wall -g
@@ -13,7 +13,7 @@ OPENCV_INC=/opt/local/include/opencv
 OPENCV_LIBDIR=/opt/local/lib
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
 
-LIBGLASSES_INC=../../libglasses
+LIBGLASSES_INC=../../../libglasses
 LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
 
 # Russ [2015-01-31]: Added /opt/local/incude for MacPorts intalls (OS X).

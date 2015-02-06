@@ -1,5 +1,6 @@
 # Russ Bielawski
-# 2012-11-15
+# The University of Michigan
+# 2012-11-15: Creation.
 
 NAME=capture_replay
 
@@ -17,7 +18,6 @@ INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)
 BIN=$(NAME)
 
-#LIBDIR=-L/usr/local/lib
 LIBS=$(OPENCV_LIBS)
 
 
