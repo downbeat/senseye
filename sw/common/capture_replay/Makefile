@@ -11,7 +11,7 @@ CFLAGS=-O2 -Wall -g
 OPENCV_INC=/usr/local/include/opencv
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
 
-LIBGLASSES_INC=../../libglasses
+LIBGLASSES_INC=../libglasses
 LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
 
 INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC)
