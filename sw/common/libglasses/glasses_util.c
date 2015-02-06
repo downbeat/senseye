@@ -1,144 +1,213 @@
 //**************************************************************************************************
-// glasses.c
+// Copyright 2015 Russ Bielawski
+// Copyright 2012 University of Michigan
 //
-// Russ Bielawski
-// 2012-11-15: created
+//
+// glasses_util.c
+//
+// SensEye glasses C library utility functions.
+//
+//
+// Generic utility functions which are used in many places by SensEye C or C++ applications.
+//
+//
+// AUTHOR        FULL NAME             EMAIL ADDRESS
+// Russ          Russ Bielawski        russ@bielawski.org
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 1.00 00   2015-02-02  Russ          Created (functionality split from glasses.h/c).
+//                                     Made more robust and secure.
 //**************************************************************************************************
 
 
 //**************************************************************************************************
-// includes
+// Includes
 //
-#include <glasses.h>
+#include "glasses_util.h"
 #include <stdio.h>
 #include <string.h>
 #include <termios.h>
-#include <assert.h>
 #include <unistd.h>
 #include <sys/stat.h>
-#include <sys/types.h>
+#include <errno.h>
 
 
 //**************************************************************************************************
-// function definitions
+// Function definitions
 //
 
+//******************************************************************************
+// gutil_read_char
+// Read one char from the (device) file.
 //
-// readchar: read one char from the (device) file
-//
-char readchar(FILE *infile)
+// Returns the read character.  Returns NULL char on error.
+//******************************************************************************
+char gutil_read_char(FILE *infile)
 {
    unsigned readcnt;
    char cc[1];
 
-   do
+   cc[0] = '\0';
+   if(NULL != infile)
    {
-      readcnt = fread(cc,1,1,infile);
-   } while(1>readcnt);
+      do
+      {
+         readcnt = fread(cc,1,1,infile);
+      } while(1>readcnt);
+   }
+
    return cc[0];
 }
 
+//******************************************************************************
+// gutil_read_until
+// Reading until the desired char is read from the (device) file.
 //
-// readuntilchar: keep reading until the desired char is read from the (device) file
-//
-void readuntilchar(FILE *infile, char desiredch)
+// Returns 0 on success and -1 on error.
+//******************************************************************************
+int gutil_read_until(FILE *infile, char desiredch)
 {
+   int rc;
    unsigned readcnt;
    char cc[1];
-   cc[0] = '\0';
 
-   do
+   rc = -1;
+   if(NULL != infile)
    {
-      readcnt = fread(cc,1,1,infile);
-   } while((1 > readcnt) || (desiredch != cc[0]));
-   // TODO: does this need to assert?
-   assert(desiredch == cc[0]);
+      rc = 0;
+      cc[0] = '\0';
+      do
+      {
+         readcnt = fread(cc,1,1,infile);
+      } while((1 > readcnt) || (desiredch != cc[0]));
+   }
+
+   return rc;
 }
 
+//******************************************************************************
+// gutil_mkdir_p
+// Emulates mkdir -p.  Maximum path length is MAX_LEN_PATH.
 //
-// mkdir_p: like mkdir -p
-//
-void mkdir_p(const char *path)
+// Returns 0 on success and -1 on error.
+//******************************************************************************
+int gutil_mkdir_p(const char *path, mode_t mode)
 {
+   int rc;
    unsigned ii;
-   char tmppath[PATH_MAX_LEN];
+   unsigned path_length;
+   char temp_path[MAX_LEN_PATH+1];
 
-   for(ii=0; ii<=strlen(path); ++ii)
+   rc = -1;
+
+   if(NULL != path)
    {
-      if (path[ii] == '/' || path[ii] == '\0') {
-         strncpy(tmppath, path, ii);
-         tmppath[ii] = '\0';
-         mkdir(tmppath, 0755);
+      path_length = strnlen(path, MAX_LEN_PATH+1);
+      if(path_length <= MAX_LEN_PATH)
+      {
+         rc = 0;
+         for(ii=0; ii<=path_length; ++ii)
+         {
+            if(('/' == path[ii]) || ('\0' == path[ii]))
+            {
+               strncpy(temp_path, path, ii);
+               temp_path[ii] = '\0';
+               mkdir(temp_path, mode);
+            }
+         }
       }
    }
+
+   return rc;
 }
 
+
+//******************************************************************************
+// gutil_get_deepest_dir_name
+// Get the deepest directory name in the specified path.  Length of the deepest
+// directory name cannot be longer than MAX_LEN_PATH.  Neither can the length of
+// the pathname.  If the deepest directory name is longer than maxlen, the first
+// maxlen charaters are placed into deepest and an error is returned.
 //
-// getdeepestdirname: get the deepest directory name in the specified path
-//
-void getdeepestdirname(const char *path, char *deepestdirname)
+// Returns 0 on success and -1 on error.
+//******************************************************************************
+int gutil_get_deepest_dir_name(const char *path, char *deepest, size_t maxlen)
 {
+   int rc;
    int ii;
-   unsigned int suffixlen, prefixlen;
-   unsigned int flagComputeSuffixlenDone, flagComputePrefixlenDone;
+   unsigned path_length;
+   unsigned prefix_length;
+   unsigned copy_length;
 
-   // dear God please forgive me for this travesty
+   rc = -1;
 
-
-   suffixlen=0;
-   prefixlen=strlen(path);
-   flagComputeSuffixlenDone=flagComputePrefixlenDone=0;
-   for(ii=strlen(path)-1; 0<=ii; --ii)
+   if((NULL != path) && (NULL != deepest) && (maxlen <= MAX_LEN_PATH))
    {
-      if(0==flagComputeSuffixlenDone)
+      path_length = strnlen(path, MAX_LEN_PATH+1);
+      if(path_length <= MAX_LEN_PATH)
       {
-         if(('/' != path[ii]) && ('\0' != path[ii]))
+         // Ignore trailing slashes (/).
+         while((path_length > 0) && ('/' == path[path_length-1]))
          {
-            flagComputeSuffixlenDone = 1;
+            --path_length;
          }
-         else
+         // Find prefix length.
+         prefix_length = path_length;
+         for(ii = path_length-1; (ii >= 0) && ('/' != path[ii]); --ii)
          {
-            ++suffixlen;
+            --prefix_length;
          }
-      }
-      if(0==flagComputePrefixlenDone)
-      {
-         --prefixlen;
-         if((0 != flagComputeSuffixlenDone) && (('/' == path[ii]) || ('\0' == path[ii])))
+
+         copy_length = (maxlen < (path_length-prefix_length)) ? maxlen : (path_length-prefix_length);
+         strncpy(deepest, (char*)(path+prefix_length), copy_length);
+         // Fill remainder of deepest with null charaters.
+         for(ii = copy_length; ii < maxlen; ++ii)
          {
-            flagComputePrefixlenDone = 1;
-            break;
+            deepest[ii] = '\0';
+         }
+
+         // Set return code.
+         if(maxlen >= (path_length-prefix_length))
+         {
+            rc = 0;
          }
       }
    }
-   if((0 <= ii) || ('/' == path[0]))
-   {
-      ++prefixlen;
-   }
 
-   strncpy(deepestdirname,(char*)(path+prefixlen),strlen(path)-prefixlen-suffixlen);
-   deepestdirname[strlen(path)-prefixlen-suffixlen] = '\0';
+   return rc;
 }
 
+//******************************************************************************
+// gutil_peek
+// Peek at the next character in the buffer.
 //
-// peek: peek at the next character in the buffer
-//
-int peek(FILE *stream)
+// Returns the read character.  Returns NULL char on error.
+//******************************************************************************
+char gutil_peek(FILE *stream)
 {
    int cc;
 
-   cc = fgetc(stream);
-   ungetc(cc,stream);
+   cc = '\0';
+
+   if(NULL != stream)
+   {
+      cc = fgetc(stream);
+      ungetc(cc,stream);
+   }
 
    return cc;
 }
 
+//******************************************************************************
+// gutil_getch
+// Grab a single char without waiting for the user to press ENTER
 //
-// getch: grab a single char without waiting for the user to press ENTER
+// Russ [2012-11-15]: Taken from:
+// http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
 //
-// russ: taken from http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
-// ! LINUX ONLY (sorry, lazy)
-char getch() {
+// Returns the read character.  Returns NULL char on error.
+//******************************************************************************
+char gutil_getch() {
    char buf = 0;
    struct termios old = {0};
    if (tcgetattr(0, &old) < 0)
@@ -158,43 +227,144 @@ char getch() {
    return (buf);
 }
 
+
+//****************************************************************************** 
+// gutil_print_usage
+// Prints a usage string for the program.
 //
-// cleanupcamconn: just cleanup the camera's connection
+// Expects to take argv[0] and, therefore, sanitizes the input before usage. 
 //
-void cleanupcamconn(FILE *outfile)
+// Returns 0 on success and -1 on error.
+//****************************************************************************** 
+int gutil_print_usage(FILE *ostream, const char *progname, const char *options)
 {
-   fputc((char)SYMBOL_SOF,outfile);
-   fputc((char)OPCODE_STOP_CAPTURE,outfile);
-   fflush(outfile);
-}
+   int rc;
+   char local_progname[MAX_LEN_PROGNAME];
+   char local_options[MAX_LEN_CLI_OPTIONS_TEXT];
 
-//
-// glassesReadFrame: read a FRAME frame of length len into buf
-//
-char glassesReadFrame(FILE *infile, char buf[], unsigned len)
-{
-   char opcode;
-   char *bufloc;
-   unsigned readlen;
-   unsigned readlenTotal;
+   rc = -1;
+   local_progname[0] = '\0';
+   local_options[0] = '\0';
 
-
-   readuntilchar(infile,SYMBOL_SOF);
-   opcode = readchar(infile);
-   if(OPCODE_FRAME == (unsigned char)opcode)
+   if(NULL != ostream)
    {
-      readlenTotal=0;
-      bufloc=buf;
-      while(len > readlenTotal)
+      rc = 0;
+
+      // Sanitize (truncate) the inputs.
+      if(NULL != progname)
       {
-         readlen = fread(bufloc,1,len-readlenTotal,infile);
-         readlenTotal+=readlen;
-         bufloc+=readlen;
+         strncpy(local_progname, progname, MAX_LEN_PROGNAME);
       }
-      *bufloc = '\0';
+      if(NULL != options)
+      {
+         strncpy(local_options, options, MAX_LEN_CLI_OPTIONS_TEXT);
+      }
+      fprintf(ostream, "Usage: %s %s\n", local_progname, local_options);
    }
 
-
-   return opcode;
+   return rc;
 }
 
+//******************************************************************************
+// gutil_print_help
+// Prints the help text for the calling program.
+//
+// Expects to take argv[0] and expects that ...print_usage sanitizes it.
+//
+// help_text is a a block of text which might contain newline charaters.  It is
+// truncated to MAX_LEN_HELP_TEXT.
+//
+// Returns 0 on success and -1 on error.
+//******************************************************************************
+int gutil_print_help(FILE *ostream, const char *progname, const char *options,
+                    const char *help_text)
+{
+   int rc;
+   char local_help_text[MAX_LEN_HELP_TEXT];
+
+   rc = -1;
+
+   if(NULL != ostream)
+   {
+      if(0 == gutil_print_usage(ostream, progname, options))
+      {
+         rc = 0;
+
+         if(NULL != help_text)
+         {
+            // Sanitize (truncate) the inputs.
+            strncpy(local_help_text, help_text, MAX_LEN_HELP_TEXT);
+            fprintf(ostream, "%s", local_help_text);
+         }
+      }
+   }
+
+   return rc;
+}
+
+//******************************************************************************
+// gutil_parse_args
+// Parse command-line input (CLI).
+//
+// Passes argc and argv to getopt without any processing.
+//
+// Returns 0 on success and -1 on error.
+//******************************************************************************
+int gutil_parse_args(int argc, char **argv, struct cli_arg *cli, unsigned number_of_cli_args)
+{
+   unsigned ii;
+   char cc;
+   unsigned flag_found;
+   extern char *optarg;
+   char options_string[2*MAX_CLI_ARGUMENTS + 1];
+   unsigned options_string_length;
+
+   errno = 0;
+
+   if((NULL == cli) || (MAX_CLI_ARGUMENTS < number_of_cli_args))
+   {
+      errno = -1;
+   }
+   else
+   {
+      // Populate the options string.
+      options_string_length = 0;
+      for(ii = 0; ii < number_of_cli_args; ++ii)
+      {
+         options_string[options_string_length++] = cli[ii].flag;
+         if((CLI_ARG_TYPE_INTEGER == cli[ii].type) || (CLI_ARG_TYPE_STRING == cli[ii].type))
+         {
+            options_string[options_string_length++] = ':';
+         }
+      }
+      options_string[options_string_length] = '\0';
+
+      while(((cc = getopt(argc, argv, options_string)) != EOF) && (0 == errno))
+      {
+         flag_found = 0;
+         for(ii = 0; (ii < number_of_cli_args) && (0 == flag_found); ++ii)
+         {
+            if(cc == cli[ii].flag)
+            {
+               cli[ii].is_flag_set = 1;
+               flag_found = 1;
+               if((CLI_ARG_TYPE_INTEGER == cli[ii].type) || (CLI_ARG_TYPE_STRING == cli[ii].type))
+               {
+                  strncpy(cli[ii].argument, optarg, MAX_LEN_CLI_ARGUMENT);
+                  cli[ii].argument[MAX_LEN_CLI_ARGUMENT-1] = '\0';
+                  if(MAX_LEN_CLI_ARGUMENT < strnlen(optarg, MAX_LEN_CLI_ARGUMENT+1))
+                  {
+                     errno = ENAMETOOLONG;
+                  }
+               }
+            }
+         }
+         if(0 == flag_found)
+         {
+            errno = EINVAL;
+         }
+      }
+   }
+
+   return errno;
+}

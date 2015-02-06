@@ -1,51 +1,76 @@
-#ifndef GLASSES_H
-#define GLASSES_H
+#ifndef GLASSES_UTIL_H
+#define GLASSES_UTIL_H
 //**************************************************************************************************
-// glasses.h
+// Copyright 2015 Russ Bielawski
+// Copyright 2012 University of Michigan
 //
-// Russ Bielawski
-// 2012-11-15: created
+//
+// glasses_util.h
+//
+// SensEye glasses C library utility functions.
+//
+//
+// Generic utility functions which are used in many places by SensEye C or C++ applications.
+//
+//
+// AUTHOR        FULL NAME             EMAIL ADDRESS
+// Russ          Russ Bielawski        russ@bielawski.org
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 1.00 00   2015-02-02  Russ          Created (functionality split from glasses.h/c).
+//                                     Made more robust and secure.
 //**************************************************************************************************
 
 
 //**************************************************************************************************
-// includes
+// Includes
 //
 #include <stdio.h>
+#include <sys/stat.h>
 
 
 //**************************************************************************************************
-// defines / constants
+// Defines / constants
 //
+#define MAX_LEN_PATH                      (255)
+#define MAX_LEN_PROGNAME                  MAX_LEN_PATH
+#define MAX_LEN_CLI_OPTIONS_TEXT          (100)
+#define MAX_LEN_CLI_ARGUMENT              (255)
+#define MAX_LEN_HELP_TEXT                 (4096)
+#define MAX_CLI_ARGUMENTS                 (16)
+
+// Structure to store command-line interface (CLI) options.
 enum
 {
-   SYMBOL_SOF           = 0xFF,
-   SYMBOL_EXIT          = 0xFE,
-   OPCODE_START_CAPTURE = 0x01,
-   OPCODE_STOP_CAPTURE  = 0x02,
-   OPCODE_SINGLE_FRAME  = 0x04,
-   OPCODE_START_ACK     = 0x81,
-   OPCODE_STOP_ACK      = 0x82,
-   OPCODE_FRAME         = 0x84,
-   OPCODE_REQ_NUM_CAMS  = 0x21,
-   OPCODE_RESP_NUM_CAMS = 0xA1
+   CLI_ARG_TYPE_FLAG = 0,
+   CLI_ARG_TYPE_INTEGER,
+   CLI_ARG_TYPE_STRING
 };
 
-#define PATH_MAX_LEN  (255)
+struct cli_arg
+{
+   char      flag;
+   unsigned  type;
+   char      argument[MAX_LEN_CLI_ARGUMENT];
+   unsigned  is_flag_set;
+};
 
 
 //**************************************************************************************************
-// function prototypes
+// Function prototypes
 //
-char readchar(FILE *infile);
-void readuntilchar(FILE *infile, char desiredch);
-void mkdir_p(const char *path);
-void getdeepestdirname(const char *path, char *deepestdirname);
-int  peek();
-char getch();
-void cleanupcamconn(FILE *outfile);
-char glassesReadFrame(FILE *infile, char buf[], unsigned len);
+char  gutil_read_char             (FILE *infile);
+int   gutil_read_until            (FILE *infile, char desiredch);
+int   gutil_mkdir_p               (const char *path, mode_t mode);
+int   gutil_get_deepest_dir_name  (const char *path, char *deepest, size_t maxlen);
+char  gutil_peek                  (FILE *infile);
+char  gutil_getch                 (void);
+
+int   gutil_print_usage           (FILE *ostream, const char *progname, const char *options);
+int   gutil_print_help            (FILE *ostream, const char *progname, const char *options,
+                                   const char *help_text);
+int   gutil_parse_args            (int argc, char **argv, struct cli_arg *cli,
+                                   unsigned number_of_cli_args);
 
 
-#endif // GLASSES_H
-
+#endif // GLASSES_UTIL_H
