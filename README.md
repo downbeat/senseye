@@ -34,7 +34,7 @@ The data processing protocol is fine for exchanging image data between data proc
 
 #### PCs
 
-The non-embedded software was all written on and for a linux machine.  That said, OS X should support just about everything necessary to get the code running without major changes.  Non-*nix-based OS support (e.g. MS Windows), however, is less likely to ever happen.
+The non-embedded software was all written on and for linux.  All of the software seems to work on OS X (for example, with OpenCV installed with MacPorts).
 
 #### Smartphones
 
@@ -43,7 +43,3 @@ When SensEye was conceived, the smartphone was envisioned to be the powerful co-
 ## Funding
 
 SensEye is (was) an NSF funded research project under grant #.........
-
-## License
-
-The SensEye source code will be released under and open-source license (most likely GPL).  As I am cleaning up the repository, I will add the necessary headers and files to comply with whatever license is chosen.
