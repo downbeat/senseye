@@ -249,15 +249,15 @@ int main(int argc, char** argv)
       // calculate FPS
       // TODO: should be a function?
       timeprevious = time;
-#ifndef __MACH__
+#ifdef __MACH__
       // OS X support for time measurement.
-      (void)clock_gettime(CLOCK_MONOTONIC,&time);
-#else
       host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
       clock_get_time(cclock, &time_mach);
       mach_port_deallocate(mach_task_self(), cclock);
       time.tv_sec = time_mach.tv_sec;
       time.tv_nsec = time_mach.tv_nsec;
+#else
+      (void)clock_gettime(CLOCK_MONOTONIC,&time);
 #endif
       fpsinstant = (NS_PER_SEC) / (double)( (NS_PER_SEC)*(time.tv_sec - timeprevious.tv_sec)
                                             + time.tv_nsec - timeprevious.tv_nsec );
