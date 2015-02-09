@@ -12,7 +12,7 @@ OPENCV_INC=/usr/local/include/opencv
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
 
 LIBGLASSES_INC=../libglasses
-LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
+LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c $(LIBGLASSES_INC)/glasses_util.c
 
 INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)

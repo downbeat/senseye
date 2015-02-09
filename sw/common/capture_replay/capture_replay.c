@@ -1,14 +1,24 @@
 //**************************************************************************************************
+// Copyright 2015 Russ Bielawski 
+// Copyright 2015 The University of Michigan
+// 
+// 
 // capture_replay.c
-//
-// Russ Bielawski
-// 2012-11-12: Created.
-// 2015-01-28: Renamed to capture_replay.
+// 
+// Utility for replaying SensEye data from a replay file structure.
+// 
+// 
+// AUTHOR        FULL NAME             EMAIL ADDRESS 
+// Russ          Russ Bielawski        russ@bielawski.org 
+// 
+// VERSION   DATE        AUTHOR        DESCRIPTION 
+// 1.00 00   2015-02-01  Russ          Created. 
+// 1.00 01   2015-02-01  Russ          Renamed to capture_replay. 
 //**************************************************************************************************
 
 
 //**************************************************************************************************
-// includes
+// Includes
 //
 #include <stdlib.h>
 #include <stdio.h>
@@ -24,11 +34,18 @@
 #include "highgui.h"
 
 #include "glasses.h"
+#include "glasses_util.h"
 
 
 //**************************************************************************************************
-// defines / constants
+// Defines / constants
 //
+#define USAGE_OPTIONS           "-i <path>"
+#define HELP_TEXT               "SensEye glasses data recording utility.\n"                      \
+                                "Specify output path over command-line:\n"                       \
+                                "  -h         Print this help text and quit.\n"                  \
+                                "  -i <path>  Read video from <path>.\n"                         \
+                                "  -a         ASAP mode: send frames as quickly as possible.\n"
 #define NS_PER_SEC              (1000*1000*1000)
 #define MAX_CAMS                (2)
 #define FRAME_X_Y               (112)
@@ -36,31 +53,41 @@
 #define SCALINGVAL              (4)
 #define ESC_KEY                 (27)
 #define INPATH_MAX_LEN          (PATH_MAX_LEN)
-
+// Command-line arguments definitions.  The enum and CLI_ARGS must match!  These constants
+// initializalize the structure used by the CLI helper functions.
+enum
+{
+   FLAG_INDEX_HELP = 0,
+   FLAG_INDEX_INPUT_PATH,
+   FLAG_INDEX_ASAP_MODE
+};
+#define CLI_ARGS  {                                         \
+                     { 'h', CLI_ARG_TYPE_FLAG,    "", 0 },  \
+                     { 'i', CLI_ARG_TYPE_STRING,  "", 0 },  \
+                     { 'a', CLI_ARG_TYPE_FLAG   , "", 0 }   \
+                  }
 
 //**************************************************************************************************
-// globals
+// Globals
 //
-char     gInpath[INPATH_MAX_LEN];
-unsigned gFlagUserCliValid;
-unsigned gFlagAsapMode;
-unsigned gFlagUserCliHelp;
+char     gInpath[MAX_LEN_CLI_ARGUMENT];
 
 
 //**************************************************************************************************
-// local function prototypes
+// Function definitions
 //
-static void printusage(char *progname);
-static void printhelp(char *progname);
-static int  parseargs(int argc, char **argv);
 
-
-//**************************************************************************************************
+//******************************************************************************
 // main
+// The main program loop.
 //
+// Returns 0 on normal program termination and 1 otherwise.
+//******************************************************************************
 int main(int argc, char** argv)
 {
    int ii,jj;
+
+   struct cli_arg cli_args[] = CLI_ARGS;
 
    unsigned numcams;
    unsigned flagUseFpsFile;
@@ -81,29 +108,33 @@ int main(int argc, char** argv)
    unsigned frameidx_calc;
 
 
-   // process user cli
-   gFlagUserCliValid=0;
-   gFlagUserCliHelp=0;
-   gFlagAsapMode=0;
-   if(0 != parseargs(argc,argv))
+   // Parse command-line input (CLI).
+   if(0 != gutil_parse_args(argc, argv, cli_args, sizeof(cli_args)/sizeof(cli_args[0])))
    {
-      printusage(argv[0]);
+      gutil_print_usage(stderr, argv[0], USAGE_OPTIONS);
       exit(1);
    }
-   if(0 == gFlagUserCliValid)
+
+   // Print help text and exit if requested.
+   if(0 != cli_args[FLAG_INDEX_HELP].is_flag_set)
    {
-      printusage(argv[0]);
-      exit(1);
-   }
-   if(0 != gFlagUserCliHelp)
-   {
-      printhelp(argv[0]);
+      gutil_print_help(stderr, argv[0], USAGE_OPTIONS, HELP_TEXT);
       exit(0);
    }
+
+   if(0 == cli_args[FLAG_INDEX_INPUT_PATH].is_flag_set)
+   {
+      gutil_print_usage(stderr, argv[0], USAGE_OPTIONS);
+      exit(1);
+   }
+
+   // Adapt CLI input to previously used global variable.
+   strncpy(gInpath, cli_args[FLAG_INDEX_INPUT_PATH].argument, MAX_LEN_CLI_ARGUMENT);
+
    if(0 != stat(gInpath,&inpathst))
    {
       fprintf(stderr,"ERROR: path %s does not exist!\n",gInpath);
-      printusage(argv[0]);
+      gutil_print_usage(stderr, argv[0], USAGE_OPTIONS);
       exit(1);
    }
 
@@ -193,7 +224,7 @@ int main(int argc, char** argv)
       sleeptime.tv_sec  = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) / NS_PER_SEC;
       sleeptime.tv_nsec = ((unsigned long)((1/fpsinstant)*NS_PER_SEC)) % NS_PER_SEC;
 
-      if(0 == gFlagAsapMode)
+      if(0 == cli_args[FLAG_INDEX_ASAP_MODE].is_flag_set)
       {
          // TODO: good practice to check return value
          (void)nanosleep(&sleeptime, NULL);
@@ -221,72 +252,3 @@ int main(int argc, char** argv)
 
    return 0;
 }
-
-
-//**************************************************************************************************
-// local function definitions
-//
-
-//
-// printusage: prints a usage string for the program
-//
-static void printusage(char *progname)
-{
-   fprintf(stderr, "Usage: %s [-i PATH]\n", progname);
-}
-
-//
-// printhelp: prints the help for the program
-//
-static void printhelp(char *progname)
-{
-   printusage(progname);
-   fprintf(stderr,"TODO: help not well written\n");
-   fprintf(stderr,"press ESC to end the program (user must have context of the video window!).\n");
-   fprintf(stderr,"\n");
-   fprintf(stderr,"quick and dirty argument descriptions:\n");
-   fprintf(stderr,"  -a         ASAP mode.  just pump out frames as quickly as possible\n");
-   fprintf(stderr,"  -h         show help and exit\n");
-   fprintf(stderr,"  -i PATH    replay video located at PATH\n");
-}
-
-//
-// parseargs: parse cli
-//
-static int parseargs(int argc, char **argv)
-{
-   char cc;
-   extern char *optarg;
-
-   errno=0;
-
-   while ((cc = getopt(argc, argv, "ahi:")) != EOF)
-   {
-      switch (cc) {
-         case 'a':
-            gFlagAsapMode = 1;
-            break;
-         case 'h':
-            gFlagUserCliValid = 1;
-            gFlagUserCliHelp = 1;
-            break;
-         case 'i':
-            if(INPATH_MAX_LEN < strlen(optarg))
-            {
-               fprintf(stderr,"ERROR: path too long!\n");
-               errno=ENAMETOOLONG;
-               break;
-            }
-            gFlagUserCliValid = 1;
-            strncpy(gInpath, optarg, INPATH_MAX_LEN);
-            gInpath[strlen(optarg)] = '\0';
-            break;
-         default:
-            errno=EINVAL;
-            break;
-      }
-   }
-
-   return(errno);
-}
-

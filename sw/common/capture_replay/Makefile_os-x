@@ -14,7 +14,7 @@ OPENCV_LIBDIR=/opt/local/lib
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
 
 LIBGLASSES_INC=../libglasses
-LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
+LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c $(LIBGLASSES_INC)/glasses_util.c
 
 # Russ [2015-01-31]: Added /opt/local/incude for MacPorts intalls (OS X).
 INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC) -I/opt/local/include/
