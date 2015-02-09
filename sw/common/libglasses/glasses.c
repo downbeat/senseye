@@ -1,13 +1,30 @@
 //**************************************************************************************************
+// Copyright 2015 Russ Bielawski
+// Copyright 2012 University of Michigan
+//
+//
 // glasses.c
 //
-// Russ Bielawski
-// 2012-11-15: created
+// SensEye glasses C library utility functions.  Deprecated.  Functionality now resides in
+// glasses_util.h/c and glasses_proto.h/c.
+//
+// !!! DEPRECATED !!!!
+//
+//
+// AUTHOR        FULL NAME             EMAIL ADDRESS
+// Russ          Russ Bielawski        russ@bielawski.org
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 1.00 00   2012-11-15  Russ          Created (functionality split from glasses.h/c).
+//                                     Made more robust and secure.
+// 1.00.01   2015-02-09  Russ          Deleted peek(...) and getch(...) which are no longer used.
+//                                     Added a nicer version header and cleaned up some style.
+//                                     Deprecated glasses.h/c.
 //**************************************************************************************************
 
 
 //**************************************************************************************************
-// includes
+// Includes
 //
 #include <glasses.h>
 #include <stdio.h>
@@ -20,7 +37,7 @@
 
 
 //**************************************************************************************************
-// function definitions
+// Function definitions
 //
 
 //
@@ -121,44 +138,6 @@ void getdeepestdirname(const char *path, char *deepestdirname)
 }
 
 //
-// peek: peek at the next character in the buffer
-//
-int peek(FILE *stream)
-{
-   int cc;
-
-   cc = fgetc(stream);
-   ungetc(cc,stream);
-
-   return cc;
-}
-
-//
-// getch: grab a single char without waiting for the user to press ENTER
-//
-// russ: taken from http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
-// ! LINUX ONLY (sorry, lazy)
-char getch() {
-   char buf = 0;
-   struct termios old = {0};
-   if (tcgetattr(0, &old) < 0)
-      perror("tcsetattr()");
-   old.c_lflag &= ~ICANON;
-   old.c_lflag &= ~ECHO;
-   old.c_cc[VMIN] = 1;
-   old.c_cc[VTIME] = 0;
-   if (tcsetattr(0, TCSANOW, &old) < 0)
-      perror("tcsetattr ICANON");
-   if (read(0, &buf, 1) < 0)
-      perror ("read()");
-   old.c_lflag |= ICANON;
-   old.c_lflag |= ECHO;
-   if (tcsetattr(0, TCSADRAIN, &old) < 0)
-      perror ("tcsetattr ~ICANON");
-   return (buf);
-}
-
-//
 // cleanupcamconn: just cleanup the camera's connection
 //
 void cleanupcamconn(FILE *outfile)
@@ -197,4 +176,3 @@ char glassesReadFrame(FILE *infile, char buf[], unsigned len)
 
    return opcode;
 }
-

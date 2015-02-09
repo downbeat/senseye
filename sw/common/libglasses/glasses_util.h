@@ -19,6 +19,11 @@
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-02  Russ          Created (functionality split from glasses.h/c).
 //                                     Made more robust and secure.
+// 1.00.01   2015-02-09  Russ          Removed gutil_read_char and gutil_read_until, moving the
+//                                     functionality into the forthcoming glasses_proto.h/c.
+//                                     Removed gutil_getch, moving the functionality into the one
+//                                     program which used that helper.  And, removed gutil_peek,
+//                                     which is not used in the project.
 //**************************************************************************************************
 
 
@@ -32,12 +37,15 @@
 //**************************************************************************************************
 // Defines / constants
 //
-#define MAX_LEN_PATH                      (255)
-#define MAX_LEN_PROGNAME                  MAX_LEN_PATH
-#define MAX_LEN_CLI_OPTIONS_TEXT          (100)
-#define MAX_LEN_CLI_ARGUMENT              (255)
-#define MAX_LEN_HELP_TEXT                 (4096)
-#define MAX_CLI_ARGUMENTS                 (16)
+enum
+{
+   MAX_LEN_PATH             = 255,
+   MAX_LEN_PROGNAME         = MAX_LEN_PATH,
+   MAX_LEN_CLI_OPTIONS_TEXT = 100,
+   MAX_LEN_CLI_ARGUMENT     = 255,
+   MAX_LEN_HELP_TEXT        = 4096,
+   MAX_CLI_ARGUMENTS        = 16
+};
 
 // Structure to store command-line interface (CLI) options.
 enum
@@ -59,12 +67,8 @@ struct cli_arg
 //**************************************************************************************************
 // Function prototypes
 //
-char  gutil_read_char             (FILE *infile);
-int   gutil_read_until            (FILE *infile, char desiredch);
 int   gutil_mkdir_p               (const char *path, mode_t mode);
 int   gutil_get_deepest_dir_name  (const char *path, char *deepest, size_t maxlen);
-char  gutil_peek                  (FILE *infile);
-char  gutil_getch                 (void);
 
 int   gutil_print_usage           (FILE *ostream, const char *progname, const char *options);
 int   gutil_print_help            (FILE *ostream, const char *progname, const char *options,

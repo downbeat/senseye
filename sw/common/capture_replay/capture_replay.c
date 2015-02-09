@@ -1,6 +1,6 @@
 //**************************************************************************************************
 // Copyright 2015 Russ Bielawski 
-// Copyright 2015 The University of Michigan
+// Copyright 2012 The University of Michigan
 // 
 // 
 // capture_replay.c
@@ -13,7 +13,14 @@
 // 
 // VERSION   DATE        AUTHOR        DESCRIPTION 
 // 1.00 00   2015-02-01  Russ          Created. 
-// 1.00 01   2015-02-01  Russ          Renamed to capture_replay. 
+// 1.00 01   2015-02-01  Russ          Renamed to capture_replay.
+// 1.00.02   2015-02-09  Russ          Removed printusage, printhelp and parseargs local functions
+//                                     in favor of the gutil_... helpers.  Switched to using GDP
+//                                     v01_01 (transmitting the leading connection header is the
+//                                     only change), with a CLI option to transmit the old GDP v0
+//                                     way.  Switched to using protocol definitions from
+//                                     glasses_proto.h rather than glasses.h (which changes the
+//                                     value of the EXIT opcode).
 //**************************************************************************************************
 
 
@@ -35,17 +42,21 @@
 
 #include "glasses.h"
 #include "glasses_util.h"
+#include "glasses_proto.h"
 
 
 //**************************************************************************************************
 // Defines / constants
 //
 #define USAGE_OPTIONS           "-i <path>"
-#define HELP_TEXT               "SensEye glasses data recording utility.\n"                      \
-                                "Specify output path over command-line:\n"                       \
-                                "  -h         Print this help text and quit.\n"                  \
-                                "  -i <path>  Read video from <path>.\n"                         \
-                                "  -a         ASAP mode: send frames as quickly as possible.\n"
+
+#define HELP_TEXT               "SensEye glasses data replay utility.\n"                      \
+                                "Specify input path over command-line:\n"                     \
+                                "  -h         Print this help text and quit.\n"               \
+                                "  -i <path>  Read video from <path>.\n"                      \
+                                "  -v 0       Use GDP version 0 header.\n"                    \
+                                "  -a         ASAP mode: send frames as quickly as possible"  \
+                                "(ignore recorded FPS).\n"
 #define NS_PER_SEC              (1000*1000*1000)
 #define MAX_CAMS                (2)
 #define FRAME_X_Y               (112)
@@ -59,12 +70,14 @@ enum
 {
    FLAG_INDEX_HELP = 0,
    FLAG_INDEX_INPUT_PATH,
+   FLAG_INDEX_GDP_V0,
    FLAG_INDEX_ASAP_MODE
 };
 #define CLI_ARGS  {                                         \
                      { 'h', CLI_ARG_TYPE_FLAG,    "", 0 },  \
                      { 'i', CLI_ARG_TYPE_STRING,  "", 0 },  \
-                     { 'a', CLI_ARG_TYPE_FLAG   , "", 0 }   \
+                     { 'v', CLI_ARG_TYPE_INTEGER, "", 0 },  \
+                     { 'a', CLI_ARG_TYPE_FLAG,    "", 0 }   \
                   }
 
 //**************************************************************************************************
@@ -107,6 +120,8 @@ int main(int argc, char** argv)
    unsigned frameidx_read;
    unsigned frameidx_calc;
 
+   struct gdp_connection gdp_conn;
+
 
    // Parse command-line input (CLI).
    if(0 != gutil_parse_args(argc, argv, cli_args, sizeof(cli_args)/sizeof(cli_args[0])))
@@ -127,6 +142,17 @@ int main(int argc, char** argv)
       gutil_print_usage(stderr, argv[0], USAGE_OPTIONS);
       exit(1);
    }
+
+   if(0 != cli_args[FLAG_INDEX_GDP_V0].is_flag_set)
+   {
+      // The -v flag only accepts 0 as valid input.
+      if(0 != atoi(cli_args[FLAG_INDEX_GDP_V0].argument))
+      {
+         gutil_print_usage(stderr, argv[0], USAGE_OPTIONS);
+         exit(1);
+      }
+   }
+
 
    // Adapt CLI input to previously used global variable.
    strncpy(gInpath, cli_args[FLAG_INDEX_INPUT_PATH].argument, MAX_LEN_CLI_ARGUMENT);
@@ -182,17 +208,41 @@ int main(int argc, char** argv)
          numcams = frame->widthStep / FRAME_X_Y;
          assert((0 < numcams) && (MAX_CAMS >= numcams));
          // write # of cameras
-         printf("%c",SYMBOL_SOF);
-         printf("%c",OPCODE_RESP_NUM_CAMS);
-         printf("%c",(unsigned char)numcams);
-         fflush(stdout);
+         printf("%c",GDP_SYMBOL_SOF);
+         if(0 != cli_args[FLAG_INDEX_GDP_V0].is_flag_set)
+         {
+            printf("%c",GDP_OPCODE_NUM_CAMS_RESP);
+            printf("%c",(unsigned char)numcams);
+            fflush(stdout);
+         }
+         else
+         {
+            printf("%c",GDP_OPCODE_CONNECT_RESP);
+            // Print GDP v01_01 header.
+            gdp_conn.istream = NULL;
+            gdp_conn.ostream = stdout;
+            gdp_conn.header.version_major = 0x01;
+            gdp_conn.header.version_minor = 0x01;
+            gdp_conn.header.num_cams = numcams;
+            gdp_conn.header.flags.is_scanline_mode = 1;
+            for(ii = 0; ii < numcams; ++ii)
+            {
+               gdp_conn.header.resolution[ii].horizontal = 112;
+               gdp_conn.header.resolution[ii].vertical   = 112;
+            }
+            if(0 != gdp_send_header(&gdp_conn))
+            {
+               fprintf(stderr,"ERROR: Error sending GDP v01_01 header.\n");
+               exit(1);
+            }
+         }
          flagNumCamsCalculated = 1;
       }
 
 
       // write image on stdout
-      printf("%c",SYMBOL_SOF);
-      printf("%c",OPCODE_FRAME);
+      printf("%c",GDP_SYMBOL_SOF);
+      printf("%c",GDP_OPCODE_FRAME);
       for(ii = 0; ii < FRAME_X_Y; ++ii)
       {
          frameloc = (uchar*)(frame->imageData + (ii*frame->widthStep));
@@ -246,8 +296,8 @@ int main(int argc, char** argv)
 
 
    // tell listening program that we're done here
-   printf("%c",SYMBOL_SOF);
-   printf("%c",SYMBOL_EXIT);
+   printf("%c",GDP_SYMBOL_SOF);
+   printf("%c",GDP_OPCODE_EXIT);
    fflush(stdout);
 
    return 0;

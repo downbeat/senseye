@@ -1,21 +1,38 @@
 #ifndef GLASSES_H
 #define GLASSES_H
 //**************************************************************************************************
+// Copyright 2015 Russ Bielawski
+// Copyright 2012 University of Michigan
+//
+//
 // glasses.h
 //
-// Russ Bielawski
-// 2012-11-15: created
+// SensEye glasses C library utility functions.  Deprecated.  Functionality now resides in
+// glasses_util.h/c and glasses_proto.h/c.
+//
+// !!! DEPRECATED !!!!
+//
+//
+// AUTHOR        FULL NAME             EMAIL ADDRESS
+// Russ          Russ Bielawski        russ@bielawski.org
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 1.00 00   2012-11-15  Russ          Created (functionality split from glasses.h/c).
+//                                     Made more robust and secure.
+// 1.00.01   2015-02-09  Russ          Deleted peek(...) and getch(...) which are no longer used.
+//                                     Added a nicer version header and cleaned up some style.
+//                                     Deprecated glasses.h/c.
 //**************************************************************************************************
 
 
 //**************************************************************************************************
-// includes
+// Includes
 //
 #include <stdio.h>
 
 
 //**************************************************************************************************
-// defines / constants
+// Defines / constants
 //
 enum
 {
@@ -31,21 +48,21 @@ enum
    OPCODE_RESP_NUM_CAMS = 0xA1
 };
 
-#define PATH_MAX_LEN  (255)
+enum
+{
+   PATH_MAX_LEN = 255
+};
 
 
 //**************************************************************************************************
-// function prototypes
+// Function prototypes
 //
 char readchar(FILE *infile);
 void readuntilchar(FILE *infile, char desiredch);
 void mkdir_p(const char *path);
 void getdeepestdirname(const char *path, char *deepestdirname);
-int  peek();
-char getch();
 void cleanupcamconn(FILE *outfile);
 char glassesReadFrame(FILE *infile, char buf[], unsigned len);
 
 
 #endif // GLASSES_H
-

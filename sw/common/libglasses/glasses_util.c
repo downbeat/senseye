@@ -17,6 +17,11 @@
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-02  Russ          Created (functionality split from glasses.h/c).
 //                                     Made more robust and secure.
+// 1.00.01   2015-02-09  Russ          Removed gutil_read_char and gutil_read_until, moving the
+//                                     functionality into the forthcoming glasses_proto.h/c.
+//                                     Removed gutil_getch, moving the functionality into the one
+//                                     program which used that helper.  And, removed gutil_peek,
+//                                     which is not used in the project.
 //**************************************************************************************************
 
 
@@ -35,55 +40,6 @@
 //**************************************************************************************************
 // Function definitions
 //
-
-//******************************************************************************
-// gutil_read_char
-// Read one char from the (device) file.
-//
-// Returns the read character.  Returns NULL char on error.
-//******************************************************************************
-char gutil_read_char(FILE *infile)
-{
-   unsigned readcnt;
-   char cc[1];
-
-   cc[0] = '\0';
-   if(NULL != infile)
-   {
-      do
-      {
-         readcnt = fread(cc,1,1,infile);
-      } while(1>readcnt);
-   }
-
-   return cc[0];
-}
-
-//******************************************************************************
-// gutil_read_until
-// Reading until the desired char is read from the (device) file.
-//
-// Returns 0 on success and -1 on error.
-//******************************************************************************
-int gutil_read_until(FILE *infile, char desiredch)
-{
-   int rc;
-   unsigned readcnt;
-   char cc[1];
-
-   rc = -1;
-   if(NULL != infile)
-   {
-      rc = 0;
-      cc[0] = '\0';
-      do
-      {
-         readcnt = fread(cc,1,1,infile);
-      } while((1 > readcnt) || (desiredch != cc[0]));
-   }
-
-   return rc;
-}
 
 //******************************************************************************
 // gutil_mkdir_p
@@ -176,57 +132,6 @@ int gutil_get_deepest_dir_name(const char *path, char *deepest, size_t maxlen)
 
    return rc;
 }
-
-//******************************************************************************
-// gutil_peek
-// Peek at the next character in the buffer.
-//
-// Returns the read character.  Returns NULL char on error.
-//******************************************************************************
-char gutil_peek(FILE *stream)
-{
-   int cc;
-
-   cc = '\0';
-
-   if(NULL != stream)
-   {
-      cc = fgetc(stream);
-      ungetc(cc,stream);
-   }
-
-   return cc;
-}
-
-//******************************************************************************
-// gutil_getch
-// Grab a single char without waiting for the user to press ENTER
-//
-// Russ [2012-11-15]: Taken from:
-// http://stackoverflow.com/questions/421860/c-c-capture-characters-from-standard-input-without-waiting-for-enter-to-be-pr
-//
-// Returns the read character.  Returns NULL char on error.
-//******************************************************************************
-char gutil_getch() {
-   char buf = 0;
-   struct termios old = {0};
-   if (tcgetattr(0, &old) < 0)
-      perror("tcsetattr()");
-   old.c_lflag &= ~ICANON;
-   old.c_lflag &= ~ECHO;
-   old.c_cc[VMIN] = 1;
-   old.c_cc[VTIME] = 0;
-   if (tcsetattr(0, TCSANOW, &old) < 0)
-      perror("tcsetattr ICANON");
-   if (read(0, &buf, 1) < 0)
-      perror ("read()");
-   old.c_lflag |= ICANON;
-   old.c_lflag |= ECHO;
-   if (tcsetattr(0, TCSADRAIN, &old) < 0)
-      perror ("tcsetattr ~ICANON");
-   return (buf);
-}
-
 
 //****************************************************************************** 
 // gutil_print_usage
