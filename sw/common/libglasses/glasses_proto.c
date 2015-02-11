@@ -15,7 +15,7 @@
 // Russ          Russ Bielawski        russ@bielawski.org
 //
 // VERSION   DATE        AUTHOR        DESCRIPTION
-// 1.00 00   2015-02-09  Russ          Created.
+// 1.00 00   2015-02-10  Russ          Created.
 //**************************************************************************************************
 
 
@@ -113,6 +113,9 @@ int gdp_receive_header(struct gdp_connection *cc)
             {
                // Protocol version agreement achieved: read rest of header.
                cc->header.num_cams = read_uchar(cc->istream);
+               // Unpack header flags into flags structure.
+               temp_flags = read_uchar(cc->istream);
+               cc->header.flags.is_scanline_mode = temp_flags >> 7;
                if(cc->header.num_cams <= GDP_MAX_NUM_CAMS)
                {
                   for(ii = 0; ii < cc->header.num_cams; ++ii)
@@ -124,9 +127,6 @@ int gdp_receive_header(struct gdp_connection *cc)
                      cc->header.resolution[ii].vertical   |= read_uchar(cc->istream);
                   }
                }
-               // Unpack header flags into flags structure.
-               temp_flags = read_uchar(cc->istream);
-               cc->header.flags.is_scanline_mode = temp_flags >> 7;
                // Header successfully received.
                // Check validity of received header (if header validates, return success).
                if(0 == check_header_validity(cc->header))
@@ -192,66 +192,65 @@ int gdp_read(struct gdp_connection *cc, unsigned char *buffer, unsigned nn)
          total_read_count += fread((char*)(&buffer[total_read_count]), 1,
                                    nn-total_read_count, cc->istream);
       } while(total_read_count < nn);
+      rc = 0;
    }
 
    return rc;
 }
-
 
 //******************************************************************************
 // gdp_read_frame
 // Read the whole frame into the specified buffers.  A frame includes data from
 // all imagers at once, one after another for GDP v01_01.
 //
-// Returns 0 on success and -1 on error.
+// Returns number of bytes read on success and -1 on error.
 //******************************************************************************
 int gdp_read_frame(struct gdp_connection *cc, unsigned char *frame_buffers[GDP_MAX_NUM_CAMS])
 {
    int rc;
    unsigned ii, row;
 
-   // Return code is set to default success to first check frame_buffers for NULL.
-   rc = 0;
-   for(ii = 0; ii < GDP_MAX_NUM_CAMS; ++ii)
+   rc = -1;
+
+   if(NULL != cc)
    {
-      if(NULL == frame_buffers[ii])
+      if(cc->header.num_cams <= GDP_MAX_NUM_CAMS)
       {
-         rc = -1;
-         break;
+         rc = 0;
+         for(ii = 0; ii < cc->header.num_cams; ++ii)
+         {
+            if(NULL == frame_buffers[ii])
+            {
+               rc = -1;
+               break;
+            }
+         }
       }
    }
 
    if(0 == rc)
    {
-      // Return code failure is default for remainder of function.
-      rc = -1;
-
-      if(NULL != cc)
+      if(0 == cc->header.flags.is_scanline_mode)
       {
-         if(0 == cc->header.flags.is_scanline_mode)
+         // Images are received one after another (image-by-image, row-by-row within an image).
+         for(ii = 0; ii < cc->header.num_cams; ++ii)
          {
-            // Images are received one after another (image-by-image, row-by-row within an image).
+            gdp_read(cc, frame_buffers[ii],
+                     cc->header.resolution[ii].horizontal*cc->header.resolution[ii].vertical);
+         }
+      }
+      else
+      {
+         // Images are received in rows of a wide image formed by each image side-by-side.
+         for(row = 0; row < cc->header.resolution[0].vertical; ++row)
+         {
             for(ii = 0; ii < cc->header.num_cams; ++ii)
             {
-               gdp_read(cc, frame_buffers[ii],
-                        cc->header.resolution[ii].horizontal*cc->header.resolution[ii].vertical);
+               gdp_read(cc, &(frame_buffers[ii][row*cc->header.resolution[ii].horizontal]),
+                        cc->header.resolution[ii].horizontal);
+               rc += cc->header.resolution[ii].horizontal;
             }
          }
-         else
-         {
-            // Images are received in rows of a wide image formed by each image side-by-side.
-            for(row = 0; row < cc->header.resolution[0].vertical; ++row)
-            {
-               for(ii = 0; ii < cc->header.num_cams; ++ii)
-               {
-                  gdp_read(cc, &(frame_buffers[ii][row*cc->header.resolution[ii].horizontal]),
-                           cc->header.resolution[ii].horizontal);
-               }
-            }
-         }
-
-         // Frame received in full.
-         rc = 0;
       }
    }
 
