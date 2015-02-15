@@ -22,6 +22,8 @@
 //                                     Removed gutil_getch, moving the functionality into the one
 //                                     program which used that helper.  And, removed gutil_peek,
 //                                     which is not used in the project.
+// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) function.
+//                                     Added const declarations to pointer input variables.
 //**************************************************************************************************
 
 
@@ -35,6 +37,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <errno.h>
+#include <stdarg.h>
 
 
 //**************************************************************************************************
@@ -47,7 +50,7 @@
 //
 // Returns 0 on success and -1 on error.
 //******************************************************************************
-int gutil_mkdir_p(const char *path, mode_t mode)
+int gutil_mkdir_p(const char *const path, mode_t mode)
 {
    int rc;
    unsigned ii;
@@ -87,7 +90,7 @@ int gutil_mkdir_p(const char *path, mode_t mode)
 //
 // Returns 0 on success and -1 on error.
 //******************************************************************************
-int gutil_get_deepest_dir_name(const char *path, char *deepest, size_t maxlen)
+int gutil_get_deepest_dir_name(const char *const path, char *const deepest, size_t maxlen)
 {
    int rc;
    int ii;
@@ -141,7 +144,7 @@ int gutil_get_deepest_dir_name(const char *path, char *deepest, size_t maxlen)
 //
 // Returns 0 on success and -1 on error.
 //****************************************************************************** 
-int gutil_print_usage(FILE *ostream, const char *progname, const char *options)
+int gutil_print_usage(FILE *ostream, const char *const progname, const char *const options)
 {
    int rc;
    char local_progname[MAX_LEN_PROGNAME];
@@ -181,8 +184,8 @@ int gutil_print_usage(FILE *ostream, const char *progname, const char *options)
 //
 // Returns 0 on success and -1 on error.
 //******************************************************************************
-int gutil_print_help(FILE *ostream, const char *progname, const char *options,
-                    const char *help_text)
+int gutil_print_help(FILE *ostream, const char *const progname, const char *const options,
+                     const char *const help_text)
 {
    int rc;
    char local_help_text[MAX_LEN_HELP_TEXT];
@@ -215,7 +218,8 @@ int gutil_print_help(FILE *ostream, const char *progname, const char *options,
 //
 // Returns 0 on success and -1 on error.
 //******************************************************************************
-int gutil_parse_args(int argc, char **argv, struct cli_arg *cli, unsigned number_of_cli_args)
+int gutil_parse_args(int argc, const char *const *const argv, struct cli_arg * cli,
+                     unsigned number_of_cli_args)
 {
    unsigned ii;
    char cc;
@@ -272,4 +276,25 @@ int gutil_parse_args(int argc, char **argv, struct cli_arg *cli, unsigned number
    }
 
    return errno;
+}
+
+
+//******************************************************************************
+// gutil_bail_out
+// Print a message and exit the program with failure (1).
+//
+// DOES NOT RETURN!
+//******************************************************************************
+void gutil_bail_out(FILE *fout, const char *const message_format, ...)
+{
+   if((NULL != fout) && (NULL != message_format))
+   {
+      va_list ap;
+      va_start(ap, message_format);
+      vfprintf(fout, message_format, ap);
+      va_end(ap);
+   }
+
+   exit(1);
+   assert(0);
 }

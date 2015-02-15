@@ -24,6 +24,8 @@
 //                                     Removed gutil_getch, moving the functionality into the one
 //                                     program which used that helper.  And, removed gutil_peek,
 //                                     which is not used in the project.
+// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) function.
+//                                     Added const declarations to pointer input variables.
 //**************************************************************************************************
 
 
@@ -67,14 +69,13 @@ struct cli_arg
 //**************************************************************************************************
 // Function prototypes
 //
-int   gutil_mkdir_p               (const char *path, mode_t mode);
-int   gutil_get_deepest_dir_name  (const char *path, char *deepest, size_t maxlen);
+int   gutil_mkdir_p               (const char *const, mode_t);
+int   gutil_get_deepest_dir_name  (const char *const, char *const, size_t);
 
-int   gutil_print_usage           (FILE *ostream, const char *progname, const char *options);
-int   gutil_print_help            (FILE *ostream, const char *progname, const char *options,
-                                   const char *help_text);
-int   gutil_parse_args            (int argc, char **argv, struct cli_arg *cli,
-                                   unsigned number_of_cli_args);
+int   gutil_print_usage           (FILE*, const char *const, const char *const);
+int   gutil_print_help            (FILE*, const char *const, const char *const, const char *const);
+int   gutil_parse_args            (int, const char *const *const, struct cli_arg*, unsigned);
+void  gutil_bail_out              (FILE*, const char *const, ...);
 
 
 #endif // GLASSES_UTIL_H
