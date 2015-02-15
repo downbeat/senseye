@@ -16,6 +16,7 @@
 //
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-10  Russ          Created.
+// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).
 //**************************************************************************************************
 
 
@@ -202,6 +203,8 @@ int gdp_read(struct gdp_connection *cc, unsigned char *buffer, unsigned nn)
 // gdp_read_frame
 // Read the whole frame into the specified buffers.  A frame includes data from
 // all imagers at once, one after another for GDP v01_01.
+//
+// Precondition: SOF and opcode have been consumed from the byte stream.
 //
 // Returns number of bytes read on success and -1 on error.
 //******************************************************************************

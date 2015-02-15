@@ -18,6 +18,7 @@
 //
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-10  Russ          Created.
+// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).
 //**************************************************************************************************
 
 
@@ -144,6 +145,7 @@ struct gdp_connection
 //
 int  gdp_wait_for_start_of_frame  (struct gdp_connection*);
 int  gdp_receive_header           (struct gdp_connection*);
+int  gdp_read                     (struct gdp_connection*, unsigned char*, unsigned);
 int  gdp_read_frame               (struct gdp_connection*, unsigned char* [GDP_MAX_NUM_CAMS]);
 int  gdp_send_header              (struct gdp_connection*);
 
