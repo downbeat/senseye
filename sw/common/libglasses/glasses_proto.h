@@ -19,6 +19,8 @@
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-10  Russ          Created.
 // 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).
+//                                     Fixed gdp_read_frame(...) to return correct number of bytes
+//                                     in non-scanline mode.
 //**************************************************************************************************
 
 
