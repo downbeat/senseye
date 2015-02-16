@@ -7,10 +7,10 @@
 //
 // glasses_util.h
 //
-// SensEye glasses C library utility functions.
+// Glasses C library utility functions.
 //
 //
-// Generic utility functions which are used in many places by SensEye C or C++ applications.
+// Generic utility functions which are used in many places by C or C++ applications.
 //
 //
 // AUTHOR        FULL NAME             EMAIL ADDRESS
@@ -24,8 +24,10 @@
 //                                     Removed gutil_getch, moving the functionality into the one
 //                                     program which used that helper.  And, removed gutil_peek,
 //                                     which is not used in the project.
-// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) function.
-//                                     Added const declarations to pointer input variables.
+// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) and gutil_calculate_fps(...)
+//                                     functions.  Removed gutil_get_deepest_dir_name(...) and
+//                                     gutil_mkdir_p(...) functions.  Added const declarations to
+//                                     pointer input variables.
 //**************************************************************************************************
 
 
@@ -69,13 +71,12 @@ struct cli_arg
 //**************************************************************************************************
 // Function prototypes
 //
-int   gutil_mkdir_p               (const char *const, mode_t);
-int   gutil_get_deepest_dir_name  (const char *const, char *const, size_t);
+int     gutil_print_usage    (FILE*, const char *const, const char *const);
+int     gutil_print_help     (FILE*, const char *const, const char *const, const char *const);
+int     gutil_parse_args     (int, char **, struct cli_arg*, unsigned);
+void    gutil_bail_out       (FILE*, const char *const, ...);
 
-int   gutil_print_usage           (FILE*, const char *const, const char *const);
-int   gutil_print_help            (FILE*, const char *const, const char *const, const char *const);
-int   gutil_parse_args            (int, const char *const *const, struct cli_arg*, unsigned);
-void  gutil_bail_out              (FILE*, const char *const, ...);
+double  gutil_calculate_fps  (const struct timespec *const, struct timespec *const);
 
 
 #endif // GLASSES_UTIL_H

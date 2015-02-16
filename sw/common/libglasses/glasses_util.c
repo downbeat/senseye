@@ -5,10 +5,10 @@
 //
 // glasses_util.c
 //
-// SensEye glasses C library utility functions.
+// Glasses C library utility functions.
 //
 //
-// Generic utility functions which are used in many places by SensEye C or C++ applications.
+// Generic utility functions which are used in many places by C or C++ applications.
 //
 //
 // AUTHOR        FULL NAME             EMAIL ADDRESS
@@ -22,8 +22,10 @@
 //                                     Removed gutil_getch, moving the functionality into the one
 //                                     program which used that helper.  And, removed gutil_peek,
 //                                     which is not used in the project.
-// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) function.
-//                                     Added const declarations to pointer input variables.
+// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) and gutil_calculate_fps(...)
+//                                     functions.  Removed gutil_get_deepest_dir_name(...) and
+//                                     gutil_mkdir_p(...) functions.  Added const declarations to
+//                                     pointer input variables.
 //**************************************************************************************************
 
 
@@ -33,108 +35,24 @@
 #include "glasses_util.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <assert.h>
 #include <termios.h>
 #include <unistd.h>
 #include <sys/stat.h>
 #include <errno.h>
 #include <stdarg.h>
+#include <time.h>
+#ifdef __MACH__
+// OS X support for time measurement.
+# include <mach/clock.h> 
+# include <mach/mach.h> 
+#endif 
 
 
 //**************************************************************************************************
 // Function definitions
 //
-
-//******************************************************************************
-// gutil_mkdir_p
-// Emulates mkdir -p.  Maximum path length is MAX_LEN_PATH.
-//
-// Returns 0 on success and -1 on error.
-//******************************************************************************
-int gutil_mkdir_p(const char *const path, mode_t mode)
-{
-   int rc;
-   unsigned ii;
-   unsigned path_length;
-   char temp_path[MAX_LEN_PATH+1];
-
-   rc = -1;
-
-   if(NULL != path)
-   {
-      path_length = strnlen(path, MAX_LEN_PATH+1);
-      if(path_length <= MAX_LEN_PATH)
-      {
-         rc = 0;
-         for(ii=0; ii<=path_length; ++ii)
-         {
-            if(('/' == path[ii]) || ('\0' == path[ii]))
-            {
-               strncpy(temp_path, path, ii);
-               temp_path[ii] = '\0';
-               mkdir(temp_path, mode);
-            }
-         }
-      }
-   }
-
-   return rc;
-}
-
-
-//******************************************************************************
-// gutil_get_deepest_dir_name
-// Get the deepest directory name in the specified path.  Length of the deepest
-// directory name cannot be longer than MAX_LEN_PATH.  Neither can the length of
-// the pathname.  If the deepest directory name is longer than maxlen, the first
-// maxlen charaters are placed into deepest and an error is returned.
-//
-// Returns 0 on success and -1 on error.
-//******************************************************************************
-int gutil_get_deepest_dir_name(const char *const path, char *const deepest, size_t maxlen)
-{
-   int rc;
-   int ii;
-   unsigned path_length;
-   unsigned prefix_length;
-   unsigned copy_length;
-
-   rc = -1;
-
-   if((NULL != path) && (NULL != deepest) && (maxlen <= MAX_LEN_PATH))
-   {
-      path_length = strnlen(path, MAX_LEN_PATH+1);
-      if(path_length <= MAX_LEN_PATH)
-      {
-         // Ignore trailing slashes (/).
-         while((path_length > 0) && ('/' == path[path_length-1]))
-         {
-            --path_length;
-         }
-         // Find prefix length.
-         prefix_length = path_length;
-         for(ii = path_length-1; (ii >= 0) && ('/' != path[ii]); --ii)
-         {
-            --prefix_length;
-         }
-
-         copy_length = (maxlen < (path_length-prefix_length)) ? maxlen : (path_length-prefix_length);
-         strncpy(deepest, (char*)(path+prefix_length), copy_length);
-         // Fill remainder of deepest with null charaters.
-         for(ii = copy_length; ii < maxlen; ++ii)
-         {
-            deepest[ii] = '\0';
-         }
-
-         // Set return code.
-         if(maxlen >= (path_length-prefix_length))
-         {
-            rc = 0;
-         }
-      }
-   }
-
-   return rc;
-}
 
 //****************************************************************************** 
 // gutil_print_usage
@@ -218,8 +136,7 @@ int gutil_print_help(FILE *ostream, const char *const progname, const char *cons
 //
 // Returns 0 on success and -1 on error.
 //******************************************************************************
-int gutil_parse_args(int argc, const char *const *const argv, struct cli_arg * cli,
-                     unsigned number_of_cli_args)
+int gutil_parse_args(int argc, char **argv, struct cli_arg * cli, unsigned number_of_cli_args)
 {
    unsigned ii;
    char cc;
@@ -297,4 +214,51 @@ void gutil_bail_out(FILE *fout, const char *const message_format, ...)
 
    exit(1);
    assert(0);
+}
+
+//******************************************************************************
+// gutil_calculate_fps
+// Calculate the effective FPS between a previous time and now.  If the second
+// parameter is not NULL, the time used is copied into that parameter.  It is
+// safe to use the same variable for both parameters.
+//
+// Returns the instantaneous frames per second (FPS) value.  Returns 0.0 FPS if
+// previous_time is NULL.
+//******************************************************************************
+double gutil_calculate_fps (const struct timespec *const previous, struct timespec *const now)
+{
+   double fps;
+   struct timespec time_temp;
+#ifdef __MACH__
+   // OS X support for time measurement.
+   clock_serv_t cclock;
+   mach_timespec_t time_mach;
+#endif
+
+   fps = 0.0;
+
+#ifdef __MACH__
+   // OS X support for time measurement. 
+   host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
+   clock_get_time(cclock, &time_mach);
+   mach_port_deallocate(mach_task_self(), cclock);
+   time_temp.tv_sec = time_mach.tv_sec;
+   time_temp.tv_nsec = time_mach.tv_nsec;
+#else
+   (void)clock_gettime(CLOCK_MONOTONIC, &time_temp);
+#endif
+
+   if(NULL != previous)
+   {
+      fps = (1000*1000*1000) / (double)( (1000*1000*1000)*(time_temp.tv_sec - previous->tv_sec)
+            + time_temp.tv_nsec - previous->tv_nsec );
+   }
+
+   // If time is not NULL, we will return the time value we used to calculate FPS.
+   if(NULL != now)
+   {
+      *now = time_temp;
+   }
+
+   return fps;
 }
