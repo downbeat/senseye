@@ -6,7 +6,7 @@
 //
 // glasses_proto.h
 //
-// SensEye glasses data protocol (GDP) C library.
+// Glasses data protocol (GDP) C library.
 //
 //
 // Protocol definitions and helper functions.  All functions which read from an incoming byte
@@ -18,9 +18,9 @@
 //
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-10  Russ          Created.
-// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).
-//                                     Fixed gdp_read_frame(...) to return correct number of bytes
-//                                     in non-scanline mode.
+// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).  Fixed
+//                                     gdp_read_frame(...) to return correct number of bytes in
+//                                     non-scanline mode.
 //**************************************************************************************************
 
 
@@ -52,8 +52,8 @@ enum
 enum
 {
    GDP_MAX_NUM_CAMS = 4,
-   GDP_SUPPORTED_VERSION_MAJOR = 0x01,
-   GDP_SUPPORTED_VERSION_MINOR = 0x01
+   GDP_VERSION_MAJOR = 0x01,
+   GDP_VERSION_MINOR = 0x01
 };
 
 // GDP HEADER V01_01 FORMAT:

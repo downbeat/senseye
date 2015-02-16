@@ -4,7 +4,7 @@
 //
 // glasses_proto.c
 //
-// SensEye glasses data protocol (GDP) C library.
+// Glasses data protocol (GDP) C library.
 //
 //
 // Protocol definitions and helper functions.  All functions which read from an incoming byte
@@ -16,9 +16,9 @@
 //
 // VERSION   DATE        AUTHOR        DESCRIPTION
 // 1.00 00   2015-02-10  Russ          Created.
-// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).
-//                                     Fixed gdp_read_frame(...) to return correct number of bytes
-//                                     in non-scanline mode.
+// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).  Fixed
+//                                     gdp_read_frame(...) to return correct number of bytes in
+//                                     non-scanline mode.
 //**************************************************************************************************
 
 
@@ -26,6 +26,8 @@
 // Includes
 //
 #include "glasses_proto.h"
+#include <stddef.h>
+#include <stdio.h>
 
 
 //**************************************************************************************************
@@ -109,10 +111,10 @@ int gdp_receive_header(struct gdp_connection *cc)
       {
          // Only version 0x01_01 is recognized.
          cc->header.version_major = read_uchar(cc->istream);
-         if(GDP_SUPPORTED_VERSION_MAJOR == cc->header.version_major)
+         if(GDP_VERSION_MAJOR == cc->header.version_major)
          {
             cc->header.version_minor = read_uchar(cc->istream);
-            if(GDP_SUPPORTED_VERSION_MINOR == cc->header.version_minor)
+            if(GDP_VERSION_MINOR == cc->header.version_minor)
             {
                // Protocol version agreement achieved: read rest of header.
                cc->header.num_cams = read_uchar(cc->istream);
@@ -279,8 +281,8 @@ int gdp_send_header(struct gdp_connection *cc)
 
    if((NULL != cc) || (NULL != cc->ostream))
    {
-      if((GDP_SUPPORTED_VERSION_MAJOR == cc->header.version_major) &&
-         (GDP_SUPPORTED_VERSION_MINOR == cc->header.version_minor))
+      if((GDP_VERSION_MAJOR == cc->header.version_major) &&
+         (GDP_VERSION_MINOR == cc->header.version_minor))
       {
          temp_flags = cc->header.flags.is_scanline_mode << 7;
          fprintf(cc->ostream, "%c%c%c%c", cc->header.version_major,
