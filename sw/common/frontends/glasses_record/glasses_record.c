@@ -2,12 +2,25 @@
 // Copyright 2015 Russ Bielawski
 //
 //
-// glasses_display.c
+// glasses_record.c
 //
-// Glasses display output utility.
+// Glasses data recording utility.
 //
 //
-// Utility to read glasses data protocol (GDP) from stdin and display the images onscreen.
+// Utility to read a glasses data protocol (GDP) byte stream from stdin and save the data to
+// file(s) per the glasses data exchange format (GDF).
+//
+// This utility was created in conjunction with formalizing the GDP and GDF formats.   Any prior
+// ad hoc implementation of either the data protocol or data exchange format will be refered to as
+// version 0.  As of the initial version of this utility, version 0 is not supported.
+//
+// At the time of creation of this utility, a key purpose is to be a reference implementation of
+// newly standardized GDP and GDF, which are themselves designed to minimally impact the existing
+// tools and embedded code as opposed to creating a new design from scratch.
+//
+// A replay utility will perform the reverse translation: read the data in GDF from a file or files
+// and output the data over stdout according to GDP.  These utilities will adapt to understand any
+// new versions of the GDP and GDF.
 //
 //
 // AUTHOR        FULL NAME             EMAIL ADDRESS
@@ -30,42 +43,39 @@
 
 #include "glasses_util.h"
 #include "glasses_proto.h"
+#include "glasses_format.h"
 
 
 //**************************************************************************************************
 // Defines / Constants
 //
-// These strings control the usage and help strings.  They are passed to the CLI helpers.
-#define USAGE_OPTIONS        "[-x <zoom>]"
-#define HELP_TEXT            "SensEye glasses data recording utility.\n"         \
-                             "Specify output path over command-line:\n"          \
-                             "  -h         Print this help text and quit.\n"     \
-                             "  -x <zoom>  Zoom displayed images by a factor"    \
-                             " of <zoom>.\n"
+// These variables control the usage and help strings.  They are passed to the CLI helpers.
+#define USAGE_OPTIONS          "-o <path>"
+#define HELP_TEXT              "SensEye glasses data recording utility.\n"      \
+                               "Specify output path over command-line:\n"       \
+                               "  -h         Print this help text and quit.\n"  \
+                               "  -o <path>  Save video to <path>."             \
+                               "  <path> cannot already exist.\n"
 // Command-line arguments definitions.  The enum and CLI_ARGS must match!  These constants
 // initializalize the structure used by the CLI helper functions.
 enum
 {
    FLAG_INDEX_HELP = 0,
-   FLAG_INDEX_ZOOM
+   FLAG_INDEX_OUTPUT_PATH,
+   FLAG_INDEX_ECHO,
 };
 #define CLI_ARGS  {                                         \
                      { 'h', CLI_ARG_TYPE_FLAG,    "", 0 },  \
-                     { 'x', CLI_ARG_TYPE_INTEGER, "", 0 },  \
+                     { 'o', CLI_ARG_TYPE_STRING,  "", 0 },  \
                   }
 enum
 {
    GDP_VERSION_MAJOR_SUPPORTED  = 0x01,
    GDP_VERSION_MINOR_SUPPORTED  = 0x01,
-   USER_INPUT_KEY_QUIT          = 'q',
-   USER_INPUT_WAIT_TIME_DEFAULT = 1
+   GDF_VERSION_MAJOR_SUPPORTED  = 0x01,
+   GDF_VERSION_MINOR_SUPPORTED  = 0x01,
+   USER_INPUT_KEY_QUIT          = 'q'
 };
-
-
-
-//**************************************************************************************************
-// Local function prototypes
-//
 
 
 //**************************************************************************************************
@@ -83,19 +93,16 @@ int main(int argc, char** argv)
    unsigned ii;
    struct cli_arg cli_args[] = CLI_ARGS;
    struct gdp_connection gdp_conn;
+   struct gdf_capture_record gdf_record;
    char user_input_key;
    unsigned char opcode;
    unsigned frame_index;
    unsigned full_frame_length;
+   double instantaneous_fps;
+   struct timespec frame_time;
    unsigned char *frame_buffers[GDP_MAX_NUM_CAMS];
    // OpenCV image containers hold the current frame.
    IplImage *frames[GDP_MAX_NUM_CAMS];
-   unsigned combined_resolution_horizontal;
-   unsigned combined_resolution_vertical;
-   unsigned filled_width;
-   IplImage *combined_frame;
-   unsigned scaling_factor;
-   IplImage *display_frame;
 
 
    // Initialize pointers which will hold dynamically allocated data to NULL.
@@ -103,7 +110,6 @@ int main(int argc, char** argv)
    {
       frames[ii] = NULL;
    }
-   combined_frame = display_frame = NULL;
 
 
    // Parse command-line input (CLI).
@@ -119,11 +125,32 @@ int main(int argc, char** argv)
       // Exit the program.
       return 0;
    }
-   scaling_factor = 1;
-   if(0 != cli_args[FLAG_INDEX_ZOOM].is_flag_set)
+   gdf_record.version_major = GDF_VERSION_MAJOR_SUPPORTED;
+   gdf_record.version_minor = GDF_VERSION_MINOR_SUPPORTED;
+   if(0 == cli_args[FLAG_INDEX_OUTPUT_PATH].is_flag_set)
    {
-      scaling_factor = atoi(cli_args[FLAG_INDEX_ZOOM].argument);
+      gutil_bail_out(stderr, "Output path required (specify with -o flag).\n");
    }
+   else
+   {
+      // Check for format agreement with library.
+      if((GDF_VERSION_MAJOR != gdf_record.version_major) ||
+         (GDF_VERSION_MINOR != gdf_record.version_minor))
+      {
+         gutil_bail_out(stderr, "Glasses data exchange format (GDF) version v%02X_%02X"
+                        " not supported.\n", GDF_VERSION_MAJOR, GDF_VERSION_MINOR);
+      }
+      else
+      {
+         strncpy(gdf_record.path, cli_args[FLAG_INDEX_OUTPUT_PATH].argument, GDF_MAX_LENGTH_PATH);
+         gdf_record.record_directory_created = 0;
+         if(0 != gdf_create_record_directory(&gdf_record))
+         {
+            gutil_bail_out(stderr, "Output path already exists.\n");
+         }
+      }
+   }
+
 
    // Specify connection attributes.
    gdp_conn.istream = stdin;
@@ -148,7 +175,7 @@ int main(int argc, char** argv)
 
 
    // Initialize data.  OpenCV is used for wrinting out bitmap (BMP) files.
-   combined_resolution_horizontal = combined_resolution_vertical = 0;
+   gdf_record.num_cams = gdp_conn.header.num_cams;
    full_frame_length = 0;
    for(ii = 0; ii < gdp_conn.header.num_cams; ++ii)
    {
@@ -157,18 +184,9 @@ int main(int argc, char** argv)
       frame_buffers[ii] = (unsigned char*)(frames[ii]->imageData);
       full_frame_length += gdp_conn.header.resolution[ii].horizontal *
                            gdp_conn.header.resolution[ii].vertical;
-      combined_resolution_horizontal += gdp_conn.header.resolution[ii].horizontal;
-      if(combined_resolution_vertical < gdp_conn.header.resolution[ii].vertical)
-      {
-         combined_resolution_vertical = gdp_conn.header.resolution[ii].vertical;
-      }
+      gdf_record.resolution[ii].horizontal = gdp_conn.header.resolution[ii].horizontal;
+      gdf_record.resolution[ii].vertical   = gdp_conn.header.resolution[ii].vertical;
    }
-   combined_frame = cvCreateImage(cvSize(combined_resolution_horizontal,
-                                         combined_resolution_vertical),
-                                  IPL_DEPTH_8U, 1);
-   display_frame = cvCreateImage(cvSize(scaling_factor*combined_resolution_horizontal,
-                                        scaling_factor*combined_resolution_vertical),
-                                 IPL_DEPTH_8U, 1);
 
 
    // Loop until EXIT opcode is received or user presses key to quit.
@@ -185,6 +203,10 @@ int main(int argc, char** argv)
    {
       gutil_bail_out(stderr, "Unknown error reading a single byte from the input stream.\n");
    }
+   // Calculate frames-per-second (FPS) immediately upon receiving opcode.
+   // FPS will be 0.0, but this function call serves to initialize the frame_time.
+   instantaneous_fps = gutil_calculate_fps(NULL, &frame_time);
+
    while((GDP_OPCODE_EXIT != opcode) && (USER_INPUT_KEY_QUIT != user_input_key))
    {
       if(GDP_OPCODE_FRAME != opcode)
@@ -199,28 +221,24 @@ int main(int argc, char** argv)
          gutil_bail_out(stderr, "Error reading frame.\n");
       }
 
-      // Normalize the frames for best viewing experience.
-      for(ii = 0; ii < gdp_conn.header.num_cams; ++ii)
-      {
-         cvNormalize(frames[ii], frames[ii], 0, 255, CV_MINMAX, CV_8UC1);
-      }
+      // Calculate running average FPS.
+      gdf_record.fps = (frame_index * gdf_record.fps + instantaneous_fps) / (frame_index + 1);
 
-      // Combine all frames side-by-side for visualization.
-      filled_width = 0;
-      for(ii = 0; ii < gdp_conn.header.num_cams; ++ii)
+      // Update metadata file.
+      if(0 != gdf_write_metadata_file(&gdf_record))
       {
-         // Set ROI for destination.
-         cvSetImageROI(combined_frame, cvRect(filled_width, 0, frames[ii]->width,
-                                              frames[ii]->height));
-         cvCopy(frames[ii], combined_frame, NULL);
-         filled_width += frames[ii]->width;
+         gutil_bail_out(stderr, "Error writing metadata file in loop.\n");
       }
-      cvResetImageROI(combined_frame);
-
-      // Output display frame.
-      cvResize(combined_frame, display_frame, CV_INTER_LINEAR);
-      cvShowImage("SensEye Capture", display_frame);
-      user_input_key = cvWaitKey(USER_INPUT_WAIT_TIME_DEFAULT);
+      // Save frame image.
+      if(0 != gdf_write_frame(&gdf_record, frames, frame_index))
+      {
+         gutil_bail_out(stderr, "Error writing image (frame index: %d).\n", frame_index);
+      }
+      // Append FPS reading to FPS file.
+      if(0 != gdf_append_fps(&gdf_record, frame_index, instantaneous_fps))
+      {
+         gutil_bail_out(stderr, "Error appending FPS reading for frame to FPS metadata file.\n");
+      }
 
       ++frame_index;
 
@@ -237,6 +255,8 @@ int main(int argc, char** argv)
          {
             gutil_bail_out(stderr, "Unknown error reading a single byte from the input stream.\n");
          }
+         // Calculate frames-per-second (FPS) immediately upon receiving opcode.
+         instantaneous_fps = gutil_calculate_fps(&frame_time, &frame_time);
       }
    }
 
