@@ -1,0 +1,1 @@
+The ${PROJNAME}\_board.pdf, ${PROJNAME}\_top.pdf, ${PROJNAME}\_bottom.pdf and ${PROJNAME}\_silk.pdf files referenced in the create script must be created manually by printing to PDF from Eagle.
