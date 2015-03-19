@@ -1,4 +1,4 @@
-NAME=senseye-imager-adc-wirebonding-diagram
+NAME=senseye-imager-adc-wirebonding-instructions
 
 all:	paper
 
