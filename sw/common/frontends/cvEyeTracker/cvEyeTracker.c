@@ -25,8 +25,11 @@
  * Copyright (c) 2004-2006
  * All Rights Reserved.
  *
+ * cvEyeTracker fork - v0
+ * The University of Michigan, 2012
+ * Russ Bielawski and Joe Romeo forked cvEyeTracker in November 2012
+ * to take input from stdin using the Glasses Data Protocol (GDP) v0.
  */
-// russ: joe and I changed this to work with the glasses
 
 #include <stdio.h>
 #include <stdlib.h>
