@@ -1,26 +1,40 @@
 # Russ Bielawski
 # The University of Michigan
 # 2012-11-15: Creation.
+# 2015-03-20: Will now accept OPENCV_LOCATION as environment variable.
 
 NAME=capture_replay
 
 CC=gcc
 CFLAGS=-O2 -Wall -g
 
+# You must set OPENCV_LOCATION for your platform (set OPENCV_LOCATION=<path>).
+#    Examples of different places OpenCV might be installed:
+#    /opt/local  ->  OS X via Macports.
+#    /usr        ->  Debian variant via apt-get.
+#    /usr/local  ->  Linux built from source.
+ifndef OPENCV_LOCATION
+   $(error 'You must define the OPENCV_LOCATION variable')
+endif
 
-OPENCV_INC=/usr/local/include/opencv
+OPENCV_INC=-I$(OPENCV_LOCATION)/include/opencv -I$(OPENCV_LOCATION)/include
+OPENCV_LIBDIRS=-L$(OPENCV_LOCATION)/lib
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
 
-LIBGLASSES_INC=../libglasses
-LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c        \
-               $(LIBGLASSES_INC)/glasses_util.c   \
-	       $(LIBGLASSES_INC)/glasses_proto.c
+ifndef LIBGLASSES_LOCATION
+   LIBGLASSES_LOCATION=../libglasses
+   $(info LIBGLASSES_LOCATION variable not set, assuming $(LIBGLASSES_LOCATION).)
+endif
+LIBGLASSES_INC=-I$(LIBGLASSES_LOCATION)
+LIBGLASSES_SRC=$(LIBGLASSES_LOCATION)/glasses.c        \
+               $(LIBGLASSES_LOCATION)/glasses_util.c   \
+	       $(LIBGLASSES_LOCATION)/glasses_proto.c
 
-INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC)
+INC=$(OPENCV_INC) $(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)
 BIN=$(NAME)
 
-LIBS=$(OPENCV_LIBS)
+LIBS=$(OPENCV_LIBDIRS) $(OPENCV_LIBS)
 
 
 all:	$(NAME)
@@ -30,4 +44,3 @@ $(NAME):	$(SRC)
 
 clean:
 	rm -f $(BIN)
-
