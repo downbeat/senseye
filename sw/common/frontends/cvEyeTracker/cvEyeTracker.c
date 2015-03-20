@@ -39,7 +39,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
-#include <linux/videodev.h>
+// russ
+//#include <linux/videodev.h>
 #include <sys/ioctl.h>
 #include <string.h>
 #include <sys/mman.h>
