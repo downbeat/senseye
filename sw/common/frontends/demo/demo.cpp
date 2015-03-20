@@ -1,8 +1,19 @@
 //**************************************************************************************************
-// demo.cpp
+// Copyright 2012 The University of Michigan
+// 
+// 
+// demo.c
+// 
+// SensEye v1 Interactive Demo.
 //
-// Russ Bielawski
-// 2012-12-05: created
+// Runs on the glasses data protocol v0.
+// 
+// 
+// AUTHOR        FULL NAME             EMAIL ADDRESS 
+// Russ          Russ Bielawski        russ@bielawski.org 
+// 
+// VERSION   DATE        AUTHOR        DESCRIPTION 
+// 1.00.00   2012-12-05  Russ          Created.
 //**************************************************************************************************
 
 
@@ -181,84 +192,6 @@ int main(int argc, char** argv)
       printhelp(argv[0]);
       exit(0);
    }
-
-// FIXME russ remove me!
-#if 0
-   // FIXME russ: find a way to get the correct path name!
-   getdeepestdirname(gPath,filenameprefix);
-   snprintf(infilenamegazecoords,2*PATH_MAX_LEN,"%s/%s_gazecoords.txt",gPath,filenameprefix);
-   snprintf(infilenamebadframes,2*PATH_MAX_LEN,"%s/%s_badframes.txt",gPath,filenameprefix);
-
-   snprintf(outfilenamelabelshuman,2*PATH_MAX_LEN,"%s/%s_labelshuman.txt",gPath,filenameprefix);
-   snprintf(outfilenamelabelsml,2*PATH_MAX_LEN,"%s/%s_labelsml.txt",gPath,filenameprefix);
-
-   // open input files
-   infilegazecoords = fopen(infilenamegazecoords,"r");
-   if(0 == infilegazecoords)
-   {
-      fprintf(stderr, "Could not open %s for reading gaze coordinates\n",infilenamegazecoords);
-      exit(1);
-   }
-   infilebadframes = fopen(infilenamebadframes,"r");
-   if(0 == infilebadframes)
-   {
-      fclose(infilegazecoords);
-      fprintf(stderr, "Could not open %s for reading bad frame flags\n",infilenamebadframes);
-      exit(1);
-   }
-
-
-   // sloppily grab the number of frames
-   numframesbad=0;
-   numframesbad_train=0;
-//   numframesbad_test=0;
-   while(EOF != fscanf(infilebadframes,"[%d] bad? := %d\n",&numframes,&flagbadframe))
-   {
-      numframesbad += (flagbadframe ? 1:0);
-      if(numframes < FIRSTTESTFRAME)
-      {
-         numframesbad_train += (flagbadframe ? 1:0);
-      }
-/*      else
-      {
-         numframesbad_test += (flagbadframe ? 1:0);
-      }*/
-   }
-   // 0 indexed
-   numframes++;
-   assert(FIRSTTESTFRAME < numframes);
-   numframes_train = FIRSTTESTFRAME;
-//   numframes_test  = numframes - FIRSTTESTFRAME;
-   /* FIXME russ: fseek wasn't working
-   fseek(infilebadframes,0,0);*/
-   fclose(infilebadframes);
-   infilebadframes = fopen(infilenamebadframes,"r");
-   if(0 == infilebadframes)
-   {
-      fclose(infilegazecoords);
-      fprintf(stderr, "Could not open %s for reading bad frame flags\n",infilenamebadframes);
-      exit(1);
-   }
-
-   // open output files
-   outfilelabelshuman = fopen(outfilenamelabelshuman,"w");
-   if(0 == outfilenamelabelshuman)
-   {
-      fclose(infilegazecoords);
-      fclose(infilebadframes);
-      fprintf(stderr, "Could not open %s for writing human labels\n",outfilenamelabelshuman);
-      exit(1);
-   }
-   outfilelabelsml = fopen(outfilenamelabelsml,"w");
-   if(0 == outfilelabelsml)
-   {
-      fclose(infilegazecoords);
-      fclose(infilebadframes);
-      fclose(outfilelabelshuman);
-      fprintf(stderr, "Could not open %s for writing ML labels\n",outfilenamelabelsml);
-      exit(1);
-   }
-#endif // 0
 
 
    cntcorrect = cntincorrect = 0;
@@ -889,26 +822,22 @@ int main(int argc, char** argv)
       cvCircle( gazeoverlay,
                 cvPoint(cvRound((gazeXml+FRAME_X_Y)*SCALINGVAL),cvRound(gazeYml*SCALINGVAL)),
                 1, CV_RGB(255,0,0), 4, 8, 0);
-      //FIXME
-/*      if(0 != gFlagDrawGrid)
-      {*/
-         cvLine( gazeoverlay,
-                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
-                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
-                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
-                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
-                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-      /*}*/
+      cvLine( gazeoverlay,
+              cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+              cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+              cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+              cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+              cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
       cvShowImage("Gaze Overlay", gazeoverlay);
 
 
@@ -977,10 +906,6 @@ static void printhelp(char *progname)
 //
 static int parseargs(int argc, char **argv) {
    char cc;
-// FIXME russ remove me!
-#if 0
-   extern char *optarg;
-#endif // 0
 
    errno=0;
 
@@ -991,20 +916,6 @@ static int parseargs(int argc, char **argv) {
          case 'h':
             gFlagUserCliHelp = 1;
             break;
-// FIXME russ remove me!
-#if 0
-         case 'p':
-            if(PATH_MAX_LEN < strlen(optarg))
-            {
-               fprintf(stderr,"ERROR: path too long!\n");
-               errno=ENAMETOOLONG;
-               break;
-            }
-            gFlagUserCliValid = 1;
-            strncpy(gPath, optarg, PATH_MAX_LEN);
-            gPath[strlen(optarg)] = '\0';
-            break;
-#endif // 0
          default:
             errno=EINVAL;
             break;
