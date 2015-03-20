@@ -36,7 +36,7 @@
 #define FRAME_LEN               (FRAME_X_Y*FRAME_X_Y)
 #define SCALINGVAL              (4)
 #define ESC_KEY                 (27)
-#define FIRSTTESTFRAME          (995)
+#define FIRSTTESTFRAME          (611)
 
 
 //**************************************************************************************************
@@ -434,32 +434,29 @@ int main(int argc, char** argv)
       cvCircle( gazeoverlay,
                 cvPoint(cvRound((gazeXml+FRAME_X_Y)*SCALINGVAL),cvRound(gazeYml*SCALINGVAL)),
                 1, CV_RGB(255,0,0), 4, 8, 0);
-      //FIXME
-/*      if(0 != gFlagDrawGrid)
-      {*/
-         cvLine( gazeoverlay,
-                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
-                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
-                 cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
-                 cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-         cvLine( gazeoverlay,
-                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
-                 cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
-                 CV_RGB(255,0,0),1,8,0 );
-      /*}*/
+      cvLine( gazeoverlay,
+              cvPoint((0+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+              cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(FRAME_X_Y/3)*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((0+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+              cvPoint((FRAME_X_Y+FRAME_X_Y)*SCALINGVAL,(2*FRAME_X_Y/3)*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+              cvPoint((FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+      cvLine( gazeoverlay,
+              cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,0*SCALINGVAL),
+              cvPoint((2*FRAME_X_Y/3+FRAME_X_Y)*SCALINGVAL,FRAME_X_Y*SCALINGVAL),
+              CV_RGB(255,0,0),1,8,0 );
+
       cvShowImage("Gaze Overlay", gazeoverlay);
 
 
       // there is a tradeoff here: longer is better for step mode, shorter better for stream mode.
       // the choice of 9 ms delay means this program can't do much faster than ~110 fps
-      (void)cvWaitKey(450);
+      (void)cvWaitKey(9);
    }
    // release/destroy OpenCV objects
    cvReleaseImage(&frame);
