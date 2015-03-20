@@ -39,17 +39,12 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
-// russ
-//#include <linux/videodev.h>
 #include <sys/ioctl.h>
 #include <string.h>
 #include <sys/mman.h>
 #include <time.h>
 #include <math.h>
 #include <sys/time.h>
-// russ
-//#include <libraw1394/raw1394.h>
-//#include <libdc1394/dc1394_control.h>
 #include "remove_corneal_reflection.h"
 #include "ransac_ellipse.h"
 #include "timing.h"
@@ -64,7 +59,6 @@
 #include "highgui.h"
 #endif
 
-// russ
 #include "glasses.h"
 
 
@@ -93,28 +87,17 @@ FILE *ellipse_log;
 #define PUPIL_SIZE_TOLERANCE 		1000	//range of allowed pupil diameters
 #define MAX_CONTOUR_COUNT		20
 
-// russ
+// Russ: Glasses resolutions are hardcoded.
 #define RESOLUTION_WIDTH                (112)
 #define RESOLUTION_HEIGHT               (112)
 
-// russ: need prototypes
+// Russ: Code was not compiling without these prototypes
 void Close_GUI();
 void Close_Logfile();
 
 
-// Firewire Capture Variables
-// russ
-//int dev;
+// Capture Variables
 int width=RESOLUTION_WIDTH,height=RESOLUTION_HEIGHT,framerate=30;
-// russ
-//FILE* imagefile;
-//dc1394_cameracapture cameras[2];
-//int numNodes;
-//int numCameras;
-//raw1394handle_t handle;
-// russ
-//nodeid_t * camera_nodes;
-//dc1394_feature_set features;
 
 // Load the source image. 
 IplImage *eye_image=NULL;
@@ -122,7 +105,7 @@ IplImage *original_eye_image=NULL;
 IplImage *threshold_image=NULL;
 IplImage *ellipse_image=NULL;
 IplImage *scene_image=NULL;
-// russ: need a grayscale image to read from the stonyman
+// Russ: Added a grayscale image to read from the Stonyman data.
 IplImage *scene_image_grayscale=NULL;
 
 // Window handles
@@ -189,9 +172,6 @@ int frame_number=0;
 int monobytesperimage=FRAMEW*FRAMEH;
 int yuv411bytesperimage=FRAMEW*FRAMEH*12/8;
 
-// russ
-//int cameramode[2]={MODE_640x480_MONO,MODE_640x480_YUV411};
-
 const double beta = 0.2;	//hysteresis factor for noise reduction
 double *intensity_factor_hori = (double*)malloc(FRAMEH*sizeof(double)); //horizontal intensity factor for noise reduction
 double *avg_intensity_hori = (double*)malloc(FRAMEH*sizeof(double)); //horizontal average intensity
@@ -223,86 +203,6 @@ char ellipse_file[40];
   b = b > 255 ? 255 : b
 
 #define FIX_UINT8(x) ( (x)<0 ? 0 : ((x)>255 ? 255:(x)) )
-
-//----------------------- Firewire Image Capture Code -----------------------//
-#if 0
-void Open_IEEE1394() 
-{
-  int i;
-
-  handle = dc1394_create_handle(0);
-  if (handle==NULL) {
-    fprintf( stderr, "Unable to aquire a raw1394 handle\n\n"
-	"Please check \n"
-	"  - if the kernel modules `ieee1394',`raw1394' and `ohci1394' are loaded \n"
-	"  - if you have read/write access to /dev/raw1394\n\n");
-    exit(1);
-  }
-
-  numNodes = raw1394_get_nodecount(handle);
-  camera_nodes = dc1394_get_camera_nodes(handle,&numCameras,1);
-  fflush(stdout);
-  if (numCameras<1) {
-    fprintf( stderr, "no cameras found :(\n");
-    dc1394_destroy_handle(handle);
-    exit(1);
-  }
-
-  for (i = 0; i < numCameras; i++) {
-    dc1394_camera_on(handle, camera_nodes[i]);
-
-    if (dc1394_dma_setup_capture(handle,camera_nodes[i],
-			i, /* channel */ 
-			FORMAT_VGA_NONCOMPRESSED,
-			cameramode[i],
-			SPEED_400,
-			FRAMERATE_30,40,1,"/dev/video1394",
-			&cameras[i])!=DC1394_SUCCESS) {
-      fprintf( stderr,"unable to setup camera\n");
-      dc1394_release_camera(handle,&cameras[i]);
-      dc1394_destroy_handle(handle);
-      exit(1);
-    }
-    if (dc1394_start_iso_transmission(handle,cameras[i].node) !=DC1394_SUCCESS) {
-      fprintf( stderr, "unable to start camera iso transmission\n");
-      dc1394_release_camera(handle,&cameras[i]);
-      dc1394_destroy_handle(handle);
-      exit(1);
-    }
-    printf("Camera %d Open\n",i);
-  }
-}
-
-void Grab_IEEE1394() 
-{
-  if (dc1394_dma_multi_capture(cameras, numCameras)!=DC1394_SUCCESS) {
-    fprintf( stderr, "unable to capture a frame\n");
-  }
-}
-
-void Release_IEEE1394() 
-{
-  int i;
-
-  for (i=0; i<numCameras; i++) {
-    dc1394_dma_done_with_buffer(&cameras[i]);
-  }
-}
-
-void Close_IEEE1394() 
-{
-  int i;
-
-  for (i=0; i<numCameras; i++) {
-    if (dc1394_stop_iso_transmission(handle,cameras[i].node)!=DC1394_SUCCESS) {
-      printf("couldn't stop the camera?\n");
-    }
-    dc1394_camera_off(handle, cameras[i].node); 
-    dc1394_dma_release_camera(handle,&cameras[i]);
-  }
-  dc1394_destroy_handle(handle);
-}
-#endif /* 0 */
 
 //------------ map pupil coordinates to screen coordinates ---------/
 CvPoint homography_map_point(CvPoint p)
@@ -999,19 +899,11 @@ void Grab_Camera_Frames()
   unsigned totallen;
   uchar *eye_image_loc, *scene_image_loc;
 
-  // russ
-  //Grab_IEEE1394();
-
-  // russ
-  //memcpy(eye_image->imageData,(char *)cameras[0].capture_buffer,monobytesperimage);
-  //memcpy(scene_image->imageData,(char *)cameras[1].capture_buffer,monobytesperimage);
-  //FirewireFrame_to_RGBIplImage((unsigned char *)cameras[1].capture_buffer, scene_image);
-  // russ
+  // Russ: Glasses support added here.
   readuntilchar(stdin,SYMBOL_SOF);
   indat[0] = readchar(stdin);
   assert( (OPCODE_FRAME == (unsigned char)indat[0]) ||
           (SYMBOL_EXIT  == (unsigned char)indat[0]) );
-  // FIXME russ: I think this is ok to do (but it should be tested before trusting)
   if(SYMBOL_EXIT == (unsigned char)indat[0])
   {
     Close_Logfile();
@@ -1053,8 +945,6 @@ void Grab_Camera_Frames()
     memcpy(intensity_factor_hori, avg_intensity_hori, eye_image->height*sizeof(double));    
   }    
 
-  // russ
-  //Release_IEEE1394();
   frame_number++;
 }
 
@@ -1168,24 +1058,24 @@ void process_image()
 
 void Update_Gui_Windows() 
 {
-  //static int first = 1;
+  static int first = 1;
 
   cvShowImage(eye_window, eye_image);
   cvShowImage(original_eye_window, original_eye_image);
   cvReleaseImage(&original_eye_image);
   cvShowImage(scene_window, scene_image);
   cvShowImage(ellipse_window, ellipse_image);
-  cvResizeWindow(eye_window,320,240);
-  cvResizeWindow(original_eye_window,320,240);
-  //cvResizeWindow(scene_window,320,240);
-  cvResizeWindow(ellipse_window,320,240);
+  cvResizeWindow(eye_window,RESOLUTION_WIDTH,RESOLUTION_HEIGHT);
+  cvResizeWindow(original_eye_window,RESOLUTION_WIDTH,RESOLUTION_HEIGHT);
+  cvResizeWindow(scene_window,RESOLUTION_WIDTH,RESOLUTION_HEIGHT);
+  cvResizeWindow(ellipse_window,RESOLUTION_WIDTH,RESOLUTION_HEIGHT);
   // only OpenCV 0.9.6 has the function of cvMoveWindow(), now we are using version 0.9.5
-  /*if (first) {
-    cvMoveWindow(eye_window, 200, 0);
-    cvMoveWindow(scene_window, 200+320, 0);
-    cvMoveWindow(ellipse_window, 200, 240);
+  if (first) {
+    cvMoveWindow(eye_window, RESOLUTION_WIDTH, 0);
+    cvMoveWindow(scene_window, 2*RESOLUTION_WIDTH, 0);
+    cvMoveWindow(ellipse_window, RESOLUTION_WIDTH, RESOLUTION_HEIGHT);
     first = 0;
-  }*/
+  }
 
   cvSetTrackbarPos("Edge Threshold", control_window, pupil_edge_thres);
 }
@@ -1209,7 +1099,6 @@ void Open_GUI()
   scene_image=cvCreateImageHeader(cvSize(RESOLUTION_WIDTH,RESOLUTION_HEIGHT), 8, 3 );
   scene_image->imageData=(char *)malloc(RESOLUTION_WIDTH*RESOLUTION_HEIGHT*3);
 
-  // russ
   //Make the grayscale scene image:    
   scene_image_grayscale=cvCreateImageHeader(cvSize(RESOLUTION_WIDTH,RESOLUTION_HEIGHT), 8, 1 );
   scene_image_grayscale->imageData=(char *)malloc(RESOLUTION_WIDTH*RESOLUTION_HEIGHT);
@@ -1251,7 +1140,6 @@ void Close_GUI()
   cvReleaseImageHeader(&original_eye_image );  
   cvReleaseImageHeader(&ellipse_image );
   cvReleaseImageHeader(&scene_image );
-  // russ
   cvReleaseImageHeader(&scene_image_grayscale );
 
   cvReleaseImage(&eye_image);
@@ -1259,7 +1147,6 @@ void Close_GUI()
   cvReleaseImage(&original_eye_image);
   cvReleaseImage(&ellipse_image);
   cvReleaseImage(&scene_image);
-  // russ
   cvReleaseImage(&scene_image_grayscale);
 }
 
@@ -1305,20 +1192,16 @@ void Open_Ellipse_Log()
 int main( int argc, char** argv )
 {
   char c;
-  // russ: lazy, had a sign extension weirdness
+  // Russ: unsigned char is required for the glasses input to work properly (GDP v0).
   uchar indat;
 
-  // russ
-  //Open_IEEE1394();
+  // Russ: Glasses support added here.
   readuntilchar(stdin,SYMBOL_SOF);
-  //fprintf(stderr,"rx: 0x%02X\n", SYMBOL_SOF);
   indat = (unsigned)readchar(stdin);
-  //fprintf(stderr,"rx: 0x%02X\n", indat);
   assert(OPCODE_RESP_NUM_CAMS == indat);
-  // russ: read number of cameras
+  // Russ: Read numcams byte.
   indat = (unsigned)readchar(stdin);
-  //fprintf(stderr,"rx: 0x%02X\n", indat);
-  // russ: really needs 2 cameras
+  // Russ: really needs 2 cameras
   assert(2 == indat);
 
   Open_GUI();
@@ -1352,9 +1235,7 @@ int main( int argc, char** argv )
   }
   
 
-  
-  // russ: this would have been at the wrong frame rate!
-  //while ((c=cvWaitKey(50))!='q') {
+  // Russ: Value of 370 picked to support the v1 glasses frame rate, roughly.
   while ((c=cvWaitKey(370))!='q') {
     if (c == 's') {
       sprintf(eye_file, "eye%05d.bmp", image_no);
@@ -1385,9 +1266,6 @@ int main( int argc, char** argv )
   Close_Logfile();
 
   Close_GUI();
-
-  // russ
-  //Close_IEEE1394();
 
   return 0;
 }
