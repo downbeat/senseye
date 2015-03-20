@@ -12,8 +12,8 @@
 // Russ          Russ Bielawski        russ@bielawski.org 
 // 
 // VERSION   DATE        AUTHOR        DESCRIPTION 
-// 1.00 00   2015-02-01  Russ          Created. 
-// 1.00 01   2015-02-01  Russ          Renamed to capture_replay.
+// 1.00.00   2012-11-12  Russ          Created. 
+// 1.00.01   2015-01-28  Russ          Renamed to capture_replay.
 // 1.00.02   2015-02-09  Russ          Removed printusage, printhelp and parseargs local functions
 //                                     in favor of the gutil_... helpers.  Switched to using GDP
 //                                     v01_01 (transmitting the leading connection header is the
