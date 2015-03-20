@@ -538,7 +538,7 @@ static unsigned  calculateLabel(unsigned xx, unsigned yy)
    return binY*3 + binX + 1;
 }
 
-static void      getCentralCoords(unsigned label, unsigned &xx, unsigned &yy)
+static void getCentralCoords(unsigned label, unsigned &xx, unsigned &yy)
 {
    // lazy
    switch(label)
