@@ -18,6 +18,11 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#ifdef __MACH__
+// OS X support for time measurement.
+# include <mach/clock.h> 
+# include <mach/mach.h> 
+#endif 
 
 // opencv sources
 #include "cv.h"
@@ -104,6 +109,12 @@ int main(int argc, char** argv)
    char outfilenamefps[2*OUTPATH_MAX_LEN];
    char outfilenameframe[2*OUTPATH_MAX_LEN];
    unsigned int frameidx;
+
+#ifdef __MACH__
+   // OS X support for time measurement.
+   clock_serv_t cclock;
+   mach_timespec_t time_mach;
+#endif
 
    /* TODO russ: can't get writing video to work yet!
    CvVideoWriter *vidout;*/
@@ -236,7 +247,16 @@ int main(int argc, char** argv)
       // calculate FPS
       // TODO: should be a function?
       timeprevious = time;
+#ifdef __MACH__
+      // OS X support for time measurement. 
+      host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
+      clock_get_time(cclock, &time_mach);
+      mach_port_deallocate(mach_task_self(), cclock);
+      time.tv_sec = time_mach.tv_sec;
+      time.tv_nsec = time_mach.tv_nsec;
+#else
       (void)clock_gettime(CLOCK_MONOTONIC,&time);
+#endif
       fpsinstant = (NS_PER_SEC) / (double)( (NS_PER_SEC)*(time.tv_sec - timeprevious.tv_sec)
                                             + time.tv_nsec - timeprevious.tv_nsec );
       if((0 < fpsmin) || (fpsinstant < fpsmin))

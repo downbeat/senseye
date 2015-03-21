@@ -44,3 +44,4 @@ $(NAME):	$(SRC)
 
 clean:
 	rm -f $(BIN)
+	rm -rf $(BIN).dSYM
