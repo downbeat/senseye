@@ -1,9 +1,39 @@
 //**************************************************************************************************
-// glassescapstream.c
+// Utility to receive streaming capture data from a serial-connected SensEye v1.x device.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Russ Bielawski
-// 2012-10-29: created as captureStreamDual.c
-// 2012-11-12: split out stream mode functionality
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// glasses_capture.c
+//
+//
+// Utility to capture data from a serial connected SensEye v1.x device and output it on stdout
+// using the glasses data protocol (GDP).
+//
+// Uses the glasses data protocol (GDP) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-10-29  Created.
+// 01.00.01  2012-11-12  Split out stream mode functionality.
 //**************************************************************************************************
 
 

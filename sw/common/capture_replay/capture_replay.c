@@ -1,26 +1,43 @@
 //**************************************************************************************************
-// Copyright 2015 Russ Bielawski 
-// Copyright 2012 The University of Michigan
-// 
-// 
-// capture_replay.c
-// 
 // Utility for replaying SensEye data from a replay file structure.
-// 
-// 
-// AUTHOR        FULL NAME             EMAIL ADDRESS 
-// Russ          Russ Bielawski        russ@bielawski.org 
-// 
-// VERSION   DATE        AUTHOR        DESCRIPTION 
-// 1.00.00   2012-11-12  Russ          Created. 
-// 1.00.01   2015-01-28  Russ          Renamed to capture_replay.
-// 1.00.02   2015-02-09  Russ          Removed printusage, printhelp and parseargs local functions
-//                                     in favor of the gutil_... helpers.  Switched to using GDP
-//                                     v01_01 (transmitting the leading connection header is the
-//                                     only change), with a CLI option to transmit the old GDP v0
-//                                     way.  Switched to using protocol definitions from
-//                                     glasses_proto.h rather than glasses.h (which changes the
-//                                     value of the EXIT opcode).
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+// Copyright (C) 2015  Russ Bielawski
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// capture_replay.c
+//
+//
+// Utility for replaying SensEye data from a replay file structure.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-11-12  Created.
+// 01.00.01  2015-01-28  Renamed to capture_replay.
+// 01.00.02  2015-02-09  Removed printusage, printhelp and parseargs local functions in favor of the
+//                       gutil_... helpers.  Switched to using GDP v01_01 (transmitting the leading
+//                       connection header is the only change), with a CLI option to transmit the
+//                       old GDP v0 way.  Switched to using protocol definitions from
+//                       glasses_proto.h rather than glasses.h (which changes the value of the EXIT
+//                       opcode).
 //**************************************************************************************************
 
 
@@ -35,7 +52,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
- 
+
 // OpenCV sources
 #include "cv.h"
 #include "highgui.h"

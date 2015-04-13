@@ -1,27 +1,56 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
+// SensEye v2 imager data server with an HTTP 1.0 interface.
+// This program is part of the SensEye project.
+// Copyright (C) 2012-2013  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // senseye-serv.c
 //
-// Russ Bielawski
-// University of Michigan
-// 2012-11-14: created
-// 2013-03-01: runs on smartfusion uClinux (no fork()).  discriminates good vs bad requests (good
-//             requests start with the string "GET" and the rest is ignored).
-// 2013-06-18: added support for multiple cameras.  however, only CAM0 is actually being used, and
-//             its data is being transmitted thrice as if to appear to be three distinct cameras.
-//             this is because the APB3 bus cannot keep up with all three cameras and the FIFOs
-//             overflow.  by only using CAM0, all the other FIFOs overflow, but we can keep up with
-//             CAM0.
-// 2013-07-25: code reads from device file (/dev/stonymanX for camera X).  it now requires the
-//             stonyman driver loadable kernel module to be loaded.  also added command-line parsing
-//             (although, only the -h help flag is supported).
-// 2013-09-05: multiple cameras supported (2 currently)
-// 2013-09-09: send NUM_CAMS as response to GET request, supporting this part of the glasses
-//             protocol (finally)
-// 2013-09-09: added real support for the DEBUG_MIMIC_MULTICAMS option
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// SensEye v2 imager data server with an HTTP 1.0 interface.
+//
+// Runs on uClinux on the SmartFusion.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 00.01.00  2012-11-14  Created.
+// 01.00.00  2013-03-01  Runs on smartfusion uClinux (no fork()).
+//                       Discriminates good vs bad requests (good requests start with the string
+//                       "GET" and the rest is ignored).
+// 01.01.00  2013-06-18  Added support for multiple cameras.  However, only CAM0 is actually being
+//                       used, and its data is being transmitted thrice as if to appear to be three
+//                       distinct cameras.  This is because the APB3 bus cannot keep up with all
+//                       three cameras and the FIFOs overflow.  By only using CAM0, all the other
+//                       FIFOs overflow, but we can keep up with CAM0.
+// 01.02.00  2013-07-25  Code reads from device file (/dev/stonymanX for camera X).  It now requires
+//                       the stonyman driver loadable kernel module to be loaded.  Also added
+//                       command-line parsing (although, only the -h help flag is supported).
+// 02.00.00  2013-09-05  Multiple cameras supported (2 currently).
+// 02.01.00  2013-09-09  Send NUM_CAMS as response to GET request, supporting this part of the
+//                       glasses protocol (finally)
+// 02.02.01  2013-09-09  Added real support for the DEBUG_MIMIC_MULTICAMS option.
+//**************************************************************************************************
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // includes
 //
 #include <stdlib.h>
@@ -45,7 +74,7 @@
 //#include "stonymask_cam12_3v3_sf.h"
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // defines / constants
 //
 typedef  unsigned long   uint32;
@@ -108,7 +137,7 @@ const char RESP_NUMCAMS_HEADER[] = {SYMBOL_SOF,OPCODE_RESP_NUM_CAMS};
 const char RESP_FRAME_HEADER[] = {SYMBOL_SOF,OPCODE_FRAME};
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // globals
 //
 unsigned  g_flag_print_help;
@@ -116,7 +145,7 @@ int       stony_fd  [NUM_CAMS];
 uint8    *img_buf   [NUM_CAMS];
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // local function prototypes
 //
 static void request_handler(int sd);
@@ -126,7 +155,7 @@ static void print_help(char const *const progname);
 static int  parse_args(int argc, char **argv);
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // main
 //
 int main(int argc, char** argv)
@@ -232,7 +261,7 @@ int main(int argc, char** argv)
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//**************************************************************************************************
 // local function definitions
 //
 static void request_handler(int sd)

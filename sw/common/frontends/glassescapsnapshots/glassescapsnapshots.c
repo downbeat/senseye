@@ -1,28 +1,45 @@
 //**************************************************************************************************
-// Copyright 2015 Russ Bielawski 
-// Copyright 2012 The University of Michigan
-// 
-// 
+// Utility to request and receive single frames from an interactive glasses capture device.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+// Copyright (C) 2015  Russ Bielawski
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glassescapsnapshots.c
-// 
+//
+//
 // SensEye capture utility which supports requesting single frames only when the user presses a key.
 //
 // This utility will be phased out (again) with the possibility of adding the feature back into
 // capture_replay.c.
-// 
-// 
-// AUTHOR        FULL NAME             EMAIL ADDRESS 
-// Russ          Russ Bielawski        russ@bielawski.org 
-// 
-// VERSION   DATE        AUTHOR        DESCRIPTION 
-// 1.00 00   2012-10-29  Russ          Created. 
-// 1.00 01   2012-11-12  Russ          Split step mode functionality out from captureDualStream.c.
-// 1.00.02   2015-02-09  Russ          Removed printusage, printhelp and parseargs local functions
-//                                     in favor of the gutil_... helpers.  getch(...) is now a 
-//                                     local function and will be removed from glasses.h/c.
-//                                     Switched to using protocol definitions from glasses_proto.h
-//                                     rather than glasses.h (which changes the value of the EXIT
-//                                     opcode).
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00 00  2012-10-29  Created.
+// 01.00 01  2012-11-12  Split step mode functionality out from captureDualStream.c.
+// 01.01.00  2015-02-09  Removed printusage, printhelp and parseargs local functions in favor of the
+//                       gutil_... helpers.  getch(...) is now a local function and will be removed
+//                       from glasses.h/c.  Switched to using protocol definitions from
+//                       glasses_proto.h rather than glasses.h (which changes the value of the EXIT
+//                       opcode).
 //**************************************************************************************************
 
 

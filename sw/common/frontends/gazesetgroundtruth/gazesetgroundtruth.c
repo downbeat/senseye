@@ -1,8 +1,41 @@
 //**************************************************************************************************
+// Utility to replay a capture log frame-by-frame to allow user to set gaze position ground truth.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // gazesetgroundtruth.c
 //
-// Russ Bielawski
-// 2012-11-18: created
+//
+// This utility allows the user to replay a capture and manually provide the ground truth data for
+// the gaze location.  It was originally created to manually create training / experiment data
+// where a laser pointer was shined at a wall with points of interest in the scene imager.
+//
+// Outputs coordinates into a (potentially seperate) glasses data exchange format (GDF) path.
+//
+// Runs on the glasses data protocol (GDP) v0 and glasses data exchange format (GDF) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-11-18  Created.
 //**************************************************************************************************
 
 
@@ -186,7 +219,7 @@ int main(int argc, char** argv)
    // setup window and mouse callback
    (void)cvNamedWindow("Gaze Prompt",CV_WINDOW_AUTOSIZE);
    (void)cvNamedWindow("Previous Gaze Selection",CV_WINDOW_AUTOSIZE);
-   cvSetMouseCallback("Gaze Prompt", cbkcvmouseevent, NULL);        
+   cvSetMouseCallback("Gaze Prompt", cbkcvmouseevent, NULL);
 
    time.tv_sec = time.tv_nsec = timeprevious.tv_sec = timeprevious.tv_nsec = 0;
 
@@ -317,7 +350,7 @@ int main(int argc, char** argv)
                   framedualscaleduploc1
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
-                  framedualscaleduploc2 
+                  framedualscaleduploc2
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
                                  + (framedualscaledup->widthStep/2) );

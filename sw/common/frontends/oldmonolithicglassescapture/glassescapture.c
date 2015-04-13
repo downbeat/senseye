@@ -1,10 +1,43 @@
 //**************************************************************************************************
+// Utility to receive data from a SensEye v1 capture device and display and/or save it.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glassescapture.c
 //
-// Russ Bielawski
-// 2012-10-29: created
-// 2012-12-26: quit with 'q' instead of ESC
-// 2012-12-28: debug is now a command line option
+//
+// Glasses capture utility.
+//
+// Utility to receive data from a SensEye v1 capture device and display and/or save it.  It does
+// not use pipes, but rather grabs data from stdin and displays it on the screen and/or saves it to
+// a capture log based on user input.
+//
+// This utility has been replaced by the piped utilities, specifically:
+// glasses_capture | tee >(glasses_display) | glasses_record -o <path>
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 01.00.00  2012-10-29  Created.
+// 01.00.01  2012-12-26  Quit with 'q' instead of ESC.
+// 01.00.02  2012-12-28  Debug is now a command line option.
 //**************************************************************************************************
 
 
@@ -361,7 +394,7 @@ int main(int argc, char** argv)
       // TODO: should be a function?
       timeprevious = time;
 #ifdef __MACH__
-      // OS X support for time measurement. 
+      // OS X support for time measurement.
       host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
       clock_get_time(cclock, &time_mach);
       mach_port_deallocate(mach_task_self(), cclock);
@@ -467,7 +500,7 @@ int main(int argc, char** argv)
                   framedualscaleduploc1
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
-                  framedualscaleduploc2 
+                  framedualscaleduploc2
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
                                  + (framedualscaledup->widthStep/2) );

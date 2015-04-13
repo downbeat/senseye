@@ -1,19 +1,37 @@
 //**************************************************************************************************
-// Copyright 2012 The University of Michigan
-// 
-// 
-// demo.c
-// 
-// SensEye v1 Interactive Demo.
+// SensEye v1 interactive gaze prediction demo.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Runs on the glasses data protocol v0.
-// 
-// 
-// AUTHOR        FULL NAME             EMAIL ADDRESS 
-// Russ          Russ Bielawski        russ@bielawski.org 
-// 
-// VERSION   DATE        AUTHOR        DESCRIPTION 
-// 1.00.00   2012-12-05  Russ          Created.
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// demo.c
+//
+//
+// SensEye v1 interactive gaze prediction demo.
+//
+// Runs on the glasses data protocol (GDP) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-12-05  Created.
 //**************************************************************************************************
 
 
@@ -251,7 +269,7 @@ int main(int argc, char** argv)
 
    cvNamedWindow(DEMO_WINDOW,CV_WINDOW_NORMAL);
    cvSetWindowProperty(DEMO_WINDOW,CV_WND_PROP_FULLSCREEN,CV_WINDOW_FULLSCREEN);
-   cvSetMouseCallback(DEMO_WINDOW,cbkCvMouseEvent,NULL);        
+   cvSetMouseCallback(DEMO_WINDOW,cbkCvMouseEvent,NULL);
 
 
    cvInitFont(&font,CV_FONT_HERSHEY_SIMPLEX,0.5,0.5,0,1);

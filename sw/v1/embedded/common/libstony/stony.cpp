@@ -1,4 +1,37 @@
-// based on ArduEye_SMH_v1.c from the ArduEye Library for the Stonyman/Hawksbill.
+//**************************************************************************************************
+// libstony is a camera driver for the CentEye Stonyman vision chip.
+// libstony is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// libstony is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//*************************************************************************************************
+// Russ Bielawski (jbielaws@umich.edu)
+//
+// stony
+// This is a camera driver for the CentEye Stonyman vision chip.
+// WARNINGS:
+//  - driver uses "arduino" calls to write digital and read analog.
+//  - driver is not reentrant (in fact, everything is written to block).
+//  - no default values supplied for 3V3 operation (although, any values can be supplied when
+//    initializing and/or setting the imager's CONFIG register)
+//  - driver is not optimized for low memory consumption (neither ROM nor RAM)
+//  - very few functions check their parameters.  this should be fixed.
+//
+// Based on ArduEye_SMH_v1.c from the ArduEye Library for the Stonyman/Hawksbill.
+//*************************************************************************************************
 #include "stony.h"
 #include "Arduino.h"
 

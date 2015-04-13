@@ -1,11 +1,36 @@
 //**************************************************************************************************
+// Utility to read data from up to three imagers from stdin and display the images onscreen.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // tripledisplayfromwebsock.c
 //
-// Russ Bielawski
-// 2012-10-29: created as captureStreamDual.c
-// 2012-11-12: split out front end display and save functionality
-// 2013-06-26: split out from frontdisplayandsave.c (this is getting sloppy)
-// 2013-06-26: removed a bunch of old unused stuff (like normalization completely)
+//
+// A hacked version of frontdisplayandsave to support up to three imagers.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2013-06-26  Split out from frontdisplayandsave.c (this is getting sloppy).
+// 01.00.01  2013-06-26  Removed a bunch of old unused stuff (like normalization completely).
 //**************************************************************************************************
 
 
@@ -250,7 +275,7 @@ int main(int argc, char** argv)
       // TODO: should be a function?
       timeprevious = time;
 #ifdef __MACH__
-      // OS X support for time measurement. 
+      // OS X support for time measurement.
       host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
       clock_get_time(cclock, &time_mach);
       mach_port_deallocate(mach_task_self(), cclock);

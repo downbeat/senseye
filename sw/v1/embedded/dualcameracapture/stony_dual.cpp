@@ -1,5 +1,41 @@
+//**************************************************************************************************
+// stony_dual is a hardcoded, two camera driver for the CentEye Stonyman vision chip.
+// stony_dual is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// stony_dual is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
 // FIXME russ: this is a terrible software hack way to get 2 cameras working!
-// based on ArduEye_SMH_v1.c from the ArduEye Library for the Stonyman/Hawksbill.
+
+//*************************************************************************************************
+// Russ Bielawski (jbielaws@umich.edu)
+//
+// stony
+// This is a camera driver for the CentEye Stonyman vision chip.
+// WARNINGS:
+//  - unfortunately (for now), the driver is coupled with an ADC driver for the freescale
+//    kinetis.  FIXME russ: is this true?
+//  - driver is not reentrant (in fact, everything is written to block).
+//  - 3V3 operation not implemented.
+//  - driver is not optimized for low memory consumption (neither ROM nor RAM)
+//  - very few functions check their parameters.  this should be fixed.
+//  - TODO
+//
+// Based on ArduEye_SMH_v1.c from the ArduEye Library for the Stonyman/Hawksbill.
+//*************************************************************************************************
+
 #include "stony_dual.h"
 #include "Arduino.h"
 

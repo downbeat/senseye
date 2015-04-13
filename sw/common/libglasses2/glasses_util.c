@@ -1,31 +1,46 @@
 //**************************************************************************************************
-// Copyright 2015 Russ Bielawski
-// Copyright 2012 University of Michigan
+// This file is part of the glasses data protocol (GDP) and data exchange format (GDF) library.
+// libglasses2 is part of the SensEye project.
+// Copyright (C) 2012 The University of Michigan
+// Copyright (C) 2015  Russ Bielawski
 //
+// libglasses2 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
 //
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glasses_util.c
 //
-// Glasses C library utility functions.
 //
+// Glasses C library utility functions.
 //
 // Generic utility functions which are used in many places by C or C++ applications.
 //
 //
-// AUTHOR        FULL NAME             EMAIL ADDRESS
-// Russ          Russ Bielawski        russ@bielawski.org
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
 //
-// VERSION   DATE        AUTHOR        DESCRIPTION
-// 1.00 00   2015-02-02  Russ          Created (functionality split from glasses.h/c).
-//                                     Made more robust and secure.
-// 1.00.01   2015-02-09  Russ          Removed gutil_read_char and gutil_read_until, moving the
-//                                     functionality into the forthcoming glasses_proto.h/c.
-//                                     Removed gutil_getch, moving the functionality into the one
-//                                     program which used that helper.  And, removed gutil_peek,
-//                                     which is not used in the project.
-// 1.00.02   2015-02-15  Russ          Added gutil_bail_out(...) and gutil_calculate_fps(...)
-//                                     functions.  Removed gutil_get_deepest_dir_name(...) and
-//                                     gutil_mkdir_p(...) functions.  Added const declarations to
-//                                     pointer input variables.
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00 00  2015-02-02  Created (functionality split from glasses.h/c).
+//                       Made more robust and secure.
+// 01.00.01  2015-02-09  Removed gutil_read_char and gutil_read_until, moving the functionality
+//                       into the forthcoming glasses_proto.h/c.  Removed gutil_getch, moving the
+//                       functionality into the one program which used that helper.
+//                       Removed gutil_peek, which is not used in the project.
+// 01.00.02  2015-02-15  Added gutil_bail_out(...) and gutil_calculate_fps(...) functions.
+//                       Removed gutil_get_deepest_dir_name(...) and gutil_mkdir_p(...) functions.
+//                       Added const declarations to pointer input variables.
 //**************************************************************************************************
 
 

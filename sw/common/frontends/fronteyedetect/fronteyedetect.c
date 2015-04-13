@@ -1,8 +1,38 @@
 //**************************************************************************************************
-// frontdisplayandsave.c
+// Utility to (attempt to) predict the eye position from the eye imager data alone.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Russ Bielawski
-// 2012-11-13: created
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// fronteyedetect.c
+//
+//
+// A glasses front-end which takes input from the two imagers over glasses data protocol (GDP) v0
+// and attempts to detect the eye postition using circle detection.
+//
+// Runs on the glasses data protocol (GDP) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-11-13  Created.
 //**************************************************************************************************
 
 
@@ -20,9 +50,9 @@
 #include <sys/stat.h>
 #ifdef __MACH__
 // OS X support for time measurement.
-# include <mach/clock.h> 
-# include <mach/mach.h> 
-#endif 
+# include <mach/clock.h>
+# include <mach/mach.h>
+#endif
 
 // opencv sources
 #include "cv.h"
@@ -248,7 +278,7 @@ int main(int argc, char** argv)
       // TODO: should be a function?
       timeprevious = time;
 #ifdef __MACH__
-      // OS X support for time measurement. 
+      // OS X support for time measurement.
       host_get_clock_service(mach_host_self(), CALENDAR_CLOCK, &cclock);
       clock_get_time(cclock, &time_mach);
       mach_port_deallocate(mach_task_self(), cclock);
@@ -362,7 +392,7 @@ int main(int argc, char** argv)
                   framedualscaleduploc1
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep) );
-                  framedualscaleduploc2 
+                  framedualscaleduploc2
                      = (uchar*)( framedualscaledup->imageData
                                  + (((ii*SCALINGVAL)+xx)*framedualscaledup->widthStep)
                                  + (framedualscaledup->widthStep/2) );

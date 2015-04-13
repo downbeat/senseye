@@ -27,6 +27,8 @@
  *
  * cvEyeTracker fork - v0
  * The University of Michigan, 2012
+ * Authors : Russ Bielawski <jbielaws@umich.edu>
+ *           Joe Romeo <jromeoo@umich.edu>
  * Russ Bielawski and Joe Romeo forked cvEyeTracker in November 2012
  * to take input from stdin using the Glasses Data Protocol (GDP) v0.
  */
@@ -1201,7 +1203,7 @@ int main( int argc, char** argv )
   assert(OPCODE_RESP_NUM_CAMS == indat);
   // Russ: Read numcams byte.
   indat = (unsigned)readchar(stdin);
-  // Russ: really needs 2 cameras
+  // Russ: Really needs 2 cameras.
   assert(2 == indat);
 
   Open_GUI();

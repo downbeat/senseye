@@ -1,20 +1,37 @@
-//*************************************************************************************************
-// Copyright 2015 Russ Bielawski
+//**************************************************************************************************
+// Utility to read glasses data protocol (GDP) from stdin and display the images onscreen.
+// This program is part of the SensEye project.
+// Copyright (C) 2015  Russ Bielawski
 //
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
 //
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glasses_display.c
 //
-// Glasses display output utility.
 //
+// Glasses display output utility.
 //
 // Utility to read glasses data protocol (GDP) from stdin and display the images onscreen.
 //
 //
-// AUTHOR        FULL NAME             EMAIL ADDRESS
-// Russ          Russ Bielawski        russ@bielawski.org
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
 //
-// VERSION   DATE        AUTHOR        DESCRIPTION
-// 1.00.00   2015-02-15  Russ          Created.
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2015-02-15  Created.
 //**************************************************************************************************
 
 
@@ -143,7 +160,7 @@ int main(int argc, char** argv)
       (GDP_VERSION_MINOR_SUPPORTED != gdp_conn.header.version_major))
    {
       gutil_bail_out(stderr, "Glasses data protocol (GDP) version v%02X_%02X not supported.\n",
-	                 gdp_conn.header.version_major, gdp_conn.header.version_minor);
+                     gdp_conn.header.version_major, gdp_conn.header.version_minor);
    }
 
 

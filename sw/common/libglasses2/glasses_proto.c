@@ -1,24 +1,40 @@
 //**************************************************************************************************
-// Copyright 2015 Russ Bielawski
+// This file is part of the glasses data protocol (GDP) and data exchange format (GDF) library.
+// libglasses2 is part of the SensEye project.
+// Copyright (C) 2015  Russ Bielawski
 //
+// libglasses2 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
 //
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glasses_proto.c
 //
-// Glasses data protocol (GDP) C library.
 //
+// Glasses data protocol (GDP) C library.
 //
 // Protocol definitions and helper functions.  All functions which read from an incoming byte
 // stream block until enough data is received and do not implement a time out.
 //
 //
-// AUTHOR        FULL NAME             EMAIL ADDRESS
-// Russ          Russ Bielawski        russ@bielawski.org
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
 //
-// VERSION   DATE        AUTHOR        DESCRIPTION
-// 1.00 00   2015-02-10  Russ          Created.
-// 1.00.01   2015-02-15  Russ          Added missing prototype for gdp_read(...).  Fixed
-//                                     gdp_read_frame(...) to return correct number of bytes in
-//                                     non-scanline mode.
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00 00  2015-02-10  Created.
+// 01.00.01  2015-02-15  Added missing prototype for gdp_read(...).  Fixed gdp_read_frame(...) to
+//                       return correct number of bytes in non-scanline mode.
 //**************************************************************************************************
 
 

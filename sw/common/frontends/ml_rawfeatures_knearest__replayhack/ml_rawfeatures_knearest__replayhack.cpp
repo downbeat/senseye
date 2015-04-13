@@ -1,8 +1,38 @@
 //**************************************************************************************************
-// ml_rawfeatures_knearest__replayhack.c
+// Utility to predict the wearer's gaze by analysing a capture log with ground truth coordinates.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Russ Bielawski
-// 2012-11-18: created
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// ml_rawfeatures_knearest__replayhack.cpp
+//
+//
+// A hacked version of ml_rawfeatures_knearest to enable video output by hardcoding the extra
+// behavior.
+//
+// Runs on the glasses data protocol (GDP) v0 and glasses data exchange format (GDF) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        AUTHOR        DESCRIPTION
+// 01.00.00  2012-11-18  Russ          Created.
 //**************************************************************************************************
 
 

@@ -1,10 +1,41 @@
 //**************************************************************************************************
+// Utility to receive streaming capture data from a serial-connected SensEye v2 device.
+// This program is part of the SensEye project.
+// Copyright (C) 2013  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glassescapwebsock.c
 //
-// Russ Bielawski
-// 2013-03-06: created to grab data from insight-serv
-// 2013-06-26: I've been adding contortions to get 2 and 3 cameras supported
-// 2013-09-09: read numcams response from server (finally added support for this protocol message)
+//
+// Utility to capture data from a serial connected SensEye v2 device and output it on stdout
+// using the glasses data protocol (GDP).
+//
+// Uses the glasses data protocol (GDP) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2013-03-06  Created to grab data from insight-serv.
+// 01.00.01  2013-06-26  I've been adding contortions to get 2 and 3 cameras supported
+// 01.00.02  2013-09-09  Read numcams response from server (finally added support for this protocol
+//                       message).
 //**************************************************************************************************
 
 

@@ -1,8 +1,40 @@
 //**************************************************************************************************
-// ml_rawfeatures_knearest.c
+// Utility to receive streaming glasses data and display with gaze position overlays.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Russ Bielawski
-// 2012-11-18: created
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// frontgazecoordsoverlay.c
+//
+//
+// This front-end displays gaze locations overlaid on the incoming imager data.  It was built to
+// receive data from the replay utility, but it would work fine connected to a glasses backend.
+// This program, in its current form, needs to know the capture save path to read the gaze
+// coordinates file.
+//
+// Runs on the glasses data protocol (GDP) v0 and glasses data exchange format (GDF) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-11-18  Created.
 //**************************************************************************************************
 
 
@@ -256,7 +288,7 @@ int main(int argc, char** argv)
       {
          break;
       }
-   
+
    }
 
 

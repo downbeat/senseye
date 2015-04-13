@@ -1,8 +1,42 @@
 //**************************************************************************************************
-// ml_rawfeatures_knearest.c
+// Utility to predict the wearer's gaze by analysing a capture log with ground truth coordinates.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
-// Russ Bielawski
-// 2012-11-18: created
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
+// ml_rawfeatures_knearest.cpp
+//
+//
+// A glasses front-end which takes input from the two imagers over glasses data protocol (GDP) v0
+// and attempts to predict the rough position of the user's gaze.  This program takes a glasses
+// data exchange format (GDF) v0 path with ground-truth position information (based upon nine
+// positions in the scene image).  After some amount of training data (unfortunately hardcoded),
+// this program uses the rest of the data to validate its predictions (and calculate a running
+// percent correct figure).
+//
+// Runs on the glasses data protocol (GDP) v0 and glasses data exchange format (GDF) v0.
+//
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
+//
+//
+// VERSION   DATE        DESCRIPTION
+// 01.00.00  2012-11-18  Created.
 //**************************************************************************************************
 
 

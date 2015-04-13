@@ -1,27 +1,44 @@
 #ifndef GLASSES_H
 #define GLASSES_H
 //**************************************************************************************************
-// Copyright 2015 Russ Bielawski
-// Copyright 2012 University of Michigan
+// This file is part of libglasses, a collection of common functionality used in SensEye.
+// libglasses is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
 //
+// libglasses is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
 //
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
+//**************************************************************************************************
 // glasses.h
+//
+//
+// !!! DEPRECATED !!!!
+//
+// Don't use libglasses1 anymore!
 //
 // SensEye glasses C library utility functions.  Deprecated.  Functionality now resides in
 // glasses_util.h/c and glasses_proto.h/c.
 //
-// !!! DEPRECATED !!!!
+//
+// AUTHORS
+// Russ Bielawski <jbielaws@umich.edu>
 //
 //
-// AUTHOR        FULL NAME             EMAIL ADDRESS
-// Russ          Russ Bielawski        russ@bielawski.org
-//
-// VERSION   DATE        AUTHOR        DESCRIPTION
-// 1.00 00   2012-11-15  Russ          Created (functionality split from glasses.h/c).
-//                                     Made more robust and secure.
-// 1.00.01   2015-02-09  Russ          Deleted peek(...) and getch(...) which are no longer used.
-//                                     Added a nicer version header and cleaned up some style.
-//                                     Deprecated glasses.h/c.
+// VERSION   DATE        DESCRIPTION
+// 01.00 00  2012-11-15  Created (functionality split from glasses.h/c).
+//                       Made more robust and secure.
+// 01.00.01  2015-02-09  Deleted peek(...) and getch(...) which are no longer used.
 //**************************************************************************************************
 
 

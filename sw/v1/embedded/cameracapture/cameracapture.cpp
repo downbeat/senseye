@@ -1,3 +1,22 @@
+//**************************************************************************************************
+// Program for capturing Stonyman imager data and transmitting the data over a serial connection.
+// This program is part of the SensEye project.
+// Copyright (C) 2012  The University of Michigan
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+//
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//**************************************************************************************************
+
 #include "stony.h"
 #include "stonymask_cam3_3v3.h"
 //#include "stonymask_nomask.h"
@@ -26,7 +45,7 @@
 #define SMH_VREF_3V3    41     //vref for 3.3 volt
 #define SMH_NBIAS_3V3   50     //nbias for 3.3 volts
 #define SMH_AOBIAS_3V3  37     //aobias for 3.3 volts
-#define SMH_GAIN_3V3    2//3   //amp gain for 3.3 volts 
+#define SMH_GAIN_3V3    2//3   //amp gain for 3.3 volts
 #define SMH_SELAMP_3V3  1
 
 
