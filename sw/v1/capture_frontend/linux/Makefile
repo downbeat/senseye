@@ -3,7 +3,7 @@
 # 2012-11-15: Creation.
 # 2015-04-12: Improvements.
 
-NAME=glassescapture
+NAME=glasses_capture
 
 CC=gcc
 CFLAGS=-O2 -Wall -g
