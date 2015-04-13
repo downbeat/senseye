@@ -29,8 +29,7 @@ ifndef LIBGLASSES_LOCATION
 endif
 LIBGLASSES_INC=-I$(LIBGLASSES_LOCATION)
 LIBGLASSES_SRC=$(LIBGLASSES_LOCATION)/glasses_util.c   \
-               $(LIBGLASSES_LOCATION)/glasses_proto.c  \
-               $(LIBGLASSES_LOCATION)/glasses_cv.c
+               $(LIBGLASSES_LOCATION)/glasses_proto.c
 
 INC=$(OPENCV_INC) $(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)

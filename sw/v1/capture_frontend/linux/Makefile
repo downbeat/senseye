@@ -1,5 +1,7 @@
 # Russ Bielawski
-# 2012-11-15
+# The University of Michigan
+# 2012-11-15: Creation.
+# 2015-04-12: Improvements.
 
 NAME=glassescapture
 
@@ -7,15 +9,18 @@ CC=gcc
 CFLAGS=-O2 -Wall -g
 
 
-LIBGLASSES_INC=../../../../common/libglasses
-LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
+ifndef LIBGLASSES1_LOCATION
+   LIBGLASSES1_LOCATION=../../../common/libglasses1
+   $(info LIBGLASSES1_LOCATION variable not set, assuming $(LIBGLASSES1_LOCATION).)
+endif
+LIBGLASSES_INC=-I$(LIBGLASSES1_LOCATION)
+LIBGLASSES_SRC=$(LIBGLASSES1_LOCATION)/glasses.c
 
-INC=-I$(LIBGLASSES_INC)
+INC=$(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)
 BIN=$(NAME)
 
-#LIBDIR=-L/usr/local/lib
-LIBS=$(OPENCV_LIBS)
+LIBS=
 
 
 all:	$(NAME)
@@ -25,4 +30,4 @@ $(NAME):	$(SRC)
 
 clean:
 	rm -f $(BIN)
-
+	rm -rf $(BIN).dSYM

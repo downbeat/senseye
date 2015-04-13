@@ -25,10 +25,14 @@ ifndef LIBGLASSES_LOCATION
    LIBGLASSES_LOCATION=../libglasses
    $(info LIBGLASSES_LOCATION variable not set, assuming $(LIBGLASSES_LOCATION).)
 endif
-LIBGLASSES_INC=-I$(LIBGLASSES_LOCATION)
-LIBGLASSES_SRC=$(LIBGLASSES_LOCATION)/glasses.c        \
-               $(LIBGLASSES_LOCATION)/glasses_util.c   \
-	       $(LIBGLASSES_LOCATION)/glasses_proto.c
+ifndef LIBGLASSES1_LOCATION
+   LIBGLASSES1_LOCATION=../libglasses1
+   $(info LIBGLASSES1_LOCATION variable not set, assuming $(LIBGLASSES1_LOCATION).)
+endif
+LIBGLASSES_INC=-I$(LIBGLASSES_LOCATION) -I$(LIBGLASSES1_LOCATION)
+LIBGLASSES_SRC=$(LIBGLASSES_LOCATION)/glasses_util.c   \
+               $(LIBGLASSES_LOCATION)/glasses_proto.c  \
+               $(LIBGLASSES1_LOCATION)/glasses.c
 
 INC=$(OPENCV_INC) $(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)

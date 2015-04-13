@@ -24,7 +24,7 @@ LIBDIRS=$(OPENCV_LIBDIRS)
 
 LIBS=-lm -lopencv_core -lopencv_highgui -lopencv_imgproc
 
-LIBGLASSES_DIR=../../libglasses
+LIBGLASSES_DIR=../../libglasses1
 LIBGLASSES_INCS=-I$(LIBGLASSES_DIR)
 INCLUDES=$(OPENCV_INCS) $(LIBGLASSES_INCS)
 

@@ -1,5 +1,7 @@
 # Russ Bielawski
-# 2012-11-15
+# The University of Michigan
+# 2012-11-15: Creation.
+# 2015-04-12: Improvements.
 
 NAME=glassescapwebsock
 
@@ -7,18 +9,18 @@ CC=gcc
 CFLAGS=-O2 -Wall -g
 
 
-OPENCV_INC=/usr/local/include/opencv
-OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
+ifndef LIBGLASSES1_LOCATION
+   LIBGLASSES1_LOCATION=../../../common/libglasses1
+   $(info LIBGLASSES1_LOCATION variable not set, assuming $(LIBGLASSES1_LOCATION).)
+endif
+LIBGLASSES_INC=-I$(LIBGLASSES1_LOCATION)
+LIBGLASSES_SRC=$(LIBGLASSES1_LOCATION)/glasses.c
 
-LIBGLASSES_INC=../libglasses
-LIBGLASSES_SRC=$(LIBGLASSES_INC)/glasses.c
-
-INC=-I$(OPENCV_INC) -I$(LIBGLASSES_INC)
+INC=$(LIBGLASSES_INC)
 SRC=$(NAME).c $(LIBGLASSES_SRC)
 BIN=$(NAME)
 
-#LIBDIR=-L/usr/local/lib
-LIBS=$(OPENCV_LIBS)
+LIBS=
 
 
 all:	$(NAME)
@@ -28,4 +30,4 @@ $(NAME):	$(SRC)
 
 clean:
 	rm -f $(BIN)
-
+	rm -rf $(BIN).dSYM
