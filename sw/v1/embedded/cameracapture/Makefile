@@ -8,7 +8,8 @@ TARGET = cameracapture
 OPTIONS = -DF_CPU=48000000 -DUSB_SERIAL -DLAYOUT_US_ENGLISH
 
 GLASSES_SHARED=../common
-INC=-I$(GLASSES_SHARED)/libteensy3 -I$(GLASSES_SHARED)/libstony -I$(GLASSES_SHARED)/masks
+MASKS_DIR=../../../common/imager_masks
+INC=-I$(GLASSES_SHARED)/libteensy3 -I$(GLASSES_SHARED)/libstony -I$(MASKS_DIR)
 
 
 #************************************************************************
