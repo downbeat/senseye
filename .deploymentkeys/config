@@ -1,3 +1,0 @@
-Host senseye_bitbucket_repo
-   Hostname bitbucket.org
-   IdentityFile id_rsa__senseye_bitbucket_repo
