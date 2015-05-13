@@ -20,6 +20,6 @@ Unfortunately, this design is not easily assembled.  Once the rest of the board 
 
 ### Lens and Lens Mount
 
-The lens and lens mount are the same as CentEye's Stonyman breakout boards (with lenses).  The lens were originally purchased from a since forgotten seller on Alibaba.com.  Sourcing more lenses is unlikely.  There are about 40 lenses at the University of Michigan that CentEye actually gave us.
+The lens and lens mount are the same as CentEye's Stonyman breakout boards (with lenses).  The lens were originally purchased from a since forgotten seller on Alibaba.com.  Sourcing more lenses is unlikely.  There are about 40 lenses at the University of Michigan.
 
 In addition, this design reuses CentEye's Stonyman lens mount from the breakout board.  CentEye was kind enough to share the design file for 3-D printing that lens mount, but the design is not known to be open source, and CentEye retains all rights.
