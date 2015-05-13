@@ -1,1 +1,3 @@
-The ${PROJNAME}\_board.pdf, ${PROJNAME}\_top.pdf, ${PROJNAME}\_bottom.pdf and ${PROJNAME}\_silk.pdf files referenced in the create script must be created manually by printing to PDF from Eagle.
+The source files for imager-adc.pdf (in the src directory) must be created
+manually by printing to a PDF file from within the EAGLE tool.  The Makefile
+merely uses PDFjam to combine those PDF files into a single documents.
