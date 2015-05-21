@@ -67,11 +67,6 @@
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include "stonyman.h"
-// camera calibration mask
-#include "stonymask_nomask.h"
-//#include "stonymask_cam12_sf-test.h"
-//#include "stonymask_cam12_sf.h"
-//#include "stonymask_cam12_3v3_sf.h"
 
 
 //**************************************************************************************************
