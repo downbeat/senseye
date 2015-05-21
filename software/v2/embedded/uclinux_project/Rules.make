@@ -12,7 +12,7 @@ KERNEL_IMAGE	:= uImage
 # these loadable modules are built
 KERNELDIR	:=  $(INSTALL_ROOT)/linux
 
-CFLAGS		:= "-Os -mcpu=cortex-m3 -mthumb -I$(INSTALL_ROOT)/A2F/root/usr/include"
+CFLAGS		:= "-Os -mcpu=cortex-m3 -mthumb -I$(INSTALL_ROOT)/A2F/root/usr/include -I$(UCLINUX_PROJDIR)/../../stonyman_drv"
 LDFLAGS		:= "-mcpu=cortex-m3 -mthumb -L$(INSTALL_ROOT)/A2F/root/usr/lib"
 
 .PHONY	: all busybox linux kmenuconfig bmenuconfig clean kclean bclean aclean $(CUSTOM_APPS) clone
