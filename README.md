@@ -14,9 +14,9 @@ I have done some pretty gnarly hacking on the git repository, up to and includin
 
 ## Repository Organization
 
-### SensEye v1 (a.k.a. Insight v1)
+### [SensEye v1](SENSEYE_V1.md)
 
-SensEye v1 was built on the <a href="https://www.pjrc.com/teensy/teensy31.html">Teensy 3.0</a>.  All data capture is done using the Kinetis K20 microcontroller, digitizing pixels with the integrated 12-bit ADC.  For this reason, the system tops out at around 2.7 frames-per-second (FPS) when capturing from both cameras.  In addition, to achieve the best possible performance, the system controls both the scene and eye cameras at the same time, scanning through the respective pixels of the two cameras in synchronicity.
+[SensEye v1](SENSEYE_V1.md) was built on the <a href="https://www.pjrc.com/teensy/teensy31.html">Teensy 3.0</a>.  All data capture is done using the Kinetis K20 microcontroller, digitizing pixels with the integrated 12-bit ADC.  For this reason, the system tops out at around 2.7 frames-per-second (FPS) when capturing from both cameras.  In addition, to achieve the best possible performance, the system controls both the scene and eye cameras at the same time, scanning through the respective pixels of the two cameras in synchronicity.
 
 ### SensEye v2
 
