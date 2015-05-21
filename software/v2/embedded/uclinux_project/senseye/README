@@ -1,2 +1,10 @@
+This uClinux project can be built with the environment provided by Emcraft for
+their Smartfusion SOM.  Documentation is found at
+https://www.emcraft.com/products/133#software.  Setup of the environment is
+in the "Linux Cortex-M User's Manual" document before attempting to build this
+project.
+
+The CodeSourcery compiler download URL is difficult to find.
+
 Before running make, set the environment variable UCLINUX_PROJDIR to this directory.
 Running export_UCLINUX_PROJDIR.sh will do this for you.
