@@ -95,15 +95,6 @@ file /usr/share/udhcpc/default.script ${UCLINUX_PROJDIR}/local/default.script 75
 slink /usr/bin/[ ../../bin/busybox 777 0 0
 slink /usr/bin/[[ ../../bin/busybox 777 0 0
 
-# russ: my changes below here
-
-# russ: don't need this stuff (just the example stuff)
-#file /app ${UCLINUX_PROJDIR}/app/app 755 0 0
-#file /sample.ko ${UCLINUX_PROJDIR}/app/sample.ko 755 0 0
-#nod /dev/sample 0600 0 0 c 166 0
-
-# russ: do I need /dev/pts/ptmx?
-# russ: do I need /dev/mem (it's a block device)
 slink /bin/nice busybox 777 0 0
 slink /bin/top busybox 777 0 0
 slink /bin/dmesg busybox 777 0 0
@@ -112,8 +103,6 @@ file nfs.sh ${UCLINUX_PROJDIR}/local/russ/nfs 755 0 0
 file /bin/ll ${UCLINUX_PROJDIR}/local/russ/ll 755 0 0
 slink /bin/lsls ll 777 0 0
 
-# russ: do I need /etc/dropbear?
-# russ: do I need /etc/dropbear/dropbear_dss_host_key?
 file /etc/resolv.conf ${UCLINUX_PROJDIR}/local/russ/resolv.conf 644 0 0
 
 #file /dasblinkenlights ${UCLINUX_PROJDIR}/dasblinkenlights/dasblinkenlights 755 0 0
