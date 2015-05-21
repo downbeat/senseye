@@ -24,7 +24,7 @@ SensEye v1.1 is the first (and final) fully working SensEye v1 prototype.  A pig
 
 ##### SensEye v1.1 Glasses (Final Prototype)
 
-<img src="https://raw.githubusercontent.com/downbeat/legacy-senseye/master/media/pictures/senseye_1_1_med.jpg" alt="SensEye v1.1" style="width: 100%;"/>
+<img src="https://raw.githubusercontent.com/downbeat/senseye-data/master/media/pictures/senseye_1_1_med.jpg" alt="SensEye v1.1" style="width: 100%;"/>
 
 ### SensEye v1.0
 
@@ -44,13 +44,9 @@ The SensEye v0.1 and SensEye v0.2 glasses reference designs are pictured below.
 
 ##### SensEye Alpha v0.1 and v0.2 Glasses Side-by-Side
 
-<!-- ![SensEye v0.2](https://raw.githubusercontent.com/downbeat/senseye/master/media/pictures/both_alphas.jpg) -->
-
-<img src="https://raw.githubusercontent.com/downbeat/legacy-senseye/master/media/pictures/both_alphas.jpg" alt="SensEye v0.1 & v0.2" style="width: 100%;"/>
+<img src="https://raw.githubusercontent.com/downbeat/senseye-data/master/media/pictures/both_alphas.jpg" alt="SensEye v0.1 & v0.2" style="width: 100%;"/>
 
 ##### SensEye Alpha v0.2 Glasses
-
-<!-- ![SensEye v0.2](http://energy.eecs.umich.edu/wiki/lib/exe/fetch.php?cache=&media=proj:insight:insight_0_2_alpha_2.jpg) -->
 
 <img src="http://energy.eecs.umich.edu/wiki/lib/exe/fetch.php?cache=&media=proj:insight:insight_0_2_alpha_2.jpg" alt="SensEye v0.2" style="width: 100%;"/>
 
@@ -68,8 +64,12 @@ The SensEye piggyback PCB was designed in [Eagle](http://www.cadsoftusa.com/) 6,
 
 #### Glasses Assembly
 
-Rather than duplicate the information here, I will refer to my old instructions on reproducing the SensEye system at [http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:howto:getting_started_with_insight](http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:howto:getting_started_with_insight).  Ignore Step 4.  Rather than building OpenCV from source, it is easier to install OpenCV with the package manager of your choice (e.g. apt, MacPorts).
+To assemble the SensEye v1.1 PCB (including piggybacking on the Teensy 3.0 board) refer to the schematic, board files and images of an assebled PCB such as the one above).  The [instructions for assembling the SensEye Alpha2 (v0.2)](http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:howto:build_insight_glasses) are still mostly relevant, with a useful BOM and instructions for wiring the imagers directly to the Teensy 3.0 board.
+
+##### Lithium Ion Battery
+
+The primary addition beyond the SensEye Alpha2 assembly instructions (and the addition of the piggyback PCB) is the Lithium Ion battery.  SensEye v1.1 uses a single [Trustfire 10440 Lithium battery](http://www.amazon.com/TrustFire-Rechargeable-Lithium-Battery-Protected/dp/B00KTTFN68) mounted to the glasses arm opposite the PCB.  It does not matter which goes on which arm, nor which eye the eye-facing imager is pointed at.  In addition, any 3.7V lithium battery **with protection circuit** should work.  However, it might be safeest to use the battery we have proven out.  The Trustfire battery is the size of a standard AAA, so it is easy to find a terminal/holster, for example on DigiKey.  **Due to the risk of inadvertent, incorrect insertion, it is highly recommended that the battery be secured into the holster once inserted, for example with even more electrical tape.
 
 #### Frontend Software
 
-See the [README](README.md) for more instructions on running the frontend software once the glasses are assembled.
+See the [README](README.md) for more instructions on running the frontend software, including the demo, once the glasses are assembled.
