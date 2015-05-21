@@ -60,19 +60,16 @@ The SensEye v0.1 and SensEye v0.2 glasses reference designs are pictured below.
 
 #### PCB
 
-The SensEye piggyback PCB was designed in [Eagle](http://www.cadsoftusa.com/) 6, and the design files are available in the [main SensEye git repository on GitHub](https://github.com/downbeat/senseye) at [/hw/pcb/impl/teensy-shield](https://github.com/downbeat/senseye/tree/master/hw/pcb/impl/teensy-shield).  Hardware design files for SensEye have been released under a Creative Commons Share AAlike
+The SensEye piggyback PCB was designed in [Eagle](http://www.cadsoftusa.com/) 6, and the design files are available in the [main SensEye git repository on GitHub](https://github.com/downbeat/senseye) at [/hw/pcb/impl/teensy-shield](https://github.com/downbeat/senseye/tree/master/hw/pcb/impl/teensy-shield).  These files are available under a Creative Commons Share Alike license.
 
 ##### SensEye v1.1 PCB with US Quarters for Scale
 
-<img src="./senseye__board_1_1-cropped-rotated-med.jpg" alt="SensEye v1.1 PCB with US Quarters for Scale" style="width: 100%;"/>
+<img src="https://raw.githubusercontent.com/downbeat/senseye-data/master/media/pictures/senseye__board_1_1-cropped-rotated-med.jpg" alt="SensEye v1.1 PCB with US Quarters for Scale" style="width: 100%;"/>
 
+#### Glasses Assembly
 
-##### BOM
+Rather than duplicate the information here, I will refer to my old instructions on reproducing the SensEye system at [http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:howto:getting_started_with_insight](http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:howto:getting_started_with_insight).  Ignore Step 4.  Rather than building OpenCV from source, it is easier to install OpenCV with the package manager of your choice (e.g. apt, MacPorts).
 
-todo
+#### Frontend Software
 
-### Firmware
-
-The embedded software for SensEye v1 runs on the Teensy 
-
-## Frontend Software
+See the [README](README.md) for more instructions on running the frontend software once the glasses are assembled.
