@@ -1,3 +1,9 @@
+.*.ko.cmd
+.*.mod.o.cmd
+.*.o.cmd
+*.mod.c
+*.gdb
+*.ko
 stonyman
 stonyman-test
 .tmp_versions
