@@ -1,2 +1,2 @@
 #!/bin/sh
-export UCLINUX_PROJDIR=`pwd`
+export UCLINUX_PROJDIR=$PWD
