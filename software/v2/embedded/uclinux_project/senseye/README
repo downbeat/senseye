@@ -1,0 +1,2 @@
+Before running make, set the environment variable UCLINUX_PROJDIR to this directory.
+Running export_UCLINUX_PROJDIR.sh will do this for you.

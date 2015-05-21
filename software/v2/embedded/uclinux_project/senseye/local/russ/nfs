@@ -1,0 +1,3 @@
+#!/bin/sh
+if [ ! -d /mnt ]; then mkdir /mnt; fi
+mount -o nolock,rsize=1024 micro.eecs.umich.edu:/export/uclinux /mnt

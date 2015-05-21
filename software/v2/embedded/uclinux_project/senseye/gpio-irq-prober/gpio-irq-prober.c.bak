@@ -1,0 +1,222 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// gpio-irq-prober.c
+//
+// Russ Bielawski
+// University of Michigan
+// 2013-07-12: created
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// includes
+//
+// just everything that was in insight-serv.c (a lot are unused)
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <time.h>
+#include <assert.h>
+#include <signal.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <linux/module.h>
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// defines / constants
+//
+typedef  unsigned long   uint32;
+typedef  unsigned short  uint16;
+typedef  unsigned char   uint8;
+
+#define REG_BASE_ADDR_CAM         (0x40060000ul)
+#define REG_MASK_CAM_IND          (0x00000080ul)
+#define REG_CAM_REG_SPACE_WIDTH   (0x00000020ul)
+#define REG_SET_OFFSET_CAM0       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*0))
+#define REG_SET_OFFSET_CAM1       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*1))
+#define REG_SET_OFFSET_CAM2       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*2))
+#define REG_SET_OFFSET_CAM3       (REG_MASK_CAM_IND|(REG_CAM_REG_SPACE_WIDTH*3))
+#define REG_OFFSET_GLOB_STARTCAP  (0x00000000ul)
+#define REG_OFFSET_GLOB_STATUS    (0x00000000ul)
+#define REG_OFFSET_CAMX_STATUS    (0x00000000ul)
+#define REG_OFFSET_CAMX_PXDATA    (0x00000004ul)
+
+#define REG_CTRL                  (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STARTCAP)))
+#define REG_FLAGS                 (*((volatile uint32*)(REG_BASE_ADDR_CAM+REG_OFFSET_GLOB_STATUS)))
+#define REG_CAMX_BASE(xx)         (REG_BASE_ADDR_CAM+REG_MASK_CAM_IND+(REG_CAM_REG_SPACE_WIDTH*(xx)))
+#define REG_CAMX_STATUS(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_STATUS)))
+#define REG_CAMX_PXDATA(xx)       (*((volatile uint32*)(REG_CAMX_BASE(xx)+REG_OFFSET_CAMX_PXDATA)))
+
+#define FLAG_SHIFT_BUSY           (0u)
+#define FLAG_SHIFT_EMPTY          (0u)
+#define FLAG_SHIFT_FULL           (1u)
+#define FLAG_SHIFT_AFULL          (2u)
+
+#define REG_BASE_ADDR_GPIO        (0x40013000ul)
+#define REG_OFFSET_IRQ            (0x80)
+#define REG_OFFSET_IN             (0x84)
+#define REG_OFFSET_OUT            (0x88)
+
+#define REG_GPIO_X_CFG(xx)        (*((volatile uint32*)(REG_BASE_ADDR_GPIO+(xx))))
+#define REG_GPIO_IRQ              (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_IRQ)))
+#define REG_GPIO_IN               (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_IN)))
+#define REG_GPIO_OUT              (*((volatile uint32*)(REG_BASE_ADDR_GPIO+REG_OFFSET_OUT)))
+
+#define FLAG_SHIFT_GPOUTEN        (0u)
+#define FLAG_SHIFT_GPINEN         (1u)
+#define FLAG_SHIFT_OUTBUFEN       (2u)
+#define FLAG_SHIFT_INTEN          (3u)
+#define FLAG_SHIFT_INT_TYPE       (5u)
+
+#define MASK_GPOUTEN              (0x00000001ul)
+#define MASK_GPINEN               (0x00000001ul)
+#define MASK_OUTBUFEN             (0x00000001ul)
+#define MASK_INTEN                (0x00000001ul)
+#define MASK_INT_TYPE             (0x00000007ul)
+
+#define GPIO_INT_TYPE_LEVEL_HIGH  (0u)
+#define GPIO_INT_TYPE_LEVEL_LOW   (1u)
+#define GPIO_INT_TYPE_POS_EDGE    (2u)
+#define GPIO_INT_TYPE_NEG_EDGE    (3u)
+#define GPIO_INT_TYPE_EITHER_EDGE (4u)
+
+#define DEVICE_NAME "prober"
+#define 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// globals
+//
+static unsigned int major;
+struct file_operations prober_fops =
+{
+   .read=NULL,
+   .write=NULL,
+   .open=NULL,
+   .release=NULL
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// local function prototypes
+//
+static void trigger_interrupt();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// main
+//
+int prober_init()
+{
+   printk("gpio-irq-prober: loading...\n");
+   trigger_interrupt();
+   return 0;
+}
+
+int main(int argc, char** argv)
+{
+   trigger_interrupt();
+
+   return 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// local function definitions
+//
+void trigger_interrupt()
+{
+   uint32 tmpreg,tmpdata;
+   tmpreg=REG_GPIO_X_CFG(0);
+   fprintf(stderr,"initial values:\n");
+   fprintf(stderr,"GPIO_0_CFG: 0x%08X\n", tmpreg);
+   fprintf(stderr," - GPOUTEN?       %d\n",((tmpreg>>FLAG_SHIFT_GPOUTEN)&MASK_GPOUTEN)?1:0);
+   fprintf(stderr," - GPINEN?        %d\n",((tmpreg>>FLAG_SHIFT_GPINEN)&MASK_GPINEN)?1:0);
+   fprintf(stderr," - GPO_OUTBUFEN?  %d\n",((tmpreg>>FLAG_SHIFT_OUTBUFEN)&MASK_OUTBUFEN)?1:0);
+   fprintf(stderr," - INTEN?         %d\n",((tmpreg>>FLAG_SHIFT_INTEN)&MASK_INTEN)?1:0);
+   fprintf(stderr," - INT_TYPE =     0x%01X\n",((tmpreg>>FLAG_SHIFT_INT_TYPE)&MASK_INT_TYPE));
+   fprintf(stderr,"GPIO_IRQ:   0x%08X\n", REG_GPIO_IRQ);
+   fflush(stderr);
+
+   // clear INT_TYPE
+   tmpreg &= (uint32)(~(MASK_INT_TYPE<<FLAG_SHIFT_INT_TYPE));
+   // set INT_TYPE to positive edge
+   tmpreg |= (uint32)(GPIO_INT_TYPE_POS_EDGE<<FLAG_SHIFT_INT_TYPE);
+   // enable interrupt
+   tmpreg |= (uint32)(1ul<<FLAG_SHIFT_INTEN);
+
+   fprintf(stderr,"=========================================\n");
+   fprintf(stderr,"writing GPIO_O_CFG=0x%08X\n",tmpreg);
+   fflush(stderr);
+   REG_GPIO_X_CFG(0)=tmpreg;
+
+   tmpreg=0u;
+   tmpreg=REG_GPIO_X_CFG(0);
+   fprintf(stderr,"=========================================\n");
+   fprintf(stderr,"after setting interrupt type and enabling\n");
+   fprintf(stderr,"GPIO_0_CFG: 0x%08X\n", tmpreg);
+   fprintf(stderr," - GPOUTEN?       %d\n",((tmpreg>>FLAG_SHIFT_GPOUTEN)&MASK_GPOUTEN)?1:0);
+   fprintf(stderr," - GPINEN?        %d\n",((tmpreg>>FLAG_SHIFT_GPINEN)&MASK_GPINEN)?1:0);
+   fprintf(stderr," - GPO_OUTBUFEN?  %d\n",((tmpreg>>FLAG_SHIFT_OUTBUFEN)&MASK_OUTBUFEN)?1:0);
+   fprintf(stderr," - INTEN?         %d\n",((tmpreg>>FLAG_SHIFT_INTEN)&MASK_INTEN)?1:0);
+   fprintf(stderr," - INT_TYPE =     0x%01X\n",((tmpreg>>FLAG_SHIFT_INT_TYPE)&MASK_INT_TYPE));
+   fprintf(stderr,"GPIO_IRQ:   0x%08X\n", REG_GPIO_IRQ);
+   fflush(stderr);
+
+   // trigger capture
+   fprintf(stderr,"=========================================\n");
+   fprintf(stderr,"regflags = 0x%02X\n",(REG_FLAGS&0xFF));
+   fflush(stderr);
+   sleep(1);
+   REG_CTRL=1ul;
+   fprintf(stderr,"regflags = 0x%02X\n",(REG_FLAGS&0xFF));
+   sleep(1);
+   fprintf(stderr,"regflags = 0x%02X\n",(REG_FLAGS&0xFF));
+
+   tmpreg=0u;
+   tmpreg=REG_GPIO_X_CFG(0);
+   fprintf(stderr,"=========================================\n");
+   fprintf(stderr,"after triggering capture\n");
+   fprintf(stderr,"GPIO_0_CFG: 0x%08X\n", tmpreg);
+   fprintf(stderr," - GPOUTEN?       %d\n",((tmpreg>>FLAG_SHIFT_GPOUTEN)&MASK_GPOUTEN)?1:0);
+   fprintf(stderr," - GPINEN?        %d\n",((tmpreg>>FLAG_SHIFT_GPINEN)&MASK_GPINEN)?1:0);
+   fprintf(stderr," - GPO_OUTBUFEN?  %d\n",((tmpreg>>FLAG_SHIFT_OUTBUFEN)&MASK_OUTBUFEN)?1:0);
+   fprintf(stderr," - INTEN?         %d\n",((tmpreg>>FLAG_SHIFT_INTEN)&MASK_INTEN)?1:0);
+   fprintf(stderr," - INT_TYPE =     0x%01X\n",((tmpreg>>FLAG_SHIFT_INT_TYPE)&MASK_INT_TYPE));
+   fprintf(stderr,"GPIO_IRQ:   0x%08X\n", REG_GPIO_IRQ);
+   fflush(stderr);
+
+   // clear the camera FIFO
+   while(0 == ((1<<FLAG_SHIFT_EMPTY)&REG_CAMX_STATUS(0)))
+   {
+      tmpdata=REG_CAMX_PXDATA(0);
+   }
+
+   REG_GPIO_IRQ=1u;
+   tmpreg=0u;
+   tmpreg=REG_GPIO_X_CFG(0);
+   fprintf(stderr,"=========================================\n");
+   fprintf(stderr,"after clearing GPIO_0 IRQ bit\n");
+   fprintf(stderr,"GPIO_0_CFG: 0x%08X\n", tmpreg);
+   fprintf(stderr," - GPOUTEN?       %d\n",((tmpreg>>FLAG_SHIFT_GPOUTEN)&MASK_GPOUTEN)?1:0);
+   fprintf(stderr," - GPINEN?        %d\n",((tmpreg>>FLAG_SHIFT_GPINEN)&MASK_GPINEN)?1:0);
+   fprintf(stderr," - GPO_OUTBUFEN?  %d\n",((tmpreg>>FLAG_SHIFT_OUTBUFEN)&MASK_OUTBUFEN)?1:0);
+   fprintf(stderr," - INTEN?         %d\n",((tmpreg>>FLAG_SHIFT_INTEN)&MASK_INTEN)?1:0);
+   fprintf(stderr," - INT_TYPE =     0x%01X\n",((tmpreg>>FLAG_SHIFT_INT_TYPE)&MASK_INT_TYPE));
+   fprintf(stderr,"GPIO_IRQ:   0x%08X\n", REG_GPIO_IRQ);
+   fflush(stderr);
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// lkm boilerplate
+//
+module_init(prober_init);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Russ Bielawski");
