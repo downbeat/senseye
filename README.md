@@ -8,7 +8,7 @@ SensEye is a low-power, wireless gaze detection system.
 
 ## Authors
 
-SensEye v1 is the work of Joe Romeo, Justin Pauport and me, Russ Bielawski.  SensEye v2, insofar as it existed within the time frame of this repository, is my sole, personal work as a Graduate Student Research Assistant (GSRA) of [Prabal Dutta](https://web.eecs.umich.edu/~prabal)'s in 2012-2013.
+SensEye v1 is the work of Joe Romeo, Justin Paupore and me, Russ Bielawski.  SensEye v2, insofar as it existed within the time frame of this repository, is my sole, personal work as a Graduate Student Research Assistant (GSRA) of [Prabal Dutta](https://web.eecs.umich.edu/~prabal)'s in 2012-2013.
 
 ## Major git Repo Reorganization
 
