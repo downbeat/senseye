@@ -6,7 +6,7 @@ SensEye is a low-power, wireless gaze detection system.
 
 ## SensEye v1 and v2
 
-[SensEye v1](SENSEYE_V1.md) is a fully implemented prototype wireless eyetracker system based on cloud offloading and machine learning.  SensEye v2 is the started, incomplete, but [not yet fully abandonded](https://github.com/lab11/SensEye-2), second generation eye tracking capture platform, capable of streaming data from two imagers at 29 frames-per-second (FPS) over a pseudo-HTTP 1.0 interface.
+[SensEye v1](SENSEYE_V1.md) is a fully implemented prototype wireless eyetracker system based on cloud offloading and machine learning.  SensEye v2 is the started, incomplete, [but not abandonded](https://github.com/lab11/SensEye-2), second generation eye tracking capture platform, capable of streaming data from two imagers at 29 frames-per-second (FPS) over a pseudo-HTTP 1.0 interface.
 
 ## Authors
 
