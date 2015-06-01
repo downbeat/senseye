@@ -9,19 +9,18 @@ NAME=glasses_display
 CC=gcc
 CFLAGS=-O2 -Wall -g
 
-# You must set OPENCV_LOCATION for your platform (set OPENCV_LOCATION=<path>).
+# You must set OPENCV_LOCATION for your platform (export OPENCV_LOCATION=<path>).
 #    Examples of different places OpenCV might be installed:
 #    /opt/local  ->  OS X via Macports.
 #    /usr        ->  Debian variant via apt-get.
 #    /usr/local  ->  Linux built from source.
 ifndef OPENCV_LOCATION
-   $(error 'You must define the OPENCV_LOCATION variable')
+   $(error 'You must define the OPENCV_LOCATION environment variable')
 endif
 
 OPENCV_INC=-I$(OPENCV_LOCATION)/include/opencv -I$(OPENCV_LOCATION)/include
 OPENCV_LIBDIRS=-L$(OPENCV_LOCATION)/lib
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc
-
 
 ifndef LIBGLASSES_LOCATION
    LIBGLASSES_LOCATION=../../libglasses

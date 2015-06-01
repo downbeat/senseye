@@ -8,25 +8,28 @@ NAME=demo
 CC=g++
 CFLAGS=-O2 -Wall -g -felide-constructors
 
-# You must set OPENCV_LOCATION for your platform (set OPENCV_LOCATION=<path>).
+# You must set OPENCV_LOCATION for your platform (export OPENCV_LOCATION=<path>).
 #    Examples of different places OpenCV might be installed:
 #    /opt/local  ->  OS X via Macports.
 #    /usr        ->  Debian variant via apt-get.
 #    /usr/local  ->  Linux built from source.
 ifndef OPENCV_LOCATION
-   $(error 'You must define the OPENCV_LOCATION variable')
+   $(error 'You must define the OPENCV_LOCATION environment variable')
 endif
 
 OPENCV_INC=-I$(OPENCV_LOCATION)/include/opencv -I$(OPENCV_LOCATION)/include
 OPENCV_LIBDIRS=-L$(OPENCV_LOCATION)/lib
 OPENCV_LIBS=-lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_ml
 
+
 ifndef LIBGLASSES1_LOCATION
    LIBGLASSES1_LOCATION=../../libglasses1
    $(info LIBGLASSES1_LOCATION variable not set, assuming $(LIBGLASSES1_LOCATION).)
 endif
 LIBGLASSES_INC=-I$(LIBGLASSES1_LOCATION)
-LIBGLASSES_SRC=$(LIBGLASSES1_LOCATION)/glasses.c $(LIBGLASSES1_LOCATION)/glasses_cv.c $(LIBGLASSES1_LOCATION)/glasses_ml.c
+LIBGLASSES_SRC=$(LIBGLASSES1_LOCATION)/glasses.c       \
+               $(LIBGLASSES1_LOCATION)/glasses_cv.c    \
+               $(LIBGLASSES1_LOCATION)/glasses_ml.cpp
 
 INC=$(OPENCV_INC) $(LIBGLASSES_INC)
 SRC=$(NAME).cpp $(LIBGLASSES_SRC)
