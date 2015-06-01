@@ -38,6 +38,7 @@
 //
 // VERSION   DATE        DESCRIPTION
 // 01.00 00  2012-12-07  Created.
+// 01.01.00  2015-05-31  Renamed to .cpp as this was always C-ish-but-not-C-compliant C++ code.
 //**************************************************************************************************
 
 
