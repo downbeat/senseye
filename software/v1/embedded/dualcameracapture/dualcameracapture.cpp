@@ -19,9 +19,8 @@
 
 // FIXME russ: this is a terrible software hack way to get 2 cameras working!
 #include "stony_dual.h"
-#include "stonymask_nomask.h"
-#define stonymask2 stonymask
-#include "stonymask_cam3_3v3_1.h"
+#include "stonymask_cam8_1.h"
+#include "stonymask_cam9_2.h"
 
 // teensy and arduino stuff
 #include "pins_arduino.h"
