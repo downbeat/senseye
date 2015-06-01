@@ -16,7 +16,7 @@ for ii in `ls -1`; do
       if [ -d $ii ]; then
          cd $ii
          make
-         if [ 0 == $? ]; then
+         if [ 0 -eq $? ]; then
             chmod u+x $ii
             cp -pf $ii ../bin
          fi
