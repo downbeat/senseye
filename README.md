@@ -20,9 +20,39 @@ I have done some pretty gnarly hacking on the git repository, up to and includin
 
 **If you have an old SensEye git repository cloned prior to 2015, you must peform a rebase or clone the repo anew.**
 
-## Repository Organization and Contents
+## Repository Organization
 
-The root of the SensEye repository is split into hardware and software subdirectories.  Any technical documentation is intermingled (generally in the form of README files).  Under both hardware and software, there are three directories: common, v1 and v2.  The distinction between what goes in these directories should be clear: SensEye v1 artifacts are found in v1, SensEye v2 artifacts are found in v2 and artifacts which are common to both are in found in common.
+The root of the SensEye repository is split into `hardware` and `software` subdirectories.  Any technical documentation is intermingled (generally in the form of README files).  Under both `hardware` and `software`, there are three directories: `common`, `v1` and `v2`.  The distinction between what goes in these directories should be clear: SensEye v1 artifacts are found in `v1`, SensEye v2 artifacts are found in `v2` and artifacts which are common to both are in found in `common`.
+
+## Frontend Software
+
+The so called "frontend" software is the software that runs on a PC or smartphone connected to the glasses with Bluetooth (or USB).  Most of the frontend code for SensEye is not v1 or v2 specific, with the exception of the so-called "capture frontends" for each, which receive the data from the capture hardware and output it over stdout according to the Glasses Data Protocol (GDP).  The common frontend code is found in [/software/common/frontends/](software/common/frontends/).  The PC frontend code was written for Linux, but most seems to build and run fine on OS X with OpenCV installed via MacPorts.
+
+### Running the PC Frontend Code
+
+The frontends are connected to one another via [pipes](https://en.wikipedia.org/wiki/Pipeline_%28Unix%29) communicating (unidirectionally) over the Glasses Data Protocol (GDP).  To understand what a particular frontend does, read the help text for that program.  As a simple (and common) example, the following command will capture data from SensEye glasses and both display the images on the screen and record the capture to disk in Glasses Data Exchange Formate (GDF):
+
+    glasses_capture | tee >(glasses_display) | glasses_record -o <path>
+
+#### The SensEye Demo
+
+**Sadly, the demo crashes on OS X.  See [http://code.opencv.org/issues/2846](http://code.opencv.org/issues/2846).**
+
+To run the demo:
+
+    glasses_capture | demo
+
+For a description of how to use the demo, see [http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:insight_linux_utils](http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:insight_linux_utils).
+
+#### Other platforms
+
+##### Android
+
+When SensEye was conceived, it was envisioned that smartphones would be used as the powerful co-processing device to perform the really processor and memory intensive operations (such as the machine learning classifier).  A simple proof-of-concept capture frontend (called "frame grabber") was developed for Android, and is found in the repository at [/software/v1/capture_frontend/android](software/v1/capture_frontend/android).  Most of the interesting data processing frontend software was written for a Linux PC because it was the easiest way to make the most progress as quickly as possible.
+
+#### Etymology of the Label "Frontend" Software
+
+Admittedly, calling this the "frontend" software seems backwards.  A better name might be "cloud" software, but even that isn't quite evocative enough.  In the usual case, the cloud portion of an offloading application is called the "backend."  However, the situation with offloading *to* a smartphone muddles this conceptually.  Because the feedback to the user (at least in the SensEye prototype) is provided via the front-end software running on a device with a screen.
 
 ### Data Processing Interchange Protocol and Frontends
 
@@ -33,30 +63,6 @@ During the cleanup of this repository, I took time to formalize the protocol and
 #### Limitations of the Protocol 
 
 The data processing protocol is fine for exchanging image data between data processing programs (frontends) in grayscale.  However, the protocol lacks any support for color images or scalar data such as the known gaze location, which it really needs in order to support all the non-standard features of the existing frontends in a standardized way.
-
-### Running the PC Frontend Code
-
-Most of the frontend code for SensEye is not v1 or v2 specific, with the exception of the capture frontends for each, which receive the data from the hardware differently and output the data over stdout according to GDP (currently v0).  The common frontend code is found in [/software/common/frontends/](software/common/frontends/).  The PC frontend code was written for Linux, but most seems to build and run fine on OS X with OpenCV installed via MacPorts.
-
-The frontends are connected via the Glasses Data Protocol (GDP), and can be connected via pipes.  To understand what a particulare frontend does, consult the help text for that program.  As a simple (and common) example, this command will capture data from SensEye glasses and both display the images on the screen and record the capture to disk in Glasses Data Exchange Formate (GDF):
-
-    glasses_capture | tee >(glasses_display) | glasses_record -o <path>
-
-#### The Demo
-
-**Sadly, the demo crashes on OS X, and I've not spent any time trying to fix it.**
-
-To run the demo:
-
-     glasses_capture | demo
-
-For a description of how to use the demo, see [http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:insight_linux_utils](http://energy.eecs.umich.edu/wiki/doku.php?id=proj:insight:insight_linux_utils).
-
-#### Other platforms
-
-##### Android
-
-When SensEye was conceived, it was envisioned that smartphones would be used as the powerful co-processing device to perform the really processor and memory intensive operations (such as the machine learning classifier).  A simple proof-of-concept capture frontend (called "frame grabber") was developed for Android, and is found in the repository at [/software/v1/capture_frontend/android](software/v1/capture_frontend/android).  Most of the interesting data processing frontend software was written for a Linux PC because it was the easiest way to make the most progress as quickly as possible.
 
 ## Funding
 
