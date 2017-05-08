@@ -60,7 +60,7 @@ The SensEye v1 hardware is capable, over Bluetooth, of streaming image data from
 
 #### PCB
 
-The SensEye piggyback PCB was designed in [Eagle](http://www.cadsoftusa.com/) 6, and the design files are available in the [main SensEye git repository on GitHub](https://github.com/downbeat/senseye) at [/hw/pcb/impl/teensy-shield](https://github.com/downbeat/senseye/tree/master/hw/pcb/impl/teensy-shield).  These files are available under a Creative Commons Share Alike license.
+The SensEye piggyback PCB was designed in [Eagle](http://www.cadsoftusa.com/) 6, and the design files are available in the [main SensEye git repository on GitHub](https://github.com/downbeat/senseye) at [/hardware/v1/teensy-shield](https://github.com/downbeat/senseye/tree/master/hardware/v1/teensy-shield).  These files are available under a Creative Commons Share Alike license.
 
 #### Glasses Assembly
 
