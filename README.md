@@ -2,7 +2,7 @@
 
 SensEye is a low-power, wireless gaze detection system.
 
-<img src="https://raw.githubusercontent.com/downbeat/senseye-data/master/media/eye_scene_example_frames/single_still_frame.bmp" alt="SensEye v0.2" style="width: 50%;"/>
+[![](https://gitlab.com/downbeat/senseye/raw/master/senseye.bmp)](senseye.bmp)
 
 ## SensEye v1 and v2
 
